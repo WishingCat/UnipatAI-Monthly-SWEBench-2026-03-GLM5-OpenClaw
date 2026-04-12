@@ -1,0 +1,9 @@
+{
+  "task": "maximhq__bifrost_21cd30ba_3237e39f",
+  "status": "PASS",
+  "result": "reward=1.0",
+  "episode_count": 47,
+  "trial_name": "maximhq__bifrost_21cd30ba_3237e3__qBKvWso",
+  "source_job_dir": "T:\\AgentProjects\\SWEBench\\jobs\\network_retry_resilient_openclaw_2026-04-11_17-06-57",
+  "source_trial_dir": "T:\\AgentProjects\\SWEBench\\jobs\\network_retry_resilient_openclaw_2026-04-11_17-06-57\\maximhq__bifrost_21cd30ba_3237e3__qBKvWso"
+}

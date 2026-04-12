@@ -1,0 +1,9 @@
+{
+  "task": "stacklok__toolhive_1bf2f3ac_0642921f",
+  "status": "RAN_FAIL",
+  "result": "AgentTimeoutError",
+  "episode_count": 281,
+  "trial_name": "stacklok__toolhive_1bf2f3ac_0642__HZZjjc7",
+  "source_job_dir": "T:\\AgentProjects\\SWEBench\\jobs\\network_retry_resilient_openclaw_2026-04-11_17-06-57",
+  "source_trial_dir": "T:\\AgentProjects\\SWEBench\\jobs\\network_retry_resilient_openclaw_2026-04-11_17-06-57\\stacklok__toolhive_1bf2f3ac_0642__HZZjjc7"
+}

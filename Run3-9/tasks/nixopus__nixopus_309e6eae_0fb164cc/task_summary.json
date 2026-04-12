@@ -1,0 +1,9 @@
+{
+  "task": "nixopus__nixopus_309e6eae_0fb164cc",
+  "status": "COMPLETE_FAIL",
+  "result": "reward=0.0",
+  "episode_count": 11,
+  "trial_name": "nixopus__nixopus_309e6eae_0fb164__w5MXXop",
+  "source_job_dir": "T:\\AgentProjects\\SWEBench\\jobs\\network_retry_resilient_openclaw_2026-04-11_17-06-57",
+  "source_trial_dir": "T:\\AgentProjects\\SWEBench\\jobs\\network_retry_resilient_openclaw_2026-04-11_17-06-57\\nixopus__nixopus_309e6eae_0fb164__w5MXXop"
+}

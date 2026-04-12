@@ -1,0 +1,9 @@
+{
+  "task": "specterops__bloodhound_078e3792_73acca3e",
+  "status": "PASS",
+  "result": "reward=1.0",
+  "episode_count": 62,
+  "trial_name": "specterops__bloodhound_078e3792___vpboS85",
+  "source_job_dir": "T:\\AgentProjects\\SWEBench\\jobs\\network_retry_resilient_openclaw_2026-04-11_17-06-57",
+  "source_trial_dir": "T:\\AgentProjects\\SWEBench\\jobs\\network_retry_resilient_openclaw_2026-04-11_17-06-57\\specterops__bloodhound_078e3792___vpboS85"
+}

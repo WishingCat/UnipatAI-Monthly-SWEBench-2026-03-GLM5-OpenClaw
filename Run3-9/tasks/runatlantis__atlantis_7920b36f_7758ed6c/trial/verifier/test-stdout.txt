@@ -1,0 +1,439 @@
+[REGRESSION_DIRECT] Running: go test ./server/events -run ^TestHasDiverged_MasterHasDiverged$ -count=1 -v
+=== RUN   TestHasDiverged_MasterHasDiverged
+--- PASS: TestHasDiverged_MasterHasDiverged (0.12s)
+PASS
+ok  	github.com/runatlantis/atlantis/server/events	0.127s
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Running: go test ./server/events -run ^TestTB_HasDivergedConcurrentNoWarnings$ -count=1 -v
+=== RUN   TestTB_HasDivergedConcurrentNoWarnings
+=== RUN   TestTB_HasDivergedConcurrentNoWarnings/two_callers_per_update
+    logger.go:146: 2026-04-11T10:47:10.791Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 4d58d2f67b7a22820fd9b7a713619e9c1c5b079c but expected 457fb4d7dd197d9f167f1155141ba2cb3c58337b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 457fb4d..4d58d2f  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.791Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 4d58d2f67b7a22820fd9b7a713619e9c1c5b079c but expected 457fb4d7dd197d9f167f1155141ba2cb3c58337b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 457fb4d..4d58d2f  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.793Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 4d58d2f67b7a22820fd9b7a713619e9c1c5b079c but expected 457fb4d7dd197d9f167f1155141ba2cb3c58337b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 457fb4d..4d58d2f  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.793Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 4d58d2f67b7a22820fd9b7a713619e9c1c5b079c but expected 457fb4d7dd197d9f167f1155141ba2cb3c58337b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 457fb4d..4d58d2f  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.798Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 631be027cf7a14e9e26556e8c1d478c9421e969f but expected 4d58d2f67b7a22820fd9b7a713619e9c1c5b079c
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 4d58d2f..631be02  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.803Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 631be027cf7a14e9e26556e8c1d478c9421e969f but expected 4d58d2f67b7a22820fd9b7a713619e9c1c5b079c
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 4d58d2f..3637c3e  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.815Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 3637c3e8e927136b16b580802b634f17b6bac454 but expected 631be027cf7a14e9e26556e8c1d478c9421e969f
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 631be02..b1e0e0b  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.815Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 3637c3e8e927136b16b580802b634f17b6bac454 but expected 631be027cf7a14e9e26556e8c1d478c9421e969f
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 631be02..b1e0e0b  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.820Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 85a8e203ab6aedf2fa4a45e82e15ce5352ba40e1 but expected 3637c3e8e927136b16b580802b634f17b6bac454
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 3637c3e..85a8e20  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.824Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 85a8e203ab6aedf2fa4a45e82e15ce5352ba40e1 but expected 3637c3e8e927136b16b580802b634f17b6bac454
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 3637c3e..22238db  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.829Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 22238dbb0db38a33d090be36eae05bf809c3ef7b but expected 85a8e203ab6aedf2fa4a45e82e15ce5352ba40e1
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 85a8e20..39f61ff  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.829Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 22238dbb0db38a33d090be36eae05bf809c3ef7b but expected 85a8e203ab6aedf2fa4a45e82e15ce5352ba40e1
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 85a8e20..39f61ff  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.841Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 908f9e8000988415e5d68cabcfe5646d1398a839 but expected 22238dbb0db38a33d090be36eae05bf809c3ef7b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 22238db..908f9e8  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.842Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 908f9e8000988415e5d68cabcfe5646d1398a839 but expected 22238dbb0db38a33d090be36eae05bf809c3ef7b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 22238db..be7d140  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.842Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 908f9e8000988415e5d68cabcfe5646d1398a839 but expected 22238dbb0db38a33d090be36eae05bf809c3ef7b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 22238db..be7d140  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.911Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at a8a6d9c6821d31d154de2058fe436467e13b5e16 but expected 908f9e8000988415e5d68cabcfe5646d1398a839
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 908f9e8..a8a6d9c  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.916Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at a8a6d9c6821d31d154de2058fe436467e13b5e16 but expected 908f9e8000988415e5d68cabcfe5646d1398a839
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 908f9e8..c34817b  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.917Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at a8a6d9c6821d31d154de2058fe436467e13b5e16 but expected 908f9e8000988415e5d68cabcfe5646d1398a839
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 908f9e8..c34817b  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.922Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at e175762130117f5f51e2c0123c2d9da8db796ad2 but expected a8a6d9c6821d31d154de2058fe436467e13b5e16
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! a8a6d9c..e175762  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.926Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at e175762130117f5f51e2c0123c2d9da8db796ad2 but expected a8a6d9c6821d31d154de2058fe436467e13b5e16
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! a8a6d9c..3dbc0c1  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.926Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at e175762130117f5f51e2c0123c2d9da8db796ad2 but expected a8a6d9c6821d31d154de2058fe436467e13b5e16
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! a8a6d9c..3dbc0c1  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.935Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at f33df67e5578ccba4e0411713fb81ab6dbe97fd4 but expected e175762130117f5f51e2c0123c2d9da8db796ad2
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! e175762..f33df67  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.935Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at f33df67e5578ccba4e0411713fb81ab6dbe97fd4 but expected e175762130117f5f51e2c0123c2d9da8db796ad2
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! e175762..f351375  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.936Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at f33df67e5578ccba4e0411713fb81ab6dbe97fd4 but expected e175762130117f5f51e2c0123c2d9da8db796ad2
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! e175762..f351375  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.940Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at db32b6aeb0dc1b4e74ba4c03bb4d2724a58e9c31 but expected f33df67e5578ccba4e0411713fb81ab6dbe97fd4
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! f33df67..db32b6a  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:10.945Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at db32b6aeb0dc1b4e74ba4c03bb4d2724a58e9c31 but expected f33df67e5578ccba4e0411713fb81ab6dbe97fd4
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! f33df67..9893204  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.010Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at db32b6aeb0dc1b4e74ba4c03bb4d2724a58e9c31 but expected f33df67e5578ccba4e0411713fb81ab6dbe97fd4
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! f33df67..9893204  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.015Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 1cbbf85fa20b5bd7450ba2816c3aa4dd4c685045 but expected db32b6aeb0dc1b4e74ba4c03bb4d2724a58e9c31
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! db32b6a..1cbbf85  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.019Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 1cbbf85fa20b5bd7450ba2816c3aa4dd4c685045 but expected db32b6aeb0dc1b4e74ba4c03bb4d2724a58e9c31
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! db32b6a..7dfa89c  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.020Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 1cbbf85fa20b5bd7450ba2816c3aa4dd4c685045 but expected db32b6aeb0dc1b4e74ba4c03bb4d2724a58e9c31
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! db32b6a..7dfa89c  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.024Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 4b6a235df0df46f1167c6ea7693039e75d3063d6 but expected 1cbbf85fa20b5bd7450ba2816c3aa4dd4c685045
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 1cbbf85..4b6a235  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.029Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 4b6a235df0df46f1167c6ea7693039e75d3063d6 but expected 1cbbf85fa20b5bd7450ba2816c3aa4dd4c685045
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 1cbbf85..bbab23e  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.029Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 4b6a235df0df46f1167c6ea7693039e75d3063d6 but expected 1cbbf85fa20b5bd7450ba2816c3aa4dd4c685045
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 1cbbf85..bbab23e  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.034Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 3bc2efb60a6e5b38dc11b4d18ce3439bc904fb9b but expected 4b6a235df0df46f1167c6ea7693039e75d3063d6
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 4b6a235..3bc2efb  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.038Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 3bc2efb60a6e5b38dc11b4d18ce3439bc904fb9b but expected 4b6a235df0df46f1167c6ea7693039e75d3063d6
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 4b6a235..bd2094d  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.039Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 3bc2efb60a6e5b38dc11b4d18ce3439bc904fb9b but expected 4b6a235df0df46f1167c6ea7693039e75d3063d6
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 4b6a235..bd2094d  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.043Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at f96d32745380b5b5eb2ea35de8cc98e37032f1ff but expected 3bc2efb60a6e5b38dc11b4d18ce3439bc904fb9b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 3bc2efb..f96d327  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.113Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at f96d32745380b5b5eb2ea35de8cc98e37032f1ff but expected 3bc2efb60a6e5b38dc11b4d18ce3439bc904fb9b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 3bc2efb..aaa6604  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.113Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at f96d32745380b5b5eb2ea35de8cc98e37032f1ff but expected 3bc2efb60a6e5b38dc11b4d18ce3439bc904fb9b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 3bc2efb..aaa6604  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.122Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 78653838d0c9b2ec8716e07f441cd68ae97c380d but expected f96d32745380b5b5eb2ea35de8cc98e37032f1ff
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! f96d327..7865383  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.123Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 78653838d0c9b2ec8716e07f441cd68ae97c380d but expected f96d32745380b5b5eb2ea35de8cc98e37032f1ff
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! f96d327..1c94c5e  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.123Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 78653838d0c9b2ec8716e07f441cd68ae97c380d but expected f96d32745380b5b5eb2ea35de8cc98e37032f1ff
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! f96d327..1c94c5e  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.128Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 05e67f935d83616207d18edda8ed17e3bc2beecb but expected 78653838d0c9b2ec8716e07f441cd68ae97c380d
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 7865383..05e67f9  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.132Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 05e67f935d83616207d18edda8ed17e3bc2beecb but expected 78653838d0c9b2ec8716e07f441cd68ae97c380d
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 7865383..3dd81ec  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.133Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 05e67f935d83616207d18edda8ed17e3bc2beecb but expected 78653838d0c9b2ec8716e07f441cd68ae97c380d
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 7865383..3dd81ec  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.137Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 71bf6b5b6b60dbba941288bf3b9480d9bf2699eb but expected 05e67f935d83616207d18edda8ed17e3bc2beecb
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 05e67f9..71bf6b5  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.143Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 71bf6b5b6b60dbba941288bf3b9480d9bf2699eb but expected 05e67f935d83616207d18edda8ed17e3bc2beecb
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 05e67f9..c60e41d  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.143Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 71bf6b5b6b60dbba941288bf3b9480d9bf2699eb but expected 05e67f935d83616207d18edda8ed17e3bc2beecb
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 05e67f9..c60e41d  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.210Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at ebbc64faa5c5a0e38602b43622eae65c30aea76b but expected 71bf6b5b6b60dbba941288bf3b9480d9bf2699eb
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 71bf6b5..ebbc64f  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.215Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at ebbc64faa5c5a0e38602b43622eae65c30aea76b but expected 71bf6b5b6b60dbba941288bf3b9480d9bf2699eb
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 71bf6b5..3ec72de  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.217Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at ebbc64faa5c5a0e38602b43622eae65c30aea76b but expected 71bf6b5b6b60dbba941288bf3b9480d9bf2699eb
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 71bf6b5..3ec72de  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.222Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at e5bf51924ed5fbe95f7abfd5041271fb38f9fe1c but expected ebbc64faa5c5a0e38602b43622eae65c30aea76b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! ebbc64f..e5bf519  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.226Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at e5bf51924ed5fbe95f7abfd5041271fb38f9fe1c but expected ebbc64faa5c5a0e38602b43622eae65c30aea76b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! ebbc64f..492cc5c  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.227Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at e5bf51924ed5fbe95f7abfd5041271fb38f9fe1c but expected ebbc64faa5c5a0e38602b43622eae65c30aea76b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! ebbc64f..492cc5c  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.232Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 820e28afe4eb399a03c1bebc19f6c33acfd0b8db but expected e5bf51924ed5fbe95f7abfd5041271fb38f9fe1c
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! e5bf519..820e28a  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.236Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 820e28afe4eb399a03c1bebc19f6c33acfd0b8db but expected e5bf51924ed5fbe95f7abfd5041271fb38f9fe1c
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! e5bf519..72dfe60  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.236Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 820e28afe4eb399a03c1bebc19f6c33acfd0b8db but expected e5bf51924ed5fbe95f7abfd5041271fb38f9fe1c
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! e5bf519..72dfe60  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.240Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at a03cd0c8f41f263b85126398b6e554b74a483666 but expected 820e28afe4eb399a03c1bebc19f6c33acfd0b8db
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 820e28a..a03cd0c  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.245Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at a03cd0c8f41f263b85126398b6e554b74a483666 but expected 820e28afe4eb399a03c1bebc19f6c33acfd0b8db
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 820e28a..aedadd8  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.249Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at a03cd0c8f41f263b85126398b6e554b74a483666 but expected 820e28afe4eb399a03c1bebc19f6c33acfd0b8db
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 820e28a..aedadd8  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.320Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 0f78d076962d940b77256e47e9dfa679a63630a5 but expected a03cd0c8f41f263b85126398b6e554b74a483666
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! a03cd0c..0f78d07  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.326Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 68fff9c4ed5634cb58e9a7c7c78292708680ea53 but expected 0f78d076962d940b77256e47e9dfa679a63630a5
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 0f78d07..68fff9c  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.332Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at fc89e74150c913c6d91a32740b1b22f54aaf4eb2 but expected 0f78d076962d940b77256e47e9dfa679a63630a5
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 0f78d07..fc89e74  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.337Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at fc89e74150c913c6d91a32740b1b22f54aaf4eb2 but expected 68fff9c4ed5634cb58e9a7c7c78292708680ea53
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 68fff9c..b073098  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.337Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at fc89e74150c913c6d91a32740b1b22f54aaf4eb2 but expected 68fff9c4ed5634cb58e9a7c7c78292708680ea53
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! 68fff9c..b073098  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.343Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at b7d10b2fdf6c25fae52a4cc81768fbea60f79d0d but expected fc89e74150c913c6d91a32740b1b22f54aaf4eb2
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! fc89e74..b7d10b2  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.347Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at b7d10b2fdf6c25fae52a4cc81768fbea60f79d0d but expected fc89e74150c913c6d91a32740b1b22f54aaf4eb2
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! fc89e74..de488bb  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.411Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at b7d10b2fdf6c25fae52a4cc81768fbea60f79d0d but expected fc89e74150c913c6d91a32740b1b22f54aaf4eb2
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! fc89e74..de488bb  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.414Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at f684267503c678617489257570883b40e3d7349b but expected b7d10b2fdf6c25fae52a4cc81768fbea60f79d0d
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! b7d10b2..f684267  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.419Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at f684267503c678617489257570883b40e3d7349b but expected b7d10b2fdf6c25fae52a4cc81768fbea60f79d0d
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! b7d10b2..dc169e9  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.425Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at dc169e9eb421b6a54cc299ad5db70f9d428f7ee5 but expected f684267503c678617489257570883b40e3d7349b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! f684267..6e95b05  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.429Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at dc169e9eb421b6a54cc299ad5db70f9d428f7ee5 but expected f684267503c678617489257570883b40e3d7349b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningstwo_callers_per_update3668738819/001
+         ! f684267..6e95b05  main       -> origin/main  (unable to update local ref)
+    tb_git_fencing_test.go:110: warning occurred while checking HasDiverged under concurrency
+=== RUN   TestTB_HasDivergedConcurrentNoWarnings/three_callers_per_update
+    logger.go:146: 2026-04-11T10:47:11.515Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at f7c5131886f8b977dd94dcadf0bf0fa55f9f809c but expected a3741f362a52432e38c06877d516c6a29307c1c7
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! a3741f3..f7c5131  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.515Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at f7c5131886f8b977dd94dcadf0bf0fa55f9f809c but expected a3741f362a52432e38c06877d516c6a29307c1c7
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! a3741f3..f7c5131  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.515Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at f7c5131886f8b977dd94dcadf0bf0fa55f9f809c but expected a3741f362a52432e38c06877d516c6a29307c1c7
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! a3741f3..f7c5131  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.515Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at f7c5131886f8b977dd94dcadf0bf0fa55f9f809c but expected a3741f362a52432e38c06877d516c6a29307c1c7
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! a3741f3..f7c5131  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.515Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at f7c5131886f8b977dd94dcadf0bf0fa55f9f809c but expected a3741f362a52432e38c06877d516c6a29307c1c7
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! a3741f3..f7c5131  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.516Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at f7c5131886f8b977dd94dcadf0bf0fa55f9f809c but expected a3741f362a52432e38c06877d516c6a29307c1c7
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! a3741f3..f7c5131  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.516Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at f7c5131886f8b977dd94dcadf0bf0fa55f9f809c but expected a3741f362a52432e38c06877d516c6a29307c1c7
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! a3741f3..f7c5131  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.517Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at f7c5131886f8b977dd94dcadf0bf0fa55f9f809c but expected a3741f362a52432e38c06877d516c6a29307c1c7
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! a3741f3..f7c5131  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.522Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 37d125ff35ed340d823d0c7f11df449f9a24b151 but expected f7c5131886f8b977dd94dcadf0bf0fa55f9f809c
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! f7c5131..37d125f  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.523Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 37d125ff35ed340d823d0c7f11df449f9a24b151 but expected f7c5131886f8b977dd94dcadf0bf0fa55f9f809c
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! f7c5131..00a4610  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.524Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 00a461026261d7ef10286ad8f9f16782fca7d040 but expected 37d125ff35ed340d823d0c7f11df449f9a24b151
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 37d125f..00a4610  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.524Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 00a461026261d7ef10286ad8f9f16782fca7d040 but expected 37d125ff35ed340d823d0c7f11df449f9a24b151
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 37d125f..00a4610  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.524Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 00a461026261d7ef10286ad8f9f16782fca7d040 but expected a3741f362a52432e38c06877d516c6a29307c1c7
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! a3741f3..f7c5131  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.532Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 009ffa935f8a71a673fb2753e2e17109836a9299 but expected 00a461026261d7ef10286ad8f9f16782fca7d040
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 00a4610..009ffa9  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.532Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 009ffa935f8a71a673fb2753e2e17109836a9299 but expected 00a461026261d7ef10286ad8f9f16782fca7d040
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 00a4610..009ffa9  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.614Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 3ebbb1ae3bb2c607c8a92fad1bca9fd673198320 but expected 009ffa935f8a71a673fb2753e2e17109836a9299
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 009ffa9..3ebbb1a  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.615Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 3ebbb1ae3bb2c607c8a92fad1bca9fd673198320 but expected 009ffa935f8a71a673fb2753e2e17109836a9299
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 009ffa9..3ebbb1a  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.620Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 347e8adbc42abdddd6ab2ea60347f74eeff33577 but expected 3ebbb1ae3bb2c607c8a92fad1bca9fd673198320
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 3ebbb1a..347e8ad  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.620Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 347e8adbc42abdddd6ab2ea60347f74eeff33577 but expected 3ebbb1ae3bb2c607c8a92fad1bca9fd673198320
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 3ebbb1a..347e8ad  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.625Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 347e8adbc42abdddd6ab2ea60347f74eeff33577 but expected 3ebbb1ae3bb2c607c8a92fad1bca9fd673198320
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 3ebbb1a..d9c5cd6  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.626Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at d9c5cd6c1253551705c4b4b6e783f3c2766b26fd but expected 3ebbb1ae3bb2c607c8a92fad1bca9fd673198320
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 3ebbb1a..d9c5cd6  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.630Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at d9c5cd6c1253551705c4b4b6e783f3c2766b26fd but expected 347e8adbc42abdddd6ab2ea60347f74eeff33577
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 347e8ad..fdc8265  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.630Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at d9c5cd6c1253551705c4b4b6e783f3c2766b26fd but expected 347e8adbc42abdddd6ab2ea60347f74eeff33577
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 347e8ad..fdc8265  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.631Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at d9c5cd6c1253551705c4b4b6e783f3c2766b26fd but expected 347e8adbc42abdddd6ab2ea60347f74eeff33577
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 347e8ad..fdc8265  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.636Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 7a182503ee0c2b4477b9871ec30643a8b8f5324b but expected d9c5cd6c1253551705c4b4b6e783f3c2766b26fd
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! d9c5cd6..7a18250  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.710Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 7a182503ee0c2b4477b9871ec30643a8b8f5324b but expected d9c5cd6c1253551705c4b4b6e783f3c2766b26fd
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! d9c5cd6..7a18250  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.713Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 7a182503ee0c2b4477b9871ec30643a8b8f5324b but expected d9c5cd6c1253551705c4b4b6e783f3c2766b26fd
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! d9c5cd6..2495522  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.717Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 24955227f88a7c56ffd456fe1d8dcba777d9ede8 but expected 7a182503ee0c2b4477b9871ec30643a8b8f5324b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 7a18250..2495522  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.719Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 24955227f88a7c56ffd456fe1d8dcba777d9ede8 but expected 7a182503ee0c2b4477b9871ec30643a8b8f5324b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 7a18250..f55f5e7  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.723Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 24955227f88a7c56ffd456fe1d8dcba777d9ede8 but expected 7a182503ee0c2b4477b9871ec30643a8b8f5324b
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 7a18250..f55f5e7  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.724Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 46e617f73691e90d1cc35192c64e9cc47aca0a80 but expected 24955227f88a7c56ffd456fe1d8dcba777d9ede8
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 2495522..46e617f  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.728Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 16b8aad15430355d873b5d3690e5f1a42677faee but expected 46e617f73691e90d1cc35192c64e9cc47aca0a80
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 46e617f..16b8aad  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.729Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 16b8aad15430355d873b5d3690e5f1a42677faee but expected 46e617f73691e90d1cc35192c64e9cc47aca0a80
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 46e617f..16b8aad  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.738Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 4c06b48b91e2706780e1ab10076ecdfc14a219b7 but expected 16b8aad15430355d873b5d3690e5f1a42677faee
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 16b8aad..21190cd  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.738Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 4c06b48b91e2706780e1ab10076ecdfc14a219b7 but expected 16b8aad15430355d873b5d3690e5f1a42677faee
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 16b8aad..21190cd  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.738Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 4c06b48b91e2706780e1ab10076ecdfc14a219b7 but expected 16b8aad15430355d873b5d3690e5f1a42677faee
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 16b8aad..21190cd  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.811Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 20102ec76514792a6424b657630fa7656d80717f but expected 4c06b48b91e2706780e1ab10076ecdfc14a219b7
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 4c06b48..6d3d881  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.811Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 20102ec76514792a6424b657630fa7656d80717f but expected 4c06b48b91e2706780e1ab10076ecdfc14a219b7
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 4c06b48..6d3d881  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.814Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 6d3d8816ec36f069e8e349ada3722f94111ac4a9 but expected 20102ec76514792a6424b657630fa7656d80717f
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 20102ec..6d3d881  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.816Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 6d3d8816ec36f069e8e349ada3722f94111ac4a9 but expected 4c06b48b91e2706780e1ab10076ecdfc14a219b7
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 4c06b48..6d3d881  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.816Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 6d3d8816ec36f069e8e349ada3722f94111ac4a9 but expected 4c06b48b91e2706780e1ab10076ecdfc14a219b7
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 4c06b48..6d3d881  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.824Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at ace865768e7a3d000de5bf82d94cc558420cb9d7 but expected 6d3d8816ec36f069e8e349ada3722f94111ac4a9
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 6d3d881..ace8657  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.824Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at ace865768e7a3d000de5bf82d94cc558420cb9d7 but expected 6d3d8816ec36f069e8e349ada3722f94111ac4a9
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 6d3d881..ace8657  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.824Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at ace865768e7a3d000de5bf82d94cc558420cb9d7 but expected 6d3d8816ec36f069e8e349ada3722f94111ac4a9
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 6d3d881..ace8657  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.829Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 570653c8f139bf38af5defc15392030aefcca8fb but expected ace865768e7a3d000de5bf82d94cc558420cb9d7
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! ace8657..570653c  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.831Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 570653c8f139bf38af5defc15392030aefcca8fb but expected ace865768e7a3d000de5bf82d94cc558420cb9d7
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! ace8657..570653c  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.837Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 2254e8e239ff6679beec5b08361e303cd1f6e05d but expected 570653c8f139bf38af5defc15392030aefcca8fb
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 570653c..2254e8e  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.912Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 2254e8e239ff6679beec5b08361e303cd1f6e05d but expected 570653c8f139bf38af5defc15392030aefcca8fb
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 570653c..2254e8e  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.914Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 2254e8e239ff6679beec5b08361e303cd1f6e05d but expected 570653c8f139bf38af5defc15392030aefcca8fb
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 570653c..87a6dc6  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.916Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 2254e8e239ff6679beec5b08361e303cd1f6e05d but expected 570653c8f139bf38af5defc15392030aefcca8fb
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 570653c..87a6dc6  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.917Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 2254e8e239ff6679beec5b08361e303cd1f6e05d but expected 570653c8f139bf38af5defc15392030aefcca8fb
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 570653c..87a6dc6  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.920Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 89179f0b66db890253aa7511ce2923fcac883094 but expected 2254e8e239ff6679beec5b08361e303cd1f6e05d
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 2254e8e..89179f0  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.921Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 89179f0b66db890253aa7511ce2923fcac883094 but expected 2254e8e239ff6679beec5b08361e303cd1f6e05d
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 2254e8e..1a4d922  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.925Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 1a4d9223f1f36564541de5e5d8963c38b3560de1 but expected 2254e8e239ff6679beec5b08361e303cd1f6e05d
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 2254e8e..1a4d922  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.925Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 1a4d9223f1f36564541de5e5d8963c38b3560de1 but expected 2254e8e239ff6679beec5b08361e303cd1f6e05d
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 2254e8e..1a4d922  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.931Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 080b21369ebf95a7833b18701f3ddb397f492a18 but expected 1a4d9223f1f36564541de5e5d8963c38b3560de1
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 1a4d922..080b213  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:11.933Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 080b21369ebf95a7833b18701f3ddb397f492a18 but expected 1a4d9223f1f36564541de5e5d8963c38b3560de1
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 1a4d922..b5016ba  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:12.010Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 080b21369ebf95a7833b18701f3ddb397f492a18 but expected 1a4d9223f1f36564541de5e5d8963c38b3560de1
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 1a4d922..b5016ba  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:12.010Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 080b21369ebf95a7833b18701f3ddb397f492a18 but expected 1a4d9223f1f36564541de5e5d8963c38b3560de1
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 1a4d922..b5016ba  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:12.012Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at 080b21369ebf95a7833b18701f3ddb397f492a18 but expected 1a4d9223f1f36564541de5e5d8963c38b3560de1
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 1a4d922..b5016ba  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:12.018Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at b805595cdfafe1c70d9a4743a5f025dc3a2646e3 but expected 080b21369ebf95a7833b18701f3ddb397f492a18
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 080b213..ca71af9  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:12.018Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at b805595cdfafe1c70d9a4743a5f025dc3a2646e3 but expected 080b21369ebf95a7833b18701f3ddb397f492a18
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 080b213..ca71af9  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:12.019Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at b805595cdfafe1c70d9a4743a5f025dc3a2646e3 but expected 080b21369ebf95a7833b18701f3ddb397f492a18
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 080b213..ca71af9  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:12.021Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at b805595cdfafe1c70d9a4743a5f025dc3a2646e3 but expected 080b21369ebf95a7833b18701f3ddb397f492a18
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 080b213..ca71af9  main       -> origin/main  (unable to update local ref)
+    logger.go:146: 2026-04-11T10:47:12.021Z	WARN	fetching repo has failed: error: cannot lock ref 'refs/remotes/origin/main': is at b805595cdfafe1c70d9a4743a5f025dc3a2646e3 but expected 080b21369ebf95a7833b18701f3ddb397f492a18
+        From /tmp/TestTB_HasDivergedConcurrentNoWarningsthree_callers_per_update2913726002/001
+         ! 080b213..ca71af9  main       -> origin/main  (unable to update local ref)
+    tb_git_fencing_test.go:110: warning occurred while checking HasDiverged under concurrency
+--- FAIL: TestTB_HasDivergedConcurrentNoWarnings (1.28s)
+    --- FAIL: TestTB_HasDivergedConcurrentNoWarnings/two_callers_per_update (0.69s)
+    --- FAIL: TestTB_HasDivergedConcurrentNoWarnings/three_callers_per_update (0.59s)
+FAIL
+FAIL	github.com/runatlantis/atlantis/server/events	1.288s
+FAIL
+[FAIL2PASS_CORE] FAIL (exit=1)
+[FAIL2PASS_EDGE] Running: go test ./server/events -run ^TestTB_RunStepsUsesGitReadLock$ -count=1 -v
+=== RUN   TestTB_RunStepsUsesGitReadLock
+    tb_git_fencing_test.go:160: expected exactly one GitReadLock call, got 0
+--- FAIL: TestTB_RunStepsUsesGitReadLock (0.00s)
+FAIL
+FAIL	github.com/runatlantis/atlantis/server/events	0.009s
+FAIL
+[FAIL2PASS_EDGE] FAIL (exit=1)
+[RESULT] reward=0

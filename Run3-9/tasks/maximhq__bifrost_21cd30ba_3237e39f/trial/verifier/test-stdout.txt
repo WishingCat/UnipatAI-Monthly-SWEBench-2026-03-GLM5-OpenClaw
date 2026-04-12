@@ -1,0 +1,10 @@
+[REGRESSION_DIRECT] Running go test pattern: TestOpencodeModelRef|TestOpencodePreLaunchPreservesExistingTheme
+ok  	github.com/maximhq/bifrost/cli/internal/harness	0.006s
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Running go test pattern: TestTBClaudePreLaunchPinsSelectedModelAcrossClaudeTiers
+ok  	github.com/maximhq/bifrost/cli/internal/harness	0.004s
+[FAIL2PASS_CORE] PASS
+[FAIL2PASS_EDGE] Running go test pattern: TestTBClaudeWriteNativeConfigPinsTierDefaultsAndRemovesLegacyModel
+ok  	github.com/maximhq/bifrost/cli/internal/harness	0.013s
+[FAIL2PASS_EDGE] PASS
+All required groups passed. reward=1

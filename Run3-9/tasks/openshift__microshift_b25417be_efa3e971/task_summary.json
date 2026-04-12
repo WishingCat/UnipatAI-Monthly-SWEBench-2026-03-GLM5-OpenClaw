@@ -1,0 +1,9 @@
+{
+  "task": "openshift__microshift_b25417be_efa3e971",
+  "status": "COMPLETE_FAIL",
+  "result": "reward=0.0",
+  "episode_count": 83,
+  "trial_name": "openshift__microshift_b25417be_e__Tp6cgGb",
+  "source_job_dir": "T:\\AgentProjects\\SWEBench\\jobs\\network_retry_resilient_openclaw_2026-04-11_17-06-57",
+  "source_trial_dir": "T:\\AgentProjects\\SWEBench\\jobs\\network_retry_resilient_openclaw_2026-04-11_17-06-57\\openshift__microshift_b25417be_e__Tp6cgGb"
+}

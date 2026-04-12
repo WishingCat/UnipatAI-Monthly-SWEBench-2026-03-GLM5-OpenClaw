@@ -1,0 +1,54 @@
+{
+    "id": "ff7f940e-4e43-4fc3-ad98-fa6204a8cddd",
+    "started_at": "2026-04-11T17:07:03.293500",
+    "finished_at": "2026-04-11T21:16:35.931920",
+    "n_total_trials": 16,
+    "stats": {
+        "n_trials": 16,
+        "n_errors": 9,
+        "evals": {
+            "openclaw__z-ai-glm-5__dataset_network_retry_resume_2026-04-11": {
+                "n_trials": 8,
+                "n_errors": 9,
+                "metrics": [
+                    {
+                        "mean": 0.125
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "maximhq__bifrost_21cd30ba_3237e3__qBKvWso",
+                            "specterops__bloodhound_078e3792___vpboS85"
+                        ],
+                        "0.0": [
+                            "memgraph__memgraph_0a8474dd_043c__YzPx2Mk",
+                            "nixopus__nixopus_309e6eae_0fb164__w5MXXop",
+                            "openshift__microshift_b25417be_e__Tp6cgGb",
+                            "runatlantis__atlantis_7920b36f_7__jb6ATcw",
+                            "stacklok__toolhive_1bf2f3ac_0642__HZZjjc7",
+                            "stacklok__toolhive_261aeb2e_0108__u9zVobR"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "RuntimeError": [
+                        "manticoresoftware__manticoresear__eKnjRee",
+                        "microsoft__windowsappsdk_0038c23__h9Ftdmj",
+                        "px4__px4-autopilot_b597227d_8985__RLopfu5",
+                        "specterops__bloodhound_0a092be6___PjZ7UQa",
+                        "stackrox__stackrox_13efb8e1_6677__wDzyKLw",
+                        "stackrox__stackrox_141b82d3_d510__DgUtoTg",
+                        "tektoncd__operator_09bfe1a0_790d__yBRcLzK"
+                    ],
+                    "AgentTimeoutError": [
+                        "stacklok__toolhive_1bf2f3ac_0642__HZZjjc7"
+                    ],
+                    "RewardFileNotFoundError": [
+                        "stacklok__toolhive_398eeec9_5e24__kcfkrQ4"
+                    ]
+                }
+            }
+        }
+    }
+}

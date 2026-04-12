@@ -1,0 +1,65 @@
+[
+  {
+    "task": "maximhq__bifrost_21cd30ba_3237e39f",
+    "status": "PASS",
+    "result": "reward=1.0",
+    "episode_count": 47,
+    "trial_name": "maximhq__bifrost_21cd30ba_3237e3__qBKvWso"
+  },
+  {
+    "task": "memgraph__memgraph_0a8474dd_043c54ee",
+    "status": "COMPLETE_FAIL",
+    "result": "reward=0.0",
+    "episode_count": 99,
+    "trial_name": "memgraph__memgraph_0a8474dd_043c__YzPx2Mk"
+  },
+  {
+    "task": "nixopus__nixopus_309e6eae_0fb164cc",
+    "status": "COMPLETE_FAIL",
+    "result": "reward=0.0",
+    "episode_count": 11,
+    "trial_name": "nixopus__nixopus_309e6eae_0fb164__w5MXXop"
+  },
+  {
+    "task": "openshift__microshift_b25417be_efa3e971",
+    "status": "COMPLETE_FAIL",
+    "result": "reward=0.0",
+    "episode_count": 83,
+    "trial_name": "openshift__microshift_b25417be_e__Tp6cgGb"
+  },
+  {
+    "task": "runatlantis__atlantis_7920b36f_7758ed6c",
+    "status": "COMPLETE_FAIL",
+    "result": "reward=0.0",
+    "episode_count": 19,
+    "trial_name": "runatlantis__atlantis_7920b36f_7__jb6ATcw"
+  },
+  {
+    "task": "specterops__bloodhound_078e3792_73acca3e",
+    "status": "PASS",
+    "result": "reward=1.0",
+    "episode_count": 62,
+    "trial_name": "specterops__bloodhound_078e3792___vpboS85"
+  },
+  {
+    "task": "stacklok__toolhive_261aeb2e_0108b113",
+    "status": "COMPLETE_FAIL",
+    "result": "reward=0.0",
+    "episode_count": 118,
+    "trial_name": "stacklok__toolhive_261aeb2e_0108__u9zVobR"
+  },
+  {
+    "task": "manticoresoftware__manticoresearch_1a9cc54a_d4354257",
+    "status": "COMPLETE_FAIL",
+    "result": "reward=0.0",
+    "episode_count": 92,
+    "trial_name": "manticoresoftware__manticoresear__CQfEz3G"
+  },
+  {
+    "task": "stacklok__toolhive_1bf2f3ac_0642921f",
+    "status": "RAN_FAIL",
+    "result": "AgentTimeoutError",
+    "episode_count": 281,
+    "trial_name": "stacklok__toolhive_1bf2f3ac_0642__HZZjjc7"
+  }
+]

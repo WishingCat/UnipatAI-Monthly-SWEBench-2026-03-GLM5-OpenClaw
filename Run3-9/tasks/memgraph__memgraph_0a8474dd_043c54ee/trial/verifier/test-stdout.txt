@@ -1,0 +1,20 @@
+[REGRESSION_DIRECT] Running /tests/test_regression_e2e_discovery.py
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Running /tests/test_fail2pass_embeddings_cache.py
+Traceback (most recent call last):
+  File "/tests/test_fail2pass_embeddings_cache.py", line 158, in <module>
+    main()
+  File "/tests/test_fail2pass_embeddings_cache.py", line 123, in main
+    assert not errors, f"Concurrent model_info calls must not fail: {errors}"
+AssertionError: Concurrent model_info calls must not fail: ['concurrent model initialization crash', 'concurrent model initialization crash', 'concurrent model initialization crash', 'concurrent model initialization crash', 'concurrent model initialization crash', 'concurrent model initialization crash', 'concurrent model initialization crash']
+[FAIL2PASS_CORE] FAIL (exit=1)
+[FAIL2PASS_EDGE] Running /tests/test_fail2pass_standalone_e2e.py
+Traceback (most recent call last):
+  File "/tests/test_fail2pass_standalone_e2e.py", line 163, in <module>
+    main()
+  File "/tests/test_fail2pass_standalone_e2e.py", line 109, in main
+    assert standalone_file.resolve() in discovered_paths, "Standalone test_*.py file must be discovered"
+AssertionError: Standalone test_*.py file must be discovered
+[FAIL2PASS_EDGE] FAIL (exit=1)
+[SUMMARY] total_groups=3 failed_groups=2
+[SUMMARY] reward=0

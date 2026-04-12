@@ -1,0 +1,13 @@
+[agent] [context-overflow-diag] sessionKey=agent:main:main provider=openai/z-ai/glm-5 source=assistantError messages=42 sessionFile=/logs/agent/openclaw-sessions/67fda70b-03a1-4031-b423-d0e897d45ea3.jsonl diagId=ovf-mnu8wpd6-2Lbfzg compactionAttempts=0 observedTokens=unknown error=Context overflow: estimated context size exceeds safe threshold during tool loop.
+[agent] context overflow detected (attempt 1/3); attempting auto-compaction for openai/z-ai/glm-5
+[agent] auto-compaction succeeded for openai/z-ai/glm-5; retrying prompt
+[agent] [context-overflow-diag] sessionKey=agent:main:main provider=openai/z-ai/glm-5 source=assistantError messages=59 sessionFile=/logs/agent/openclaw-sessions/67fda70b-03a1-4031-b423-d0e897d45ea3.jsonl diagId=ovf-mnu95pe2-GsaU1Q compactionAttempts=1 observedTokens=unknown error=Context overflow: estimated context size exceeds safe threshold during tool loop.
+[agent] context overflow detected (attempt 2/3); attempting auto-compaction for openai/z-ai/glm-5
+[agent] auto-compaction succeeded for openai/z-ai/glm-5; retrying prompt
+[agent] [context-overflow-diag] sessionKey=agent:main:main provider=openai/z-ai/glm-5 source=assistantError messages=41 sessionFile=/logs/agent/openclaw-sessions/67fda70b-03a1-4031-b423-d0e897d45ea3.jsonl diagId=ovf-mnu9c43y-UIMPeg compactionAttempts=2 observedTokens=unknown error=Context overflow: estimated context size exceeds safe threshold during tool loop.
+[agent] context overflow detected (attempt 3/3); attempting auto-compaction for openai/z-ai/glm-5
+[agent] auto-compaction succeeded for openai/z-ai/glm-5; retrying prompt
+[agent] [context-overflow-diag] sessionKey=agent:main:main provider=openai/z-ai/glm-5 source=assistantError messages=45 sessionFile=/logs/agent/openclaw-sessions/67fda70b-03a1-4031-b423-d0e897d45ea3.jsonl diagId=ovf-mnu9lrnj-l4zHow compactionAttempts=3 observedTokens=unknown error=Context overflow: estimated context size exceeds safe threshold during tool loop.
+[agent] [context-overflow-recovery] Attempting tool result truncation for openai/z-ai/glm-5 (contextWindow=131072 tokens)
+[agent] [tool-result-truncation] Truncated 54 tool result(s) in session (contextWindow=131072 maxChars=40000 aggregateBudgetChars=40000 oversized=0 aggregate=54) sessionKey=agent:main:main
+[agent] [context-overflow-recovery] Truncated 54 tool result(s); retrying prompt

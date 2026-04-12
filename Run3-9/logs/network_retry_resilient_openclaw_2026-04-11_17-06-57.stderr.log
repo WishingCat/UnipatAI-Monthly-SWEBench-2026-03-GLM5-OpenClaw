@@ -1,0 +1,57 @@
+T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\modal\_utils\async_utils.py:45: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\modal\_utils\async_utils.py:45: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+Using plain orchestrator output (non-interactive or non-UTF-8 console detected).
+Starting trial: manticoresoftware__manticoresear__eKnjRee
+Attempting Docker Desktop recovery for manticoresoftware__manticoresearch_27f5d482_a8159410 after API 500.
+Detected Docker Desktop API failure while running build for manticoresoftware__manticoresearch_27f5d482_a8159410. Recovery succeeded; retrying compose command (2/3).
+Attempting Docker Desktop recovery for manticoresoftware__manticoresearch_27f5d482_a8159410 after API 500.
+Detected Docker Desktop API failure while running build for manticoresoftware__manticoresearch_27f5d482_a8159410. Recovery succeeded; retrying compose command (3/3).
+Attempting Docker Desktop recovery for manticoresoftware__manticoresearch_27f5d482_a8159410 after API 500.
+Detected Docker Desktop API failure while running down for manticoresoftware__manticoresearch_27f5d482_a8159410. Recovery succeeded; retrying compose command (2/3).
+Finished trial manticoresoftware__manticoresear__eKnjRee with RuntimeError
+Starting trial: maximhq__bifrost_21cd30ba_3237e3__qBKvWso
+Finished trial maximhq__bifrost_21cd30ba_3237e3__qBKvWso with reward=1.0
+Starting trial: memgraph__memgraph_0a8474dd_043c__YzPx2Mk
+Finished trial memgraph__memgraph_0a8474dd_043c__YzPx2Mk with reward=0.0
+Starting trial: microsoft__windowsappsdk_0038c23__h9Ftdmj
+Finished trial microsoft__windowsappsdk_0038c23__h9Ftdmj with RuntimeError
+Starting trial: nixopus__nixopus_309e6eae_0fb164__w5MXXop
+Finished trial nixopus__nixopus_309e6eae_0fb164__w5MXXop with reward=0.0
+Starting trial: openshift__microshift_b25417be_e__Tp6cgGb
+Finished trial openshift__microshift_b25417be_e__Tp6cgGb with reward=0.0
+Starting trial: px4__px4-autopilot_b597227d_8985__RLopfu5
+Finished trial px4__px4-autopilot_b597227d_8985__RLopfu5 with RuntimeError
+Starting trial: runatlantis__atlantis_7920b36f_7__jb6ATcw
+Finished trial runatlantis__atlantis_7920b36f_7__jb6ATcw with reward=0.0
+Starting trial: specterops__bloodhound_078e3792___vpboS85
+Finished trial specterops__bloodhound_078e3792___vpboS85 with reward=1.0
+Starting trial: specterops__bloodhound_0a092be6___PjZ7UQa
+Finished trial specterops__bloodhound_0a092be6___PjZ7UQa with RuntimeError
+Starting trial: stacklok__toolhive_1bf2f3ac_0642__HZZjjc7
+Finished trial stacklok__toolhive_1bf2f3ac_0642__HZZjjc7 with AgentTimeoutError
+Starting trial: stacklok__toolhive_261aeb2e_0108__u9zVobR
+Finished trial stacklok__toolhive_261aeb2e_0108__u9zVobR with reward=0.0
+Starting trial: stacklok__toolhive_398eeec9_5e24__kcfkrQ4
+Attempting Docker Desktop recovery for stacklok__toolhive_398eeec9_5e246db0 after API 500.
+Detected Docker Desktop API failure while running down for stacklok__toolhive_398eeec9_5e246db0. Recovery succeeded; retrying compose command (2/3).
+Finished trial stacklok__toolhive_398eeec9_5e24__kcfkrQ4 with RewardFileNotFoundError
+Starting trial: stackrox__stackrox_13efb8e1_6677__wDzyKLw
+Attempting Docker Desktop recovery for stackrox__stackrox_13efb8e1_66777350 after API 500.
+Detected Docker Desktop API failure while running build for stackrox__stackrox_13efb8e1_66777350. Recovery succeeded; retrying compose command (2/3).
+Finished trial stackrox__stackrox_13efb8e1_6677__wDzyKLw with RuntimeError
+Starting trial: stackrox__stackrox_141b82d3_d510__DgUtoTg
+Attempting Docker Desktop recovery for stackrox__stackrox_141b82d3_d510dffd after API 500.
+Docker Desktop did not become healthy after recovery for stackrox__stackrox_141b82d3_d510dffd.
+Attempting Docker Desktop recovery for stackrox__stackrox_141b82d3_d510dffd after API 500.
+Docker Desktop did not become healthy after recovery for stackrox__stackrox_141b82d3_d510dffd.
+Docker compose down failed: Docker compose command failed for environment stackrox__stackrox_141b82d3_d510dffd. Command: docker compose -p stackrox__stackrox_141b82d3_d510__dgutotg --project-directory T:\AgentProjects\SWEBench\dataset_remaining\stackrox__stackrox_141b82d3_d510dffd\environment -f T:\AgentProjects\SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml down. Return code: 1. Stdout: Docker Desktop health monitor detected request returned 500 Internal Server Error for dockerDesktopLinuxEngine during compose execution.. Stderr: None. 
+Finished trial stackrox__stackrox_141b82d3_d510__DgUtoTg with RuntimeError
+Starting trial: tektoncd__operator_09bfe1a0_790d__yBRcLzK
+Attempting Docker Desktop recovery for tektoncd__operator_09bfe1a0_790d5201 after API 500.
+Docker Desktop did not become healthy after recovery for tektoncd__operator_09bfe1a0_790d5201.
+Attempting Docker Desktop recovery for tektoncd__operator_09bfe1a0_790d5201 after API 500.
+Docker Desktop did not become healthy after recovery for tektoncd__operator_09bfe1a0_790d5201.
+Docker compose down failed: Docker compose command failed for environment tektoncd__operator_09bfe1a0_790d5201. Command: docker compose -p tektoncd__operator_09bfe1a0_790d__ybrclzk --project-directory T:\AgentProjects\SWEBench\dataset_remaining\tektoncd__operator_09bfe1a0_790d5201\environment -f T:\AgentProjects\SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml down. Return code: 1. Stdout: Docker Desktop health monitor detected request returned 500 Internal Server Error for dockerDesktopLinuxEngine during compose execution.. Stderr: None. 
+Finished trial tektoncd__operator_09bfe1a0_790d__yBRcLzK with RuntimeError

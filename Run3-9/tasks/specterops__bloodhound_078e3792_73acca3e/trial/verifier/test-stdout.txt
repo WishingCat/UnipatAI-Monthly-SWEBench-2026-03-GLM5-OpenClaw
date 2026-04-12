@@ -1,0 +1,15 @@
+[REGRESSION_DIRECT] START: Azure conversion still emits Azure entities
+ok  	github.com/specterops/bloodhound/cmd/api/src/services/graphify	0.010s
+[REGRESSION_DIRECT] PASS: Azure conversion still emits Azure entities
+
+[FAIL2PASS_CORE] START: Azure user conversion does not emit AD stub users
+ok  	github.com/specterops/bloodhound/cmd/api/src/services/graphify	0.011s
+[FAIL2PASS_CORE] PASS: Azure user conversion does not emit AD stub users
+
+[FAIL2PASS_EDGE] START: Azure group conversion does not emit AD stub groups
+ok  	github.com/specterops/bloodhound/cmd/api/src/services/graphify	0.009s
+[FAIL2PASS_EDGE] PASS: Azure group conversion does not emit AD stub groups
+
+Executed groups: 3
+Failed groups: 0
+Final reward: 1

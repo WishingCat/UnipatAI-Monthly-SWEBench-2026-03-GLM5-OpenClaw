@@ -1,0 +1,9 @@
+{
+  "task": "manticoresoftware__manticoresearch_1a9cc54a_d4354257",
+  "status": "COMPLETE_FAIL",
+  "result": "reward=0.0",
+  "episode_count": 92,
+  "trial_name": "manticoresoftware__manticoresear__CQfEz3G",
+  "source_job_dir": "T:\\AgentProjects\\SWEBench\\jobs\\network_retry_openclaw_2026-04-11_12-35-18",
+  "source_trial_dir": "T:\\AgentProjects\\SWEBench\\jobs\\network_retry_openclaw_2026-04-11_12-35-18\\manticoresoftware__manticoresear__CQfEz3G"
+}

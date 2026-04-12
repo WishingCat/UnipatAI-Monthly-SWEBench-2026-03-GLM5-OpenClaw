@@ -1,0 +1,82 @@
+[ENV] using go version go1.25.9 linux/amd64
+[REGRESSION_DIRECT] START - existing config environment-precedence behavior
+go: downloading github.com/joho/godotenv v1.5.1
+go: downloading github.com/spf13/viper v1.21.0
+go: downloading github.com/stretchr/testify v1.11.1
+go: downloading github.com/jackc/pgx/v5 v5.7.5
+go: downloading github.com/uptrace/bun v1.2.16
+go: downloading github.com/uptrace/bun/dialect/pgdialect v1.2.16
+go: downloading github.com/uptrace/bun/extra/bundebug v1.2.16
+go: downloading github.com/google/uuid v1.6.0
+go: downloading github.com/fsnotify/fsnotify v1.9.0
+go: downloading github.com/go-viper/mapstructure/v2 v2.4.0
+go: downloading github.com/sagikazarmark/locafero v0.11.0
+go: downloading github.com/spf13/afero v1.15.0
+go: downloading github.com/spf13/cast v1.10.0
+go: downloading github.com/spf13/pflag v1.0.10
+go: downloading github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc
+go: downloading github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2
+go: downloading github.com/fatih/color v1.18.0
+go: downloading golang.org/x/sys v0.39.0
+go: downloading github.com/sourcegraph/conc v0.3.1-0.20240121214520-5f936abd7ae8
+go: downloading golang.org/x/text v0.31.0
+go: downloading github.com/subosito/gotenv v1.6.0
+go: downloading github.com/pelletier/go-toml/v2 v2.2.4
+go: downloading go.yaml.in/yaml/v3 v3.0.4
+go: downloading gopkg.in/yaml.v3 v3.0.1
+go: downloading github.com/jackc/pgpassfile v1.0.0
+go: downloading github.com/jackc/pgservicefile v0.0.0-20240606120523-5a60cdf6a761
+go: downloading golang.org/x/crypto v0.45.0
+go: downloading github.com/jackc/puddle/v2 v2.2.2
+go: downloading github.com/tmthrgd/go-hex v0.0.0-20190904060850-447a3041c3bc
+go: downloading github.com/jinzhu/inflection v1.0.0
+go: downloading github.com/puzpuzpuz/xsync/v3 v3.5.1
+go: downloading github.com/vmihailenco/msgpack/v5 v5.4.1
+go: downloading github.com/mattn/go-colorable v0.1.14
+go: downloading github.com/mattn/go-isatty v0.0.20
+go: downloading golang.org/x/sync v0.18.0
+go: downloading github.com/vmihailenco/tagparser/v2 v2.0.0
+ok  	github.com/raghavyuva/nixopus-api/internal/config	0.004s
+[REGRESSION_DIRECT] PASS - existing config environment-precedence behavior
+[FAIL2PASS_CORE] START - new config env mappings and typed config contracts
+2026/04/11 10:04:15 Info: Config file 'config.prod' not found, using environment variables
+2026/04/11 10:04:15 Using environment variables and defaults
+--- FAIL: TestTerminalBenchConfigEnvMappings (0.00s)
+    terminalbench_config_contract_test.go:32: expected database.url="postgresql://dbuser:dbpass@dbhost:5433/dbname?sslmode=require", got ""
+2026/04/11 10:04:15 Info: Config file 'config.prod' not found, using environment variables
+2026/04/11 10:04:15 Using environment variables and defaults
+--- FAIL: TestTerminalBenchDefaultCaddyPort (0.00s)
+    terminalbench_config_contract_test.go:43: expected default proxy.caddy_port to be 2019, got ""
+--- FAIL: TestTerminalBenchTypesExposeNewConfigFields (0.00s)
+    terminalbench_config_contract_test.go:51: types.DatabaseConfig must expose field URL
+FAIL
+FAIL	github.com/raghavyuva/nixopus-api/internal/config	0.004s
+FAIL
+[FAIL2PASS_CORE] FAIL - new config env mappings and typed config contracts
+[FAIL2PASS_EDGE] START - RBAC Better Auth lookup uses AUTH_SERVICE_URL
+go: downloading golang.org/x/time v0.13.0
+go: downloading github.com/go-redis/redis/v8 v8.11.5
+go: downloading github.com/sirupsen/logrus v1.9.3
+go: downloading github.com/pkg/sftp v1.13.5
+go: downloading github.com/cespare/xxhash/v2 v2.3.0
+go: downloading github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f
+go: downloading github.com/cespare/xxhash v1.1.0
+go: downloading github.com/melbahja/goph v1.4.0
+go: downloading github.com/kr/fs v0.1.0
+go: downloading golang.org/x/term v0.37.0
+go: downloading github.com/pkg/errors v0.9.1
+--- FAIL: TestTerminalBenchUsesAuthServiceURLInMemberLookup (0.00s)
+    terminalbench_rbac_auth_service_test.go:45: expected successful Better Auth lookup via AUTH_SERVICE_URL, got error: failed to fetch organization members: Get "http://localhost:9090/api/auth/organization/list-members?organizationId=org-123": dial tcp [::1]:9090: connect: connection refused
+FAIL
+FAIL	github.com/raghavyuva/nixopus-api/internal/middleware	0.006s
+FAIL
+[FAIL2PASS_EDGE] FAIL - RBAC Better Auth lookup uses AUTH_SERVICE_URL
+[FAIL2PASS_ERROR_HANDLING] START - malformed DATABASE_URL fails with explicit parse error
+Expected parse failure message in init probe output
+2026/04/11 10:04:23 Warning: .env file not found, using environment variables
+2026/04/11 10:04:23 Successfully loaded config file: /app/nixopus/helpers/config.dev.yaml
+2026/04/11 10:04:23 Configuration loaded successfully for environment: development
+2026/04/11 10:04:23 Configuration validation failed: configuration validation failed: [database host is required database port is required database username is required database password is required database name is required Better Auth URL is required Better Auth secret is required]
+exit status 1
+[FAIL2PASS_ERROR_HANDLING] FAIL - malformed DATABASE_URL fails with explicit parse error
+3 test group(s) failed.

@@ -1,0 +1,63 @@
+[REGRESSION_DIRECT] START
+ok  	github.com/openshift/microshift/pkg/admin/prerun	0.007s
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] START
+??? I0411 10:33:12.319394   22117 version.go:38] "START version metadata management"
+??? I0411 10:33:12.319439   22117 version.go:81] "START getting versions"
+??? I0411 10:33:12.319444   22117 version.go:291] "START reading version file"
+??? I0411 10:33:12.319477   22117 version.go:297] "END reading version file" contents={"version":"4.21.0","boot_id":"tb-boot-id-original"}
+??? I0411 10:33:12.319494   22117 version.go:87] "END getting versions" exec="4.21.0" data="4.21.0"
+??? I0411 10:33:12.319497   22117 version.go:92] "START version compatibility checks"
+??? I0411 10:33:12.319501   22117 version.go:360] "Executable and data versions are the same - continuing"
+??? I0411 10:33:12.319503   22117 version.go:97] "END version compatibility checks"
+??? I0411 10:33:12.319505   22117 version.go:99] "START checking if version upgrade is blocked"
+??? I0411 10:33:12.319508   22117 upgrade_blocking.go:15] "START obtaining list of blocked upgrades"
+??? I0411 10:33:12.319515   22117 upgrade_blocking.go:19] "SKIP obtaining list of blocked upgrades - embedded blocked upgrades asset does not exist - skipping check if upgrade is blocked"
+??? I0411 10:33:12.319527   22117 version.go:104] "END checking if version upgrade is blocked"
+??? I0411 10:33:12.319529   22117 version.go:107] "START updating version file"
+??? I0411 10:33:12.320414   22117 version.go:207] "Version file contents to write" data={"version":"4.21.0","boot_id":"aa45ee659dcf42d89a2dd1c6fe5520c7"}
+??? I0411 10:33:12.320493   22117 version.go:112] "END updating version file"
+??? I0411 10:33:12.320505   22117 version.go:43] "END version metadata management"
+--- FAIL: TestTerminalBenchVersionMetadataManagementIsReadOnly (0.00s)
+    terminalbench_version_metadata_test.go:48: VersionMetadataManagement must be read-only. before="{\"version\":\"4.21.0\",\"boot_id\":\"tb-boot-id-original\"}" after="{\"version\":\"4.21.0\",\"boot_id\":\"aa45ee659dcf42d89a2dd1c6fe5520c7\"}"
+??? I0411 10:33:12.321240   22117 version.go:38] "START version metadata management"
+??? I0411 10:33:12.321259   22117 version.go:81] "START getting versions"
+??? I0411 10:33:12.321263   22117 version.go:291] "START reading version file"
+??? I0411 10:33:12.321279   22117 version.go:297] "END reading version file" contents={"version":"4.21.0","boot_id":"tb-boot-id-before-failure"}
+??? I0411 10:33:12.321292   22117 version.go:87] "END getting versions" exec="4.21.0" data="4.21.0"
+??? I0411 10:33:12.321294   22117 version.go:92] "START version compatibility checks"
+??? I0411 10:33:12.321296   22117 version.go:360] "Executable and data versions are the same - continuing"
+??? I0411 10:33:12.321298   22117 version.go:97] "END version compatibility checks"
+??? I0411 10:33:12.321300   22117 version.go:99] "START checking if version upgrade is blocked"
+??? I0411 10:33:12.321302   22117 upgrade_blocking.go:15] "START obtaining list of blocked upgrades"
+??? I0411 10:33:12.321306   22117 upgrade_blocking.go:19] "SKIP obtaining list of blocked upgrades - embedded blocked upgrades asset does not exist - skipping check if upgrade is blocked"
+??? I0411 10:33:12.321316   22117 version.go:104] "END checking if version upgrade is blocked"
+??? I0411 10:33:12.321318   22117 version.go:107] "START updating version file"
+??? I0411 10:33:12.321343   22117 version.go:207] "Version file contents to write" data={"version":"4.21.0","boot_id":"aa45ee659dcf42d89a2dd1c6fe5520c7"}
+??? I0411 10:33:12.321398   22117 version.go:112] "END updating version file"
+??? I0411 10:33:12.321403   22117 version.go:43] "END version metadata management"
+??? I0411 10:33:12.321406   22117 featuregate_lock.go:34] "START feature gate lock management"
+??? I0411 10:33:12.321415   22117 featuregate_lock.go:95] "Validating feature gate lock file" path="/tmp/tb-prerun-lock-fail-3492261551/no-upgrade"
+??? E0411 10:33:12.321489   22117 featuregate_lock.go:38] "FAIL feature gate lock management" err=<
+	version upgrade detected with custom feature gates: locked version 4.22.0, current version 4.21.0
+	
+	Upgrades are not supported when custom feature gates are configured.
+	Custom feature gates were configured in version 4.22.0.
+	Gates Enabled: [FeatureA]
+	Gates Disabled: []
+	To restore MicroShift to a supported state, you must:
+	1. Roll back to version 4.22.0, OR
+	2. Run: sudo microshift-cleanup-data --all
+	3. Remove custom feature gates from /etc/microshift/config.yaml
+	4. Restart MicroShift: sudo systemctl restart microshift
+ >
+--- FAIL: TestTerminalBenchFeatureGateFailureDoesNotRewriteVersionFile (0.00s)
+    terminalbench_version_metadata_test.go:107: version file must stay unchanged when startup is blocked by feature-gate lock. before="{\"version\":\"4.21.0\",\"boot_id\":\"tb-boot-id-before-failure\"}" after="{\"version\":\"4.21.0\",\"boot_id\":\"aa45ee659dcf42d89a2dd1c6fe5520c7\"}"
+FAIL
+FAIL	github.com/openshift/microshift/pkg/admin/prerun	0.009s
+FAIL
+[FAIL2PASS_CORE] FAIL (exit=1)
+[FAIL2PASS_EDGE] START
+ok  	github.com/openshift/microshift/pkg/config	0.010s
+[FAIL2PASS_EDGE] PASS
+Final reward: 0

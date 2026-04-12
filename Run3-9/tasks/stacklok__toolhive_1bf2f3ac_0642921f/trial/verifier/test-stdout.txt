@@ -1,0 +1,43 @@
+[REGRESSION_DIRECT] START - existing build tag validation stays correct
+ok  	github.com/stacklok/toolhive/pkg/skills/skillsvc	0.015s
+[REGRESSION_DIRECT] PASS - existing build tag validation stays correct
+
+[FAIL2PASS_CORE] START - explicit full reference tags are accepted
+--- FAIL: TestTerminalBenchBuildAcceptsFullOCIReferenceCore (0.00s)
+    --- FAIL: TestTerminalBenchBuildAcceptsFullOCIReferenceCore/docker.io/library/nginx:1.25 (0.00s)
+        zz_terminalbench_oci_reference_test.go:54: 
+            	Error Trace:	/app/toolhive/pkg/skills/skillsvc/zz_terminalbench_oci_reference_test.go:54
+            	Error:      	Received unexpected error:
+            	            	invalid OCI tag "docker.io/library/nginx:1.25": repository can only contain the characters `abcdefghijklmnopqrstuvwxyz0123456789_-./`: repo:docker.io/library/nginx
+            	Test:       	TestTerminalBenchBuildAcceptsFullOCIReferenceCore/docker.io/library/nginx:1.25
+    --- FAIL: TestTerminalBenchBuildAcceptsFullOCIReferenceCore/ghcr.io/stacklok/toolhive-skills/my-skill:v1.0.0 (0.00s)
+        zz_terminalbench_oci_reference_test.go:54: 
+            	Error Trace:	/app/toolhive/pkg/skills/skillsvc/zz_terminalbench_oci_reference_test.go:54
+            	Error:      	Received unexpected error:
+            	            	invalid OCI tag "ghcr.io/stacklok/toolhive-skills/my-skill:v1.0.0": repository can only contain the characters `abcdefghijklmnopqrstuvwxyz0123456789_-./`: repo:ghcr.io/stacklok/toolhive-skills/my-skill
+            	Test:       	TestTerminalBenchBuildAcceptsFullOCIReferenceCore/ghcr.io/stacklok/toolhive-skills/my-skill:v1.0.0
+FAIL
+FAIL	github.com/stacklok/toolhive/pkg/skills/skillsvc	0.014s
+FAIL
+[FAIL2PASS_CORE] FAIL - explicit full reference tags are accepted (exit=1)
+
+[FAIL2PASS_EDGE] START - localhost and digest reference variants are accepted
+--- FAIL: TestTerminalBenchBuildAcceptsFullOCIReferenceVariants (0.00s)
+    --- FAIL: TestTerminalBenchBuildAcceptsFullOCIReferenceVariants/ghcr.io/org/repo@sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 (0.00s)
+        zz_terminalbench_oci_reference_test.go:75: 
+            	Error Trace:	/app/toolhive/pkg/skills/skillsvc/zz_terminalbench_oci_reference_test.go:75
+            	Error:      	Received unexpected error:
+            	            	invalid OCI tag "ghcr.io/org/repo@sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": repository can only contain the characters `abcdefghijklmnopqrstuvwxyz0123456789_-./`: repo:ghcr.io/org/repo@sha256
+            	Test:       	TestTerminalBenchBuildAcceptsFullOCIReferenceVariants/ghcr.io/org/repo@sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    --- FAIL: TestTerminalBenchBuildAcceptsFullOCIReferenceVariants/localhost:5000/my-skill:v1 (0.00s)
+        zz_terminalbench_oci_reference_test.go:75: 
+            	Error Trace:	/app/toolhive/pkg/skills/skillsvc/zz_terminalbench_oci_reference_test.go:75
+            	Error:      	Received unexpected error:
+            	            	invalid OCI tag "localhost:5000/my-skill:v1": repository can only contain the characters `abcdefghijklmnopqrstuvwxyz0123456789_-./`: repo:localhost:5000/my-skill
+            	Test:       	TestTerminalBenchBuildAcceptsFullOCIReferenceVariants/localhost:5000/my-skill:v1
+FAIL
+FAIL	github.com/stacklok/toolhive/pkg/skills/skillsvc	0.014s
+FAIL
+[FAIL2PASS_EDGE] FAIL - localhost and digest reference variants are accepted (exit=1)
+
+At least one test group failed. reward=0

@@ -1,0 +1,9 @@
+{
+  "task": "runatlantis__atlantis_7920b36f_7758ed6c",
+  "status": "COMPLETE_FAIL",
+  "result": "reward=0.0",
+  "episode_count": 19,
+  "trial_name": "runatlantis__atlantis_7920b36f_7__jb6ATcw",
+  "source_job_dir": "T:\\AgentProjects\\SWEBench\\jobs\\network_retry_resilient_openclaw_2026-04-11_17-06-57",
+  "source_trial_dir": "T:\\AgentProjects\\SWEBench\\jobs\\network_retry_resilient_openclaw_2026-04-11_17-06-57\\runatlantis__atlantis_7920b36f_7__jb6ATcw"
+}

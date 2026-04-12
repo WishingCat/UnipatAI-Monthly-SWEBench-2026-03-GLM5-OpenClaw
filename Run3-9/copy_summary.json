@@ -1,0 +1,88 @@
+{
+  "destination": "T:\\AgentProjects\\Temp\\Run3-9",
+  "selected_task_count": 9,
+  "total_files": 1027,
+  "total_size_mb": 787.18,
+  "largest_files": [
+    {
+      "path": "tasks/stacklok__toolhive_1bf2f3ac_0642921f/trial/episode_exports/episodes.jsonl",
+      "size_mb": 248.22
+    },
+    {
+      "path": "tasks/stacklok__toolhive_261aeb2e_0108b113/trial/episode_exports/episodes.jsonl",
+      "size_mb": 64.92
+    },
+    {
+      "path": "tasks/manticoresoftware__manticoresearch_1a9cc54a_d4354257/trial/episode_exports/episodes.jsonl",
+      "size_mb": 24.36
+    },
+    {
+      "path": "tasks/openshift__microshift_b25417be_efa3e971/trial/episode_exports/episodes.jsonl",
+      "size_mb": 23.7
+    },
+    {
+      "path": "tasks/specterops__bloodhound_078e3792_73acca3e/trial/episode_exports/episodes.jsonl",
+      "size_mb": 11.5
+    },
+    {
+      "path": "tasks/memgraph__memgraph_0a8474dd_043c54ee/trial/episode_exports/episodes.jsonl",
+      "size_mb": 7.54
+    },
+    {
+      "path": "tasks/stacklok__toolhive_1bf2f3ac_0642921f/trial/agent/openclaw-sessions/67fda70b-03a1-4031-b423-d0e897d45ea3.jsonl",
+      "size_mb": 3.05
+    },
+    {
+      "path": "tasks/maximhq__bifrost_21cd30ba_3237e39f/trial/episode_exports/episodes.jsonl",
+      "size_mb": 2.18
+    },
+    {
+      "path": "tasks/stacklok__toolhive_1bf2f3ac_0642921f/trial/agent/trajectory.json",
+      "size_mb": 1.62
+    },
+    {
+      "path": "tasks/stacklok__toolhive_1bf2f3ac_0642921f/trial/episode_exports/0281_episode-280.json",
+      "size_mb": 1.47
+    },
+    {
+      "path": "tasks/stacklok__toolhive_1bf2f3ac_0642921f/trial/episode_exports/0280_episode-279.json",
+      "size_mb": 1.47
+    },
+    {
+      "path": "tasks/stacklok__toolhive_1bf2f3ac_0642921f/trial/episode_exports/0279_episode-278.json",
+      "size_mb": 1.45
+    },
+    {
+      "path": "tasks/stacklok__toolhive_1bf2f3ac_0642921f/trial/episode_exports/0278_episode-277.json",
+      "size_mb": 1.44
+    },
+    {
+      "path": "tasks/stacklok__toolhive_1bf2f3ac_0642921f/trial/episode_exports/0277_episode-276.json",
+      "size_mb": 1.43
+    },
+    {
+      "path": "tasks/stacklok__toolhive_1bf2f3ac_0642921f/trial/episode_exports/0276_episode-275.json",
+      "size_mb": 1.42
+    },
+    {
+      "path": "tasks/stacklok__toolhive_1bf2f3ac_0642921f/trial/episode_exports/0275_episode-274.json",
+      "size_mb": 1.42
+    },
+    {
+      "path": "tasks/stacklok__toolhive_1bf2f3ac_0642921f/trial/episode_exports/0274_episode-273.json",
+      "size_mb": 1.42
+    },
+    {
+      "path": "tasks/stacklok__toolhive_1bf2f3ac_0642921f/trial/episode_exports/0273_episode-272.json",
+      "size_mb": 1.41
+    },
+    {
+      "path": "tasks/stacklok__toolhive_1bf2f3ac_0642921f/trial/episode_exports/0272_episode-271.json",
+      "size_mb": 1.41
+    },
+    {
+      "path": "tasks/stacklok__toolhive_1bf2f3ac_0642921f/trial/episode_exports/0271_episode-270.json",
+      "size_mb": 1.41
+    }
+  ]
+}

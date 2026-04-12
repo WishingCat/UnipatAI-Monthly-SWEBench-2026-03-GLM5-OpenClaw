@@ -1,0 +1,67 @@
+[BUILD] rebuilding searchd from current /app/manticoresearch sources
+[REGRESSION_DIRECT] running legacy bigram behavior checks
+[REGRESSION_DIRECT] PASS
+[REGRESSION_DIRECT] PASS
+[REGRESSION_DIRECT] PASS
+[REGRESSION_DIRECT] PASS
+[REGRESSION_DIRECT] PASS
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] running second_numeric checks
+[FAIL2PASS_CORE] PASS
+[FAIL2PASS_CORE] FAIL: statement failed
+[FAIL2PASS_CORE] SQL: CREATE TABLE tb_num (title text) dict='keywords' bigram_index='second_numeric' bigram_delimiter='none';
+[FAIL2PASS_CORE] OUT: ERROR 1064 (42000) at line 1: error adding table 'tb_num': unknown bigram_index=second_numeric (must be all, first_freq, or both_freq)
+[FAIL2PASS_CORE] FAIL: statement failed
+[FAIL2PASS_CORE] SQL: INSERT INTO tb_num (id,title) VALUES (1,'xt 806'),(2,'xt rt9600'),(3,'xt abc'),(4,'xt v2');
+[FAIL2PASS_CORE] OUT: ERROR 1064 (42000) at line 1: table 'tb_num' absent
+[FAIL2PASS_CORE] FAIL: query failed
+[FAIL2PASS_CORE] SQL: SELECT id FROM tb_num WHERE MATCH('xt806') ORDER BY id ASC;
+[FAIL2PASS_CORE] OUT: ERROR 1064 (42000) at line 1: unknown local table(s) 'tb_num' in search request
+[FAIL2PASS_CORE] FAIL: query failed
+[FAIL2PASS_CORE] SQL: SELECT id FROM tb_num WHERE MATCH('xtrt9600') ORDER BY id ASC;
+[FAIL2PASS_CORE] OUT: ERROR 1064 (42000) at line 1: unknown local table(s) 'tb_num' in search request
+[FAIL2PASS_CORE] FAIL: query failed
+[FAIL2PASS_CORE] SQL: SELECT id FROM tb_num WHERE MATCH('xtv2') ORDER BY id ASC;
+[FAIL2PASS_CORE] OUT: ERROR 1064 (42000) at line 1: unknown local table(s) 'tb_num' in search request
+[FAIL2PASS_CORE] PASS
+[FAIL2PASS_EDGE] running second_has_digit and delimiter checks
+[FAIL2PASS_EDGE] PASS
+[FAIL2PASS_EDGE] FAIL: statement failed
+[FAIL2PASS_EDGE] SQL: CREATE TABLE tb_digit (title text) dict='keywords' bigram_index='second_has_digit' bigram_delimiter='none';
+[FAIL2PASS_EDGE] OUT: ERROR 1064 (42000) at line 1: error adding table 'tb_digit': unknown bigram_index=second_has_digit (must be all, first_freq, or both_freq)
+[FAIL2PASS_EDGE] FAIL: statement failed
+[FAIL2PASS_EDGE] SQL: INSERT INTO tb_digit (id,title) VALUES (1,'xt 806'),(2,'xt rt9600'),(3,'xt abc'),(4,'xt v2');
+[FAIL2PASS_EDGE] OUT: ERROR 1064 (42000) at line 1: table 'tb_digit' absent
+[FAIL2PASS_EDGE] FAIL: query failed
+[FAIL2PASS_EDGE] SQL: SELECT id FROM tb_digit WHERE MATCH('xt806') ORDER BY id ASC;
+[FAIL2PASS_EDGE] OUT: ERROR 1064 (42000) at line 1: unknown local table(s) 'tb_digit' in search request
+[FAIL2PASS_EDGE] FAIL: query failed
+[FAIL2PASS_EDGE] SQL: SELECT id FROM tb_digit WHERE MATCH('xtrt9600') ORDER BY id ASC;
+[FAIL2PASS_EDGE] OUT: ERROR 1064 (42000) at line 1: unknown local table(s) 'tb_digit' in search request
+[FAIL2PASS_EDGE] FAIL: query failed
+[FAIL2PASS_EDGE] SQL: SELECT id FROM tb_digit WHERE MATCH('xtv2') ORDER BY id ASC;
+[FAIL2PASS_EDGE] OUT: ERROR 1064 (42000) at line 1: unknown local table(s) 'tb_digit' in search request
+[FAIL2PASS_EDGE] FAIL: query failed
+[FAIL2PASS_EDGE] SQL: SELECT id FROM tb_digit WHERE MATCH('xtabc') ORDER BY id ASC;
+[FAIL2PASS_EDGE] OUT: ERROR 1064 (42000) at line 1: unknown local table(s) 'tb_digit' in search request
+[FAIL2PASS_EDGE] PASS
+[FAIL2PASS_EDGE] PASS
+[FAIL2PASS_EDGE] PASS
+[FAIL2PASS_EDGE] PASS
+[FAIL2PASS_EDGE] FAIL: unexpected rows
+[FAIL2PASS_EDGE] SQL: SELECT id FROM tb_both WHERE MATCH('xtrt9600') ORDER BY id ASC;
+[FAIL2PASS_EDGE] EXPECTED: [1]
+[FAIL2PASS_EDGE] ACTUAL:   []
+[FAIL2PASS_EDGE] PASS
+[FAIL2PASS_EDGE] PASS
+[FAIL2PASS_EDGE] PASS
+[FAIL2PASS_EDGE] PASS
+[FAIL2PASS_EDGE] PASS
+[FAIL2PASS_EDGE] PASS
+[FAIL2PASS_EDGE] PASS
+[FAIL2PASS_EDGE] FAIL: unexpected rows
+[FAIL2PASS_EDGE] SQL: SELECT id FROM tb_alter WHERE MATCH('xt806') ORDER BY id ASC;
+[FAIL2PASS_EDGE] EXPECTED: [2]
+[FAIL2PASS_EDGE] ACTUAL:   []
+[FAIL2PASS_EDGE] PASS
+[SUMMARY] FAIL (13 checks failed)

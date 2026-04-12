@@ -1,0 +1,1279 @@
+{
+  "schema_version": "ATIF-v1.6",
+  "session_id": "63a1bec9-579c-4899-b852-75b71603a87d",
+  "agent": {
+    "name": "openclaw",
+    "version": "unknown",
+    "model_name": "openai/z-ai/glm-5",
+    "extra": {
+      "openclaw_session_id": "63a1bec9-579c-4899-b852-75b71603a87d"
+    }
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "timestamp": "2026-04-11T09:22:11.886000Z",
+      "source": "user",
+      "message": "In the CLI harness layer, Claude model selection is currently inconsistent with tier-based defaults.\n\nBifrost uses two Claude-specific hooks in `cli/internal/harness/native_config.go`:\n- `claudePreLaunch`\n- `claudeWriteNativeConfig`\n\nUpdate this Claude behavior so selected models are pinned through Claude tier defaults, not through the legacy single-model key.\n\nRequirements:\n\n1. Keep existing function names and function signatures unchanged, and keep behavior for non-Claude harnesses unchanged.\n\n2. `claudePreLaunch` must always keep `CLAUDE_CODE_SIMPLE=1`.\n\n3. When `model` is non-empty after trimming whitespace, `claudePreLaunch` must add all of these environment variables using the trimmed model value:\n- `ANTHROPIC_DEFAULT_SONNET_MODEL`\n- `ANTHROPIC_DEFAULT_OPUS_MODEL`\n- `ANTHROPIC_DEFAULT_HAIKU_MODEL`\n\n4. `claudePreLaunch` must not emit `ANTHROPIC_MODEL`.\n\n5. `claudeWriteNativeConfig` must continue merging into existing `~/.claude/settings.json` content and preserve unrelated existing `env` entries.\n\n6. `claudeWriteNativeConfig` must always set:\n- `ANTHROPIC_BASE_URL`\n- `ANTHROPIC_API_KEY`\n\n7. When `model` is non-empty after trimming whitespace, `claudeWriteNativeConfig` must set the same three tier-default keys listed above using the trimmed model value.\n\n8. If `env` already contains `ANTHROPIC_MODEL`, `claudeWriteNativeConfig` must remove that key after writing tier defaults.\n\nThe implementation must compile and pass tests in `cli/internal/harness`.",
+      "extra": {
+        "openclaw_role": "user",
+        "stop_reason": null,
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 2,
+      "timestamp": "2026-04-11T09:22:11.890000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "The user wants me to update the Claude-specific hooks in `cli/internal/harness/native_config.go` to change how model selection works. Let me first read the current implementation to understand what needs to be changed.\n\nLet me read the file first.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-8a664dc0c1f0481b8ef0b91e3fe4d5f6",
+          "function_name": "read",
+          "arguments": {
+            "path": "cli/internal/harness/native_config.go"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 18380,
+        "completion_tokens": 115,
+        "cached_tokens": 139,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 18634
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 3,
+      "timestamp": "2026-04-11T09:22:20.838000Z",
+      "source": "agent",
+      "message": "{\n  \"status\": \"error\",\n  \"tool\": \"read\",\n  \"error\": \"ENOENT: no such file or directory, access '/workspace/cli/internal/harness/native_config.go'\"\n}",
+      "observation": {
+        "results": [
+          {
+            "content": "{\n  \"status\": \"error\",\n  \"tool\": \"read\",\n  \"error\": \"ENOENT: no such file or directory, access '/workspace/cli/internal/harness/native_config.go'\"\n}"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-8a664dc0c1f0481b8ef0b91e3fe4d5f6",
+        "exec_exit_code": null,
+        "exec_status": "error",
+        "exec_duration_ms": null
+      }
+    },
+    {
+      "step_id": 4,
+      "timestamp": "2026-04-11T09:22:20.842000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "The file doesn't exist at that path. Let me search for it.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-20c3535a43d34f50bef855f9b3b24605",
+          "function_name": "exec",
+          "arguments": {
+            "command": "find /workspace -name \"native_config.go\" 2>/dev/null"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 18441,
+        "completion_tokens": 55,
+        "cached_tokens": 139,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 18635
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 5,
+      "timestamp": "2026-04-11T09:22:28.075000Z",
+      "source": "agent",
+      "message": "(no output)",
+      "observation": {
+        "results": [
+          {
+            "content": "(no output)"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-20c3535a43d34f50bef855f9b3b24605",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": 4
+      }
+    },
+    {
+      "step_id": 6,
+      "timestamp": "2026-04-11T09:22:28.082000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "The file doesn't exist. Let me look for the harness directory or any related files.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-7398d50b6f924a99a0983c3c09470ff3",
+          "function_name": "exec",
+          "arguments": {
+            "command": "find /workspace -type d -name \"harness\" 2>/dev/null"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 33,
+        "completion_tokens": 63,
+        "cached_tokens": 18578,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 18674
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 7,
+      "timestamp": "2026-04-11T09:22:36.695000Z",
+      "source": "agent",
+      "message": "(no output)",
+      "observation": {
+        "results": [
+          {
+            "content": "(no output)"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-7398d50b6f924a99a0983c3c09470ff3",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": 4
+      }
+    },
+    {
+      "step_id": 8,
+      "timestamp": "2026-04-11T09:22:36.722000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "The harness directory doesn't seem to exist. Let me check what the workspace looks like.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-ab14ae8306e64df099ef013bfd27f4f5",
+          "function_name": "exec",
+          "arguments": {
+            "command": "ls -la /workspace"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 127,
+        "completion_tokens": 51,
+        "cached_tokens": 18517,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 18695
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 9,
+      "timestamp": "2026-04-11T09:22:41.230000Z",
+      "source": "agent",
+      "message": "total 36\ndrwxr-xr-x 2 root root 4096 Apr 11 09:22 .\ndrwxr-xr-x 1 root root 4096 Apr 11 09:22 ..\n-rw-r--r-- 1 root root 8081 Apr 11 09:22 AGENTS.md\n-rw-r--r-- 1 root root  173 Apr 11 09:22 HEARTBEAT.md\n-rw-r--r-- 1 root root  426 Apr 11 09:22 IDENTITY.md\n-rw-r--r-- 1 root root 1709 Apr 11 09:22 SOUL.md\n-rw-r--r-- 1 root root  900 Apr 11 09:22 TOOLS.md\n-rw-r--r-- 1 root root  494 Apr 11 09:22 USER.md",
+      "observation": {
+        "results": [
+          {
+            "content": "total 36\ndrwxr-xr-x 2 root root 4096 Apr 11 09:22 .\ndrwxr-xr-x 1 root root 4096 Apr 11 09:22 ..\n-rw-r--r-- 1 root root 8081 Apr 11 09:22 AGENTS.md\n-rw-r--r-- 1 root root  173 Apr 11 09:22 HEARTBEAT.md\n-rw-r--r-- 1 root root  426 Apr 11 09:22 IDENTITY.md\n-rw-r--r-- 1 root root 1709 Apr 11 09:22 SOUL.md\n-rw-r--r-- 1 root root  900 Apr 11 09:22 TOOLS.md\n-rw-r--r-- 1 root root  494 Apr 11 09:22 USER.md"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-ab14ae8306e64df099ef013bfd27f4f5",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": 4
+      }
+    },
+    {
+      "step_id": 10,
+      "timestamp": "2026-04-11T09:22:41.249000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "The workspace appears to be mostly empty. Let me check if there's a cli directory or if this is referencing external code. The user mentioned \"Bifrost\" which might be an external project. Let me check for any cli directory or configuration.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-7ebd5927e404416da2a3721355d6aaa6",
+          "function_name": "exec",
+          "arguments": {
+            "command": "find / -name \"native_config.go\" 2>/dev/null | head -20"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 215,
+        "completion_tokens": 128,
+        "cached_tokens": 18642,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 18985
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 11,
+      "timestamp": "2026-04-11T09:22:47.569000Z",
+      "source": "agent",
+      "message": "/app/bifrost/cli/internal/harness/native_config.go",
+      "observation": {
+        "results": [
+          {
+            "content": "/app/bifrost/cli/internal/harness/native_config.go"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-7ebd5927e404416da2a3721355d6aaa6",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": 766
+      }
+    },
+    {
+      "step_id": 12,
+      "timestamp": "2026-04-11T09:22:47.574000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Found it. It's in /app/bifrost/cli/internal/harness/native_config.go. Let me read it.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-66c8fc1236054af995182a9f0fbfb35a",
+          "function_name": "read",
+          "arguments": {
+            "path": "/app/bifrost/cli/internal/harness/native_config.go"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 44,
+        "completion_tokens": 69,
+        "cached_tokens": 18855,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 18968
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 13,
+      "timestamp": "2026-04-11T09:22:52.143000Z",
+      "source": "agent",
+      "message": "package harness\n\nimport (\n\t\"errors\"\n\t\"fmt\"\n\t\"os\"\n\t\"path/filepath\"\n\n\t\"github.com/bytedance/sonic\"\n\t\"github.com/maximhq/bifrost/cli/internal/config\"\n)\n\n// claudePreLaunch forces Claude Code into its simpler terminal mode when\n// launched inside Bifrost's tab multiplexer. This avoids Claude-specific\n// full-screen terminal behavior that doesn't restore reliably across tab swaps.\nfunc claudePreLaunch(baseURL, apiKey, model string) ([]string, func(), error) {\n\treturn []string{\"CLAUDE_CODE_SIMPLE=1\"}, func() {}, nil\n}\n\n// claudeWriteNativeConfig writes the bifrost endpoint, API key, and model\n// into Claude Code's settings file (~/.claude/settings.json) so the same\n// configuration is available when users launch Claude Code directly.\n//\n// It merges into the existing file, preserving any user-defined settings.\nfunc claudeWriteNativeConfig(baseURL, apiKey, model string) error {\n\thome, err := os.UserHomeDir()\n\tif err != nil {\n\t\treturn fmt.Errorf(\"resolve home dir: %w\", err)\n\t}\n\n\tdir := filepath.Join(home, \".claude\")\n\tsettingsPath := filepath.Join(dir, \"settings.json\")\n\n\t// Read existing settings or start fresh\n\tsettings := make(map[string]any)\n\tif b, err := os.ReadFile(settingsPath); err == nil {\n\t\tif err := sonic.Unmarshal(b, &settings); err != nil {\n\t\t\treturn fmt.Errorf(\"parse existing claude settings: %w\", err)\n\t\t}\n\t} else if !errors.Is(err, os.ErrNotExist) {\n\t\treturn fmt.Errorf(\"read claude settings: %w\", err)\n\t}\n\n\t// Get or create the env map\n\tenvRaw, ok := settings[\"env\"]\n\tvar envMap map[string]any\n\tif ok {\n\t\tenvMap, ok = envRaw.(map[string]any)\n\t\tif !ok {\n\t\t\tenvMap = make(map[string]any)\n\t\t}\n\t} else {\n\t\tenvMap = make(map[string]any)\n\t}\n\n\tenvMap[\"ANTHROPIC_BASE_URL\"] = baseURL\n\tenvMap[\"ANTHROPIC_API_KEY\"] = apiKey\n\tif model != \"\" {\n\t\tenvMap[\"ANTHROPIC_MODEL\"] = model\n\t}\n\n\tsettings[\"env\"] = envMap\n\n\tb, err := sonic.MarshalIndent(settings, \"\", \"  \")\n\tif err != nil {\n\t\treturn fmt.Errorf(\"marshal claude settings: %w\", err)\n\t}\n\n\tif err := os.MkdirAll(dir, 0o755); err != nil {\n\t\treturn fmt.Errorf(\"create claude config dir: %w\", err)\n\t}\n\treturn config.WriteAtomic(settingsPath, b, 0o600)\n}",
+      "observation": {
+        "results": [
+          {
+            "content": "package harness\n\nimport (\n\t\"errors\"\n\t\"fmt\"\n\t\"os\"\n\t\"path/filepath\"\n\n\t\"github.com/bytedance/sonic\"\n\t\"github.com/maximhq/bifrost/cli/internal/config\"\n)\n\n// claudePreLaunch forces Claude Code into its simpler terminal mode when\n// launched inside Bifrost's tab multiplexer. This avoids Claude-specific\n// full-screen terminal behavior that doesn't restore reliably across tab swaps.\nfunc claudePreLaunch(baseURL, apiKey, model string) ([]string, func(), error) {\n\treturn []string{\"CLAUDE_CODE_SIMPLE=1\"}, func() {}, nil\n}\n\n// claudeWriteNativeConfig writes the bifrost endpoint, API key, and model\n// into Claude Code's settings file (~/.claude/settings.json) so the same\n// configuration is available when users launch Claude Code directly.\n//\n// It merges into the existing file, preserving any user-defined settings.\nfunc claudeWriteNativeConfig(baseURL, apiKey, model string) error {\n\thome, err := os.UserHomeDir()\n\tif err != nil {\n\t\treturn fmt.Errorf(\"resolve home dir: %w\", err)\n\t}\n\n\tdir := filepath.Join(home, \".claude\")\n\tsettingsPath := filepath.Join(dir, \"settings.json\")\n\n\t// Read existing settings or start fresh\n\tsettings := make(map[string]any)\n\tif b, err := os.ReadFile(settingsPath); err == nil {\n\t\tif err := sonic.Unmarshal(b, &settings); err != nil {\n\t\t\treturn fmt.Errorf(\"parse existing claude settings: %w\", err)\n\t\t}\n\t} else if !errors.Is(err, os.ErrNotExist) {\n\t\treturn fmt.Errorf(\"read claude settings: %w\", err)\n\t}\n\n\t// Get or create the env map\n\tenvRaw, ok := settings[\"env\"]\n\tvar envMap map[string]any\n\tif ok {\n\t\tenvMap, ok = envRaw.(map[string]any)\n\t\tif !ok {\n\t\t\tenvMap = make(map[string]any)\n\t\t}\n\t} else {\n\t\tenvMap = make(map[string]any)\n\t}\n\n\tenvMap[\"ANTHROPIC_BASE_URL\"] = baseURL\n\tenvMap[\"ANTHROPIC_API_KEY\"] = apiKey\n\tif model != \"\" {\n\t\tenvMap[\"ANTHROPIC_MODEL\"] = model\n\t}\n\n\tsettings[\"env\"] = envMap\n\n\tb, err := sonic.MarshalIndent(settings, \"\", \"  \")\n\tif err != nil {\n\t\treturn fmt.Errorf(\"marshal claude settings: %w\", err)\n\t}\n\n\tif err := os.MkdirAll(dir, 0o755); err != nil {\n\t\treturn fmt.Errorf(\"create claude config dir: %w\", err)\n\t}\n\treturn config.WriteAtomic(settingsPath, b, 0o600)\n}"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-66c8fc1236054af995182a9f0fbfb35a"
+      }
+    },
+    {
+      "step_id": 14,
+      "timestamp": "2026-04-11T09:22:52.164000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Now I understand the current implementation. Let me also look at the tests to understand the expected behavior better.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-3babff9ebf5d4ba9b078e7fe43ad0dcf",
+          "function_name": "exec",
+          "arguments": {
+            "command": "find /app/bifrost -name \"*_test.go\" -path \"*/harness/*\" 2>/dev/null"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 884,
+        "completion_tokens": 78,
+        "cached_tokens": 18609,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 19571
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 15,
+      "timestamp": "2026-04-11T09:23:01.994000Z",
+      "source": "agent",
+      "message": "/app/bifrost/cli/internal/harness/harness_test.go",
+      "observation": {
+        "results": [
+          {
+            "content": "/app/bifrost/cli/internal/harness/harness_test.go"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-3babff9ebf5d4ba9b078e7fe43ad0dcf",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": 8
+      }
+    },
+    {
+      "step_id": 16,
+      "timestamp": "2026-04-11T09:23:02.016000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Let me read the test file to understand the current test structure.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-60de955f6d82427ab9e6bf7e751c9385",
+          "function_name": "read",
+          "arguments": {
+            "path": "/app/bifrost/cli/internal/harness/harness_test.go"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 647,
+        "completion_tokens": 48,
+        "cached_tokens": 18897,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 19592
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 17,
+      "timestamp": "2026-04-11T09:23:09.631000Z",
+      "source": "agent",
+      "message": "package harness\n\nimport (\n\t\"os\"\n\t\"path/filepath\"\n\t\"strings\"\n\t\"testing\"\n)\n\nfunc TestOpencodeModelRef(t *testing.T) {\n\tt.Parallel()\n\n\tif got := opencodeModelRef(\"gpt-4.1\"); got != \"bifrost/gpt-4.1\" {\n\t\tt.Fatalf(\"opencodeModelRef() = %q, want %q\", got, \"bifrost/gpt-4.1\")\n\t}\n}\n\nfunc TestOpencodePreLaunchWritesCustomProviderConfig(t *testing.T) {\n\txdg := t.TempDir()\n\tt.Setenv(\"XDG_CONFIG_HOME\", xdg)\n\n\tenv, cleanup, err := opencodePreLaunch(\"https://example.com/openai\", \"test-key\", \"gpt-4.1\")\n\tif err != nil {\n\t\tt.Fatalf(\"opencodePreLaunch() error = %v\", err)\n\t}\n\tdefer cleanup()\n\n\tif len(env) != 2 {\n\t\tt.Fatalf(\"unexpected env returned: %#v\", env)\n\t}\n\n\tconfigPath := envValue(env, \"OPENCODE_CONFIG\")\n\tif configPath == \"\" {\n\t\tt.Fatalf(\"expected OPENCODE_CONFIG in env, got %#v\", env)\n\t}\n\tb, err := os.ReadFile(configPath)\n\tif err != nil {\n\t\tt.Fatalf(\"read generated config: %v\", err)\n\t}\n\n\tcfg := string(b)\n\tfor _, want := range []string{\n\t\t`\"model\": \"bifrost/gpt-4.1\"`,\n\t\t`\"bifrost\": {`,\n\t\t`\"npm\": \"@ai-sdk/openai-compatible\"`,\n\t\t`\"baseURL\": \"https://example.com/openai\"`,\n\t\t`\"apiKey\": \"test-key\"`,\n\t\t`\"gpt-4.1\": {`,\n\t} {\n\t\tif !strings.Contains(cfg, want) {\n\t\t\tt.Fatalf(\"expected generated config to contain %q, got %s\", want, cfg)\n\t\t}\n\t}\n\n\ttuiPath := envValue(env, \"OPENCODE_TUI_CONFIG\")\n\tif tuiPath == \"\" {\n\t\tt.Fatalf(\"expected OPENCODE_TUI_CONFIG in env, got %#v\", env)\n\t}\n\ttuiCfg, err := os.ReadFile(tuiPath)\n\tif err != nil {\n\t\tt.Fatalf(\"read generated tui config: %v\", err)\n\t}\n\tif !strings.Contains(string(tuiCfg), `\"theme\": \"system\"`) {\n\t\tt.Fatalf(\"expected generated tui config to set system theme, got %s\", string(tuiCfg))\n\t}\n}\n\nfunc TestOpencodePreLaunchPreservesExistingTheme(t *testing.T) {\n\txdg := t.TempDir()\n\tt.Setenv(\"XDG_CONFIG_HOME\", xdg)\n\n\ttuiPath := filepath.Join(xdg, \"opencode\", \"tui.json\")\n\tif err := os.MkdirAll(filepath.Dir(tuiPath), 0o755); err != nil {\n\t\tt.Fatalf(\"mkdir tui dir: %v\", err)\n\t}\n\tif err := os.WriteFile(tuiPath, []byte(\"{\\n  \\\"theme\\\": \\\"light\\\"\\n}\\n\"), 0o600); err != nil {\n\t\tt.Fatalf(\"write tui config: %v\", err)\n\t}\n\n\tenv, cleanup, err := opencodePreLaunch(\"https://example.com/openai\", \"test-key\", \"gpt-4.1\")\n\tif err != nil {\n\t\tt.Fatalf(\"opencodePreLaunch() error = %v\", err)\n\t}\n\tdefer cleanup()\n\n\tif got := envValue(env, \"OPENCODE_TUI_CONFIG\"); got != \"\" {\n\t\tt.Fatalf(\"did not expect OPENCODE_TUI_CONFIG override when user theme exists, got %#v\", env)\n\t}\n\tif got := envValue(env, \"OPENCODE_CONFIG\"); got == \"\" {\n\t\tt.Fatalf(\"expected OPENCODE_CONFIG to remain present, got %#v\", env)\n\t}\n}\n\nfunc TestOpencodePreLaunchAddsSystemThemeWithoutModel(t *testing.T) {\n\txdg := t.TempDir()\n\tt.Setenv(\"XDG_CONFIG_HOME\", xdg)\n\n\tenv, cleanup, err := opencodePreLaunch(\"https://example.com/openai\", \"test-key\", \"\")\n\tif err != nil {\n\t\tt.Fatalf(\"opencodePreLaunch() error = %v\", err)\n\t}\n\n\ttuiPath := envValue(env, \"OPENCODE_TUI_CONFIG\")\n\tif tuiPath == \"\" {\n\t\tt.Fatalf(\"expected OPENCODE_TUI_CONFIG in env, got %#v\", env)\n\t}\n\tif got := envValue(env, \"OPENCODE_CONFIG\"); got != \"\" {\n\t\tt.Fatalf(\"did not expect OPENCODE_CONFIG without a model, got %#v\", env)\n\t}\n\tif _, err := os.Stat(tuiPath); err != nil {\n\t\tt.Fatalf(\"expected generated tui config to exist: %v\", err)\n\t}\n\n\tcleanup()\n\tif _, err := os.Stat(tuiPath); !os.IsNotExist(err) {\n\t\tt.Fatalf(\"expected generated tui config to be removed after cleanup, stat err=%v\", err)\n\t}\n}\n\nfunc TestLoadOpencodeTUIConfigSupportsJSONC(t *testing.T) {\n\tt.Parallel()\n\n\tpath := filepath.Join(t.TempDir(), \"tui.json\")\n\tcontent := \"{\\n  // keep my choice\\n  \\\"theme\\\": \\\"light\\\",\\n  \\\"foo\\\": true,\\n}\\n\"\n\tif err := os.WriteFile(path, []byte(content), 0o600); err != nil {\n\t\tt.Fatalf(\"write tui config: %v\", err)\n\t}\n\n\tcfg, hasTheme, err := loadOpencodeTUIConfig(path)\n\tif err != nil {\n\t\tt.Fatalf(\"loadOpencodeTUIConfig() error = %v\", err)\n\t}\n\tif !hasTheme {\n\t\tt.Fatal(\"expected theme to be detected\")\n\t}\n\tif cfg[\"theme\"] != \"light\" {\n\t\tt.Fatalf(\"cfg[theme] = %#v, want %q\", cfg[\"theme\"], \"light\")\n\t}\n}\n\nfunc TestOpencodeTUIConfigPathPrefersXDG(t *testing.T) {\n\txdg := t.TempDir()\n\tt.Setenv(\"XDG_CONFIG_HOME\", xdg)\n\n\tgot, err := opencodeTUIConfigPath()\n\tif err != nil {\n\t\tt.Fatalf(\"opencodeTUIConfigPath() error = %v\", err)\n\t}\n\twant := filepath.Join(xdg, \"opencode\", \"tui.json\")\n\tif got != want {\n\t\tt.Fatalf(\"opencodeTUIConfigPath() = %q, want %q\", got, want)\n\t}\n}\n\nfunc envValue(env []string, key string) string {\n\tprefix := key + \"=\"\n\tfor _, entry := range env {\n\t\tif strings.HasPrefix(entry, prefix) {\n\t\t\treturn strings.TrimPrefix(entry, prefix)\n\t\t}\n\t}\n\treturn \"\"\n}",
+      "observation": {
+        "results": [
+          {
+            "content": "package harness\n\nimport (\n\t\"os\"\n\t\"path/filepath\"\n\t\"strings\"\n\t\"testing\"\n)\n\nfunc TestOpencodeModelRef(t *testing.T) {\n\tt.Parallel()\n\n\tif got := opencodeModelRef(\"gpt-4.1\"); got != \"bifrost/gpt-4.1\" {\n\t\tt.Fatalf(\"opencodeModelRef() = %q, want %q\", got, \"bifrost/gpt-4.1\")\n\t}\n}\n\nfunc TestOpencodePreLaunchWritesCustomProviderConfig(t *testing.T) {\n\txdg := t.TempDir()\n\tt.Setenv(\"XDG_CONFIG_HOME\", xdg)\n\n\tenv, cleanup, err := opencodePreLaunch(\"https://example.com/openai\", \"test-key\", \"gpt-4.1\")\n\tif err != nil {\n\t\tt.Fatalf(\"opencodePreLaunch() error = %v\", err)\n\t}\n\tdefer cleanup()\n\n\tif len(env) != 2 {\n\t\tt.Fatalf(\"unexpected env returned: %#v\", env)\n\t}\n\n\tconfigPath := envValue(env, \"OPENCODE_CONFIG\")\n\tif configPath == \"\" {\n\t\tt.Fatalf(\"expected OPENCODE_CONFIG in env, got %#v\", env)\n\t}\n\tb, err := os.ReadFile(configPath)\n\tif err != nil {\n\t\tt.Fatalf(\"read generated config: %v\", err)\n\t}\n\n\tcfg := string(b)\n\tfor _, want := range []string{\n\t\t`\"model\": \"bifrost/gpt-4.1\"`,\n\t\t`\"bifrost\": {`,\n\t\t`\"npm\": \"@ai-sdk/openai-compatible\"`,\n\t\t`\"baseURL\": \"https://example.com/openai\"`,\n\t\t`\"apiKey\": \"test-key\"`,\n\t\t`\"gpt-4.1\": {`,\n\t} {\n\t\tif !strings.Contains(cfg, want) {\n\t\t\tt.Fatalf(\"expected generated config to contain %q, got %s\", want, cfg)\n\t\t}\n\t}\n\n\ttuiPath := envValue(env, \"OPENCODE_TUI_CONFIG\")\n\tif tuiPath == \"\" {\n\t\tt.Fatalf(\"expected OPENCODE_TUI_CONFIG in env, got %#v\", env)\n\t}\n\ttuiCfg, err := os.ReadFile(tuiPath)\n\tif err != nil {\n\t\tt.Fatalf(\"read generated tui config: %v\", err)\n\t}\n\tif !strings.Contains(string(tuiCfg), `\"theme\": \"system\"`) {\n\t\tt.Fatalf(\"expected generated tui config to set system theme, got %s\", string(tuiCfg))\n\t}\n}\n\nfunc TestOpencodePreLaunchPreservesExistingTheme(t *testing.T) {\n\txdg := t.TempDir()\n\tt.Setenv(\"XDG_CONFIG_HOME\", xdg)\n\n\ttuiPath := filepath.Join(xdg, \"opencode\", \"tui.json\")\n\tif err := os.MkdirAll(filepath.Dir(tuiPath), 0o755); err != nil {\n\t\tt.Fatalf(\"mkdir tui dir: %v\", err)\n\t}\n\tif err := os.WriteFile(tuiPath, []byte(\"{\\n  \\\"theme\\\": \\\"light\\\"\\n}\\n\"), 0o600); err != nil {\n\t\tt.Fatalf(\"write tui config: %v\", err)\n\t}\n\n\tenv, cleanup, err := opencodePreLaunch(\"https://example.com/openai\", \"test-key\", \"gpt-4.1\")\n\tif err != nil {\n\t\tt.Fatalf(\"opencodePreLaunch() error = %v\", err)\n\t}\n\tdefer cleanup()\n\n\tif got := envValue(env, \"OPENCODE_TUI_CONFIG\"); got != \"\" {\n\t\tt.Fatalf(\"did not expect OPENCODE_TUI_CONFIG override when user theme exists, got %#v\", env)\n\t}\n\tif got := envValue(env, \"OPENCODE_CONFIG\"); got == \"\" {\n\t\tt.Fatalf(\"expected OPENCODE_CONFIG to remain present, got %#v\", env)\n\t}\n}\n\nfunc TestOpencodePreLaunchAddsSystemThemeWithoutModel(t *testing.T) {\n\txdg := t.TempDir()\n\tt.Setenv(\"XDG_CONFIG_HOME\", xdg)\n\n\tenv, cleanup, err := opencodePreLaunch(\"https://example.com/openai\", \"test-key\", \"\")\n\tif err != nil {\n\t\tt.Fatalf(\"opencodePreLaunch() error = %v\", err)\n\t}\n\n\ttuiPath := envValue(env, \"OPENCODE_TUI_CONFIG\")\n\tif tuiPath == \"\" {\n\t\tt.Fatalf(\"expected OPENCODE_TUI_CONFIG in env, got %#v\", env)\n\t}\n\tif got := envValue(env, \"OPENCODE_CONFIG\"); got != \"\" {\n\t\tt.Fatalf(\"did not expect OPENCODE_CONFIG without a model, got %#v\", env)\n\t}\n\tif _, err := os.Stat(tuiPath); err != nil {\n\t\tt.Fatalf(\"expected generated tui config to exist: %v\", err)\n\t}\n\n\tcleanup()\n\tif _, err := os.Stat(tuiPath); !os.IsNotExist(err) {\n\t\tt.Fatalf(\"expected generated tui config to be removed after cleanup, stat err=%v\", err)\n\t}\n}\n\nfunc TestLoadOpencodeTUIConfigSupportsJSONC(t *testing.T) {\n\tt.Parallel()\n\n\tpath := filepath.Join(t.TempDir(), \"tui.json\")\n\tcontent := \"{\\n  // keep my choice\\n  \\\"theme\\\": \\\"light\\\",\\n  \\\"foo\\\": true,\\n}\\n\"\n\tif err := os.WriteFile(path, []byte(content), 0o600); err != nil {\n\t\tt.Fatalf(\"write tui config: %v\", err)\n\t}\n\n\tcfg, hasTheme, err := loadOpencodeTUIConfig(path)\n\tif err != nil {\n\t\tt.Fatalf(\"loadOpencodeTUIConfig() error = %v\", err)\n\t}\n\tif !hasTheme {\n\t\tt.Fatal(\"expected theme to be detected\")\n\t}\n\tif cfg[\"theme\"] != \"light\" {\n\t\tt.Fatalf(\"cfg[theme] = %#v, want %q\", cfg[\"theme\"], \"light\")\n\t}\n}\n\nfunc TestOpencodeTUIConfigPathPrefersXDG(t *testing.T) {\n\txdg := t.TempDir()\n\tt.Setenv(\"XDG_CONFIG_HOME\", xdg)\n\n\tgot, err := opencodeTUIConfigPath()\n\tif err != nil {\n\t\tt.Fatalf(\"opencodeTUIConfigPath() error = %v\", err)\n\t}\n\twant := filepath.Join(xdg, \"opencode\", \"tui.json\")\n\tif got != want {\n\t\tt.Fatalf(\"opencodeTUIConfigPath() = %q, want %q\", got, want)\n\t}\n}\n\nfunc envValue(env []string, key string) string {\n\tprefix := key + \"=\"\n\tfor _, entry := range env {\n\t\tif strings.HasPrefix(entry, prefix) {\n\t\t\treturn strings.TrimPrefix(entry, prefix)\n\t\t}\n\t}\n\treturn \"\"\n}"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-60de955f6d82427ab9e6bf7e751c9385"
+      }
+    },
+    {
+      "step_id": 18,
+      "timestamp": "2026-04-11T09:23:09.660000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "There are no tests specifically for the Claude functions yet. I need to:\n\n1. Update `native_config.go` with the new behavior\n2. Write tests for the Claude functions\n\nLet me also check if there's a strings import or if I need to add it.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-9a958a277c004b45b343ed545b5c3c18",
+          "function_name": "exec",
+          "arguments": {
+            "command": "ls -la /app/bifrost/cli/internal/harness/"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 1449,
+        "completion_tokens": 133,
+        "cached_tokens": 19542,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 21124
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 19,
+      "timestamp": "2026-04-11T09:23:16.031000Z",
+      "source": "agent",
+      "message": "total 32\ndrwxr-xr-x  2 root root  4096 Mar 27 11:46 .\ndrwxr-xr-x 12 root root  4096 Mar 27 11:46 ..\n-rwxr-xr-x  1 root root 11005 Mar 27 11:46 harness.go\n-rwxr-xr-x  1 root root  4528 Mar 27 11:46 harness_test.go\n-rwxr-xr-x  1 root root  2117 Mar 27 11:46 native_config.go",
+      "observation": {
+        "results": [
+          {
+            "content": "total 32\ndrwxr-xr-x  2 root root  4096 Mar 27 11:46 .\ndrwxr-xr-x 12 root root  4096 Mar 27 11:46 ..\n-rwxr-xr-x  1 root root 11005 Mar 27 11:46 harness.go\n-rwxr-xr-x  1 root root  4528 Mar 27 11:46 harness_test.go\n-rwxr-xr-x  1 root root  2117 Mar 27 11:46 native_config.go"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-9a958a277c004b45b343ed545b5c3c18",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": 4
+      }
+    },
+    {
+      "step_id": 20,
+      "timestamp": "2026-04-11T09:23:16.050000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Let me also check the harness.go file to understand the context better and see how these functions are used.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-a9bfd0a0dbd5448eb0498017f998ba00",
+          "function_name": "read",
+          "arguments": {
+            "path": "/app/bifrost/cli/internal/harness/harness.go"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 155,
+        "completion_tokens": 63,
+        "cached_tokens": 20989,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 21207
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 21,
+      "timestamp": "2026-04-11T09:23:21.015000Z",
+      "source": "agent",
+      "message": "package harness\n\nimport (\n\t\"bytes\"\n\t\"context\"\n\t\"errors\"\n\t\"fmt\"\n\t\"os\"\n\t\"os/exec\"\n\t\"path/filepath\"\n\t\"sort\"\n\t\"strings\"\n\t\"time\"\n\n\t\"github.com/bytedance/sonic\"\n)\n\n// Harness defines a coding assistant CLI that Bifrost can launch and manage.\ntype Harness struct {\n\tID               string\n\tLabel            string\n\tBinary           string\n\tInstallPkg       string\n\tVersionArgs      []string\n\tBasePath         string\n\tBaseURLEnv       string\n\tAPIKeyEnv        string\n\tModelEnv         string\n\tSupportsMCP      bool\n\tSupportsWorktree bool\n\tRunArgsForMod    func(model string) []string\n\tWorktreeArgs     func(name string) []string\n\t// PreLaunch is called before launching the harness binary. It can write\n\t// config files and return extra environment variables to inject. The\n\t// returned cleanup function is deferred after the process exits.\n\tPreLaunch func(baseURL, apiKey, model string) (extraEnv []string, cleanup func(), err error)\n\t// WriteNativeConfig persists the bifrost connection settings into the\n\t// harness CLI's own config file so the same configuration is available\n\t// when users launch the CLI directly outside bifrost.\n\tWriteNativeConfig func(baseURL, apiKey, model string) error\n\t// NativeConfigPath is the human-readable path to the file that\n\t// WriteNativeConfig modifies (e.g. \"~/.claude/settings.json\").\n\t// Used to inform the user in the confirmation prompt.\n\tNativeConfigPath string\n}\n\nvar all = map[string]Harness{\n\t\"claude\": {\n\t\tID:               \"claude\",\n\t\tLabel:            \"Claude Code\",\n\t\tBinary:           \"claude\",\n\t\tInstallPkg:       \"@anthropic-ai/claude-code\",\n\t\tVersionArgs:      []string{\"--version\"},\n\t\tBasePath:         \"/anthropic\",\n\t\tBaseURLEnv:       \"ANTHROPIC_BASE_URL\",\n\t\tAPIKeyEnv:        \"ANTHROPIC_API_KEY\",\n\t\tModelEnv:         \"ANTHROPIC_MODEL\",\n\t\tSupportsMCP:      true,\n\t\tSupportsWorktree: true,\n\t\tRunArgsForMod: func(model string) []string {\n\t\t\tif strings.TrimSpace(model) == \"\" {\n\t\t\t\treturn nil\n\t\t\t}\n\t\t\treturn []string{\"--model\", model}\n\t\t},\n\t\tWorktreeArgs: func(name string) []string {\n\t\t\tname = strings.TrimSpace(name)\n\t\t\tif name == \"\" {\n\t\t\t\treturn []string{\"--worktree\"}\n\t\t\t}\n\t\t\treturn []string{\"--worktree\", name}\n\t\t},\n\t\tPreLaunch:         claudePreLaunch,\n\t\tWriteNativeConfig: claudeWriteNativeConfig,\n\t\tNativeConfigPath:  \"~/.claude/settings.json\",\n\t},\n\t\"codex\": {\n\t\tID:         \"codex\",\n\t\tLabel:      \"Codex CLI\",\n\t\tBinary:     \"codex\",\n\t\tInstallPkg: \"@openai/codex\",\n\t\tVersionArgs: []string{\n\t\t\t\"--version\",\n\t\t},\n\t\tBasePath:   \"/openai\",\n\t\tBaseURLEnv: \"OPENAI_BASE_URL\",\n\t\tAPIKeyEnv:  \"OPENAI_API_KEY\",\n\t\tModelEnv:   \"OPENAI_MODEL\",\n\t\tRunArgsForMod: func(model string) []string {\n\t\t\tif strings.TrimSpace(model) == \"\" {\n\t\t\t\treturn nil\n\t\t\t}\n\t\t\treturn []string{\"--model\", model}\n\t\t},\n\t},\n\t\"gemini\": {\n\t\tID:         \"gemini\",\n\t\tLabel:      \"Gemini CLI\",\n\t\tBinary:     \"gemini\",\n\t\tInstallPkg: \"@google/gemini-cli\",\n\t\tVersionArgs: []string{\n\t\t\t\"--version\",\n\t\t},\n\t\tBasePath:   \"/genai\",\n\t\tBaseURLEnv: \"GOOGLE_GEMINI_BASE_URL\",\n\t\tAPIKeyEnv:  \"GEMINI_API_KEY\",\n\t\tModelEnv:   \"GEMINI_MODEL\",\n\t\tRunArgsForMod: func(model string) []string {\n\t\t\tif strings.TrimSpace(model) == \"\" {\n\t\t\t\treturn nil\n\t\t\t}\n\t\t\treturn []string{\"--model\", model}\n\t\t},\n\t},\n\t\"opencode\": {\n\t\tID:         \"opencode\",\n\t\tLabel:      \"Opencode\",\n\t\tBinary:     \"opencode\",\n\t\tInstallPkg: \"opencode-ai\",\n\t\tVersionArgs: []string{\n\t\t\t\"--version\",\n\t\t},\n\t\tBasePath:   \"/openai\",\n\t\tBaseURLEnv: \"OPENAI_BASE_URL\",\n\t\tAPIKeyEnv:  \"OPENAI_API_KEY\",\n\t\tRunArgsForMod: func(model string) []string {\n\t\t\tif strings.TrimSpace(model) == \"\" {\n\t\t\t\treturn nil\n\t\t\t}\n\t\t\treturn []string{\"--model\", opencodeModelRef(model)}\n\t\t},\n\t\tPreLaunch: opencodePreLaunch,\n\t},\n}\n\n// Get returns the harness with the given ID and whether it exists.\nfunc Get(id string) (Harness, bool) {\n\th, ok := all[id]\n\treturn h, ok\n}\n\n// IDs returns the sorted list of all registered harness IDs.\nfunc IDs() []string {\n\tids := make([]string, 0, len(all))\n\tfor id := range all {\n\t\tids = append(ids, id)\n\t}\n\tsort.Strings(ids)\n\treturn ids\n}\n\n// Labels returns display labels for all harnesses in the format \"Label (id)\".\nfunc Labels() []string {\n\tids := IDs()\n\tout := make([]string, 0, len(ids))\n\tfor _, id := range ids {\n\t\tout = append(out, fmt.Sprintf(\"%s (%s)\", all[id].Label, id))\n\t}\n\treturn out\n}\n\n// ParseChoice extracts the harness ID from a label string like \"Label (id)\".\nfunc ParseChoice(raw string) string {\n\traw = strings.TrimSpace(raw)\n\tif i := strings.LastIndex(raw, \"(\"); i >= 0 && strings.HasSuffix(raw, \")\") {\n\t\treturn strings.TrimSuffix(raw[i+1:], \")\")\n\t}\n\treturn raw\n}\n\n// DetectVersion runs the harness binary with its version flag and returns the version string.\nfunc DetectVersion(h Harness) string {\n\tif _, err := exec.LookPath(h.Binary); err != nil {\n\t\treturn \"not-installed\"\n\t}\n\n\targs := h.VersionArgs\n\tif len(args) == 0 {\n\t\targs = []string{\"--version\"}\n\t}\n\n\tctx, cancel := context.WithTimeout(context.Background(), 1200*time.Millisecond)\n\tdefer cancel()\n\n\tout, err := exec.CommandContext(ctx, h.Binary, args...).CombinedOutput()\n\tif err != nil {\n\t\tif ctx.Err() == context.DeadlineExceeded {\n\t\t\treturn \"timeout\"\n\t\t}\n\t\treturn \"unknown\"\n\t}\n\n\ts := strings.TrimSpace(string(out))\n\tif s == \"\" {\n\t\treturn \"unknown\"\n\t}\n\tif i := strings.IndexByte(s, '\\n'); i >= 0 {\n\t\ts = s[:i]\n\t}\n\treturn s\n}\n\n// opencodePreLaunch writes temporary OpenCode config files when Bifrost needs\n// to override runtime model/provider settings and/or supply an adaptive TUI\n// theme. The returned cleanup removes any generated temp files after exit.\nfunc opencodePreLaunch(baseURL, apiKey, model string) ([]string, func(), error) {\n\tvar env []string\n\tvar cleanupFns []func()\n\n\ttuiEnv, tuiCleanup, err := opencodeTUIPreLaunch()\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\tenv = append(env, tuiEnv...)\n\tif tuiCleanup != nil {\n\t\tcleanupFns = append(cleanupFns, tuiCleanup)\n\t}\n\n\tmodel = strings.TrimSpace(model)\n\tif model == \"\" {\n\t\treturn env, combineCleanup(cleanupFns), nil\n\t}\n\n\tmodelRef := opencodeModelRef(model)\n\truntimeCfg := fmt.Sprintf(`{\n  \"$schema\": \"https://opencode.ai/config.json\",\n  \"model\": %q,\n  \"provider\": {\n    \"bifrost\": {\n      \"npm\": \"@ai-sdk/openai-compatible\",\n      \"name\": \"Bifrost\",\n      \"options\": {\n        \"baseURL\": %q,\n        \"apiKey\": %q\n      },\n      \"models\": {\n        %q: {\n          \"name\": %q\n        }\n      }\n    }\n  }\n}`, modelRef, strings.TrimSpace(baseURL), strings.TrimSpace(apiKey), model, model)\n\n\tf, err := os.CreateTemp(\"\", \"bifrost-opencode-*.json\")\n\tif err != nil {\n\t\treturn nil, nil, fmt.Errorf(\"create opencode config: %w\", err)\n\t}\n\tif _, err := f.WriteString(runtimeCfg); err != nil {\n\t\tf.Close()\n\t\tos.Remove(f.Name())\n\t\treturn nil, nil, fmt.Errorf(\"write opencode config: %w\", err)\n\t}\n\tif err := f.Close(); err != nil {\n\t\tos.Remove(f.Name())\n\t\treturn nil, nil, fmt.Errorf(\"close opencode config: %w\", err)\n\t}\n\n\tenv = append(env, \"OPENCODE_CONFIG=\"+f.Name())\n\tcleanupFns = append(cleanupFns, func() { os.Remove(f.Name()) })\n\treturn env, combineCleanup(cleanupFns), nil\n}\n\nfunc opencodeModelRef(model string) string {\n\treturn \"bifrost/\" + strings.TrimSpace(model)\n}\n\nfunc opencodeTUIPreLaunch() ([]string, func(), error) {\n\tpath, err := opencodeTUIConfigPath()\n\tif err != nil {\n\t\treturn nil, nil, fmt.Errorf(\"resolve opencode tui config: %w\", err)\n\t}\n\n\tcfg, hasTheme, err := loadOpencodeTUIConfig(path)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\tif hasTheme {\n\t\treturn nil, nil, nil\n\t}\n\tif cfg == nil {\n\t\tcfg = map[string]any{}\n\t}\n\tcfg[\"theme\"] = \"system\"\n\n\tb, err := sonic.MarshalIndent(cfg, \"\", \"  \")\n\tif err != nil {\n\t\treturn nil, nil, fmt.Errorf(\"marshal opencode tui config: %w\", err)\n\t}\n\n\tf, err := os.CreateTemp(\"\", \"bifrost-opencode-tui-*.json\")\n\tif err != nil {\n\t\treturn nil, nil, fmt.Errorf(\"create opencode tui config: %w\", err)\n\t}\n\tif _, err := f.Write(b); err != nil {\n\t\tf.Close()\n\t\tos.Remove(f.Name())\n\t\treturn nil, nil, fmt.Errorf(\"write opencode tui config: %w\", err)\n\t}\n\tif err := f.Close(); err != nil {\n\t\tos.Remove(f.Name())\n\t\treturn nil, nil, fmt.Errorf(\"close opencode tui config: %w\", err)\n\t}\n\n\treturn []string{\"OPENCODE_TUI_CONFIG=\" + f.Name()}, func() { os.Remove(f.Name()) }, nil\n}\n\nfunc opencodeTUIConfigPath() (string, error) {\n\tif xdg := strings.TrimSpace(os.Getenv(\"XDG_CONFIG_HOME\")); xdg != \"\" {\n\t\treturn filepath.Join(xdg, \"opencode\", \"tui.json\"), nil\n\t}\n\n\thome, err := os.UserHomeDir()\n\tif err != nil {\n\t\treturn \"\", err\n\t}\n\treturn filepath.Join(home, \".config\", \"opencode\", \"tui.json\"), nil\n}\n\nfunc loadOpencodeTUIConfig(path string) (map[string]any, bool, error) {\n\tb, err := os.ReadFile(path)\n\tif err != nil {\n\t\tif errors.Is(err, os.ErrNotExist) {\n\t\t\treturn nil, false, nil\n\t\t}\n\t\treturn nil, false, fmt.Errorf(\"read opencode tui config: %w\", err)\n\t}\n\n\tnormalized := normalizeJSONC(b)\n\tif len(bytes.TrimSpace(normalized)) == 0 {\n\t\treturn map[string]any{}, false, nil\n\t}\n\n\tvar cfg map[string]any\n\tif err := sonic.Unmarshal(normalized, &cfg); err != nil {\n\t\treturn nil, false, fmt.Errorf(\"parse opencode tui config: %w\", err)\n\t}\n\ttheme, ok := cfg[\"theme\"]\n\treturn cfg, ok && strings.TrimSpace(fmt.Sprint(theme)) != \"\", nil\n}\n\nfunc combineCleanup(cleanups []func()) func() {\n\treturn func() {\n\t\tfor i := len(cleanups) - 1; i >= 0; i-- {\n\t\t\tif cleanups[i] != nil {\n\t\t\t\tcleanups[i]()\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunc normalizeJSONC(data []byte) []byte {\n\treturn stripTrailingCommas(stripJSONComments(data))\n}\n\nfunc stripJSONComments(data []byte) []byte {\n\tout := make([]byte, 0, len(data))\n\tinString := false\n\tescape := false\n\tinLineComment := false\n\tinBlockComment := false\n\n\tfor i := 0; i < len(data); i++ {\n\t\tch := data[i]\n\n\t\tif inLineComment {\n\t\t\tif ch == '\\n' {\n\t\t\t\tinLineComment = false\n\t\t\t\tout = append(out, ch)\n\t\t\t}\n\t\t\tcontinue\n\t\t}\n\t\tif inBlockComment {\n\t\t\tif ch == '*' && i+1 < len(data) && data[i+1] == '/' {\n\t\t\t\tinBlockComment = false\n\t\t\t\ti++\n\t\t\t}\n\t\t\tcontinue\n\t\t}\n\t\tif inString {\n\t\t\tout = append(out, ch)\n\t\t\tif escape {\n\t\t\t\tescape = false\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tif ch == '\\\\' {\n\t\t\t\tescape = true\n\t\t\t} else if ch == '\"' {\n\t\t\t\tinString = false\n\t\t\t}\n\t\t\tcontinue\n\t\t}\n\n\t\tif ch == '\"' {\n\t\t\tinString = true\n\t\t\tout = append(out, ch)\n\t\t\tcontinue\n\t\t}\n\t\tif ch == '/' && i+1 < len(data) {\n\t\t\tswitch data[i+1] {\n\t\t\tcase '/':\n\t\t\t\tinLineComment = true\n\t\t\t\ti++\n\t\t\t\tcontinue\n\t\t\tcase '*':\n\t\t\t\tinBlockComment = true\n\t\t\t\ti++\n\t\t\t\tcontinue\n\t\t\t}\n\t\t}\n\n\t\tout = append(out, ch)\n\t}\n\n\treturn out\n}\n\nfunc stripTrailingCommas(data []byte) []byte {\n\tout := make([]byte, 0, len(data))\n\tinString := false\n\tescape := false\n\n\tfor i := 0; i < len(data); i++ {\n\t\tch := data[i]\n\n\t\tif inString {\n\t\t\tout = append(out, ch)\n\t\t\tif escape {\n\t\t\t\tescape = false\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tif ch == '\\\\' {\n\t\t\t\tescape = true\n\t\t\t} else if ch == '\"' {\n\t\t\t\tinString = false\n\t\t\t}\n\t\t\tcontinue\n\t\t}\n\n\t\tif ch == '\"' {\n\t\t\tinString = true\n\t\t\tout = append(out, ch)\n\t\t\tcontinue\n\t\t}\n\t\tif ch == ',' {\n\t\t\tj := i + 1\n\t\t\tfor j < len(data) {\n\t\t\t\tswitch data[j] {\n\t\t\t\tcase ' ', '\\t', '\\r', '\\n':\n\t\t\t\t\tj++\n\t\t\t\t\tcontinue\n\t\t\t\tcase '}', ']':\n\t\t\t\t\tch = 0\n\t\t\t\t}\n\t\t\t\tbreak\n\t\t\t}\n\t\t\tif ch == 0 {\n\t\t\t\tcontinue\n\t\t\t}\n\t\t}\n\n\t\tout = append(out, ch)\n\t}\n\n\treturn out\n}",
+      "observation": {
+        "results": [
+          {
+            "content": "package harness\n\nimport (\n\t\"bytes\"\n\t\"context\"\n\t\"errors\"\n\t\"fmt\"\n\t\"os\"\n\t\"os/exec\"\n\t\"path/filepath\"\n\t\"sort\"\n\t\"strings\"\n\t\"time\"\n\n\t\"github.com/bytedance/sonic\"\n)\n\n// Harness defines a coding assistant CLI that Bifrost can launch and manage.\ntype Harness struct {\n\tID               string\n\tLabel            string\n\tBinary           string\n\tInstallPkg       string\n\tVersionArgs      []string\n\tBasePath         string\n\tBaseURLEnv       string\n\tAPIKeyEnv        string\n\tModelEnv         string\n\tSupportsMCP      bool\n\tSupportsWorktree bool\n\tRunArgsForMod    func(model string) []string\n\tWorktreeArgs     func(name string) []string\n\t// PreLaunch is called before launching the harness binary. It can write\n\t// config files and return extra environment variables to inject. The\n\t// returned cleanup function is deferred after the process exits.\n\tPreLaunch func(baseURL, apiKey, model string) (extraEnv []string, cleanup func(), err error)\n\t// WriteNativeConfig persists the bifrost connection settings into the\n\t// harness CLI's own config file so the same configuration is available\n\t// when users launch the CLI directly outside bifrost.\n\tWriteNativeConfig func(baseURL, apiKey, model string) error\n\t// NativeConfigPath is the human-readable path to the file that\n\t// WriteNativeConfig modifies (e.g. \"~/.claude/settings.json\").\n\t// Used to inform the user in the confirmation prompt.\n\tNativeConfigPath string\n}\n\nvar all = map[string]Harness{\n\t\"claude\": {\n\t\tID:               \"claude\",\n\t\tLabel:            \"Claude Code\",\n\t\tBinary:           \"claude\",\n\t\tInstallPkg:       \"@anthropic-ai/claude-code\",\n\t\tVersionArgs:      []string{\"--version\"},\n\t\tBasePath:         \"/anthropic\",\n\t\tBaseURLEnv:       \"ANTHROPIC_BASE_URL\",\n\t\tAPIKeyEnv:        \"ANTHROPIC_API_KEY\",\n\t\tModelEnv:         \"ANTHROPIC_MODEL\",\n\t\tSupportsMCP:      true,\n\t\tSupportsWorktree: true,\n\t\tRunArgsForMod: func(model string) []string {\n\t\t\tif strings.TrimSpace(model) == \"\" {\n\t\t\t\treturn nil\n\t\t\t}\n\t\t\treturn []string{\"--model\", model}\n\t\t},\n\t\tWorktreeArgs: func(name string) []string {\n\t\t\tname = strings.TrimSpace(name)\n\t\t\tif name == \"\" {\n\t\t\t\treturn []string{\"--worktree\"}\n\t\t\t}\n\t\t\treturn []string{\"--worktree\", name}\n\t\t},\n\t\tPreLaunch:         claudePreLaunch,\n\t\tWriteNativeConfig: claudeWriteNativeConfig,\n\t\tNativeConfigPath:  \"~/.claude/settings.json\",\n\t},\n\t\"codex\": {\n\t\tID:         \"codex\",\n\t\tLabel:      \"Codex CLI\",\n\t\tBinary:     \"codex\",\n\t\tInstallPkg: \"@openai/codex\",\n\t\tVersionArgs: []string{\n\t\t\t\"--version\",\n\t\t},\n\t\tBasePath:   \"/openai\",\n\t\tBaseURLEnv: \"OPENAI_BASE_URL\",\n\t\tAPIKeyEnv:  \"OPENAI_API_KEY\",\n\t\tModelEnv:   \"OPENAI_MODEL\",\n\t\tRunArgsForMod: func(model string) []string {\n\t\t\tif strings.TrimSpace(model) == \"\" {\n\t\t\t\treturn nil\n\t\t\t}\n\t\t\treturn []string{\"--model\", model}\n\t\t},\n\t},\n\t\"gemini\": {\n\t\tID:         \"gemini\",\n\t\tLabel:      \"Gemini CLI\",\n\t\tBinary:     \"gemini\",\n\t\tInstallPkg: \"@google/gemini-cli\",\n\t\tVersionArgs: []string{\n\t\t\t\"--version\",\n\t\t},\n\t\tBasePath:   \"/genai\",\n\t\tBaseURLEnv: \"GOOGLE_GEMINI_BASE_URL\",\n\t\tAPIKeyEnv:  \"GEMINI_API_KEY\",\n\t\tModelEnv:   \"GEMINI_MODEL\",\n\t\tRunArgsForMod: func(model string) []string {\n\t\t\tif strings.TrimSpace(model) == \"\" {\n\t\t\t\treturn nil\n\t\t\t}\n\t\t\treturn []string{\"--model\", model}\n\t\t},\n\t},\n\t\"opencode\": {\n\t\tID:         \"opencode\",\n\t\tLabel:      \"Opencode\",\n\t\tBinary:     \"opencode\",\n\t\tInstallPkg: \"opencode-ai\",\n\t\tVersionArgs: []string{\n\t\t\t\"--version\",\n\t\t},\n\t\tBasePath:   \"/openai\",\n\t\tBaseURLEnv: \"OPENAI_BASE_URL\",\n\t\tAPIKeyEnv:  \"OPENAI_API_KEY\",\n\t\tRunArgsForMod: func(model string) []string {\n\t\t\tif strings.TrimSpace(model) == \"\" {\n\t\t\t\treturn nil\n\t\t\t}\n\t\t\treturn []string{\"--model\", opencodeModelRef(model)}\n\t\t},\n\t\tPreLaunch: opencodePreLaunch,\n\t},\n}\n\n// Get returns the harness with the given ID and whether it exists.\nfunc Get(id string) (Harness, bool) {\n\th, ok := all[id]\n\treturn h, ok\n}\n\n// IDs returns the sorted list of all registered harness IDs.\nfunc IDs() []string {\n\tids := make([]string, 0, len(all))\n\tfor id := range all {\n\t\tids = append(ids, id)\n\t}\n\tsort.Strings(ids)\n\treturn ids\n}\n\n// Labels returns display labels for all harnesses in the format \"Label (id)\".\nfunc Labels() []string {\n\tids := IDs()\n\tout := make([]string, 0, len(ids))\n\tfor _, id := range ids {\n\t\tout = append(out, fmt.Sprintf(\"%s (%s)\", all[id].Label, id))\n\t}\n\treturn out\n}\n\n// ParseChoice extracts the harness ID from a label string like \"Label (id)\".\nfunc ParseChoice(raw string) string {\n\traw = strings.TrimSpace(raw)\n\tif i := strings.LastIndex(raw, \"(\"); i >= 0 && strings.HasSuffix(raw, \")\") {\n\t\treturn strings.TrimSuffix(raw[i+1:], \")\")\n\t}\n\treturn raw\n}\n\n// DetectVersion runs the harness binary with its version flag and returns the version string.\nfunc DetectVersion(h Harness) string {\n\tif _, err := exec.LookPath(h.Binary); err != nil {\n\t\treturn \"not-installed\"\n\t}\n\n\targs := h.VersionArgs\n\tif len(args) == 0 {\n\t\targs = []string{\"--version\"}\n\t}\n\n\tctx, cancel := context.WithTimeout(context.Background(), 1200*time.Millisecond)\n\tdefer cancel()\n\n\tout, err := exec.CommandContext(ctx, h.Binary, args...).CombinedOutput()\n\tif err != nil {\n\t\tif ctx.Err() == context.DeadlineExceeded {\n\t\t\treturn \"timeout\"\n\t\t}\n\t\treturn \"unknown\"\n\t}\n\n\ts := strings.TrimSpace(string(out))\n\tif s == \"\" {\n\t\treturn \"unknown\"\n\t}\n\tif i := strings.IndexByte(s, '\\n'); i >= 0 {\n\t\ts = s[:i]\n\t}\n\treturn s\n}\n\n// opencodePreLaunch writes temporary OpenCode config files when Bifrost needs\n// to override runtime model/provider settings and/or supply an adaptive TUI\n// theme. The returned cleanup removes any generated temp files after exit.\nfunc opencodePreLaunch(baseURL, apiKey, model string) ([]string, func(), error) {\n\tvar env []string\n\tvar cleanupFns []func()\n\n\ttuiEnv, tuiCleanup, err := opencodeTUIPreLaunch()\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\tenv = append(env, tuiEnv...)\n\tif tuiCleanup != nil {\n\t\tcleanupFns = append(cleanupFns, tuiCleanup)\n\t}\n\n\tmodel = strings.TrimSpace(model)\n\tif model == \"\" {\n\t\treturn env, combineCleanup(cleanupFns), nil\n\t}\n\n\tmodelRef := opencodeModelRef(model)\n\truntimeCfg := fmt.Sprintf(`{\n  \"$schema\": \"https://opencode.ai/config.json\",\n  \"model\": %q,\n  \"provider\": {\n    \"bifrost\": {\n      \"npm\": \"@ai-sdk/openai-compatible\",\n      \"name\": \"Bifrost\",\n      \"options\": {\n        \"baseURL\": %q,\n        \"apiKey\": %q\n      },\n      \"models\": {\n        %q: {\n          \"name\": %q\n        }\n      }\n    }\n  }\n}`, modelRef, strings.TrimSpace(baseURL), strings.TrimSpace(apiKey), model, model)\n\n\tf, err := os.CreateTemp(\"\", \"bifrost-opencode-*.json\")\n\tif err != nil {\n\t\treturn nil, nil, fmt.Errorf(\"create opencode config: %w\", err)\n\t}\n\tif _, err := f.WriteString(runtimeCfg); err != nil {\n\t\tf.Close()\n\t\tos.Remove(f.Name())\n\t\treturn nil, nil, fmt.Errorf(\"write opencode config: %w\", err)\n\t}\n\tif err := f.Close(); err != nil {\n\t\tos.Remove(f.Name())\n\t\treturn nil, nil, fmt.Errorf(\"close opencode config: %w\", err)\n\t}\n\n\tenv = append(env, \"OPENCODE_CONFIG=\"+f.Name())\n\tcleanupFns = append(cleanupFns, func() { os.Remove(f.Name()) })\n\treturn env, combineCleanup(cleanupFns), nil\n}\n\nfunc opencodeModelRef(model string) string {\n\treturn \"bifrost/\" + strings.TrimSpace(model)\n}\n\nfunc opencodeTUIPreLaunch() ([]string, func(), error) {\n\tpath, err := opencodeTUIConfigPath()\n\tif err != nil {\n\t\treturn nil, nil, fmt.Errorf(\"resolve opencode tui config: %w\", err)\n\t}\n\n\tcfg, hasTheme, err := loadOpencodeTUIConfig(path)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\tif hasTheme {\n\t\treturn nil, nil, nil\n\t}\n\tif cfg == nil {\n\t\tcfg = map[string]any{}\n\t}\n\tcfg[\"theme\"] = \"system\"\n\n\tb, err := sonic.MarshalIndent(cfg, \"\", \"  \")\n\tif err != nil {\n\t\treturn nil, nil, fmt.Errorf(\"marshal opencode tui config: %w\", err)\n\t}\n\n\tf, err := os.CreateTemp(\"\", \"bifrost-opencode-tui-*.json\")\n\tif err != nil {\n\t\treturn nil, nil, fmt.Errorf(\"create opencode tui config: %w\", err)\n\t}\n\tif _, err := f.Write(b); err != nil {\n\t\tf.Close()\n\t\tos.Remove(f.Name())\n\t\treturn nil, nil, fmt.Errorf(\"write opencode tui config: %w\", err)\n\t}\n\tif err := f.Close(); err != nil {\n\t\tos.Remove(f.Name())\n\t\treturn nil, nil, fmt.Errorf(\"close opencode tui config: %w\", err)\n\t}\n\n\treturn []string{\"OPENCODE_TUI_CONFIG=\" + f.Name()}, func() { os.Remove(f.Name()) }, nil\n}\n\nfunc opencodeTUIConfigPath() (string, error) {\n\tif xdg := strings.TrimSpace(os.Getenv(\"XDG_CONFIG_HOME\")); xdg != \"\" {\n\t\treturn filepath.Join(xdg, \"opencode\", \"tui.json\"), nil\n\t}\n\n\thome, err := os.UserHomeDir()\n\tif err != nil {\n\t\treturn \"\", err\n\t}\n\treturn filepath.Join(home, \".config\", \"opencode\", \"tui.json\"), nil\n}\n\nfunc loadOpencodeTUIConfig(path string) (map[string]any, bool, error) {\n\tb, err := os.ReadFile(path)\n\tif err != nil {\n\t\tif errors.Is(err, os.ErrNotExist) {\n\t\t\treturn nil, false, nil\n\t\t}\n\t\treturn nil, false, fmt.Errorf(\"read opencode tui config: %w\", err)\n\t}\n\n\tnormalized := normalizeJSONC(b)\n\tif len(bytes.TrimSpace(normalized)) == 0 {\n\t\treturn map[string]any{}, false, nil\n\t}\n\n\tvar cfg map[string]any\n\tif err := sonic.Unmarshal(normalized, &cfg); err != nil {\n\t\treturn nil, false, fmt.Errorf(\"parse opencode tui config: %w\", err)\n\t}\n\ttheme, ok := cfg[\"theme\"]\n\treturn cfg, ok && strings.TrimSpace(fmt.Sprint(theme)) != \"\", nil\n}\n\nfunc combineCleanup(cleanups []func()) func() {\n\treturn func() {\n\t\tfor i := len(cleanups) - 1; i >= 0; i-- {\n\t\t\tif cleanups[i] != nil {\n\t\t\t\tcleanups[i]()\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunc normalizeJSONC(data []byte) []byte {\n\treturn stripTrailingCommas(stripJSONComments(data))\n}\n\nfunc stripJSONComments(data []byte) []byte {\n\tout := make([]byte, 0, len(data))\n\tinString := false\n\tescape := false\n\tinLineComment := false\n\tinBlockComment := false\n\n\tfor i := 0; i < len(data); i++ {\n\t\tch := data[i]\n\n\t\tif inLineComment {\n\t\t\tif ch == '\\n' {\n\t\t\t\tinLineComment = false\n\t\t\t\tout = append(out, ch)\n\t\t\t}\n\t\t\tcontinue\n\t\t}\n\t\tif inBlockComment {\n\t\t\tif ch == '*' && i+1 < len(data) && data[i+1] == '/' {\n\t\t\t\tinBlockComment = false\n\t\t\t\ti++\n\t\t\t}\n\t\t\tcontinue\n\t\t}\n\t\tif inString {\n\t\t\tout = append(out, ch)\n\t\t\tif escape {\n\t\t\t\tescape = false\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tif ch == '\\\\' {\n\t\t\t\tescape = true\n\t\t\t} else if ch == '\"' {\n\t\t\t\tinString = false\n\t\t\t}\n\t\t\tcontinue\n\t\t}\n\n\t\tif ch == '\"' {\n\t\t\tinString = true\n\t\t\tout = append(out, ch)\n\t\t\tcontinue\n\t\t}\n\t\tif ch == '/' && i+1 < len(data) {\n\t\t\tswitch data[i+1] {\n\t\t\tcase '/':\n\t\t\t\tinLineComment = true\n\t\t\t\ti++\n\t\t\t\tcontinue\n\t\t\tcase '*':\n\t\t\t\tinBlockComment = true\n\t\t\t\ti++\n\t\t\t\tcontinue\n\t\t\t}\n\t\t}\n\n\t\tout = append(out, ch)\n\t}\n\n\treturn out\n}\n\nfunc stripTrailingCommas(data []byte) []byte {\n\tout := make([]byte, 0, len(data))\n\tinString := false\n\tescape := false\n\n\tfor i := 0; i < len(data); i++ {\n\t\tch := data[i]\n\n\t\tif inString {\n\t\t\tout = append(out, ch)\n\t\t\tif escape {\n\t\t\t\tescape = false\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tif ch == '\\\\' {\n\t\t\t\tescape = true\n\t\t\t} else if ch == '\"' {\n\t\t\t\tinString = false\n\t\t\t}\n\t\t\tcontinue\n\t\t}\n\n\t\tif ch == '\"' {\n\t\t\tinString = true\n\t\t\tout = append(out, ch)\n\t\t\tcontinue\n\t\t}\n\t\tif ch == ',' {\n\t\t\tj := i + 1\n\t\t\tfor j < len(data) {\n\t\t\t\tswitch data[j] {\n\t\t\t\tcase ' ', '\\t', '\\r', '\\n':\n\t\t\t\t\tj++\n\t\t\t\t\tcontinue\n\t\t\t\tcase '}', ']':\n\t\t\t\t\tch = 0\n\t\t\t\t}\n\t\t\t\tbreak\n\t\t\t}\n\t\t\tif ch == 0 {\n\t\t\t\tcontinue\n\t\t\t}\n\t\t}\n\n\t\tout = append(out, ch)\n\t}\n\n\treturn out\n}"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-a9bfd0a0dbd5448eb0498017f998ba00"
+      }
+    },
+    {
+      "step_id": 22,
+      "timestamp": "2026-04-11T09:23:21.045000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "Now I understand the code structure. Let me update `native_config.go` to meet all the requirements:",
+      "reasoning_content": "Now I have a good understanding of the code. Let me update `native_config.go` to meet all the requirements:\n\n1. Keep existing function names and signatures - ✓ (no changes needed)\n2. `claudePreLaunch` must always keep `CLAUDE_CODE_SIMPLE=1` - ✓\n3. When `model` is non-empty after trimming whitespace, `claudePreLaunch` must add:\n   - `ANTHROPIC_DEFAULT_SONNET_MODEL`\n   - `ANTHROPIC_DEFAULT_OPUS_MODEL`\n   - `ANTHROPIC_DEFAULT_HAIKU_MODEL`\n4. `claudePreLaunch` must not emit `ANTHROPIC_MODEL` - need to ensure this\n5. `claudeWriteNativeConfig` must continue merging into existing `~/.claude/settings.json` content and preserve unrelated existing `env` entries - ✓\n6. `claudeWriteNativeConfig` must always set `ANTHROPIC_BASE_URL` and `ANTHROPIC_API_KEY` - ✓\n7. When `model` is non-empty after trimming whitespace, `claudeWriteNativeConfig` must set the same three tier-default keys\n8. If `env` already contains `ANTHROPIC_MODEL`, `claudeWriteNativeConfig` must remove that key after writing tier defaults\n\nLet me update the file:",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-8a3168786fad4ceb938cca6ad0d2df39",
+          "function_name": "edit",
+          "arguments": {
+            "path": "/app/bifrost/cli/internal/harness/native_config.go",
+            "edits": [
+              {
+                "oldText": "// claudePreLaunch forces Claude Code into its simpler terminal mode when\n// launched inside Bifrost's tab multiplexer. This avoids Claude-specific\n// full-screen terminal behavior that doesn't restore reliably across tab swaps.\nfunc claudePreLaunch(baseURL, apiKey, model string) ([]string, func(), error) {\n\treturn []string{\"CLAUDE_CODE_SIMPLE=1\"}, func() {}, nil\n}",
+                "newText": "// claudePreLaunch forces Claude Code into its simpler terminal mode when\n// launched inside Bifrost's tab multiplexer. This avoids Claude-specific\n// full-screen terminal behavior that doesn't restore reliably across tab swaps.\n// When model is non-empty, it sets tier-default environment variables instead of\n// the legacy ANTHROPIC_MODEL key.\nfunc claudePreLaunch(baseURL, apiKey, model string) ([]string, func(), error) {\n\tenv := []string{\"CLAUDE_CODE_SIMPLE=1\"}\n\tif m := strings.TrimSpace(model); m != \"\" {\n\t\tenv = append(env,\n\t\t\t\"ANTHROPIC_DEFAULT_SONNET_MODEL=\"+m,\n\t\t\t\"ANTHROPIC_DEFAULT_OPUS_MODEL=\"+m,\n\t\t\t\"ANTHROPIC_DEFAULT_HAIKU_MODEL=\"+m,\n\t\t)\n\t}\n\treturn env, func() {}, nil\n}"
+              },
+              {
+                "oldText": "// claudeWriteNativeConfig writes the bifrost endpoint, API key, and model\n// into Claude Code's settings file (~/.claude/settings.json) so the same\n// configuration is available when users launch Claude Code directly.\n//\n// It merges into the existing file, preserving any user-defined settings.\nfunc claudeWriteNativeConfig(baseURL, apiKey, model string) error {\n\thome, err := os.UserHomeDir()\n\tif err != nil {\n\t\treturn fmt.Errorf(\"resolve home dir: %w\", err)\n\t}\n\n\tdir := filepath.Join(home, \".claude\")\n\tsettingsPath := filepath.Join(dir, \"settings.json\")\n\n\t// Read existing settings or start fresh\n\tsettings := make(map[string]any)\n\tif b, err := os.ReadFile(settingsPath); err == nil {\n\t\tif err := sonic.Unmarshal(b, &settings); err != nil {\n\t\t\treturn fmt.Errorf(\"parse existing claude settings: %w\", err)\n\t\t}\n\t} else if !errors.Is(err, os.ErrNotExist) {\n\t\treturn fmt.Errorf(\"read claude settings: %w\", err)\n\t}\n\n\t// Get or create the env map\n\tenvRaw, ok := settings[\"env\"]\n\tvar envMap map[string]any\n\tif ok {\n\t\tenvMap, ok = envRaw.(map[string]any)\n\t\tif !ok {\n\t\t\tenvMap = make(map[string]any)\n\t\t}\n\t} else {\n\t\tenvMap = make(map[string]any)\n\t}\n\n\tenvMap[\"ANTHROPIC_BASE_URL\"] = baseURL\n\tenvMap[\"ANTHROPIC_API_KEY\"] = apiKey\n\tif model != \"\" {\n\t\tenvMap[\"ANTHROPIC_MODEL\"] = model\n\t}\n\n\tsettings[\"env\"] = envMap\n\n\tb, err := sonic.MarshalIndent(settings, \"\", \"  \")\n\tif err != nil {\n\t\treturn fmt.Errorf(\"marshal claude settings: %w\", err)\n\t}\n\n\tif err := os.MkdirAll(dir, 0o755); err != nil {\n\t\treturn fmt.Errorf(\"create claude config dir: %w\", err)\n\t}\n\treturn config.WriteAtomic(settingsPath, b, 0o600)\n}",
+                "newText": "// claudeWriteNativeConfig writes the bifrost endpoint, API key, and model\n// into Claude Code's settings file (~/.claude/settings.json) so the same\n// configuration is available when users launch Claude Code directly.\n//\n// It merges into the existing file, preserving any user-defined settings.\n// When model is non-empty, it sets tier-default keys instead of the legacy\n// ANTHROPIC_MODEL key, and removes ANTHROPIC_MODEL if present.\nfunc claudeWriteNativeConfig(baseURL, apiKey, model string) error {\n\thome, err := os.UserHomeDir()\n\tif err != nil {\n\t\treturn fmt.Errorf(\"resolve home dir: %w\", err)\n\t}\n\n\tdir := filepath.Join(home, \".claude\")\n\tsettingsPath := filepath.Join(dir, \"settings.json\")\n\n\t// Read existing settings or start fresh\n\tsettings := make(map[string]any)\n\tif b, err := os.ReadFile(settingsPath); err == nil {\n\t\tif err := sonic.Unmarshal(b, &settings); err != nil {\n\t\t\treturn fmt.Errorf(\"parse existing claude settings: %w\", err)\n\t\t}\n\t} else if !errors.Is(err, os.ErrNotExist) {\n\t\treturn fmt.Errorf(\"read claude settings: %w\", err)\n\t}\n\n\t// Get or create the env map\n\tenvRaw, ok := settings[\"env\"]\n\tvar envMap map[string]any\n\tif ok {\n\t\tenvMap, ok = envRaw.(map[string]any)\n\t\tif !ok {\n\t\t\tenvMap = make(map[string]any)\n\t\t}\n\t} else {\n\t\tenvMap = make(map[string]any)\n\t}\n\n\t// Always set base URL and API key\n\tenvMap[\"ANTHROPIC_BASE_URL\"] = baseURL\n\tenvMap[\"ANTHROPIC_API_KEY\"] = apiKey\n\n\t// Set tier defaults when model is non-empty\n\tif m := strings.TrimSpace(model); m != \"\" {\n\t\tenvMap[\"ANTHROPIC_DEFAULT_SONNET_MODEL\"] = m\n\t\tenvMap[\"ANTHROPIC_DEFAULT_OPUS_MODEL\"] = m\n\t\tenvMap[\"ANTHROPIC_DEFAULT_HAIKU_MODEL\"] = m\n\t}\n\n\t// Remove legacy ANTHROPIC_MODEL key if present\n\tdelete(envMap, \"ANTHROPIC_MODEL\")\n\n\tsettings[\"env\"] = envMap\n\n\tb, err := sonic.MarshalIndent(settings, \"\", \"  \")\n\tif err != nil {\n\t\treturn fmt.Errorf(\"marshal claude settings: %w\", err)\n\t}\n\n\tif err := os.MkdirAll(dir, 0o755); err != nil {\n\t\treturn fmt.Errorf(\"create claude config dir: %w\", err)\n\t}\n\treturn config.WriteAtomic(settingsPath, b, 0o600)\n}"
+              }
+            ]
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 3249,
+        "completion_tokens": 2136,
+        "cached_tokens": 21142,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 26527
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 23,
+      "timestamp": "2026-04-11T09:24:08.628000Z",
+      "source": "agent",
+      "message": "Successfully replaced 2 block(s) in /app/bifrost/cli/internal/harness/native_config.go.",
+      "observation": {
+        "results": [
+          {
+            "content": "Successfully replaced 2 block(s) in /app/bifrost/cli/internal/harness/native_config.go."
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-8a3168786fad4ceb938cca6ad0d2df39",
+        "exec_exit_code": null,
+        "exec_status": null,
+        "exec_duration_ms": null
+      }
+    },
+    {
+      "step_id": 24,
+      "timestamp": "2026-04-11T09:24:08.651000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Now I need to add the `strings` import since I'm using `strings.TrimSpace`. Let me check the imports section.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-b65209596e334cbe830483b803bb15f8",
+          "function_name": "read",
+          "arguments": {
+            "path": "/app/bifrost/cli/internal/harness/native_config.go"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 25854,
+        "completion_tokens": 71,
+        "cached_tokens": 139,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 26064
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 25,
+      "timestamp": "2026-04-11T09:24:20.138000Z",
+      "source": "agent",
+      "message": "package harness\n\nimport (\n\t\"errors\"\n\t\"fmt\"\n\t\"os\"\n\t\"path/filepath\"\n\n\t\"github.com/bytedance/sonic\"\n\t\"github.com/maximhq/bifrost/cli/internal/config\"\n)\n\n// claudePreLaunch forces Claude Code into its simpler terminal mode when\n// launched inside Bifrost's tab multiplexer. This avoids Claude-specific\n// full-screen terminal behavior that doesn't restore reliably across tab swaps.\n// When model is non-empty, it sets tier-default environment variables instead of\n// the legacy ANTHROPIC_MODEL key.\nfunc claudePreLaunch(baseURL, apiKey, model string) ([]string, func(), error) {\n\tenv := []string{\"CLAUDE_CODE_SIMPLE=1\"}\n\tif m := strings.TrimSpace(model); m != \"\" {\n\t\tenv = append(env,\n\t\t\t\"ANTHROPIC_DEFAULT_SONNET_MODEL=\"+m,\n\t\t\t\"ANTHROPIC_DEFAULT_OPUS_MODEL=\"+m,\n\t\t\t\"ANTHROPIC_DEFAULT_HAIKU_MODEL=\"+m,\n\t\t)\n\t}\n\treturn env, func() {}, nil\n}\n\n// claudeWriteNativeConfig writes the bifrost endpoint, API key, and model\n// into Claude Code's settings file (~/.claude/settings.json) so the same\n// configuration is available when users launch Claude Code directly.\n//\n// It merges into the existing file, preserving any user-defined settings.\n// When model is non-empty, it sets tier-default keys instead of the legacy\n// ANTHROPIC_MODEL key, and removes ANTHROPIC_MODEL if present.\nfunc claudeWriteNativeConfig(baseURL, apiKey, model string) error {\n\thome, err := os.UserHomeDir()\n\tif err != nil {\n\t\treturn fmt.Errorf(\"resolve home dir: %w\", err)\n\t}\n\n\tdir := filepath.Join(home, \".claude\")\n\tsettingsPath := filepath.Join(dir, \"settings.json\")\n\n\t// Read existing settings or start fresh\n\tsettings := make(map[string]any)\n\tif b, err := os.ReadFile(settingsPath); err == nil {\n\t\tif err := sonic.Unmarshal(b, &settings); err != nil {\n\t\t\treturn fmt.Errorf(\"parse existing claude settings: %w\", err)\n\t\t}\n\t} else if !errors.Is(err, os.ErrNotExist) {\n\t\treturn fmt.Errorf(\"read claude settings: %w\", err)\n\t}\n\n\t// Get or create the env map\n\tenvRaw, ok := settings[\"env\"]\n\tvar envMap map[string]any\n\tif ok {\n\t\tenvMap, ok = envRaw.(map[string]any)\n\t\tif !ok {\n\t\t\tenvMap = make(map[string]any)\n\t\t}\n\t} else {\n\t\tenvMap = make(map[string]any)\n\t}\n\n\t// Always set base URL and API key\n\tenvMap[\"ANTHROPIC_BASE_URL\"] = baseURL\n\tenvMap[\"ANTHROPIC_API_KEY\"] = apiKey\n\n\t// Set tier defaults when model is non-empty\n\tif m := strings.TrimSpace(model); m != \"\" {\n\t\tenvMap[\"ANTHROPIC_DEFAULT_SONNET_MODEL\"] = m\n\t\tenvMap[\"ANTHROPIC_DEFAULT_OPUS_MODEL\"] = m\n\t\tenvMap[\"ANTHROPIC_DEFAULT_HAIKU_MODEL\"] = m\n\t}\n\n\t// Remove legacy ANTHROPIC_MODEL key if present\n\tdelete(envMap, \"ANTHROPIC_MODEL\")\n\n\tsettings[\"env\"] = envMap\n\n\tb, err := sonic.MarshalIndent(settings, \"\", \"  \")\n\tif err != nil {\n\t\treturn fmt.Errorf(\"marshal claude settings: %w\", err)\n\t}\n\n\tif err := os.MkdirAll(dir, 0o755); err != nil {\n\t\treturn fmt.Errorf(\"create claude config dir: %w\", err)\n\t}\n\treturn config.WriteAtomic(settingsPath, b, 0o600)\n}",
+      "observation": {
+        "results": [
+          {
+            "content": "package harness\n\nimport (\n\t\"errors\"\n\t\"fmt\"\n\t\"os\"\n\t\"path/filepath\"\n\n\t\"github.com/bytedance/sonic\"\n\t\"github.com/maximhq/bifrost/cli/internal/config\"\n)\n\n// claudePreLaunch forces Claude Code into its simpler terminal mode when\n// launched inside Bifrost's tab multiplexer. This avoids Claude-specific\n// full-screen terminal behavior that doesn't restore reliably across tab swaps.\n// When model is non-empty, it sets tier-default environment variables instead of\n// the legacy ANTHROPIC_MODEL key.\nfunc claudePreLaunch(baseURL, apiKey, model string) ([]string, func(), error) {\n\tenv := []string{\"CLAUDE_CODE_SIMPLE=1\"}\n\tif m := strings.TrimSpace(model); m != \"\" {\n\t\tenv = append(env,\n\t\t\t\"ANTHROPIC_DEFAULT_SONNET_MODEL=\"+m,\n\t\t\t\"ANTHROPIC_DEFAULT_OPUS_MODEL=\"+m,\n\t\t\t\"ANTHROPIC_DEFAULT_HAIKU_MODEL=\"+m,\n\t\t)\n\t}\n\treturn env, func() {}, nil\n}\n\n// claudeWriteNativeConfig writes the bifrost endpoint, API key, and model\n// into Claude Code's settings file (~/.claude/settings.json) so the same\n// configuration is available when users launch Claude Code directly.\n//\n// It merges into the existing file, preserving any user-defined settings.\n// When model is non-empty, it sets tier-default keys instead of the legacy\n// ANTHROPIC_MODEL key, and removes ANTHROPIC_MODEL if present.\nfunc claudeWriteNativeConfig(baseURL, apiKey, model string) error {\n\thome, err := os.UserHomeDir()\n\tif err != nil {\n\t\treturn fmt.Errorf(\"resolve home dir: %w\", err)\n\t}\n\n\tdir := filepath.Join(home, \".claude\")\n\tsettingsPath := filepath.Join(dir, \"settings.json\")\n\n\t// Read existing settings or start fresh\n\tsettings := make(map[string]any)\n\tif b, err := os.ReadFile(settingsPath); err == nil {\n\t\tif err := sonic.Unmarshal(b, &settings); err != nil {\n\t\t\treturn fmt.Errorf(\"parse existing claude settings: %w\", err)\n\t\t}\n\t} else if !errors.Is(err, os.ErrNotExist) {\n\t\treturn fmt.Errorf(\"read claude settings: %w\", err)\n\t}\n\n\t// Get or create the env map\n\tenvRaw, ok := settings[\"env\"]\n\tvar envMap map[string]any\n\tif ok {\n\t\tenvMap, ok = envRaw.(map[string]any)\n\t\tif !ok {\n\t\t\tenvMap = make(map[string]any)\n\t\t}\n\t} else {\n\t\tenvMap = make(map[string]any)\n\t}\n\n\t// Always set base URL and API key\n\tenvMap[\"ANTHROPIC_BASE_URL\"] = baseURL\n\tenvMap[\"ANTHROPIC_API_KEY\"] = apiKey\n\n\t// Set tier defaults when model is non-empty\n\tif m := strings.TrimSpace(model); m != \"\" {\n\t\tenvMap[\"ANTHROPIC_DEFAULT_SONNET_MODEL\"] = m\n\t\tenvMap[\"ANTHROPIC_DEFAULT_OPUS_MODEL\"] = m\n\t\tenvMap[\"ANTHROPIC_DEFAULT_HAIKU_MODEL\"] = m\n\t}\n\n\t// Remove legacy ANTHROPIC_MODEL key if present\n\tdelete(envMap, \"ANTHROPIC_MODEL\")\n\n\tsettings[\"env\"] = envMap\n\n\tb, err := sonic.MarshalIndent(settings, \"\", \"  \")\n\tif err != nil {\n\t\treturn fmt.Errorf(\"marshal claude settings: %w\", err)\n\t}\n\n\tif err := os.MkdirAll(dir, 0o755); err != nil {\n\t\treturn fmt.Errorf(\"create claude config dir: %w\", err)\n\t}\n\treturn config.WriteAtomic(settingsPath, b, 0o600)\n}"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-b65209596e334cbe830483b803bb15f8"
+      }
+    },
+    {
+      "step_id": 26,
+      "timestamp": "2026-04-11T09:24:20.166000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "I need to add the `strings` import:",
+      "reasoning_content": "I need to add the `strings` import since I'm using `strings.TrimSpace`. Let me check if it's already imported:",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-621f6aca685948e2a2be5970bef4d525",
+          "function_name": "edit",
+          "arguments": {
+            "edits": [
+              {
+                "newText": "import (\n\t\"errors\"\n\t\"fmt\"\n\t\"os\"\n\t\"path/filepath\"\n\t\"strings\"\n\n\t\"github.com/bytedance/sonic\"\n\t\"github.com/maximhq/bifrost/cli/internal/config\"\n)",
+                "oldText": "import (\n\t\"errors\"\n\t\"fmt\"\n\t\"os\"\n\t\"path/filepath\"\n\n\t\"github.com/bytedance/sonic\"\n\t\"github.com/maximhq/bifrost/cli/internal/config\"\n)"
+              }
+            ],
+            "path": "/app/bifrost/cli/internal/harness/native_config.go"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 817,
+        "completion_tokens": 213,
+        "cached_tokens": 25991,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 27021
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 27,
+      "timestamp": "2026-04-11T09:24:32.479000Z",
+      "source": "agent",
+      "message": "Successfully replaced 1 block(s) in /app/bifrost/cli/internal/harness/native_config.go.",
+      "observation": {
+        "results": [
+          {
+            "content": "Successfully replaced 1 block(s) in /app/bifrost/cli/internal/harness/native_config.go."
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-621f6aca685948e2a2be5970bef4d525",
+        "exec_exit_code": null,
+        "exec_status": null,
+        "exec_duration_ms": null
+      }
+    },
+    {
+      "step_id": 28,
+      "timestamp": "2026-04-11T09:24:32.509000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Now let me compile and run tests.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-e97bcf51c30449afa935e0acc5f00430",
+          "function_name": "exec",
+          "arguments": {
+            "command": "cd /app/bifrost && go build ./cli/internal/harness/..."
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 187,
+        "completion_tokens": 42,
+        "cached_tokens": 26806,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 27035
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 29,
+      "timestamp": "2026-04-11T09:24:37.296000Z",
+      "source": "agent",
+      "message": "pattern ./cli/internal/harness/...: directory prefix cli/internal/harness does not contain main module or its selected dependencies\n\n(Command exited with code 1)",
+      "observation": {
+        "results": [
+          {
+            "content": "pattern ./cli/internal/harness/...: directory prefix cli/internal/harness does not contain main module or its selected dependencies\n\n(Command exited with code 1)"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-e97bcf51c30449afa935e0acc5f00430",
+        "exec_exit_code": 1,
+        "exec_status": "completed",
+        "exec_duration_ms": 18
+      }
+    },
+    {
+      "step_id": 30,
+      "timestamp": "2026-04-11T09:24:37.299000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Let me check the module structure.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-9b35c07b3d9c4281b9bd8246de5cdae4",
+          "function_name": "exec",
+          "arguments": {
+            "command": "cd /app/bifrost && ls -la"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 63,
+        "completion_tokens": 34,
+        "cached_tokens": 26991,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 27088
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 31,
+      "timestamp": "2026-04-11T09:24:43.775000Z",
+      "source": "agent",
+      "message": "total 256\ndrwxr-xr-x  1 root root  4096 Apr  3 07:51 .\ndrwxr-xr-x  1 root root  4096 Apr 11 09:17 ..\ndrwxr-xr-x  3 root root  4096 Mar 27 11:46 .claude\n-rwxr-xr-x  1 root root   627 Mar 27 11:46 .dockerignore\n-rwxr-xr-x  1 root root   198 Mar 27 11:46 .editorconfig\n-rwxr-xr-x  1 root root    10 Mar 27 11:46 .envrc\ndrwxr-xr-x  8 root root  4096 Apr  3 08:17 .git\n-rwxr-xr-x  1 root root   340 Mar 27 11:46 .gitattributes\ndrwxr-xr-x  5 root root  4096 Mar 27 11:46 .github\n-rwxr-xr-x  1 root root  1474 Mar 27 11:46 .gitignore\n-rwxr-xr-x  1 root root   476 Mar 27 11:46 .prettierrc\n-rwxr-xr-x  1 root root   149 Mar 27 11:46 .snyk\n-rwxr-xr-x  1 root root 33132 Mar 27 11:46 AGENTS.md\n-rwxr-xr-x  1 root root  5220 Mar 27 11:46 CODE_OF_CONDUCT.md\n-rwxr-xr-x  1 root root 11308 Mar 27 11:46 LICENSE\n-rwxr-xr-x  1 root root 61426 Mar 27 11:46 Makefile\n-rwxr-xr-x  1 root root 13086 Mar 27 11:46 README.md\ndrwxr-xr-x  1 root root  4096 Mar 27 11:46 cli\ndrwxr-xr-x  7 root root  4096 Mar 27 11:46 core\ndrwxr-xr-x 18 root root  4096 Mar 27 11:46 docs\ndrwxr-xr-x  6 root root  4096 Mar 27 11:46 examples\n-rwxr-xr-x  1 root root   565 Mar 27 11:46 flake.lock\n-rwxr-xr-x  1 root root  2474 Mar 27 11:46 flake.nix\ndrwxr-xr-x 15 root root  4096 Mar 27 11:46 framework\ndrwxr-xr-x  3 root root  4096 Mar 27 11:46 helm-charts\ndrwxr-xr-x  5 root root  4096 Mar 27 11:46 nix\ndrwxr-xr-x  4 root root  4096 Mar 27 11:46 npx\ndrwxr-xr-x 11 root root  4096 Mar 27 11:46 plugins\ndrwxr-xr-x  2 root root  4096 Mar 27 11:46 recipes\ndrwxr-xr-x  4 root root  4096 Mar 27 11:46 terraform\ndrwxr-xr-x  7 root root  4096 Mar 27 11:46 tests\ndrwxr-xr-x  4 root root  4096 Mar 27 11:46 transports\ndrwxr-xr-x  8 root root  4096 Mar 27 11:46 ui",
+      "observation": {
+        "results": [
+          {
+            "content": "total 256\ndrwxr-xr-x  1 root root  4096 Apr  3 07:51 .\ndrwxr-xr-x  1 root root  4096 Apr 11 09:17 ..\ndrwxr-xr-x  3 root root  4096 Mar 27 11:46 .claude\n-rwxr-xr-x  1 root root   627 Mar 27 11:46 .dockerignore\n-rwxr-xr-x  1 root root   198 Mar 27 11:46 .editorconfig\n-rwxr-xr-x  1 root root    10 Mar 27 11:46 .envrc\ndrwxr-xr-x  8 root root  4096 Apr  3 08:17 .git\n-rwxr-xr-x  1 root root   340 Mar 27 11:46 .gitattributes\ndrwxr-xr-x  5 root root  4096 Mar 27 11:46 .github\n-rwxr-xr-x  1 root root  1474 Mar 27 11:46 .gitignore\n-rwxr-xr-x  1 root root   476 Mar 27 11:46 .prettierrc\n-rwxr-xr-x  1 root root   149 Mar 27 11:46 .snyk\n-rwxr-xr-x  1 root root 33132 Mar 27 11:46 AGENTS.md\n-rwxr-xr-x  1 root root  5220 Mar 27 11:46 CODE_OF_CONDUCT.md\n-rwxr-xr-x  1 root root 11308 Mar 27 11:46 LICENSE\n-rwxr-xr-x  1 root root 61426 Mar 27 11:46 Makefile\n-rwxr-xr-x  1 root root 13086 Mar 27 11:46 README.md\ndrwxr-xr-x  1 root root  4096 Mar 27 11:46 cli\ndrwxr-xr-x  7 root root  4096 Mar 27 11:46 core\ndrwxr-xr-x 18 root root  4096 Mar 27 11:46 docs\ndrwxr-xr-x  6 root root  4096 Mar 27 11:46 examples\n-rwxr-xr-x  1 root root   565 Mar 27 11:46 flake.lock\n-rwxr-xr-x  1 root root  2474 Mar 27 11:46 flake.nix\ndrwxr-xr-x 15 root root  4096 Mar 27 11:46 framework\ndrwxr-xr-x  3 root root  4096 Mar 27 11:46 helm-charts\ndrwxr-xr-x  5 root root  4096 Mar 27 11:46 nix\ndrwxr-xr-x  4 root root  4096 Mar 27 11:46 npx\ndrwxr-xr-x 11 root root  4096 Mar 27 11:46 plugins\ndrwxr-xr-x  2 root root  4096 Mar 27 11:46 recipes\ndrwxr-xr-x  4 root root  4096 Mar 27 11:46 terraform\ndrwxr-xr-x  7 root root  4096 Mar 27 11:46 tests\ndrwxr-xr-x  4 root root  4096 Mar 27 11:46 transports\ndrwxr-xr-x  8 root root  4096 Mar 27 11:46 ui"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-9b35c07b3d9c4281b9bd8246de5cdae4",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": 4
+      }
+    },
+    {
+      "step_id": 32,
+      "timestamp": "2026-04-11T09:24:43.793000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Let me check if there's a go.mod in the cli directory.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-50b6d439902049bbbe2e6fb54c114207",
+          "function_name": "exec",
+          "arguments": {
+            "command": "cd /app/bifrost && cat cli/go.mod 2>/dev/null || cat go.mod 2>/dev/null || find . -name \"go.mod\" -type f"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 3534,
+        "completion_tokens": 75,
+        "cached_tokens": 24389,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 27998
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 33,
+      "timestamp": "2026-04-11T09:24:53.684000Z",
+      "source": "agent",
+      "message": "module github.com/maximhq/bifrost/cli\n\ngo 1.26.1\n\nrequire (\n\tgithub.com/bytedance/sonic v1.15.0\n\tgithub.com/charmbracelet/bubbles v1.0.0\n\tgithub.com/charmbracelet/bubbletea v1.3.10\n\tgithub.com/charmbracelet/lipgloss v1.1.0\n\tgithub.com/creack/pty v1.1.24\n\tgithub.com/maximhq/vt10x v0.0.0-20260312213827-20648b37d999\n\tgithub.com/zalando/go-keyring v0.2.6\n\tgolang.org/x/term v0.40.0\n)\n\nrequire (\n\tal.essio.dev/pkg/shellescape v1.5.1 // indirect\n\tgithub.com/atotto/clipboard v0.1.4 // indirect\n\tgithub.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect\n\tgithub.com/bytedance/gopkg v0.1.3 // indirect\n\tgithub.com/bytedance/sonic/loader v0.5.0 // indirect\n\tgithub.com/charmbracelet/colorprofile v0.4.1 // indirect\n\tgithub.com/charmbracelet/x/ansi v0.11.6 // indirect\n\tgithub.com/charmbracelet/x/cellbuf v0.0.15 // indirect\n\tgithub.com/charmbracelet/x/term v0.2.2 // indirect\n\tgithub.com/clipperhouse/displaywidth v0.9.0 // indirect\n\tgithub.com/clipperhouse/stringish v0.1.1 // indirect\n\tgithub.com/clipperhouse/uax29/v2 v2.5.0 // indirect\n\tgithub.com/cloudwego/base64x v0.1.6 // indirect\n\tgithub.com/danieljoos/wincred v1.2.2 // indirect\n\tgithub.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect\n\tgithub.com/erikgeiser/coninput v0.0.0-20211004153227-1c3628e74d0f // indirect\n\tgithub.com/godbus/dbus/v5 v5.1.0 // indirect\n\tgithub.com/klauspost/cpuid/v2 v2.3.0 // indirect\n\tgithub.com/lucasb-eyer/go-colorful v1.3.0 // indirect\n\tgithub.com/mattn/go-isatty v0.0.20 // indirect\n\tgithub.com/mattn/go-localereader v0.0.1 // indirect\n\tgithub.com/mattn/go-runewidth v0.0.19 // indirect\n\tgithub.com/muesli/ansi v0.0.0-20230316100256-276c6243b2f6 // indirect\n\tgithub.com/muesli/cancelreader v0.2.2 // indirect\n\tgithub.com/muesli/termenv v0.16.0 // indirect\n\tgithub.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect\n\tgithub.com/rivo/uniseg v0.4.7 // indirect\n\tgithub.com/stretchr/objx v0.5.3 // indirect\n\tgithub.com/stretchr/testify v1.11.1 // indirect\n\tgithub.com/twitchyliquid64/golang-asm v0.15.1 // indirect\n\tgithub.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e // indirect\n\tgolang.org/x/arch v0.23.0 // indirect\n\tgolang.org/x/exp v0.0.0-20250408133849-7e4ce0ab07d0 // indirect\n\tgolang.org/x/sys v0.41.0 // indirect\n\tgolang.org/x/text v0.33.0 // indirect\n)",
+      "observation": {
+        "results": [
+          {
+            "content": "module github.com/maximhq/bifrost/cli\n\ngo 1.26.1\n\nrequire (\n\tgithub.com/bytedance/sonic v1.15.0\n\tgithub.com/charmbracelet/bubbles v1.0.0\n\tgithub.com/charmbracelet/bubbletea v1.3.10\n\tgithub.com/charmbracelet/lipgloss v1.1.0\n\tgithub.com/creack/pty v1.1.24\n\tgithub.com/maximhq/vt10x v0.0.0-20260312213827-20648b37d999\n\tgithub.com/zalando/go-keyring v0.2.6\n\tgolang.org/x/term v0.40.0\n)\n\nrequire (\n\tal.essio.dev/pkg/shellescape v1.5.1 // indirect\n\tgithub.com/atotto/clipboard v0.1.4 // indirect\n\tgithub.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect\n\tgithub.com/bytedance/gopkg v0.1.3 // indirect\n\tgithub.com/bytedance/sonic/loader v0.5.0 // indirect\n\tgithub.com/charmbracelet/colorprofile v0.4.1 // indirect\n\tgithub.com/charmbracelet/x/ansi v0.11.6 // indirect\n\tgithub.com/charmbracelet/x/cellbuf v0.0.15 // indirect\n\tgithub.com/charmbracelet/x/term v0.2.2 // indirect\n\tgithub.com/clipperhouse/displaywidth v0.9.0 // indirect\n\tgithub.com/clipperhouse/stringish v0.1.1 // indirect\n\tgithub.com/clipperhouse/uax29/v2 v2.5.0 // indirect\n\tgithub.com/cloudwego/base64x v0.1.6 // indirect\n\tgithub.com/danieljoos/wincred v1.2.2 // indirect\n\tgithub.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect\n\tgithub.com/erikgeiser/coninput v0.0.0-20211004153227-1c3628e74d0f // indirect\n\tgithub.com/godbus/dbus/v5 v5.1.0 // indirect\n\tgithub.com/klauspost/cpuid/v2 v2.3.0 // indirect\n\tgithub.com/lucasb-eyer/go-colorful v1.3.0 // indirect\n\tgithub.com/mattn/go-isatty v0.0.20 // indirect\n\tgithub.com/mattn/go-localereader v0.0.1 // indirect\n\tgithub.com/mattn/go-runewidth v0.0.19 // indirect\n\tgithub.com/muesli/ansi v0.0.0-20230316100256-276c6243b2f6 // indirect\n\tgithub.com/muesli/cancelreader v0.2.2 // indirect\n\tgithub.com/muesli/termenv v0.16.0 // indirect\n\tgithub.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect\n\tgithub.com/rivo/uniseg v0.4.7 // indirect\n\tgithub.com/stretchr/objx v0.5.3 // indirect\n\tgithub.com/stretchr/testify v1.11.1 // indirect\n\tgithub.com/twitchyliquid64/golang-asm v0.15.1 // indirect\n\tgithub.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e // indirect\n\tgolang.org/x/arch v0.23.0 // indirect\n\tgolang.org/x/exp v0.0.0-20250408133849-7e4ce0ab07d0 // indirect\n\tgolang.org/x/sys v0.41.0 // indirect\n\tgolang.org/x/text v0.33.0 // indirect\n)"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-50b6d439902049bbbe2e6fb54c114207",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": 5
+      }
+    },
+    {
+      "step_id": 34,
+      "timestamp": "2026-04-11T09:24:53.699000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "The CLI has its own go.mod. Let me cd into the cli directory and try building from there.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-99973081f7ca462ebbdf14fe5533504c",
+          "function_name": "exec",
+          "arguments": {
+            "command": "cd /app/bifrost/cli && go build ./internal/harness/..."
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 1821,
+        "completion_tokens": 68,
+        "cached_tokens": 27052,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 28941
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 35,
+      "timestamp": "2026-04-11T09:25:20.421000Z",
+      "source": "agent",
+      "message": "Command still running (session faint-nexus, pid 2275). Use process (list/poll/log/write/kill/clear/remove) for follow-up.",
+      "observation": {
+        "results": [
+          {
+            "content": "Command still running (session faint-nexus, pid 2275). Use process (list/poll/log/write/kill/clear/remove) for follow-up."
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-99973081f7ca462ebbdf14fe5533504c",
+        "exec_exit_code": null,
+        "exec_status": "running",
+        "exec_duration_ms": null
+      }
+    },
+    {
+      "step_id": 36,
+      "timestamp": "2026-04-11T09:25:20.427000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Let me wait for the build to complete.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-8298370a927d49008ae48f53f72f8bb6",
+          "function_name": "process",
+          "arguments": {
+            "action": "poll",
+            "sessionId": "faint-nexus",
+            "timeout": 30000
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 1014,
+        "completion_tokens": 45,
+        "cached_tokens": 27921,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 28980
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 37,
+      "timestamp": "2026-04-11T09:25:30.139000Z",
+      "source": "agent",
+      "message": "go: downloading github.com/bytedance/sonic v1.15.0\ngo: downloading github.com/cloudwego/base64x v0.1.6\ngo: downloading golang.org/x/arch v0.23.0\ngo: downloading github.com/bytedance/gopkg v0.1.3\ngo: downloading github.com/bytedance/sonic/loader v0.5.0\ngo: downloading github.com/twitchyliquid64/golang-asm v0.15.1\ngo: downloading github.com/klauspost/cpuid/v2 v2.3.0\n\n\nProcess exited with code 0.",
+      "observation": {
+        "results": [
+          {
+            "content": "go: downloading github.com/bytedance/sonic v1.15.0\ngo: downloading github.com/cloudwego/base64x v0.1.6\ngo: downloading golang.org/x/arch v0.23.0\ngo: downloading github.com/bytedance/gopkg v0.1.3\ngo: downloading github.com/bytedance/sonic/loader v0.5.0\ngo: downloading github.com/twitchyliquid64/golang-asm v0.15.1\ngo: downloading github.com/klauspost/cpuid/v2 v2.3.0\n\n\nProcess exited with code 0."
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-8298370a927d49008ae48f53f72f8bb6",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": null
+      }
+    },
+    {
+      "step_id": 38,
+      "timestamp": "2026-04-11T09:25:30.170000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "The code compiles. Now let me run the tests.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-5a46851c449b469597fc3cf3ff73609a",
+          "function_name": "exec",
+          "arguments": {
+            "command": "cd /app/bifrost/cli && go test ./internal/harness/... -v"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 167,
+        "completion_tokens": 52,
+        "cached_tokens": 28933,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 29152
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 39,
+      "timestamp": "2026-04-11T09:25:39.499000Z",
+      "source": "agent",
+      "message": "=== RUN   TestOpencodeModelRef\n=== PAUSE TestOpencodeModelRef\n=== RUN   TestOpencodePreLaunchWritesCustomProviderConfig\n--- PASS: TestOpencodePreLaunchWritesCustomProviderConfig (0.00s)\n=== RUN   TestOpencodePreLaunchPreservesExistingTheme\n--- PASS: TestOpencodePreLaunchPreservesExistingTheme (0.00s)\n=== RUN   TestOpencodePreLaunchAddsSystemThemeWithoutModel\n--- PASS: TestOpencodePreLaunchAddsSystemThemeWithoutModel (0.00s)\n=== RUN   TestLoadOpencodeTUIConfigSupportsJSONC\n=== PAUSE TestLoadOpencodeTUIConfigSupportsJSONC\n=== RUN   TestOpencodeTUIConfigPathPrefersXDG\n--- PASS: TestOpencodeTUIConfigPathPrefersXDG (0.00s)\n=== CONT  TestOpencodeModelRef\n--- PASS: TestOpencodeModelRef (0.00s)\n=== CONT  TestLoadOpencodeTUIConfigSupportsJSONC\n--- PASS: TestLoadOpencodeTUIConfigSupportsJSONC (0.00s)\nPASS\nok  \tgithub.com/maximhq/bifrost/cli/internal/harness\t0.010s",
+      "observation": {
+        "results": [
+          {
+            "content": "=== RUN   TestOpencodeModelRef\n=== PAUSE TestOpencodeModelRef\n=== RUN   TestOpencodePreLaunchWritesCustomProviderConfig\n--- PASS: TestOpencodePreLaunchWritesCustomProviderConfig (0.00s)\n=== RUN   TestOpencodePreLaunchPreservesExistingTheme\n--- PASS: TestOpencodePreLaunchPreservesExistingTheme (0.00s)\n=== RUN   TestOpencodePreLaunchAddsSystemThemeWithoutModel\n--- PASS: TestOpencodePreLaunchAddsSystemThemeWithoutModel (0.00s)\n=== RUN   TestLoadOpencodeTUIConfigSupportsJSONC\n=== PAUSE TestLoadOpencodeTUIConfigSupportsJSONC\n=== RUN   TestOpencodeTUIConfigPathPrefersXDG\n--- PASS: TestOpencodeTUIConfigPathPrefersXDG (0.00s)\n=== CONT  TestOpencodeModelRef\n--- PASS: TestOpencodeModelRef (0.00s)\n=== CONT  TestLoadOpencodeTUIConfigSupportsJSONC\n--- PASS: TestLoadOpencodeTUIConfigSupportsJSONC (0.00s)\nPASS\nok  \tgithub.com/maximhq/bifrost/cli/internal/harness\t0.010s"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-5a46851c449b469597fc3cf3ff73609a",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": 3109
+      }
+    },
+    {
+      "step_id": 40,
+      "timestamp": "2026-04-11T09:25:39.502000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "Now let me add tests for the Claude-specific behavior to ensure the new functionality works correctly:",
+      "reasoning_content": "The build and existing tests pass. Now let me add tests specifically for the Claude functions to verify the new behavior. Let me check if there are any existing tests for the Claude functions.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-57f9abaa656842eaacb81e40de9338fd",
+          "function_name": "read",
+          "arguments": {
+            "path": "/app/bifrost/cli/internal/harness/harness_test.go"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 518,
+        "completion_tokens": 114,
+        "cached_tokens": 28871,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 29503
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 41,
+      "timestamp": "2026-04-11T09:25:51.697000Z",
+      "source": "agent",
+      "message": "package harness\n\nimport (\n\t\"os\"\n\t\"path/filepath\"\n\t\"strings\"\n\t\"testing\"\n)\n\nfunc TestOpencodeModelRef(t *testing.T) {\n\tt.Parallel()\n\n\tif got := opencodeModelRef(\"gpt-4.1\"); got != \"bifrost/gpt-4.1\" {\n\t\tt.Fatalf(\"opencodeModelRef() = %q, want %q\", got, \"bifrost/gpt-4.1\")\n\t}\n}\n\nfunc TestOpencodePreLaunchWritesCustomProviderConfig(t *testing.T) {\n\txdg := t.TempDir()\n\tt.Setenv(\"XDG_CONFIG_HOME\", xdg)\n\n\tenv, cleanup, err := opencodePreLaunch(\"https://example.com/openai\", \"test-key\", \"gpt-4.1\")\n\tif err != nil {\n\t\tt.Fatalf(\"opencodePreLaunch() error = %v\", err)\n\t}\n\tdefer cleanup()\n\n\tif len(env) != 2 {\n\t\tt.Fatalf(\"unexpected env returned: %#v\", env)\n\t}\n\n\tconfigPath := envValue(env, \"OPENCODE_CONFIG\")\n\tif configPath == \"\" {\n\t\tt.Fatalf(\"expected OPENCODE_CONFIG in env, got %#v\", env)\n\t}\n\tb, err := os.ReadFile(configPath)\n\tif err != nil {\n\t\tt.Fatalf(\"read generated config: %v\", err)\n\t}\n\n\tcfg := string(b)\n\tfor _, want := range []string{\n\t\t`\"model\": \"bifrost/gpt-4.1\"`,\n\t\t`\"bifrost\": {`,\n\t\t`\"npm\": \"@ai-sdk/openai-compatible\"`,\n\t\t`\"baseURL\": \"https://example.com/openai\"`,\n\t\t`\"apiKey\": \"test-key\"`,\n\t\t`\"gpt-4.1\": {`,\n\t} {\n\t\tif !strings.Contains(cfg, want) {\n\t\t\tt.Fatalf(\"expected generated config to contain %q, got %s\", want, cfg)\n\t\t}\n\t}\n\n\ttuiPath := envValue(env, \"OPENCODE_TUI_CONFIG\")\n\tif tuiPath == \"\" {\n\t\tt.Fatalf(\"expected OPENCODE_TUI_CONFIG in env, got %#v\", env)\n\t}\n\ttuiCfg, err := os.ReadFile(tuiPath)\n\tif err != nil {\n\t\tt.Fatalf(\"read generated tui config: %v\", err)\n\t}\n\tif !strings.Contains(string(tuiCfg), `\"theme\": \"system\"`) {\n\t\tt.Fatalf(\"expected generated tui config to set system theme, got %s\", string(tuiCfg))\n\t}\n}\n\nfunc TestOpencodePreLaunchPreservesExistingTheme(t *testing.T) {\n\txdg := t.TempDir()\n\tt.Setenv(\"XDG_CONFIG_HOME\", xdg)\n\n\ttuiPath := filepath.Join(xdg, \"opencode\", \"tui.json\")\n\tif err := os.MkdirAll(filepath.Dir(tuiPath), 0o755); err != nil {\n\t\tt.Fatalf(\"mkdir tui dir: %v\", err)\n\t}\n\tif err := os.WriteFile(tuiPath, []byte(\"{\\n  \\\"theme\\\": \\\"light\\\"\\n}\\n\"), 0o600); err != nil {\n\t\tt.Fatalf(\"write tui config: %v\", err)\n\t}\n\n\tenv, cleanup, err := opencodePreLaunch(\"https://example.com/openai\", \"test-key\", \"gpt-4.1\")\n\tif err != nil {\n\t\tt.Fatalf(\"opencodePreLaunch() error = %v\", err)\n\t}\n\tdefer cleanup()\n\n\tif got := envValue(env, \"OPENCODE_TUI_CONFIG\"); got != \"\" {\n\t\tt.Fatalf(\"did not expect OPENCODE_TUI_CONFIG override when user theme exists, got %#v\", env)\n\t}\n\tif got := envValue(env, \"OPENCODE_CONFIG\"); got == \"\" {\n\t\tt.Fatalf(\"expected OPENCODE_CONFIG to remain present, got %#v\", env)\n\t}\n}\n\nfunc TestOpencodePreLaunchAddsSystemThemeWithoutModel(t *testing.T) {\n\txdg := t.TempDir()\n\tt.Setenv(\"XDG_CONFIG_HOME\", xdg)\n\n\tenv, cleanup, err := opencodePreLaunch(\"https://example.com/openai\", \"test-key\", \"\")\n\tif err != nil {\n\t\tt.Fatalf(\"opencodePreLaunch() error = %v\", err)\n\t}\n\n\ttuiPath := envValue(env, \"OPENCODE_TUI_CONFIG\")\n\tif tuiPath == \"\" {\n\t\tt.Fatalf(\"expected OPENCODE_TUI_CONFIG in env, got %#v\", env)\n\t}\n\tif got := envValue(env, \"OPENCODE_CONFIG\"); got != \"\" {\n\t\tt.Fatalf(\"did not expect OPENCODE_CONFIG without a model, got %#v\", env)\n\t}\n\tif _, err := os.Stat(tuiPath); err != nil {\n\t\tt.Fatalf(\"expected generated tui config to exist: %v\", err)\n\t}\n\n\tcleanup()\n\tif _, err := os.Stat(tuiPath); !os.IsNotExist(err) {\n\t\tt.Fatalf(\"expected generated tui config to be removed after cleanup, stat err=%v\", err)\n\t}\n}\n\nfunc TestLoadOpencodeTUIConfigSupportsJSONC(t *testing.T) {\n\tt.Parallel()\n\n\tpath := filepath.Join(t.TempDir(), \"tui.json\")\n\tcontent := \"{\\n  // keep my choice\\n  \\\"theme\\\": \\\"light\\\",\\n  \\\"foo\\\": true,\\n}\\n\"\n\tif err := os.WriteFile(path, []byte(content), 0o600); err != nil {\n\t\tt.Fatalf(\"write tui config: %v\", err)\n\t}\n\n\tcfg, hasTheme, err := loadOpencodeTUIConfig(path)\n\tif err != nil {\n\t\tt.Fatalf(\"loadOpencodeTUIConfig() error = %v\", err)\n\t}\n\tif !hasTheme {\n\t\tt.Fatal(\"expected theme to be detected\")\n\t}\n\tif cfg[\"theme\"] != \"light\" {\n\t\tt.Fatalf(\"cfg[theme] = %#v, want %q\", cfg[\"theme\"], \"light\")\n\t}\n}\n\nfunc TestOpencodeTUIConfigPathPrefersXDG(t *testing.T) {\n\txdg := t.TempDir()\n\tt.Setenv(\"XDG_CONFIG_HOME\", xdg)\n\n\tgot, err := opencodeTUIConfigPath()\n\tif err != nil {\n\t\tt.Fatalf(\"opencodeTUIConfigPath() error = %v\", err)\n\t}\n\twant := filepath.Join(xdg, \"opencode\", \"tui.json\")\n\tif got != want {\n\t\tt.Fatalf(\"opencodeTUIConfigPath() = %q, want %q\", got, want)\n\t}\n}\n\nfunc envValue(env []string, key string) string {\n\tprefix := key + \"=\"\n\tfor _, entry := range env {\n\t\tif strings.HasPrefix(entry, prefix) {\n\t\t\treturn strings.TrimPrefix(entry, prefix)\n\t\t}\n\t}\n\treturn \"\"\n}",
+      "observation": {
+        "results": [
+          {
+            "content": "package harness\n\nimport (\n\t\"os\"\n\t\"path/filepath\"\n\t\"strings\"\n\t\"testing\"\n)\n\nfunc TestOpencodeModelRef(t *testing.T) {\n\tt.Parallel()\n\n\tif got := opencodeModelRef(\"gpt-4.1\"); got != \"bifrost/gpt-4.1\" {\n\t\tt.Fatalf(\"opencodeModelRef() = %q, want %q\", got, \"bifrost/gpt-4.1\")\n\t}\n}\n\nfunc TestOpencodePreLaunchWritesCustomProviderConfig(t *testing.T) {\n\txdg := t.TempDir()\n\tt.Setenv(\"XDG_CONFIG_HOME\", xdg)\n\n\tenv, cleanup, err := opencodePreLaunch(\"https://example.com/openai\", \"test-key\", \"gpt-4.1\")\n\tif err != nil {\n\t\tt.Fatalf(\"opencodePreLaunch() error = %v\", err)\n\t}\n\tdefer cleanup()\n\n\tif len(env) != 2 {\n\t\tt.Fatalf(\"unexpected env returned: %#v\", env)\n\t}\n\n\tconfigPath := envValue(env, \"OPENCODE_CONFIG\")\n\tif configPath == \"\" {\n\t\tt.Fatalf(\"expected OPENCODE_CONFIG in env, got %#v\", env)\n\t}\n\tb, err := os.ReadFile(configPath)\n\tif err != nil {\n\t\tt.Fatalf(\"read generated config: %v\", err)\n\t}\n\n\tcfg := string(b)\n\tfor _, want := range []string{\n\t\t`\"model\": \"bifrost/gpt-4.1\"`,\n\t\t`\"bifrost\": {`,\n\t\t`\"npm\": \"@ai-sdk/openai-compatible\"`,\n\t\t`\"baseURL\": \"https://example.com/openai\"`,\n\t\t`\"apiKey\": \"test-key\"`,\n\t\t`\"gpt-4.1\": {`,\n\t} {\n\t\tif !strings.Contains(cfg, want) {\n\t\t\tt.Fatalf(\"expected generated config to contain %q, got %s\", want, cfg)\n\t\t}\n\t}\n\n\ttuiPath := envValue(env, \"OPENCODE_TUI_CONFIG\")\n\tif tuiPath == \"\" {\n\t\tt.Fatalf(\"expected OPENCODE_TUI_CONFIG in env, got %#v\", env)\n\t}\n\ttuiCfg, err := os.ReadFile(tuiPath)\n\tif err != nil {\n\t\tt.Fatalf(\"read generated tui config: %v\", err)\n\t}\n\tif !strings.Contains(string(tuiCfg), `\"theme\": \"system\"`) {\n\t\tt.Fatalf(\"expected generated tui config to set system theme, got %s\", string(tuiCfg))\n\t}\n}\n\nfunc TestOpencodePreLaunchPreservesExistingTheme(t *testing.T) {\n\txdg := t.TempDir()\n\tt.Setenv(\"XDG_CONFIG_HOME\", xdg)\n\n\ttuiPath := filepath.Join(xdg, \"opencode\", \"tui.json\")\n\tif err := os.MkdirAll(filepath.Dir(tuiPath), 0o755); err != nil {\n\t\tt.Fatalf(\"mkdir tui dir: %v\", err)\n\t}\n\tif err := os.WriteFile(tuiPath, []byte(\"{\\n  \\\"theme\\\": \\\"light\\\"\\n}\\n\"), 0o600); err != nil {\n\t\tt.Fatalf(\"write tui config: %v\", err)\n\t}\n\n\tenv, cleanup, err := opencodePreLaunch(\"https://example.com/openai\", \"test-key\", \"gpt-4.1\")\n\tif err != nil {\n\t\tt.Fatalf(\"opencodePreLaunch() error = %v\", err)\n\t}\n\tdefer cleanup()\n\n\tif got := envValue(env, \"OPENCODE_TUI_CONFIG\"); got != \"\" {\n\t\tt.Fatalf(\"did not expect OPENCODE_TUI_CONFIG override when user theme exists, got %#v\", env)\n\t}\n\tif got := envValue(env, \"OPENCODE_CONFIG\"); got == \"\" {\n\t\tt.Fatalf(\"expected OPENCODE_CONFIG to remain present, got %#v\", env)\n\t}\n}\n\nfunc TestOpencodePreLaunchAddsSystemThemeWithoutModel(t *testing.T) {\n\txdg := t.TempDir()\n\tt.Setenv(\"XDG_CONFIG_HOME\", xdg)\n\n\tenv, cleanup, err := opencodePreLaunch(\"https://example.com/openai\", \"test-key\", \"\")\n\tif err != nil {\n\t\tt.Fatalf(\"opencodePreLaunch() error = %v\", err)\n\t}\n\n\ttuiPath := envValue(env, \"OPENCODE_TUI_CONFIG\")\n\tif tuiPath == \"\" {\n\t\tt.Fatalf(\"expected OPENCODE_TUI_CONFIG in env, got %#v\", env)\n\t}\n\tif got := envValue(env, \"OPENCODE_CONFIG\"); got != \"\" {\n\t\tt.Fatalf(\"did not expect OPENCODE_CONFIG without a model, got %#v\", env)\n\t}\n\tif _, err := os.Stat(tuiPath); err != nil {\n\t\tt.Fatalf(\"expected generated tui config to exist: %v\", err)\n\t}\n\n\tcleanup()\n\tif _, err := os.Stat(tuiPath); !os.IsNotExist(err) {\n\t\tt.Fatalf(\"expected generated tui config to be removed after cleanup, stat err=%v\", err)\n\t}\n}\n\nfunc TestLoadOpencodeTUIConfigSupportsJSONC(t *testing.T) {\n\tt.Parallel()\n\n\tpath := filepath.Join(t.TempDir(), \"tui.json\")\n\tcontent := \"{\\n  // keep my choice\\n  \\\"theme\\\": \\\"light\\\",\\n  \\\"foo\\\": true,\\n}\\n\"\n\tif err := os.WriteFile(path, []byte(content), 0o600); err != nil {\n\t\tt.Fatalf(\"write tui config: %v\", err)\n\t}\n\n\tcfg, hasTheme, err := loadOpencodeTUIConfig(path)\n\tif err != nil {\n\t\tt.Fatalf(\"loadOpencodeTUIConfig() error = %v\", err)\n\t}\n\tif !hasTheme {\n\t\tt.Fatal(\"expected theme to be detected\")\n\t}\n\tif cfg[\"theme\"] != \"light\" {\n\t\tt.Fatalf(\"cfg[theme] = %#v, want %q\", cfg[\"theme\"], \"light\")\n\t}\n}\n\nfunc TestOpencodeTUIConfigPathPrefersXDG(t *testing.T) {\n\txdg := t.TempDir()\n\tt.Setenv(\"XDG_CONFIG_HOME\", xdg)\n\n\tgot, err := opencodeTUIConfigPath()\n\tif err != nil {\n\t\tt.Fatalf(\"opencodeTUIConfigPath() error = %v\", err)\n\t}\n\twant := filepath.Join(xdg, \"opencode\", \"tui.json\")\n\tif got != want {\n\t\tt.Fatalf(\"opencodeTUIConfigPath() = %q, want %q\", got, want)\n\t}\n}\n\nfunc envValue(env []string, key string) string {\n\tprefix := key + \"=\"\n\tfor _, entry := range env {\n\t\tif strings.HasPrefix(entry, prefix) {\n\t\t\treturn strings.TrimPrefix(entry, prefix)\n\t\t}\n\t}\n\treturn \"\"\n}"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-57f9abaa656842eaacb81e40de9338fd"
+      }
+    },
+    {
+      "step_id": 42,
+      "timestamp": "2026-04-11T09:25:51.727000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Now I need to add tests for the new Claude behavior. Let me add tests for:\n1. `claudePreLaunch` - should always have `CLAUDE_CODE_SIMPLE=1`, and when model is non-empty, should add tier defaults\n2. `claudeWriteNativeConfig` - should set tier defaults when model is non-empty, always set base URL and API key, and remove `ANTHROPIC_MODEL` if present",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-c064ab401306487a813478507fd7d0a4",
+          "function_name": "edit",
+          "arguments": {
+            "edits": [
+              {
+                "newText": "func TestClaudePreLaunchAlwaysSetsSimple(t *testing.T) {\n\tenv, cleanup, err := claudePreLaunch(\"https://example.com/anthropic\", \"test-key\", \"\")\n\tif err != nil {\n\t\tt.Fatalf(\"claudePreLaunch() error = %v\", err)\n\t}\n\tdefer cleanup()\n\n\tif got := envValue(env, \"CLAUDE_CODE_SIMPLE\"); got != \"1\" {\n\t\tt.Fatalf(\"CLAUDE_CODE_SIMPLE = %q, want %q\", got, \"1\")\n\t}\n\n\t// Should NOT have tier defaults when model is empty\n\tfor _, key := range []string{\"ANTHROPIC_DEFAULT_SONNET_MODEL\", \"ANTHROPIC_DEFAULT_OPUS_MODEL\", \"ANTHROPIC_DEFAULT_HAIKU_MODEL\"} {\n\t\tif envValue(env, key) != \"\" {\n\t\t\tt.Fatalf(\"expected %q to be empty when model is empty, got %q\", key, envValue(env, key))\n\t\t}\n\t}\n\n\t// Should NOT emit ANTHROPIC_MODEL\n\tif got := envValue(env, \"ANTHROPIC_MODEL\"); got != \"\" {\n\t\tt.Fatalf(\"ANTHROPIC_MODEL = %q, want empty\", got)\n\t}\n}\n\nfunc TestClaudePreLaunchSetsTierDefaults(t *testing.T) {\n\tenv, cleanup, err := claudePreLaunch(\"https://example.com/anthropic\", \"test-key\", \"claude-sonnet-4-20250514\")\n\tif err != nil {\n\t\tt.Fatalf(\"claudePreLaunch() error = %v\", err)\n\t}\n\tdefer cleanup()\n\n\tif got := envValue(env, \"CLAUDE_CODE_SIMPLE\"); got != \"1\" {\n\t\tt.Fatalf(\"CLAUDE_CODE_SIMPLE = %q, want %q\", got, \"1\")\n\t}\n\n\t// Should set all three tier defaults\n\tfor _, key := range []string{\"ANTHROPIC_DEFAULT_SONNET_MODEL\", \"ANTHROPIC_DEFAULT_OPUS_MODEL\", \"ANTHROPIC_DEFAULT_HAIKU_MODEL\"} {\n\t\tif got := envValue(env, key); got != \"claude-sonnet-4-20250514\" {\n\t\t\tt.Fatalf(\"%s = %q, want %q\", key, got, \"claude-sonnet-4-20250514\")\n\t\t}\n\t}\n\n\t// Should NOT emit ANTHROPIC_MODEL\n\tif got := envValue(env, \"ANTHROPIC_MODEL\"); got != \"\" {\n\t\tt.Fatalf(\"ANTHROPIC_MODEL = %q, want empty\", got)\n\t}\n}\n\nfunc TestClaudePreLaunchTrimsWhitespace(t *testing.T) {\n\tenv, cleanup, err := claudePreLaunch(\"https://example.com/anthropic\", \"test-key\", \"  claude-3-5-sonnet  \")\n\tif err != nil {\n\t\tt.Fatalf(\"claudePreLaunch() error = %v\", err)\n\t}\n\tdefer cleanup()\n\n\tfor _, key := range []string{\"ANTHROPIC_DEFAULT_SONNET_MODEL\", \"ANTHROPIC_DEFAULT_OPUS_MODEL\", \"ANTHROPIC_DEFAULT_HAIKU_MODEL\"} {\n\t\tif got := envValue(env, key); got != \"claude-3-5-sonnet\" {\n\t\t\tt.Fatalf(\"%s = %q, want %q (trimmed)\", key, got, \"claude-3-5-sonnet\")\n\t\t}\n\t}\n}\n\nfunc TestClaudeWriteNativeConfigSetsBaseURLAndAPIKey(t *testing.T) {\n\thome := t.TempDir()\n\tt.Setenv(\"HOME\", home)\n\n\tif err := claudeWriteNativeConfig(\"https://example.com/anthropic\", \"test-api-key\", \"\"); err != nil {\n\t\tt.Fatalf(\"claudeWriteNativeConfig() error = %v\", err)\n\t}\n\n\tsettingsPath := filepath.Join(home, \".claude\", \"settings.json\")\n\tb, err := os.ReadFile(settingsPath)\n\tif err != nil {\n\t\tt.Fatalf(\"read settings: %v\", err)\n\t}\n\n\tcontent := string(b)\n\tfor _, want := range []string{\n\t\t`\"ANTHROPIC_BASE_URL\": \"https://example.com/anthropic\"`,\n\t\t`\"ANTHROPIC_API_KEY\": \"test-api-key\"`,\n\t} {\n\t\tif !strings.Contains(content, want) {\n\t\t\tt.Fatalf(\"expected settings to contain %q, got %s\", want, content)\n\t\t}\n\t}\n\n\t// Should NOT have tier defaults when model is empty\n\tfor _, key := range []string{\"ANTHROPIC_DEFAULT_SONNET_MODEL\", \"ANTHROPIC_DEFAULT_OPUS_MODEL\", \"ANTHROPIC_DEFAULT_HAIKU_MODEL\"} {\n\t\tif strings.Contains(content, `\"`+key+`\"`) {\n\t\t\tt.Fatalf(\"did not expect %q in settings when model is empty, got %s\", key, content)\n\t\t}\n\t}\n}\n\nfunc TestClaudeWriteNativeConfigSetsTierDefaults(t *testing.T) {\n\thome := t.TempDir()\n\tt.Setenv(\"HOME\", home)\n\n\tif err := claudeWriteNativeConfig(\"https://example.com/anthropic\", \"test-api-key\", \"claude-sonnet-4-20250514\"); err != nil {\n\t\tt.Fatalf(\"claudeWriteNativeConfig() error = %v\", err)\n\t}\n\n\tsettingsPath := filepath.Join(home, \".claude\", \"settings.json\")\n\tb, err := os.ReadFile(settingsPath)\n\tif err != nil {\n\t\tt.Fatalf(\"read settings: %v\", err)\n\t}\n\n\tcontent := string(b)\n\tfor _, want := range []string{\n\t\t`\"ANTHROPIC_BASE_URL\": \"https://example.com/anthropic\"`,\n\t\t`\"ANTHROPIC_API_KEY\": \"test-api-key\"`,\n\t\t`\"ANTHROPIC_DEFAULT_SONNET_MODEL\": \"claude-sonnet-4-20250514\"`,\n\t\t`\"ANTHROPIC_DEFAULT_OPUS_MODEL\": \"claude-sonnet-4-20250514\"`,\n\t\t`\"ANTHROPIC_DEFAULT_HAIKU_MODEL\": \"claude-sonnet-4-20250514\"`,\n\t} {\n\t\tif !strings.Contains(content, want) {\n\t\t\tt.Fatalf(\"expected settings to contain %q, got %s\", want, content)\n\t\t}\n\t}\n}\n\nfunc TestClaudeWriteNativeConfigRemovesAnthropicModel(t *testing.T) {\n\thome := t.TempDir()\n\tt.Setenv(\"HOME\", home)\n\n\t// Pre-create settings with ANTHROPIC_MODEL\n\tdir := filepath.Join(home, \".claude\")\n\tif err := os.MkdirAll(dir, 0o755); err != nil {\n\t\tt.Fatalf(\"mkdir: %v\", err)\n\t}\n\tsettingsPath := filepath.Join(dir, \"settings.json\")\n\texistingSettings := `{\n  \"env\": {\n    \"ANTHROPIC_MODEL\": \"claude-3-sonnet\",\n    \"OTHER_KEY\": \"preserved\"\n  },\n  \"other\": \"value\"\n}`\n\tif err := os.WriteFile(settingsPath, []byte(existingSettings), 0o600); err != nil {\n\t\tt.Fatalf(\"write existing settings: %v\", err)\n\t}\n\n\tif err := claudeWriteNativeConfig(\"https://example.com/anthropic\", \"test-api-key\", \"claude-sonnet-4-20250514\"); err != nil {\n\t\tt.Fatalf(\"claudeWriteNativeConfig() error = %v\", err)\n\t}\n\n\tb, err := os.ReadFile(settingsPath)\n\tif err != nil {\n\t\tt.Fatalf(\"read settings: %v\", err)\n\t}\n\n\tcontent := string(b)\n\n\t// Should remove ANTHROPIC_MODEL\n\tif strings.Contains(content, `\"ANTHROPIC_MODEL\"`) {\n\t\tt.Fatalf(\"expected ANTHROPIC_MODEL to be removed, got %s\", content)\n\t}\n\n\t// Should preserve other keys\n\tfor _, want := range []string{\n\t\t`\"OTHER_KEY\": \"preserved\"`,\n\t\t`\"other\": \"value\"`,\n\t\t`\"ANTHROPIC_BASE_URL\": \"https://example.com/anthropic\"`,\n\t\t`\"ANTHROPIC_API_KEY\": \"test-api-key\"`,\n\t\t`\"ANTHROPIC_DEFAULT_SONNET_MODEL\": \"claude-sonnet-4-20250514\"`,\n\t} {\n\t\tif !strings.Contains(content, want) {\n\t\t\tt.Fatalf(\"expected settings to contain %q, got %s\", want, content)\n\t\t}\n\t}\n}\n\nfunc TestClaudeWriteNativeConfigTrimsWhitespace(t *testing.T) {\n\thome := t.TempDir()\n\tt.Setenv(\"HOME\", home)\n\n\tif err := claudeWriteNativeConfig(\"https://example.com/anthropic\", \"test-api-key\", \"  claude-3-5-sonnet  \"); err != nil {\n\t\tt.Fatalf(\"claudeWriteNativeConfig() error = %v\", err)\n\t}\n\n\tsettingsPath := filepath.Join(home, \".claude\", \"settings.json\")\n\tb, err := os.ReadFile(settingsPath)\n\tif err != nil {\n\t\tt.Fatalf(\"read settings: %v\", err)\n\t}\n\n\tcontent := string(b)\n\tfor _, key := range []string{\"ANTHROPIC_DEFAULT_SONNET_MODEL\", \"ANTHROPIC_DEFAULT_OPUS_MODEL\", \"ANTHROPIC_DEFAULT_HAIKU_MODEL\"} {\n\t\twant := `\"` + key + `\": \"claude-3-5-sonnet\"`\n\t\tif !strings.Contains(content, want) {\n\t\t\tt.Fatalf(\"expected settings to contain %q (trimmed), got %s\", want, content)\n\t\t}\n\t}\n}\n\nfunc envValue(env []string, key string) string {\n\tprefix := key + \"=\"\n\tfor _, entry := range env {\n\t\tif strings.HasPrefix(entry, prefix) {\n\t\t\treturn strings.TrimPrefix(entry, prefix)\n\t\t}\n\t}\n\treturn \"\"\n}",
+                "oldText": "func envValue(env []string, key string) string {\n\tprefix := key + \"=\"\n\tfor _, entry := range env {\n\t\tif strings.HasPrefix(entry, prefix) {\n\t\t\treturn strings.TrimPrefix(entry, prefix)\n\t\t}\n\t}\n\treturn \"\"\n}"
+              }
+            ],
+            "path": "/app/bifrost/cli/internal/harness/harness_test.go"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 1756,
+        "completion_tokens": 2737,
+        "cached_tokens": 29098,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 33591
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 43,
+      "timestamp": "2026-04-11T09:26:55.800000Z",
+      "source": "agent",
+      "message": "Successfully replaced 1 block(s) in /app/bifrost/cli/internal/harness/harness_test.go.",
+      "observation": {
+        "results": [
+          {
+            "content": "Successfully replaced 1 block(s) in /app/bifrost/cli/internal/harness/harness_test.go."
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-c064ab401306487a813478507fd7d0a4",
+        "exec_exit_code": null,
+        "exec_status": null,
+        "exec_duration_ms": null
+      }
+    },
+    {
+      "step_id": 44,
+      "timestamp": "2026-04-11T09:26:55.827000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Now let me run the tests to verify everything works.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-b1c3abdb71ab4aa699a6c1858908b59d",
+          "function_name": "exec",
+          "arguments": {
+            "command": "cd /app/bifrost/cli && go test ./internal/harness/... -v"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 33245,
+        "completion_tokens": 50,
+        "cached_tokens": 191,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 33486
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 45,
+      "timestamp": "2026-04-11T09:27:08.151000Z",
+      "source": "agent",
+      "message": "=== RUN   TestOpencodeModelRef\n=== PAUSE TestOpencodeModelRef\n=== RUN   TestOpencodePreLaunchWritesCustomProviderConfig\n--- PASS: TestOpencodePreLaunchWritesCustomProviderConfig (0.00s)\n=== RUN   TestOpencodePreLaunchPreservesExistingTheme\n--- PASS: TestOpencodePreLaunchPreservesExistingTheme (0.00s)\n=== RUN   TestOpencodePreLaunchAddsSystemThemeWithoutModel\n--- PASS: TestOpencodePreLaunchAddsSystemThemeWithoutModel (0.00s)\n=== RUN   TestLoadOpencodeTUIConfigSupportsJSONC\n=== PAUSE TestLoadOpencodeTUIConfigSupportsJSONC\n=== RUN   TestOpencodeTUIConfigPathPrefersXDG\n--- PASS: TestOpencodeTUIConfigPathPrefersXDG (0.00s)\n=== RUN   TestClaudePreLaunchAlwaysSetsSimple\n--- PASS: TestClaudePreLaunchAlwaysSetsSimple (0.00s)\n=== RUN   TestClaudePreLaunchSetsTierDefaults\n--- PASS: TestClaudePreLaunchSetsTierDefaults (0.00s)\n=== RUN   TestClaudePreLaunchTrimsWhitespace\n--- PASS: TestClaudePreLaunchTrimsWhitespace (0.00s)\n=== RUN   TestClaudeWriteNativeConfigSetsBaseURLAndAPIKey\n--- PASS: TestClaudeWriteNativeConfigSetsBaseURLAndAPIKey (0.01s)\n=== RUN   TestClaudeWriteNativeConfigSetsTierDefaults\n--- PASS: TestClaudeWriteNativeConfigSetsTierDefaults (0.01s)\n=== RUN   TestClaudeWriteNativeConfigRemovesAnthropicModel\n--- PASS: TestClaudeWriteNativeConfigRemovesAnthropicModel (0.01s)\n=== RUN   TestClaudeWriteNativeConfigTrimsWhitespace\n--- PASS: TestClaudeWriteNativeConfigTrimsWhitespace (0.00s)\n=== CONT  TestOpencodeModelRef\n--- PASS: TestOpencodeModelRef (0.00s)\n=== CONT  TestLoadOpencodeTUIConfigSupportsJSONC\n--- PASS: TestLoadOpencodeTUIConfigSupportsJSONC (0.00s)\nPASS\nok  \tgithub.com/maximhq/bifrost/cli/internal/harness\t0.031s",
+      "observation": {
+        "results": [
+          {
+            "content": "=== RUN   TestOpencodeModelRef\n=== PAUSE TestOpencodeModelRef\n=== RUN   TestOpencodePreLaunchWritesCustomProviderConfig\n--- PASS: TestOpencodePreLaunchWritesCustomProviderConfig (0.00s)\n=== RUN   TestOpencodePreLaunchPreservesExistingTheme\n--- PASS: TestOpencodePreLaunchPreservesExistingTheme (0.00s)\n=== RUN   TestOpencodePreLaunchAddsSystemThemeWithoutModel\n--- PASS: TestOpencodePreLaunchAddsSystemThemeWithoutModel (0.00s)\n=== RUN   TestLoadOpencodeTUIConfigSupportsJSONC\n=== PAUSE TestLoadOpencodeTUIConfigSupportsJSONC\n=== RUN   TestOpencodeTUIConfigPathPrefersXDG\n--- PASS: TestOpencodeTUIConfigPathPrefersXDG (0.00s)\n=== RUN   TestClaudePreLaunchAlwaysSetsSimple\n--- PASS: TestClaudePreLaunchAlwaysSetsSimple (0.00s)\n=== RUN   TestClaudePreLaunchSetsTierDefaults\n--- PASS: TestClaudePreLaunchSetsTierDefaults (0.00s)\n=== RUN   TestClaudePreLaunchTrimsWhitespace\n--- PASS: TestClaudePreLaunchTrimsWhitespace (0.00s)\n=== RUN   TestClaudeWriteNativeConfigSetsBaseURLAndAPIKey\n--- PASS: TestClaudeWriteNativeConfigSetsBaseURLAndAPIKey (0.01s)\n=== RUN   TestClaudeWriteNativeConfigSetsTierDefaults\n--- PASS: TestClaudeWriteNativeConfigSetsTierDefaults (0.01s)\n=== RUN   TestClaudeWriteNativeConfigRemovesAnthropicModel\n--- PASS: TestClaudeWriteNativeConfigRemovesAnthropicModel (0.01s)\n=== RUN   TestClaudeWriteNativeConfigTrimsWhitespace\n--- PASS: TestClaudeWriteNativeConfigTrimsWhitespace (0.00s)\n=== CONT  TestOpencodeModelRef\n--- PASS: TestOpencodeModelRef (0.00s)\n=== CONT  TestLoadOpencodeTUIConfigSupportsJSONC\n--- PASS: TestLoadOpencodeTUIConfigSupportsJSONC (0.00s)\nPASS\nok  \tgithub.com/maximhq/bifrost/cli/internal/harness\t0.031s"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-b1c3abdb71ab4aa699a6c1858908b59d",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": 270
+      }
+    },
+    {
+      "step_id": 46,
+      "timestamp": "2026-04-11T09:27:08.154000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "All tests pass. Let me verify the final implementation matches all requirements:",
+      "reasoning_content": "All tests pass. Let me also verify that the implementation matches all requirements by reviewing the final code:",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-8c66fba237174ca4a2b34a95744ffce0",
+          "function_name": "read",
+          "arguments": {
+            "path": "/app/bifrost/cli/internal/harness/native_config.go"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 540,
+        "completion_tokens": 75,
+        "cached_tokens": 33407,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 34022
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 47,
+      "timestamp": "2026-04-11T09:27:19.853000Z",
+      "source": "agent",
+      "message": "package harness\n\nimport (\n\t\"errors\"\n\t\"fmt\"\n\t\"os\"\n\t\"path/filepath\"\n\t\"strings\"\n\n\t\"github.com/bytedance/sonic\"\n\t\"github.com/maximhq/bifrost/cli/internal/config\"\n)\n\n// claudePreLaunch forces Claude Code into its simpler terminal mode when\n// launched inside Bifrost's tab multiplexer. This avoids Claude-specific\n// full-screen terminal behavior that doesn't restore reliably across tab swaps.\n// When model is non-empty, it sets tier-default environment variables instead of\n// the legacy ANTHROPIC_MODEL key.\nfunc claudePreLaunch(baseURL, apiKey, model string) ([]string, func(), error) {\n\tenv := []string{\"CLAUDE_CODE_SIMPLE=1\"}\n\tif m := strings.TrimSpace(model); m != \"\" {\n\t\tenv = append(env,\n\t\t\t\"ANTHROPIC_DEFAULT_SONNET_MODEL=\"+m,\n\t\t\t\"ANTHROPIC_DEFAULT_OPUS_MODEL=\"+m,\n\t\t\t\"ANTHROPIC_DEFAULT_HAIKU_MODEL=\"+m,\n\t\t)\n\t}\n\treturn env, func() {}, nil\n}\n\n// claudeWriteNativeConfig writes the bifrost endpoint, API key, and model\n// into Claude Code's settings file (~/.claude/settings.json) so the same\n// configuration is available when users launch Claude Code directly.\n//\n// It merges into the existing file, preserving any user-defined settings.\n// When model is non-empty, it sets tier-default keys instead of the legacy\n// ANTHROPIC_MODEL key, and removes ANTHROPIC_MODEL if present.\nfunc claudeWriteNativeConfig(baseURL, apiKey, model string) error {\n\thome, err := os.UserHomeDir()\n\tif err != nil {\n\t\treturn fmt.Errorf(\"resolve home dir: %w\", err)\n\t}\n\n\tdir := filepath.Join(home, \".claude\")\n\tsettingsPath := filepath.Join(dir, \"settings.json\")\n\n\t// Read existing settings or start fresh\n\tsettings := make(map[string]any)\n\tif b, err := os.ReadFile(settingsPath); err == nil {\n\t\tif err := sonic.Unmarshal(b, &settings); err != nil {\n\t\t\treturn fmt.Errorf(\"parse existing claude settings: %w\", err)\n\t\t}\n\t} else if !errors.Is(err, os.ErrNotExist) {\n\t\treturn fmt.Errorf(\"read claude settings: %w\", err)\n\t}\n\n\t// Get or create the env map\n\tenvRaw, ok := settings[\"env\"]\n\tvar envMap map[string]any\n\tif ok {\n\t\tenvMap, ok = envRaw.(map[string]any)\n\t\tif !ok {\n\t\t\tenvMap = make(map[string]any)\n\t\t}\n\t} else {\n\t\tenvMap = make(map[string]any)\n\t}\n\n\t// Always set base URL and API key\n\tenvMap[\"ANTHROPIC_BASE_URL\"] = baseURL\n\tenvMap[\"ANTHROPIC_API_KEY\"] = apiKey\n\n\t// Set tier defaults when model is non-empty\n\tif m := strings.TrimSpace(model); m != \"\" {\n\t\tenvMap[\"ANTHROPIC_DEFAULT_SONNET_MODEL\"] = m\n\t\tenvMap[\"ANTHROPIC_DEFAULT_OPUS_MODEL\"] = m\n\t\tenvMap[\"ANTHROPIC_DEFAULT_HAIKU_MODEL\"] = m\n\t}\n\n\t// Remove legacy ANTHROPIC_MODEL key if present\n\tdelete(envMap, \"ANTHROPIC_MODEL\")\n\n\tsettings[\"env\"] = envMap\n\n\tb, err := sonic.MarshalIndent(settings, \"\", \"  \")\n\tif err != nil {\n\t\treturn fmt.Errorf(\"marshal claude settings: %w\", err)\n\t}\n\n\tif err := os.MkdirAll(dir, 0o755); err != nil {\n\t\treturn fmt.Errorf(\"create claude config dir: %w\", err)\n\t}\n\treturn config.WriteAtomic(settingsPath, b, 0o600)\n}",
+      "observation": {
+        "results": [
+          {
+            "content": "package harness\n\nimport (\n\t\"errors\"\n\t\"fmt\"\n\t\"os\"\n\t\"path/filepath\"\n\t\"strings\"\n\n\t\"github.com/bytedance/sonic\"\n\t\"github.com/maximhq/bifrost/cli/internal/config\"\n)\n\n// claudePreLaunch forces Claude Code into its simpler terminal mode when\n// launched inside Bifrost's tab multiplexer. This avoids Claude-specific\n// full-screen terminal behavior that doesn't restore reliably across tab swaps.\n// When model is non-empty, it sets tier-default environment variables instead of\n// the legacy ANTHROPIC_MODEL key.\nfunc claudePreLaunch(baseURL, apiKey, model string) ([]string, func(), error) {\n\tenv := []string{\"CLAUDE_CODE_SIMPLE=1\"}\n\tif m := strings.TrimSpace(model); m != \"\" {\n\t\tenv = append(env,\n\t\t\t\"ANTHROPIC_DEFAULT_SONNET_MODEL=\"+m,\n\t\t\t\"ANTHROPIC_DEFAULT_OPUS_MODEL=\"+m,\n\t\t\t\"ANTHROPIC_DEFAULT_HAIKU_MODEL=\"+m,\n\t\t)\n\t}\n\treturn env, func() {}, nil\n}\n\n// claudeWriteNativeConfig writes the bifrost endpoint, API key, and model\n// into Claude Code's settings file (~/.claude/settings.json) so the same\n// configuration is available when users launch Claude Code directly.\n//\n// It merges into the existing file, preserving any user-defined settings.\n// When model is non-empty, it sets tier-default keys instead of the legacy\n// ANTHROPIC_MODEL key, and removes ANTHROPIC_MODEL if present.\nfunc claudeWriteNativeConfig(baseURL, apiKey, model string) error {\n\thome, err := os.UserHomeDir()\n\tif err != nil {\n\t\treturn fmt.Errorf(\"resolve home dir: %w\", err)\n\t}\n\n\tdir := filepath.Join(home, \".claude\")\n\tsettingsPath := filepath.Join(dir, \"settings.json\")\n\n\t// Read existing settings or start fresh\n\tsettings := make(map[string]any)\n\tif b, err := os.ReadFile(settingsPath); err == nil {\n\t\tif err := sonic.Unmarshal(b, &settings); err != nil {\n\t\t\treturn fmt.Errorf(\"parse existing claude settings: %w\", err)\n\t\t}\n\t} else if !errors.Is(err, os.ErrNotExist) {\n\t\treturn fmt.Errorf(\"read claude settings: %w\", err)\n\t}\n\n\t// Get or create the env map\n\tenvRaw, ok := settings[\"env\"]\n\tvar envMap map[string]any\n\tif ok {\n\t\tenvMap, ok = envRaw.(map[string]any)\n\t\tif !ok {\n\t\t\tenvMap = make(map[string]any)\n\t\t}\n\t} else {\n\t\tenvMap = make(map[string]any)\n\t}\n\n\t// Always set base URL and API key\n\tenvMap[\"ANTHROPIC_BASE_URL\"] = baseURL\n\tenvMap[\"ANTHROPIC_API_KEY\"] = apiKey\n\n\t// Set tier defaults when model is non-empty\n\tif m := strings.TrimSpace(model); m != \"\" {\n\t\tenvMap[\"ANTHROPIC_DEFAULT_SONNET_MODEL\"] = m\n\t\tenvMap[\"ANTHROPIC_DEFAULT_OPUS_MODEL\"] = m\n\t\tenvMap[\"ANTHROPIC_DEFAULT_HAIKU_MODEL\"] = m\n\t}\n\n\t// Remove legacy ANTHROPIC_MODEL key if present\n\tdelete(envMap, \"ANTHROPIC_MODEL\")\n\n\tsettings[\"env\"] = envMap\n\n\tb, err := sonic.MarshalIndent(settings, \"\", \"  \")\n\tif err != nil {\n\t\treturn fmt.Errorf(\"marshal claude settings: %w\", err)\n\t}\n\n\tif err := os.MkdirAll(dir, 0o755); err != nil {\n\t\treturn fmt.Errorf(\"create claude config dir: %w\", err)\n\t}\n\treturn config.WriteAtomic(settingsPath, b, 0o600)\n}"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-8c66fba237174ca4a2b34a95744ffce0"
+      }
+    },
+    {
+      "step_id": 48,
+      "timestamp": "2026-04-11T09:27:19.884000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "The implementation is complete. All requirements have been met:\n\n**Summary of changes to `/app/bifrost/cli/internal/harness/native_config.go`:**\n\n1. **Added `strings` import** for whitespace trimming\n\n2. **Updated `claudePreLaunch`:**\n   - Always sets `CLAUDE_CODE_SIMPLE=1` (requirement 2)\n   - When model is non-empty (after trimming), adds all three tier-default env vars: `ANTHROPIC_DEFAULT_SONNET_MODEL`, `ANTHROPIC_DEFAULT_OPUS_MODEL`, `ANTHROPIC_DEFAULT_HAIKU_MODEL` (requirement 3)\n   - No longer emits `ANTHROPIC_MODEL` (requirement 4)\n\n3. **Updated `claudeWriteNativeConfig`:**\n   - Continues merging into existing `~/.claude/settings.json` and preserves unrelated existing `env` entries (requirement 5)\n   - Always sets `ANTHROPIC_BASE_URL` and `ANTHROPIC_API_KEY` (requirement 6)\n   - When model is non-empty (after trimming), sets all three tier-default keys (requirement 7)\n   - Always removes `ANTHROPIC_MODEL` from env map using `delete()` (requirement 8)\n\nAll tests pass:\n- Existing opencode tests still pass (non-Claude behavior unchanged)\n- New Claude tests verify: `CLAUDE_CODE_SIMPLE=1`, tier defaults, whitespace trimming, no `ANTHROPIC_MODEL`, settings merging/preservation, and removal of legacy key",
+      "reasoning_content": "All requirements are satisfied:\n\n1. ✅ Function names and signatures unchanged (`claudePreLaunch(baseURL, apiKey, model string) ([]string, func(), error)` and `claudeWriteNativeConfig(baseURL, apiKey, model string) error`)\n2. ✅ Non-Claude harnesses unchanged (opencode functions untouched)\n3. ✅ `claudePreLaunch` always keeps `CLAUDE_CODE_SIMPLE=1`\n4. ✅ When model is non-empty after trimming whitespace, `claudePreLaunch` adds all three tier-default env vars (`ANTHROPIC_DEFAULT_SONNET_MODEL`, `ANTHROPIC_DEFAULT_OPUS_MODEL`, `ANTHROPIC_DEFAULT_HAIKU_MODEL`)\n5. ✅ `claudePreLaunch` does not emit `ANTHROPIC_MODEL`\n6. ✅ `claudeWriteNativeConfig` merges into existing `~/.claude/settings.json` and preserves unrelated existing `env` entries\n7. ✅ `claudeWriteNativeConfig` always sets `ANTHROPIC_BASE_URL` and `ANTHROPIC_API_KEY`\n8. ✅ When model is non-empty after trimming whitespace, `claudeWriteNativeConfig` sets all three tier-default keys\n9. ✅ If `env` already contains `ANTHROPIC_MODEL`, `claudeWriteNativeConfig` removes that key after writing tier defaults\n\nAll tests pass. The implementation compiles successfully.",
+      "metrics": {
+        "prompt_tokens": 860,
+        "completion_tokens": 920,
+        "cached_tokens": 33919,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 35699
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "stop",
+        "tool_call_id": null
+      }
+    }
+  ],
+  "final_metrics": {
+    "total_prompt_tokens": 114000,
+    "total_completion_tokens": 7435,
+    "total_cached_tokens": 487757,
+    "total_steps": 48
+  }
+}

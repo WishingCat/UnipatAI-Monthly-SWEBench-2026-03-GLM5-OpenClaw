@@ -1,0 +1,9 @@
+{
+  "task": "memgraph__memgraph_0a8474dd_043c54ee",
+  "status": "COMPLETE_FAIL",
+  "result": "reward=0.0",
+  "episode_count": 99,
+  "trial_name": "memgraph__memgraph_0a8474dd_043c__YzPx2Mk",
+  "source_job_dir": "T:\\AgentProjects\\SWEBench\\jobs\\network_retry_resilient_openclaw_2026-04-11_17-06-57",
+  "source_trial_dir": "T:\\AgentProjects\\SWEBench\\jobs\\network_retry_resilient_openclaw_2026-04-11_17-06-57\\memgraph__memgraph_0a8474dd_043c__YzPx2Mk"
+}

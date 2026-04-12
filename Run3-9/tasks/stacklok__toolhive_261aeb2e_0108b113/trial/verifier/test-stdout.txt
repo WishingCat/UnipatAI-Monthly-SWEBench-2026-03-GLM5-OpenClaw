@@ -1,0 +1,28 @@
+[REGRESSION_DIRECT] Running: /usr/local/go/bin/go run /tests/cel_validation_runner.go --mode regression --repo-root /app/toolhive
+[REGRESSION_DIRECT] mcpserver_valid_configmap_and_inline: PASS
+[REGRESSION_DIRECT] mcpremoteproxy_valid_kubernetes_and_configmap: PASS
+[REGRESSION_DIRECT] group result: PASS
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Running: /usr/local/go/bin/go run /tests/cel_validation_runner.go --mode fail2pass_core --repo-root /app/toolhive
+[FAIL2PASS_CORE] mcpserver_oidc_configmap_missing_branch: PASS
+[FAIL2PASS_CORE] mcpserver_authz_inline_missing_branch: PASS
+[FAIL2PASS_CORE] mcpremoteproxy_oidc_inline_with_configmap: PASS
+[FAIL2PASS_CORE] mcpremoteproxy_authz_configmap_missing_branch: PASS
+[FAIL2PASS_CORE] group result: PASS
+[FAIL2PASS_CORE] PASS
+[FAIL2PASS_ERROR_HANDLING] Running: /usr/local/go/bin/go run /tests/cel_validation_runner.go --mode fail2pass_error_handling --repo-root /app/toolhive
+[FAIL2PASS_ERROR_HANDLING] mcpserver_oidc_kubernetes_with_inline_message: FAIL (missing error substring "inline must be set when type is 'inline'" in "MCPServer.toolhive.stacklok.dev \"tb-mcpserver-oidc-kubernetes-with-inline-message-0\" is invalid: spec.oidcConfig: Invalid value: when type is 'kubernetes', configMap and inline must not be set")
+[FAIL2PASS_ERROR_HANDLING] mcpremoteproxy_oidc_configmap_missing_message: FAIL (missing error substring "configMap must be set when type is 'configMap'" in "MCPRemoteProxy.toolhive.stacklok.dev \"tb-mcpremoteproxy-oidc-configmap-missing-message-1\" is invalid: spec.oidcConfig: Invalid value: when type is 'configMap', configMap must be set and inline must not be set")
+[FAIL2PASS_ERROR_HANDLING] group result: FAIL
+exit status 1
+[FAIL2PASS_ERROR_HANDLING] FAIL (exit=1)
+[FAIL2PASS_EDGE] Running: /usr/local/bin/controller-gen crd paths=./cmd/thv-operator/api/v1alpha1 output:crd:dir=/tmp/tb-crd-gen
+[FAIL2PASS_EDGE] PASS
+[FAIL2PASS_EDGE] Running: /usr/local/go/bin/go run /tests/cel_validation_runner.go --mode fail2pass_core --role-label FAIL2PASS_EDGE --repo-root /app/toolhive --crd-dir /tmp/tb-crd-gen
+[FAIL2PASS_EDGE] mcpserver_oidc_configmap_missing_branch: PASS
+[FAIL2PASS_EDGE] mcpserver_authz_inline_missing_branch: PASS
+[FAIL2PASS_EDGE] mcpremoteproxy_oidc_inline_with_configmap: PASS
+[FAIL2PASS_EDGE] mcpremoteproxy_authz_configmap_missing_branch: PASS
+[FAIL2PASS_EDGE] group result: PASS
+[FAIL2PASS_EDGE] PASS
+[INFO] Final reward: 0
