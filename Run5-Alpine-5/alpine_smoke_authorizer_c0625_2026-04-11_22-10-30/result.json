@@ -1,0 +1,29 @@
+{
+    "id": "0740fd89-1a88-436e-8f16-d8c850e832bf",
+    "started_at": "2026-04-11T22:10:26.334502",
+    "finished_at": "2026-04-11T22:26:59.860461",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "openclaw__z-ai-glm-5__dataset_alpine_smoke_authorizer_2026-04-11": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "authorizerdev__authorizer_c0625a__pFEnGL6"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

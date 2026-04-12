@@ -1,0 +1,27 @@
+{
+  "conversations": [
+    {
+      "role": "user",
+      "content": "Your task is to bring two OAuth/OIDC HTTP endpoints into standards-compliant behavior.\n\nThe project already exposes:\n- `GET /.well-known/openid-configuration`\n- `POST /oauth/revoke`\n\nUpdate the implementation so these endpoint behaviors are satisfied.\n\n### 1. OpenID Discovery response requirements\nFor `GET /.well-known/openid-configuration`:\n\n- Keep existing discovery behavior, but ensure `id_token_signing_alg_values_supported` always contains `\"RS256\"`.\n- If another signing algorithm is configured, it must still be advertised too (do not drop the configured algorithm).\n- The discovery JSON must include these additional fields:\n  - `grant_types_supported`\n  - `token_endpoint_auth_methods_supported`\n  - `code_challenge_methods_supported`\n  - `revocation_endpoint`\n  - `end_session_endpoint`\n\n### 2. Token revocation endpoint requirements\nFor `POST /oauth/revoke`:\n\n- Accept both content types:\n  - `application/x-www-form-urlencoded`\n  - `application/json`\n- Accept the OAuth-standard `token` parameter name.\n- Keep backward compatibility for `refresh_token` as an alternative input name.\n- Keep requiring client identification (`client_id`, header fallback, or Basic auth as already supported by this codebase).\n\nBehavior rules:\n- If `client_id` is missing, return HTTP `400` with an OAuth-style error payload.\n- If `client_id` is invalid, return HTTP `401` with an OAuth-style error payload.\n- If `token_type_hint` is provided but unsupported, return HTTP `400` with error code `unsupported_token_type`.\n- For empty, invalid, unknown, or non-revocable tokens, return HTTP `200` with an empty JSON object.\n  - This endpoint must not reveal token validity through different status codes.\n\n### 3. Compatibility and quality constraints\n- Do not break existing discovery fields that were already returned before this change.\n- Keep response payloads JSON.\n- Keep endpoint paths and HTTP methods unchanged."
+    },
+    {
+      "role": "assistant",
+      "content": "<think>The user wants me to update OAuth/OIDC endpoints to be standards-compliant. Let me first explore the workspace to understand the existing implementation.\n\nI need to:\n1. Find the existing implementation of the OpenID discovery endpoint and token revocation endpoint\n2. Understand how they currently work\n3. Update them according to the requirements\n\nLet me start by exploring the workspace structure.</think>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"find /workspace -type f -name \\\"*.ts\\\" -o -name \\\"*.js\\\" -o -name \\\"*.json\\\" 2>/dev/null | head -50\"}}\n</tool_call>"
+    },
+    {
+      "role": "assistant",
+      "content": "(no output)"
+    }
+  ],
+  "agent": "openclaw",
+  "model": "openai/z-ai/glm-5",
+  "model_provider": "openai",
+  "date": "2026-04-11T14:10:26.374698Z",
+  "task": "authorizerdev__authorizer_c0625a9e_306b235e",
+  "episode": "episode-1",
+  "run_id": "0740fd89-1a88-436e-8f16-d8c850e832bf",
+  "trial_name": "authorizerdev__authorizer_c0625a__pFEnGL6",
+  "result": "0.0",
+  "instruction": "Your task is to bring two OAuth/OIDC HTTP endpoints into standards-compliant behavior.\n\nThe project already exposes:\n- `GET /.well-known/openid-configuration`\n- `POST /oauth/revoke`\n\nUpdate the implementation so these endpoint behaviors are satisfied.\n\n### 1. OpenID Discovery response requirements\nFor `GET /.well-known/openid-configuration`:\n\n- Keep existing discovery behavior, but ensure `id_token_signing_alg_values_supported` always contains `\"RS256\"`.\n- If another signing algorithm is configured, it must still be advertised too (do not drop the configured algorithm).\n- The discovery JSON must include these additional fields:\n  - `grant_types_supported`\n  - `token_endpoint_auth_methods_supported`\n  - `code_challenge_methods_supported`\n  - `revocation_endpoint`\n  - `end_session_endpoint`\n\n### 2. Token revocation endpoint requirements\nFor `POST /oauth/revoke`:\n\n- Accept both content types:\n  - `application/x-www-form-urlencoded`\n  - `application/json`\n- Accept the OAuth-standard `token` parameter name.\n- Keep backward compatibility for `refresh_token` as an alternative input name.\n- Keep requiring client identification (`client_id`, header fallback, or Basic auth as already supported by this codebase).\n\nBehavior rules:\n- If `client_id` is missing, return HTTP `400` with an OAuth-style error payload.\n- If `client_id` is invalid, return HTTP `401` with an OAuth-style error payload.\n- If `token_type_hint` is provided but unsupported, return HTTP `400` with error code `unsupported_token_type`.\n- For empty, invalid, unknown, or non-revocable tokens, return HTTP `200` with an empty JSON object.\n  - This endpoint must not reveal token validity through different status codes.\n\n### 3. Compatibility and quality constraints\n- Do not break existing discovery fields that were already returned before this change.\n- Keep response payloads JSON.\n- Keep endpoint paths and HTTP methods unchanged.",
+  "message_count": 3
+}

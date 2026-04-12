@@ -1,0 +1,72 @@
+[REGRESSION_DIRECT] Running go test with regex ^TestRegressionDirect_
+ok  	github.com/authorizerdev/authorizer/internal/http_handlers	0.020s
+[REGRESSION_DIRECT] PASS
+[REGRESSION_DIRECT] Completed
+[FAIL2PASS_CORE] Running go test with regex ^TestFail2PassCore_
+--- FAIL: TestFail2PassCore_OpenIDDiscoveryIncludesRS256AndAdditionalMetadata (0.00s)
+    zz_terminal_bench_oauth_compliance_test.go:125: 
+        	Error Trace:	/app/authorizer/internal/http_handlers/zz_terminal_bench_oauth_compliance_test.go:125
+        	Error:      	[]interface {}{"HS256"} does not contain "RS256"
+        	Test:       	TestFail2PassCore_OpenIDDiscoveryIncludesRS256AndAdditionalMetadata
+--- FAIL: TestFail2PassCore_RevokeReturns200ForInvalidOrEmptyTokenAcrossContentTypes (0.00s)
+    --- FAIL: TestFail2PassCore_RevokeReturns200ForInvalidOrEmptyTokenAcrossContentTypes/form_invalid_token (0.00s)
+        zz_terminal_bench_oauth_compliance_test.go:181: 
+            	Error Trace:	/app/authorizer/internal/http_handlers/zz_terminal_bench_oauth_compliance_test.go:181
+            	Error:      	Not equal: 
+            	            	expected: 200
+            	            	actual  : 400
+            	Test:       	TestFail2PassCore_RevokeReturns200ForInvalidOrEmptyTokenAcrossContentTypes/form_invalid_token
+    --- FAIL: TestFail2PassCore_RevokeReturns200ForInvalidOrEmptyTokenAcrossContentTypes/json_invalid_token (0.00s)
+        zz_terminal_bench_oauth_compliance_test.go:181: 
+            	Error Trace:	/app/authorizer/internal/http_handlers/zz_terminal_bench_oauth_compliance_test.go:181
+            	Error:      	Not equal: 
+            	            	expected: 200
+            	            	actual  : 400
+            	Test:       	TestFail2PassCore_RevokeReturns200ForInvalidOrEmptyTokenAcrossContentTypes/json_invalid_token
+    --- FAIL: TestFail2PassCore_RevokeReturns200ForInvalidOrEmptyTokenAcrossContentTypes/form_empty_token (0.00s)
+        zz_terminal_bench_oauth_compliance_test.go:181: 
+            	Error Trace:	/app/authorizer/internal/http_handlers/zz_terminal_bench_oauth_compliance_test.go:181
+            	Error:      	Not equal: 
+            	            	expected: 200
+            	            	actual  : 400
+            	Test:       	TestFail2PassCore_RevokeReturns200ForInvalidOrEmptyTokenAcrossContentTypes/form_empty_token
+FAIL
+FAIL	github.com/authorizerdev/authorizer/internal/http_handlers	0.018s
+FAIL
+[FAIL2PASS_CORE] FAIL
+[FAIL2PASS_CORE] Completed
+[FAIL2PASS_EDGE] Running go test with regex ^TestFail2PassEdge_
+--- FAIL: TestFail2PassEdge_RevokeRejectsUnsupportedTokenTypeHint (0.00s)
+    zz_terminal_bench_oauth_compliance_test.go:207: 
+        	Error Trace:	/app/authorizer/internal/http_handlers/zz_terminal_bench_oauth_compliance_test.go:207
+        	Error:      	Not equal: 
+        	            	expected: "unsupported_token_type"
+        	            	actual  : "error_binding_json"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-unsupported_token_type
+        	            	+error_binding_json
+        	Test:       	TestFail2PassEdge_RevokeRejectsUnsupportedTokenTypeHint
+FAIL
+FAIL	github.com/authorizerdev/authorizer/internal/http_handlers	0.017s
+FAIL
+[FAIL2PASS_EDGE] FAIL
+[FAIL2PASS_EDGE] Completed
+[FAIL2PASS_ERROR_HANDLING] Running go test with regex ^TestFail2PassErrorHandling_
+--- FAIL: TestFail2PassErrorHandling_RevokeInvalidClientReturnsUnauthorized (0.00s)
+    zz_terminal_bench_oauth_compliance_test.go:226: 
+        	Error Trace:	/app/authorizer/internal/http_handlers/zz_terminal_bench_oauth_compliance_test.go:226
+        	Error:      	Not equal: 
+        	            	expected: 401
+        	            	actual  : 400
+        	Test:       	TestFail2PassErrorHandling_RevokeInvalidClientReturnsUnauthorized
+FAIL
+FAIL	github.com/authorizerdev/authorizer/internal/http_handlers	0.018s
+FAIL
+[FAIL2PASS_ERROR_HANDLING] FAIL
+[FAIL2PASS_ERROR_HANDLING] Completed
+Total groups: 4, failed groups: 3
+Final reward: 0
