@@ -1,0 +1,52 @@
+{
+    "task": {
+        "path": "T:\\AgentProjects\\SWEBench\\dataset_alpine_remaining_2026-04-11\\dosco__graphjin_9c78ad33_f9ac75a2",
+        "git_url": null,
+        "git_commit_id": null,
+        "overwrite": false,
+        "download_dir": null,
+        "source": "dataset_alpine_remaining_2026-04-11"
+    },
+    "trial_name": "dosco__graphjin_9c78ad33_f9ac75a__AGGVBZW",
+    "trials_dir": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+        "name": "openclaw",
+        "import_path": null,
+        "model_name": "openai/z-ai/glm-5",
+        "override_timeout_sec": null,
+        "override_setup_timeout_sec": null,
+        "max_timeout_sec": null,
+        "kwargs": {
+            "context_window": 131072,
+            "max_tokens": 8192
+        },
+        "env": {
+            "OPENAI_API_KEY": "sk-bd614864fdaae531ac71f48a3069981bb9fa7b34064fe696c37d75b32ac54b3f",
+            "OPENAI_BASE_URL": "https://openai.sufy.com/v1"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "import_path": null,
+        "force_build": true,
+        "delete": false,
+        "override_cpus": null,
+        "override_memory_mb": null,
+        "override_storage_mb": null,
+        "override_gpus": null,
+        "suppress_override_warnings": false,
+        "kwargs": {}
+    },
+    "verifier": {
+        "override_timeout_sec": null,
+        "max_timeout_sec": null,
+        "disable": false
+    },
+    "artifacts": [],
+    "job_id": "0acf4be0-deee-425c-b88e-316131fb20ee"
+}
