@@ -1,0 +1,55 @@
+Added model params: [ 'maxTokens' ]
+Auth profile written for provider: openai
+=== OpenClaw Config ===
+{
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openai/z-ai/glm-5"
+      },
+      "skipBootstrap": true,
+      "timeoutSeconds": 86400,
+      "workspace": "/workspace",
+      "models": {
+        "openai/z-ai/glm-5": {
+          "params": {
+            "maxTokens": 8192
+          }
+        }
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "openai": {
+        "baseUrl": "https://openai.sufy.com/v1",
+        "api": "openai-completions",
+        "apiKey": "OPENAI_API_KEY",
+        "models": [
+          {
+            "id": "z-ai/glm-5",
+            "name": "z-ai/glm-5",
+            "contextWindow": 131072,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  }
+}
+=== Auth Profiles ===
+-rw-r--r-- 1 root root 197 Apr 10 03:00 /root/.openclaw/agents/main/agent/auth-profiles.json
+
+=== Auth Profiles (redacted) ===
+{
+  "version": 1,
+  "profiles": {
+    "openai": {
+      "type": "api_key",
+      "provider": "openai",
+      "key": "sk-bd614...2ac54b3f"
+    }
+  }
+}
+

@@ -1,0 +1,9 @@
+﻿{
+    "task":  "bytedance__sonic_28040bdd_c9e5b0f6",
+    "status":  "RAN_FAIL",
+    "trial_name":  "bytedance__sonic_28040bdd_c9e5b0__uRNViWo",
+    "episode_count":  178,
+    "result":  "AgentTimeoutError",
+    "source_job_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30",
+    "source_trial_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\bytedance__sonic_28040bdd_c9e5b0__uRNViWo"
+}

@@ -1,0 +1,4 @@
+[tools] read failed: EISDIR: illegal operation on a directory, read raw_params={"path":"/workspace/decoder"}
+[agent] [context-overflow-diag] sessionKey=agent:main:main provider=openai/z-ai/glm-5 source=assistantError messages=92 sessionFile=/logs/agent/openclaw-sessions/dfd7f5ea-93ed-4e46-93f2-2db255bc71fc.jsonl diagId=ovf-mnsc2ko6-yrf6tg compactionAttempts=0 observedTokens=unknown error=Context overflow: estimated context size exceeds safe threshold during tool loop.
+[agent] context overflow detected (attempt 1/3); attempting auto-compaction for openai/z-ai/glm-5
+[agent] auto-compaction succeeded for openai/z-ai/glm-5; retrying prompt
