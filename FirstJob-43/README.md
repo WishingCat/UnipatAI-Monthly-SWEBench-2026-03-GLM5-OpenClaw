@@ -18,6 +18,7 @@
 - `agent_timeout_4`
   - `AgentTimeoutError` 的题目，共 `4` 个
 
+(`AgentTimeoutError`是指agent与LLM交互了过多轮次都还没有完成任务，判作超时失败。)
 以上三类一共整理了 `43` 个 task 的运行记录，便于单独查看与复盘。
 
 ## 其他未整理进来的 task
