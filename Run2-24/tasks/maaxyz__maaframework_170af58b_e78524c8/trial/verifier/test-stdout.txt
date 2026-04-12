@@ -1,0 +1,11 @@
+Compiling parser test binary...
+[REGRESSION_DIRECT] Running plain_reference_roundtrip
+PASS: plain_reference_roundtrip
+[REGRESSION_DIRECT] PASS plain_reference_roundtrip
+[FAIL2PASS_CORE] Running anchor_reference_normalization_and_roundtrip
+PASS: anchor_reference_normalization_and_roundtrip
+[FAIL2PASS_CORE] PASS anchor_reference_normalization_and_roundtrip
+[FAIL2PASS_EDGE] Running malformed_anchor_reference_rejected
+PASS: malformed_anchor_reference_rejected
+[FAIL2PASS_EDGE] PASS malformed_anchor_reference_rejected
+All tests passed (3/3).

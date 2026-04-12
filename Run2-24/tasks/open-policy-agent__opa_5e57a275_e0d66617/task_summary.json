@@ -1,0 +1,9 @@
+﻿{
+    "task":  "open-policy-agent__opa_5e57a275_e0d66617",
+    "status":  "COMPLETE_FAIL",
+    "trial_name":  "open-policy-agent__opa_5e57a275___abz2kZR",
+    "episode_count":  123,
+    "result":  "0.0",
+    "source_job_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30",
+    "source_trial_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\open-policy-agent__opa_5e57a275___abz2kZR"
+}

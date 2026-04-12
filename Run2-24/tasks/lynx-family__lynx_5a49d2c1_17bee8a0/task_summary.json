@@ -1,0 +1,9 @@
+﻿{
+    "task":  "lynx-family__lynx_5a49d2c1_17bee8a0",
+    "status":  "PASS",
+    "trial_name":  "lynx-family__lynx_5a49d2c1_17bee__gULwKMg",
+    "episode_count":  123,
+    "result":  "1.0",
+    "source_job_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30",
+    "source_trial_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\lynx-family__lynx_5a49d2c1_17bee__gULwKMg"
+}

@@ -1,0 +1,9 @@
+﻿{
+    "task":  "projectdiscovery__nuclei_17e9f429_bde02720",
+    "status":  "COMPLETE_FAIL",
+    "trial_name":  "projectdiscovery__nuclei_17e9f42__duUDia9",
+    "episode_count":  139,
+    "result":  "0.0",
+    "source_job_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30",
+    "source_trial_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\projectdiscovery__nuclei_17e9f42__duUDia9"
+}

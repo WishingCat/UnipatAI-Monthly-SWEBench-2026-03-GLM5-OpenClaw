@@ -1,0 +1,35 @@
+[REGRESSION_DIRECT] START
+# github.com/projectdiscovery/nuclei/v3/pkg/catalog/loader_test [github.com/projectdiscovery/nuclei/v3/pkg/catalog/loader.test]
+pkg/catalog/loader/loader_bench_test.go:74:8: assignment mismatch: 1 variable but store.LoadTemplates returns 2 values
+pkg/catalog/loader/loader_bench_test.go:92:8: assignment mismatch: 1 variable but store.LoadTemplates returns 2 values
+pkg/catalog/loader/loader_bench_test.go:110:8: assignment mismatch: 1 variable but store.LoadTemplates returns 2 values
+pkg/catalog/loader/loader_bench_test.go:128:8: assignment mismatch: 1 variable but store.LoadTemplates returns 2 values
+pkg/catalog/loader/loader_bench_test.go:146:8: assignment mismatch: 1 variable but store.LoadTemplates returns 2 values
+pkg/catalog/loader/loader_bench_test.go:164:8: assignment mismatch: 1 variable but store.LoadTemplates returns 2 values
+pkg/catalog/loader/loader_bench_test.go:184:8: assignment mismatch: 1 variable but store.LoadTemplates returns 2 values
+FAIL	github.com/projectdiscovery/nuclei/v3/pkg/catalog/loader [build failed]
+FAIL
+[REGRESSION_DIRECT] FAIL (exit=1)
+[REGRESSION_DEPENDENT] START
+ok  	github.com/projectdiscovery/nuclei/v3/internal/runner	0.112s [no tests to run]
+?   	github.com/projectdiscovery/nuclei/v3/internal/server	[no test files]
+ok  	github.com/projectdiscovery/nuclei/v3/lib	0.076s [no tests to run]
+?   	github.com/projectdiscovery/nuclei/v3/cmd/integration-test	[no test files]
+ok  	github.com/projectdiscovery/nuclei/v3/pkg/protocols/common/automaticscan	0.075s [no tests to run]
+[REGRESSION_DEPENDENT] PASS
+[FAIL2PASS_CORE] START
+# github.com/projectdiscovery/nuclei/v3/pkg/catalog/loader_test [github.com/projectdiscovery/nuclei/v3/pkg/catalog/loader.test]
+pkg/catalog/loader/loader_bench_test.go:74:8: assignment mismatch: 1 variable but store.LoadTemplates returns 2 values
+pkg/catalog/loader/loader_bench_test.go:92:8: assignment mismatch: 1 variable but store.LoadTemplates returns 2 values
+pkg/catalog/loader/loader_bench_test.go:110:8: assignment mismatch: 1 variable but store.LoadTemplates returns 2 values
+pkg/catalog/loader/loader_bench_test.go:128:8: assignment mismatch: 1 variable but store.LoadTemplates returns 2 values
+pkg/catalog/loader/loader_bench_test.go:146:8: assignment mismatch: 1 variable but store.LoadTemplates returns 2 values
+pkg/catalog/loader/loader_bench_test.go:164:8: assignment mismatch: 1 variable but store.LoadTemplates returns 2 values
+pkg/catalog/loader/loader_bench_test.go:184:8: assignment mismatch: 1 variable but store.LoadTemplates returns 2 values
+FAIL	github.com/projectdiscovery/nuclei/v3/pkg/catalog/loader [build failed]
+FAIL
+[FAIL2PASS_CORE] FAIL (exit=1)
+[FAIL2PASS_ERROR_HANDLING] START
+ok  	github.com/projectdiscovery/nuclei/v3/pkg/protocols/common/automaticscan	0.071s
+[FAIL2PASS_ERROR_HANDLING] PASS
+Final reward: 0

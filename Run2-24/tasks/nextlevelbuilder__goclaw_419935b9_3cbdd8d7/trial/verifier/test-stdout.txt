@@ -1,0 +1,44 @@
+[REGRESSION_DIRECT] running: go test ./internal/gateway/methods -run 'TestHandleCreate_(FallsBackToSystem_WhenOwnerIDsAbsent|FallsBackToSystem_WhenOwnerIDsEmpty)$' -count=1
+ok  	github.com/nextlevelbuilder/goclaw/internal/gateway/methods	0.005s
+[REGRESSION_DIRECT] PASS
+[REGRESSION_DIRECT] running: go test ./internal/bootstrap -run 'TestSeedUserFiles_(PredefinedAgent_FallsBackToTemplateWhenNoAgentLevelUserMD|PredefinedAgent_DoesNotOverwriteExistingPerUserContent)$' -count=1
+ok  	github.com/nextlevelbuilder/goclaw/internal/bootstrap	0.002s
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] running: go test ./internal/gateway/methods -run 'TestHandleCreate_UsesProvidedOwnerID$' -count=1
+2026/04/10 19:02:48 INFO seeded agent context files to store agent=67f94675-ea3a-425e-ab4b-4838385ada1d files="[AGENTS.md SOUL.md IDENTITY.md]"
+2026/04/10 19:02:48 WARN client send buffer full, dropping message client=""
+--- FAIL: TestHandleCreate_UsesProvidedOwnerID (0.00s)
+    agents_create_owner_visibility_test.go:137: OwnerID = "system", want "8514594032"
+FAIL
+FAIL	github.com/nextlevelbuilder/goclaw/internal/gateway/methods	0.005s
+FAIL
+[FAIL2PASS_CORE] FAIL (exit=1)
+[FAIL2PASS_CORE] running: go test ./internal/bootstrap -run 'TestSeedUserFiles_PredefinedAgent_UsesAgentLevelUserMD$' -count=1
+2026/04/10 19:02:48 INFO seeded user context files agent=64e9433f-f89c-4819-9496-d797a9b864be user=user-alice type=predefined files="[USER.md BOOTSTRAP.md]"
+--- FAIL: TestSeedUserFiles_PredefinedAgent_UsesAgentLevelUserMD (0.00s)
+    seed_user_files_owner_profile_test.go:120: seeded USER.md mismatch:
+        want: "# User Profile\nOwner: Alice\nLanguage: English\nNotes: Prefers concise answers"
+         got: "# USER.md - About Your Human\n\n_Learn about the person you're helping. Update this as you go._\n\n- **Name:**\n- **What to call them:**\n- **Pronouns:** _(optional)_\n- **Timezone:**\n- **Notes:**\n\n## Context\n\n_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_\n\n---\n\nThe more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.\n"
+FAIL
+FAIL	github.com/nextlevelbuilder/goclaw/internal/bootstrap	0.002s
+FAIL
+[FAIL2PASS_CORE] FAIL (exit=1)
+[FAIL2PASS_EDGE] running: go test ./internal/gateway/methods -run 'TestHandleCreate_MultipleOwnerIDs_UsesFirst$' -count=1
+2026/04/10 19:02:49 WARN client send buffer full, dropping message client=""
+--- FAIL: TestHandleCreate_MultipleOwnerIDs_UsesFirst (0.00s)
+    agents_create_owner_visibility_test.go:156: OwnerID = "system", want "first-owner"
+FAIL
+FAIL	github.com/nextlevelbuilder/goclaw/internal/gateway/methods	0.004s
+FAIL
+[FAIL2PASS_EDGE] FAIL (exit=1)
+[FAIL2PASS_EDGE] running: go test ./internal/bootstrap -run 'TestSeedUserFiles_PredefinedAgent_UsesAgentLevelUserMD_DifferentContent$' -count=1
+2026/04/10 19:02:49 INFO seeded user context files agent=3a19cb7a-58de-441d-a435-9b3fea77bd21 user=user-bob-owner type=predefined files="[USER.md BOOTSTRAP.md]"
+--- FAIL: TestSeedUserFiles_PredefinedAgent_UsesAgentLevelUserMD_DifferentContent (0.00s)
+    seed_user_files_owner_profile_test.go:151: seeded USER.md mismatch:
+        want: "# User Profile\nOwner: Bob\nLanguage: Chinese\nNotes: Prefers detailed answers"
+         got: "# USER.md - About Your Human\n\n_Learn about the person you're helping. Update this as you go._\n\n- **Name:**\n- **What to call them:**\n- **Pronouns:** _(optional)_\n- **Timezone:**\n- **Notes:**\n\n## Context\n\n_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_\n\n---\n\nThe more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.\n"
+FAIL
+FAIL	github.com/nextlevelbuilder/goclaw/internal/bootstrap	0.002s
+FAIL
+[FAIL2PASS_EDGE] FAIL (exit=1)
+Final reward: 0

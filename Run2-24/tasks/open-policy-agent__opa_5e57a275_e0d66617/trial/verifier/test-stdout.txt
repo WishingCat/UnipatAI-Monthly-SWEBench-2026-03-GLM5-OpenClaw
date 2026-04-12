@@ -1,0 +1,28 @@
+[REGRESSION_DIRECT] existing bearer default scheme behavior
+go: downloading golang.org/x/sys v0.41.0
+go: downloading go.yaml.in/yaml/v2 v2.4.2
+go: downloading golang.org/x/crypto v0.48.0
+ok  	github.com/open-policy-agent/opa/v1/plugins/rest	0.006s
+[REGRESSION_DIRECT] PASS existing bearer default scheme behavior
+
+[REGRESSION_DIRECT] Prepare is called before each request
+ok  	github.com/open-policy-agent/opa/v1/plugins/rest	0.006s
+[REGRESSION_DIRECT] PASS Prepare is called before each request
+
+[FAIL2PASS_CORE] auth plugin client is initialized once per rest.Client
+--- FAIL: TestTerminalBenchClientCachesAuthPluginClient (0.00s)
+    terminalbench_cache_tls_test.go:150: NewClient() call count=3 want=1
+FAIL
+FAIL	github.com/open-policy-agent/opa/v1/plugins/rest	0.006s
+FAIL
+[FAIL2PASS_CORE] FAIL auth plugin client is initialized once per rest.Client
+
+[FAIL2PASS_EDGE] client TLS cert reread interval gating and reload
+--- FAIL: TestTerminalBenchClientTLSCertRereadInterval (0.01s)
+    terminalbench_cache_tls_test.go:334: second serial=2 want=1 (must use cached cert before reread interval)
+FAIL
+FAIL	github.com/open-policy-agent/opa/v1/plugins/rest	0.009s
+FAIL
+[FAIL2PASS_EDGE] FAIL client TLS cert reread interval gating and reload
+
+Final reward: 0

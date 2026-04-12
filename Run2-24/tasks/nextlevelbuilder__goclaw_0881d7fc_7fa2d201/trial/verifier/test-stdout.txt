@@ -1,0 +1,58 @@
+[REGRESSION_DIRECT] Running config leak guard remains stable
+go: downloading github.com/disintegration/imaging v1.6.2
+go: downloading github.com/google/uuid v1.6.0
+go: downloading github.com/fsnotify/fsnotify v1.9.0
+go: downloading github.com/titanous/json5 v1.0.0
+go: downloading github.com/mark3labs/mcp-go v0.44.0
+go: downloading github.com/mattn/go-shellwords v1.0.12
+go: downloading golang.org/x/net v0.49.0
+go: downloading golang.org/x/image v0.27.0
+go: downloading github.com/adhocore/gronx v1.19.6
+go: downloading golang.org/x/sys v0.40.0
+go: downloading github.com/invopop/jsonschema v0.13.0
+go: downloading github.com/spf13/cast v1.7.1
+go: downloading github.com/yosida95/uritemplate/v3 v3.0.2
+go: downloading github.com/jackc/pgx/v5 v5.6.0
+go: downloading github.com/lib/pq v1.10.9
+go: downloading github.com/wk8/go-ordered-map/v2 v2.1.8
+go: downloading github.com/jackc/pgpassfile v1.0.0
+go: downloading github.com/jackc/pgservicefile v0.0.0-20240606120523-5a60cdf6a761
+go: downloading golang.org/x/crypto v0.47.0
+go: downloading golang.org/x/text v0.33.0
+go: downloading github.com/jackc/puddle/v2 v2.2.2
+go: downloading github.com/bahlo/generic-list-go v0.2.0
+go: downloading github.com/buger/jsonparser v1.1.1
+go: downloading github.com/mailru/easyjson v0.7.7
+go: downloading gopkg.in/yaml.v3 v3.0.1
+go: downloading golang.org/x/sync v0.19.0
+ok  	github.com/nextlevelbuilder/goclaw/internal/agent	0.004s
+[REGRESSION_DIRECT] PASS - config leak guard remains stable
+[FAIL2PASS_CORE] Running strip internal routing directives from delivered content
+2026/04/10 18:28:07 INFO system prompt built mode=full contextFiles=0 hasMemory=false hasSpawn=false isBootstrap=false promptLen=2648
+2026/04/10 18:28:07 INFO system prompt built mode=full contextFiles=0 hasMemory=false hasSpawn=false isBootstrap=false promptLen=2649
+--- FAIL: TestRunLoopDirectiveDelivery_StripsInternalRoutingTags (0.00s)
+    --- FAIL: TestRunLoopDirectiveDelivery_StripsInternalRoutingTags/prefix_directive_stripped (0.00s)
+        zz_terminalbench_directive_delivery_test.go:371: unexpected user-facing content
+            input: "[[reply_to:123]] Hello from the assistant"
+             got: "[[reply_to:123]] Hello from the assistant"
+            want: "Hello from the assistant"
+    --- FAIL: TestRunLoopDirectiveDelivery_StripsInternalRoutingTags/multiple_directives_stripped (0.00s)
+        zz_terminalbench_directive_delivery_test.go:371: unexpected user-facing content
+            input: "[[silent]] [[reply_to:thread-7]] Final answer"
+             got: "[[silent]] [[reply_to:thread-7]] Final answer"
+            want: "Final answer"
+FAIL
+FAIL	github.com/nextlevelbuilder/goclaw/internal/agent	0.006s
+FAIL
+[FAIL2PASS_CORE] FAIL - strip internal routing directives from delivered content
+[FAIL2PASS_EDGE] Running preserve tts tags in delivery and preserve full directives in session
+2026/04/10 18:28:08 INFO system prompt built mode=full contextFiles=0 hasMemory=false hasSpawn=false isBootstrap=false promptLen=2648
+--- FAIL: TestRunLoopDirectiveDelivery_PreservesSessionMetadataTagsAndTTS (0.00s)
+    zz_terminalbench_directive_delivery_test.go:382: unexpected user-facing content
+         got: "[[reply_to:1]] [[tts:en]] Read this aloud."
+        want: "[[tts:en]] Read this aloud."
+FAIL
+FAIL	github.com/nextlevelbuilder/goclaw/internal/agent	0.005s
+FAIL
+[FAIL2PASS_EDGE] FAIL - preserve tts tags in delivery and preserve full directives in session
+Final reward: 0

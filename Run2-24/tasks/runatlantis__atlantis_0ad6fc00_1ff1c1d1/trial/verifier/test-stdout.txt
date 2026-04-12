@@ -1,0 +1,13 @@
+[REGRESSION_DIRECT] Running command: cd /app/atlantis && go test ./server/events -run '^TestDefaultProjectCommandRunner_CustomPolicyCheckNames$' -count=1
+ok  	github.com/runatlantis/atlantis/server/events	0.010s
+[REGRESSION_DIRECT] PASS
+
+[FAIL2PASS_CORE] Running command: cd /app/atlantis && go test ./server/events -run '^TestTBCustomPolicyCheck_NoPreOrPostConftestOutput$' -count=1
+ok  	github.com/runatlantis/atlantis/server/events	0.009s
+[FAIL2PASS_CORE] PASS
+
+[FAIL2PASS_ERROR_HANDLING] Running command: cd /app/atlantis && go test ./server/events -run '^TestTBCustomPolicyCheck_FailureSignalsAndNoAuxOutputs$' -count=1
+ok  	github.com/runatlantis/atlantis/server/events	0.009s
+[FAIL2PASS_ERROR_HANDLING] PASS
+
+Final reward: 1

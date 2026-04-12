@@ -1,0 +1,5 @@
+[agent] [context-overflow-diag] sessionKey=agent:main:main provider=openai/z-ai/glm-5 source=assistantError messages=147 sessionFile=/logs/agent/openclaw-sessions/47cf643e-c90f-47c4-b96e-57090a874c0c.jsonl diagId=ovf-mntfei5f-RRk_1Q compactionAttempts=0 observedTokens=unknown error=Context overflow: estimated context size exceeds safe threshold during tool loop.
+[agent] context overflow detected (attempt 1/3); attempting auto-compaction for openai/z-ai/glm-5
+[agent] auto-compaction succeeded for openai/z-ai/glm-5; retrying prompt
+[agent] [context-overflow-diag] sessionKey=agent:main:main provider=openai/z-ai/glm-5 source=assistantError messages=89 sessionFile=/logs/agent/openclaw-sessions/47cf643e-c90f-47c4-b96e-57090a874c0c.jsonl diagId=ovf-mntfy96y-khYSuA compactionAttempts=1 observedTokens=unknown error=Context overflow: estimated context size exceeds safe threshold during tool loop.
+[agent] context overflow detected (attempt 2/3); attempting auto-compaction for openai/z-ai/glm-5

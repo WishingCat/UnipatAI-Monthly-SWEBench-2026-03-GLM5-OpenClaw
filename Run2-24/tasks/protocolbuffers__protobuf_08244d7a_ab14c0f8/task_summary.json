@@ -1,0 +1,9 @@
+﻿{
+    "task":  "protocolbuffers__protobuf_08244d7a_ab14c0f8",
+    "status":  "RAN_FAIL",
+    "trial_name":  "protocolbuffers__protobuf_08244d__V3ZmdKi",
+    "episode_count":  186,
+    "result":  "AgentTimeoutError",
+    "source_job_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30",
+    "source_trial_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\protocolbuffers__protobuf_08244d__V3ZmdKi"
+}
