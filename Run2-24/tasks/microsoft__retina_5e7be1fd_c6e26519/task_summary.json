@@ -1,0 +1,9 @@
+﻿{
+    "task":  "microsoft__retina_5e7be1fd_c6e26519",
+    "status":  "COMPLETE_FAIL",
+    "trial_name":  "microsoft__retina_5e7be1fd_c6e26__oDBDDVz",
+    "episode_count":  87,
+    "result":  "0.0",
+    "source_job_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30",
+    "source_trial_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\microsoft__retina_5e7be1fd_c6e26__oDBDDVz"
+}

@@ -1,0 +1,9 @@
+﻿{
+    "task":  "runatlantis__atlantis_2fd36a9e_df9d6b7a",
+    "status":  "COMPLETE_FAIL",
+    "trial_name":  "runatlantis__atlantis_2fd36a9e_d__nMoA5bt",
+    "episode_count":  40,
+    "result":  "0.0",
+    "source_job_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30",
+    "source_trial_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\runatlantis__atlantis_2fd36a9e_d__nMoA5bt"
+}

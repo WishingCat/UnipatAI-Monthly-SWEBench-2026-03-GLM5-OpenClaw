@@ -1,0 +1,29 @@
+[REGRESSION_DIRECT] Running regression_direct
+[REGRESSION_DIRECT] PASS regression_direct
+[FAIL2PASS_CORE] Running fail2pass_core
+Traceback (most recent call last):
+  File "/tests/agentserver_toolkit_behavior_checks.py", line 214, in <module>
+    run_fail2pass_core()
+  File "/tests/agentserver_toolkit_behavior_checks.py", line 93, in run_fail2pass_core
+    Library.toolkit()
+  File "/app/MaaFramework/source/binding/Python/maa/library.py", line 121, in toolkit
+    cls._toolkit = cls._lib_type(str(cls.toolkit_libpath))
+  File "/tests/agentserver_toolkit_behavior_checks.py", line 88, in forbidden_loader
+    raise AssertionError("toolkit dynamic loader must not be called in AgentServer mode")
+AssertionError: toolkit dynamic loader must not be called in AgentServer mode
+[FAIL2PASS_CORE] FAIL fail2pass_core (exit=1)
+[FAIL2PASS_EDGE] Running fail2pass_edge
+Traceback (most recent call last):
+  File "/tests/agentserver_toolkit_behavior_checks.py", line 216, in <module>
+    run_fail2pass_edge()
+  File "/tests/agentserver_toolkit_behavior_checks.py", line 194, in run_fail2pass_edge
+    ret = Toolkit.init_option(td, "not-a-dict")
+  File "/app/MaaFramework/source/binding/Python/maa/toolkit.py", line 73, in init_option
+    Toolkit._set_api_properties()
+  File "/tests/agentserver_toolkit_behavior_checks.py", line 188, in fail_if_called
+    raise AssertionError("Toolkit._set_api_properties must not run in AgentServer mode")
+AssertionError: Toolkit._set_api_properties must not run in AgentServer mode
+[FAIL2PASS_EDGE] FAIL fail2pass_edge (exit=1)
+Total passed groups: 1
+Total failed groups: 2
+Final reward: 0

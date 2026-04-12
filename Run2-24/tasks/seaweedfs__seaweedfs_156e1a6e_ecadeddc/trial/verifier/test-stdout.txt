@@ -1,0 +1,34 @@
+Go binary: /usr/local/go/bin/go
+[REGRESSION_DIRECT] Running: bash -c cd '/app/seaweedfs' && '/usr/local/go/bin/go' test ./weed/command -run '^TestTaskRegression_' -count=1
+ok  	github.com/seaweedfs/seaweedfs/weed/command	0.281s
+[REGRESSION_DIRECT] PASS
+
+[FAIL2PASS_CORE] Running: bash -c cd '/app/seaweedfs' && '/usr/local/go/bin/go' test ./weed/command -run '^TestTaskFail2PassCore_' -count=1
+I0411 00:07:57.358763 filer_replication.go:129 Configure sink to task_mock
+I0411 00:07:57.360869 filer_backup.go:127 start time is set to 2026-04-11 00:07:56.360836093 +0000 UTC m=-0.828766701
+E0411 00:07:57.363737 filer_pb_tail.go:98 process directory:"/source" event_notification:{new_entry:{name:"obj.txt"} new_parent_path:"/source"} ts_ns:1: create entry1 : RequestError: send request failed
+caused by: Put "https://s3.amazonaws.com/bucket/key": http://127.0.0.1:9333/437,03f591a3a2b95e?readDeleted=true: 404 Not Found: not found
+E0411 00:07:58.367247 filer_pb_tail.go:98 process directory:"/source" event_notification:{new_entry:{name:"obj.txt"} new_parent_path:"/source"} ts_ns:1: create entry1 : RequestError: send request failed
+caused by: Put "https://s3.amazonaws.com/bucket/key": http://127.0.0.1:9333/437,03f591a3a2b95e?readDeleted=true: 404 Not Found: not found
+--- FAIL: TestTaskFail2PassCore_BrokenUnwrapChain404IsIgnored (1.31s)
+    filer_backup_task_behavior_test.go:168: expected backup to complete for broken unwrap-chain 404 error
+FAIL
+FAIL	github.com/seaweedfs/seaweedfs/weed/command	1.384s
+FAIL
+[FAIL2PASS_CORE] FAIL (exit=1)
+
+[FAIL2PASS_EDGE] Running: bash -c cd '/app/seaweedfs' && '/usr/local/go/bin/go' test ./weed/command -run '^TestTaskFail2PassEdge_' -count=1
+I0411 00:08:02.011972 filer_replication.go:129 Configure sink to task_mock
+I0411 00:08:02.013930 filer_backup.go:127 start time is set to 2026-04-11 00:08:01.013905877 +0000 UTC m=-0.831981706
+E0411 00:08:02.017503 filer_pb_tail.go:98 process directory:"/source" event_notification:{new_entry:{name:"obj.txt"} new_parent_path:"/source"} ts_ns:1: create entry1 : replication context: RequestError: send request failed
+caused by: Put "https://s3.amazonaws.com/bucket/key": http://127.0.0.1:9333/437,03f591a3a2b95e?readDeleted=true: 404 Not Found: not found
+E0411 00:08:02.785376 filer_pb_tail.go:98 process directory:"/source" event_notification:{new_entry:{name:"obj.txt"} new_parent_path:"/source"} ts_ns:1: create entry1 : replication context: RequestError: send request failed
+caused by: Put "https://s3.amazonaws.com/bucket/key": http://127.0.0.1:9333/437,03f591a3a2b95e?readDeleted=true: 404 Not Found: not found
+--- FAIL: TestTaskFail2PassEdge_BrokenUnwrapChain404WithExtraContextIsIgnored (1.31s)
+    filer_backup_task_behavior_test.go:179: expected backup to complete for broken unwrap-chain 404 with extra context
+FAIL
+FAIL	github.com/seaweedfs/seaweedfs/weed/command	1.378s
+FAIL
+[FAIL2PASS_EDGE] FAIL (exit=1)
+
+Overall: FAIL (2 groups failed)

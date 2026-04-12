@@ -1,0 +1,57 @@
+{
+  "task": "rancher__rancher_1757a541_471379ae",
+  "trial_name": "rancher__rancher_1757a541_471379__fr3kXwQ",
+  "agent": "openclaw",
+  "model": "z-ai/glm-5",
+  "model_provider": "openai",
+  "start_time": "2026-04-10T22:09:53.749492Z",
+  "episode_count": 7,
+  "episodes_jsonl_path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\rancher__rancher_1757a541_471379__fr3kXwQ\\episode_exports\\episodes.jsonl",
+  "trajectory_path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\rancher__rancher_1757a541_471379__fr3kXwQ\\agent\\trajectory.json",
+  "openclaw_session_path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\rancher__rancher_1757a541_471379__fr3kXwQ\\agent\\openclaw-session.jsonl",
+  "episodes": [
+    {
+      "episode": "episode-0",
+      "message_count": 2,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\rancher__rancher_1757a541_471379__fr3kXwQ\\episode_exports\\0001_episode-0.json"
+    },
+    {
+      "episode": "episode-1",
+      "message_count": 3,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\rancher__rancher_1757a541_471379__fr3kXwQ\\episode_exports\\0002_episode-1.json"
+    },
+    {
+      "episode": "episode-2",
+      "message_count": 5,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\rancher__rancher_1757a541_471379__fr3kXwQ\\episode_exports\\0003_episode-2.json"
+    },
+    {
+      "episode": "episode-3",
+      "message_count": 6,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\rancher__rancher_1757a541_471379__fr3kXwQ\\episode_exports\\0004_episode-3.json"
+    },
+    {
+      "episode": "episode-4",
+      "message_count": 8,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\rancher__rancher_1757a541_471379__fr3kXwQ\\episode_exports\\0005_episode-4.json"
+    },
+    {
+      "episode": "episode-5",
+      "message_count": 9,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\rancher__rancher_1757a541_471379__fr3kXwQ\\episode_exports\\0006_episode-5.json"
+    },
+    {
+      "episode": "episode-6",
+      "message_count": 11,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\rancher__rancher_1757a541_471379__fr3kXwQ\\episode_exports\\0007_episode-6.json"
+    }
+  ],
+  "result": "0.0"
+}

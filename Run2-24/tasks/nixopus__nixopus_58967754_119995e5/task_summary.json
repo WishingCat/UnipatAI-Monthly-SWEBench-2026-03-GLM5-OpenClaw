@@ -1,0 +1,9 @@
+﻿{
+    "task":  "nixopus__nixopus_58967754_119995e5",
+    "status":  "COMPLETE_FAIL",
+    "trial_name":  "nixopus__nixopus_58967754_119995__YegWkLR",
+    "episode_count":  8,
+    "result":  "0.0",
+    "source_job_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30",
+    "source_trial_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\nixopus__nixopus_58967754_119995__YegWkLR"
+}

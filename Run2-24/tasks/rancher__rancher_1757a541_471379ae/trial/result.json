@@ -1,0 +1,103 @@
+{
+    "id": "75654746-7804-4c6a-813a-eb7421e65b9b",
+    "task_name": "rancher__rancher_1757a541_471379ae",
+    "trial_name": "rancher__rancher_1757a541_471379__fr3kXwQ",
+    "trial_uri": "file:///T:/AgentProjects/SWEBench/jobs/monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30/rancher__rancher_1757a541_471379__fr3kXwQ",
+    "task_id": {
+        "path": "T:\\AgentProjects\\SWEBench\\dataset_non_alpine_pending\\rancher__rancher_1757a541_471379ae"
+    },
+    "source": "dataset_non_alpine_pending",
+    "task_checksum": "8fd991880297c0ebefcc311645a0f389970e77239ef9517016296332bbff7d12",
+    "config": {
+        "task": {
+            "path": "T:\\AgentProjects\\SWEBench\\dataset_non_alpine_pending\\rancher__rancher_1757a541_471379ae",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "dataset_non_alpine_pending"
+        },
+        "trial_name": "rancher__rancher_1757a541_471379__fr3kXwQ",
+        "trials_dir": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "openclaw",
+            "import_path": null,
+            "model_name": "openai/z-ai/glm-5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {
+                "context_window": 131072,
+                "max_tokens": 8192
+            },
+            "env": {
+                "OPENAI_API_KEY": "sk-bd614864fdaae531ac71f48a3069981bb9fa7b34064fe696c37d75b32ac54b3f",
+                "OPENAI_BASE_URL": "https://openai.sufy.com/v1"
+            }
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": false,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "fc22a7cb-5ab0-4e42-830a-c5e948aae42b"
+    },
+    "agent_info": {
+        "name": "openclaw",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 18745,
+        "n_cache_tokens": 37438,
+        "n_output_tokens": 656,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-04-10T22:09:53.749492Z",
+    "finished_at": "2026-04-10T22:25:11.465728Z",
+    "environment_setup": {
+        "started_at": "2026-04-10T22:11:26.873046Z",
+        "finished_at": "2026-04-10T22:15:21.199674Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-04-10T22:15:21.199690Z",
+        "finished_at": "2026-04-10T22:18:14.316806Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-04-10T22:18:14.316870Z",
+        "finished_at": "2026-04-10T22:19:56.387571Z"
+    },
+    "verifier": {
+        "started_at": "2026-04-10T22:19:56.387619Z",
+        "finished_at": "2026-04-10T22:25:05.565048Z"
+    }
+}

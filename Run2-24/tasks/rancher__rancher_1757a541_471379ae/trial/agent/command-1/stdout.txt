@@ -1,0 +1,680 @@
+{
+  "payloads": [
+    {
+      "text": "The workspace is empty. I'll implement the GlobalRole reconciliation controller from scratch, following all the requirements. Let me create a complete implementation:",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 92387,
+    "agentMeta": {
+      "sessionId": "88246a88-8782-4825-b237-a4e2af435a0b",
+      "provider": "openai",
+      "model": "z-ai/glm-5",
+      "usage": {
+        "input": 18745,
+        "output": 656,
+        "cacheRead": 37438,
+        "total": 19
+      },
+      "lastCallUsage": {
+        "input": 0,
+        "output": 19,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 19
+      }
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1775859505072,
+      "sessionId": "88246a88-8782-4825-b237-a4e2af435a0b",
+      "sessionKey": "agent:main:main",
+      "provider": "openai",
+      "model": "z-ai/glm-5",
+      "workspaceDir": "/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 25956,
+        "projectContextChars": 11934,
+        "nonProjectContextChars": 14022
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 8015,
+          "injectedChars": 8015,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1699,
+          "injectedChars": 1699,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 889,
+          "injectedChars": 889,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 422,
+          "injectedChars": 422,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/workspace/USER.md",
+          "missing": false,
+          "rawChars": 490,
+          "injectedChars": 490,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 171,
+          "injectedChars": 171,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/workspace/BOOTSTRAP.md",
+          "missing": true,
+          "rawChars": 0,
+          "injectedChars": 46,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 3191,
+        "entries": [
+          {
+            "name": "healthcheck",
+            "blockChars": 507
+          },
+          {
+            "name": "node-connect",
+            "blockChars": 557
+          },
+          {
+            "name": "openai-whisper-api",
+            "blockChars": 265
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 775
+          },
+          {
+            "name": "tmux",
+            "blockChars": 271
+          },
+          {
+            "name": "weather",
+            "blockChars": 432
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 29501,
+        "entries": [
+          {
+            "name": "read",
+            "summaryChars": 298,
+            "schemaChars": 304,
+            "propertiesCount": 3
+          },
+          {
+            "name": "edit",
+            "summaryChars": 326,
+            "schemaChars": 834,
+            "propertiesCount": 2
+          },
+          {
+            "name": "write",
+            "summaryChars": 127,
+            "schemaChars": 225,
+            "propertiesCount": 2
+          },
+          {
+            "name": "apply_patch",
+            "summaryChars": 132,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "exec",
+            "summaryChars": 539,
+            "schemaChars": 1098,
+            "propertiesCount": 12
+          },
+          {
+            "name": "process",
+            "summaryChars": 416,
+            "schemaChars": 961,
+            "propertiesCount": 12
+          },
+          {
+            "name": "canvas",
+            "summaryChars": 106,
+            "schemaChars": 661,
+            "propertiesCount": 18
+          },
+          {
+            "name": "nodes",
+            "summaryChars": 118,
+            "schemaChars": 1589,
+            "propertiesCount": 32
+          },
+          {
+            "name": "cron",
+            "summaryChars": 3726,
+            "schemaChars": 6700,
+            "propertiesCount": 13
+          },
+          {
+            "name": "message",
+            "summaryChars": 89,
+            "schemaChars": 5613,
+            "propertiesCount": 105
+          },
+          {
+            "name": "tts",
+            "summaryChars": 152,
+            "schemaChars": 223,
+            "propertiesCount": 2
+          },
+          {
+            "name": "image_generate",
+            "summaryChars": 387,
+            "schemaChars": 1195,
+            "propertiesCount": 10
+          },
+          {
+            "name": "video_generate",
+            "summaryChars": 225,
+            "schemaChars": 1650,
+            "propertiesCount": 14
+          },
+          {
+            "name": "gateway",
+            "summaryChars": 494,
+            "schemaChars": 497,
+            "propertiesCount": 12
+          },
+          {
+            "name": "agents_list",
+            "summaryChars": 118,
+            "schemaChars": 33,
+            "propertiesCount": 0
+          },
+          {
+            "name": "update_plan",
+            "summaryChars": 251,
+            "schemaChars": 575,
+            "propertiesCount": 2
+          },
+          {
+            "name": "sessions_list",
+            "summaryChars": 177,
+            "schemaChars": 212,
+            "propertiesCount": 4
+          },
+          {
+            "name": "sessions_history",
+            "summaryChars": 180,
+            "schemaChars": 161,
+            "propertiesCount": 3
+          },
+          {
+            "name": "sessions_send",
+            "summaryChars": 208,
+            "schemaChars": 274,
+            "propertiesCount": 5
+          },
+          {
+            "name": "sessions_yield",
+            "summaryChars": 97,
+            "schemaChars": 60,
+            "propertiesCount": 1
+          },
+          {
+            "name": "sessions_spawn",
+            "summaryChars": 302,
+            "schemaChars": 1333,
+            "propertiesCount": 18
+          },
+          {
+            "name": "subagents",
+            "summaryChars": 105,
+            "schemaChars": 191,
+            "propertiesCount": 4
+          },
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search",
+            "summaryChars": 93,
+            "schemaChars": 446,
+            "propertiesCount": 4
+          },
+          {
+            "name": "web_fetch",
+            "summaryChars": 129,
+            "schemaChars": 374,
+            "propertiesCount": 3
+          },
+          {
+            "name": "image",
+            "summaryChars": 201,
+            "schemaChars": 342,
+            "propertiesCount": 6
+          },
+          {
+            "name": "pdf",
+            "summaryChars": 275,
+            "schemaChars": 400,
+            "propertiesCount": 6
+          },
+          {
+            "name": "browser",
+            "summaryChars": 1066,
+            "schemaChars": 2799,
+            "propertiesCount": 48
+          },
+          {
+            "name": "memory_search",
+            "summaryChars": 385,
+            "schemaChars": 260,
+            "propertiesCount": 4
+          },
+          {
+            "name": "memory_get",
+            "summaryChars": 207,
+            "schemaChars": 249,
+            "propertiesCount": 4
+          }
+        ]
+      }
+    },
+    "stopReason": "stop"
+  }
+}
+✓ Session log found: 88246a88-8782-4825-b237-a4e2af435a0b
+<<<SESSION_START>>>
+{"type":"session","version":3,"id":"88246a88-8782-4825-b237-a4e2af435a0b","timestamp":"2026-04-10T22:18:25.076Z","cwd":"/workspace"}
+{"type":"model_change","id":"76e02d2c","parentId":null,"timestamp":"2026-04-10T22:18:25.082Z","provider":"openai","modelId":"z-ai/glm-5"}
+{"type":"thinking_level_change","id":"0d1295ab","parentId":"76e02d2c","timestamp":"2026-04-10T22:18:25.082Z","thinkingLevel":"off"}
+{"type":"custom","customType":"model-snapshot","data":{"timestamp":1775859505088,"provider":"openai","modelApi":"openai-completions","modelId":"z-ai/glm-5"},"id":"4affb14b","parentId":"0d1295ab","timestamp":"2026-04-10T22:18:25.088Z"}
+{"type":"message","id":"6d515802","parentId":"4affb14b","timestamp":"2026-04-10T22:18:25.124Z","message":{"role":"user","content":[{"type":"text","text":"Implement a GlobalRole reconciliation update in the management auth globalroles controller.\n\nRequirements:\n\n1. Reconciliation entrypoints must always execute reconciliation logic.\n- `Create` and `Updated` must still reconcile backing RBAC resources when a watch event re-enqueues a GlobalRole whose `status.observedGeneration` already matches `metadata.generation`.\n- Do not short-circuit reconciliation only because generation did not change.\n\n2. Status writes must be end-of-pass and minimal.\n- Within one reconciliation pass, persist GlobalRole status at most once.\n- Do not write transient `InProgress` or `Terminating` summary values during normal reconciliation.\n- Compute summary from the conditions produced by the current pass: `Completed` only when every condition is `True`; otherwise `Error`.\n- If the newly computed conditions and summary are unchanged and the observed generation already matches the current generation, skip `UpdateStatus`.\n\n3. Removal behavior.\n- `Remove` must rely on owner-reference cleanup and must not write a terminating status update.\n\n4. Fleet workspace reconciliation must contribute status.\n- Fleet workspace permission reconciliation must record a GlobalRole condition with:\n  - `type = FleetWorkspaceRolePermissionsReconciled`\n  - `reason = FleetWorkspaceRolePermissionsReconciled`\n  - `status = True` when both fleet reconciliation branches succeed\n  - `status = False` when either branch fails\n\n5. Preserve existing reconciliation intent.\n- Keep ClusterRole and namespaced Role reconciliation behavior intact (including owner-label maintenance and stale role cleanup).\n"}],"timestamp":1775859505121}}
+{"type":"message","id":"a1c611f9","parentId":"6d515802","timestamp":"2026-04-10T22:18:34.158Z","message":{"role":"assistant","content":[{"type":"thinking","thinking":"The user wants me to implement a GlobalRole reconciliation update in a management auth globalroles controller. This seems like a Kubernetes controller implementation task. Let me first explore the codebase to understand the existing structure and find the relevant controller code.\n\nI should:\n1. First explore the workspace to find the relevant files\n2. Understand the current implementation\n3. Implement the changes according to the requirements\n\nLet me start by exploring the workspace structure.","thinkingSignature":"reasoning_content"},{"type":"toolCall","id":"tool-ddc268429cf14d4ba1167f5088e6020e","name":"exec","arguments":{"command":"find /workspace -type f -name \"*.go\" | head -50"}}],"api":"openai-completions","provider":"openai","model":"z-ai/glm-5","usage":{"input":18497,"output":201,"cacheRead":139,"cacheWrite":0,"totalTokens":18837,"cost":{"input":0,"output":0,"cacheRead":0,"cacheWrite":0,"total":0}},"stopReason":"toolUse","timestamp":1775859505125,"responseId":"chatcmpl-6060db1953274355b7b042d7e4a62f38"}}
+{"type":"message","id":"979b2eb3","parentId":"a1c611f9","timestamp":"2026-04-10T22:18:34.345Z","message":{"role":"toolResult","toolCallId":"tool-ddc268429cf14d4ba1167f5088e6020e","toolName":"exec","content":[{"type":"text","text":"(no output)"}],"details":{"status":"completed","exitCode":0,"durationMs":7,"aggregated":"","cwd":"/workspace"},"isError":false,"timestamp":1775859514344}}
+{"type":"message","id":"dff9beb5","parentId":"979b2eb3","timestamp":"2026-04-10T22:18:38.937Z","message":{"role":"assistant","content":[{"type":"thinking","thinking":"No Go files found yet. Let me check the workspace structure more thoroughly.","thinkingSignature":"reasoning_content"},{"type":"toolCall","id":"tool-b715b59d6dc240d4b7ad4d9a645c770c","name":"exec","arguments":{"command":"ls -la /workspace"}}],"api":"openai-completions","provider":"openai","model":"z-ai/glm-5","usage":{"input":33,"output":45,"cacheRead":18634,"cacheWrite":0,"totalTokens":18712,"cost":{"input":0,"output":0,"cacheRead":0,"cacheWrite":0,"total":0}},"stopReason":"toolUse","timestamp":1775859514348,"responseId":"chatcmpl-142fde66594f4250a03c5640015cbffc"}}
+{"type":"message","id":"e3ba1f8c","parentId":"dff9beb5","timestamp":"2026-04-10T22:18:38.956Z","message":{"role":"toolResult","toolCallId":"tool-b715b59d6dc240d4b7ad4d9a645c770c","toolName":"exec","content":[{"type":"text","text":"total 36\ndrwxr-xr-x 2 root root 4096 Apr 10 22:18 .\ndrwxr-xr-x 1 root root 4096 Apr 10 22:18 ..\n-rw-r--r-- 1 root root 8081 Apr 10 22:18 AGENTS.md\n-rw-r--r-- 1 root root  173 Apr 10 22:18 HEARTBEAT.md\n-rw-r--r-- 1 root root  426 Apr 10 22:18 IDENTITY.md\n-rw-r--r-- 1 root root 1709 Apr 10 22:18 SOUL.md\n-rw-r--r-- 1 root root  900 Apr 10 22:18 TOOLS.md\n-rw-r--r-- 1 root root  494 Apr 10 22:18 USER.md"}],"details":{"status":"completed","exitCode":0,"durationMs":7,"aggregated":"total 36\ndrwxr-xr-x 2 root root 4096 Apr 10 22:18 .\ndrwxr-xr-x 1 root root 4096 Apr 10 22:18 ..\n-rw-r--r-- 1 root root 8081 Apr 10 22:18 AGENTS.md\n-rw-r--r-- 1 root root  173 Apr 10 22:18 HEARTBEAT.md\n-rw-r--r-- 1 root root  426 Apr 10 22:18 IDENTITY.md\n-rw-r--r-- 1 root root 1709 Apr 10 22:18 SOUL.md\n-rw-r--r-- 1 root root  900 Apr 10 22:18 TOOLS.md\n-rw-r--r-- 1 root root  494 Apr 10 22:18 USER.md","cwd":"/workspace"},"isError":false,"timestamp":1775859518955}}
+{"type":"message","id":"c3247d4b","parentId":"e3ba1f8c","timestamp":"2026-04-10T22:18:51.903Z","message":{"role":"assistant","content":[{"type":"thinking","thinking":"The workspace is empty except for the standard OpenClaw files. There's no existing codebase to work with. The user is asking me to implement a GlobalRole reconciliation update in a management auth globalroles controller - this sounds like a Kubernetes controller pattern, likely from KCP (Kubernetes Cloud Platform) or a similar multi-tenancy system.\n\nSince there's no existing code, I need to create this controller from scratch. Let me implement a well-structured GlobalRole controller that follows all the requirements:\n\n1. Reconciliation always executes (no generation-based short-circuiting for Create/Update)\n2. Status writes are end-of-pass and minimal\n3. Remove uses owner-reference cleanup without terminating status\n4. Fleet workspace reconciliation contributes status conditions\n5. Preserve existing ClusterRole/Role reconciliation behavior\n\nLet me create the controller implementation.","thinkingSignature":"reasoning_content"},{"type":"text","text":"The workspace is empty. I'll implement the GlobalRole reconciliation controller from scratch, following all the requirements. Let me create a complete implementation:"},{"type":"toolCall","id":"tool-658e5200ca404b9ebfe114f5a1d10eb7","name":"exec","arguments":{"command":"mkdir -p /workspace/pkg/reconciler/management/globalroles"}}],"api":"openai-completions","provider":"openai","model":"z-ai/glm-5","usage":{"input":215,"output":391,"cacheRead":18665,"cacheWrite":0,"totalTokens":19271,"cost":{"input":0,"output":0,"cacheRead":0,"cacheWrite":0,"total":0}},"stopReason":"toolUse","timestamp":1775859518970,"responseId":"chatcmpl-43894d0d49ff49508f0790c41065f9b5"}}
+{"type":"message","id":"024d5f8c","parentId":"c3247d4b","timestamp":"2026-04-10T22:18:51.921Z","message":{"role":"toolResult","toolCallId":"tool-658e5200ca404b9ebfe114f5a1d10eb7","toolName":"exec","content":[{"type":"text","text":"(no output)"}],"details":{"status":"completed","exitCode":0,"durationMs":4,"aggregated":"","cwd":"/workspace"},"isError":false,"timestamp":1775859531920}}
+{"type":"message","id":"010d97f5","parentId":"024d5f8c","timestamp":"2026-04-10T22:19:55.805Z","message":{"role":"assistant","content":[{"type":"thinking","thinking":"Now I'll create the main controller implementation with all the required features.","thinkingSignature":"reasoning_content"}],"api":"openai-completions","provider":"openai","model":"z-ai/glm-5","usage":{"input":0,"output":19,"cacheRead":0,"cacheWrite":0,"totalTokens":19,"cost":{"input":0,"output":0,"cacheRead":0,"cacheWrite":0,"total":0}},"stopReason":"stop","timestamp":1775859531946,"responseId":"chatcmpl-428926231669485d8301cf9b6a8d8b77"}}
+{"type":"custom","customType":"openclaw:bootstrap-context:full","data":{"timestamp":1775859595822,"runId":"88246a88-8782-4825-b237-a4e2af435a0b","sessionId":"88246a88-8782-4825-b237-a4e2af435a0b"},"id":"56586fd7","parentId":"010d97f5","timestamp":"2026-04-10T22:19:55.822Z"}
+
+<<<SESSION_END>>>
+{
+  "payloads": [
+    {
+      "text": "The workspace is empty. I'll implement the GlobalRole reconciliation controller from scratch, following all the requirements. Let me create a complete implementation:",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 92387,
+    "agentMeta": {
+      "sessionId": "88246a88-8782-4825-b237-a4e2af435a0b",
+      "provider": "openai",
+      "model": "z-ai/glm-5",
+      "usage": {
+        "input": 18745,
+        "output": 656,
+        "cacheRead": 37438,
+        "total": 19
+      },
+      "lastCallUsage": {
+        "input": 0,
+        "output": 19,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 19
+      }
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1775859505072,
+      "sessionId": "88246a88-8782-4825-b237-a4e2af435a0b",
+      "sessionKey": "agent:main:main",
+      "provider": "openai",
+      "model": "z-ai/glm-5",
+      "workspaceDir": "/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 25956,
+        "projectContextChars": 11934,
+        "nonProjectContextChars": 14022
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 8015,
+          "injectedChars": 8015,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1699,
+          "injectedChars": 1699,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 889,
+          "injectedChars": 889,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 422,
+          "injectedChars": 422,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/workspace/USER.md",
+          "missing": false,
+          "rawChars": 490,
+          "injectedChars": 490,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 171,
+          "injectedChars": 171,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/workspace/BOOTSTRAP.md",
+          "missing": true,
+          "rawChars": 0,
+          "injectedChars": 46,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 3191,
+        "entries": [
+          {
+            "name": "healthcheck",
+            "blockChars": 507
+          },
+          {
+            "name": "node-connect",
+            "blockChars": 557
+          },
+          {
+            "name": "openai-whisper-api",
+            "blockChars": 265
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 775
+          },
+          {
+            "name": "tmux",
+            "blockChars": 271
+          },
+          {
+            "name": "weather",
+            "blockChars": 432
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 29501,
+        "entries": [
+          {
+            "name": "read",
+            "summaryChars": 298,
+            "schemaChars": 304,
+            "propertiesCount": 3
+          },
+          {
+            "name": "edit",
+            "summaryChars": 326,
+            "schemaChars": 834,
+            "propertiesCount": 2
+          },
+          {
+            "name": "write",
+            "summaryChars": 127,
+            "schemaChars": 225,
+            "propertiesCount": 2
+          },
+          {
+            "name": "apply_patch",
+            "summaryChars": 132,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "exec",
+            "summaryChars": 539,
+            "schemaChars": 1098,
+            "propertiesCount": 12
+          },
+          {
+            "name": "process",
+            "summaryChars": 416,
+            "schemaChars": 961,
+            "propertiesCount": 12
+          },
+          {
+            "name": "canvas",
+            "summaryChars": 106,
+            "schemaChars": 661,
+            "propertiesCount": 18
+          },
+          {
+            "name": "nodes",
+            "summaryChars": 118,
+            "schemaChars": 1589,
+            "propertiesCount": 32
+          },
+          {
+            "name": "cron",
+            "summaryChars": 3726,
+            "schemaChars": 6700,
+            "propertiesCount": 13
+          },
+          {
+            "name": "message",
+            "summaryChars": 89,
+            "schemaChars": 5613,
+            "propertiesCount": 105
+          },
+          {
+            "name": "tts",
+            "summaryChars": 152,
+            "schemaChars": 223,
+            "propertiesCount": 2
+          },
+          {
+            "name": "image_generate",
+            "summaryChars": 387,
+            "schemaChars": 1195,
+            "propertiesCount": 10
+          },
+          {
+            "name": "video_generate",
+            "summaryChars": 225,
+            "schemaChars": 1650,
+            "propertiesCount": 14
+          },
+          {
+            "name": "gateway",
+            "summaryChars": 494,
+            "schemaChars": 497,
+            "propertiesCount": 12
+          },
+          {
+            "name": "agents_list",
+            "summaryChars": 118,
+            "schemaChars": 33,
+            "propertiesCount": 0
+          },
+          {
+            "name": "update_plan",
+            "summaryChars": 251,
+            "schemaChars": 575,
+            "propertiesCount": 2
+          },
+          {
+            "name": "sessions_list",
+            "summaryChars": 177,
+            "schemaChars": 212,
+            "propertiesCount": 4
+          },
+          {
+            "name": "sessions_history",
+            "summaryChars": 180,
+            "schemaChars": 161,
+            "propertiesCount": 3
+          },
+          {
+            "name": "sessions_send",
+            "summaryChars": 208,
+            "schemaChars": 274,
+            "propertiesCount": 5
+          },
+          {
+            "name": "sessions_yield",
+            "summaryChars": 97,
+            "schemaChars": 60,
+            "propertiesCount": 1
+          },
+          {
+            "name": "sessions_spawn",
+            "summaryChars": 302,
+            "schemaChars": 1333,
+            "propertiesCount": 18
+          },
+          {
+            "name": "subagents",
+            "summaryChars": 105,
+            "schemaChars": 191,
+            "propertiesCount": 4
+          },
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search",
+            "summaryChars": 93,
+            "schemaChars": 446,
+            "propertiesCount": 4
+          },
+          {
+            "name": "web_fetch",
+            "summaryChars": 129,
+            "schemaChars": 374,
+            "propertiesCount": 3
+          },
+          {
+            "name": "image",
+            "summaryChars": 201,
+            "schemaChars": 342,
+            "propertiesCount": 6
+          },
+          {
+            "name": "pdf",
+            "summaryChars": 275,
+            "schemaChars": 400,
+            "propertiesCount": 6
+          },
+          {
+            "name": "browser",
+            "summaryChars": 1066,
+            "schemaChars": 2799,
+            "propertiesCount": 48
+          },
+          {
+            "name": "memory_search",
+            "summaryChars": 385,
+            "schemaChars": 260,
+            "propertiesCount": 4
+          },
+          {
+            "name": "memory_get",
+            "summaryChars": 207,
+            "schemaChars": 249,
+            "propertiesCount": 4
+          }
+        ]
+      }
+    },
+    "stopReason": "stop"
+  }
+}
+

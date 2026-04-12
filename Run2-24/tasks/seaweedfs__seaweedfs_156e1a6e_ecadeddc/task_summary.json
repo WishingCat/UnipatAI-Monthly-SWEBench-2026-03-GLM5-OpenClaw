@@ -1,0 +1,9 @@
+﻿{
+    "task":  "seaweedfs__seaweedfs_156e1a6e_ecadeddc",
+    "status":  "COMPLETE_FAIL",
+    "trial_name":  "seaweedfs__seaweedfs_156e1a6e_ec__YFQq47u",
+    "episode_count":  78,
+    "result":  "0.0",
+    "source_job_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30",
+    "source_trial_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\seaweedfs__seaweedfs_156e1a6e_ec__YFQq47u"
+}

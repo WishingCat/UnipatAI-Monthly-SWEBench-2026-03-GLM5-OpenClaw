@@ -1,0 +1,26 @@
+[REGRESSION_DIRECT] START globalrole owner label update is preserved
+ok  	github.com/rancher/rancher/pkg/controllers/management/auth/globalroles	0.099s
+[REGRESSION_DIRECT] PASS globalrole owner label update is preserved
+[FAIL2PASS_CORE] START watch-triggered reconcile and remove status semantics
+--- FAIL: TestTBFail2PassCreateReconcilesOnStatusOnlyEventWithoutStatusWrite (0.00s)
+    controller.go:97: missing call(s) to *fake.MockNonNamespacedCacheInterface[*k8s.io/api/rbac/v1.ClusterRole].Get(is equal to cattle-globalrole-tb-watch-reconcile (string)) /app/rancher/pkg/controllers/management/auth/globalroles/globalrole_tb_test.go:106
+    controller.go:97: missing call(s) to *fake.MockCacheInterface[*k8s.io/api/rbac/v1.Role].List(is equal to  (string), is anything) /app/rancher/pkg/controllers/management/auth/globalroles/globalrole_tb_test.go:107
+    controller.go:97: aborting test due to missing call(s)
+--- FAIL: TestTBFail2PassRemoveDoesNotWriteStatus (0.00s)
+    globalrole_handler.go:383: Unexpected call to *fake.MockNonNamespacedControllerInterface[*github.com/rancher/rancher/pkg/apis/management.cattle.io/v3.GlobalRole,*github.com/rancher/rancher/pkg/apis/management.cattle.io/v3.GlobalRoleList].UpdateStatus([&{{ } {tb-non-admin      0 0001-01-01 00:00:00 +0000 UTC <nil> <nil> map[] map[] [] [] []}   [] false false [] map[] <nil> {0 2026-04-10T22:25:00Z Terminating []}}]) at /app/rancher/pkg/controllers/management/auth/globalroles/globalrole_handler.go:383 because: 
+        expected call at /app/rancher/pkg/controllers/management/auth/globalroles/globalrole_tb_test.go:126 has already been called the max number of times
+FAIL
+FAIL	github.com/rancher/rancher/pkg/controllers/management/auth/globalroles	0.091s
+FAIL
+[FAIL2PASS_CORE] FAIL watch-triggered reconcile and remove status semantics (exit=1)
+[FAIL2PASS_EDGE] START fleet workspace errors are reflected in a condition
+--- FAIL: TestTBFail2PassFleetWorkspaceErrorsAreRecordedInConditions (0.00s)
+    globalrole_tb_test.go:149: 
+        	Error Trace:	/app/rancher/pkg/controllers/management/auth/globalroles/globalrole_tb_test.go:149
+        	Error:      	"[]" should have 1 item(s), but has 0
+        	Test:       	TestTBFail2PassFleetWorkspaceErrorsAreRecordedInConditions
+FAIL
+FAIL	github.com/rancher/rancher/pkg/controllers/management/auth/globalroles	0.093s
+FAIL
+[FAIL2PASS_EDGE] FAIL fleet workspace errors are reflected in a condition (exit=1)
+Final reward: 0 (failures=2)

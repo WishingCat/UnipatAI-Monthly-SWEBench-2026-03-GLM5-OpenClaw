@@ -1,0 +1,21 @@
+[REGRESSION_DIRECT] Running
+ok  	github.com/raghavyuva/nixopus-api/internal/features/user/tests	0.003s
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Running
+--- FAIL: TestTBGetUserOrganizationsUsesMemberTable (0.00s)
+    member_table_behavior_test.go:180: unexpected error: relation "organization_users" does not exist
+FAIL
+FAIL	github.com/raghavyuva/nixopus-api/internal/features/user/storage	0.003s
+FAIL
+[FAIL2PASS_CORE] FAIL (exit=1)
+[FAIL2PASS_EDGE] Running
+--- FAIL: TestTBBetterAuthContracts (0.00s)
+    --- FAIL: TestTBBetterAuthContracts/organization_membership_model_uses_member_table_contract (0.00s)
+        better_auth_contract_test.go:22: OrganizationUsers must map to member table, got tag: table:organization_users,alias:ou
+    --- FAIL: TestTBBetterAuthContracts/user_relations_and_compatibility_json_follow_Better_Auth (0.00s)
+        better_auth_contract_test.go:43: User.Organizations must use member m2m mapping, got: m2m:organization_users,join:User=Organization
+FAIL
+FAIL	github.com/raghavyuva/nixopus-api/internal/types	0.003s
+FAIL
+[FAIL2PASS_EDGE] FAIL (exit=1)
+Overall result: FAIL

@@ -1,0 +1,18 @@
+[REGRESSION_DIRECT] Running xcode existing validation behavior
+ok  	github.com/rudrankriyam/App-Store-Connect-CLI/tbtests	0.011s
+[REGRESSION_DIRECT] PASS - xcode existing validation behavior
+[FAIL2PASS_CORE] Running xcode version command contract
+--- FAIL: TestTBFail2PassVersionCommandContract (0.00s)
+    xcode_version_contract_test.go:152: expected xcode long help to contain "asc xcode version view", got "Local Xcode archive/export helpers.\n\nThese commands wrap local xcodebuild flows and are visible on every platform so\ndocs and workflows stay consistent, but execution is supported on macOS only.\n\nUse these commands to produce deterministic .xcarchive and .ipa paths that can\nbe passed directly into asc upload and publish commands.\n\nExamples:\n  asc xcode archive --workspace App.xcworkspace --scheme App --archive-path .asc/artifacts/App.xcarchive --output json\n  asc xcode export --archive-path .asc/artifacts/App.xcarchive --export-options ExportOptions.plist --ipa-path .asc/artifacts/App.ipa --output json"
+FAIL
+FAIL	github.com/rudrankriyam/App-Store-Connect-CLI/tbtests	0.008s
+FAIL
+[FAIL2PASS_CORE] FAIL - xcode version command contract
+[FAIL2PASS_EDGE] Running xcode version flag contract
+--- FAIL: TestTBFail2PassVersionFlagContract (0.00s)
+    xcode_version_contract_test.go:189: expected xcode version view command
+FAIL
+FAIL	github.com/rudrankriyam/App-Store-Connect-CLI/tbtests	0.008s
+FAIL
+[FAIL2PASS_EDGE] FAIL - xcode version flag contract
+One or more test groups failed.

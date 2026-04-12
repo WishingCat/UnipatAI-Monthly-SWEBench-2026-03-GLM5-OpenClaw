@@ -1,0 +1,67 @@
+[ENV] using go at /usr/local/go/bin/go
+go version go1.25.9 linux/amd64
+[REGRESSION_DIRECT] Running: silence flags keep no-project autoplan status behavior
+go: downloading github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
+go: downloading github.com/stretchr/testify v1.11.1
+go: downloading go.etcd.io/bbolt v1.4.3
+go: downloading go.uber.org/mock v0.6.0
+go: downloading github.com/hashicorp/hc-install v0.9.2
+go: downloading github.com/golang-jwt/jwt/v5 v5.3.1
+go: downloading github.com/go-test/deep v1.1.1
+go: downloading github.com/kr/pretty v0.3.1
+go: downloading github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc
+go: downloading github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2
+go: downloading github.com/kr/text v0.2.0
+go: downloading github.com/rogpeppe/go-internal v1.9.0
+go: downloading github.com/cloudflare/circl v1.6.3
+go: updates to go.mod needed; to update it:
+	go mod tidy
+[RETRY] go test attempt 1/3 failed for ^TestPlanCommandRunner_SilenceFlagsClearsPendingStatus$
+go: downloading github.com/hashicorp/hc-install v0.9.2
+go: downloading github.com/cloudflare/circl v1.6.3
+go: updates to go.mod needed; to update it:
+	go mod tidy
+[RETRY] go test attempt 2/3 failed for ^TestPlanCommandRunner_SilenceFlagsClearsPendingStatus$
+go: downloading github.com/hashicorp/hc-install v0.9.2
+go: downloading github.com/cloudflare/circl v1.6.3
+go: updates to go.mod needed; to update it:
+	go mod tidy
+[RETRY] go test attempt 3/3 failed for ^TestPlanCommandRunner_SilenceFlagsClearsPendingStatus$
+[REGRESSION_DIRECT] FAIL: silence flags keep no-project autoplan status behavior
+[FAIL2PASS_CORE] Running: autoplan fetches and propagates pull request status before building commands
+go: downloading github.com/hashicorp/hc-install v0.9.2
+go: downloading github.com/cloudflare/circl v1.6.3
+go: updates to go.mod needed; to update it:
+	go mod tidy
+[RETRY] go test attempt 1/3 failed for ^TestPlanCommandRunner_AutoplanPullStatusFetchedBeforeBuild_External$
+go: downloading github.com/hashicorp/hc-install v0.9.2
+go: downloading github.com/cloudflare/circl v1.6.3
+go: updates to go.mod needed; to update it:
+	go mod tidy
+[RETRY] go test attempt 2/3 failed for ^TestPlanCommandRunner_AutoplanPullStatusFetchedBeforeBuild_External$
+go: downloading github.com/hashicorp/hc-install v0.9.2
+go: downloading github.com/cloudflare/circl v1.6.3
+go: updates to go.mod needed; to update it:
+	go mod tidy
+[RETRY] go test attempt 3/3 failed for ^TestPlanCommandRunner_AutoplanPullStatusFetchedBeforeBuild_External$
+[FAIL2PASS_CORE] FAIL: autoplan fetches and propagates pull request status before building commands
+[FAIL2PASS_ERROR_HANDLING] Running: autoplan continues after pull status fetch error while keeping default-false status
+go: downloading github.com/hashicorp/hc-install v0.9.2
+go: downloading github.com/cloudflare/circl v1.6.3
+go: updates to go.mod needed; to update it:
+	go mod tidy
+[RETRY] go test attempt 1/3 failed for ^TestPlanCommandRunner_AutoplanPullStatusFetchErrorStillRuns_External$
+go: downloading github.com/hashicorp/hc-install v0.9.2
+go: downloading github.com/cloudflare/circl v1.6.3
+go: updates to go.mod needed; to update it:
+	go mod tidy
+[RETRY] go test attempt 2/3 failed for ^TestPlanCommandRunner_AutoplanPullStatusFetchErrorStillRuns_External$
+go: downloading github.com/hashicorp/hc-install v0.9.2
+go: downloading github.com/cloudflare/circl v1.6.3
+go: updates to go.mod needed; to update it:
+	go mod tidy
+[RETRY] go test attempt 3/3 failed for ^TestPlanCommandRunner_AutoplanPullStatusFetchErrorStillRuns_External$
+[FAIL2PASS_ERROR_HANDLING] FAIL: autoplan continues after pull status fetch error while keeping default-false status
+Passed groups: 0
+Failed groups: 3
+Final reward: 0

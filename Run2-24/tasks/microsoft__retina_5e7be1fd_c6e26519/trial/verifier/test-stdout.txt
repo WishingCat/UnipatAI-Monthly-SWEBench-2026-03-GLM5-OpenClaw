@@ -1,0 +1,28 @@
+[REGRESSION_DIRECT] existing pkg/config tests: START
+go: downloading golang.org/x/text v0.32.0
+go: downloading golang.org/x/sys v0.39.0
+go: downloading golang.org/x/term v0.38.0
+go: downloading golang.org/x/tools v0.39.0
+go: downloading golang.org/x/net v0.48.0
+ok  	github.com/microsoft/retina/pkg/config	0.020s
+[REGRESSION_DIRECT] existing pkg/config tests: PASS
+
+[FAIL2PASS_CORE] enableTCX runtime auto/off behavior: START
+2026/04/10 18:04:50 dataSamplingRate is not set, defaulting to 1
+FAIL: auto scenario returned error: config struct does not expose EnableTCX
+exit status 1
+[FAIL2PASS_CORE] enableTCX runtime auto/off behavior: FAIL (exit=1)
+
+[FAIL2PASS_EDGE] defaulting + Helm config rendering: START
+2026/04/10 18:04:50 dataSamplingRate is not set, defaulting to 1
+FAIL: empty scenario returned error: config struct does not expose EnableTCX
+exit status 1
+[FAIL2PASS_EDGE] defaulting + Helm config rendering: FAIL (exit=1)
+
+[FAIL2PASS_ERROR_HANDLING] invalid enableTCX rejects with descriptive error: START
+2026/04/10 18:04:50 dataSamplingRate is not set, defaulting to 1
+FAIL: invalid scenario expected error, got nil
+exit status 1
+[FAIL2PASS_ERROR_HANDLING] invalid enableTCX rejects with descriptive error: FAIL (exit=1)
+
+One or more test groups failed. reward=0
