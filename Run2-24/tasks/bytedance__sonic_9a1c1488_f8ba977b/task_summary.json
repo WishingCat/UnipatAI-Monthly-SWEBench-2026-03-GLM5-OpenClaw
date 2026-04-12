@@ -1,0 +1,9 @@
+﻿{
+    "task":  "bytedance__sonic_9a1c1488_f8ba977b",
+    "status":  "COMPLETE_FAIL",
+    "trial_name":  "bytedance__sonic_9a1c1488_f8ba97__tZgicgp",
+    "episode_count":  82,
+    "result":  "0.0",
+    "source_job_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30",
+    "source_trial_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\bytedance__sonic_9a1c1488_f8ba97__tZgicgp"
+}

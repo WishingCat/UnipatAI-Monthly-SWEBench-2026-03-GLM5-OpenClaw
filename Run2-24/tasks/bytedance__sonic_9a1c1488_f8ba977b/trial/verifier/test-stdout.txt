@@ -1,0 +1,33 @@
+[REGRESSION_DIRECT] number parity regressions running
+# github.com/bytedance/sonic/issue_test_test [github.com/bytedance/sonic/issue_test.test]
+./issue_mismatch_continue_test.go:114:9: invalid map key type []int
+./issue_mismatch_continue_test.go:190:24: undefined: reflect
+./issue_mismatch_continue_test.go:190:59: undefined: sonic.CompileOptions
+FAIL	github.com/bytedance/sonic/issue_test [build failed]
+FAIL
+[REGRESSION_DIRECT] number parity regressions fail
+[FAIL2PASS_CORE] string-tag mismatch continuation running
+# github.com/bytedance/sonic/issue_test_test [github.com/bytedance/sonic/issue_test.test]
+./issue_mismatch_continue_test.go:114:9: invalid map key type []int
+./issue_mismatch_continue_test.go:190:24: undefined: reflect
+./issue_mismatch_continue_test.go:190:59: undefined: sonic.CompileOptions
+FAIL	github.com/bytedance/sonic/issue_test [build failed]
+FAIL
+[FAIL2PASS_CORE] string-tag mismatch continuation fail
+[FAIL2PASS_EDGE] integer range mismatch continuation running
+# github.com/bytedance/sonic/issue_test_test [github.com/bytedance/sonic/issue_test.test]
+./issue_mismatch_continue_test.go:114:9: invalid map key type []int
+./issue_mismatch_continue_test.go:190:24: undefined: reflect
+./issue_mismatch_continue_test.go:190:59: undefined: sonic.CompileOptions
+FAIL	github.com/bytedance/sonic/issue_test [build failed]
+FAIL
+[FAIL2PASS_EDGE] integer range mismatch continuation fail
+[FAIL2PASS_ERROR_HANDLING] unsupported map-path continuation without panic running
+# github.com/bytedance/sonic/issue_test_test [github.com/bytedance/sonic/issue_test.test]
+./issue_mismatch_continue_test.go:114:9: invalid map key type []int
+./issue_mismatch_continue_test.go:190:24: undefined: reflect
+./issue_mismatch_continue_test.go:190:59: undefined: sonic.CompileOptions
+FAIL	github.com/bytedance/sonic/issue_test [build failed]
+FAIL
+[FAIL2PASS_ERROR_HANDLING] unsupported map-path continuation without panic fail
+overall: fail (4 groups failed)
