@@ -1,0 +1,88 @@
+﻿{
+    "destination":  "T:\\AgentProjects\\Temp\\Run2-24",
+    "selected_task_count":  24,
+    "total_files":  3450,
+    "total_size_mb":  2388.61,
+    "largest_files":  [
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\nextlevelbuilder__goclaw_419935b9_3cbdd8d7\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  478.18
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\maaxyz__maaframework_170af58b_e78524c8\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  82.34
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\nextlevelbuilder__goclaw_0881d7fc_7fa2d201\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  76.71
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\ggml-org__llama.cpp_212f4521_990e4d96\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  73.14
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\nextlevelbuilder__goclaw_419935b9_3cbdd8d7\\trial\\episode_exports\\episodes.jsonl.gz",
+                              "size_mb":  71.07
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\bytedance__sonic_28040bdd_c9e5b0f6\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  59.21
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\projectdiscovery__nuclei_17e9f429_bde02720\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  42.7
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\protocolbuffers__protobuf_08244d7a_ab14c0f8\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  42.27
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\open-policy-agent__opa_5e57a275_e0d66617\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  40.96
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\runatlantis__atlantis_0ad6fc00_1ff1c1d1\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  37.43
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\lynx-family__lynx_5a49d2c1_17bee8a0\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  36.82
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\bytedance__sonic_9a1c1488_f8ba977b\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  27.69
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\openthread__openthread_1f218fd0_f1794af0\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  27.66
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\rancher__fleet_36d9b971_c1848e0d\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  17.58
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\logs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30.supervisor.stderr.log",
+                              "size_mb":  17.39
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\rancher__rancher_1ed0b488_7be51434\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  14.27
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\smartcontractkit__chainlink_10b486b7_61c19e70\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  13.53
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\open-policy-agent__opa_1897f8c2_1ac64ef1\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  12.15
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\rudrankriyam__app-store-connect-cli_066f0ed0_34f7484a\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  11.44
+                          },
+                          {
+                              "path":  "T:\\AgentProjects\\Temp\\Run2-24\\tasks\\microsoft__retina_5e7be1fd_c6e26519\\trial\\episode_exports\\episodes.jsonl",
+                              "size_mb":  9.38
+                          }
+                      ]
+}

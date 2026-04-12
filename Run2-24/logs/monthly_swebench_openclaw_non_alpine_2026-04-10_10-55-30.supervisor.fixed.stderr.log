@@ -1,0 +1,80 @@
+T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\modal\_utils\async_utils.py:45: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\modal\_utils\async_utils.py:45: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+Using plain orchestrator output (non-interactive or non-UTF-8 console detected).
+Starting trial: manticoresoftware__manticoresear__v5JJux7
+Finished trial manticoresoftware__manticoresear__v5JJux7 with RuntimeError
+Starting trial: manticoresoftware__manticoresear__Cwy6ZQW
+Docker compose down failed: Docker compose command failed for environment manticoresoftware__manticoresearch_27f5d482_a8159410. Command: docker compose -p manticoresoftware__manticoresear__cwy6zqw --project-directory T:\AgentProjects\SWEBench\dataset_remaining\manticoresoftware__manticoresearch_27f5d482_a8159410\environment -f T:\AgentProjects\SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml down. Return code: 1. Stdout: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.54/containers/json?all=1&filters=%7B%22label%22%3A%7B%22com.docker.compose.config-hash%22%3Atrue%2C%22com.docker.compose.oneoff%3DFalse%22%3Atrue%2C%22com.docker.compose.project%3Dmanticoresoftware__manticoresear__cwy6zqw%22%3Atrue%7D%7D, check if the server supports the requested API version
+. Stderr: None. 
+Finished trial manticoresoftware__manticoresear__Cwy6ZQW with RuntimeError
+Starting trial: maximhq__bifrost_21cd30ba_3237e3__z3EUZFj
+Docker compose down failed: Docker compose command failed for environment maximhq__bifrost_21cd30ba_3237e39f. Command: docker compose -p maximhq__bifrost_21cd30ba_3237e3__z3euzfj --project-directory T:\AgentProjects\SWEBench\dataset_remaining\maximhq__bifrost_21cd30ba_3237e39f\environment -f T:\AgentProjects\SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml down. Return code: 1. Stdout: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.54/containers/json?all=1&filters=%7B%22label%22%3A%7B%22com.docker.compose.config-hash%22%3Atrue%2C%22com.docker.compose.oneoff%3DFalse%22%3Atrue%2C%22com.docker.compose.project%3Dmaximhq__bifrost_21cd30ba_3237e3__z3euzfj%22%3Atrue%7D%7D, check if the server supports the requested API version
+. Stderr: None. 
+Finished trial maximhq__bifrost_21cd30ba_3237e3__z3EUZFj with RuntimeError
+Starting trial: memgraph__memgraph_0a8474dd_043c__2z4gQdC
+Finished trial memgraph__memgraph_0a8474dd_043c__2z4gQdC with RuntimeError
+Starting trial: microsoft__retina_5e7be1fd_c6e26__oDBDDVz
+Finished trial microsoft__retina_5e7be1fd_c6e26__oDBDDVz with reward=0.0
+Starting trial: microsoft__windowsappsdk_0038c23__kVz5MWR
+Finished trial microsoft__windowsappsdk_0038c23__kVz5MWR with RuntimeError
+Starting trial: nextlevelbuilder__goclaw_0881d7f__VwB3rNo
+Finished trial nextlevelbuilder__goclaw_0881d7f__VwB3rNo with reward=0.0
+Starting trial: nextlevelbuilder__goclaw_419935b__Qj6emWv
+Finished trial nextlevelbuilder__goclaw_419935b__Qj6emWv with reward=0.0
+Starting trial: nixopus__nixopus_309e6eae_0fb164__AqDPnPt
+Finished trial nixopus__nixopus_309e6eae_0fb164__AqDPnPt with RuntimeError
+Starting trial: nixopus__nixopus_58967754_119995__YegWkLR
+Finished trial nixopus__nixopus_58967754_119995__YegWkLR with reward=0.0
+Starting trial: open-policy-agent__opa_1897f8c2___J6TSoZQ
+Finished trial open-policy-agent__opa_1897f8c2___J6TSoZQ with reward=1.0
+Starting trial: open-policy-agent__opa_5e57a275___abz2kZR
+Finished trial open-policy-agent__opa_5e57a275___abz2kZR with reward=0.0
+Starting trial: openshift__microshift_b25417be_e__WhnNX5N
+Finished trial openshift__microshift_b25417be_e__WhnNX5N with RuntimeError
+Starting trial: openthread__openthread_1f218fd0___QocarDH
+Finished trial openthread__openthread_1f218fd0___QocarDH with reward=1.0
+Starting trial: projectdiscovery__nuclei_17e9f42__duUDia9
+Finished trial projectdiscovery__nuclei_17e9f42__duUDia9 with reward=0.0
+Starting trial: protocolbuffers__protobuf_08244d__V3ZmdKi
+Finished trial protocolbuffers__protobuf_08244d__V3ZmdKi with AgentTimeoutError
+Starting trial: px4__px4-autopilot_b597227d_8985__wpSGUz3
+Finished trial px4__px4-autopilot_b597227d_8985__wpSGUz3 with RuntimeError
+Starting trial: rancher__fleet_36d9b971_c1848e0d__kBdhHb5
+Finished trial rancher__fleet_36d9b971_c1848e0d__kBdhHb5 with reward=1.0
+Starting trial: rancher__rancher_1757a541_471379__fr3kXwQ
+Finished trial rancher__rancher_1757a541_471379__fr3kXwQ with reward=0.0
+Starting trial: rancher__rancher_1ed0b488_7be514__dnNQkUE
+Finished trial rancher__rancher_1ed0b488_7be514__dnNQkUE with reward=0.0
+Starting trial: rudrankriyam__app-store-connect-__cQhzUFu
+Finished trial rudrankriyam__app-store-connect-__cQhzUFu with reward=0.0
+Starting trial: rudrankriyam__app-store-connect-__zqmJgbu
+Finished trial rudrankriyam__app-store-connect-__zqmJgbu with reward=0.0
+Starting trial: runatlantis__atlantis_0ad6fc00_1__x5Y5iqt
+Finished trial runatlantis__atlantis_0ad6fc00_1__x5Y5iqt with reward=1.0
+Starting trial: runatlantis__atlantis_2fd36a9e_d__nMoA5bt
+Finished trial runatlantis__atlantis_2fd36a9e_d__nMoA5bt with reward=0.0
+Starting trial: runatlantis__atlantis_7920b36f_7__jwt98ST
+Finished trial runatlantis__atlantis_7920b36f_7__jwt98ST with RuntimeError
+Starting trial: seaweedfs__seaweedfs_156e1a6e_ec__YFQq47u
+Finished trial seaweedfs__seaweedfs_156e1a6e_ec__YFQq47u with reward=0.0
+Starting trial: smartcontractkit__chainlink_10b4__eYnKtYE
+Finished trial smartcontractkit__chainlink_10b4__eYnKtYE with reward=0.0
+Starting trial: specterops__bloodhound_078e3792___uag9cg2
+Finished trial specterops__bloodhound_078e3792___uag9cg2 with RuntimeError
+Starting trial: specterops__bloodhound_0a092be6___F3NrLsq
+Finished trial specterops__bloodhound_0a092be6___F3NrLsq with RuntimeError
+Starting trial: stacklok__toolhive_1bf2f3ac_0642__iy7mGcM
+Finished trial stacklok__toolhive_1bf2f3ac_0642__iy7mGcM with RuntimeError
+Starting trial: stacklok__toolhive_261aeb2e_0108__rrauXhc
+Finished trial stacklok__toolhive_261aeb2e_0108__rrauXhc with RuntimeError
+Starting trial: stacklok__toolhive_398eeec9_5e24__YUGeuyF
+Finished trial stacklok__toolhive_398eeec9_5e24__YUGeuyF with RuntimeError
+Starting trial: stackrox__stackrox_13efb8e1_6677__mi3GarN
+Finished trial stackrox__stackrox_13efb8e1_6677__mi3GarN with RuntimeError
+Starting trial: stackrox__stackrox_141b82d3_d510__cB6YbQz
+Finished trial stackrox__stackrox_141b82d3_d510__cB6YbQz with RuntimeError
+Starting trial: tektoncd__operator_09bfe1a0_790d__m8nUZ8N
+Finished trial tektoncd__operator_09bfe1a0_790d__m8nUZ8N with RuntimeError
+Starting trial: tektoncd__operator_4f93b095_9e20__aVpbX6T

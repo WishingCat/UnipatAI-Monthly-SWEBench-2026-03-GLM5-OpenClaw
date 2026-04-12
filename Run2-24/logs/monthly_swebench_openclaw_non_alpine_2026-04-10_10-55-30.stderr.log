@@ -1,0 +1,608 @@
+T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\modal\_utils\async_utils.py:45: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\modal\_utils\async_utils.py:45: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
++--------------------- Traceback (most recent call last) ---------------------+
+| T:\AgentProjects\SWEBench\harbor\src\harbor\orchestrators\local.py:326 in   |
+| run                                                                         |
+|                                                                             |
+|   323                     "Running trials...", total=len(self._trial_config |
+|   324                 )                                                     |
+|   325                                                                       |
+| > 326                 async with asyncio.TaskGroup() as tg:                 |
+|   327                     tasks = [                                         |
+|   328                         tg.create_task(                               |
+|   329                             self._run_trial(                          |
+|                                                                             |
+| C:\Users\TZJ\AppData\Local\Programs\Python\Python314\Lib\asyncio\taskgroups |
+| .py:72 in __aexit__                                                         |
+|                                                                             |
+|    69     async def __aexit__(self, et, exc, tb):                           |
+|    70         tb = None                                                     |
+|    71         try:                                                          |
+| >  72             return await self._aexit(et, exc)                         |
+|    73         finally:                                                      |
+|    74             # Exceptions are heavy objects that can have object       |
+|    75             # cycles (bad for GC); let's not keep a reference to      |
+|                                                                             |
+| C:\Users\TZJ\AppData\Local\Programs\Python\Python314\Lib\asyncio\taskgroups |
+| .py:174 in _aexit                                                           |
+|                                                                             |
+|   171                 self._parent_task.uncancel()                          |
+|   172                 self._parent_task.cancel()                            |
+|   173             try:                                                      |
+| > 174                 raise BaseExceptionGroup(                             |
+|   175                     'unhandled errors in a TaskGroup',                |
+|   176                     self._errors,                                     |
+|   177                 ) from None                                           |
++-----------------------------------------------------------------------------+
+ExceptionGroup: unhandled errors in a TaskGroup (2 sub-exceptions)
+
++----------------------------- Sub-exception #1 ------------------------------+
+| +------------------- Traceback (most recent call last) -------------------+ |
+| | T:\AgentProjects\SWEBench\harbor\src\harbor\orchestrators\local.py:211  | |
+| | in _run_trial                                                           | |
+| |                                                                         | |
+| |   208                     f"{trial_config.trial_name}: retrying (attemp | |
+| |   209                 )                                                 | |
+| |   210                                                                   | |
+| | > 211             result = await self._execute_trial_with_retries(      | |
+| |   212                 trial_config,                                     | |
+| |   213                 setup_hooks=setup_progress_hooks,                 | |
+| |   214                 on_retry=on_retry,                                | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\harbor\src\harbor\orchestrators\local.py:129  | |
+| | in _execute_trial_with_retries                                          | |
+| |                                                                         | |
+| |   126             if setup_hooks:                                       | |
+| |   127                 setup_hooks(trial)                                | |
+| |   128                                                                   | |
+| | > 129             result = await trial.run()                            | |
+| |   130                                                                   | |
+| |   131             if result.exception_info is None:                     | |
+| |   132                 return result                                     | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\harbor\src\harbor\trial\trial.py:472 in run   | |
+| |                                                                         | |
+| |   469             task_id=self.config.task.get_task_id(),               | |
+| |   470             started_at=datetime.now(timezone.utc),                | |
+| |   471             config=self.config,                                   | |
+| | > 472             task_checksum=self._task.checksum,                    | |
+| |   473             trial_uri=self._trial_paths.trial_dir.expanduser().re | |
+| |   474             agent_info=self._agent.to_agent_info(),               | |
+| |   475             source=self.config.task.source,                       | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\harbor\src\harbor\models\task\task.py:65 in   | |
+| | checksum                                                                | |
+| |                                                                         | |
+| |   62     @property                                                      | |
+| |   63     def checksum(self) -> str:                                     | |
+| |   64         """Generate a deterministic hash for the task based on its | |
+| | > 65         return dirhash(self._task_dir, "sha256")                   | |
+| |   66                                                                    | |
+| |   67     @property                                                      | |
+| |   68     def task_dir(self) -> Path:                                    | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\dirhash\__init | |
+| | __.py:153 in dirhash                                                    | |
+| |                                                                         | |
+| |   150     protocol = Protocol(                                          | |
+| |   151         entry_properties=entry_properties, allow_cyclic_links=all | |
+| |   152     )                                                             | |
+| | > 153     return dirhash_impl(                                          | |
+| |   154         directory=directory,                                      | |
+| |   155         algorithm=algorithm,                                      | |
+| |   156         filter_=filter_,                                          | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\dirhash\__init | |
+| | __.py:237 in dirhash_impl                                               | |
+| |                                                                         | |
+| |   234                 path.real, hasher_factory, chunk_size=chunk_size, | |
+| |   235             )                                                     | |
+| |   236                                                                   | |
+| | > 237         _, dirhash_ = scantree(                                   | |
+| |   238             directory,                                            | |
+| |   239             recursion_filter=filter_,                             | |
+| |   240             file_apply=file_apply,                                | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\scantree\_scan | |
+| | .py:169 in scantree                                                     | |
+| |                                                                         | |
+| |   166     if cache_file_apply:                                          | |
+| |   167         file_apply = _cached_by_realpath(file_apply)              | |
+| |   168                                                                   | |
+| | > 169     root_dir_node = _scantree_recursive(                          | |
+| |   170         path=path,                                                | |
+| |   171         recursion_filter=recursion_filter,                        | |
+| |   172         file_apply=file_apply,                                    | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\scantree\_scan | |
+| | .py:303 in _scantree_recursive                                          | |
+| |                                                                         | |
+| |   300     files = []                                                    | |
+| |   301     for subpath in sorted(recursion_filter(path.scandir())):      | |
+| |   302         if subpath.is_dir():                                      | |
+| | > 303             dir_node = _scantree_recursive(subpath, **fwd_kwargs) | |
+| |   304             if include_empty or not is_empty_dir_node(dir_node):  | |
+| |   305                 dirs.append(dir_apply(dir_node))                  | |
+| |   306         if subpath.is_file():                                     | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\scantree\_scan | |
+| | .py:303 in _scantree_recursive                                          | |
+| |                                                                         | |
+| |   300     files = []                                                    | |
+| |   301     for subpath in sorted(recursion_filter(path.scandir())):      | |
+| |   302         if subpath.is_dir():                                      | |
+| | > 303             dir_node = _scantree_recursive(subpath, **fwd_kwargs) | |
+| |   304             if include_empty or not is_empty_dir_node(dir_node):  | |
+| |   305                 dirs.append(dir_apply(dir_node))                  | |
+| |   306         if subpath.is_file():                                     | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\scantree\_scan | |
+| | .py:303 in _scantree_recursive                                          | |
+| |                                                                         | |
+| |   300     files = []                                                    | |
+| |   301     for subpath in sorted(recursion_filter(path.scandir())):      | |
+| |   302         if subpath.is_dir():                                      | |
+| | > 303             dir_node = _scantree_recursive(subpath, **fwd_kwargs) | |
+| |   304             if include_empty or not is_empty_dir_node(dir_node):  | |
+| |   305                 dirs.append(dir_apply(dir_node))                  | |
+| |   306         if subpath.is_file():                                     | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\scantree\_scan | |
+| | .py:303 in _scantree_recursive                                          | |
+| |                                                                         | |
+| |   300     files = []                                                    | |
+| |   301     for subpath in sorted(recursion_filter(path.scandir())):      | |
+| |   302         if subpath.is_dir():                                      | |
+| | > 303             dir_node = _scantree_recursive(subpath, **fwd_kwargs) | |
+| |   304             if include_empty or not is_empty_dir_node(dir_node):  | |
+| |   305                 dirs.append(dir_apply(dir_node))                  | |
+| |   306         if subpath.is_file():                                     | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\scantree\_scan | |
+| | .py:303 in _scantree_recursive                                          | |
+| |                                                                         | |
+| |   300     files = []                                                    | |
+| |   301     for subpath in sorted(recursion_filter(path.scandir())):      | |
+| |   302         if subpath.is_dir():                                      | |
+| | > 303             dir_node = _scantree_recursive(subpath, **fwd_kwargs) | |
+| |   304             if include_empty or not is_empty_dir_node(dir_node):  | |
+| |   305                 dirs.append(dir_apply(dir_node))                  | |
+| |   306         if subpath.is_file():                                     | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\scantree\_scan | |
+| | .py:303 in _scantree_recursive                                          | |
+| |                                                                         | |
+| |   300     files = []                                                    | |
+| |   301     for subpath in sorted(recursion_filter(path.scandir())):      | |
+| |   302         if subpath.is_dir():                                      | |
+| | > 303             dir_node = _scantree_recursive(subpath, **fwd_kwargs) | |
+| |   304             if include_empty or not is_empty_dir_node(dir_node):  | |
+| |   305                 dirs.append(dir_apply(dir_node))                  | |
+| |   306         if subpath.is_file():                                     | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\scantree\_scan | |
+| | .py:307 in _scantree_recursive                                          | |
+| |                                                                         | |
+| |   304             if include_empty or not is_empty_dir_node(dir_node):  | |
+| |   305                 dirs.append(dir_apply(dir_node))                  | |
+| |   306         if subpath.is_file():                                     | |
+| | > 307             files.append(file_apply(subpath))                     | |
+| |   308                                                                   | |
+| |   309     if follow_links:                                              | |
+| |   310         del parents[path.real]                                    | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\dirhash\__init | |
+| | __.py:233 in file_apply                                                 | |
+| |                                                                         | |
+| |   230         cache = {}                                                | |
+| |   231                                                                   | |
+| |   232         def file_apply(path):                                     | |
+| | > 233             return path, _get_filehash(                           | |
+| |   234                 path.real, hasher_factory, chunk_size=chunk_size, | |
+| |   235             )                                                     | |
+| |   236                                                                   | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\dirhash\__init | |
+| | __.py:582 in _get_filehash                                              | |
+| |                                                                         | |
+| |   579     if cache is not None:                                         | |
+| |   580         filehash = cache.get(filepath, None)                      | |
+| |   581         if filehash is None:                                      | |
+| | > 582             filehash = _get_filehash(filepath, hasher_factory, ch | |
+| |   583             cache[filepath] = filehash                            | |
+| |   584         return filehash                                           | |
+| |   585                                                                   | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\dirhash\__init | |
+| | __.py:587 in _get_filehash                                              | |
+| |                                                                         | |
+| |   584         return filehash                                           | |
+| |   585                                                                   | |
+| |   586     hasher = hasher_factory()                                     | |
+| | > 587     with open(filepath, "rb") as f:                               | |
+| |   588         for chunk in iter(lambda: f.read(chunk_size), b""):       | |
+| |   589             hasher.update(chunk)                                  | |
+| |   590                                                                   | |
+| +-------------------------------------------------------------------------+ |
+| FileNotFoundError: [Errno 2] No such file or directory:                     |
+| 'T:\\AgentProjects\\SWEBench\\dataset_remaining\\manticoresoftware__mantico |
+| research_1a9cc54a_d4354257\\environment\\manticoresearch\\.translation-cach |
+| e\\Data_creation_and_modification\\Adding_data_from_external_storages\\Addi |
+| ng_data_to_tables\\Attaching_one_table_to_another.md.json'                  |
++-----------------------------------------------------------------------------+
+
++----------------------------- Sub-exception #2 ------------------------------+
+| +------------------- Traceback (most recent call last) -------------------+ |
+| | T:\AgentProjects\SWEBench\harbor\src\harbor\orchestrators\local.py:211  | |
+| | in _run_trial                                                           | |
+| |                                                                         | |
+| |   208                     f"{trial_config.trial_name}: retrying (attemp | |
+| |   209                 )                                                 | |
+| |   210                                                                   | |
+| | > 211             result = await self._execute_trial_with_retries(      | |
+| |   212                 trial_config,                                     | |
+| |   213                 setup_hooks=setup_progress_hooks,                 | |
+| |   214                 on_retry=on_retry,                                | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\harbor\src\harbor\orchestrators\local.py:129  | |
+| | in _execute_trial_with_retries                                          | |
+| |                                                                         | |
+| |   126             if setup_hooks:                                       | |
+| |   127                 setup_hooks(trial)                                | |
+| |   128                                                                   | |
+| | > 129             result = await trial.run()                            | |
+| |   130                                                                   | |
+| |   131             if result.exception_info is None:                     | |
+| |   132                 return result                                     | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\harbor\src\harbor\trial\trial.py:472 in run   | |
+| |                                                                         | |
+| |   469             task_id=self.config.task.get_task_id(),               | |
+| |   470             started_at=datetime.now(timezone.utc),                | |
+| |   471             config=self.config,                                   | |
+| | > 472             task_checksum=self._task.checksum,                    | |
+| |   473             trial_uri=self._trial_paths.trial_dir.expanduser().re | |
+| |   474             agent_info=self._agent.to_agent_info(),               | |
+| |   475             source=self.config.task.source,                       | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\harbor\src\harbor\models\task\task.py:65 in   | |
+| | checksum                                                                | |
+| |                                                                         | |
+| |   62     @property                                                      | |
+| |   63     def checksum(self) -> str:                                     | |
+| |   64         """Generate a deterministic hash for the task based on its | |
+| | > 65         return dirhash(self._task_dir, "sha256")                   | |
+| |   66                                                                    | |
+| |   67     @property                                                      | |
+| |   68     def task_dir(self) -> Path:                                    | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\dirhash\__init | |
+| | __.py:153 in dirhash                                                    | |
+| |                                                                         | |
+| |   150     protocol = Protocol(                                          | |
+| |   151         entry_properties=entry_properties, allow_cyclic_links=all | |
+| |   152     )                                                             | |
+| | > 153     return dirhash_impl(                                          | |
+| |   154         directory=directory,                                      | |
+| |   155         algorithm=algorithm,                                      | |
+| |   156         filter_=filter_,                                          | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\dirhash\__init | |
+| | __.py:237 in dirhash_impl                                               | |
+| |                                                                         | |
+| |   234                 path.real, hasher_factory, chunk_size=chunk_size, | |
+| |   235             )                                                     | |
+| |   236                                                                   | |
+| | > 237         _, dirhash_ = scantree(                                   | |
+| |   238             directory,                                            | |
+| |   239             recursion_filter=filter_,                             | |
+| |   240             file_apply=file_apply,                                | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\scantree\_scan | |
+| | .py:169 in scantree                                                     | |
+| |                                                                         | |
+| |   166     if cache_file_apply:                                          | |
+| |   167         file_apply = _cached_by_realpath(file_apply)              | |
+| |   168                                                                   | |
+| | > 169     root_dir_node = _scantree_recursive(                          | |
+| |   170         path=path,                                                | |
+| |   171         recursion_filter=recursion_filter,                        | |
+| |   172         file_apply=file_apply,                                    | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\scantree\_scan | |
+| | .py:303 in _scantree_recursive                                          | |
+| |                                                                         | |
+| |   300     files = []                                                    | |
+| |   301     for subpath in sorted(recursion_filter(path.scandir())):      | |
+| |   302         if subpath.is_dir():                                      | |
+| | > 303             dir_node = _scantree_recursive(subpath, **fwd_kwargs) | |
+| |   304             if include_empty or not is_empty_dir_node(dir_node):  | |
+| |   305                 dirs.append(dir_apply(dir_node))                  | |
+| |   306         if subpath.is_file():                                     | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\scantree\_scan | |
+| | .py:303 in _scantree_recursive                                          | |
+| |                                                                         | |
+| |   300     files = []                                                    | |
+| |   301     for subpath in sorted(recursion_filter(path.scandir())):      | |
+| |   302         if subpath.is_dir():                                      | |
+| | > 303             dir_node = _scantree_recursive(subpath, **fwd_kwargs) | |
+| |   304             if include_empty or not is_empty_dir_node(dir_node):  | |
+| |   305                 dirs.append(dir_apply(dir_node))                  | |
+| |   306         if subpath.is_file():                                     | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\scantree\_scan | |
+| | .py:303 in _scantree_recursive                                          | |
+| |                                                                         | |
+| |   300     files = []                                                    | |
+| |   301     for subpath in sorted(recursion_filter(path.scandir())):      | |
+| |   302         if subpath.is_dir():                                      | |
+| | > 303             dir_node = _scantree_recursive(subpath, **fwd_kwargs) | |
+| |   304             if include_empty or not is_empty_dir_node(dir_node):  | |
+| |   305                 dirs.append(dir_apply(dir_node))                  | |
+| |   306         if subpath.is_file():                                     | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\scantree\_scan | |
+| | .py:303 in _scantree_recursive                                          | |
+| |                                                                         | |
+| |   300     files = []                                                    | |
+| |   301     for subpath in sorted(recursion_filter(path.scandir())):      | |
+| |   302         if subpath.is_dir():                                      | |
+| | > 303             dir_node = _scantree_recursive(subpath, **fwd_kwargs) | |
+| |   304             if include_empty or not is_empty_dir_node(dir_node):  | |
+| |   305                 dirs.append(dir_apply(dir_node))                  | |
+| |   306         if subpath.is_file():                                     | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\scantree\_scan | |
+| | .py:303 in _scantree_recursive                                          | |
+| |                                                                         | |
+| |   300     files = []                                                    | |
+| |   301     for subpath in sorted(recursion_filter(path.scandir())):      | |
+| |   302         if subpath.is_dir():                                      | |
+| | > 303             dir_node = _scantree_recursive(subpath, **fwd_kwargs) | |
+| |   304             if include_empty or not is_empty_dir_node(dir_node):  | |
+| |   305                 dirs.append(dir_apply(dir_node))                  | |
+| |   306         if subpath.is_file():                                     | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\scantree\_scan | |
+| | .py:303 in _scantree_recursive                                          | |
+| |                                                                         | |
+| |   300     files = []                                                    | |
+| |   301     for subpath in sorted(recursion_filter(path.scandir())):      | |
+| |   302         if subpath.is_dir():                                      | |
+| | > 303             dir_node = _scantree_recursive(subpath, **fwd_kwargs) | |
+| |   304             if include_empty or not is_empty_dir_node(dir_node):  | |
+| |   305                 dirs.append(dir_apply(dir_node))                  | |
+| |   306         if subpath.is_file():                                     | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\scantree\_scan | |
+| | .py:307 in _scantree_recursive                                          | |
+| |                                                                         | |
+| |   304             if include_empty or not is_empty_dir_node(dir_node):  | |
+| |   305                 dirs.append(dir_apply(dir_node))                  | |
+| |   306         if subpath.is_file():                                     | |
+| | > 307             files.append(file_apply(subpath))                     | |
+| |   308                                                                   | |
+| |   309     if follow_links:                                              | |
+| |   310         del parents[path.real]                                    | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\dirhash\__init | |
+| | __.py:233 in file_apply                                                 | |
+| |                                                                         | |
+| |   230         cache = {}                                                | |
+| |   231                                                                   | |
+| |   232         def file_apply(path):                                     | |
+| | > 233             return path, _get_filehash(                           | |
+| |   234                 path.real, hasher_factory, chunk_size=chunk_size, | |
+| |   235             )                                                     | |
+| |   236                                                                   | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\dirhash\__init | |
+| | __.py:582 in _get_filehash                                              | |
+| |                                                                         | |
+| |   579     if cache is not None:                                         | |
+| |   580         filehash = cache.get(filepath, None)                      | |
+| |   581         if filehash is None:                                      | |
+| | > 582             filehash = _get_filehash(filepath, hasher_factory, ch | |
+| |   583             cache[filepath] = filehash                            | |
+| |   584         return filehash                                           | |
+| |   585                                                                   | |
+| |                                                                         | |
+| | T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\dirhash\__init | |
+| | __.py:587 in _get_filehash                                              | |
+| |                                                                         | |
+| |   584         return filehash                                           | |
+| |   585                                                                   | |
+| |   586     hasher = hasher_factory()                                     | |
+| | > 587     with open(filepath, "rb") as f:                               | |
+| |   588         for chunk in iter(lambda: f.read(chunk_size), b""):       | |
+| |   589             hasher.update(chunk)                                  | |
+| |   590                                                                   | |
+| +-------------------------------------------------------------------------+ |
+| FileNotFoundError: [Errno 2] No such file or directory:                     |
+| 'T:\\AgentProjects\\SWEBench\\dataset_remaining\\manticoresoftware__mantico |
+| research_27f5d482_a8159410\\environment\\manticoresearch\\.translation-cach |
+| e\\Data_creation_and_modification\\Adding_data_from_external_storages\\Addi |
+| ng_data_to_tables\\Attaching_one_table_to_another.md.json'                  |
++-----------------------------------------------------------------------------+
+
+During handling of the above exception, another exception occurred:
+
++--------------------- Traceback (most recent call last) ---------------------+
+| T:\AgentProjects\SWEBench\harbor\src\harbor\cli\jobs.py:781 in start        |
+|                                                                             |
+|   778                                                                       |
+|   779     show_registry_hint_if_first_run(console)                          |
+|   780                                                                       |
+| > 781     job_result = run_async(job.run())                                 |
+|   782                                                                       |
+|   783     # Print results tables                                            |
+|   784     print_job_results_tables(job_result)                              |
+|                                                                             |
+| T:\AgentProjects\SWEBench\harbor\src\harbor\cli\utils.py:18 in run_async    |
+|                                                                             |
+|   15     Requires Python 3.12+ (which is the minimum version for this proje |
+|   16     """                                                                |
+|   17     if sys.platform == "win32":                                        |
+| > 18         return asyncio.run(coro, loop_factory=asyncio.ProactorEventLoo |
+|   19     return asyncio.run(coro)                                           |
+|   20                                                                        |
+|   21                                                                        |
+|                                                                             |
+| C:\Users\TZJ\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py |
+| :204 in run                                                                 |
+|                                                                             |
+|   201             "asyncio.run() cannot be called from a running event loop |
+|   202                                                                       |
+|   203     with Runner(debug=debug, loop_factory=loop_factory) as runner:    |
+| > 204         return runner.run(main)                                       |
+|   205                                                                       |
+|   206                                                                       |
+|   207 def _cancel_all_tasks(loop):                                          |
+|                                                                             |
+| C:\Users\TZJ\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py |
+| :127 in run                                                                 |
+|                                                                             |
+|   124                                                                       |
+|   125         self._interrupt_count = 0                                     |
+|   126         try:                                                          |
+| > 127             return self._loop.run_until_complete(task)                |
+|   128         except exceptions.CancelledError:                             |
+|   129             if self._interrupt_count > 0:                             |
+|   130                 uncancel = getattr(task, "uncancel", None)            |
+|                                                                             |
+| C:\Users\TZJ\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_event |
+| s.py:719 in run_until_complete                                              |
+|                                                                             |
+|    716         if not future.done():                                        |
+|    717             raise RuntimeError('Event loop stopped before Future com |
+|    718                                                                      |
+| >  719         return future.result()                                       |
+|    720                                                                      |
+|    721     def stop(self):                                                  |
+|    722         """Stop running the event loop.                              |
+|                                                                             |
+| T:\AgentProjects\SWEBench\harbor\src\harbor\job.py:397 in run               |
+|                                                                             |
+|   394                                                                       |
+|   395             self._job_config_path.write_text(self.config.model_dump_j |
+|   396                                                                       |
+| > 397             trial_results = await self._orchestrator.run()            |
+|   398                                                                       |
+|   399             combined_trial_results = self._existing_trial_results + t |
+|   400                                                                       |
+|                                                                             |
+| T:\AgentProjects\SWEBench\harbor\src\harbor\orchestrators\local.py:321 in   |
+| run                                                                         |
+|                                                                             |
+|   318                 TextColumn("[progress.description]{task.description}" |
+|   319             )                                                         |
+|   320                                                                       |
+| > 321             with Live(Group(loading_progress, running_progress), refr |
+|   322                 progress_task = loading_progress.add_task(            |
+|   323                     "Running trials...", total=len(self._trial_config |
+|   324                 )                                                     |
+|                                                                             |
+| T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\rich\live.py:193   |
+| in __exit__                                                                 |
+|                                                                             |
+|   190         exc_val: Optional[BaseException],                             |
+|   191         exc_tb: Optional[TracebackType],                              |
+|   192     ) -> None:                                                        |
+| > 193         self.stop()                                                   |
+|   194                                                                       |
+|   195     def _enable_redirect_io(self) -> None:                            |
+|   196         """Enable redirecting of stdout / stderr."""                  |
+|                                                                             |
+| T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\rich\live.py:162   |
+| in stop                                                                     |
+|                                                                             |
+|   159                 self._refresh_thread = None                           |
+|   160             # allow it to fully render on the last even if overflow   |
+|   161             self.vertical_overflow = "visible"                        |
+| > 162             with self.console:                                        |
+|   163                 try:                                                  |
+|   164                     if not self._alt_screen and not self.console.is_j |
+|   165                         self.refresh()                                |
+|                                                                             |
+| T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\rich\console.py:87 |
+| 0 in __exit__                                                               |
+|                                                                             |
+|    867                                                                      |
+|    868     def __exit__(self, exc_type: Any, exc_value: Any, traceback: Any |
+|    869         """Exit buffer context."""                                   |
+| >  870         self._exit_buffer()                                          |
+|    871                                                                      |
+|    872     def begin_capture(self) -> None:                                 |
+|    873         """Begin capturing console output. Call :meth:`end_capture`  |
+|                                                                             |
+| T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\rich\console.py:82 |
+| 6 in _exit_buffer                                                           |
+|                                                                             |
+|    823     def _exit_buffer(self) -> None:                                  |
+|    824         """Leave buffer context, and render content if required."""  |
+|    825         self._buffer_index -= 1                                      |
+| >  826         self._check_buffer()                                         |
+|    827                                                                      |
+|    828     def set_live(self, live: "Live") -> bool:                        |
+|    829         """Set Live instance. Used by Live context manager (no need  |
+|                                                                             |
+| T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\rich\console.py:20 |
+| 42 in _check_buffer                                                         |
+|                                                                             |
+|   2039             return                                                   |
+|   2040                                                                      |
+|   2041         try:                                                         |
+| > 2042             self._write_buffer()                                     |
+|   2043         except BrokenPipeError:                                      |
+|   2044             self.on_broken_pipe()                                    |
+|   2045                                                                      |
+|                                                                             |
+| T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\rich\console.py:20 |
+| 78 in _write_buffer                                                         |
+|                                                                             |
+|   2075                             if self.no_color and self._color_system: |
+|   2076                                 buffer = list(Segment.remove_color(b |
+|   2077                                                                      |
+| > 2078                             legacy_windows_render(buffer, LegacyWind |
+|   2079                         else:                                        |
+|   2080                             # Either a non-std stream on legacy Wind |
+|   2081                             text = self._render_buffer(self._buffer[ |
+|                                                                             |
+| T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\rich\_windows_rend |
+| erer.py:17 in legacy_windows_render                                         |
+|                                                                             |
+|   14     for text, style, control in buffer:                                |
+|   15         if not control:                                                |
+|   16             if style:                                                  |
+| > 17                 term.write_styled(text, style)                         |
+|   18             else:                                                      |
+|   19                 term.write_text(text)                                  |
+|   20         else:                                                          |
+|                                                                             |
+| T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\rich\_win32_consol |
+| e.py:441 in write_styled                                                    |
+|                                                                             |
+|   438         SetConsoleTextAttribute(                                      |
+|   439             self._handle, attributes=ctypes.c_ushort(fore | (back <<  |
+|   440         )                                                             |
+| > 441         self.write_text(text)                                         |
+|   442         SetConsoleTextAttribute(self._handle, attributes=self._defaul |
+|   443                                                                       |
+|   444     def move_cursor_to(self, new_position: WindowsCoordinates) -> Non |
+|                                                                             |
+| T:\AgentProjects\SWEBench\.venv-harbor\Lib\site-packages\rich\_win32_consol |
+| e.py:402 in write_text                                                      |
+|                                                                             |
+|   399         Args:                                                         |
+|   400             text (str): The text to write to the console              |
+|   401         """                                                           |
+| > 402         self.write(text)                                              |
+|   403         self.flush()                                                  |
+|   404                                                                       |
+|   405     def write_styled(self, text: str, style: Style) -> None:          |
++-----------------------------------------------------------------------------+
+UnicodeEncodeError: 'gbk' codec can't encode character '\u280b' in position 0: 
+illegal multibyte sequence

@@ -1,0 +1,1191 @@
+[supervisor] watching job: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30
+[supervisor] dataset dir: T:\AgentProjects\SWEBench\dataset_non_alpine_pending
+[supervisor] startup failures >= 3 will be skipped
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\c9s__bbgo_15f59ef4_85320527__r55tVp5
+[supervisor] pending=43 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\c9s__bbgo_15f59ef4_85320527__ep8XdWi
+[supervisor] pending=43 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\c9s__bbgo_15f59ef4_85320527__fM5dKZw
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__3rm92yn
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__M97Djmg
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__A39y76M
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__oh35s6V
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__tKvjQ9b
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__oor2niu
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__MyX2Pn9
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__8mKBWjX
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__6aQTmqg
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__VeBDLzw
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__qegQinW
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__5PnAMZD
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__YPWMLVJ
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__eAdp9e9
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__SNFwAr4
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__Gh5HJsG
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__kpvw7yy
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__LPFLbts
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__X5DBUe8
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__PLb36BY
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__QpNZCKZ
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__XmBxEFm
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__TBEtGCd
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__jPRFb9X
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__K32xy9J
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__rgb4sZM
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__GpPCNxJ
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ef4Zrc5
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__j4YJSuA
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__giN766d
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__JuSULUq
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__RoTeeJg
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__J896gUC
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__sgv6Anq
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__HdYHVjG
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__YzxWXDU
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__9Mxjy3L
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__kEHui2f
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__4xLyMnQ
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__LuuSy6H
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__2GBtPgm
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__WJaJAvM
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__VAKrXCf
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__x4AoXR9
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__prahgsQ
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ijTrR4t
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__NNSEq2A
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__TCVTLTW
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__uYZTzPf
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ZnfgySQ
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__hVYdHN3
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__8N7urw5
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__zuSeY4D
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__XYrRDjU
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__7xXE4jo
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__AvSwyVt
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__fprwEN8
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__uThwKJA
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__jYUHFi5
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__xo5yUEo
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__VfqTxBR
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__bENdAb3
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__4uNfPvK
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__3oRWpei
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__7YdqwHN
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__BVp349M
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__vFGqwt4
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__npNzJj8
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__Pp2gHpx
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__YMR8YCQ
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__cauU54F
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__8tr7gnr
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__XEaq3kV
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__xSigTyP
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__CFCDa5F
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__yGkG9TG
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__oPbJAjw
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__4mY2C8e
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__MXLhTmf
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__XLknXEd
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__coEAJ6C
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__noj4ua9
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ZP8zp7w
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__GDpNmAN
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__SvnJMB7
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__zymabkS
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__fBtApHn
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__8KS3f5r
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__Yom24w7
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__tvP3MvJ
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__kH8jCbu
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ZZZ96DC
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__QZsj5Vj
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__b2Mqndw
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__Y2m7Tgy
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__rKJpC6v
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__tLf5R27
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__AUCsMAF
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__VbguJfF
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ZdWLgvA
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ufj3DJa
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ftM2Z7u
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__aTzvMYb
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__r9epupE
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__bUnQ6KS
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__KTmSuTj
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__jGydWP7
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__FF2CNyn
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__w93cmXi
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__4zKtSY7
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__fyTuMRM
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__rvyBQr7
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__hr7mGV5
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__p52PZRX
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__Ub2ZsVA
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__YAqAqqj
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__dYqsk27
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__EMF4imn
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__eWrr9rE
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__u4uCQ2b
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__zRGCkF8
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__TieU4JG
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__tv2buUa
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ua6vq2G
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__xHTvo39
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__mciSmy9
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__v5DHid3
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__wEDR9k8
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__u6dGwjt
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__WFVAdco
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__NFsDk9N
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__rmfLFne
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__6xeNmSL
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__YVj8qj9
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__Skttk5B
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__Nq684Wh
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__AAQDLPc
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__SUDzK2V
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__qoqsYdM
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__fSZFCan
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__4gA5GJo
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__CzpyUeF
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__GWXppRH
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ohtZZg6
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__2CXJmEz
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__EoQsoeq
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__x2LxPeU
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__RJa4Bac
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__Dp5QCQr
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__rjgDQwb
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__EXF2FWb
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__vKxzZFu
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__rEnhPPi
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__U4zce4N
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__8uDNLvE
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__f7czqVX
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__BfrhY7n
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__E8Rx6sq
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__FCarAcg
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__DuyFxaa
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__iWFJWCM
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__XTgoQMt
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ojjDkYM
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__zNTcTgd
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__tEnMsUn
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__pGRjkBM
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__6iNGsEj
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__bYBMqa3
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__9TU3pyN
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ZCkki3u
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__N27zyTd
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__nnjmq9A
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__UotyQKS
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__UZiQ95r
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__5kYcHtf
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ZPC5VXs
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__DFjM4xT
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__AUjgeq5
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__3PpMwRW
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__Cg7aVSu
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__dJPaYYX
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__zQLbY3E
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__5jsbqq9
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__VbK8mU5
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__CATRPj5
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ELhJAzE
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__UTxXvNi
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__Ka8pdWB
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__bPPstmi
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__E8KjJP4
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__DFFTAoL
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__JP5c4q4
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__Vd6kLrR
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__RrTWnGw
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__gteL8rt
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__yTeMnCQ
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__V8Ru6QS
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__rVqoibP
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__5ZyB7NA
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__KCfVrHD
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__AMLkycB
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__kLeTjLN
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__jZyN4Tb
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__KjCRhpw
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__RBzKXiJ
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__7oyNEM4
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__9WgDQTi
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__mtJEnfF
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__MKcAP6o
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__8aGXanZ
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__SPso6ft
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__cFjXBt6
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__P5zSqkG
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__zwrGhdM
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__q3ncUAE
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__oHJZPdA
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__CosRVsQ
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__BHYGBEd
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__oyTGgkK
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__wYzidW2
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__Kxym3LS
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__nmB46qw
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__czNzAbN
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__GZiKjrd
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__kN3rZWi
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__3fjDfVv
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ehyeTCn
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__aN2ds6x
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__w36mJxm
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__uh6vMvb
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__d9ZCxxx
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__57VDnRL
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__8fMJk4j
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__KKm7Hdh
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__f3EDk9V
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__FSZwdCW
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__JmGdcVd
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__9qiqusT
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__7FqYHfB
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__emg9ijV
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__feTgwCX
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__eJTmeXd
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__teQtfgA
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__7SdkcuD
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__U6ssoDh
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__smE2uC5
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__i2aFcmo
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__kBRZ463
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__vquQbBX
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__bo7hmqF
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__BRskSiS
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__9asrPdB
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__35np7Vf
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__68kSKsK
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__sucqshM
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__3BkcVSx
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__q5z2Jvt
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__aBrxnpT
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__aBFotB5
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__QhrF9tw
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__RAZ6wtX
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__5xktXAn
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__BbQTcRp
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__FQEYcZz
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__jVRj3ae
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__mwgjR3Z
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__vqbdF7F
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__oRGwaMV
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__jwXPdUH
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__GnoFZab
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__XHVVBZw
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__8BxY9Pw
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__GDeUnkW
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__xsmJiLQ
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__QMK5UNM
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ep6KX67
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__jbdQcDL
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__PSNtHcT
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__pc3jVaT
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__VhLJwug
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ZhsQmsP
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__HaG7nPS
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__dG7LsDw
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ytDYDA9
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__F6YCoqH
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ebuKVtL
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__pbVrzkp
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__cjuqF5R
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__MisVZE9
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__JBNGvYU
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__fspMxLn
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__Fhi2vBA
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__dK6rCcN
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__btrkPqM
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__bzaRDw2
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__n5WwnWj
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__B86Wa56
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__AX8PQmg
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__u28GpZu
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__i5F2Kb3
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__qw7SaHr
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__gG8RWQu
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__jUDh69s
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__BB82d3f
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__izwQfn7
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__X7uXxfB
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__MmfAcJD
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__KyXc4gU
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__vPgYvzK
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__MUtkFVR
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__8en7TZQ
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__tpA2bn3
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__KVyemtB
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__e7x6B7n
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__riGcsQE
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__tRxiVG2
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__bxuoxqw
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__JFrYmjW
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__omB3ApR
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__n4CREta
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ebmzJhh
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__RRA5HfM
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__j9gRxkn
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__vYUyrPx
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__mSZ6Sep
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__FkGZn9D
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__7uyQTNH
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__bYuhfTC
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__wcgH4ED
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__6ez8PMh
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__YqZmdL9
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__cFTkJDX
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__3hmSggr
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__Gnjn2g3
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__RN5QwSm
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__y9bpAYX
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__nHq47RN
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__5AAwYXu
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__RseCqLz
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__9wJiLrw
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__CwBQq4M
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__xwN8sC3
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__NjsCaYK
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__yTktWAi
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__xF6BWR6
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__5mH5hAE
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__8gqD5CS
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__zfjE2dM
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__84wdo7n
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__EB5H4dk
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__UafLYpF
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__tALwQgy
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__AFsicFy
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__HGVfHWV
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__mbM25w6
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__Gyhyvqv
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__c3Q6zmz
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__uNz8yfA
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__958dx5f
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__gfZQkCX
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ZGkTPEX
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__9YfFTdu
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__m7VR9uj
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__Wc5xKV8
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__b2qsFmg
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__CfQ67eW
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__M6CppJE
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__jMe8wdq
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__M4wRNsc
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__DS2kYK3
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__hLieXE7
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__Js2Zfeh
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__DVaptTq
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__zNb3FeF
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__U2xE7dU
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__UrCxc8L
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__pS5vury
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__H4ChAx2
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__nWTo9BY
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__WjboNL4
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__SyV28aE
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__BXTUxhz
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__M2YZdmk
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__nZsSsh9
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__hU2WRqX
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__mMS5VPW
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__urHjUTL
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__6a3CGxb
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__4WrmmzN
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__ojbHa2q
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__HsaF2hz
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__jofJPoK
+[supervisor] pending=42 resolved=6 running=0 skipped=0
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] removing retryable startup failure: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\maximhq__bifrost_21cd30ba_3237e3__kczA3RP
+[supervisor] pending=42 resolved=6 running=0 skipped=0

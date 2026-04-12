@@ -1,0 +1,5 @@
+[supervisor] watching job: T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30
+[supervisor] dataset dir: T:\AgentProjects\SWEBench\dataset_non_alpine_pending
+[supervisor] startup failures >= 3 will be skipped
+T:\AgentProjects\SWEBench\jobs\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\episode_export_index.json
+[supervisor] pending=42 resolved=6 running=0 skipped=1
