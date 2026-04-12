@@ -1,0 +1,107 @@
+{
+    "id": "c0277721-d096-4510-8a0c-f1d031c225e4",
+    "started_at": "2026-04-09T02:05:34.829103",
+    "finished_at": null,
+    "n_total_trials": 112,
+    "stats": {
+        "n_trials": 64,
+        "n_errors": 25,
+        "evals": {
+            "openclaw__z-ai-glm-5__all_tasks": {
+                "n_trials": 43,
+                "n_errors": 25,
+                "metrics": [
+                    {
+                        "mean": 0.21875
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "0xpolygon__bor_703d7b3e_8214a2a2__4SQqtzh",
+                            "0xpolygon__bor_2a0bfe7f_0d6ee4bb__YJBs7Zc",
+                            "alibaba__loongsuite-go-agent_043__y9jQCqr",
+                            "alibaba__loongsuite-go-agent_51b__gGqTS9G",
+                            "0xpolygon__bor_46e26317_98777c02__XKBArM4",
+                            "alibaba__zvec_5124fbc0_3c1241f7__SV7xc86",
+                            "alibaba__zvec_ba86c166_331933c7__woaMJhY",
+                            "0xpolygon__bor_d4b1cefd_e220fcfa__YfvrQA8",
+                            "authorizerdev__authorizer_648658__oR4j34w",
+                            "authorizerdev__authorizer_8750af__o2uFcvN",
+                            "coder__coder_147d6275_eba7d943__T9AaR8w",
+                            "coder__coder_24ab216d_b8a5344c__rA8FHsa",
+                            "bytedance__sonic_28040bdd_c9e5b0__StB8Vba",
+                            "bytedance__sonic_9a1c1488_f8ba97__5e2VYhw",
+                            "dexidp__dex_08dc8eeb_098ab603__pnoNaf7",
+                            "deckhouse__deckhouse_104d0e00_02__jYSh8RL",
+                            "envoyproxy__gateway_07c779be_cd8__U75i5ze",
+                            "envoyproxy__gateway_205e4557_dd0__VJTXbDd",
+                            "ethereum-optimism__optimism_370c__g8KKW9T",
+                            "envoyproxy__gateway_12de3c54_e63__if5Yic9",
+                            "filecoin-project__lotus_8502fa91__vXeTZrm",
+                            "filecoin-project__lotus_9a507ee2__EN8DD9V",
+                            "gardener__gardener_085711a3_fa02__SRMj6SC",
+                            "ggml-org__llama.cpp_056b50c3_a97__Mnzorgv",
+                            "googleapis__google-cloud-go_0f24__YDRpjCi",
+                            "kubeovn__kube-ovn_009e0c5a_7709e__HduC3au",
+                            "ggml-org__llama.cpp_212f4521_990__GzUB2iM",
+                            "googleapis__google-cloud-go_1894__ADFMdGy",
+                            "kubeovn__kube-ovn_023250be_b2d57__LGjvUHZ"
+                        ],
+                        "1.0": [
+                            "0xpolygon__bor_5f5ec38c_82b9c740__iWG8Yh9",
+                            "0xpolygon__bor_98777c02_62c88ef3__FjrJXvT",
+                            "alibaba__zvec_22cb3cc4_31aaa2fe__Ax95Dcb",
+                            "authorizerdev__authorizer_844dad__d3uTDnT",
+                            "alibaba__zvec_d1e0c7b8_79387c23__hti5gvN",
+                            "authorizerdev__authorizer_c22cdb__fm8NpVJ",
+                            "alibaba__zvec_79387c23_9314cb14__N9qytgT",
+                            "coder__coder_014e5b4f_b83b93ea__4XfFVoh",
+                            "digitalocean__godo_728a9e72_e51b__swp4FEz",
+                            "collaboraonline__online_1b22bdf7__Z7ac3NV",
+                            "dosco__graphjin_c4b27f27_453d158__D7HUpzG",
+                            "ethereum-optimism__optimism_38f0__wNTc88C",
+                            "ethereum-optimism__optimism_319a__V7H9bXE",
+                            "gardener__gardener_235d58da_08f8__56qAuUQ"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "RuntimeError": [
+                        "0xpolygon__bor_ba46e15a_aaaa392a__aegrtYy",
+                        "authorizerdev__authorizer_c0625a__R6Ejvzk",
+                        "authorizerdev__authorizer_e38d88__sXUUZNM",
+                        "c9s__bbgo_15f59ef4_85320527__cs9ga9i",
+                        "dosco__graphjin_9c78ad33_f9ac75a__mduwcQk",
+                        "googlecloudplatform__k8s-config-__k5YqAgy",
+                        "kubernetes__kops_868575a6_579c13__KUMc55j",
+                        "kubernetes__release_430a8064_72d__A3y3XLq",
+                        "kubernetes__release_9d42037a_572__Py7pCxG",
+                        "lemonade-sdk__lemonade_0a0e4869___jnVewLU",
+                        "lightningnetwork__lnd_2aec8f33_8__s8z7ouU",
+                        "google__filament_4b040fba_167a91__ht5A7Au",
+                        "lynx-family__lynx_20307ab3_3ea79__ZNkeYK8",
+                        "lynx-family__lynx_5a49d2c1_17bee__d9FVMyB",
+                        "maaxyz__maaframework_43749f2b_80__DSUAoqt",
+                        "manticoresoftware__manticoresear__VTQkv2w",
+                        "manticoresoftware__manticoresear__WUZafJw"
+                    ],
+                    "AgentTimeoutError": [
+                        "bytedance__sonic_28040bdd_c9e5b0__StB8Vba",
+                        "bytedance__sonic_9a1c1488_f8ba97__5e2VYhw",
+                        "ethereum-optimism__optimism_319a__V7H9bXE",
+                        "ggml-org__llama.cpp_212f4521_990__GzUB2iM"
+                    ],
+                    "AgentSetupTimeoutError": [],
+                    "CancelledError": [
+                        "maximhq__bifrost_21cd30ba_3237e3__9imiyYv",
+                        "memgraph__memgraph_0a8474dd_043c__sMd5Pgr",
+                        "maaxyz__maaframework_170af58b_e7__2ruRUSA",
+                        "lemonade-sdk__lemonade_0b4e77cd___JRoVt8b"
+                    ]
+                }
+            }
+        }
+    },
+    "trial_results": []
+}

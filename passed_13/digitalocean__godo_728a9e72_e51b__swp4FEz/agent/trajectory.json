@@ -1,0 +1,1032 @@
+{
+  "schema_version": "ATIF-v1.6",
+  "session_id": "330dcdec-91e0-4195-bb96-bcc8aac526e8",
+  "agent": {
+    "name": "openclaw",
+    "version": "unknown",
+    "model_name": "openai/z-ai/glm-5",
+    "extra": {
+      "openclaw_session_id": "330dcdec-91e0-4195-bb96-bcc8aac526e8"
+    }
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "timestamp": "2026-04-08T19:38:25.881000Z",
+      "source": "user",
+      "message": "Implement delete support for Dedicated Inference resources in the godo client.\n\nThe `DedicatedInference` client API currently supports create/get/update operations. It must also expose a delete operation that callers can use through `client.DedicatedInference`.\n\nRequired behavior:\n\n- Add a delete operation to the Dedicated Inference service API and its implementation.\n- The operation must accept a context and a dedicated inference UUID.\n- It must send an HTTP `DELETE` request to `/v2/dedicated-inferences/{id}`.\n- It must not send a request body.\n- It must return the raw `*Response` and `error` from the request execution path.\n- For a `202 Accepted` response with no body, it should return a non-nil response and a nil error.\n- API errors (for example `404 Not Found`) must be propagated as errors instead of being swallowed.\n\nCompatibility requirements:\n\n- Existing Dedicated Inference operations (especially get and update) must keep working unchanged.",
+      "extra": {
+        "openclaw_role": "user",
+        "stop_reason": null,
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 2,
+      "timestamp": "2026-04-08T19:38:25.885000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "The user wants me to implement delete support for Dedicated Inference resources in the godo client. Let me first explore the codebase to understand the existing structure and how the DedicatedInference service is currently implemented.\n\nI need to:\n1. Find the existing DedicatedInference service implementation\n2. Understand the pattern used for create/get/update operations\n3. Add a delete operation following the same pattern\n4. Ensure the delete operation:\n   - Accepts context and UUID\n   - Sends DELETE to `/v2/dedicated-inferences/{id}`\n   - No request body\n   - Returns `(*Response, error)`\n   - Handles 202 Accepted correctly\n   - Propagates API errors\n\nLet me start by exploring the codebase structure.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-75daabf5431744ae91d7d99b0017b52b",
+          "function_name": "exec",
+          "arguments": {
+            "command": "find /workspace -type f -name \"*.go\" | xargs grep -l -i \"dedicatedinference\\|dedicated.inference\" 2>/dev/null | head -20"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 296,
+        "completion_tokens": 354,
+        "cached_tokens": 18158,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 18808
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 3,
+      "timestamp": "2026-04-08T19:38:34.981000Z",
+      "source": "agent",
+      "message": "(no output)",
+      "observation": {
+        "results": [
+          {
+            "content": "(no output)"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-75daabf5431744ae91d7d99b0017b52b",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": 6
+      }
+    },
+    {
+      "step_id": 4,
+      "timestamp": "2026-04-08T19:38:34.984000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "No Go files found with DedicatedInference. Let me check if there's a godo client or any Go code in the workspace.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-a6d4b7b1f06b46529d83f9e79984a10b",
+          "function_name": "exec",
+          "arguments": {
+            "command": "find /workspace -type f -name \"*.go\" 2>/dev/null | head -20"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 58,
+        "completion_tokens": 84,
+        "cached_tokens": 18452,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 18594
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 5,
+      "timestamp": "2026-04-08T19:38:39.554000Z",
+      "source": "agent",
+      "message": "(no output)",
+      "observation": {
+        "results": [
+          {
+            "content": "(no output)"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-a6d4b7b1f06b46529d83f9e79984a10b",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": 4
+      }
+    },
+    {
+      "step_id": 6,
+      "timestamp": "2026-04-08T19:38:39.559000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "No Go files found. Let me check what's in the workspace.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-3cdc2ef108cd413f99d02f10df971a23",
+          "function_name": "exec",
+          "arguments": {
+            "command": "ls -la /workspace"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 38,
+        "completion_tokens": 43,
+        "cached_tokens": 18508,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 18589
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 7,
+      "timestamp": "2026-04-08T19:38:44.542000Z",
+      "source": "agent",
+      "message": "total 36\ndrwxr-xr-x 2 root root 4096 Apr  8 19:38 .\ndrwxr-xr-x 1 root root 4096 Apr  8 19:38 ..\n-rw-r--r-- 1 root root 8081 Apr  8 19:38 AGENTS.md\n-rw-r--r-- 1 root root  173 Apr  8 19:38 HEARTBEAT.md\n-rw-r--r-- 1 root root  426 Apr  8 19:38 IDENTITY.md\n-rw-r--r-- 1 root root 1709 Apr  8 19:38 SOUL.md\n-rw-r--r-- 1 root root  900 Apr  8 19:38 TOOLS.md\n-rw-r--r-- 1 root root  494 Apr  8 19:38 USER.md",
+      "observation": {
+        "results": [
+          {
+            "content": "total 36\ndrwxr-xr-x 2 root root 4096 Apr  8 19:38 .\ndrwxr-xr-x 1 root root 4096 Apr  8 19:38 ..\n-rw-r--r-- 1 root root 8081 Apr  8 19:38 AGENTS.md\n-rw-r--r-- 1 root root  173 Apr  8 19:38 HEARTBEAT.md\n-rw-r--r-- 1 root root  426 Apr  8 19:38 IDENTITY.md\n-rw-r--r-- 1 root root 1709 Apr  8 19:38 SOUL.md\n-rw-r--r-- 1 root root  900 Apr  8 19:38 TOOLS.md\n-rw-r--r-- 1 root root  494 Apr  8 19:38 USER.md"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-3cdc2ef108cd413f99d02f10df971a23",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": 7
+      }
+    },
+    {
+      "step_id": 8,
+      "timestamp": "2026-04-08T19:38:44.546000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "It seems the workspace is mostly empty - just has the standard OpenClaw files. The user is asking me to implement delete support for Dedicated Inference resources in the godo client, but there's no godo repository in the workspace.\n\nLet me search more broadly - maybe I need to clone the godo repository first, or it's elsewhere in the filesystem.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-8674a45968e44dc9882f59dc271e1e23",
+          "function_name": "exec",
+          "arguments": {
+            "command": "find / -type f -name \"*.go\" 2>/dev/null | xargs grep -l -i \"dedicatedinference\\|dedicated.inference\" 2>/dev/null | head -10"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 18628,
+        "completion_tokens": 200,
+        "cached_tokens": 139,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 18967
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 9,
+      "timestamp": "2026-04-08T19:38:54.238000Z",
+      "source": "agent",
+      "message": "/app/godo/dedicated_inference_test.go\n/app/godo/dedicated_inference.go\n/app/godo/godo.go",
+      "observation": {
+        "results": [
+          {
+            "content": "/app/godo/dedicated_inference_test.go\n/app/godo/dedicated_inference.go\n/app/godo/godo.go"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-8674a45968e44dc9882f59dc271e1e23",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": 1508
+      }
+    },
+    {
+      "step_id": 10,
+      "timestamp": "2026-04-08T19:38:54.241000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Found the godo client files. Let me read the existing dedicated inference implementation to understand the current structure.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-abf7e676058d495284050755043a6b58",
+          "function_name": "read",
+          "arguments": {
+            "path": "/app/godo/dedicated_inference.go"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 86,
+        "completion_tokens": 61,
+        "cached_tokens": 18765,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 18912
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 11,
+      "timestamp": "2026-04-08T19:38:58.286000Z",
+      "source": "agent",
+      "message": "package godo\n\nimport (\n\t\"context\"\n\t\"fmt\"\n\t\"net/http\"\n\t\"time\"\n)\n\nconst dedicatedInferenceBasePath = \"/v2/dedicated-inferences\"\n\n// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\ntype DedicatedInferenceService interface {\n\tCreate(context.Context, *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error)\n\tGet(context.Context, string) (*DedicatedInference, *Response, error)\n\tUpdate(context.Context, string, *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error)\n}\n\n// DedicatedInferenceServiceOp handles communication with Dedicated Inference methods of the DigitalOcean API.\ntype DedicatedInferenceServiceOp struct {\n\tclient *Client\n}\n\nvar _ DedicatedInferenceService = &DedicatedInferenceServiceOp{}\n\n// DedicatedInferenceCreateRequest represents a request to create a Dedicated Inference.\ntype DedicatedInferenceCreateRequest struct {\n\tSpec    *DedicatedInferenceSpecRequest `json:\"spec\"`\n\tSecrets *DedicatedInferenceSecrets     `json:\"secrets,omitempty\"`\n}\n\n// DedicatedInferenceSpecRequest represents the deployment specification in a create/update request.\ntype DedicatedInferenceSpecRequest struct {\n\tVersion              int                               `json:\"version\"`\n\tName                 string                            `json:\"name\"`\n\tRegion               string                            `json:\"region\"`\n\tEnablePublicEndpoint bool                              `json:\"enable_public_endpoint\"`\n\tVPC                  *DedicatedInferenceVPCRequest     `json:\"vpc\"`\n\tModelDeployments     []*DedicatedInferenceModelRequest `json:\"model_deployments\"`\n}\n\n// DedicatedInferenceVPCRequest represents the VPC configuration in a request.\ntype DedicatedInferenceVPCRequest struct {\n\tUUID string `json:\"uuid\"`\n}\n\n// DedicatedInferenceModelRequest represents a model deployment in a request.\ntype DedicatedInferenceModelRequest struct {\n\tModelID        string                                  `json:\"model_id,omitempty\"`\n\tModelSlug      string                                  `json:\"model_slug\"`\n\tModelProvider  string                                  `json:\"model_provider\"`\n\tWorkloadConfig *DedicatedInferenceWorkloadConfig       `json:\"workload_config,omitempty\"`\n\tAccelerators   []*DedicatedInferenceAcceleratorRequest `json:\"accelerators\"`\n}\n\n// DedicatedInferenceWorkloadConfig represents workload-specific configuration.\ntype DedicatedInferenceWorkloadConfig struct{}\n\n// DedicatedInferenceAcceleratorRequest represents an accelerator in a request.\ntype DedicatedInferenceAcceleratorRequest struct {\n\tAcceleratorSlug string `json:\"accelerator_slug\"`\n\tScale           uint64 `json:\"scale\"`\n\tType            string `json:\"type\"`\n}\n\n// DedicatedInferenceSecrets represents secrets for external model providers.\ntype DedicatedInferenceSecrets struct {\n\tHuggingFaceToken string `json:\"hugging_face_token,omitempty\"`\n}\n\n// DedicatedInferenceUpdateRequest represents a request to update a Dedicated Inference.\ntype DedicatedInferenceUpdateRequest struct {\n\tSpec    *DedicatedInferenceSpecRequest `json:\"spec\"`\n\tSecrets *DedicatedInferenceSecrets     `json:\"secrets,omitempty\"`\n}\n\n// -- Response types (what the API returns) --\n\n// DedicatedInference represents a Dedicated Inference resource returned by the API.\ntype DedicatedInference struct {\n\tID                    string                        `json:\"id\"`\n\tName                  string                        `json:\"name\"`\n\tRegion                string                        `json:\"region\"`\n\tStatus                string                        `json:\"status\"`\n\tVPCUUID               string                        `json:\"vpc_uuid\"`\n\tEndpoints             *DedicatedInferenceEndpoints  `json:\"endpoints,omitempty\"`\n\tDeploymentSpec        *DedicatedInferenceDeployment `json:\"spec,omitempty\"`\n\tPendingDeploymentSpec *DedicatedInferenceDeployment `json:\"pending_deployment_spec,omitempty\"`\n\tCreatedAt             time.Time                     `json:\"created_at,omitempty\"`\n\tUpdatedAt             time.Time                     `json:\"updated_at,omitempty\"`\n}\n\nfunc (d DedicatedInference) String() string {\n\treturn Stringify(d)\n}\n\n// DedicatedInferenceEndpoints represents the endpoints for a Dedicated Inference.\ntype DedicatedInferenceEndpoints struct {\n\tPublicEndpointFQDN  string `json:\"public_endpoint_fqdn,omitempty\"`\n\tPrivateEndpointFQDN string `json:\"private_endpoint_fqdn,omitempty\"`\n}\n\n// DedicatedInferenceDeployment represents a deployment spec in the API response.\ntype DedicatedInferenceDeployment struct {\n\tVersion              uint64                               `json:\"version\"`\n\tID                   string                               `json:\"id\"`\n\tDedicatedInferenceID string                               `json:\"dedicated_inference_id\"`\n\tState                string                               `json:\"state\"`\n\tEnablePublicEndpoint bool                                 `json:\"enable_public_endpoint\"`\n\tVPCConfig            *DedicatedInferenceVPCConfig         `json:\"vpc_config,omitempty\"`\n\tModelDeployments     []*DedicatedInferenceModelDeployment `json:\"model_deployments\"`\n\tCreatedAt            time.Time                            `json:\"created_at,omitempty\"`\n\tUpdatedAt            time.Time                            `json:\"updated_at,omitempty\"`\n}\n\n// DedicatedInferenceVPCConfig represents the VPC config in an API response.\ntype DedicatedInferenceVPCConfig struct {\n\tVPCUUID string `json:\"vpc_uuid\"`\n}\n\n// DedicatedInferenceModelDeployment represents a model deployment in an API response.\ntype DedicatedInferenceModelDeployment struct {\n\tModelID       string                           `json:\"model_id\"`\n\tModelSlug     string                           `json:\"model_slug\"`\n\tModelProvider string                           `json:\"model_provider\"`\n\tAccelerators  []*DedicatedInferenceAccelerator `json:\"accelerators\"`\n}\n\n// DedicatedInferenceAccelerator represents an accelerator in an API response.\ntype DedicatedInferenceAccelerator struct {\n\tAcceleratorID   string `json:\"accelerator_id\"`\n\tAcceleratorSlug string `json:\"accelerator_slug\"`\n\tState           string `json:\"state\"`\n\tType            string `json:\"type\"`\n\tScale           uint64 `json:\"scale\"`\n}\n\n// DedicatedInferenceToken represents an auth token returned on create.\ntype DedicatedInferenceToken struct {\n\tID        string    `json:\"id\"`\n\tName      string    `json:\"name\"`\n\tValue     string    `json:\"value,omitempty\"`\n\tCreatedAt time.Time `json:\"created_at\"`\n}\n\nfunc (t DedicatedInferenceToken) String() string {\n\treturn Stringify(t)\n}\n\n// -- Root types for JSON deserialization --\n\ntype dedicatedInferenceRoot struct {\n\tDedicatedInference *DedicatedInference      `json:\"dedicated_inference\"`\n\tToken              *DedicatedInferenceToken `json:\"token,omitempty\"`\n}\n\n// -- Service methods --\n\n// Create a new Dedicated Inference with the given configuration.\nfunc (s *DedicatedInferenceServiceOp) Create(ctx context.Context, createRequest *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error) {\n\treq, err := s.client.NewRequest(ctx, http.MethodPost, dedicatedInferenceBasePath, createRequest)\n\tif err != nil {\n\t\treturn nil, nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, root.Token, resp, nil\n}\n\n// Get an existing Dedicated Inference by its UUID.\nfunc (s *DedicatedInferenceServiceOp) Get(ctx context.Context, id string) (*DedicatedInference, *Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodGet, path, nil)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, resp, nil\n}\n\n// Update an existing Dedicated Inference.\nfunc (s *DedicatedInferenceServiceOp) Update(ctx context.Context, id string, updateRequest *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodPatch, path, updateRequest)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, resp, nil\n}",
+      "observation": {
+        "results": [
+          {
+            "content": "package godo\n\nimport (\n\t\"context\"\n\t\"fmt\"\n\t\"net/http\"\n\t\"time\"\n)\n\nconst dedicatedInferenceBasePath = \"/v2/dedicated-inferences\"\n\n// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\ntype DedicatedInferenceService interface {\n\tCreate(context.Context, *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error)\n\tGet(context.Context, string) (*DedicatedInference, *Response, error)\n\tUpdate(context.Context, string, *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error)\n}\n\n// DedicatedInferenceServiceOp handles communication with Dedicated Inference methods of the DigitalOcean API.\ntype DedicatedInferenceServiceOp struct {\n\tclient *Client\n}\n\nvar _ DedicatedInferenceService = &DedicatedInferenceServiceOp{}\n\n// DedicatedInferenceCreateRequest represents a request to create a Dedicated Inference.\ntype DedicatedInferenceCreateRequest struct {\n\tSpec    *DedicatedInferenceSpecRequest `json:\"spec\"`\n\tSecrets *DedicatedInferenceSecrets     `json:\"secrets,omitempty\"`\n}\n\n// DedicatedInferenceSpecRequest represents the deployment specification in a create/update request.\ntype DedicatedInferenceSpecRequest struct {\n\tVersion              int                               `json:\"version\"`\n\tName                 string                            `json:\"name\"`\n\tRegion               string                            `json:\"region\"`\n\tEnablePublicEndpoint bool                              `json:\"enable_public_endpoint\"`\n\tVPC                  *DedicatedInferenceVPCRequest     `json:\"vpc\"`\n\tModelDeployments     []*DedicatedInferenceModelRequest `json:\"model_deployments\"`\n}\n\n// DedicatedInferenceVPCRequest represents the VPC configuration in a request.\ntype DedicatedInferenceVPCRequest struct {\n\tUUID string `json:\"uuid\"`\n}\n\n// DedicatedInferenceModelRequest represents a model deployment in a request.\ntype DedicatedInferenceModelRequest struct {\n\tModelID        string                                  `json:\"model_id,omitempty\"`\n\tModelSlug      string                                  `json:\"model_slug\"`\n\tModelProvider  string                                  `json:\"model_provider\"`\n\tWorkloadConfig *DedicatedInferenceWorkloadConfig       `json:\"workload_config,omitempty\"`\n\tAccelerators   []*DedicatedInferenceAcceleratorRequest `json:\"accelerators\"`\n}\n\n// DedicatedInferenceWorkloadConfig represents workload-specific configuration.\ntype DedicatedInferenceWorkloadConfig struct{}\n\n// DedicatedInferenceAcceleratorRequest represents an accelerator in a request.\ntype DedicatedInferenceAcceleratorRequest struct {\n\tAcceleratorSlug string `json:\"accelerator_slug\"`\n\tScale           uint64 `json:\"scale\"`\n\tType            string `json:\"type\"`\n}\n\n// DedicatedInferenceSecrets represents secrets for external model providers.\ntype DedicatedInferenceSecrets struct {\n\tHuggingFaceToken string `json:\"hugging_face_token,omitempty\"`\n}\n\n// DedicatedInferenceUpdateRequest represents a request to update a Dedicated Inference.\ntype DedicatedInferenceUpdateRequest struct {\n\tSpec    *DedicatedInferenceSpecRequest `json:\"spec\"`\n\tSecrets *DedicatedInferenceSecrets     `json:\"secrets,omitempty\"`\n}\n\n// -- Response types (what the API returns) --\n\n// DedicatedInference represents a Dedicated Inference resource returned by the API.\ntype DedicatedInference struct {\n\tID                    string                        `json:\"id\"`\n\tName                  string                        `json:\"name\"`\n\tRegion                string                        `json:\"region\"`\n\tStatus                string                        `json:\"status\"`\n\tVPCUUID               string                        `json:\"vpc_uuid\"`\n\tEndpoints             *DedicatedInferenceEndpoints  `json:\"endpoints,omitempty\"`\n\tDeploymentSpec        *DedicatedInferenceDeployment `json:\"spec,omitempty\"`\n\tPendingDeploymentSpec *DedicatedInferenceDeployment `json:\"pending_deployment_spec,omitempty\"`\n\tCreatedAt             time.Time                     `json:\"created_at,omitempty\"`\n\tUpdatedAt             time.Time                     `json:\"updated_at,omitempty\"`\n}\n\nfunc (d DedicatedInference) String() string {\n\treturn Stringify(d)\n}\n\n// DedicatedInferenceEndpoints represents the endpoints for a Dedicated Inference.\ntype DedicatedInferenceEndpoints struct {\n\tPublicEndpointFQDN  string `json:\"public_endpoint_fqdn,omitempty\"`\n\tPrivateEndpointFQDN string `json:\"private_endpoint_fqdn,omitempty\"`\n}\n\n// DedicatedInferenceDeployment represents a deployment spec in the API response.\ntype DedicatedInferenceDeployment struct {\n\tVersion              uint64                               `json:\"version\"`\n\tID                   string                               `json:\"id\"`\n\tDedicatedInferenceID string                               `json:\"dedicated_inference_id\"`\n\tState                string                               `json:\"state\"`\n\tEnablePublicEndpoint bool                                 `json:\"enable_public_endpoint\"`\n\tVPCConfig            *DedicatedInferenceVPCConfig         `json:\"vpc_config,omitempty\"`\n\tModelDeployments     []*DedicatedInferenceModelDeployment `json:\"model_deployments\"`\n\tCreatedAt            time.Time                            `json:\"created_at,omitempty\"`\n\tUpdatedAt            time.Time                            `json:\"updated_at,omitempty\"`\n}\n\n// DedicatedInferenceVPCConfig represents the VPC config in an API response.\ntype DedicatedInferenceVPCConfig struct {\n\tVPCUUID string `json:\"vpc_uuid\"`\n}\n\n// DedicatedInferenceModelDeployment represents a model deployment in an API response.\ntype DedicatedInferenceModelDeployment struct {\n\tModelID       string                           `json:\"model_id\"`\n\tModelSlug     string                           `json:\"model_slug\"`\n\tModelProvider string                           `json:\"model_provider\"`\n\tAccelerators  []*DedicatedInferenceAccelerator `json:\"accelerators\"`\n}\n\n// DedicatedInferenceAccelerator represents an accelerator in an API response.\ntype DedicatedInferenceAccelerator struct {\n\tAcceleratorID   string `json:\"accelerator_id\"`\n\tAcceleratorSlug string `json:\"accelerator_slug\"`\n\tState           string `json:\"state\"`\n\tType            string `json:\"type\"`\n\tScale           uint64 `json:\"scale\"`\n}\n\n// DedicatedInferenceToken represents an auth token returned on create.\ntype DedicatedInferenceToken struct {\n\tID        string    `json:\"id\"`\n\tName      string    `json:\"name\"`\n\tValue     string    `json:\"value,omitempty\"`\n\tCreatedAt time.Time `json:\"created_at\"`\n}\n\nfunc (t DedicatedInferenceToken) String() string {\n\treturn Stringify(t)\n}\n\n// -- Root types for JSON deserialization --\n\ntype dedicatedInferenceRoot struct {\n\tDedicatedInference *DedicatedInference      `json:\"dedicated_inference\"`\n\tToken              *DedicatedInferenceToken `json:\"token,omitempty\"`\n}\n\n// -- Service methods --\n\n// Create a new Dedicated Inference with the given configuration.\nfunc (s *DedicatedInferenceServiceOp) Create(ctx context.Context, createRequest *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error) {\n\treq, err := s.client.NewRequest(ctx, http.MethodPost, dedicatedInferenceBasePath, createRequest)\n\tif err != nil {\n\t\treturn nil, nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, root.Token, resp, nil\n}\n\n// Get an existing Dedicated Inference by its UUID.\nfunc (s *DedicatedInferenceServiceOp) Get(ctx context.Context, id string) (*DedicatedInference, *Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodGet, path, nil)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, resp, nil\n}\n\n// Update an existing Dedicated Inference.\nfunc (s *DedicatedInferenceServiceOp) Update(ctx context.Context, id string, updateRequest *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodPatch, path, updateRequest)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, resp, nil\n}"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-abf7e676058d495284050755043a6b58"
+      }
+    },
+    {
+      "step_id": 12,
+      "timestamp": "2026-04-08T19:38:58.288000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Now let me look at the test file to understand the testing patterns:",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-c8cc19c1ccc747c387925b23c54db0f3",
+          "function_name": "read",
+          "arguments": {
+            "path": "/app/godo/dedicated_inference_test.go"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 2144,
+        "completion_tokens": 48,
+        "cached_tokens": 18544,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 20736
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 13,
+      "timestamp": "2026-04-08T19:39:07.122000Z",
+      "source": "agent",
+      "message": "package godo\n\nimport (\n\t\"encoding/json\"\n\t\"fmt\"\n\t\"net/http\"\n\t\"reflect\"\n\t\"testing\"\n\t\"time\"\n)\n\nvar (\n\tdiUpdateJSONResponse = `\n{\n  \"dedicated_inference\": {\n    \"id\": \"di-uuid\",\n    \"name\": \"test-di-updated\",\n    \"region\": \"s2r1\",\n    \"status\": \"updating\",\n    \"vpc_uuid\": \"246de291-05af-461f-956a-a7be58f65367\",\n    \"endpoints\": {\n      \"public_endpoint_fqdn\": \"test-di.di.s2r1.digitalocean.com\",\n      \"private_endpoint_fqdn\": \"test-di.internal.di.s2r1.digitalocean.com\"\n    },\n    \"spec\": {\n      \"version\": 1,\n      \"id\": \"spec-uuid\",\n      \"dedicated_inference_id\": \"di-uuid\",\n      \"state\": \"active\",\n      \"enable_public_endpoint\": true,\n      \"vpc_config\": {\n        \"vpc_uuid\": \"246de291-05af-461f-956a-a7be58f65367\"\n      },\n      \"model_deployments\": [\n        {\n          \"model_id\": \"model-uuid\",\n          \"model_slug\": \"meta-llama/Llama-3.1-8B-Instruct\",\n          \"model_provider\": \"hugging_face\",\n          \"accelerators\": [\n            {\n              \"accelerator_id\": \"acc-uuid\",\n              \"accelerator_slug\": \"gpu-mi300x1-192gb\",\n              \"state\": \"active\",\n              \"type\": \"prefill_decode\",\n              \"scale\": 1\n            }\n          ]\n        }\n      ],\n      \"created_at\": \"2024-01-09T20:44:32Z\",\n      \"updated_at\": \"2024-01-09T20:44:32Z\"\n    },\n    \"pending_deployment_spec\": {\n      \"version\": 2,\n      \"id\": \"spec-uuid-2\",\n      \"dedicated_inference_id\": \"di-uuid\",\n      \"state\": \"pending\",\n      \"enable_public_endpoint\": true,\n      \"vpc_config\": {\n        \"vpc_uuid\": \"246de291-05af-461f-956a-a7be58f65367\"\n      },\n      \"model_deployments\": [\n        {\n          \"model_id\": \"model-uuid\",\n          \"model_slug\": \"meta-llama/Llama-3.1-8B-Instruct\",\n          \"model_provider\": \"hugging_face\",\n          \"accelerators\": [\n            {\n              \"accelerator_id\": \"acc-uuid\",\n              \"accelerator_slug\": \"gpu-mi300x1-192gb\",\n              \"state\": \"pending\",\n              \"type\": \"prefill_decode\",\n              \"scale\": 2\n            }\n          ]\n        }\n      ],\n      \"created_at\": \"2024-01-09T20:50:00Z\",\n      \"updated_at\": \"2024-01-09T20:50:00Z\"\n    },\n    \"created_at\": \"2024-01-09T20:44:32Z\",\n    \"updated_at\": \"2024-01-09T20:50:00Z\"\n  }\n}\n`\n\tdiCreateJSONResponse = `\n{\n  \"dedicated_inference\": {\n    \"id\": \"di-uuid\",\n    \"name\": \"test-di\",\n    \"region\": \"s2r1\",\n    \"status\": \"provisioning\",\n    \"vpc_uuid\": \"246de291-05af-461f-956a-a7be58f65367\",\n    \"pending_deployment_spec\": {\n      \"version\": 1,\n      \"id\": \"spec-uuid\",\n      \"dedicated_inference_id\": \"di-uuid\",\n      \"state\": \"pending\",\n      \"enable_public_endpoint\": true,\n      \"vpc_config\": {\n        \"vpc_uuid\": \"246de291-05af-461f-956a-a7be58f65367\"\n      },\n      \"model_deployments\": [\n        {\n          \"model_id\": \"\",\n          \"model_slug\": \"meta-llama/Llama-3.1-8B-Instruct\",\n          \"model_provider\": \"hugging_face\",\n          \"accelerators\": [\n            {\n              \"accelerator_id\": \"\",\n              \"accelerator_slug\": \"gpu-mi300x1-192gb\",\n              \"state\": \"invalid\",\n              \"type\": \"prefill_decode\",\n              \"scale\": 1\n            }\n          ]\n        }\n      ],\n      \"created_at\": \"1970-01-01T00:00:00Z\",\n      \"updated_at\": \"1970-01-01T00:00:00Z\"\n    },\n    \"created_at\": \"1970-01-01T00:00:00Z\",\n    \"updated_at\": \"1970-01-01T00:00:00Z\"\n  },\n  \"token\": {\n    \"id\": \"auth-token-uuid\",\n    \"name\": \"auto-generated-during-provisioning\",\n    \"value\": \"auth-token-value\",\n    \"created_at\": \"1970-01-01T00:00:00Z\"\n  }\n}\n`\n\tdiGetJSONResponse = `\n{\n  \"dedicated_inference\": {\n    \"id\": \"di-uuid\",\n    \"name\": \"test-di\",\n    \"region\": \"s2r1\",\n    \"status\": \"active\",\n    \"vpc_uuid\": \"246de291-05af-461f-956a-a7be58f65367\",\n    \"endpoints\": {\n      \"public_endpoint_fqdn\": \"test-di.di.s2r1.digitalocean.com\",\n      \"private_endpoint_fqdn\": \"test-di.internal.di.s2r1.digitalocean.com\"\n    },\n    \"spec\": {\n      \"version\": 1,\n      \"id\": \"spec-uuid\",\n      \"dedicated_inference_id\": \"di-uuid\",\n      \"state\": \"active\",\n      \"enable_public_endpoint\": true,\n      \"vpc_config\": {\n        \"vpc_uuid\": \"246de291-05af-461f-956a-a7be58f65367\"\n      },\n      \"model_deployments\": [\n        {\n          \"model_id\": \"model-uuid\",\n          \"model_slug\": \"meta-llama/Llama-3.1-8B-Instruct\",\n          \"model_provider\": \"hugging_face\",\n          \"accelerators\": [\n            {\n              \"accelerator_id\": \"acc-uuid\",\n              \"accelerator_slug\": \"gpu-mi300x1-192gb\",\n              \"state\": \"active\",\n              \"type\": \"prefill_decode\",\n              \"scale\": 1\n            }\n          ]\n        }\n      ],\n      \"created_at\": \"2024-01-09T20:44:32Z\",\n      \"updated_at\": \"2024-01-09T20:44:32Z\"\n    },\n    \"created_at\": \"2024-01-09T20:44:32Z\",\n    \"updated_at\": \"2024-01-09T20:44:32Z\"\n  }\n}\n`\n)\n\nfunc TestDedicatedInference_Create(t *testing.T) {\n\tsetup()\n\tdefer teardown()\n\n\tcreateRequest := &DedicatedInferenceCreateRequest{\n\t\tSpec: &DedicatedInferenceSpecRequest{\n\t\t\tVersion:              1,\n\t\t\tName:                 \"test-di\",\n\t\t\tRegion:               \"s2r1\",\n\t\t\tEnablePublicEndpoint: true,\n\t\t\tVPC: &DedicatedInferenceVPCRequest{\n\t\t\t\tUUID: \"246de291-05af-461f-956a-a7be58f65367\",\n\t\t\t},\n\t\t\tModelDeployments: []*DedicatedInferenceModelRequest{\n\t\t\t\t{\n\t\t\t\t\tModelSlug:      \"meta-llama/Llama-3.1-8B-Instruct\",\n\t\t\t\t\tModelProvider:  \"hugging_face\",\n\t\t\t\t\tWorkloadConfig: &DedicatedInferenceWorkloadConfig{},\n\t\t\t\t\tAccelerators: []*DedicatedInferenceAcceleratorRequest{\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tAcceleratorSlug: \"gpu-mi300x1-192gb\",\n\t\t\t\t\t\t\tScale:           1,\n\t\t\t\t\t\t\tType:            \"prefill_decode\",\n\t\t\t\t\t\t},\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t},\n\t\t},\n\t\tSecrets: &DedicatedInferenceSecrets{\n\t\t\tHuggingFaceToken: \"hf_test-token\",\n\t\t},\n\t}\n\n\tmux.HandleFunc(\"/v2/dedicated-inferences\", func(w http.ResponseWriter, r *http.Request) {\n\t\tv := new(DedicatedInferenceCreateRequest)\n\t\terr := json.NewDecoder(r.Body).Decode(v)\n\t\tif err != nil {\n\t\t\tt.Fatal(err)\n\t\t}\n\n\t\ttestMethod(t, r, http.MethodPost)\n\n\t\tif v.Spec.Name != \"test-di\" {\n\t\t\tt.Errorf(\"Request body name = %q, expected %q\", v.Spec.Name, \"test-di\")\n\t\t}\n\t\tif v.Spec.Region != \"s2r1\" {\n\t\t\tt.Errorf(\"Request body region = %q, expected %q\", v.Spec.Region, \"s2r1\")\n\t\t}\n\t\tif v.Spec.VPC.UUID != \"246de291-05af-461f-956a-a7be58f65367\" {\n\t\t\tt.Errorf(\"Request body VPC UUID = %q, expected %q\", v.Spec.VPC.UUID, \"246de291-05af-461f-956a-a7be58f65367\")\n\t\t}\n\t\tif len(v.Spec.ModelDeployments) != 1 {\n\t\t\tt.Fatalf(\"Request body model deployments count = %d, expected 1\", len(v.Spec.ModelDeployments))\n\t\t}\n\t\tif v.Spec.ModelDeployments[0].ModelSlug != \"meta-llama/Llama-3.1-8B-Instruct\" {\n\t\t\tt.Errorf(\"Request body model slug = %q, expected %q\", v.Spec.ModelDeployments[0].ModelSlug, \"meta-llama/Llama-3.1-8B-Instruct\")\n\t\t}\n\n\t\tw.WriteHeader(http.StatusAccepted)\n\t\tfmt.Fprint(w, diCreateJSONResponse)\n\t})\n\n\tdi, token, resp, err := client.DedicatedInference.Create(ctx, createRequest)\n\tif err != nil {\n\t\tt.Errorf(\"DedicatedInference.Create returned error: %v\", err)\n\t}\n\n\tif resp.StatusCode != http.StatusAccepted {\n\t\tt.Errorf(\"expected status %d, got %d\", http.StatusAccepted, resp.StatusCode)\n\t}\n\n\tzeroTime := time.Date(1970, 1, 1, 0, 0, 0, 0, time.UTC)\n\n\texpectedDI := &DedicatedInference{\n\t\tID:      \"di-uuid\",\n\t\tName:    \"test-di\",\n\t\tRegion:  \"s2r1\",\n\t\tStatus:  \"provisioning\",\n\t\tVPCUUID: \"246de291-05af-461f-956a-a7be58f65367\",\n\t\tPendingDeploymentSpec: &DedicatedInferenceDeployment{\n\t\t\tVersion:              1,\n\t\t\tID:                   \"spec-uuid\",\n\t\t\tDedicatedInferenceID: \"di-uuid\",\n\t\t\tState:                \"pending\",\n\t\t\tEnablePublicEndpoint: true,\n\t\t\tVPCConfig: &DedicatedInferenceVPCConfig{\n\t\t\t\tVPCUUID: \"246de291-05af-461f-956a-a7be58f65367\",\n\t\t\t},\n\t\t\tModelDeployments: []*DedicatedInferenceModelDeployment{\n\t\t\t\t{\n\t\t\t\t\tModelID:       \"\",\n\t\t\t\t\tModelSlug:     \"meta-llama/Llama-3.1-8B-Instruct\",\n\t\t\t\t\tModelProvider: \"hugging_face\",\n\t\t\t\t\tAccelerators: []*DedicatedInferenceAccelerator{\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tAcceleratorID:   \"\",\n\t\t\t\t\t\t\tAcceleratorSlug: \"gpu-mi300x1-192gb\",\n\t\t\t\t\t\t\tState:           \"invalid\",\n\t\t\t\t\t\t\tType:            \"prefill_decode\",\n\t\t\t\t\t\t\tScale:           1,\n\t\t\t\t\t\t},\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t},\n\t\t\tCreatedAt: zeroTime,\n\t\t\tUpdatedAt: zeroTime,\n\t\t},\n\t\tCreatedAt: zeroTime,\n\t\tUpdatedAt: zeroTime,\n\t}\n\n\tif !reflect.DeepEqual(di, expectedDI) {\n\t\tt.Errorf(\"DedicatedInference.Create returned %+v, expected %+v\", di, expectedDI)\n\t}\n\n\texpectedToken := &DedicatedInferenceToken{\n\t\tID:        \"auth-token-uuid\",\n\t\tName:      \"auto-generated-during-provisioning\",\n\t\tValue:     \"auth-token-value\",\n\t\tCreatedAt: zeroTime,\n\t}\n\n\tif !reflect.DeepEqual(token, expectedToken) {\n\t\tt.Errorf(\"DedicatedInference.Create token = %+v, expected %+v\", token, expectedToken)\n\t}\n}\n\nfunc TestDedicatedInference_Get(t *testing.T) {\n\tsetup()\n\tdefer teardown()\n\n\tdiID := \"di-uuid\"\n\n\tmux.HandleFunc(fmt.Sprintf(\"/v2/dedicated-inferences/%s\", diID), func(w http.ResponseWriter, r *http.Request) {\n\t\ttestMethod(t, r, http.MethodGet)\n\t\tfmt.Fprint(w, diGetJSONResponse)\n\t})\n\n\tdi, _, err := client.DedicatedInference.Get(ctx, diID)\n\tif err != nil {\n\t\tt.Errorf(\"DedicatedInference.Get returned error: %v\", err)\n\t}\n\n\tcreatedAt, _ := time.Parse(time.RFC3339, \"2024-01-09T20:44:32Z\")\n\n\texpectedDI := &DedicatedInference{\n\t\tID:      \"di-uuid\",\n\t\tName:    \"test-di\",\n\t\tRegion:  \"s2r1\",\n\t\tStatus:  \"active\",\n\t\tVPCUUID: \"246de291-05af-461f-956a-a7be58f65367\",\n\t\tEndpoints: &DedicatedInferenceEndpoints{\n\t\t\tPublicEndpointFQDN:  \"test-di.di.s2r1.digitalocean.com\",\n\t\t\tPrivateEndpointFQDN: \"test-di.internal.di.s2r1.digitalocean.com\",\n\t\t},\n\t\tDeploymentSpec: &DedicatedInferenceDeployment{\n\t\t\tVersion:              1,\n\t\t\tID:                   \"spec-uuid\",\n\t\t\tDedicatedInferenceID: \"di-uuid\",\n\t\t\tState:                \"active\",\n\t\t\tEnablePublicEndpoint: true,\n\t\t\tVPCConfig: &DedicatedInferenceVPCConfig{\n\t\t\t\tVPCUUID: \"246de291-05af-461f-956a-a7be58f65367\",\n\t\t\t},\n\t\t\tModelDeployments: []*DedicatedInferenceModelDeployment{\n\t\t\t\t{\n\t\t\t\t\tModelID:       \"model-uuid\",\n\t\t\t\t\tModelSlug:     \"meta-llama/Llama-3.1-8B-Instruct\",\n\t\t\t\t\tModelProvider: \"hugging_face\",\n\t\t\t\t\tAccelerators: []*DedicatedInferenceAccelerator{\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tAcceleratorID:   \"acc-uuid\",\n\t\t\t\t\t\t\tAcceleratorSlug: \"gpu-mi300x1-192gb\",\n\t\t\t\t\t\t\tState:           \"active\",\n\t\t\t\t\t\t\tType:            \"prefill_decode\",\n\t\t\t\t\t\t\tScale:           1,\n\t\t\t\t\t\t},\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t},\n\t\t\tCreatedAt: createdAt,\n\t\t\tUpdatedAt: createdAt,\n\t\t},\n\t\tCreatedAt: createdAt,\n\t\tUpdatedAt: createdAt,\n\t}\n\n\tif !reflect.DeepEqual(di, expectedDI) {\n\t\tt.Errorf(\"DedicatedInference.Get returned %+v, expected %+v\", di, expectedDI)\n\t}\n}\n\nfunc TestDedicatedInference_Get_NoToken(t *testing.T) {\n\tsetup()\n\tdefer teardown()\n\n\tmux.HandleFunc(\"/v2/dedicated-inferences/di-uuid\", func(w http.ResponseWriter, r *http.Request) {\n\t\ttestMethod(t, r, http.MethodGet)\n\t\tfmt.Fprint(w, diGetJSONResponse)\n\t})\n\n\tdi, _, err := client.DedicatedInference.Get(ctx, \"di-uuid\")\n\tif err != nil {\n\t\tt.Errorf(\"DedicatedInference.Get returned error: %v\", err)\n\t}\n\n\tif di.ID != \"di-uuid\" {\n\t\tt.Errorf(\"expected ID %q, got %q\", \"di-uuid\", di.ID)\n\t}\n\n\tif di.Status != \"active\" {\n\t\tt.Errorf(\"expected Status %q, got %q\", \"active\", di.Status)\n\t}\n\n\tif di.Endpoints == nil {\n\t\tt.Fatal(\"expected endpoints, got nil\")\n\t}\n\n\tif di.Endpoints.PublicEndpointFQDN != \"test-di.di.s2r1.digitalocean.com\" {\n\t\tt.Errorf(\"expected public fqdn %q, got %q\", \"test-di.di.s2r1.digitalocean.com\", di.Endpoints.PublicEndpointFQDN)\n\t}\n}\n\nfunc TestDedicatedInference_String(t *testing.T) {\n\tdi := DedicatedInference{\n\t\tID:     \"di-123\",\n\t\tName:   \"test\",\n\t\tRegion: \"nyc2\",\n\t\tStatus: \"active\",\n\t}\n\n\tif di.String() == \"\" {\n\t\tt.Error(\"DedicatedInference.String() returned empty string\")\n\t}\n}\n\nfunc TestDedicatedInferenceToken_String(t *testing.T) {\n\ttoken := DedicatedInferenceToken{\n\t\tID:   \"token-123\",\n\t\tName: \"test-token\",\n\t}\n\n\tif token.String() == \"\" {\n\t\tt.Error(\"DedicatedInferenceToken.String() returned empty string\")\n\t}\n}\n\nfunc TestDedicatedInference_Update(t *testing.T) {\n\tsetup()\n\tdefer teardown()\n\n\tdiID := \"di-uuid\"\n\n\tmux.HandleFunc(fmt.Sprintf(\"/v2/dedicated-inferences/%s\", diID), func(w http.ResponseWriter, r *http.Request) {\n\t\ttestMethod(t, r, http.MethodPatch)\n\n\t\tvar req DedicatedInferenceUpdateRequest\n\t\tif err := json.NewDecoder(r.Body).Decode(&req); err != nil {\n\t\t\tt.Errorf(\"failed to decode request body: %v\", err)\n\t\t}\n\n\t\tif req.Spec == nil {\n\t\t\tt.Error(\"expected spec in request\")\n\t\t}\n\n\t\tif req.Spec.Name != \"test-di-updated\" {\n\t\t\tt.Errorf(\"expected name %q, got %q\", \"test-di-updated\", req.Spec.Name)\n\t\t}\n\n\t\tw.WriteHeader(http.StatusAccepted)\n\t\tfmt.Fprint(w, diUpdateJSONResponse)\n\t})\n\n\tupdateReq := &DedicatedInferenceUpdateRequest{\n\t\tSpec: &DedicatedInferenceSpecRequest{\n\t\t\tVersion:              2,\n\t\t\tName:                 \"test-di-updated\",\n\t\t\tRegion:               \"s2r1\",\n\t\t\tEnablePublicEndpoint: true,\n\t\t\tVPC: &DedicatedInferenceVPCRequest{\n\t\t\t\tUUID: \"246de291-05af-461f-956a-a7be58f65367\",\n\t\t\t},\n\t\t\tModelDeployments: []*DedicatedInferenceModelRequest{\n\t\t\t\t{\n\t\t\t\t\tModelID:       \"model-uuid\",\n\t\t\t\t\tModelSlug:     \"meta-llama/Llama-3.1-8B-Instruct\",\n\t\t\t\t\tModelProvider: \"hugging_face\",\n\t\t\t\t\tAccelerators: []*DedicatedInferenceAcceleratorRequest{\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tAcceleratorSlug: \"gpu-mi300x1-192gb\",\n\t\t\t\t\t\t\tScale:           2,\n\t\t\t\t\t\t\tType:            \"prefill_decode\",\n\t\t\t\t\t\t},\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t},\n\t\t},\n\t\tSecrets: &DedicatedInferenceSecrets{\n\t\t\tHuggingFaceToken: \"hf_test-token\",\n\t\t},\n\t}\n\n\tdi, _, err := client.DedicatedInference.Update(ctx, diID, updateReq)\n\tif err != nil {\n\t\tt.Errorf(\"DedicatedInference.Update returned error: %v\", err)\n\t}\n\n\tif di.ID != diID {\n\t\tt.Errorf(\"expected ID %q, got %q\", diID, di.ID)\n\t}\n\n\tif di.Name != \"test-di-updated\" {\n\t\tt.Errorf(\"expected name %q, got %q\", \"test-di-updated\", di.Name)\n\t}\n\n\tif di.Status != \"updating\" {\n\t\tt.Errorf(\"expected status %q, got %q\", \"updating\", di.Status)\n\t}\n\n\tif di.PendingDeploymentSpec == nil {\n\t\tt.Fatal(\"expected pending_deployment_spec, got nil\")\n\t}\n\n\tif di.PendingDeploymentSpec.ModelDeployments[0].Accelerators[0].Scale != 2 {\n\t\tt.Errorf(\"expected scale 2, got %d\", di.PendingDeploymentSpec.ModelDeployments[0].Accelerators[0].Scale)\n\t}\n}",
+      "observation": {
+        "results": [
+          {
+            "content": "package godo\n\nimport (\n\t\"encoding/json\"\n\t\"fmt\"\n\t\"net/http\"\n\t\"reflect\"\n\t\"testing\"\n\t\"time\"\n)\n\nvar (\n\tdiUpdateJSONResponse = `\n{\n  \"dedicated_inference\": {\n    \"id\": \"di-uuid\",\n    \"name\": \"test-di-updated\",\n    \"region\": \"s2r1\",\n    \"status\": \"updating\",\n    \"vpc_uuid\": \"246de291-05af-461f-956a-a7be58f65367\",\n    \"endpoints\": {\n      \"public_endpoint_fqdn\": \"test-di.di.s2r1.digitalocean.com\",\n      \"private_endpoint_fqdn\": \"test-di.internal.di.s2r1.digitalocean.com\"\n    },\n    \"spec\": {\n      \"version\": 1,\n      \"id\": \"spec-uuid\",\n      \"dedicated_inference_id\": \"di-uuid\",\n      \"state\": \"active\",\n      \"enable_public_endpoint\": true,\n      \"vpc_config\": {\n        \"vpc_uuid\": \"246de291-05af-461f-956a-a7be58f65367\"\n      },\n      \"model_deployments\": [\n        {\n          \"model_id\": \"model-uuid\",\n          \"model_slug\": \"meta-llama/Llama-3.1-8B-Instruct\",\n          \"model_provider\": \"hugging_face\",\n          \"accelerators\": [\n            {\n              \"accelerator_id\": \"acc-uuid\",\n              \"accelerator_slug\": \"gpu-mi300x1-192gb\",\n              \"state\": \"active\",\n              \"type\": \"prefill_decode\",\n              \"scale\": 1\n            }\n          ]\n        }\n      ],\n      \"created_at\": \"2024-01-09T20:44:32Z\",\n      \"updated_at\": \"2024-01-09T20:44:32Z\"\n    },\n    \"pending_deployment_spec\": {\n      \"version\": 2,\n      \"id\": \"spec-uuid-2\",\n      \"dedicated_inference_id\": \"di-uuid\",\n      \"state\": \"pending\",\n      \"enable_public_endpoint\": true,\n      \"vpc_config\": {\n        \"vpc_uuid\": \"246de291-05af-461f-956a-a7be58f65367\"\n      },\n      \"model_deployments\": [\n        {\n          \"model_id\": \"model-uuid\",\n          \"model_slug\": \"meta-llama/Llama-3.1-8B-Instruct\",\n          \"model_provider\": \"hugging_face\",\n          \"accelerators\": [\n            {\n              \"accelerator_id\": \"acc-uuid\",\n              \"accelerator_slug\": \"gpu-mi300x1-192gb\",\n              \"state\": \"pending\",\n              \"type\": \"prefill_decode\",\n              \"scale\": 2\n            }\n          ]\n        }\n      ],\n      \"created_at\": \"2024-01-09T20:50:00Z\",\n      \"updated_at\": \"2024-01-09T20:50:00Z\"\n    },\n    \"created_at\": \"2024-01-09T20:44:32Z\",\n    \"updated_at\": \"2024-01-09T20:50:00Z\"\n  }\n}\n`\n\tdiCreateJSONResponse = `\n{\n  \"dedicated_inference\": {\n    \"id\": \"di-uuid\",\n    \"name\": \"test-di\",\n    \"region\": \"s2r1\",\n    \"status\": \"provisioning\",\n    \"vpc_uuid\": \"246de291-05af-461f-956a-a7be58f65367\",\n    \"pending_deployment_spec\": {\n      \"version\": 1,\n      \"id\": \"spec-uuid\",\n      \"dedicated_inference_id\": \"di-uuid\",\n      \"state\": \"pending\",\n      \"enable_public_endpoint\": true,\n      \"vpc_config\": {\n        \"vpc_uuid\": \"246de291-05af-461f-956a-a7be58f65367\"\n      },\n      \"model_deployments\": [\n        {\n          \"model_id\": \"\",\n          \"model_slug\": \"meta-llama/Llama-3.1-8B-Instruct\",\n          \"model_provider\": \"hugging_face\",\n          \"accelerators\": [\n            {\n              \"accelerator_id\": \"\",\n              \"accelerator_slug\": \"gpu-mi300x1-192gb\",\n              \"state\": \"invalid\",\n              \"type\": \"prefill_decode\",\n              \"scale\": 1\n            }\n          ]\n        }\n      ],\n      \"created_at\": \"1970-01-01T00:00:00Z\",\n      \"updated_at\": \"1970-01-01T00:00:00Z\"\n    },\n    \"created_at\": \"1970-01-01T00:00:00Z\",\n    \"updated_at\": \"1970-01-01T00:00:00Z\"\n  },\n  \"token\": {\n    \"id\": \"auth-token-uuid\",\n    \"name\": \"auto-generated-during-provisioning\",\n    \"value\": \"auth-token-value\",\n    \"created_at\": \"1970-01-01T00:00:00Z\"\n  }\n}\n`\n\tdiGetJSONResponse = `\n{\n  \"dedicated_inference\": {\n    \"id\": \"di-uuid\",\n    \"name\": \"test-di\",\n    \"region\": \"s2r1\",\n    \"status\": \"active\",\n    \"vpc_uuid\": \"246de291-05af-461f-956a-a7be58f65367\",\n    \"endpoints\": {\n      \"public_endpoint_fqdn\": \"test-di.di.s2r1.digitalocean.com\",\n      \"private_endpoint_fqdn\": \"test-di.internal.di.s2r1.digitalocean.com\"\n    },\n    \"spec\": {\n      \"version\": 1,\n      \"id\": \"spec-uuid\",\n      \"dedicated_inference_id\": \"di-uuid\",\n      \"state\": \"active\",\n      \"enable_public_endpoint\": true,\n      \"vpc_config\": {\n        \"vpc_uuid\": \"246de291-05af-461f-956a-a7be58f65367\"\n      },\n      \"model_deployments\": [\n        {\n          \"model_id\": \"model-uuid\",\n          \"model_slug\": \"meta-llama/Llama-3.1-8B-Instruct\",\n          \"model_provider\": \"hugging_face\",\n          \"accelerators\": [\n            {\n              \"accelerator_id\": \"acc-uuid\",\n              \"accelerator_slug\": \"gpu-mi300x1-192gb\",\n              \"state\": \"active\",\n              \"type\": \"prefill_decode\",\n              \"scale\": 1\n            }\n          ]\n        }\n      ],\n      \"created_at\": \"2024-01-09T20:44:32Z\",\n      \"updated_at\": \"2024-01-09T20:44:32Z\"\n    },\n    \"created_at\": \"2024-01-09T20:44:32Z\",\n    \"updated_at\": \"2024-01-09T20:44:32Z\"\n  }\n}\n`\n)\n\nfunc TestDedicatedInference_Create(t *testing.T) {\n\tsetup()\n\tdefer teardown()\n\n\tcreateRequest := &DedicatedInferenceCreateRequest{\n\t\tSpec: &DedicatedInferenceSpecRequest{\n\t\t\tVersion:              1,\n\t\t\tName:                 \"test-di\",\n\t\t\tRegion:               \"s2r1\",\n\t\t\tEnablePublicEndpoint: true,\n\t\t\tVPC: &DedicatedInferenceVPCRequest{\n\t\t\t\tUUID: \"246de291-05af-461f-956a-a7be58f65367\",\n\t\t\t},\n\t\t\tModelDeployments: []*DedicatedInferenceModelRequest{\n\t\t\t\t{\n\t\t\t\t\tModelSlug:      \"meta-llama/Llama-3.1-8B-Instruct\",\n\t\t\t\t\tModelProvider:  \"hugging_face\",\n\t\t\t\t\tWorkloadConfig: &DedicatedInferenceWorkloadConfig{},\n\t\t\t\t\tAccelerators: []*DedicatedInferenceAcceleratorRequest{\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tAcceleratorSlug: \"gpu-mi300x1-192gb\",\n\t\t\t\t\t\t\tScale:           1,\n\t\t\t\t\t\t\tType:            \"prefill_decode\",\n\t\t\t\t\t\t},\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t},\n\t\t},\n\t\tSecrets: &DedicatedInferenceSecrets{\n\t\t\tHuggingFaceToken: \"hf_test-token\",\n\t\t},\n\t}\n\n\tmux.HandleFunc(\"/v2/dedicated-inferences\", func(w http.ResponseWriter, r *http.Request) {\n\t\tv := new(DedicatedInferenceCreateRequest)\n\t\terr := json.NewDecoder(r.Body).Decode(v)\n\t\tif err != nil {\n\t\t\tt.Fatal(err)\n\t\t}\n\n\t\ttestMethod(t, r, http.MethodPost)\n\n\t\tif v.Spec.Name != \"test-di\" {\n\t\t\tt.Errorf(\"Request body name = %q, expected %q\", v.Spec.Name, \"test-di\")\n\t\t}\n\t\tif v.Spec.Region != \"s2r1\" {\n\t\t\tt.Errorf(\"Request body region = %q, expected %q\", v.Spec.Region, \"s2r1\")\n\t\t}\n\t\tif v.Spec.VPC.UUID != \"246de291-05af-461f-956a-a7be58f65367\" {\n\t\t\tt.Errorf(\"Request body VPC UUID = %q, expected %q\", v.Spec.VPC.UUID, \"246de291-05af-461f-956a-a7be58f65367\")\n\t\t}\n\t\tif len(v.Spec.ModelDeployments) != 1 {\n\t\t\tt.Fatalf(\"Request body model deployments count = %d, expected 1\", len(v.Spec.ModelDeployments))\n\t\t}\n\t\tif v.Spec.ModelDeployments[0].ModelSlug != \"meta-llama/Llama-3.1-8B-Instruct\" {\n\t\t\tt.Errorf(\"Request body model slug = %q, expected %q\", v.Spec.ModelDeployments[0].ModelSlug, \"meta-llama/Llama-3.1-8B-Instruct\")\n\t\t}\n\n\t\tw.WriteHeader(http.StatusAccepted)\n\t\tfmt.Fprint(w, diCreateJSONResponse)\n\t})\n\n\tdi, token, resp, err := client.DedicatedInference.Create(ctx, createRequest)\n\tif err != nil {\n\t\tt.Errorf(\"DedicatedInference.Create returned error: %v\", err)\n\t}\n\n\tif resp.StatusCode != http.StatusAccepted {\n\t\tt.Errorf(\"expected status %d, got %d\", http.StatusAccepted, resp.StatusCode)\n\t}\n\n\tzeroTime := time.Date(1970, 1, 1, 0, 0, 0, 0, time.UTC)\n\n\texpectedDI := &DedicatedInference{\n\t\tID:      \"di-uuid\",\n\t\tName:    \"test-di\",\n\t\tRegion:  \"s2r1\",\n\t\tStatus:  \"provisioning\",\n\t\tVPCUUID: \"246de291-05af-461f-956a-a7be58f65367\",\n\t\tPendingDeploymentSpec: &DedicatedInferenceDeployment{\n\t\t\tVersion:              1,\n\t\t\tID:                   \"spec-uuid\",\n\t\t\tDedicatedInferenceID: \"di-uuid\",\n\t\t\tState:                \"pending\",\n\t\t\tEnablePublicEndpoint: true,\n\t\t\tVPCConfig: &DedicatedInferenceVPCConfig{\n\t\t\t\tVPCUUID: \"246de291-05af-461f-956a-a7be58f65367\",\n\t\t\t},\n\t\t\tModelDeployments: []*DedicatedInferenceModelDeployment{\n\t\t\t\t{\n\t\t\t\t\tModelID:       \"\",\n\t\t\t\t\tModelSlug:     \"meta-llama/Llama-3.1-8B-Instruct\",\n\t\t\t\t\tModelProvider: \"hugging_face\",\n\t\t\t\t\tAccelerators: []*DedicatedInferenceAccelerator{\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tAcceleratorID:   \"\",\n\t\t\t\t\t\t\tAcceleratorSlug: \"gpu-mi300x1-192gb\",\n\t\t\t\t\t\t\tState:           \"invalid\",\n\t\t\t\t\t\t\tType:            \"prefill_decode\",\n\t\t\t\t\t\t\tScale:           1,\n\t\t\t\t\t\t},\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t},\n\t\t\tCreatedAt: zeroTime,\n\t\t\tUpdatedAt: zeroTime,\n\t\t},\n\t\tCreatedAt: zeroTime,\n\t\tUpdatedAt: zeroTime,\n\t}\n\n\tif !reflect.DeepEqual(di, expectedDI) {\n\t\tt.Errorf(\"DedicatedInference.Create returned %+v, expected %+v\", di, expectedDI)\n\t}\n\n\texpectedToken := &DedicatedInferenceToken{\n\t\tID:        \"auth-token-uuid\",\n\t\tName:      \"auto-generated-during-provisioning\",\n\t\tValue:     \"auth-token-value\",\n\t\tCreatedAt: zeroTime,\n\t}\n\n\tif !reflect.DeepEqual(token, expectedToken) {\n\t\tt.Errorf(\"DedicatedInference.Create token = %+v, expected %+v\", token, expectedToken)\n\t}\n}\n\nfunc TestDedicatedInference_Get(t *testing.T) {\n\tsetup()\n\tdefer teardown()\n\n\tdiID := \"di-uuid\"\n\n\tmux.HandleFunc(fmt.Sprintf(\"/v2/dedicated-inferences/%s\", diID), func(w http.ResponseWriter, r *http.Request) {\n\t\ttestMethod(t, r, http.MethodGet)\n\t\tfmt.Fprint(w, diGetJSONResponse)\n\t})\n\n\tdi, _, err := client.DedicatedInference.Get(ctx, diID)\n\tif err != nil {\n\t\tt.Errorf(\"DedicatedInference.Get returned error: %v\", err)\n\t}\n\n\tcreatedAt, _ := time.Parse(time.RFC3339, \"2024-01-09T20:44:32Z\")\n\n\texpectedDI := &DedicatedInference{\n\t\tID:      \"di-uuid\",\n\t\tName:    \"test-di\",\n\t\tRegion:  \"s2r1\",\n\t\tStatus:  \"active\",\n\t\tVPCUUID: \"246de291-05af-461f-956a-a7be58f65367\",\n\t\tEndpoints: &DedicatedInferenceEndpoints{\n\t\t\tPublicEndpointFQDN:  \"test-di.di.s2r1.digitalocean.com\",\n\t\t\tPrivateEndpointFQDN: \"test-di.internal.di.s2r1.digitalocean.com\",\n\t\t},\n\t\tDeploymentSpec: &DedicatedInferenceDeployment{\n\t\t\tVersion:              1,\n\t\t\tID:                   \"spec-uuid\",\n\t\t\tDedicatedInferenceID: \"di-uuid\",\n\t\t\tState:                \"active\",\n\t\t\tEnablePublicEndpoint: true,\n\t\t\tVPCConfig: &DedicatedInferenceVPCConfig{\n\t\t\t\tVPCUUID: \"246de291-05af-461f-956a-a7be58f65367\",\n\t\t\t},\n\t\t\tModelDeployments: []*DedicatedInferenceModelDeployment{\n\t\t\t\t{\n\t\t\t\t\tModelID:       \"model-uuid\",\n\t\t\t\t\tModelSlug:     \"meta-llama/Llama-3.1-8B-Instruct\",\n\t\t\t\t\tModelProvider: \"hugging_face\",\n\t\t\t\t\tAccelerators: []*DedicatedInferenceAccelerator{\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tAcceleratorID:   \"acc-uuid\",\n\t\t\t\t\t\t\tAcceleratorSlug: \"gpu-mi300x1-192gb\",\n\t\t\t\t\t\t\tState:           \"active\",\n\t\t\t\t\t\t\tType:            \"prefill_decode\",\n\t\t\t\t\t\t\tScale:           1,\n\t\t\t\t\t\t},\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t},\n\t\t\tCreatedAt: createdAt,\n\t\t\tUpdatedAt: createdAt,\n\t\t},\n\t\tCreatedAt: createdAt,\n\t\tUpdatedAt: createdAt,\n\t}\n\n\tif !reflect.DeepEqual(di, expectedDI) {\n\t\tt.Errorf(\"DedicatedInference.Get returned %+v, expected %+v\", di, expectedDI)\n\t}\n}\n\nfunc TestDedicatedInference_Get_NoToken(t *testing.T) {\n\tsetup()\n\tdefer teardown()\n\n\tmux.HandleFunc(\"/v2/dedicated-inferences/di-uuid\", func(w http.ResponseWriter, r *http.Request) {\n\t\ttestMethod(t, r, http.MethodGet)\n\t\tfmt.Fprint(w, diGetJSONResponse)\n\t})\n\n\tdi, _, err := client.DedicatedInference.Get(ctx, \"di-uuid\")\n\tif err != nil {\n\t\tt.Errorf(\"DedicatedInference.Get returned error: %v\", err)\n\t}\n\n\tif di.ID != \"di-uuid\" {\n\t\tt.Errorf(\"expected ID %q, got %q\", \"di-uuid\", di.ID)\n\t}\n\n\tif di.Status != \"active\" {\n\t\tt.Errorf(\"expected Status %q, got %q\", \"active\", di.Status)\n\t}\n\n\tif di.Endpoints == nil {\n\t\tt.Fatal(\"expected endpoints, got nil\")\n\t}\n\n\tif di.Endpoints.PublicEndpointFQDN != \"test-di.di.s2r1.digitalocean.com\" {\n\t\tt.Errorf(\"expected public fqdn %q, got %q\", \"test-di.di.s2r1.digitalocean.com\", di.Endpoints.PublicEndpointFQDN)\n\t}\n}\n\nfunc TestDedicatedInference_String(t *testing.T) {\n\tdi := DedicatedInference{\n\t\tID:     \"di-123\",\n\t\tName:   \"test\",\n\t\tRegion: \"nyc2\",\n\t\tStatus: \"active\",\n\t}\n\n\tif di.String() == \"\" {\n\t\tt.Error(\"DedicatedInference.String() returned empty string\")\n\t}\n}\n\nfunc TestDedicatedInferenceToken_String(t *testing.T) {\n\ttoken := DedicatedInferenceToken{\n\t\tID:   \"token-123\",\n\t\tName: \"test-token\",\n\t}\n\n\tif token.String() == \"\" {\n\t\tt.Error(\"DedicatedInferenceToken.String() returned empty string\")\n\t}\n}\n\nfunc TestDedicatedInference_Update(t *testing.T) {\n\tsetup()\n\tdefer teardown()\n\n\tdiID := \"di-uuid\"\n\n\tmux.HandleFunc(fmt.Sprintf(\"/v2/dedicated-inferences/%s\", diID), func(w http.ResponseWriter, r *http.Request) {\n\t\ttestMethod(t, r, http.MethodPatch)\n\n\t\tvar req DedicatedInferenceUpdateRequest\n\t\tif err := json.NewDecoder(r.Body).Decode(&req); err != nil {\n\t\t\tt.Errorf(\"failed to decode request body: %v\", err)\n\t\t}\n\n\t\tif req.Spec == nil {\n\t\t\tt.Error(\"expected spec in request\")\n\t\t}\n\n\t\tif req.Spec.Name != \"test-di-updated\" {\n\t\t\tt.Errorf(\"expected name %q, got %q\", \"test-di-updated\", req.Spec.Name)\n\t\t}\n\n\t\tw.WriteHeader(http.StatusAccepted)\n\t\tfmt.Fprint(w, diUpdateJSONResponse)\n\t})\n\n\tupdateReq := &DedicatedInferenceUpdateRequest{\n\t\tSpec: &DedicatedInferenceSpecRequest{\n\t\t\tVersion:              2,\n\t\t\tName:                 \"test-di-updated\",\n\t\t\tRegion:               \"s2r1\",\n\t\t\tEnablePublicEndpoint: true,\n\t\t\tVPC: &DedicatedInferenceVPCRequest{\n\t\t\t\tUUID: \"246de291-05af-461f-956a-a7be58f65367\",\n\t\t\t},\n\t\t\tModelDeployments: []*DedicatedInferenceModelRequest{\n\t\t\t\t{\n\t\t\t\t\tModelID:       \"model-uuid\",\n\t\t\t\t\tModelSlug:     \"meta-llama/Llama-3.1-8B-Instruct\",\n\t\t\t\t\tModelProvider: \"hugging_face\",\n\t\t\t\t\tAccelerators: []*DedicatedInferenceAcceleratorRequest{\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tAcceleratorSlug: \"gpu-mi300x1-192gb\",\n\t\t\t\t\t\t\tScale:           2,\n\t\t\t\t\t\t\tType:            \"prefill_decode\",\n\t\t\t\t\t\t},\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t},\n\t\t},\n\t\tSecrets: &DedicatedInferenceSecrets{\n\t\t\tHuggingFaceToken: \"hf_test-token\",\n\t\t},\n\t}\n\n\tdi, _, err := client.DedicatedInference.Update(ctx, diID, updateReq)\n\tif err != nil {\n\t\tt.Errorf(\"DedicatedInference.Update returned error: %v\", err)\n\t}\n\n\tif di.ID != diID {\n\t\tt.Errorf(\"expected ID %q, got %q\", diID, di.ID)\n\t}\n\n\tif di.Name != \"test-di-updated\" {\n\t\tt.Errorf(\"expected name %q, got %q\", \"test-di-updated\", di.Name)\n\t}\n\n\tif di.Status != \"updating\" {\n\t\tt.Errorf(\"expected status %q, got %q\", \"updating\", di.Status)\n\t}\n\n\tif di.PendingDeploymentSpec == nil {\n\t\tt.Fatal(\"expected pending_deployment_spec, got nil\")\n\t}\n\n\tif di.PendingDeploymentSpec.ModelDeployments[0].Accelerators[0].Scale != 2 {\n\t\tt.Errorf(\"expected scale 2, got %d\", di.PendingDeploymentSpec.ModelDeployments[0].Accelerators[0].Scale)\n\t}\n}"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-c8cc19c1ccc747c387925b23c54db0f3"
+      }
+    },
+    {
+      "step_id": 14,
+      "timestamp": "2026-04-08T19:39:07.130000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Now I have a clear picture of the existing code. Let me look at how other services implement delete operations to follow the same pattern.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-5ba7efb04c2a47d2a2e8b3703a4b6a05",
+          "function_name": "exec",
+          "arguments": {
+            "command": "grep -l \"Delete\" /app/godo/*.go | head -5"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 4527,
+        "completion_tokens": 80,
+        "cached_tokens": 20686,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 25293
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 15,
+      "timestamp": "2026-04-08T19:39:12.529000Z",
+      "source": "agent",
+      "message": "/app/godo/apps.go\n/app/godo/apps_test.go\n/app/godo/byoip_prefixes.go\n/app/godo/byoip_prefixes_test.go\n/app/godo/cdn.go",
+      "observation": {
+        "results": [
+          {
+            "content": "/app/godo/apps.go\n/app/godo/apps_test.go\n/app/godo/byoip_prefixes.go\n/app/godo/byoip_prefixes_test.go\n/app/godo/cdn.go"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-5ba7efb04c2a47d2a2e8b3703a4b6a05",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": 6
+      }
+    },
+    {
+      "step_id": 16,
+      "timestamp": "2026-04-08T19:39:12.531000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Let me look at a similar delete operation to understand the pattern used in this codebase.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-c59e06a990f3455fbea3a4856d0237ad",
+          "function_name": "exec",
+          "arguments": {
+            "command": "grep -A 20 \"func.*Delete.*context\" /app/godo/apps.go | head -30"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 6433,
+        "completion_tokens": 68,
+        "cached_tokens": 18849,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 25350
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 17,
+      "timestamp": "2026-04-08T19:39:18.088000Z",
+      "source": "agent",
+      "message": "func (s *AppsServiceOp) Delete(ctx context.Context, appID string) (*Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", appsBasePath, appID)\n\treq, err := s.client.NewRequest(ctx, http.MethodDelete, path, nil)\n\tif err != nil {\n\t\treturn nil, err\n\t}\n\tresp, err := s.client.Do(ctx, req, nil)\n\tif err != nil {\n\t\treturn resp, err\n\t}\n\treturn resp, nil\n}\n\n// Propose an app.\nfunc (s *AppsServiceOp) Propose(ctx context.Context, propose *AppProposeRequest) (*AppProposeResponse, *Response, error) {\n\tpath := fmt.Sprintf(\"%s/propose\", appsBasePath)\n\treq, err := s.client.NewRequest(ctx, http.MethodPost, path, propose)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}",
+      "observation": {
+        "results": [
+          {
+            "content": "func (s *AppsServiceOp) Delete(ctx context.Context, appID string) (*Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", appsBasePath, appID)\n\treq, err := s.client.NewRequest(ctx, http.MethodDelete, path, nil)\n\tif err != nil {\n\t\treturn nil, err\n\t}\n\tresp, err := s.client.Do(ctx, req, nil)\n\tif err != nil {\n\t\treturn resp, err\n\t}\n\treturn resp, nil\n}\n\n// Propose an app.\nfunc (s *AppsServiceOp) Propose(ctx context.Context, propose *AppProposeRequest) (*AppProposeResponse, *Response, error) {\n\tpath := fmt.Sprintf(\"%s/propose\", appsBasePath)\n\treq, err := s.client.NewRequest(ctx, http.MethodPost, path, propose)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-c59e06a990f3455fbea3a4856d0237ad",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": 4
+      }
+    },
+    {
+      "step_id": 18,
+      "timestamp": "2026-04-08T19:39:18.092000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Now I have a good understanding of the pattern. Let me implement the delete operation for Dedicated Inference.\n\nI need to:\n1. Add the Delete method to the DedicatedInferenceService interface\n2. Implement the Delete method in DedicatedInferenceServiceOp\n3. Add tests for the Delete method\n\nLet me make these changes:",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-6ce59f2d8204447f9a6c051abfecaea6",
+          "function_name": "edit",
+          "arguments": {
+            "path": "/app/godo/dedicated_inference.go",
+            "edits": [
+              {
+                "oldText": "// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\nType DedicatedInferenceService interface {\n\tCreate(context.Context, *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error)\n\tGet(context.Context, string) (*DedicatedInference, *Response, error)\n\tUpdate(context.Context, string, *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error)\n}",
+                "newText": "// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\n// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\nfunc (s *DedicatedInferenceServiceOp) Delete(ctx context.Context, id string) (*Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodDelete, path, nil)\n\tif err != nil {\n\t\treturn nil, err\n\t}\n\n\tresp, err := s.client.Do(ctx, req, nil)\n\tif err != nil {\n\t\treturn resp, err\n\t}\n\n\treturn resp, nil\n}"
+              },
+              {
+                "oldText": "// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\n// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\nfunc (s *DedicatedInferenceServiceOp) Delete(ctx context.Context, id string) (*Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodDelete, path, nil)\n\tif err != nil {\n\t\treturn nil, err\n\t}\n\n\tresp, err := s.client.Do(ctx, req, nil)\n\tif err != nil {\n\t\treturn resp, err\n\t}\n\n\treturn resp, nil\n}\n\n// DedicatedInferenceServiceOp handles communication with Dedicated Inference methods of the DigitalOcean API.\ntype DedicatedInferenceServiceOp struct {\n\tclient *Client\n}",
+                "newText": "// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\ntype DedicatedInferenceService interface {\n\tCreate(context.Context, *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error)\n\tGet(context.Context, string) (*DedicatedInference, *Response, error)\n\tUpdate(context.Context, string, *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error)\n\tDelete(context.Context, string) (*Response, error)\n}\n\n// DedicatedInferenceServiceOp handles communication with Dedicated Inference methods of the DigitalOcean API.\ntype DedicatedInferenceServiceOp struct {\n\tclient *Client\n}"
+              }
+            ]
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 292,
+        "completion_tokens": 824,
+        "cached_tokens": 25211,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 26327
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 19,
+      "timestamp": "2026-04-08T19:39:40.335000Z",
+      "source": "agent",
+      "message": "{\n  \"status\": \"error\",\n  \"tool\": \"edit\",\n  \"error\": \"Could not find edits[0] in /app/godo/dedicated_inference.go. The oldText must match exactly including all whitespace and newlines.\"\n}",
+      "observation": {
+        "results": [
+          {
+            "content": "{\n  \"status\": \"error\",\n  \"tool\": \"edit\",\n  \"error\": \"Could not find edits[0] in /app/godo/dedicated_inference.go. The oldText must match exactly including all whitespace and newlines.\"\n}"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-6ce59f2d8204447f9a6c051abfecaea6",
+        "exec_exit_code": null,
+        "exec_status": "error",
+        "exec_duration_ms": null
+      }
+    },
+    {
+      "step_id": 20,
+      "timestamp": "2026-04-08T19:39:40.337000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Let me read the file again to get the exact text.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-2e23cb802e1345b9aa8a528f88d628d6",
+          "function_name": "read",
+          "arguments": {
+            "path": "/app/godo/dedicated_inference.go"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 748,
+        "completion_tokens": 43,
+        "cached_tokens": 25501,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 26292
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 21,
+      "timestamp": "2026-04-08T19:39:44.238000Z",
+      "source": "agent",
+      "message": "package godo\n\nimport (\n\t\"context\"\n\t\"fmt\"\n\t\"net/http\"\n\t\"time\"\n)\n\nconst dedicatedInferenceBasePath = \"/v2/dedicated-inferences\"\n\n// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\ntype DedicatedInferenceService interface {\n\tCreate(context.Context, *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error)\n\tGet(context.Context, string) (*DedicatedInference, *Response, error)\n\tUpdate(context.Context, string, *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error)\n}\n\n// DedicatedInferenceServiceOp handles communication with Dedicated Inference methods of the DigitalOcean API.\ntype DedicatedInferenceServiceOp struct {\n\tclient *Client\n}\n\nvar _ DedicatedInferenceService = &DedicatedInferenceServiceOp{}\n\n// DedicatedInferenceCreateRequest represents a request to create a Dedicated Inference.\ntype DedicatedInferenceCreateRequest struct {\n\tSpec    *DedicatedInferenceSpecRequest `json:\"spec\"`\n\tSecrets *DedicatedInferenceSecrets     `json:\"secrets,omitempty\"`\n}\n\n// DedicatedInferenceSpecRequest represents the deployment specification in a create/update request.\ntype DedicatedInferenceSpecRequest struct {\n\tVersion              int                               `json:\"version\"`\n\tName                 string                            `json:\"name\"`\n\tRegion               string                            `json:\"region\"`\n\tEnablePublicEndpoint bool                              `json:\"enable_public_endpoint\"`\n\tVPC                  *DedicatedInferenceVPCRequest     `json:\"vpc\"`\n\tModelDeployments     []*DedicatedInferenceModelRequest `json:\"model_deployments\"`\n}\n\n// DedicatedInferenceVPCRequest represents the VPC configuration in a request.\ntype DedicatedInferenceVPCRequest struct {\n\tUUID string `json:\"uuid\"`\n}\n\n// DedicatedInferenceModelRequest represents a model deployment in a request.\ntype DedicatedInferenceModelRequest struct {\n\tModelID        string                                  `json:\"model_id,omitempty\"`\n\tModelSlug      string                                  `json:\"model_slug\"`\n\tModelProvider  string                                  `json:\"model_provider\"`\n\tWorkloadConfig *DedicatedInferenceWorkloadConfig       `json:\"workload_config,omitempty\"`\n\tAccelerators   []*DedicatedInferenceAcceleratorRequest `json:\"accelerators\"`\n}\n\n// DedicatedInferenceWorkloadConfig represents workload-specific configuration.\ntype DedicatedInferenceWorkloadConfig struct{}\n\n// DedicatedInferenceAcceleratorRequest represents an accelerator in a request.\ntype DedicatedInferenceAcceleratorRequest struct {\n\tAcceleratorSlug string `json:\"accelerator_slug\"`\n\tScale           uint64 `json:\"scale\"`\n\tType            string `json:\"type\"`\n}\n\n// DedicatedInferenceSecrets represents secrets for external model providers.\ntype DedicatedInferenceSecrets struct {\n\tHuggingFaceToken string `json:\"hugging_face_token,omitempty\"`\n}\n\n// DedicatedInferenceUpdateRequest represents a request to update a Dedicated Inference.\ntype DedicatedInferenceUpdateRequest struct {\n\tSpec    *DedicatedInferenceSpecRequest `json:\"spec\"`\n\tSecrets *DedicatedInferenceSecrets     `json:\"secrets,omitempty\"`\n}\n\n// -- Response types (what the API returns) --\n\n// DedicatedInference represents a Dedicated Inference resource returned by the API.\ntype DedicatedInference struct {\n\tID                    string                        `json:\"id\"`\n\tName                  string                        `json:\"name\"`\n\tRegion                string                        `json:\"region\"`\n\tStatus                string                        `json:\"status\"`\n\tVPCUUID               string                        `json:\"vpc_uuid\"`\n\tEndpoints             *DedicatedInferenceEndpoints  `json:\"endpoints,omitempty\"`\n\tDeploymentSpec        *DedicatedInferenceDeployment `json:\"spec,omitempty\"`\n\tPendingDeploymentSpec *DedicatedInferenceDeployment `json:\"pending_deployment_spec,omitempty\"`\n\tCreatedAt             time.Time                     `json:\"created_at,omitempty\"`\n\tUpdatedAt             time.Time                     `json:\"updated_at,omitempty\"`\n}\n\nfunc (d DedicatedInference) String() string {\n\treturn Stringify(d)\n}\n\n// DedicatedInferenceEndpoints represents the endpoints for a Dedicated Inference.\ntype DedicatedInferenceEndpoints struct {\n\tPublicEndpointFQDN  string `json:\"public_endpoint_fqdn,omitempty\"`\n\tPrivateEndpointFQDN string `json:\"private_endpoint_fqdn,omitempty\"`\n}\n\n// DedicatedInferenceDeployment represents a deployment spec in the API response.\ntype DedicatedInferenceDeployment struct {\n\tVersion              uint64                               `json:\"version\"`\n\tID                   string                               `json:\"id\"`\n\tDedicatedInferenceID string                               `json:\"dedicated_inference_id\"`\n\tState                string                               `json:\"state\"`\n\tEnablePublicEndpoint bool                                 `json:\"enable_public_endpoint\"`\n\tVPCConfig            *DedicatedInferenceVPCConfig         `json:\"vpc_config,omitempty\"`\n\tModelDeployments     []*DedicatedInferenceModelDeployment `json:\"model_deployments\"`\n\tCreatedAt            time.Time                            `json:\"created_at,omitempty\"`\n\tUpdatedAt            time.Time                            `json:\"updated_at,omitempty\"`\n}\n\n// DedicatedInferenceVPCConfig represents the VPC config in an API response.\ntype DedicatedInferenceVPCConfig struct {\n\tVPCUUID string `json:\"vpc_uuid\"`\n}\n\n// DedicatedInferenceModelDeployment represents a model deployment in an API response.\ntype DedicatedInferenceModelDeployment struct {\n\tModelID       string                           `json:\"model_id\"`\n\tModelSlug     string                           `json:\"model_slug\"`\n\tModelProvider string                           `json:\"model_provider\"`\n\tAccelerators  []*DedicatedInferenceAccelerator `json:\"accelerators\"`\n}\n\n// DedicatedInferenceAccelerator represents an accelerator in an API response.\ntype DedicatedInferenceAccelerator struct {\n\tAcceleratorID   string `json:\"accelerator_id\"`\n\tAcceleratorSlug string `json:\"accelerator_slug\"`\n\tState           string `json:\"state\"`\n\tType            string `json:\"type\"`\n\tScale           uint64 `json:\"scale\"`\n}\n\n// DedicatedInferenceToken represents an auth token returned on create.\ntype DedicatedInferenceToken struct {\n\tID        string    `json:\"id\"`\n\tName      string    `json:\"name\"`\n\tValue     string    `json:\"value,omitempty\"`\n\tCreatedAt time.Time `json:\"created_at\"`\n}\n\nfunc (t DedicatedInferenceToken) String() string {\n\treturn Stringify(t)\n}\n\n// -- Root types for JSON deserialization --\n\ntype dedicatedInferenceRoot struct {\n\tDedicatedInference *DedicatedInference      `json:\"dedicated_inference\"`\n\tToken              *DedicatedInferenceToken `json:\"token,omitempty\"`\n}\n\n// -- Service methods --\n\n// Create a new Dedicated Inference with the given configuration.\nfunc (s *DedicatedInferenceServiceOp) Create(ctx context.Context, createRequest *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error) {\n\treq, err := s.client.NewRequest(ctx, http.MethodPost, dedicatedInferenceBasePath, createRequest)\n\tif err != nil {\n\t\treturn nil, nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, root.Token, resp, nil\n}\n\n// Get an existing Dedicated Inference by its UUID.\nfunc (s *DedicatedInferenceServiceOp) Get(ctx context.Context, id string) (*DedicatedInference, *Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodGet, path, nil)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, resp, nil\n}\n\n// Update an existing Dedicated Inference.\nfunc (s *DedicatedInferenceServiceOp) Update(ctx context.Context, id string, updateRequest *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodPatch, path, updateRequest)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, resp, nil\n}",
+      "observation": {
+        "results": [
+          {
+            "content": "package godo\n\nimport (\n\t\"context\"\n\t\"fmt\"\n\t\"net/http\"\n\t\"time\"\n)\n\nconst dedicatedInferenceBasePath = \"/v2/dedicated-inferences\"\n\n// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\ntype DedicatedInferenceService interface {\n\tCreate(context.Context, *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error)\n\tGet(context.Context, string) (*DedicatedInference, *Response, error)\n\tUpdate(context.Context, string, *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error)\n}\n\n// DedicatedInferenceServiceOp handles communication with Dedicated Inference methods of the DigitalOcean API.\ntype DedicatedInferenceServiceOp struct {\n\tclient *Client\n}\n\nvar _ DedicatedInferenceService = &DedicatedInferenceServiceOp{}\n\n// DedicatedInferenceCreateRequest represents a request to create a Dedicated Inference.\ntype DedicatedInferenceCreateRequest struct {\n\tSpec    *DedicatedInferenceSpecRequest `json:\"spec\"`\n\tSecrets *DedicatedInferenceSecrets     `json:\"secrets,omitempty\"`\n}\n\n// DedicatedInferenceSpecRequest represents the deployment specification in a create/update request.\ntype DedicatedInferenceSpecRequest struct {\n\tVersion              int                               `json:\"version\"`\n\tName                 string                            `json:\"name\"`\n\tRegion               string                            `json:\"region\"`\n\tEnablePublicEndpoint bool                              `json:\"enable_public_endpoint\"`\n\tVPC                  *DedicatedInferenceVPCRequest     `json:\"vpc\"`\n\tModelDeployments     []*DedicatedInferenceModelRequest `json:\"model_deployments\"`\n}\n\n// DedicatedInferenceVPCRequest represents the VPC configuration in a request.\ntype DedicatedInferenceVPCRequest struct {\n\tUUID string `json:\"uuid\"`\n}\n\n// DedicatedInferenceModelRequest represents a model deployment in a request.\ntype DedicatedInferenceModelRequest struct {\n\tModelID        string                                  `json:\"model_id,omitempty\"`\n\tModelSlug      string                                  `json:\"model_slug\"`\n\tModelProvider  string                                  `json:\"model_provider\"`\n\tWorkloadConfig *DedicatedInferenceWorkloadConfig       `json:\"workload_config,omitempty\"`\n\tAccelerators   []*DedicatedInferenceAcceleratorRequest `json:\"accelerators\"`\n}\n\n// DedicatedInferenceWorkloadConfig represents workload-specific configuration.\ntype DedicatedInferenceWorkloadConfig struct{}\n\n// DedicatedInferenceAcceleratorRequest represents an accelerator in a request.\ntype DedicatedInferenceAcceleratorRequest struct {\n\tAcceleratorSlug string `json:\"accelerator_slug\"`\n\tScale           uint64 `json:\"scale\"`\n\tType            string `json:\"type\"`\n}\n\n// DedicatedInferenceSecrets represents secrets for external model providers.\ntype DedicatedInferenceSecrets struct {\n\tHuggingFaceToken string `json:\"hugging_face_token,omitempty\"`\n}\n\n// DedicatedInferenceUpdateRequest represents a request to update a Dedicated Inference.\ntype DedicatedInferenceUpdateRequest struct {\n\tSpec    *DedicatedInferenceSpecRequest `json:\"spec\"`\n\tSecrets *DedicatedInferenceSecrets     `json:\"secrets,omitempty\"`\n}\n\n// -- Response types (what the API returns) --\n\n// DedicatedInference represents a Dedicated Inference resource returned by the API.\ntype DedicatedInference struct {\n\tID                    string                        `json:\"id\"`\n\tName                  string                        `json:\"name\"`\n\tRegion                string                        `json:\"region\"`\n\tStatus                string                        `json:\"status\"`\n\tVPCUUID               string                        `json:\"vpc_uuid\"`\n\tEndpoints             *DedicatedInferenceEndpoints  `json:\"endpoints,omitempty\"`\n\tDeploymentSpec        *DedicatedInferenceDeployment `json:\"spec,omitempty\"`\n\tPendingDeploymentSpec *DedicatedInferenceDeployment `json:\"pending_deployment_spec,omitempty\"`\n\tCreatedAt             time.Time                     `json:\"created_at,omitempty\"`\n\tUpdatedAt             time.Time                     `json:\"updated_at,omitempty\"`\n}\n\nfunc (d DedicatedInference) String() string {\n\treturn Stringify(d)\n}\n\n// DedicatedInferenceEndpoints represents the endpoints for a Dedicated Inference.\ntype DedicatedInferenceEndpoints struct {\n\tPublicEndpointFQDN  string `json:\"public_endpoint_fqdn,omitempty\"`\n\tPrivateEndpointFQDN string `json:\"private_endpoint_fqdn,omitempty\"`\n}\n\n// DedicatedInferenceDeployment represents a deployment spec in the API response.\ntype DedicatedInferenceDeployment struct {\n\tVersion              uint64                               `json:\"version\"`\n\tID                   string                               `json:\"id\"`\n\tDedicatedInferenceID string                               `json:\"dedicated_inference_id\"`\n\tState                string                               `json:\"state\"`\n\tEnablePublicEndpoint bool                                 `json:\"enable_public_endpoint\"`\n\tVPCConfig            *DedicatedInferenceVPCConfig         `json:\"vpc_config,omitempty\"`\n\tModelDeployments     []*DedicatedInferenceModelDeployment `json:\"model_deployments\"`\n\tCreatedAt            time.Time                            `json:\"created_at,omitempty\"`\n\tUpdatedAt            time.Time                            `json:\"updated_at,omitempty\"`\n}\n\n// DedicatedInferenceVPCConfig represents the VPC config in an API response.\ntype DedicatedInferenceVPCConfig struct {\n\tVPCUUID string `json:\"vpc_uuid\"`\n}\n\n// DedicatedInferenceModelDeployment represents a model deployment in an API response.\ntype DedicatedInferenceModelDeployment struct {\n\tModelID       string                           `json:\"model_id\"`\n\tModelSlug     string                           `json:\"model_slug\"`\n\tModelProvider string                           `json:\"model_provider\"`\n\tAccelerators  []*DedicatedInferenceAccelerator `json:\"accelerators\"`\n}\n\n// DedicatedInferenceAccelerator represents an accelerator in an API response.\ntype DedicatedInferenceAccelerator struct {\n\tAcceleratorID   string `json:\"accelerator_id\"`\n\tAcceleratorSlug string `json:\"accelerator_slug\"`\n\tState           string `json:\"state\"`\n\tType            string `json:\"type\"`\n\tScale           uint64 `json:\"scale\"`\n}\n\n// DedicatedInferenceToken represents an auth token returned on create.\ntype DedicatedInferenceToken struct {\n\tID        string    `json:\"id\"`\n\tName      string    `json:\"name\"`\n\tValue     string    `json:\"value,omitempty\"`\n\tCreatedAt time.Time `json:\"created_at\"`\n}\n\nfunc (t DedicatedInferenceToken) String() string {\n\treturn Stringify(t)\n}\n\n// -- Root types for JSON deserialization --\n\ntype dedicatedInferenceRoot struct {\n\tDedicatedInference *DedicatedInference      `json:\"dedicated_inference\"`\n\tToken              *DedicatedInferenceToken `json:\"token,omitempty\"`\n}\n\n// -- Service methods --\n\n// Create a new Dedicated Inference with the given configuration.\nfunc (s *DedicatedInferenceServiceOp) Create(ctx context.Context, createRequest *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error) {\n\treq, err := s.client.NewRequest(ctx, http.MethodPost, dedicatedInferenceBasePath, createRequest)\n\tif err != nil {\n\t\treturn nil, nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, root.Token, resp, nil\n}\n\n// Get an existing Dedicated Inference by its UUID.\nfunc (s *DedicatedInferenceServiceOp) Get(ctx context.Context, id string) (*DedicatedInference, *Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodGet, path, nil)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, resp, nil\n}\n\n// Update an existing Dedicated Inference.\nfunc (s *DedicatedInferenceServiceOp) Update(ctx context.Context, id string, updateRequest *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodPatch, path, updateRequest)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, resp, nil\n}"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-2e23cb802e1345b9aa8a528f88d628d6"
+      }
+    },
+    {
+      "step_id": 22,
+      "timestamp": "2026-04-08T19:39:44.247000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Now I understand the structure. I need to:\n1. Add `Delete` to the interface\n2. Add the Delete method implementation at the end of the file\n\nLet me do this in two separate edits:",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-35cd8c95c60f4cd5a0f9a27a495b242d",
+          "function_name": "edit",
+          "arguments": {
+            "path": "/app/godo/dedicated_inference.go",
+            "edits": [
+              {
+                "oldText": "// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\n// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\ntype DedicatedInferenceService interface {\n\tCreate(context.Context, *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error)\n\tGet(context.Context, string) (*DedicatedInference, *Response, error)\n\tUpdate(context.Context, string, *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error)\n}",
+                "newText": "// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\ntype DedicatedInferenceService interface {\n\tCreate(context.Context, *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error)\n\tGet(context.Context, string) (*DedicatedInference, *Response, error)\n\tUpdate(context.Context, string, *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error)\n\tDelete(context.Context, string) (*Response, error)\n}"
+              }
+            ]
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 1839,
+        "completion_tokens": 381,
+        "cached_tokens": 26247,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 28467
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 23,
+      "timestamp": "2026-04-08T19:39:55.671000Z",
+      "source": "agent",
+      "message": "{\n  \"status\": \"error\",\n  \"tool\": \"edit\",\n  \"error\": \"Could not find the exact text in /app/godo/dedicated_inference.go. The old text must match exactly including all whitespace and newlines.\\nCurrent file contents:\\npackage godo\\n\\nimport (\\n\\t\\\"context\\\"\\n\\t\\\"fmt\\\"\\n\\t\\\"net/http\\\"\\n\\t\\\"time\\\"\\n)\\n\\nconst dedicatedInferenceBasePath = \\\"/v2/dedicated-inferences\\\"\\n\\n// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\\ntype DedicatedInferenceService interface {\\n\\tCreate(context.Context, *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error)\\n\\tGet(context.Context, string) (*DedicatedInference, *Response, error)\\n\\tUpdate(context.Context, string, *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error)\\n}\\n\\n// DedicatedInferenceServiceOp handles communication with Dedicated Inference methods of the DigitalOcean API.\\ntype DedicatedInferenceServiceOp struct {\\n\\tclient *Client\\n}\\n\\nvar _ DedicatedInferenceService = &DedicatedInfe\\n... (truncated)\"\n}",
+      "observation": {
+        "results": [
+          {
+            "content": "{\n  \"status\": \"error\",\n  \"tool\": \"edit\",\n  \"error\": \"Could not find the exact text in /app/godo/dedicated_inference.go. The old text must match exactly including all whitespace and newlines.\\nCurrent file contents:\\npackage godo\\n\\nimport (\\n\\t\\\"context\\\"\\n\\t\\\"fmt\\\"\\n\\t\\\"net/http\\\"\\n\\t\\\"time\\\"\\n)\\n\\nconst dedicatedInferenceBasePath = \\\"/v2/dedicated-inferences\\\"\\n\\n// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\\ntype DedicatedInferenceService interface {\\n\\tCreate(context.Context, *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error)\\n\\tGet(context.Context, string) (*DedicatedInference, *Response, error)\\n\\tUpdate(context.Context, string, *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error)\\n}\\n\\n// DedicatedInferenceServiceOp handles communication with Dedicated Inference methods of the DigitalOcean API.\\ntype DedicatedInferenceServiceOp struct {\\n\\tclient *Client\\n}\\n\\nvar _ DedicatedInferenceService = &DedicatedInfe\\n... (truncated)\"\n}"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-35cd8c95c60f4cd5a0f9a27a495b242d",
+        "exec_exit_code": null,
+        "exec_status": "error",
+        "exec_duration_ms": null
+      }
+    },
+    {
+      "step_id": 24,
+      "timestamp": "2026-04-08T19:39:55.677000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Let me use a simpler edit - just change the interface definition and add the delete method.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-f8c837ebc9ed4d8790302db5651f1788",
+          "function_name": "edit",
+          "arguments": {
+            "path": "/app/godo/dedicated_inference.go",
+            "edits": [
+              {
+                "oldText": "// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\ntype DedicatedInferenceService interface {\n\tCreate(context.Context, *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error)\n\tGet(context.Context, string) (*DedicatedInference, *Response, error)\n\tUpdate(context.Context, string, *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error)\n}",
+                "newText": "// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\ntype DedicatedInferenceService interface {\n\tCreate(context.Context, *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error)\n\tGet(context.Context, string) (*DedicatedInference, *Response, error)\n\tUpdate(context.Context, string, *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error)\n\tDelete(context.Context, string) (*Response, error)\n}"
+              }
+            ]
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 580,
+        "completion_tokens": 311,
+        "cached_tokens": 28084,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 28975
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 25,
+      "timestamp": "2026-04-08T19:40:05.488000Z",
+      "source": "agent",
+      "message": "Successfully replaced 1 block(s) in /app/godo/dedicated_inference.go.",
+      "observation": {
+        "results": [
+          {
+            "content": "Successfully replaced 1 block(s) in /app/godo/dedicated_inference.go."
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-f8c837ebc9ed4d8790302db5651f1788",
+        "exec_exit_code": null,
+        "exec_status": null,
+        "exec_duration_ms": null
+      }
+    },
+    {
+      "step_id": 26,
+      "timestamp": "2026-04-08T19:40:05.497000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Good, now I need to add the Delete method implementation. Let me add it after the Update method.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-c65b9e72ae6544d49c77a6907474cff2",
+          "function_name": "edit",
+          "arguments": {
+            "edits": [
+              {
+                "newText": "// Update an existing Dedicated Inference.\nfunc (s *DedicatedInferenceServiceOp) Update(ctx context.Context, id string, updateRequest *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodPatch, path, updateRequest)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, resp, nil\n}\n\n// Delete a Dedicated Inference by its UUID.\nfunc (s *DedicatedInferenceServiceOp) Delete(ctx context.Context, id string) (*Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodDelete, path, nil)\n\tif err != nil {\n\t\treturn nil, err\n\t}\n\n\tresp, err := s.client.Do(ctx, req, nil)\n\tif err != nil {\n\t\treturn resp, err\n\t}\n\n\treturn resp, nil\n}",
+                "oldText": "// Update an existing Dedicated Inference.\nfunc (s *DedicatedInferenceServiceOp) Update(ctx context.Context, id string, updateRequest *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodPatch, path, updateRequest)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, resp, nil\n}"
+              }
+            ],
+            "path": "/app/godo/dedicated_inference.go"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 3681,
+        "completion_tokens": 571,
+        "cached_tokens": 25280,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 29532
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 27,
+      "timestamp": "2026-04-08T19:40:21.226000Z",
+      "source": "agent",
+      "message": "Successfully replaced 1 block(s) in /app/godo/dedicated_inference.go.",
+      "observation": {
+        "results": [
+          {
+            "content": "Successfully replaced 1 block(s) in /app/godo/dedicated_inference.go."
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-c65b9e72ae6544d49c77a6907474cff2",
+        "exec_exit_code": null,
+        "exec_status": null,
+        "exec_duration_ms": null
+      }
+    },
+    {
+      "step_id": 28,
+      "timestamp": "2026-04-08T19:40:21.232000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Now let me verify the changes and check if the file compiles properly, then add tests.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-4b99416bd10647588d1cf1cf32a7d1f5",
+          "function_name": "read",
+          "arguments": {
+            "path": "/app/godo/dedicated_inference.go"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 850,
+        "completion_tokens": 57,
+        "cached_tokens": 28662,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 29569
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 29,
+      "timestamp": "2026-04-08T19:40:26.237000Z",
+      "source": "agent",
+      "message": "package godo\n\nimport (\n\t\"context\"\n\t\"fmt\"\n\t\"net/http\"\n\t\"time\"\n)\n\nconst dedicatedInferenceBasePath = \"/v2/dedicated-inferences\"\n\n// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\ntype DedicatedInferenceService interface {\n\tCreate(context.Context, *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error)\n\tGet(context.Context, string) (*DedicatedInference, *Response, error)\n\tUpdate(context.Context, string, *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error)\n\tDelete(context.Context, string) (*Response, error)\n}\n\n// DedicatedInferenceServiceOp handles communication with Dedicated Inference methods of the DigitalOcean API.\ntype DedicatedInferenceServiceOp struct {\n\tclient *Client\n}\n\nvar _ DedicatedInferenceService = &DedicatedInferenceServiceOp{}\n\n// DedicatedInferenceCreateRequest represents a request to create a Dedicated Inference.\ntype DedicatedInferenceCreateRequest struct {\n\tSpec    *DedicatedInferenceSpecRequest `json:\"spec\"`\n\tSecrets *DedicatedInferenceSecrets     `json:\"secrets,omitempty\"`\n}\n\n// DedicatedInferenceSpecRequest represents the deployment specification in a create/update request.\ntype DedicatedInferenceSpecRequest struct {\n\tVersion              int                               `json:\"version\"`\n\tName                 string                            `json:\"name\"`\n\tRegion               string                            `json:\"region\"`\n\tEnablePublicEndpoint bool                              `json:\"enable_public_endpoint\"`\n\tVPC                  *DedicatedInferenceVPCRequest     `json:\"vpc\"`\n\tModelDeployments     []*DedicatedInferenceModelRequest `json:\"model_deployments\"`\n}\n\n// DedicatedInferenceVPCRequest represents the VPC configuration in a request.\ntype DedicatedInferenceVPCRequest struct {\n\tUUID string `json:\"uuid\"`\n}\n\n// DedicatedInferenceModelRequest represents a model deployment in a request.\ntype DedicatedInferenceModelRequest struct {\n\tModelID        string                                  `json:\"model_id,omitempty\"`\n\tModelSlug      string                                  `json:\"model_slug\"`\n\tModelProvider  string                                  `json:\"model_provider\"`\n\tWorkloadConfig *DedicatedInferenceWorkloadConfig       `json:\"workload_config,omitempty\"`\n\tAccelerators   []*DedicatedInferenceAcceleratorRequest `json:\"accelerators\"`\n}\n\n// DedicatedInferenceWorkloadConfig represents workload-specific configuration.\ntype DedicatedInferenceWorkloadConfig struct{}\n\n// DedicatedInferenceAcceleratorRequest represents an accelerator in a request.\ntype DedicatedInferenceAcceleratorRequest struct {\n\tAcceleratorSlug string `json:\"accelerator_slug\"`\n\tScale           uint64 `json:\"scale\"`\n\tType            string `json:\"type\"`\n}\n\n// DedicatedInferenceSecrets represents secrets for external model providers.\ntype DedicatedInferenceSecrets struct {\n\tHuggingFaceToken string `json:\"hugging_face_token,omitempty\"`\n}\n\n// DedicatedInferenceUpdateRequest represents a request to update a Dedicated Inference.\ntype DedicatedInferenceUpdateRequest struct {\n\tSpec    *DedicatedInferenceSpecRequest `json:\"spec\"`\n\tSecrets *DedicatedInferenceSecrets     `json:\"secrets,omitempty\"`\n}\n\n// -- Response types (what the API returns) --\n\n// DedicatedInference represents a Dedicated Inference resource returned by the API.\ntype DedicatedInference struct {\n\tID                    string                        `json:\"id\"`\n\tName                  string                        `json:\"name\"`\n\tRegion                string                        `json:\"region\"`\n\tStatus                string                        `json:\"status\"`\n\tVPCUUID               string                        `json:\"vpc_uuid\"`\n\tEndpoints             *DedicatedInferenceEndpoints  `json:\"endpoints,omitempty\"`\n\tDeploymentSpec        *DedicatedInferenceDeployment `json:\"spec,omitempty\"`\n\tPendingDeploymentSpec *DedicatedInferenceDeployment `json:\"pending_deployment_spec,omitempty\"`\n\tCreatedAt             time.Time                     `json:\"created_at,omitempty\"`\n\tUpdatedAt             time.Time                     `json:\"updated_at,omitempty\"`\n}\n\nfunc (d DedicatedInference) String() string {\n\treturn Stringify(d)\n}\n\n// DedicatedInferenceEndpoints represents the endpoints for a Dedicated Inference.\ntype DedicatedInferenceEndpoints struct {\n\tPublicEndpointFQDN  string `json:\"public_endpoint_fqdn,omitempty\"`\n\tPrivateEndpointFQDN string `json:\"private_endpoint_fqdn,omitempty\"`\n}\n\n// DedicatedInferenceDeployment represents a deployment spec in the API response.\ntype DedicatedInferenceDeployment struct {\n\tVersion              uint64                               `json:\"version\"`\n\tID                   string                               `json:\"id\"`\n\tDedicatedInferenceID string                               `json:\"dedicated_inference_id\"`\n\tState                string                               `json:\"state\"`\n\tEnablePublicEndpoint bool                                 `json:\"enable_public_endpoint\"`\n\tVPCConfig            *DedicatedInferenceVPCConfig         `json:\"vpc_config,omitempty\"`\n\tModelDeployments     []*DedicatedInferenceModelDeployment `json:\"model_deployments\"`\n\tCreatedAt            time.Time                            `json:\"created_at,omitempty\"`\n\tUpdatedAt            time.Time                            `json:\"updated_at,omitempty\"`\n}\n\n// DedicatedInferenceVPCConfig represents the VPC config in an API response.\ntype DedicatedInferenceVPCConfig struct {\n\tVPCUUID string `json:\"vpc_uuid\"`\n}\n\n// DedicatedInferenceModelDeployment represents a model deployment in an API response.\ntype DedicatedInferenceModelDeployment struct {\n\tModelID       string                           `json:\"model_id\"`\n\tModelSlug     string                           `json:\"model_slug\"`\n\tModelProvider string                           `json:\"model_provider\"`\n\tAccelerators  []*DedicatedInferenceAccelerator `json:\"accelerators\"`\n}\n\n// DedicatedInferenceAccelerator represents an accelerator in an API response.\ntype DedicatedInferenceAccelerator struct {\n\tAcceleratorID   string `json:\"accelerator_id\"`\n\tAcceleratorSlug string `json:\"accelerator_slug\"`\n\tState           string `json:\"state\"`\n\tType            string `json:\"type\"`\n\tScale           uint64 `json:\"scale\"`\n}\n\n// DedicatedInferenceToken represents an auth token returned on create.\ntype DedicatedInferenceToken struct {\n\tID        string    `json:\"id\"`\n\tName      string    `json:\"name\"`\n\tValue     string    `json:\"value,omitempty\"`\n\tCreatedAt time.Time `json:\"created_at\"`\n}\n\nfunc (t DedicatedInferenceToken) String() string {\n\treturn Stringify(t)\n}\n\n// -- Root types for JSON deserialization --\n\ntype dedicatedInferenceRoot struct {\n\tDedicatedInference *DedicatedInference      `json:\"dedicated_inference\"`\n\tToken              *DedicatedInferenceToken `json:\"token,omitempty\"`\n}\n\n// -- Service methods --\n\n// Create a new Dedicated Inference with the given configuration.\nfunc (s *DedicatedInferenceServiceOp) Create(ctx context.Context, createRequest *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error) {\n\treq, err := s.client.NewRequest(ctx, http.MethodPost, dedicatedInferenceBasePath, createRequest)\n\tif err != nil {\n\t\treturn nil, nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, root.Token, resp, nil\n}\n\n// Get an existing Dedicated Inference by its UUID.\nfunc (s *DedicatedInferenceServiceOp) Get(ctx context.Context, id string) (*DedicatedInference, *Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodGet, path, nil)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, resp, nil\n}\n\n// Update an existing Dedicated Inference.\nfunc (s *DedicatedInferenceServiceOp) Update(ctx context.Context, id string, updateRequest *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodPatch, path, updateRequest)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, resp, nil\n}\n\n// Delete a Dedicated Inference by its UUID.\nfunc (s *DedicatedInferenceServiceOp) Delete(ctx context.Context, id string) (*Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodDelete, path, nil)\n\tif err != nil {\n\t\treturn nil, err\n\t}\n\n\tresp, err := s.client.Do(ctx, req, nil)\n\tif err != nil {\n\t\treturn resp, err\n\t}\n\n\treturn resp, nil\n}",
+      "observation": {
+        "results": [
+          {
+            "content": "package godo\n\nimport (\n\t\"context\"\n\t\"fmt\"\n\t\"net/http\"\n\t\"time\"\n)\n\nconst dedicatedInferenceBasePath = \"/v2/dedicated-inferences\"\n\n// DedicatedInferenceService is an interface for managing Dedicated Inference with the DigitalOcean API.\ntype DedicatedInferenceService interface {\n\tCreate(context.Context, *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error)\n\tGet(context.Context, string) (*DedicatedInference, *Response, error)\n\tUpdate(context.Context, string, *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error)\n\tDelete(context.Context, string) (*Response, error)\n}\n\n// DedicatedInferenceServiceOp handles communication with Dedicated Inference methods of the DigitalOcean API.\ntype DedicatedInferenceServiceOp struct {\n\tclient *Client\n}\n\nvar _ DedicatedInferenceService = &DedicatedInferenceServiceOp{}\n\n// DedicatedInferenceCreateRequest represents a request to create a Dedicated Inference.\ntype DedicatedInferenceCreateRequest struct {\n\tSpec    *DedicatedInferenceSpecRequest `json:\"spec\"`\n\tSecrets *DedicatedInferenceSecrets     `json:\"secrets,omitempty\"`\n}\n\n// DedicatedInferenceSpecRequest represents the deployment specification in a create/update request.\ntype DedicatedInferenceSpecRequest struct {\n\tVersion              int                               `json:\"version\"`\n\tName                 string                            `json:\"name\"`\n\tRegion               string                            `json:\"region\"`\n\tEnablePublicEndpoint bool                              `json:\"enable_public_endpoint\"`\n\tVPC                  *DedicatedInferenceVPCRequest     `json:\"vpc\"`\n\tModelDeployments     []*DedicatedInferenceModelRequest `json:\"model_deployments\"`\n}\n\n// DedicatedInferenceVPCRequest represents the VPC configuration in a request.\ntype DedicatedInferenceVPCRequest struct {\n\tUUID string `json:\"uuid\"`\n}\n\n// DedicatedInferenceModelRequest represents a model deployment in a request.\ntype DedicatedInferenceModelRequest struct {\n\tModelID        string                                  `json:\"model_id,omitempty\"`\n\tModelSlug      string                                  `json:\"model_slug\"`\n\tModelProvider  string                                  `json:\"model_provider\"`\n\tWorkloadConfig *DedicatedInferenceWorkloadConfig       `json:\"workload_config,omitempty\"`\n\tAccelerators   []*DedicatedInferenceAcceleratorRequest `json:\"accelerators\"`\n}\n\n// DedicatedInferenceWorkloadConfig represents workload-specific configuration.\ntype DedicatedInferenceWorkloadConfig struct{}\n\n// DedicatedInferenceAcceleratorRequest represents an accelerator in a request.\ntype DedicatedInferenceAcceleratorRequest struct {\n\tAcceleratorSlug string `json:\"accelerator_slug\"`\n\tScale           uint64 `json:\"scale\"`\n\tType            string `json:\"type\"`\n}\n\n// DedicatedInferenceSecrets represents secrets for external model providers.\ntype DedicatedInferenceSecrets struct {\n\tHuggingFaceToken string `json:\"hugging_face_token,omitempty\"`\n}\n\n// DedicatedInferenceUpdateRequest represents a request to update a Dedicated Inference.\ntype DedicatedInferenceUpdateRequest struct {\n\tSpec    *DedicatedInferenceSpecRequest `json:\"spec\"`\n\tSecrets *DedicatedInferenceSecrets     `json:\"secrets,omitempty\"`\n}\n\n// -- Response types (what the API returns) --\n\n// DedicatedInference represents a Dedicated Inference resource returned by the API.\ntype DedicatedInference struct {\n\tID                    string                        `json:\"id\"`\n\tName                  string                        `json:\"name\"`\n\tRegion                string                        `json:\"region\"`\n\tStatus                string                        `json:\"status\"`\n\tVPCUUID               string                        `json:\"vpc_uuid\"`\n\tEndpoints             *DedicatedInferenceEndpoints  `json:\"endpoints,omitempty\"`\n\tDeploymentSpec        *DedicatedInferenceDeployment `json:\"spec,omitempty\"`\n\tPendingDeploymentSpec *DedicatedInferenceDeployment `json:\"pending_deployment_spec,omitempty\"`\n\tCreatedAt             time.Time                     `json:\"created_at,omitempty\"`\n\tUpdatedAt             time.Time                     `json:\"updated_at,omitempty\"`\n}\n\nfunc (d DedicatedInference) String() string {\n\treturn Stringify(d)\n}\n\n// DedicatedInferenceEndpoints represents the endpoints for a Dedicated Inference.\ntype DedicatedInferenceEndpoints struct {\n\tPublicEndpointFQDN  string `json:\"public_endpoint_fqdn,omitempty\"`\n\tPrivateEndpointFQDN string `json:\"private_endpoint_fqdn,omitempty\"`\n}\n\n// DedicatedInferenceDeployment represents a deployment spec in the API response.\ntype DedicatedInferenceDeployment struct {\n\tVersion              uint64                               `json:\"version\"`\n\tID                   string                               `json:\"id\"`\n\tDedicatedInferenceID string                               `json:\"dedicated_inference_id\"`\n\tState                string                               `json:\"state\"`\n\tEnablePublicEndpoint bool                                 `json:\"enable_public_endpoint\"`\n\tVPCConfig            *DedicatedInferenceVPCConfig         `json:\"vpc_config,omitempty\"`\n\tModelDeployments     []*DedicatedInferenceModelDeployment `json:\"model_deployments\"`\n\tCreatedAt            time.Time                            `json:\"created_at,omitempty\"`\n\tUpdatedAt            time.Time                            `json:\"updated_at,omitempty\"`\n}\n\n// DedicatedInferenceVPCConfig represents the VPC config in an API response.\ntype DedicatedInferenceVPCConfig struct {\n\tVPCUUID string `json:\"vpc_uuid\"`\n}\n\n// DedicatedInferenceModelDeployment represents a model deployment in an API response.\ntype DedicatedInferenceModelDeployment struct {\n\tModelID       string                           `json:\"model_id\"`\n\tModelSlug     string                           `json:\"model_slug\"`\n\tModelProvider string                           `json:\"model_provider\"`\n\tAccelerators  []*DedicatedInferenceAccelerator `json:\"accelerators\"`\n}\n\n// DedicatedInferenceAccelerator represents an accelerator in an API response.\ntype DedicatedInferenceAccelerator struct {\n\tAcceleratorID   string `json:\"accelerator_id\"`\n\tAcceleratorSlug string `json:\"accelerator_slug\"`\n\tState           string `json:\"state\"`\n\tType            string `json:\"type\"`\n\tScale           uint64 `json:\"scale\"`\n}\n\n// DedicatedInferenceToken represents an auth token returned on create.\ntype DedicatedInferenceToken struct {\n\tID        string    `json:\"id\"`\n\tName      string    `json:\"name\"`\n\tValue     string    `json:\"value,omitempty\"`\n\tCreatedAt time.Time `json:\"created_at\"`\n}\n\nfunc (t DedicatedInferenceToken) String() string {\n\treturn Stringify(t)\n}\n\n// -- Root types for JSON deserialization --\n\ntype dedicatedInferenceRoot struct {\n\tDedicatedInference *DedicatedInference      `json:\"dedicated_inference\"`\n\tToken              *DedicatedInferenceToken `json:\"token,omitempty\"`\n}\n\n// -- Service methods --\n\n// Create a new Dedicated Inference with the given configuration.\nfunc (s *DedicatedInferenceServiceOp) Create(ctx context.Context, createRequest *DedicatedInferenceCreateRequest) (*DedicatedInference, *DedicatedInferenceToken, *Response, error) {\n\treq, err := s.client.NewRequest(ctx, http.MethodPost, dedicatedInferenceBasePath, createRequest)\n\tif err != nil {\n\t\treturn nil, nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, root.Token, resp, nil\n}\n\n// Get an existing Dedicated Inference by its UUID.\nfunc (s *DedicatedInferenceServiceOp) Get(ctx context.Context, id string) (*DedicatedInference, *Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodGet, path, nil)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, resp, nil\n}\n\n// Update an existing Dedicated Inference.\nfunc (s *DedicatedInferenceServiceOp) Update(ctx context.Context, id string, updateRequest *DedicatedInferenceUpdateRequest) (*DedicatedInference, *Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodPatch, path, updateRequest)\n\tif err != nil {\n\t\treturn nil, nil, err\n\t}\n\n\troot := new(dedicatedInferenceRoot)\n\tresp, err := s.client.Do(ctx, req, root)\n\tif err != nil {\n\t\treturn nil, resp, err\n\t}\n\n\treturn root.DedicatedInference, resp, nil\n}\n\n// Delete a Dedicated Inference by its UUID.\nfunc (s *DedicatedInferenceServiceOp) Delete(ctx context.Context, id string) (*Response, error) {\n\tpath := fmt.Sprintf(\"%s/%s\", dedicatedInferenceBasePath, id)\n\n\treq, err := s.client.NewRequest(ctx, http.MethodDelete, path, nil)\n\tif err != nil {\n\t\treturn nil, err\n\t}\n\n\tresp, err := s.client.Do(ctx, req, nil)\n\tif err != nil {\n\t\treturn resp, err\n\t}\n\n\treturn resp, nil\n}"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-4b99416bd10647588d1cf1cf32a7d1f5"
+      }
+    },
+    {
+      "step_id": 30,
+      "timestamp": "2026-04-08T19:40:26.248000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Now I need to add tests for the Delete method. Let me look at the existing test patterns to follow them.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-522773b2557841798de83ac6545a3bd6",
+          "function_name": "edit",
+          "arguments": {
+            "edits": [
+              {
+                "newText": "func TestDedicatedInference_Update(t *testing.T) {\n\tsetup()\n\tdefer teardown()\n\n\tdiID := \"di-uuid\"\n\n\tmux.HandleFunc(fmt.Sprintf(\"/v2/dedicated-inferences/%s\", diID), func(w http.ResponseWriter, r *http.Request) {\n\t\ttestMethod(t, r, http.MethodPatch)\n\n\t\tvar req DedicatedInferenceUpdateRequest\n\t\tif err := json.NewDecoder(r.Body).Decode(&req); err != nil {\n\t\t\tt.Errorf(\"failed to decode request body: %v\", err)\n\t\t}\n\n\t\tif req.Spec == nil {\n\t\t\tt.Error(\"expected spec in request\")\n\t\t}\n\n\t\tif req.Spec.Name != \"test-di-updated\" {\n\t\t\tt.Errorf(\"expected name %q, got %q\", \"test-di-updated\", req.Spec.Name)\n\t\t}\n\n\t\tw.WriteHeader(http.StatusAccepted)\n\t\tfmt.Fprint(w, diUpdateJSONResponse)\n\t})\n\n\tupdateReq := &DedicatedInferenceUpdateRequest{\n\t\tSpec: &DedicatedInferenceSpecRequest{\n\t\t\tVersion:              2,\n\t\t\tName:                 \"test-di-updated\",\n\t\t\tRegion:               \"s2r1\",\n\t\t\tEnablePublicEndpoint: true,\n\t\t\tVPC: &DedicatedInferenceVPCRequest{\n\t\t\t\tUUID: \"246de291-05af-461f-956a-a7be58f65367\",\n\t\t\t},\n\t\t\tModelDeployments: []*DedicatedInferenceModelRequest{\n\t\t\t\t{\n\t\t\t\t\tModelID:       \"model-uuid\",\n\t\t\t\t\tModelSlug:     \"meta-llama/Llama-3.1-8B-Instruct\",\n\t\t\t\t\tModelProvider: \"hugging_face\",\n\t\t\t\t\tAccelerators: []*DedicatedInferenceAcceleratorRequest{\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tAcceleratorSlug: \"gpu-mi300x1-192gb\",\n\t\t\t\t\t\t\tScale:           2,\n\t\t\t\t\t\t\tType:            \"prefill_decode\",\n\t\t\t\t\t\t},\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t},\n\t\t},\n\t\tSecrets: &DedicatedInferenceSecrets{\n\t\t\tHuggingFaceToken: \"hf_test-token\",\n\t\t},\n\t}\n\n\tdi, _, err := client.DedicatedInference.Update(ctx, diID, updateReq)\n\tif err != nil {\n\t\tt.Errorf(\"DedicatedInference.Update returned error: %v\", err)\n\t}\n\n\tif di.ID != diID {\n\t\tt.Errorf(\"expected ID %q, got %q\", diID, di.ID)\n\t}\n\n\tif di.Name != \"test-di-updated\" {\n\t\tt.Errorf(\"expected name %q, got %q\", \"test-di-updated\", di.Name)\n\t}\n\n\tif di.Status != \"updating\" {\n\t\tt.Errorf(\"expected status %q, got %q\", \"updating\", di.Status)\n\t}\n\n\tif di.PendingDeploymentSpec == nil {\n\t\tt.Fatal(\"expected pending_deployment_spec, got nil\")\n\t}\n\n\tif di.PendingDeploymentSpec.ModelDeployments[0].Accelerators[0].Scale != 2 {\n\t\tt.Errorf(\"expected scale 2, got %d\", di.PendingDeploymentSpec.ModelDeployments[0].Accelerators[0].Scale)\n\t}\n}\n\nfunc TestDedicatedInference_Delete(t *testing.T) {\n\tsetup()\n\tdefer teardown()\n\n\tdiID := \"di-uuid\"\n\n\tmux.HandleFunc(fmt.Sprintf(\"/v2/dedicated-inferences/%s\", diID), func(w http.ResponseWriter, r *http.Request) {\n\t\ttestMethod(t, r, http.MethodDelete)\n\t\tw.WriteHeader(http.StatusAccepted)\n\t})\n\n\tresp, err := client.DedicatedInference.Delete(ctx, diID)\n\tif err != nil {\n\t\tt.Errorf(\"DedicatedInference.Delete returned error: %v\", err)\n\t}\n\n\tif resp.StatusCode != http.StatusAccepted {\n\t\tt.Errorf(\"expected status %d, got %d\", http.StatusAccepted, resp.StatusCode)\n\t}\n}\n\nfunc TestDedicatedInference_Delete_NotFound(t *testing.T) {\n\tsetup()\n\tdefer teardown()\n\n\tdiID := \"nonexistent-uuid\"\n\n\tmux.HandleFunc(fmt.Sprintf(\"/v2/dedicated-inferences/%s\", diID), func(w http.ResponseWriter, r *http.Request) {\n\t\ttestMethod(t, r, http.MethodDelete)\n\t\tw.WriteHeader(http.StatusNotFound)\n\t\tfmt.Fprint(w, `{\n\t\t\t\"id\": \"not_found\",\n\t\t\t\"message\": \"The resource could not be found\"\n\t\t}`)\n\t})\n\n\tresp, err := client.DedicatedInference.Delete(ctx, diID)\n\tif err == nil {\n\t\tt.Error(\"DedicatedInference.Delete expected error for 404, got nil\")\n\t}\n\n\tif resp != nil && resp.StatusCode != http.StatusNotFound {\n\t\tt.Errorf(\"expected status %d, got %d\", http.StatusNotFound, resp.StatusCode)\n\t}\n}",
+                "oldText": "func TestDedicatedInference_Update(t *testing.T) {\n\tsetup()\n\tdefer teardown()\n\n\tdiID := \"di-uuid\"\n\n\tmux.HandleFunc(fmt.Sprintf(\"/v2/dedicated-inferences/%s\", diID), func(w http.ResponseWriter, r *http.Request) {\n\t\ttestMethod(t, r, http.MethodPatch)\n\n\t\tvar req DedicatedInferenceUpdateRequest\n\t\tif err := json.NewDecoder(r.Body).Decode(&req); err != nil {\n\t\t\tt.Errorf(\"failed to decode request body: %v\", err)\n\t\t}\n\n\t\tif req.Spec == nil {\n\t\t\tt.Error(\"expected spec in request\")\n\t\t}\n\n\t\tif req.Spec.Name != \"test-di-updated\" {\n\t\t\tt.Errorf(\"expected name %q, got %q\", \"test-di-updated\", req.Spec.Name)\n\t\t}\n\n\t\tw.WriteHeader(http.StatusAccepted)\n\t\tfmt.Fprint(w, diUpdateJSONResponse)\n\t})\n\n\tupdateReq := &DedicatedInferenceUpdateRequest{\n\t\tSpec: &DedicatedInferenceSpecRequest{\n\t\t\tVersion:              2,\n\t\t\tName:                 \"test-di-updated\",\n\t\t\tRegion:               \"s2r1\",\n\t\t\tEnablePublicEndpoint: true,\n\t\t\tVPC: &DedicatedInferenceVPCRequest{\n\t\t\t\tUUID: \"246de291-05af-461f-956a-a7be58f65367\",\n\t\t\t},\n\t\t\tModelDeployments: []*DedicatedInferenceModelRequest{\n\t\t\t\t{\n\t\t\t\t\tModelID:       \"model-uuid\",\n\t\t\t\t\tModelSlug:     \"meta-llama/Llama-3.1-8B-Instruct\",\n\t\t\t\t\tModelProvider: \"hugging_face\",\n\t\t\t\t\tAccelerators: []*DedicatedInferenceAcceleratorRequest{\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tAcceleratorSlug: \"gpu-mi300x1-192gb\",\n\t\t\t\t\t\t\tScale:           2,\n\t\t\t\t\t\t\tType:            \"prefill_decode\",\n\t\t\t\t\t\t},\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t},\n\t\t},\n\t\tSecrets: &DedicatedInferenceSecrets{\n\t\t\tHuggingFaceToken: \"hf_test-token\",\n\t\t},\n\t}\n\n\tdi, _, err := client.DedicatedInference.Update(ctx, diID, updateReq)\n\tif err != nil {\n\t\tt.Errorf(\"DedicatedInference.Update returned error: %v\", err)\n\t}\n\n\tif di.ID != diID {\n\t\tt.Errorf(\"expected ID %q, got %q\", diID, di.ID)\n\t}\n\n\tif di.Name != \"test-di-updated\" {\n\t\tt.Errorf(\"expected name %q, got %q\", \"test-di-updated\", di.Name)\n\t}\n\n\tif di.Status != \"updating\" {\n\t\tt.Errorf(\"expected status %q, got %q\", \"updating\", di.Status)\n\t}\n\n\tif di.PendingDeploymentSpec == nil {\n\t\tt.Fatal(\"expected pending_deployment_spec, got nil\")\n\t}\n\n\tif di.PendingDeploymentSpec.ModelDeployments[0].Accelerators[0].Scale != 2 {\n\t\tt.Errorf(\"expected scale 2, got %d\", di.PendingDeploymentSpec.ModelDeployments[0].Accelerators[0].Scale)\n\t}\n}"
+              }
+            ],
+            "path": "/app/godo/dedicated_inference_test.go"
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 1965,
+        "completion_tokens": 2204,
+        "cached_tokens": 29510,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 33679
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 31,
+      "timestamp": "2026-04-08T19:41:24.142000Z",
+      "source": "agent",
+      "message": "Successfully replaced 1 block(s) in /app/godo/dedicated_inference_test.go.",
+      "observation": {
+        "results": [
+          {
+            "content": "Successfully replaced 1 block(s) in /app/godo/dedicated_inference_test.go."
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-522773b2557841798de83ac6545a3bd6",
+        "exec_exit_code": null,
+        "exec_status": null,
+        "exec_duration_ms": null
+      }
+    },
+    {
+      "step_id": 32,
+      "timestamp": "2026-04-08T19:41:24.152000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Now I need to run the tests to verify the implementation works correctly. Let me run the tests for the dedicated_inference.go file.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-cd3e7f395d3e422cb1d125eb07028276",
+          "function_name": "exec",
+          "arguments": {
+            "command": "cd /app/godo && go test -v -run \"TestDedicatedInference\" ./..."
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 15545,
+        "completion_tokens": 86,
+        "cached_tokens": 18111,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 33742
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 33,
+      "timestamp": "2026-04-08T19:41:41.069000Z",
+      "source": "agent",
+      "message": "Command still running (session glow-atlas, pid 1576). Use process (list/poll/log/write/kill/clear/remove) for follow-up.",
+      "observation": {
+        "results": [
+          {
+            "content": "Command still running (session glow-atlas, pid 1576). Use process (list/poll/log/write/kill/clear/remove) for follow-up."
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-cd3e7f395d3e422cb1d125eb07028276",
+        "exec_exit_code": null,
+        "exec_status": "running",
+        "exec_duration_ms": null
+      }
+    },
+    {
+      "step_id": 34,
+      "timestamp": "2026-04-08T19:41:41.377000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "",
+      "reasoning_content": "Let me check on the process status.",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-32baff5b55524c65abebc4594af03222",
+          "function_name": "process",
+          "arguments": {
+            "action": "poll",
+            "sessionId": "glow-atlas",
+            "timeout": 30000
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 124,
+        "completion_tokens": 43,
+        "cached_tokens": 33599,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 33766
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 35,
+      "timestamp": "2026-04-08T19:41:55.622000Z",
+      "source": "agent",
+      "message": "=== RUN   TestDedicatedInference_Create\n--- PASS: TestDedicatedInference_Create (0.00s)\n=== RUN   TestDedicatedInference_Get\n--- PASS: TestDedicatedInference_Get (0.01s)\n=== RUN   TestDedicatedInference_Get_NoToken\n--- PASS: TestDedicatedInference_Get_NoToken (0.01s)\n=== RUN   TestDedicatedInference_String\n--- PASS: TestDedicatedInference_String (0.00s)\n=== RUN   TestDedicatedInferenceToken_String\n--- PASS: TestDedicatedInferenceToken_String (0.00s)\n=== RUN   TestDedicatedInference_Update\n--- PASS: TestDedicatedInference_Update (0.01s)\n=== RUN   TestDedicatedInference_Delete\n--- PASS: TestDedicatedInference_Delete (0.01s)\n=== RUN   TestDedicatedInference_Delete_NotFound\n--- PASS: TestDedicatedInference_Delete_NotFound (0.00s)\nPASS\nok  \tgithub.com/digitalocean/godo\t0.050s\ntesting: warning: no tests to run\nPASS\nok  \tgithub.com/digitalocean/godo/metrics\t0.002s [no tests to run]\ntesting: warning: no tests to run\nPASS\nok  \tgithub.com/digitalocean/godo/util\t0.002s [no tests to run]\n\nProcess exited with code 0.",
+      "observation": {
+        "results": [
+          {
+            "content": "=== RUN   TestDedicatedInference_Create\n--- PASS: TestDedicatedInference_Create (0.00s)\n=== RUN   TestDedicatedInference_Get\n--- PASS: TestDedicatedInference_Get (0.01s)\n=== RUN   TestDedicatedInference_Get_NoToken\n--- PASS: TestDedicatedInference_Get_NoToken (0.01s)\n=== RUN   TestDedicatedInference_String\n--- PASS: TestDedicatedInference_String (0.00s)\n=== RUN   TestDedicatedInferenceToken_String\n--- PASS: TestDedicatedInferenceToken_String (0.00s)\n=== RUN   TestDedicatedInference_Update\n--- PASS: TestDedicatedInference_Update (0.01s)\n=== RUN   TestDedicatedInference_Delete\n--- PASS: TestDedicatedInference_Delete (0.01s)\n=== RUN   TestDedicatedInference_Delete_NotFound\n--- PASS: TestDedicatedInference_Delete_NotFound (0.00s)\nPASS\nok  \tgithub.com/digitalocean/godo\t0.050s\ntesting: warning: no tests to run\nPASS\nok  \tgithub.com/digitalocean/godo/metrics\t0.002s [no tests to run]\ntesting: warning: no tests to run\nPASS\nok  \tgithub.com/digitalocean/godo/util\t0.002s [no tests to run]\n\nProcess exited with code 0."
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-32baff5b55524c65abebc4594af03222",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": null
+      }
+    },
+    {
+      "step_id": 36,
+      "timestamp": "2026-04-08T19:41:55.628000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "All tests pass. Let me verify the implementation compiles and the interface is satisfied:",
+      "reasoning_content": "All tests pass, including the new Delete tests. Let me verify that the code compiles correctly and check if there's anything else to verify, like whether the interface implementation is complete (the compile-time check `var _ DedicatedInferenceService = &DedicatedInferenceServiceOp{}` should catch this).",
+      "tool_calls": [
+        {
+          "tool_call_id": "tool-5a4c4b8f9c99421089dde46d8f0bc845",
+          "function_name": "exec",
+          "arguments": {
+            "command": "cd /app/godo && go build ./..."
+          }
+        }
+      ],
+      "metrics": {
+        "prompt_tokens": 412,
+        "completion_tokens": 163,
+        "cached_tokens": 33663,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 34238
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "toolUse",
+        "tool_call_id": null
+      }
+    },
+    {
+      "step_id": 37,
+      "timestamp": "2026-04-08T19:42:01.904000Z",
+      "source": "agent",
+      "message": "(no output)",
+      "observation": {
+        "results": [
+          {
+            "content": "(no output)"
+          }
+        ]
+      },
+      "extra": {
+        "openclaw_role": "toolResult",
+        "stop_reason": null,
+        "tool_call_id": "tool-5a4c4b8f9c99421089dde46d8f0bc845",
+        "exec_exit_code": 0,
+        "exec_status": "completed",
+        "exec_duration_ms": 181
+      }
+    },
+    {
+      "step_id": 38,
+      "timestamp": "2026-04-08T19:42:01.906000Z",
+      "source": "agent",
+      "model_name": "z-ai/glm-5",
+      "message": "Done. I've implemented delete support for Dedicated Inference resources in the godo client. Here's what was added:\n\n**Changes to `/app/godo/dedicated_inference.go`:**\n\n1. **Interface update**: Added `Delete(context.Context, string) (*Response, error)` to `DedicatedInferenceService` interface\n\n2. **Implementation**: Added `Delete` method to `DedicatedInferenceServiceOp`:\n   - Accepts a context and a dedicated inference UUID\n   - Sends an HTTP `DELETE` request to `/v2/dedicated-inferences/{id}`\n   - No request body (passes `nil` to `NewRequest`)\n   - Returns the raw `*Response` and `error` from `client.Do`\n   - For `202 Accepted` responses, returns non-nil response with nil error\n   - API errors (like `404 Not Found`) are propagated as errors\n\n**Tests added to `/app/godo/dedicated_inference_test.go`:**\n\n1. `TestDedicatedInference_Delete` - verifies successful deletion with `202 Accepted`\n2. `TestDedicatedInference_Delete_NotFound` - verifies that `404` errors are propagated correctly\n\nAll existing tests continue to pass, and the implementation compiles cleanly.",
+      "reasoning_content": "The implementation compiles correctly. Let me provide a summary of what was implemented.",
+      "metrics": {
+        "prompt_tokens": 71,
+        "completion_tokens": 300,
+        "cached_tokens": 34047,
+        "cost_usd": 0.0,
+        "extra": {
+          "cache_creation_tokens": 0,
+          "total_tokens": 34418
+        }
+      },
+      "extra": {
+        "openclaw_role": "assistant",
+        "stop_reason": "stop",
+        "tool_call_id": null
+      }
+    }
+  ],
+  "final_metrics": {
+    "total_prompt_tokens": 58317,
+    "total_completion_tokens": 5921,
+    "total_cached_tokens": 440016,
+    "total_steps": 38
+  }
+}

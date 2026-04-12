@@ -1,0 +1,153 @@
+{
+  "agent:main:main": {
+    "sessionId": "5ce30af3-b828-4ee5-800e-bb5ed0c8f0da",
+    "updatedAt": 1775682425360,
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>healthcheck</name>\n    <description>Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).</description>\n    <location>~/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/healthcheck/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>node-connect</name>\n    <description>Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.</description>\n    <location>~/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/node-connect/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>openai-whisper-api</name>\n    <description>Transcribe audio via OpenAI Audio Transcriptions API (Whisper).</description>\n    <location>~/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/openai-whisper-api/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like &quot;create a skill&quot;, &quot;author a skill&quot;, &quot;tidy up a skill&quot;, &quot;improve this skill&quot;, &quot;review the skill&quot;, &quot;clean up the skill&quot;, &quot;audit the skill&quot;.</description>\n    <location>~/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tmux</name>\n    <description>Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.</description>\n    <location>~/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/tmux/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.</description>\n    <location>~/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "healthcheck"
+        },
+        {
+          "name": "node-connect"
+        },
+        {
+          "name": "openai-whisper-api",
+          "primaryEnv": "OPENAI_API_KEY",
+          "requiredEnv": [
+            "OPENAI_API_KEY"
+          ]
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "tmux",
+          "requiredEnv": []
+        },
+        {
+          "name": "weather",
+          "requiredEnv": []
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "healthcheck",
+          "description": "Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).",
+          "filePath": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/healthcheck/SKILL.md",
+          "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/healthcheck",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/healthcheck/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/healthcheck"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "node-connect",
+          "description": "Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.",
+          "filePath": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/node-connect/SKILL.md",
+          "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/node-connect",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/node-connect/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/node-connect"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "openai-whisper-api",
+          "description": "Transcribe audio via OpenAI Audio Transcriptions API (Whisper).",
+          "filePath": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/openai-whisper-api/SKILL.md",
+          "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/openai-whisper-api",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/openai-whisper-api/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/openai-whisper-api"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like \"create a skill\", \"author a skill\", \"tidy up a skill\", \"improve this skill\", \"review the skill\", \"clean up the skill\", \"audit the skill\".",
+          "filePath": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+          "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/skill-creator",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/skill-creator"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tmux",
+          "description": "Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.",
+          "filePath": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/tmux/SKILL.md",
+          "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/tmux",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/tmux/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/tmux"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "weather",
+          "description": "Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.",
+          "filePath": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/weather/SKILL.md",
+          "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/weather",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/weather/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/weather"
+          },
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 0
+    },
+    "sessionFile": "/logs/agent/openclaw-sessions/5ce30af3-b828-4ee5-800e-bb5ed0c8f0da.jsonl",
+    "compactionCheckpoints": [
+      {
+        "checkpointId": "e3a2e9c7-e43c-4c94-b62c-2c3211038ead",
+        "sessionKey": "agent:main:main",
+        "sessionId": "5ce30af3-b828-4ee5-800e-bb5ed0c8f0da",
+        "createdAt": 1775682425360,
+        "reason": "overflow-retry",
+        "tokensBefore": 97932,
+        "tokensAfter": 21330,
+        "summary": "## Decisions\nNo prior history.\n\n## Open TODOs\nNone.\n\n## Constraints/Rules\nNone.\n\n## Pending user asks\nNone.\n\n## Exact identifiers\nNone captured.\n\n**Turn Context (split turn):**\n\n## Goal\nFix two stability gaps in the grammar subsystem:\n1. Nullable cyclic patterns (`root ::= ( [x]* )*`) that crash/hang during grammar stack expansion\n2. Deeply nested repetitions (`root ::= (((((([^x]*){0,99}){0,99}){0,99}){0,99}){0,99}){0,99}`) causing unsafe grammar growth\n\nAlso extend existing test coverage in:\n- `tests/test-grammar-integration.cpp` with nullable cycle grammar and pass/fail strings\n- `tests/test-grammar-parser.cpp` with expected-failure coverage for nested repetition grammar\n\n## Constraints/Rules\n- Grammar `root ::= ( [x]* )*` must be handled safely\n- For that grammar: \"\", \"x\", \"xx\" accepted; \"y\", \"yy\" rejected\n- Nested repetition grammar must be rejected cleanly (parse/build failure, not crash/hang)\n- Existing grammar validation behavior must remain intact\n- Do not remove existing test coverage\n\n## Decisions\n- **Added MAX_ADVANCE_STACK_DEPTH=100**: Limits recursion depth in `llama_grammar_advance_stack` to prevent infinite loops from nullable cycles\n- **Added MAX_RULE_COUNT=100000**: Limits total rules generated during parsing to prevent memory exhaustion\n- **Added MAX_NEW_STACKS_COUNT=100000**: Limits number of stacks generated during grammar matching to prevent exponential growth from nested nullable repetitions\n- **Modified `llama_grammar_advance_stack`**: Added both depth check and stack count check at start of function\n\n## Open TODOs\n- [ ] Fix the nested repetition grammar rejection - still timing out even with new limits\n- [ ] Add regression test to `tests/test-grammar-integration.cpp` for nullable cycle grammar\n- [ ] Add regression test to `tests/test-grammar-parser.cpp` for nested repetition grammar\n\n## Pending user asks\nNone explicitly stated - working on stability improvements.\n\n## Exact identifiers\n- Source file: `/app/llama.cpp/src/llama-grammar.cpp`\n- Header file: `/app/llama.cpp/src/llama-grammar.h`\n- Test files: `/app/llama.cpp/tests/test-grammar-integration.cpp`, `/app/llama.cpp/tests/test-grammar-parser.cpp`\n- Build directory: `/app/llama.cpp/build-test`\n- Test grammar files: `/tmp/grammar_tests/grammar1.gbnf`, `/tmp/grammar_tests/grammar2.gbnf`\n- Constants defined:\n  - `MAX_REPETITION_THRESHOLD=2000`\n  - `MAX_RULE_COUNT=100000`\n  - `MAX_ADVANCE_STACK_DEPTH=100`\n  - `MAX_NEW_STACKS_COUNT=100000`\n- Key function modified: `llama_grammar_advance_stack` - added `depth` parameter with default value 0, and stack count check\n- Test sessions: `marine-orbit` (exited with code 124 - timeout)\n\n## Progress Status\n- Nullable cycle grammar (grammar1.gbnf) works correctly: empty, \"x\", \"xx\" accepted; \"y\", \"yy\" rejected ✓\n- Nested repetition grammar (grammar2.gbnf) still timing out (exit code 124) - the rule count limit and stack count limit are not catching it properly\n- Testing with smaller nested cases still shows timeout issues\n- Need to investigate why limits don't catch nested repetitions during parsing/matching\n\n<read-files>\n/app/llama.cpp/src/llama-grammar.h\n/app/llama.cpp/tests/CMakeLists.txt\n/app/llama.cpp/tests/test-gbnf-validator.cpp\n/app/llama.cpp/tests/test-grammar-integration.cpp\n/app/llama.cpp/tests/test-grammar-parser.cpp\n\n</read-files>\n\n<modified-files>\n/app/llama.cpp/src/llama-grammar.cpp\n\n</modified-files>",
+        "firstKeptEntryId": "7775f9e0",
+        "preCompaction": {
+          "sessionId": "5ce30af3-b828-4ee5-800e-bb5ed0c8f0da",
+          "sessionFile": "/logs/agent/openclaw-sessions/5ce30af3-b828-4ee5-800e-bb5ed0c8f0da.checkpoint.379b992e-975c-4398-aef3-327d9d938d8f.jsonl",
+          "leafId": "6e8f4a4b"
+        },
+        "postCompaction": {
+          "sessionId": "5ce30af3-b828-4ee5-800e-bb5ed0c8f0da",
+          "sessionFile": "/logs/agent/openclaw-sessions/5ce30af3-b828-4ee5-800e-bb5ed0c8f0da.jsonl",
+          "leafId": "ec5c6620",
+          "entryId": "ec5c6620"
+        }
+      }
+    ]
+  }
+}

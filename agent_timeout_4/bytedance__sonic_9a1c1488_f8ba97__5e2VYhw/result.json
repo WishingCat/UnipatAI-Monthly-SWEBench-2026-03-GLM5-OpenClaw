@@ -1,0 +1,102 @@
+{
+    "id": "4bd1c8c7-0daf-4523-81c8-be7fc38e7d58",
+    "task_name": "bytedance__sonic_9a1c1488_f8ba977b",
+    "trial_name": "bytedance__sonic_9a1c1488_f8ba97__5e2VYhw",
+    "trial_uri": "file:///T:/AgentProjects/20260408SWEBench/harbor_jobs/monthly-swebench-openclaw-full112-glm5-20260409-0057/bytedance__sonic_9a1c1488_f8ba97__5e2VYhw",
+    "task_id": {
+        "path": "T:\\AgentProjects\\20260408SWEBench\\prepared_datasets\\monthly_swebench_2026_03_full\\all_tasks\\bytedance__sonic_9a1c1488_f8ba977b"
+    },
+    "source": "all_tasks",
+    "task_checksum": "ad8d4ba5879c5eee0675a7c88d00a6000f0e6e9a386554babe086f7074098a9b",
+    "config": {
+        "task": {
+            "path": "T:\\AgentProjects\\20260408SWEBench\\prepared_datasets\\monthly_swebench_2026_03_full\\all_tasks\\bytedance__sonic_9a1c1488_f8ba977b",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "all_tasks"
+        },
+        "trial_name": "bytedance__sonic_9a1c1488_f8ba97__5e2VYhw",
+        "trials_dir": "T:\\AgentProjects\\20260408SWEBench\\harbor_jobs\\monthly-swebench-openclaw-full112-glm5-20260409-0057",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": 2.0,
+        "agent": {
+            "name": "openclaw",
+            "import_path": null,
+            "model_name": "openai/z-ai/glm-5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {}
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "c0277721-d096-4510-8a0c-f1d031c225e4"
+    },
+    "agent_info": {
+        "name": "openclaw",
+        "version": "unknown",
+        "model_info": {
+            "name": "z-ai/glm-5",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 240386,
+        "n_cache_tokens": 4707056,
+        "n_output_tokens": 87643,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "exception_info": {
+        "exception_type": "AgentTimeoutError",
+        "exception_message": "Agent execution timed out after 1800.0 seconds",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\47004\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\asyncio\\tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"T:\\AgentProjects\\20260408SWEBench\\harbor\\src\\harbor\\agents\\installed\\base.py\", line 164, in run\n    result = await environment.exec(\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"T:\\AgentProjects\\20260408SWEBench\\harbor\\src\\harbor\\environments\\docker\\docker.py\", line 371, in exec\n    return await self._run_docker_compose_command(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"T:\\AgentProjects\\20260408SWEBench\\harbor\\src\\harbor\\environments\\docker\\docker.py\", line 198, in _run_docker_compose_command\n    stdout_bytes, stderr_bytes = await process.communicate()\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\47004\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\asyncio\\subprocess.py\", line 201, in communicate\n    stdin, stdout, stderr = await tasks.gather(stdin, stdout, stderr)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\47004\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\asyncio\\subprocess.py\", line 181, in _read_stream\n    output = await stream.read()\n             ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\47004\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\asyncio\\streams.py\", line 703, in read\n    block = await self.read(self._limit)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\47004\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\asyncio\\streams.py\", line 710, in read\n    await self._wait_for_data('read')\n  File \"C:\\Users\\47004\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\asyncio\\streams.py\", line 542, in _wait_for_data\n    await self._waiter\nasyncio.exceptions.CancelledError\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"T:\\AgentProjects\\20260408SWEBench\\harbor\\src\\harbor\\trial\\trial.py\", line 261, in _execute_agent\n    await asyncio.wait_for(\n  File \"C:\\Users\\47004\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\asyncio\\tasks.py\", line 519, in wait_for\n    async with timeouts.timeout(timeout):\n  File \"C:\\Users\\47004\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\asyncio\\timeouts.py\", line 115, in __aexit__\n    raise TimeoutError from exc_val\nTimeoutError\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"T:\\AgentProjects\\20260408SWEBench\\harbor\\src\\harbor\\trial\\trial.py\", line 485, in run\n    await self._execute_agent()\n  File \"T:\\AgentProjects\\20260408SWEBench\\harbor\\src\\harbor\\trial\\trial.py\", line 270, in _execute_agent\n    raise AgentTimeoutError(\nharbor.trial.trial.AgentTimeoutError: Agent execution timed out after 1800.0 seconds\n",
+        "occurred_at": "2026-04-09T03:35:01.053664"
+    },
+    "started_at": "2026-04-08T19:00:34.140860Z",
+    "finished_at": "2026-04-08T19:35:09.263043Z",
+    "environment_setup": {
+        "started_at": "2026-04-08T19:00:37.925673Z",
+        "finished_at": "2026-04-08T19:01:51.204573Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-04-08T19:01:51.204573Z",
+        "finished_at": "2026-04-08T19:05:01.043290Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-04-08T19:05:01.043290Z",
+        "finished_at": "2026-04-08T19:35:01.053664Z"
+    },
+    "verifier": {
+        "started_at": "2026-04-08T19:35:01.075277Z",
+        "finished_at": "2026-04-08T19:35:04.843271Z"
+    }
+}

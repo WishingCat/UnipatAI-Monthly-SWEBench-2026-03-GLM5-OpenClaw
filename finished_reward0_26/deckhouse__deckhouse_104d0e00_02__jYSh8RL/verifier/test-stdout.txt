@@ -1,0 +1,117 @@
+[REGRESSION_DIRECT] START existing-exception-behavior
+=== RUN   regression-existing-exception-case
+    === RUN   existing-exception-020-027-hostnetwork-true-tcp-25000
+    --- PASS: existing-exception-020-027-hostnetwork-true-tcp-25000	(0.008s)
+--- PASS: regression-existing-exception-case	(0.017s)
+ok	.terminal-bench-generated/regression-suite.yaml	0.017s
+PASS
+[REGRESSION_DIRECT] PASS existing-exception-behavior
+
+[FAIL2PASS_CORE] START hostports-only-exception-core-semantics
+=== RUN   hostports-only-exception-core
+    === RUN   hostnetwork-false-5000-allowed-by-hostports-only-exception
+    --- FAIL: hostnetwork-false-5000-allowed-by-hostports-only-exception	(0.006s)
+        unexpected number of violations: got 1 violations but want none: got messages [The hostNetwork or hostPort are not allowed, pod: tb-hostnetwork-false-5000. | Actual hostNetwork: false, hostPorts: [5000], containerPorts: [5000] | Allowed values: {"allowHostNetwork": true, "ranges": [{"max": 30000, "min": 20000}]}]
+    === RUN   hostnetwork-false-6000-allowed-by-hostports-only-exception
+    --- FAIL: hostnetwork-false-6000-allowed-by-hostports-only-exception	(0.006s)
+        unexpected number of violations: got 1 violations but want none: got messages [The hostNetwork or hostPort are not allowed, pod: tb-hostnetwork-false-6000. | Actual hostNetwork: false, hostPorts: [6000], containerPorts: [6000] | Allowed values: {"allowHostNetwork": true, "ranges": [{"max": 30000, "min": 20000}]}]
+--- FAIL: hostports-only-exception-core	(0.018s)
+FAIL	.terminal-bench-generated/core-suite.yaml	0.018s
+FAIL
+
+Error: FAIL
+[FAIL2PASS_CORE] FAIL hostports-only-exception-core-semantics
+
+[FAIL2PASS_EDGE] START repository-suite-contains-required-hostports-only-cases
+=== RUN   pss-baseline
+    === RUN   002-allowed-no-hostnetwork
+    --- PASS: 002-allowed-no-hostnetwork	(0.005s)
+    === RUN   001-allowed-no-hostnetwork-multiple-containers
+    --- PASS: 001-allowed-no-hostnetwork-multiple-containers	(0.006s)
+    === RUN   003-disallowed-hostnetwork-true
+    --- PASS: 003-disallowed-hostnetwork-true	(0.006s)
+--- PASS: pss-baseline	(0.022s)
+=== RUN   security-policy
+    === RUN   005-allowed-hostnetwork-true-port-in-range
+    --- PASS: 005-allowed-hostnetwork-true-port-in-range	(0.006s)
+    === RUN   006-disallowed-hostnetwork-true-container-port
+    --- PASS: 006-disallowed-hostnetwork-true-container-port	(0.004s)
+    === RUN   004-allowed-hostnetwork-false
+    --- PASS: 004-allowed-hostnetwork-false	(0.005s)
+    === RUN   010-disallowed-hostnetwork-true-port-out-of-range-low
+    --- PASS: 010-disallowed-hostnetwork-true-port-out-of-range-low	(0.005s)
+    === RUN   011-disallowed-hostnetwork-true-container-port-out-of-range
+    --- PASS: 011-disallowed-hostnetwork-true-container-port-out-of-range	(0.005s)
+    === RUN   009-disallowed-hostnetwork-true-port-out-of-range-high
+    --- PASS: 009-disallowed-hostnetwork-true-port-out-of-range-high	(0.005s)
+    === RUN   008-disallowed-hostnetwork-true-port-on-edge-min
+    --- PASS: 008-disallowed-hostnetwork-true-port-on-edge-min	(0.004s)
+    === RUN   007-disallowed-hostnetwork-true-port-on-edge-max
+    --- PASS: 007-disallowed-hostnetwork-true-port-on-edge-max	(0.005s)
+--- PASS: security-policy	(0.044s)
+=== RUN   security-policy-with-exception
+    === RUN   020-027-allowed-by-exception-hostnetwork-true-tcp-25000
+    --- PASS: 020-027-allowed-by-exception-hostnetwork-true-tcp-25000	(0.005s)
+    === RUN   012-024-allowed-by-exception-hostnetwork-false-empty
+    --- PASS: 012-024-allowed-by-exception-hostnetwork-false-empty	(0.006s)
+    === RUN   015-025-disallowed-by-exception-hostnetwork-true-container-port
+    --- PASS: 015-025-disallowed-by-exception-hostnetwork-true-container-port	(0.005s)
+    === RUN   015-029-allowed-by-exception-multiple-ports-tcp
+    --- PASS: 015-029-allowed-by-exception-multiple-ports-tcp	(0.005s)
+    === RUN   015-030-allowed-by-exception-multiple-ports-udp
+    --- PASS: 015-030-allowed-by-exception-multiple-ports-udp	(0.004s)
+    === RUN   016-033-allowed-by-exception-port-in-constraint-range
+    --- PASS: 016-033-allowed-by-exception-port-in-constraint-range	(0.005s)
+    === RUN   019-036-allowed-by-exception-port-out-of-constraint-range
+    --- PASS: 019-036-allowed-by-exception-port-out-of-constraint-range	(0.005s)
+    === RUN   018-035-allowed-by-exception-port-on-constraint-edge-min
+    --- PASS: 018-035-allowed-by-exception-port-on-constraint-edge-min	(0.005s)
+    === RUN   017-034-allowed-by-exception-port-on-constraint-edge-max
+    --- PASS: 017-034-allowed-by-exception-port-on-constraint-edge-max	(0.005s)
+    === RUN   021-037-disallowed-by-exception-hostnetwork-mismatch
+    --- PASS: 021-037-disallowed-by-exception-hostnetwork-mismatch	(0.006s)
+    === RUN   021-038-disallowed-by-exception-hostport-mismatch
+    --- PASS: 021-038-disallowed-by-exception-hostport-mismatch	(0.005s)
+    === RUN   021-039-disallowed-by-exception-protocol-mismatch
+    --- PASS: 021-039-disallowed-by-exception-protocol-mismatch	(0.005s)
+    === RUN   043-disallowed-no-exception-label
+    --- PASS: 043-disallowed-no-exception-label	(0.004s)
+    === RUN   013-040-disallowed-exception-allows-false-but-pod-has-true
+    --- PASS: 013-040-disallowed-exception-allows-false-but-pod-has-true	(0.006s)
+    === RUN   012-042-disallowed-exception-allows-false-constraint-allows-true
+    --- PASS: 012-042-disallowed-exception-allows-false-constraint-allows-true	(0.004s)
+    === RUN   012-041-disallowed-exception-allows-false-constraint-allows-true-pod-uses-true
+    --- PASS: 012-041-disallowed-exception-allows-false-constraint-allows-true-pod-uses-true	(0.006s)
+    === RUN   044-disallowed-no-exception-port-out-of-constraint-range
+    --- PASS: 044-disallowed-no-exception-port-out-of-constraint-range	(0.005s)
+    === RUN   045-disallowed-no-exception-container-port
+    --- PASS: 045-disallowed-no-exception-container-port	(0.006s)
+    === RUN   018-032-allowed-by-exception-port-exactly-min-constraint-range
+    --- PASS: 018-032-allowed-by-exception-port-exactly-min-constraint-range	(0.005s)
+    === RUN   017-031-allowed-by-exception-port-exactly-max-constraint-range
+    --- PASS: 017-031-allowed-by-exception-port-exactly-max-constraint-range	(0.005s)
+    === RUN   022-046-allowed-exception-container-port
+    --- PASS: 022-046-allowed-exception-container-port	(0.005s)
+    === RUN   022-047-disallowed-exception-container-port
+    --- PASS: 022-047-disallowed-exception-container-port	(0.006s)
+    === RUN   023-048-disallowed-by-exception-empty-spec
+    --- PASS: 023-048-disallowed-by-exception-empty-spec	(0.005s)
+--- PASS: security-policy-with-exception	(0.121s)
+=== RUN   security-policy-restrictive-with-exception
+    === RUN   014-026-allowed-by-exception-hostnetwork-true-despite-constraint-false
+    --- PASS: 014-026-allowed-by-exception-hostnetwork-true-despite-constraint-false	(0.006s)
+    === RUN   022-028-allowed-by-exception-hostport-despite-empty-ranges
+    --- PASS: 022-028-allowed-by-exception-hostport-despite-empty-ranges	(0.005s)
+    === RUN   043-disallowed-no-exception-hostnetwork-true
+    --- PASS: 043-disallowed-no-exception-hostnetwork-true	(0.005s)
+--- PASS: security-policy-restrictive-with-exception	(0.020s)
+ok	.yaml	0.207s
+PASS
+[FAIL2PASS_EDGE] Missing required suite case in verifier output: 024-051-allowed-by-exception-hostport-only-without-hostnetwork
+[FAIL2PASS_EDGE] Missing required suite case in verifier output: 013-050-allowed-by-exception-hostnetwork-false-with-hostport
+[FAIL2PASS_EDGE] Missing required suite case in verifier output: 024-049-allowed-hostnetwork-with-hostport-only-exception
+[FAIL2PASS_EDGE] Missing required suite case in verifier output: 024-052-disallowed-hostnetwork-with-hostport-only-exception-restrictive
+[FAIL2PASS_EDGE] FAIL repository-suite-contains-required-hostports-only-cases
+
+Executed test groups: 3
+Failed test groups: 2

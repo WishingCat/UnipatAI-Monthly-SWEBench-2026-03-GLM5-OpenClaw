@@ -1,0 +1,9 @@
+[BUILD] PASS: probe compiled
+[REGRESSION_DIRECT] PASS: https-uri-keeps-standard-shape
+[REGRESSION_DIRECT] PASS: plain-local-path-kept
+[REGRESSION_DIRECT] PASS: local-percent-25-stays-literal
+[FAIL2PASS_CORE] PASS: file-uri-percent-25-to-literal-percent
+[FAIL2PASS_CORE] PASS: absolute-path-percent2525-keeps-percent25-text
+[FAIL2PASS_EDGE] PASS: file-uri-percent2525-keeps-percent25-text
+[FAIL2PASS_ERROR_HANDLING] PASS: decoded-percent-does-not-throw
+Final reward: 1

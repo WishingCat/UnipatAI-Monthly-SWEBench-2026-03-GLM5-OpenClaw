@@ -1,0 +1,61 @@
+[REGRESSION_DIRECT] Running pattern: ^TestRegression_NonRevokedVerificationFlow$
+=== RUN   TestRegression_NonRevokedVerificationFlow
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /graphql                  --> github.com/authorizerdev/authorizer/internal/http_handlers.(*httpProvider).GraphqlHandler.func1 (4 handlers)
+
+2026/04/08 18:56:05 [31;1m/app/authorizer/internal/storage/db/sql/user.go:100 [35;1mrecord not found
+[0m[33m[0.260ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE email = "regression_non_revoked_f688b928-136c-425f-af1c-99799a41b75c@authorizer.dev" ORDER BY `authorizer_users`.`id` LIMIT 1
+    writer.go:27: {"level":"debug","func":"SignUp","email":"regression_non_revoked_f688b928-136c-425f-af1c-99799a41b75c@authorizer.dev","phone_number":"","error":"record not found","time":"2026-04-08T18:56:05Z","message":"Failed to get user by email"}
+
+2026/04/08 18:56:05 [31;1m/app/authorizer/internal/storage/db/sql/user.go:100 [35;1mrecord not found
+[0m[33m[0.224ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE email = "regression_non_revoked_f688b928-136c-425f-af1c-99799a41b75c@authorizer.dev" ORDER BY `authorizer_users`.`id` LIMIT 1
+    writer.go:27: {"level":"debug","func":"VerifyEmail","email":"regression_non_revoked_f688b928-136c-425f-af1c-99799a41b75c@authorizer.dev","time":"2026-04-08T18:56:06Z","message":"Email verified successfully"}
+2026/04/08 18:56:06 net/http: invalid Cookie.Domain ".0.1"; dropping domain attribute
+
+2026/04/08 18:56:06 [31;1m/app/authorizer/internal/storage/db/sql/user.go:137 [35;1mrecord not found
+[0m[33m[0.234ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE phone_number = "+14155552671" ORDER BY `authorizer_users`.`id` LIMIT 1
+
+2026/04/08 18:56:06 [31;1m/app/authorizer/internal/storage/db/sql/otp.go:77 [35;1mrecord not found
+[0m[33m[0.180ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_otps` WHERE phone_number = "+14155552671" ORDER BY `authorizer_otps`.`id` LIMIT 1
+2026/04/08 18:56:06 net/http: invalid Cookie.Domain ".0.1"; dropping domain attribute
+--- PASS: TestRegression_NonRevokedVerificationFlow (0.28s)
+PASS
+ok  	github.com/authorizerdev/authorizer/internal/integration_tests	0.302s
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Running pattern: ^TestFail2Pass_Core_RevokedVerificationFlow$
+=== RUN   TestFail2Pass_Core_RevokedVerificationFlow
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /graphql                  --> github.com/authorizerdev/authorizer/internal/http_handlers.(*httpProvider).GraphqlHandler.func1 (4 handlers)
+=== RUN   TestFail2Pass_Core_RevokedVerificationFlow/revoked_user_cannot_verify_email
+
+2026/04/08 18:56:07 [31;1m/app/authorizer/internal/storage/db/sql/user.go:100 [35;1mrecord not found
+[0m[33m[0.205ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE email = "fail2pass_revoked_email_011362e9-cec7-4a5a-9536-2d94ffcf5739@authorizer.dev" ORDER BY `authorizer_users`.`id` LIMIT 1
+=== NAME  TestFail2Pass_Core_RevokedVerificationFlow
+    writer.go:27: {"level":"debug","func":"SignUp","email":"fail2pass_revoked_email_011362e9-cec7-4a5a-9536-2d94ffcf5739@authorizer.dev","phone_number":"","error":"record not found","time":"2026-04-08T18:56:07Z","message":"Failed to get user by email"}
+
+2026/04/08 18:56:07 [31;1m/app/authorizer/internal/storage/db/sql/user.go:100 [35;1mrecord not found
+[0m[33m[0.239ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE email = "fail2pass_revoked_email_011362e9-cec7-4a5a-9536-2d94ffcf5739@authorizer.dev" ORDER BY `authorizer_users`.`id` LIMIT 1
+    writer.go:27: {"level":"debug","func":"VerifyEmail","email":"fail2pass_revoked_email_011362e9-cec7-4a5a-9536-2d94ffcf5739@authorizer.dev","time":"2026-04-08T18:56:07Z","message":"Email verified successfully"}
+    writer.go:27: {"level":"debug","func":"VerifyEmail","time":"2026-04-08T18:56:07Z","message":"User access has been revoked"}
+=== RUN   TestFail2Pass_Core_RevokedVerificationFlow/revoked_user_cannot_verify_otp
+
+2026/04/08 18:56:07 [31;1m/app/authorizer/internal/storage/db/sql/user.go:137 [35;1mrecord not found
+[0m[33m[0.183ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE phone_number = "+14155552672" ORDER BY `authorizer_users`.`id` LIMIT 1
+
+2026/04/08 18:56:07 [31;1m/app/authorizer/internal/storage/db/sql/otp.go:77 [35;1mrecord not found
+[0m[33m[0.138ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_otps` WHERE phone_number = "+14155552672" ORDER BY `authorizer_otps`.`id` LIMIT 1
+=== NAME  TestFail2Pass_Core_RevokedVerificationFlow
+    writer.go:27: {"level":"debug","func":"VerifyOTP","email":"","phone_number":"+14155552672","time":"2026-04-08T18:56:07Z","message":"User access has been revoked"}
+--- PASS: TestFail2Pass_Core_RevokedVerificationFlow (0.24s)
+    --- PASS: TestFail2Pass_Core_RevokedVerificationFlow/revoked_user_cannot_verify_email (0.05s)
+    --- PASS: TestFail2Pass_Core_RevokedVerificationFlow/revoked_user_cannot_verify_otp (0.06s)
+PASS
+ok  	github.com/authorizerdev/authorizer/internal/integration_tests	0.256s
+[FAIL2PASS_CORE] PASS
+Final reward: 1

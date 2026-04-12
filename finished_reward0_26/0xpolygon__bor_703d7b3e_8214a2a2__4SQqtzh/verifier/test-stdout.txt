@@ -1,0 +1,21 @@
+[REGRESSION_DIRECT] strict-list-add
+ok  	github.com/ethereum/go-ethereum/core/txpool/legacypool	0.024s
+[REGRESSION_DIRECT] PASS - strict-list-add
+[REGRESSION_DIRECT] filter-timestamp
+ok  	github.com/ethereum/go-ethereum/core/txpool/legacypool	0.005s
+[REGRESSION_DIRECT] PASS - filter-timestamp
+[FAIL2PASS_CORE] single-stale-reinsert-dedup
+--- FAIL: TestTBReheapSnapshotPreventsSingleDuplicate (0.00s)
+    reheap_snapshot_terminalbench_test.go:66: stale single insert created heap drift: heap=2 lookup=1
+FAIL
+FAIL	github.com/ethereum/go-ethereum/core/txpool/legacypool	0.004s
+FAIL
+[FAIL2PASS_CORE] FAIL - single-stale-reinsert-dedup
+[FAIL2PASS_EDGE] batch-stale-reinsert-dedup
+--- FAIL: TestTBReheapSnapshotPreventsBatchDuplicate (0.00s)
+    reheap_snapshot_terminalbench_test.go:94: stale batch insert created heap drift: heap=4 lookup=2
+FAIL
+FAIL	github.com/ethereum/go-ethereum/core/txpool/legacypool	0.004s
+FAIL
+[FAIL2PASS_EDGE] FAIL - batch-stale-reinsert-dedup
+At least one test group failed.

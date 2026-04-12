@@ -1,0 +1,79 @@
+[REGRESSION_DIRECT] running go test pattern: ^TestResetPasswordAllowsValidOTP$
+=== RUN   TestResetPasswordAllowsValidOTP
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /graphql                  --> github.com/authorizerdev/authorizer/internal/http_handlers.(*httpProvider).GraphqlHandler.func1 (4 handlers)
+
+2026/04/08 19:06:25 [31;1m/app/authorizer/internal/storage/db/sql/user.go:137 [35;1mrecord not found
+[0m[33m[0.318ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE phone_number = "+14155550211" ORDER BY `authorizer_users`.`id` LIMIT 1
+    writer.go:27: {"level":"debug","func":"SignUp","email":"","phone_number":"+14155550211","error":"record not found","time":"2026-04-08T19:06:25Z","message":"Failed to get user by phone number"}
+
+2026/04/08 19:06:25 [31;1m/app/authorizer/internal/storage/db/sql/user.go:137 [35;1mrecord not found
+[0m[33m[0.223ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE phone_number = "+14155550211" ORDER BY `authorizer_users`.`id` LIMIT 1
+2026/04/08 19:06:25 net/http: invalid Cookie.Domain ".0.1"; dropping domain attribute
+
+2026/04/08 19:06:25 [31;1m/app/authorizer/internal/storage/db/sql/otp.go:77 [35;1mrecord not found
+[0m[33m[0.062ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_otps` WHERE phone_number = "+14155550211" ORDER BY `authorizer_otps`.`id` LIMIT 1
+    writer.go:27: {"level":"debug","func":"Login","email":"","phone_number":"+14155550211","phone_number":"+14155550211","time":"2026-04-08T19:06:25Z","message":"User found by phone number"}
+    writer.go:27: {"level":"debug","func":"Login","email":"","phone_number":"+14155550211","time":"2026-04-08T19:06:25Z","message":"Bad user credentials"}
+    writer.go:27: {"level":"debug","func":"Login","email":"","phone_number":"+14155550211","phone_number":"+14155550211","time":"2026-04-08T19:06:25Z","message":"User found by phone number"}
+2026/04/08 19:06:26 net/http: invalid Cookie.Domain ".0.1"; dropping domain attribute
+--- PASS: TestResetPasswordAllowsValidOTP (0.33s)
+PASS
+ok  	github.com/authorizerdev/authorizer/internal/integration_tests	0.349s
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] running go test pattern: ^TestResetPasswordRejectsExpiredOTP$
+=== RUN   TestResetPasswordRejectsExpiredOTP
+=== RUN   TestResetPasswordRejectsExpiredOTP/past_expiration_timestamp
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /graphql                  --> github.com/authorizerdev/authorizer/internal/http_handlers.(*httpProvider).GraphqlHandler.func1 (4 handlers)
+
+2026/04/08 19:06:27 [31;1m/app/authorizer/internal/storage/db/sql/user.go:137 [35;1mrecord not found
+[0m[33m[0.222ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE phone_number = "+14155550199" ORDER BY `authorizer_users`.`id` LIMIT 1
+    writer.go:27: {"level":"debug","func":"SignUp","email":"","phone_number":"+14155550199","error":"record not found","time":"2026-04-08T19:06:27Z","message":"Failed to get user by phone number"}
+
+2026/04/08 19:06:27 [31;1m/app/authorizer/internal/storage/db/sql/user.go:137 [35;1mrecord not found
+[0m[33m[0.206ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE phone_number = "+14155550199" ORDER BY `authorizer_users`.`id` LIMIT 1
+2026/04/08 19:06:27 net/http: invalid Cookie.Domain ".0.1"; dropping domain attribute
+
+2026/04/08 19:06:27 [31;1m/app/authorizer/internal/storage/db/sql/otp.go:77 [35;1mrecord not found
+[0m[33m[0.055ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_otps` WHERE phone_number = "+14155550199" ORDER BY `authorizer_otps`.`id` LIMIT 1
+    writer.go:27: {"level":"debug","func":"ResetPassword","time":"2026-04-08T19:06:27Z","message":"OTP has expired"}
+    writer.go:27: {"level":"debug","func":"Login","email":"","phone_number":"+14155550199","phone_number":"+14155550199","time":"2026-04-08T19:06:27Z","message":"User found by phone number"}
+2026/04/08 19:06:27 net/http: invalid Cookie.Domain ".0.1"; dropping domain attribute
+    writer.go:27: {"level":"debug","func":"Login","email":"","phone_number":"+14155550199","phone_number":"+14155550199","time":"2026-04-08T19:06:27Z","message":"User found by phone number"}
+    writer.go:27: {"level":"debug","func":"Login","email":"","phone_number":"+14155550199","time":"2026-04-08T19:06:27Z","message":"Bad user credentials"}
+=== RUN   TestResetPasswordRejectsExpiredOTP/unset_expiration_timestamp
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /graphql                  --> github.com/authorizerdev/authorizer/internal/http_handlers.(*httpProvider).GraphqlHandler.func1 (4 handlers)
+
+2026/04/08 19:06:27 [31;1m/app/authorizer/internal/storage/db/sql/user.go:137 [35;1mrecord not found
+[0m[33m[0.195ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE phone_number = "+14155550199" ORDER BY `authorizer_users`.`id` LIMIT 1
+    writer.go:27: {"level":"debug","func":"SignUp","email":"","phone_number":"+14155550199","error":"record not found","time":"2026-04-08T19:06:27Z","message":"Failed to get user by phone number"}
+
+2026/04/08 19:06:28 [31;1m/app/authorizer/internal/storage/db/sql/user.go:137 [35;1mrecord not found
+[0m[33m[0.210ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE phone_number = "+14155550199" ORDER BY `authorizer_users`.`id` LIMIT 1
+2026/04/08 19:06:28 net/http: invalid Cookie.Domain ".0.1"; dropping domain attribute
+
+2026/04/08 19:06:28 [31;1m/app/authorizer/internal/storage/db/sql/otp.go:77 [35;1mrecord not found
+[0m[33m[0.043ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_otps` WHERE phone_number = "+14155550199" ORDER BY `authorizer_otps`.`id` LIMIT 1
+    writer.go:27: {"level":"debug","func":"ResetPassword","time":"2026-04-08T19:06:28Z","message":"OTP has expired"}
+    writer.go:27: {"level":"debug","func":"Login","email":"","phone_number":"+14155550199","phone_number":"+14155550199","time":"2026-04-08T19:06:28Z","message":"User found by phone number"}
+2026/04/08 19:06:28 net/http: invalid Cookie.Domain ".0.1"; dropping domain attribute
+    writer.go:27: {"level":"debug","func":"Login","email":"","phone_number":"+14155550199","phone_number":"+14155550199","time":"2026-04-08T19:06:28Z","message":"User found by phone number"}
+    writer.go:27: {"level":"debug","func":"Login","email":"","phone_number":"+14155550199","time":"2026-04-08T19:06:28Z","message":"Bad user credentials"}
+--- PASS: TestResetPasswordRejectsExpiredOTP (0.53s)
+    --- PASS: TestResetPasswordRejectsExpiredOTP/past_expiration_timestamp (0.27s)
+    --- PASS: TestResetPasswordRejectsExpiredOTP/unset_expiration_timestamp (0.27s)
+PASS
+ok  	github.com/authorizerdev/authorizer/internal/integration_tests	0.552s
+[FAIL2PASS_CORE] PASS
+Total failing groups: 0

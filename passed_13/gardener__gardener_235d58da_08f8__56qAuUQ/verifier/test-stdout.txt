@@ -1,0 +1,31 @@
+[REGRESSION_DIRECT] running
+=== RUN   TestTerminalBenchRegressionDirect_BackupEntryListWithFieldSelectorIsAllowed
+--- PASS: TestTerminalBenchRegressionDirect_BackupEntryListWithFieldSelectorIsAllowed (0.00s)
+PASS
+ok  	github.com/gardener/gardener/pkg/admissioncontroller/webhook/auth/shoot	0.028s
+[REGRESSION_DIRECT] PASS
+
+[FAIL2PASS_CORE] running
+=== RUN   TestTerminalBenchFail2PassCore_BastionRequestsAreAuthorizedForMatchingShoot
+--- PASS: TestTerminalBenchFail2PassCore_BastionRequestsAreAuthorizedForMatchingShoot (0.00s)
+PASS
+ok  	github.com/gardener/gardener/pkg/admissioncontroller/webhook/auth/shoot	0.028s
+[FAIL2PASS_CORE] PASS
+
+[FAIL2PASS_EDGE] running
+=== RUN   TestTerminalBenchFail2PassEdge_BastionListRequiresShootFieldSelector
+--- PASS: TestTerminalBenchFail2PassEdge_BastionListRequiresShootFieldSelector (0.00s)
+PASS
+ok  	github.com/gardener/gardener/pkg/admissioncontroller/webhook/auth/shoot	0.036s
+[FAIL2PASS_EDGE] PASS
+
+[FAIL2PASS_EDGE] running
+=== RUN   TestTerminalBenchFail2PassEdge_SelfHostedSetupRegistersBastionInformer
+--- PASS: TestTerminalBenchFail2PassEdge_SelfHostedSetupRegistersBastionInformer (0.00s)
+=== RUN   TestTerminalBenchFail2PassEdge_SelfHostedBastionUsesShootDependencyWhenSeedNameIsSet
+--- PASS: TestTerminalBenchFail2PassEdge_SelfHostedBastionUsesShootDependencyWhenSeedNameIsSet (0.00s)
+PASS
+ok  	github.com/gardener/gardener/pkg/utils/graph	0.057s
+[FAIL2PASS_EDGE] PASS
+
+All test groups passed.

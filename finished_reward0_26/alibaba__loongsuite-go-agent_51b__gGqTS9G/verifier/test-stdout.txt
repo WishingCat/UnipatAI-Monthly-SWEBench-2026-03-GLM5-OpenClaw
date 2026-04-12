@@ -1,0 +1,22 @@
+[REGRESSION_DIRECT] Running ^TestRegressionNamedArgumentsRemainAddressable$
+ok  	github.com/alibaba/loongsuite-go-agent/tool/instrument	0.002s
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Running ^TestFail2PassCollectArgumentsSupportsUnnamedPositions$
+ok  	github.com/alibaba/loongsuite-go-agent/tool/instrument	0.002s
+[FAIL2PASS_CORE] PASS
+[FAIL2PASS_EDGE] Running ^TestFail2PassIgnoredReturnIdentifiersBecomeAddressable$
+--- FAIL: TestFail2PassIgnoredReturnIdentifiersBecomeAddressable (0.00s)
+    --- FAIL: TestFail2PassIgnoredReturnIdentifiersBecomeAddressable/ignored_and_named_returns (0.00s)
+        instrument_signature_handling_test.go:172: return value 0 is not normalized: "_"
+FAIL
+FAIL	github.com/alibaba/loongsuite-go-agent/tool/instrument	0.002s
+FAIL
+[FAIL2PASS_EDGE] FAIL
+[FAIL2PASS_ERROR_HANDLING] Running ^TestFail2PassBuildTrampolineTypeNamesUnnamedFields$
+--- FAIL: TestFail2PassBuildTrampolineTypeNamesUnnamedFields (0.00s)
+    instrument_signature_handling_test.go:195: onEnter: field 0 has no generated name
+FAIL
+FAIL	github.com/alibaba/loongsuite-go-agent/tool/instrument	0.002s
+FAIL
+[FAIL2PASS_ERROR_HANDLING] FAIL
+Total failed groups: 2

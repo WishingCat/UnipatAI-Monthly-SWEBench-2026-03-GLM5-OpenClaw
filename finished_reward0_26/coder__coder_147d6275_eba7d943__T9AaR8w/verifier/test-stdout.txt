@@ -1,0 +1,26 @@
+[REGRESSION_DIRECT] running: go test ./cli -run ^TestTBStartRunningWorkspaceNoBuildCreated$ -count=1
+ok  	github.com/coder/coder/v2/cli	0.065s
+[REGRESSION_DIRECT] result: PASS
+[FAIL2PASS_CORE] running: go test ./cli -run ^TestTBStartFailedStartCleanupCreatesStopThenStart$ -count=1
+--- FAIL: TestTBStartFailedStartCleanupCreatesStopThenStart (0.03s)
+    clitest.go:99: invoking command: coder --global-config /tmp/TestTBStartFailedStartCleanupCreatesStopThenStart979301983/001 start tb-workspace --no-wait
+    start_failed_retry_tb_test.go:251: 
+        	Error Trace:	/app/coder/cli/start_failed_retry_tb_test.go:251
+        	Error:      	"1" is not greater than or equal to "2"
+        	Test:       	TestTBStartFailedStartCleanupCreatesStopThenStart
+FAIL
+FAIL	github.com/coder/coder/v2/cli	0.068s
+FAIL
+[FAIL2PASS_CORE] result: FAIL (exit=1)
+[FAIL2PASS_EDGE] running: go test ./cli -run ^TestTBStartFailedStartCleanupPreservesReason$ -count=1
+--- FAIL: TestTBStartFailedStartCleanupPreservesReason (0.03s)
+    clitest.go:99: invoking command: coder --global-config /tmp/TestTBStartFailedStartCleanupPreservesReason3027679003/001 start tb-workspace --no-wait --reason cli
+    start_failed_retry_tb_test.go:264: 
+        	Error Trace:	/app/coder/cli/start_failed_retry_tb_test.go:264
+        	Error:      	"1" is not greater than or equal to "2"
+        	Test:       	TestTBStartFailedStartCleanupPreservesReason
+FAIL
+FAIL	github.com/coder/coder/v2/cli	0.061s
+FAIL
+[FAIL2PASS_EDGE] result: FAIL (exit=1)
+Final result: FAIL

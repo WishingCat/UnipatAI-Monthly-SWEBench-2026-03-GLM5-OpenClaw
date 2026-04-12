@@ -1,0 +1,18 @@
+Go binary: /usr/local/go/bin/go
+[REGRESSION_DIRECT] non-empty default KMS key patch payload stays explicit
+ok  	cloud.google.com/go/storage/tbtests	0.028s
+[REGRESSION_DIRECT] PASS
+
+[FAIL2PASS_CORE] empty default KMS key clears only defaultKmsKeyName
+--- FAIL: TestTBFail2PassCoreEmptyKMSKeyOnlyNullsDefaultField (0.03s)
+    bucket_encryption_behavior_test.go:139: defaultKmsKeyName must be present inside encryption object
+FAIL
+FAIL	cloud.google.com/go/storage/tbtests	0.039s
+FAIL
+[FAIL2PASS_CORE] FAIL
+
+[FAIL2PASS_EDGE] gRPC update mask uses encryption.default_kms_key
+ok  	cloud.google.com/go/storage/tbtests	0.033s
+[FAIL2PASS_EDGE] PASS
+
+Total failed test groups: 1

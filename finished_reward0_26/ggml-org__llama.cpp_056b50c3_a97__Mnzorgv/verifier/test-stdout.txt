@@ -1,0 +1,28 @@
+[REGRESSION_DIRECT] Running regression_direct
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Running fail2pass_core
+Traceback (most recent call last):
+  File "/tests/verify_gguf_deepseekocr.py", line 154, in <module>
+    main()
+  File "/tests/verify_gguf_deepseekocr.py", line 146, in main
+    run_fail2pass_core()
+  File "/tests/verify_gguf_deepseekocr.py", line 67, in run_fail2pass_core
+    expect_true(hasattr(gguf.VisionProjectorType, "DEEPSEEKOCR"), "VisionProjectorType.DEEPSEEKOCR is missing")
+  File "/tests/verify_gguf_deepseekocr.py", line 19, in expect_true
+    raise AssertionError(message)
+AssertionError: VisionProjectorType.DEEPSEEKOCR is missing
+[FAIL2PASS_CORE] FAIL
+[FAIL2PASS_EDGE] Running fail2pass_edge
+[FAIL2PASS_EDGE] PASS
+[FAIL2PASS_ERROR_HANDLING] Running fail2pass_error_handling
+Traceback (most recent call last):
+  File "/tests/verify_gguf_deepseekocr.py", line 154, in <module>
+    main()
+  File "/tests/verify_gguf_deepseekocr.py", line 150, in main
+    run_fail2pass_error_handling()
+  File "/tests/verify_gguf_deepseekocr.py", line 117, in run_fail2pass_error_handling
+    writer.add_clip_projector_type(gguf.VisionProjectorType.DEEPSEEKOCR)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'VisionProjectorType' has no attribute 'DEEPSEEKOCR'
+[FAIL2PASS_ERROR_HANDLING] FAIL
+Final reward: 0

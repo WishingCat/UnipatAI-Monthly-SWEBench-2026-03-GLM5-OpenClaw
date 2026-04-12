@@ -1,0 +1,9 @@
+[REGRESSION_DIRECT] START - runtime top-level interrupt and call behavior
+ok  	github.com/ethereum/go-ethereum/core/vm/runtime	0.006s
+[REGRESSION_DIRECT] PASS - runtime top-level interrupt and call behavior
+
+[FAIL2PASS_CORE] START - nested CALL/STATICCALL interrupt propagation
+ok  	github.com/ethereum/go-ethereum/core/vm/runtime	0.106s
+[FAIL2PASS_CORE] PASS - nested CALL/STATICCALL interrupt propagation
+
+[SUMMARY] reward=1

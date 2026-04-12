@@ -1,0 +1,27 @@
+[BUILD] Compiling sparse limit validation harness
+[BUILD] success
+[REGRESSION_DIRECT] running regression_direct
+PASS: topk upper-bound validation remains unchanged
+PASS: FP32 sparse indices/value size mismatch is still rejected
+PASS: FP16 sparse indices/value size mismatch is still rejected
+PASS: small valid FP32 sparse document still passes
+PASS: small valid FP16 sparse document still passes
+[REGRESSION_DIRECT] pass
+[FAIL2PASS_CORE] running fail2pass_core
+FAIL: sparse query with 4096 indices is accepted
+FAIL: sparse query with exactly 16384 indices is accepted
+PASS: sparse query with 16385 indices is rejected
+FAIL: sparse query over-limit error contains configured max limit
+[FAIL2PASS_CORE] fail
+[FAIL2PASS_EDGE] running fail2pass_edge
+FAIL: db sparse max constant is aligned to 16384
+FAIL: hnsw sparse max constant is aligned to 16384
+FAIL: flat sparse max constant is aligned to 16384
+PASS: FP32 sparse doc with exactly 16384 indices is accepted
+PASS: FP16 sparse doc with exactly 16384 indices is accepted
+FAIL: FP32 sparse doc with 16385 indices is rejected
+FAIL: FP32 over-limit error contains configured max limit
+FAIL: FP16 sparse doc with 16385 indices is rejected
+FAIL: FP16 over-limit error contains configured max limit
+[FAIL2PASS_EDGE] fail
+[RESULT] reward=0

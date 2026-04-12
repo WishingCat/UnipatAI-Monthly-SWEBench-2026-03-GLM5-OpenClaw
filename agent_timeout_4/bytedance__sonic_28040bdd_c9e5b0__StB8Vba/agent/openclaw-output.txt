@@ -1,0 +1,4 @@
+[agent] read tool called without path: toolCallId=tool-131e993a1b1242088f34ee4d59506c65 argsType=object
+[agent] [context-overflow-diag] sessionKey=agent:main:main provider=openai/z-ai/glm-5 source=assistantError messages=122 sessionFile=/logs/agent/openclaw-sessions/4884afef-88fc-48f7-ba2d-7dd5f0ae5785.jsonl diagId=ovf-mnqfpawh-Y5UWzQ compactionAttempts=0 observedTokens=unknown error=Context overflow: estimated context size exceeds safe threshold during tool loop.
+[agent] context overflow detected (attempt 1/3); attempting auto-compaction for openai/z-ai/glm-5
+[agent] auto-compaction succeeded for openai/z-ai/glm-5; retrying prompt

@@ -1,0 +1,154 @@
+Preparing task-specific test assets...
+[REGRESSION_DIRECT] START: existing grpcroute mirror translation case remains stable
+ok  	github.com/envoyproxy/gateway/internal/gatewayapi	0.044s
+[REGRESSION_DIRECT] PASS: existing grpcroute mirror translation case remains stable
+[FAIL2PASS_CORE] START: grpcroute backend indexer includes request-mirror backend refs
+--- FAIL: TestTBBackendGRPCRouteIndexFail2Pass (0.00s)
+    --- FAIL: TestTBBackendGRPCRouteIndexFail2Pass/includes_same-namespace_mirror_backend (0.00s)
+        zz_tb_grpcroute_indexers_test.go:130: 
+            	Error Trace:	/app/gateway/internal/provider/kubernetes/zz_tb_grpcroute_indexers_test.go:130
+            	Error:      	elements differ
+            	            	
+            	            	extra elements in list A:
+            	            	([]interface {}) (len=1) {
+            	            	 (string) (len=16) "default/mirror-1"
+            	            	}
+            	            	
+            	            	
+            	            	listA:
+            	            	([]string) (len=2) {
+            	            	 (string) (len=17) "default/service-1",
+            	            	 (string) (len=16) "default/mirror-1"
+            	            	}
+            	            	
+            	            	
+            	            	listB:
+            	            	([]string) (len=1) {
+            	            	 (string) (len=17) "default/service-1"
+            	            	}
+            	Test:       	TestTBBackendGRPCRouteIndexFail2Pass/includes_same-namespace_mirror_backend
+    --- FAIL: TestTBBackendGRPCRouteIndexFail2Pass/includes_explicit_cross-namespace_mirror_backend (0.00s)
+        zz_tb_grpcroute_indexers_test.go:130: 
+            	Error Trace:	/app/gateway/internal/provider/kubernetes/zz_tb_grpcroute_indexers_test.go:130
+            	Error:      	elements differ
+            	            	
+            	            	extra elements in list A:
+            	            	([]interface {}) (len=1) {
+            	            	 (string) (len=18) "mirror-ns/mirror-2"
+            	            	}
+            	            	
+            	            	
+            	            	listA:
+            	            	([]string) (len=2) {
+            	            	 (string) (len=17) "default/service-2",
+            	            	 (string) (len=18) "mirror-ns/mirror-2"
+            	            	}
+            	            	
+            	            	
+            	            	listB:
+            	            	([]string) (len=1) {
+            	            	 (string) (len=17) "default/service-2"
+            	            	}
+            	Test:       	TestTBBackendGRPCRouteIndexFail2Pass/includes_explicit_cross-namespace_mirror_backend
+FAIL
+FAIL	github.com/envoyproxy/gateway/internal/provider/kubernetes	0.025s
+FAIL
+[FAIL2PASS_CORE] FAIL: grpcroute backend indexer includes request-mirror backend refs (exit=1)
+[REGRESSION_DIRECT] START: grpcroute backend indexer keeps existing non-mirror behavior
+ok  	github.com/envoyproxy/gateway/internal/provider/kubernetes	0.025s
+[REGRESSION_DIRECT] PASS: grpcroute backend indexer keeps existing non-mirror behavior
+[FAIL2PASS_ERROR_HANDLING] START: grpcroute rejects request-mirror plus direct-response conflict
+2026-04-08T20:17:07.911Z	INFO	gatewayapi/filters.go:1145	marking route invalid due to HTTP filter error	{"filterType": "ExtensionRef", "error": "unknown kind gateway.envoyproxy.io/HTTPRouteFilter"}
+--- FAIL: TestTranslate (0.02s)
+    --- FAIL: TestTranslate/grpcroute-with-conflicting-filters (0.01s)
+        translator_test.go:495: 
+            	Error Trace:	/app/gateway/internal/gatewayapi/translator_test.go:495
+            	Error:      	Should be empty, but was   &gatewayapi.TranslateResult{
+            	            	  	Resources: resource.Resources{
+            	            	  		... // 5 identical fields
+            	            	  		ListenerSets: nil,
+            	            	  		HTTPRoutes:   nil,
+            	            	  		GRPCRoutes: []*v1.GRPCRoute{
+            	            	  			&{
+            	            	  				TypeMeta:   {Kind: "GRPCRoute", APIVersion: "gateway.networking.k8s.io/v1"},
+            	            	  				ObjectMeta: {Name: "mirror-direct-response", Namespace: "default"},
+            	            	  				Spec:       {CommonRouteSpec: {ParentRefs: {{Namespace: &"envoy-gateway", Name: "gateway-1", SectionName: &"http"}}}, Rules: {{Filters: {{Type: "RequestMirror", RequestMirror: &{BackendRef: {Kind: &"Service", Name: "service-1", Port: &8080}}}, {Type: "ExtensionRef", ExtensionRef: &{Group: "gateway.envoyproxy.io", Kind: "HTTPRouteFilter", Name: "mirror-direct-response"}}}, BackendRefs: {{BackendRef: {BackendObjectReference: {Name: "service-1", Port: &8080}}}}}, {BackendRefs: {{BackendRef: {BackendObjectReference: {Name: "service-2", Port: &8080}}}}}}},
+            	            	  				Status: v1.GRPCRouteStatus{
+            	            	  					RouteStatus: v1.RouteStatus{
+            	            	  						Parents: []v1.RouteParentStatus{
+            	            	  							{
+            	            	  								ParentRef:      {Namespace: &"envoy-gateway", Name: "gateway-1", SectionName: &"http"},
+            	            	  								ControllerName: "gateway.envoyproxy.io/gatewayclass-controller",
+            	            	  								Conditions: []v1.Condition{
+            	            	  									{Type: "Accepted", Status: "True", Reason: "Accepted", Message: "Route is accepted"},
+            	            	  									{
+            	            	  										... // 1 ignored and 3 identical fields
+            	            	- 										Reason: "IncompatibleFilters, UnsupportedValue",
+            	            	+ 										Reason: "UnsupportedValue",
+            	            	  										Message: strings.Join({
+            	            	  											"Dropped Rule(s) [0]: Invalid filter ExtensionRef: unknown kind g",
+            	            	  											"ateway.envoyproxy.io/HTTPRouteFilter.",
+            	            	- 											"\nRequestMirror filter cannot be used when the rule also configur",
+            	            	- 											"es a DirectResponse filter.",
+            	            	  										}, ""),
+            	            	  									},
+            	            	  									{Type: "ResolvedRefs", Status: "True", Reason: "ResolvedRefs", Message: "Resolved all the Object references for the Route"},
+            	            	  								},
+            	            	  							},
+            	            	  						},
+            	            	  					},
+            	            	  				},
+            	            	  			},
+            	            	  		},
+            	            	  		TLSRoutes: nil,
+            	            	  		TCPRoutes: nil,
+            	            	  		... // 19 identical fields
+            	            	  	},
+            	            	  	XdsIR: resource.XdsIRMap{
+            	            	  		"envoy-gateway/gateway-1": Inverse(ClearXdsEqual, struct{ ReadyListener *ir.ReadyListener; AccessLog *ir.AccessLog; Tracing *ir.Tracing; Metrics *ir.Metrics; HTTP []*ir.HTTPListener; TCP []*ir.TCPListener; UDP []*ir.UDPListener; EnvoyPatchPolicies []*ir.EnvoyPatchPolicy; FilterOrder []v1alpha1.FilterPosition; GlobalResources *ir.GlobalResources; ExtensionServerPolicies []*ir.UnstructuredRef }{
+            	            	  			... // 2 identical fields
+            	            	  			Tracing: nil,
+            	            	  			Metrics: nil,
+            	            	  			HTTP: []*ir.HTTPListener{
+            	            	  				&{
+            	            	  					... // 2 identical fields
+            	            	  					TLS:         nil,
+            	            	  					TLSOverlaps: false,
+            	            	  					Routes: []*ir.HTTPRoute{
+            	            	  						&{
+            	            	  							... // 12 identical fields
+            	            	  							DirectResponse: &{StatusCode: &500},
+            	            	  							Redirect:       nil,
+            	            	- 							Mirrors:        nil,
+            	            	+ 							Mirrors: []*ir.MirrorPolicy{
+            	            	+ 								&{
+            	            	+ 									Destination: &ir.RouteDestination{
+            	            	+ 										Name:     "grpcroute/default/mirror-direct-"...,
+            	            	+ 										Settings: []*ir.DestinationSetting{...},
+            	            	+ 									},
+            	            	+ 								},
+            	            	+ 							},
+            	            	  							Destination: nil,
+            	            	  							URLRewrite:  nil,
+            	            	  							... // 11 identical fields
+            	            	  						},
+            	            	  						&{Name: "grpcroute/default/mirror-direct-response/rule/1/match/-1/*", Hostname: "*", IsHTTP2: true, Destination: &{Name: "grpcroute/default/mirror-direct-response/rule/1", Settings: {&{Name: "grpcroute/default/mirror-direct-response/rule/1/backend/0", Weight: &1, Protocol: "GRPC", Endpoints: {&{Host: "7.7.7.7", Port: 8080}}, ...}}, Metadata: &{Kind: "GRPCRoute", Name: "mirror-direct-response", Namespace: "default"}}, ...},
+            	            	  					},
+            	            	  					TCPKeepalive: nil,
+            	            	  					Headers:      nil,
+            	            	  					... // 13 identical fields
+            	            	  				},
+            	            	  			},
+            	            	  			TCP: nil,
+            	            	  			UDP: nil,
+            	            	  			... // 4 identical fields
+            	            	  		}),
+            	            	  	},
+            	            	  	InfraIR: {"envoy-gateway/gateway-1": &{Proxy: &{Metadata: &{Labels: {"gateway.envoyproxy.io/owning-gateway-name": "gateway-1", "gateway.envoyproxy.io/owning-gateway-namespace": "envoy-gateway"}, OwnerReference: &{Kind: "GatewayClass", Name: "envoy-gateway-class"}}, Name: "envoy-gateway/gateway-1", Namespace: "envoy-gateway-system", Listeners: {&{Name: "envoy-gateway/gateway-1/http", Ports: {{Name: "http-80", Protocol: "HTTP", ServicePort: 80, ContainerPort: 10080}}}}, ...}}},
+            	            	  }
+            	Test:       	TestTranslate/grpcroute-with-conflicting-filters
+FAIL
+FAIL	github.com/envoyproxy/gateway/internal/gatewayapi	0.043s
+FAIL
+[FAIL2PASS_ERROR_HANDLING] FAIL: grpcroute rejects request-mirror plus direct-response conflict (exit=1)
+One or more test groups failed. reward=0

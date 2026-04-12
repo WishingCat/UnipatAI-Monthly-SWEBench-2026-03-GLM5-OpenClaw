@@ -1,0 +1,550 @@
+[REGRESSION_DIRECT] START - Limits period normalization remains stable
+
+[1m[46m RUN [49m[22m [36mv4.0.14 [39m[90m/app/coder/site[39m
+
+ [32m✓[39m [30m[42m unit [49m[39m src/pages/AgentsPage/LimitsTab/limitsFormLogic.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+[2m   Start at [22m 19:28:40
+[2m   Duration [22m 2.83s[2m (transform 725ms, setup 1.39s, import 12ms, tests 3ms, environment 1.11s)[22m
+
+close timed out after 10000ms
+Tests closed successfully but something prevents the main process from exiting
+You can try to identify the cause by enabling "hanging-process" reporter. See https://vitest.dev/config/#reporters
+[REGRESSION_DIRECT] PASS - Limits period normalization remains stable
+[FAIL2PASS_CORE] START - Existing user and group overrides are editable with prefilled values and stable IDs
+
+[1m[46m RUN [49m[22m [36mv4.0.14 [39m[90m/app/coder/site[39m
+
+ [31m❯[39m [30m[42m unit [49m[39m src/pages/AgentsPage/LimitsTab/limitOverridesEditing.test.tsx [2m([22m[2m3 tests[22m[2m | [22m[31m2 failed[39m[2m | [22m[33m1 skipped[39m[2m)[22m[33m 1582[2mms[22m[39m
+[31m     [31m×[31m edits an existing user override with prefilled values and stable IDs[39m[33m 1006[2mms[22m[39m
+[31m     [31m×[31m edits an existing group override with prefilled values and stable IDs[39m[33m 573[2mms[22m[39m
+     [2m[90m↓[39m[22m switches forms when editing a user while the group add form is open
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 2 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m [30m[42m unit [49m[39m src/pages/AgentsPage/LimitsTab/limitOverridesEditing.test.tsx[2m > [22mLimitsTab inline override editing[2m > [22medits an existing user override with prefilled values and stable IDs
+[31m[1mTestingLibraryElementError[22m: Unable to find an accessible element with the role "button" and name `/^Edit$/i`
+
+Here are the accessible roles:
+
+  cell:
+
+  Name "AL Alice Johnson@alice":
+  [36m<td[31m
+    [33mclass[31m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[31m
+  [36m/>[31m
+
+  --------------------------------------------------cell:
+
+  Name "$5.00":
+  [36m<td[31m
+    [33mclass[31m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[31m
+  [36m/>[31m
+
+  --------------------------------------------------cell:
+
+  Name "Delete":
+  [36m<td[31m
+    [33mclass[31m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[31m
+  [36m/>[31m
+
+  --------------------------------------------------
+  button:
+
+  Name "Delete":
+  [36m<button[31m
+    [33mclass[31m=[32m"group inline-flex items-center justify-center gap-1 whitespace-nowrap font-sans border-solid rounded-md transition-colors shrink-0 font-medium cursor-pointer no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-content-link disabled:pointer-events-none disabled:text-content-disabled [&:is(a):not([href])]:pointer-events-none [&:is(a):not([href])]:text-content-disabled [&>svg]:pointer-events-none [&>svg]:shrink-0 [&>svg]:p-0.5 [&>img]:pointer-events-none [&>img]:shrink-0 [&>img]:p-0.5 border border-border-default bg-transparent text-content-primary hover:bg-surface-secondary min-w-20 h-8 px-2 py-1.5 text-xs [&>svg]:size-icon-sm [&>img]:size-icon-sm"[31m
+    [33mtype[31m=[32m"button"[31m
+  [36m/>[31m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<tr[31m
+  [33mclass[31m=[32m"border-0 border-b border-solid border-border transition-colors data-[state=selected]:bg-muted"[31m
+[36m>[31m
+  [36m<td[31m
+    [33mclass[31m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[31m
+  [36m>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"flex items-center w-full gap-3"[31m
+    [36m>[31m
+      [36m<span[31m
+        [33mclass[31m=[32m"relative flex shrink-0 overflow-hidden border border-solid bg-surface-secondary text-content-secondary size-[--avatar-lg] rounded-[6px] text-sm font-medium"[31m
+      [36m>[31m
+        [36m<span[31m
+          [33mclass[31m=[32m"flex h-full w-full items-center justify-center rounded-full"[31m
+        [36m>[31m
+          [0mAL[0m
+        [36m</span>[31m
+      [36m</span>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"flex flex-col w-full"[31m
+      [36m>[31m
+        [36m<span[31m
+          [33mclass[31m=[32m"text-sm font-semibold text-content-primary"[31m
+        [36m>[31m
+          [0mAlice Johnson[0m
+        [36m</span>[31m
+        [36m<span[31m
+          [33mclass[31m=[32m"text-content-secondary text-xs font-medium"[31m
+        [36m>[31m
+          [0m@alice[0m
+        [36m</span>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</td>[31m
+  [36m<td[31m
+    [33mclass[31m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[31m
+  [36m>[31m
+    [0m$5.00[0m
+  [36m</td>[31m
+  [36m<td[31m
+    [33mclass[31m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[31m
+  [36m>[31m
+    [36m<button[31m
+      [33mclass[31m=[32m"group inline-flex items-center justify-center gap-1 whitespace-nowrap font-sans border-solid rounded-md transition-colors shrink-0 font-medium cursor-pointer no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-content-link disabled:pointer-events-none disabled:text-content-disabled [&:is(a):not([href])]:pointer-events-none [&:is(a):not([href])]:text-content-disabled [&>svg]:pointer-events-none [&>svg]:shrink-0 [&>svg]:p-0.5 [&>img]:pointer-events-none [&>img]:shrink-0 [&>img]:p-0.5 border border-border-default bg-transparent text-content-primary hover:bg-surface-secondary min-w-20 h-8 px-2 py-1.5 text-xs [&>svg]:size-icon-sm [&>img]:size-icon-sm"[31m
+      [33mtype[31m=[32m"button"[31m
+    [36m>[31m
+      [0mDelete[0m
+    [36m</button>[31m
+  [36m</td>[31m
+[36m</tr>[31m[39m
+[90m [2m❯[22m Object.getElementError node_modules/.pnpm/@testing-library+dom@9.3.3/node_modules/@testing-library/dom/dist/config.js:[2m37:19[22m[39m
+[90m [2m❯[22m node_modules/.pnpm/@testing-library+dom@9.3.3/node_modules/@testing-library/dom/dist/query-helpers.js:[2m76:38[22m[39m
+[90m [2m❯[22m node_modules/.pnpm/@testing-library+dom@9.3.3/node_modules/@testing-library/dom/dist/query-helpers.js:[2m52:17[22m[39m
+[90m [2m❯[22m node_modules/.pnpm/@testing-library+dom@9.3.3/node_modules/@testing-library/dom/dist/query-helpers.js:[2m95:19[22m[39m
+[36m [2m❯[22m src/pages/AgentsPage/LimitsTab/limitOverridesEditing.test.tsx:[2m129:36[22m[39m
+    [90m127| [39m  [35mawait[39m screen[33m.[39m[34mfindByText[39m([32m"Alice Johnson"[39m)[33m;[39m
+    [90m128| [39m  [35mconst[39m userRow [33m=[39m [34mgetRowByText[39m([32m"Alice Johnson"[39m)[33m;[39m
+    [90m129| [39m  await user.click(within(userRow).getByRole("button", { name: /^Edit$…
+    [90m   | [39m                                   [31m^[39m
+    [90m130| [39m
+    [90m131| [39m  expect(screen.getByRole("button", { name: /^Save$/i })).toBeEnabled(…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m [30m[42m unit [49m[39m src/pages/AgentsPage/LimitsTab/limitOverridesEditing.test.tsx[2m > [22mLimitsTab inline override editing[2m > [22medits an existing group override with prefilled values and stable IDs
+[31m[1mTestingLibraryElementError[22m[39m: Unable to find an accessible element with the role "button" and name `/^Edit$/i`
+
+Here are the accessible roles:
+
+  cell:
+
+  Name "EN Engineeringengineering":
+  [36m<td[39m
+    [33mclass[39m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[39m
+  [36m/>[39m
+
+  --------------------------------------------------cell:
+
+  Name "15":
+  [36m<td[39m
+    [33mclass[39m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[39m
+  [36m/>[39m
+
+  --------------------------------------------------cell:
+
+  Name "$9.00":
+  [36m<td[39m
+    [33mclass[39m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[39m
+  [36m/>[39m
+
+  --------------------------------------------------cell:
+
+  Name "Delete":
+  [36m<td[39m
+    [33mclass[39m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Delete":
+  [36m<button[39m
+    [33mclass[39m=[32m"group inline-flex items-center justify-center gap-1 whitespace-nowrap font-sans border-solid rounded-md transition-colors shrink-0 font-medium cursor-pointer no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-content-link disabled:pointer-events-none disabled:text-content-disabled [&:is(a):not([href])]:pointer-events-none [&:is(a):not([href])]:text-content-disabled [&>svg]:pointer-events-none [&>svg]:shrink-0 [&>svg]:p-0.5 [&>img]:pointer-events-none [&>img]:shrink-0 [&>img]:p-0.5 border border-border-default bg-transparent text-content-primary hover:bg-surface-secondary min-w-20 h-8 px-2 py-1.5 text-xs [&>svg]:size-icon-sm [&>img]:size-icon-sm"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<tr[39m
+  [33mclass[39m=[32m"border-0 border-b border-solid border-border transition-colors data-[state=selected]:bg-muted"[39m
+[36m>[39m
+  [36m<td[39m
+    [33mclass[39m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[39m
+  [36m>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"flex items-center w-full gap-3"[39m
+    [36m>[39m
+      [36m<span[39m
+        [33mclass[39m=[32m"relative flex shrink-0 overflow-hidden border border-solid bg-surface-secondary text-content-secondary size-[--avatar-lg] rounded-[6px] text-sm font-medium"[39m
+      [36m>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m"flex h-full w-full items-center justify-center rounded-full"[39m
+        [36m>[39m
+          [0mEN[0m
+        [36m</span>[39m
+      [36m</span>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"flex flex-col w-full"[39m
+      [36m>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m"text-sm font-semibold text-content-primary"[39m
+        [36m>[39m
+          [0mEngineering[0m
+        [36m</span>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m"text-content-secondary text-xs font-medium"[39m
+        [36m>[39m
+          [0mengineering[0m
+        [36m</span>[39m
+      [36m</div>[39m
+    [36m</div>[39m
+  [36m</td>[39m
+  [36m<td[39m
+    [33mclass[39m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[39m
+  [36m>[39m
+    [0m15[0m
+  [36m</td>[39m
+  [36m<td[39m
+    [33mclass[39m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[39m
+  [36m>[39m
+    [0m$9.00[0m
+  [36m</td>[39m
+  [36m<td[39m
+    [33mclass[39m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[39m
+  [36m>[39m
+    [36m<button[39m
+      [33mclass[39m=[32m"group inline-flex items-center justify-center gap-1 whitespace-nowrap font-sans border-solid rounded-md transition-colors shrink-0 font-medium cursor-pointer no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-content-link disabled:pointer-events-none disabled:text-content-disabled [&:is(a):not([href])]:pointer-events-none [&:is(a):not([href])]:text-content-disabled [&>svg]:pointer-events-none [&>svg]:shrink-0 [&>svg]:p-0.5 [&>img]:pointer-events-none [&>img]:shrink-0 [&>img]:p-0.5 border border-border-default bg-transparent text-content-primary hover:bg-surface-secondary min-w-20 h-8 px-2 py-1.5 text-xs [&>svg]:size-icon-sm [&>img]:size-icon-sm"[39m
+      [33mtype[39m=[32m"button"[39m
+    [36m>[39m
+      [0mDelete[0m
+    [36m</button>[39m
+  [36m</td>[39m
+[36m</tr>[39m
+[90m [2m❯[22m Object.getElementError node_modules/.pnpm/@testing-library+dom@9.3.3/node_modules/@testing-library/dom/dist/config.js:[2m37:19[22m[39m
+[90m [2m❯[22m node_modules/.pnpm/@testing-library+dom@9.3.3/node_modules/@testing-library/dom/dist/query-helpers.js:[2m76:38[22m[39m
+[90m [2m❯[22m node_modules/.pnpm/@testing-library+dom@9.3.3/node_modules/@testing-library/dom/dist/query-helpers.js:[2m52:17[22m[39m
+[90m [2m❯[22m node_modules/.pnpm/@testing-library+dom@9.3.3/node_modules/@testing-library/dom/dist/query-helpers.js:[2m95:19[22m[39m
+[36m [2m❯[22m src/pages/AgentsPage/LimitsTab/limitOverridesEditing.test.tsx:[2m154:37[22m[39m
+    [90m152| [39m  [35mawait[39m screen[33m.[39m[34mfindByText[39m([32m"Engineering"[39m)[33m;[39m
+    [90m153| [39m  [35mconst[39m groupRow [33m=[39m [34mgetRowByText[39m([32m"Engineering"[39m)[33m;[39m
+    [90m154| [39m  await user.click(within(groupRow).getByRole("button", { name: /^Edit…
+    [90m   | [39m                                    [31m^[39m
+    [90m155| [39m
+    [90m156| [39m  expect(screen.getByRole("button", { name: /^Save$/i })).toBeEnabled(…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[31m2 failed[39m[22m[2m | [22m[33m1 skipped[39m[90m (3)[39m
+[2m   Start at [22m 19:28:57
+[2m   Duration [22m 17.74s[2m (transform 7.93s, setup 2.01s, import 12.32s, tests 1.58s, environment 1.32s)[22m
+
+close timed out after 10000ms
+Tests closed successfully but something prevents the main process from exiting
+You can try to identify the cause by enabling "hanging-process" reporter. See https://vitest.dev/config/#reporters
+[FAIL2PASS_CORE] FAIL - Existing user and group overrides are editable with prefilled values and stable IDs
+[FAIL2PASS_EDGE] START - Editing a user closes an already-open group add form
+
+[1m[46m RUN [49m[22m [36mv4.0.14 [39m[90m/app/coder/site[39m
+
+[90mstderr[2m | src/pages/AgentsPage/LimitsTab/limitOverridesEditing.test.tsx[2m > [22m[2mLimitsTab inline override editing[2m > [22m[2mswitches forms when editing a user while the group add form is open
+[22m[39mAn update to LimitsTab inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | src/pages/AgentsPage/LimitsTab/limitOverridesEditing.test.tsx[2m > [22m[2mLimitsTab inline override editing[2m > [22m[2mswitches forms when editing a user while the group add form is open
+[22m[39mAn update to Tooltip inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Switch inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Tooltip inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Select inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to SelectItemText inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to SelectItemText inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to SelectItemText inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Tooltip inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Switch inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Tooltip inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Select inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to SelectItemText inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to SelectItemText inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to SelectItemText inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Presence inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Popper inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+ [31m❯[39m [30m[42m unit [49m[39m src/pages/AgentsPage/LimitsTab/limitOverridesEditing.test.tsx [2m([22m[2m3 tests[22m[2m | [22m[31m1 failed[39m[2m | [22m[33m2 skipped[39m[2m)[22m[33m 1712[2mms[22m[39m
+     [2m[90m↓[39m[22m edits an existing user override with prefilled values and stable IDs
+     [2m[90m↓[39m[22m edits an existing group override with prefilled values and stable IDs
+[31m     [31m×[31m switches forms when editing a user while the group add form is open[39m[33m 1710[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 1 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m [30m[42m unit [49m[39m src/pages/AgentsPage/LimitsTab/limitOverridesEditing.test.tsx[2m > [22mLimitsTab inline override editing[2m > [22mswitches forms when editing a user while the group add form is open
+[31m[1mTestingLibraryElementError[22m: Unable to find an accessible element with the role "button" and name `/^Edit$/i`
+
+Here are the accessible roles:
+
+  cell:
+
+  Name "AL Alice Johnson@alice":
+  [36m<td[31m
+    [33mclass[31m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[31m
+  [36m/>[31m
+
+  --------------------------------------------------cell:
+
+  Name "$5.00":
+  [36m<td[31m
+    [33mclass[31m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[31m
+  [36m/>[31m
+
+  --------------------------------------------------cell:
+
+  Name "Delete":
+  [36m<td[31m
+    [33mclass[31m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[31m
+  [36m/>[31m
+
+  --------------------------------------------------
+  button:
+
+  Name "Delete":
+  [36m<button[31m
+    [33mclass[31m=[32m"group inline-flex items-center justify-center gap-1 whitespace-nowrap font-sans border-solid rounded-md transition-colors shrink-0 font-medium cursor-pointer no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-content-link disabled:pointer-events-none disabled:text-content-disabled [&:is(a):not([href])]:pointer-events-none [&:is(a):not([href])]:text-content-disabled [&>svg]:pointer-events-none [&>svg]:shrink-0 [&>svg]:p-0.5 [&>img]:pointer-events-none [&>img]:shrink-0 [&>img]:p-0.5 border border-border-default bg-transparent text-content-primary hover:bg-surface-secondary min-w-20 h-8 px-2 py-1.5 text-xs [&>svg]:size-icon-sm [&>img]:size-icon-sm"[31m
+    [33mtype[31m=[32m"button"[31m
+  [36m/>[31m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<tr[31m
+  [33mclass[31m=[32m"border-0 border-b border-solid border-border transition-colors data-[state=selected]:bg-muted"[31m
+[36m>[31m
+  [36m<td[31m
+    [33mclass[31m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[31m
+  [36m>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"flex items-center w-full gap-3"[31m
+    [36m>[31m
+      [36m<span[31m
+        [33mclass[31m=[32m"relative flex shrink-0 overflow-hidden border border-solid bg-surface-secondary text-content-secondary size-[--avatar-lg] rounded-[6px] text-sm font-medium"[31m
+      [36m>[31m
+        [36m<span[31m
+          [33mclass[31m=[32m"flex h-full w-full items-center justify-center rounded-full"[31m
+        [36m>[31m
+          [0mAL[0m
+        [36m</span>[31m
+      [36m</span>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"flex flex-col w-full"[31m
+      [36m>[31m
+        [36m<span[31m
+          [33mclass[31m=[32m"text-sm font-semibold text-content-primary"[31m
+        [36m>[31m
+          [0mAlice Johnson[0m
+        [36m</span>[31m
+        [36m<span[31m
+          [33mclass[31m=[32m"text-content-secondary text-xs font-medium"[31m
+        [36m>[31m
+          [0m@alice[0m
+        [36m</span>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</td>[31m
+  [36m<td[31m
+    [33mclass[31m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[31m
+  [36m>[31m
+    [0m$5.00[0m
+  [36m</td>[31m
+  [36m<td[31m
+    [33mclass[31m=[32m"border-0 border-t border-border border-solid p-3 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"[31m
+  [36m>[31m
+    [36m<button[31m
+      [33mclass[31m=[32m"group inline-flex items-center justify-center gap-1 whitespace-nowrap font-sans border-solid rounded-md transition-colors shrink-0 font-medium cursor-pointer no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-content-link disabled:pointer-events-none disabled:text-content-disabled [&:is(a):not([href])]:pointer-events-none [&:is(a):not([href])]:text-content-disabled [&>svg]:pointer-events-none [&>svg]:shrink-0 [&>svg]:p-0.5 [&>img]:pointer-events-none [&>img]:shrink-0 [&>img]:p-0.5 border border-border-default bg-transparent text-content-primary hover:bg-surface-secondary min-w-20 h-8 px-2 py-1.5 text-xs [&>svg]:size-icon-sm [&>img]:size-icon-sm"[31m
+      [33mtype[31m=[32m"button"[31m
+    [36m>[31m
+      [0mDelete[0m
+    [36m</button>[31m
+  [36m</td>[31m
+[36m</tr>[31m[39m
+[90m [2m❯[22m Object.getElementError node_modules/.pnpm/@testing-library+dom@9.3.3/node_modules/@testing-library/dom/dist/config.js:[2m37:19[22m[39m
+[90m [2m❯[22m node_modules/.pnpm/@testing-library+dom@9.3.3/node_modules/@testing-library/dom/dist/query-helpers.js:[2m76:38[22m[39m
+[90m [2m❯[22m node_modules/.pnpm/@testing-library+dom@9.3.3/node_modules/@testing-library/dom/dist/query-helpers.js:[2m52:17[22m[39m
+[90m [2m❯[22m node_modules/.pnpm/@testing-library+dom@9.3.3/node_modules/@testing-library/dom/dist/query-helpers.js:[2m95:19[22m[39m
+[36m [2m❯[22m src/pages/AgentsPage/LimitsTab/limitOverridesEditing.test.tsx:[2m182:36[22m[39m
+    [90m180| [39m
+    [90m181| [39m  [35mconst[39m userRow [33m=[39m [34mgetRowByText[39m([32m"Alice Johnson"[39m)[33m;[39m
+    [90m182| [39m  await user.click(within(userRow).getByRole("button", { name: /^Edit$…
+    [90m   | [39m                                   [31m^[39m
+    [90m183| [39m
+    [90m184| [39m  [35mawait[39m [34mwaitFor[39m(() [33m=>[39m {
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[31m1 failed[39m[22m[2m | [22m[33m2 skipped[39m[90m (3)[39m
+[2m   Start at [22m 19:29:29
+[2m   Duration [22m 15.08s[2m (transform 6.97s, setup 1.52s, import 10.68s, tests 1.71s, environment 816ms)[22m
+
+close timed out after 10000ms
+Tests closed successfully but something prevents the main process from exiting
+You can try to identify the cause by enabling "hanging-process" reporter. See https://vitest.dev/config/#reporters
+[FAIL2PASS_EDGE] FAIL - Editing a user closes an already-open group add form
+One or more test groups failed. reward=0

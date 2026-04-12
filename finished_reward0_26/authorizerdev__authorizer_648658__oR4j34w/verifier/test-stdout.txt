@@ -1,0 +1,62 @@
+[REGRESSION_DIRECT] verified email login remains successful START
+ok  	github.com/authorizerdev/authorizer/internal/integration_tests	0.260s
+[REGRESSION_DIRECT] verified email login remains successful PASS
+
+[FAIL2PASS_CORE] login handles pending and expired verification requests correctly START
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /graphql                  --> github.com/authorizerdev/authorizer/internal/http_handlers.(*httpProvider).GraphqlHandler.func1 (4 handlers)
+
+2026/04/08 18:52:33 [31;1m/app/authorizer/internal/storage/db/sql/user.go:100 [35;1mrecord not found
+[0m[33m[0.183ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE email = "login_verification_8fec8b52-a7ad-4ade-8bbf-d56a339d52a0@authorizer.dev" ORDER BY `authorizer_users`.`id` LIMIT 1
+
+2026/04/08 18:52:33 [31;1m/app/authorizer/internal/storage/db/sql/user.go:100 [35;1mrecord not found
+[0m[33m[0.181ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE email = "login_verification_8fec8b52-a7ad-4ade-8bbf-d56a339d52a0@authorizer.dev" ORDER BY `authorizer_users`.`id` LIMIT 1
+
+2026/04/08 18:52:33 [31;1m/app/authorizer/internal/storage/db/sql/otp.go:67 [35;1mrecord not found
+[0m[33m[0.163ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_otps` WHERE email = "login_verification_8fec8b52-a7ad-4ade-8bbf-d56a339d52a0@authorizer.dev" ORDER BY `authorizer_otps`.`id` LIMIT 1
+2026/04/08 18:52:34 net/http: invalid Cookie.Domain ".0.1"; dropping domain attribute
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /graphql                  --> github.com/authorizerdev/authorizer/internal/http_handlers.(*httpProvider).GraphqlHandler.func1 (4 handlers)
+
+2026/04/08 18:52:34 [31;1m/app/authorizer/internal/storage/db/sql/user.go:100 [35;1mrecord not found
+[0m[33m[0.135ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE email = "login_verification_f2cdd5ef-733d-4c38-97b4-e402466a4422@authorizer.dev" ORDER BY `authorizer_users`.`id` LIMIT 1
+
+2026/04/08 18:52:34 [31;1m/app/authorizer/internal/storage/db/sql/user.go:100 [35;1mrecord not found
+[0m[33m[0.199ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE email = "login_verification_f2cdd5ef-733d-4c38-97b4-e402466a4422@authorizer.dev" ORDER BY `authorizer_users`.`id` LIMIT 1
+--- FAIL: TestLoginVerificationRequestExpiryHandlingFail2Pass (0.54s)
+    --- FAIL: TestLoginVerificationRequestExpiryHandlingFail2Pass/pending_request_blocks_login_and_preserves_existing_verification_request (0.28s)
+        writer.go:27: {"level":"debug","func":"SignUp","email":"login_verification_8fec8b52-a7ad-4ade-8bbf-d56a339d52a0@authorizer.dev","phone_number":"","error":"record not found","time":"2026-04-08T18:52:33Z","message":"Failed to get user by email"}
+        writer.go:27: {"level":"debug","func":"Login","email":"login_verification_8fec8b52-a7ad-4ade-8bbf-d56a339d52a0@authorizer.dev","phone_number":"","email":"login_verification_8fec8b52-a7ad-4ade-8bbf-d56a339d52a0@authorizer.dev","time":"2026-04-08T18:52:33Z","message":"User found by email"}
+        zz_tb_login_verification_behavior_test.go:89: 
+            	Error Trace:	/app/authorizer/internal/integration_tests/zz_tb_login_verification_behavior_test.go:89
+            	Error:      	An error is expected but got nil.
+            	Test:       	TestLoginVerificationRequestExpiryHandlingFail2Pass/pending_request_blocks_login_and_preserves_existing_verification_request
+    --- FAIL: TestLoginVerificationRequestExpiryHandlingFail2Pass/expired_request_is_deleted_and_login_continues_with_OTP_flow (0.26s)
+        writer.go:27: {"level":"debug","func":"SignUp","email":"login_verification_f2cdd5ef-733d-4c38-97b4-e402466a4422@authorizer.dev","phone_number":"","error":"record not found","time":"2026-04-08T18:52:34Z","message":"Failed to get user by email"}
+        writer.go:27: {"level":"debug","func":"Login","email":"login_verification_f2cdd5ef-733d-4c38-97b4-e402466a4422@authorizer.dev","phone_number":"","email":"login_verification_f2cdd5ef-733d-4c38-97b4-e402466a4422@authorizer.dev","time":"2026-04-08T18:52:34Z","message":"User found by email"}
+        writer.go:27: {"level":"debug","func":"Login","email":"login_verification_f2cdd5ef-733d-4c38-97b4-e402466a4422@authorizer.dev","phone_number":"","time":"2026-04-08T18:52:34Z","message":"Email verification pending"}
+        zz_tb_login_verification_behavior_test.go:126: 
+            	Error Trace:	/app/authorizer/internal/integration_tests/zz_tb_login_verification_behavior_test.go:126
+            	Error:      	Received unexpected error:
+            	            	email verification pending
+            	Test:       	TestLoginVerificationRequestExpiryHandlingFail2Pass/expired_request_is_deleted_and_login_continues_with_OTP_flow
+FAIL
+FAIL	github.com/authorizerdev/authorizer/internal/integration_tests	0.561s
+FAIL
+[FAIL2PASS_CORE] login handles pending and expired verification requests correctly FAIL
+
+[FAIL2PASS_EDGE] required repository login integration case exists and passes START
+{"Time":"2026-04-08T18:52:35.855224599Z","Action":"start","Package":"github.com/authorizerdev/authorizer/internal/integration_tests"}
+{"Time":"2026-04-08T18:52:35.868239457Z","Action":"output","Package":"github.com/authorizerdev/authorizer/internal/integration_tests","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-04-08T18:52:35.868302757Z","Action":"output","Package":"github.com/authorizerdev/authorizer/internal/integration_tests","Output":"PASS\n"}
+{"Time":"2026-04-08T18:52:35.869693385Z","Action":"output","Package":"github.com/authorizerdev/authorizer/internal/integration_tests","Output":"ok  \tgithub.com/authorizerdev/authorizer/internal/integration_tests\t0.014s [no tests to run]\n"}
+{"Time":"2026-04-08T18:52:35.869720049Z","Action":"pass","Package":"github.com/authorizerdev/authorizer/internal/integration_tests","Elapsed":0.015}
+[FAIL2PASS_EDGE] required repository login integration case exists and passes FAIL
+
+At least one test group failed. reward=0

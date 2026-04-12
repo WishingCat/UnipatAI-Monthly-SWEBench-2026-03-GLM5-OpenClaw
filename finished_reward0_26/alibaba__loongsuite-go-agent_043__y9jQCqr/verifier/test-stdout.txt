@@ -1,0 +1,30 @@
+[REGRESSION_DIRECT] START default_url_filter_baseline
+ok  	github.com/alibaba/loongsuite-go-agent/pkg/inst-api/utils	0.001s
+[REGRESSION_DIRECT] PASS default_url_filter_baseline
+[REGRESSION_DEPENDENT] START exporter_bypass_and_nonmatch_paths
+PASS
+ok  	github.com/alibaba/loongsuite-go-agent/pkg/rules/http	0.003s
+[REGRESSION_DEPENDENT] PASS exporter_bypass_and_nonmatch_paths
+[REGRESSION_DEPENDENT] START empty_config_disables_exclusion
+PASS
+ok  	github.com/alibaba/loongsuite-go-agent/pkg/rules/http	0.003s
+[REGRESSION_DEPENDENT] PASS empty_config_disables_exclusion
+[REGRESSION_DEPENDENT] START invalid_regex_falls_back_without_panic
+PASS
+ok  	github.com/alibaba/loongsuite-go-agent/pkg/rules/http	0.002s
+[REGRESSION_DEPENDENT] PASS invalid_regex_falls_back_without_panic
+[FAIL2PASS_CORE] START regex_exclusion_core_paths
+--- FAIL: TestTaskFail2PassRegexCoreExclusion (0.00s)
+    task_http_exclude_paths_test.go:200: expected client path /ping to be skipped, got state: dataPresent=true ctxPresent=true paramType=*http.Request paramPath=/ping userAgent=custom-agent
+FAIL
+exit status 1
+FAIL	github.com/alibaba/loongsuite-go-agent/pkg/rules/http	0.003s
+[FAIL2PASS_CORE] FAIL regex_exclusion_core_paths
+[FAIL2PASS_EDGE] START regex_exclusion_edge_paths
+--- FAIL: TestTaskFail2PassRegexEdgeExclusion (0.00s)
+    task_http_exclude_paths_test.go:223: expected client path /api/v1/internal/status to be skipped, got state: dataPresent=true ctxPresent=true paramType=*http.Request paramPath=/api/v1/internal/status userAgent=custom-agent
+FAIL
+exit status 1
+FAIL	github.com/alibaba/loongsuite-go-agent/pkg/rules/http	0.003s
+[FAIL2PASS_EDGE] FAIL regex_exclusion_edge_paths
+2 test group(s) failed.

@@ -1,0 +1,8 @@
+[SETUP] Copying task test file into repository
+[REGRESSION_DIRECT] Running: /usr/local/go/bin/go test ./coderd/chatd -run ^TestRefreshChatWorkspaceSnapshot_NoReloadWhenWorkspacePresent$ -count=1
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Running: /usr/local/go/bin/go test ./coderd/chatd -run ^TestTB_CreateChatAddsWorkspaceAwarenessMessageVariants$ -count=1
+[FAIL2PASS_CORE] PASS
+[FAIL2PASS_EDGE] Running: /usr/local/go/bin/go test ./coderd/chatd -run ^TestTB_CreateChatWorkspaceAwarenessOrderingWithSystemPrompt$ -count=1
+[FAIL2PASS_EDGE] PASS
+[SUMMARY] total_groups=3 failed_groups=0 reward=1

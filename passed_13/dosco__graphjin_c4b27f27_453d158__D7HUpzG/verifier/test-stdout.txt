@@ -1,0 +1,16 @@
+[REGRESSION_DIRECT] existing_psql_compile_regression
+[REGRESSION_DIRECT] running: cd /app/graphjin/core && go test ./internal/psql -run 'TestCompileQuery/(aggFunction|withComplexArgs)' -count=1
+ok  	github.com/dosco/graphjin/core/v3/internal/psql	0.070s
+[REGRESSION_DIRECT] existing_psql_compile_regression: PASS
+
+[FAIL2PASS_CORE] distinct_agg_group_by_semantics
+[FAIL2PASS_CORE] running: cd /app/graphjin/core && go test ./internal/psql -run '^TestTaskDistinctAggregationGroupBySemantics$' -count=1
+ok  	github.com/dosco/graphjin/core/v3/internal/psql	0.003s
+[FAIL2PASS_CORE] distinct_agg_group_by_semantics: PASS
+
+[FAIL2PASS_EDGE] distinct_agg_no_tracking_column
+[FAIL2PASS_EDGE] running: cd /app/graphjin/core && go test ./internal/psql -run '^TestTaskDistinctAggregationNoTrackingColumnInOutput$' -count=1
+ok  	github.com/dosco/graphjin/core/v3/internal/psql	0.004s
+[FAIL2PASS_EDGE] distinct_agg_no_tracking_column: PASS
+
+All 3 test groups passed.

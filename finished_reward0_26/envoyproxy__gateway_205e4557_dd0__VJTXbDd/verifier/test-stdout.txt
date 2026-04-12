@@ -1,0 +1,30 @@
+[REGRESSION_DIRECT] Running: go test ./internal/gatewayapi -run '^TestTaskRegressionRouteAccessLogTypeMapping$' -count=1
+ok  	github.com/envoyproxy/gateway/internal/gatewayapi	0.030s
+[REGRESSION_DIRECT] PASS
+[REGRESSION_DIRECT] Running: go test ./internal/gatewayapi -run '^TestTaskRegressionListenerAccessLogTypeMapping$' -count=1
+ok  	github.com/envoyproxy/gateway/internal/gatewayapi	0.030s
+[REGRESSION_DIRECT] PASS
+[REGRESSION_DIRECT] Running: go test ./internal/xds/translator -run '^TestTaskRegressionNoUpstreamRouterLogsWithoutExplicitType$' -count=1
+ok  	github.com/envoyproxy/gateway/internal/xds/translator	0.031s
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Running: go test ./internal/gatewayapi -run '^TestTaskFail2PassUpstreamAccessLogTypeMapping$' -count=1
+--- FAIL: TestTaskFail2PassUpstreamAccessLogTypeMapping (0.00s)
+    upstream_accesslog_task_test.go:103: 
+        	Error Trace:	/app/gateway/internal/gatewayapi/upstream_accesslog_task_test.go:103
+        	Error:      	Expected value not to be nil.
+        	Test:       	TestTaskFail2PassUpstreamAccessLogTypeMapping
+FAIL
+FAIL	github.com/envoyproxy/gateway/internal/gatewayapi	0.027s
+FAIL
+[FAIL2PASS_CORE] FAIL
+[FAIL2PASS_EDGE] Running: go test ./internal/xds/translator -run '^TestTaskFail2PassUpstreamRouterLogWiring$' -count=1
+--- FAIL: TestTaskFail2PassUpstreamRouterLogWiring (0.00s)
+    upstream_accesslog_task_test.go:97: 
+        	Error Trace:	/app/gateway/internal/xds/translator/upstream_accesslog_task_test.go:97
+        	Error:      	Expected value not to be nil.
+        	Test:       	TestTaskFail2PassUpstreamRouterLogWiring
+FAIL
+FAIL	github.com/envoyproxy/gateway/internal/xds/translator	0.030s
+FAIL
+[FAIL2PASS_EDGE] FAIL
+Final reward: 0

@@ -1,0 +1,645 @@
+Trial 0xpolygon__bor_ba46e15a_aaaa392a__aegrtYy failed: Agent setup failed with exit code 127. See logs in T:\AgentProjects\20260408SWEBench\harbor_jobs\monthly-swebench-openclaw-full112-glm5-20260409-0057\0xpolygon__bor_ba46e15a_aaaa392a__aegrtYy\agent\setup
+Trial 0xpolygon__bor_ba46e15a_aaaa392a__aegrtYy failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial 0xpolygon__bor_ba46e15a_aaaa392a__aegrtYy failed: Agent setup failed with exit code 127. See logs in T:\AgentProjects\20260408SWEBench\harbor_jobs\monthly-swebench-openclaw-full112-glm5-20260409-0057\0xpolygon__bor_ba46e15a_aaaa392a__aegrtYy\agent\setup
+Not retrying trial because the maximum number of retries has been reached
+Trial authorizerdev__authorizer_c0625a__R6Ejvzk failed: Agent setup failed with exit code 127. See logs in T:\AgentProjects\20260408SWEBench\harbor_jobs\monthly-swebench-openclaw-full112-glm5-20260409-0057\authorizerdev__authorizer_c0625a__R6Ejvzk\agent\setup
+Trial authorizerdev__authorizer_c0625a__R6Ejvzk failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial authorizerdev__authorizer_c0625a__R6Ejvzk failed: Agent setup failed with exit code 127. See logs in T:\AgentProjects\20260408SWEBench\harbor_jobs\monthly-swebench-openclaw-full112-glm5-20260409-0057\authorizerdev__authorizer_c0625a__R6Ejvzk\agent\setup
+Not retrying trial because the maximum number of retries has been reached
+Trial authorizerdev__authorizer_e38d88__sXUUZNM failed: Agent setup failed with exit code 127. See logs in T:\AgentProjects\20260408SWEBench\harbor_jobs\monthly-swebench-openclaw-full112-glm5-20260409-0057\authorizerdev__authorizer_e38d88__sXUUZNM\agent\setup
+Trial authorizerdev__authorizer_e38d88__sXUUZNM failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial authorizerdev__authorizer_e38d88__sXUUZNM failed: Agent setup failed with exit code 127. See logs in T:\AgentProjects\20260408SWEBench\harbor_jobs\monthly-swebench-openclaw-full112-glm5-20260409-0057\authorizerdev__authorizer_e38d88__sXUUZNM\agent\setup
+Not retrying trial because the maximum number of retries has been reached
+Trial c9s__bbgo_15f59ef4_85320527__cs9ga9i failed: Agent setup failed with exit code 3. See logs in T:\AgentProjects\20260408SWEBench\harbor_jobs\monthly-swebench-openclaw-full112-glm5-20260409-0057\c9s__bbgo_15f59ef4_85320527__cs9ga9i\agent\setup
+Trial c9s__bbgo_15f59ef4_85320527__cs9ga9i failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial c9s__bbgo_15f59ef4_85320527__cs9ga9i failed: Agent setup failed with exit code 3. See logs in T:\AgentProjects\20260408SWEBench\harbor_jobs\monthly-swebench-openclaw-full112-glm5-20260409-0057\c9s__bbgo_15f59ef4_85320527__cs9ga9i\agent\setup
+Not retrying trial because the maximum number of retries has been reached
+Exception AgentTimeoutError is in exclude_exceptions, not retrying
+Not retrying trial because the exception is not in include_exceptions or the maximum number of retries has been reached
+Exception AgentTimeoutError is in exclude_exceptions, not retrying
+Not retrying trial because the exception is not in include_exceptions or the maximum number of retries has been reached
+Trial dosco__graphjin_9c78ad33_f9ac75a__mduwcQk failed: Agent setup failed with exit code 127. See logs in T:\AgentProjects\20260408SWEBench\harbor_jobs\monthly-swebench-openclaw-full112-glm5-20260409-0057\dosco__graphjin_9c78ad33_f9ac75a__mduwcQk\agent\setup
+Trial dosco__graphjin_9c78ad33_f9ac75a__mduwcQk failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial dosco__graphjin_9c78ad33_f9ac75a__mduwcQk failed: Agent setup failed with exit code 127. See logs in T:\AgentProjects\20260408SWEBench\harbor_jobs\monthly-swebench-openclaw-full112-glm5-20260409-0057\dosco__graphjin_9c78ad33_f9ac75a__mduwcQk\agent\setup
+Not retrying trial because the maximum number of retries has been reached
+Exception AgentTimeoutError is in exclude_exceptions, not retrying
+Not retrying trial because the exception is not in include_exceptions or the maximum number of retries has been reached
+Trial gardener__gardener_235d58da_08f8__56qAuUQ failed: Agent setup timed out after 360.0 seconds
+Trial gardener__gardener_235d58da_08f8__56qAuUQ failed with exception AgentSetupTimeoutError. Retrying in 1.00 seconds...
+Trial googlecloudplatform__k8s-config-__k5YqAgy failed: Agent setup failed with exit code 127. See logs in T:\AgentProjects\20260408SWEBench\harbor_jobs\monthly-swebench-openclaw-full112-glm5-20260409-0057\googlecloudplatform__k8s-config-__k5YqAgy\agent\setup
+Trial googlecloudplatform__k8s-config-__k5YqAgy failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial googlecloudplatform__k8s-config-__k5YqAgy failed: Agent setup failed with exit code 127. See logs in T:\AgentProjects\20260408SWEBench\harbor_jobs\monthly-swebench-openclaw-full112-glm5-20260409-0057\googlecloudplatform__k8s-config-__k5YqAgy\agent\setup
+Not retrying trial because the maximum number of retries has been reached
+Exception AgentTimeoutError is in exclude_exceptions, not retrying
+Not retrying trial because the exception is not in include_exceptions or the maximum number of retries has been reached
+Trial kubernetes__kops_868575a6_579c13__KUMc55j failed: Docker compose command failed for environment kubernetes__kops_868575a6_579c13c1. Command: docker compose -p kubernetes__kops_868575a6_579c13__kumc55j --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\kubernetes__kops_868575a6_579c13c1\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__kubernetes__kops_868575a6_579c13c1 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 795B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 30B
+#2 transferring dockerfile: 532B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/golang:1.25.8-bookworm
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fgolang%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/golang:1.25.8-bookworm:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM golang:1.25.8-bookworm
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive \
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fgolang%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Trial kubernetes__kops_868575a6_579c13__KUMc55j failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial kubernetes__release_430a8064_72d__A3y3XLq failed: Docker compose command failed for environment kubernetes__release_430a8064_72d7afd6. Command: docker compose -p kubernetes__release_430a8064_72d__a3y3xlq --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\kubernetes__release_430a8064_72d7afd6\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__kubernetes__release_430a8064_72d7afd6 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 804B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 29B
+#2 transferring dockerfile: 146B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/golang:1.26-bookworm
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fgolang%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/golang:1.26-bookworm:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM golang:1.26-bookworm
+
+   2 |     
+
+   3 |     WORKDIR /app/release
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fgolang%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Trial kubernetes__release_430a8064_72d__A3y3XLq failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial kubernetes__kops_868575a6_579c13__KUMc55j failed: Docker compose command failed for environment kubernetes__kops_868575a6_579c13c1. Command: docker compose -p kubernetes__kops_868575a6_579c13__kumc55j --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\kubernetes__kops_868575a6_579c13c1\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__kubernetes__kops_868575a6_579c13c1 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 795B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 532B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/golang:1.25.8-bookworm
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fgolang%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/golang:1.25.8-bookworm:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM golang:1.25.8-bookworm
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive \
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fgolang%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Not retrying trial because the maximum number of retries has been reached
+Trial kubernetes__release_430a8064_72d__A3y3XLq failed: Docker compose command failed for environment kubernetes__release_430a8064_72d7afd6. Command: docker compose -p kubernetes__release_430a8064_72d__a3y3xlq --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\kubernetes__release_430a8064_72d7afd6\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__kubernetes__release_430a8064_72d7afd6 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 804B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 146B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/golang:1.26-bookworm
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fgolang%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/golang:1.26-bookworm:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM golang:1.26-bookworm
+
+   2 |     
+
+   3 |     WORKDIR /app/release
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fgolang%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Trial kubernetes__release_9d42037a_572__Py7pCxG failed: Docker compose command failed for environment kubernetes__release_9d42037a_572035f6. Command: docker compose -p kubernetes__release_9d42037a_572__py7pcxg --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\kubernetes__release_9d42037a_572035f6\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__kubernetes__release_9d42037a_572035f6 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 804B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 738B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/golang:1.25.7-bookworm
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fgolang%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/golang:1.25.7-bookworm:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM golang:1.25.7-bookworm
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fgolang%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Not retrying trial because the maximum number of retries has been reached
+Trial kubernetes__release_9d42037a_572__Py7pCxG failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial lemonade-sdk__lemonade_0a0e4869___jnVewLU failed: Docker compose command failed for environment lemonade-sdk__lemonade_0a0e4869_b989f4d1. Command: docker compose -p lemonade-sdk__lemonade_0a0e4869___jnvewlu --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\lemonade-sdk__lemonade_0a0e4869_b989f4d1\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__lemonade-sdk__lemonade_0a0e4869_b989f4d1 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 813B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 636B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:22.04
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fubuntu%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/ubuntu:22.04:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM ubuntu:22.04
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fubuntu%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Trial lemonade-sdk__lemonade_0a0e4869___jnVewLU failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial kubernetes__release_9d42037a_572__Py7pCxG failed: Docker compose command failed for environment kubernetes__release_9d42037a_572035f6. Command: docker compose -p kubernetes__release_9d42037a_572__py7pcxg --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\kubernetes__release_9d42037a_572035f6\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__kubernetes__release_9d42037a_572035f6 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 804B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 738B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/golang:1.25.7-bookworm
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fgolang%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/golang:1.25.7-bookworm:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM golang:1.25.7-bookworm
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fgolang%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Not retrying trial because the maximum number of retries has been reached
+Trial lemonade-sdk__lemonade_0a0e4869___jnVewLU failed: Docker compose command failed for environment lemonade-sdk__lemonade_0a0e4869_b989f4d1. Command: docker compose -p lemonade-sdk__lemonade_0a0e4869___jnvewlu --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\lemonade-sdk__lemonade_0a0e4869_b989f4d1\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__lemonade-sdk__lemonade_0a0e4869_b989f4d1 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 813B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 636B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:22.04
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fubuntu%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/ubuntu:22.04:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM ubuntu:22.04
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fubuntu%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Not retrying trial because the maximum number of retries has been reached
+Trial google__filament_4b040fba_167a91__ht5A7Au failed: Command timed out after 30 seconds
+Trial lightningnetwork__lnd_2aec8f33_8__s8z7ouU failed: Docker compose command failed for environment lightningnetwork__lnd_2aec8f33_8ec11635. Command: docker compose -p lightningnetwork__lnd_2aec8f33_8__s8z7ouu --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\lightningnetwork__lnd_2aec8f33_8ec11635\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__lightningnetwork__lnd_2aec8f33_8ec11635 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 810B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 877B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/golang:1.25-bookworm
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fgolang%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/golang:1.25-bookworm:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM golang:1.25-bookworm
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fgolang%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Trial lightningnetwork__lnd_2aec8f33_8__s8z7ouU failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial google__filament_4b040fba_167a91__ht5A7Au failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial lightningnetwork__lnd_2aec8f33_8__s8z7ouU failed: Docker compose command failed for environment lightningnetwork__lnd_2aec8f33_8ec11635. Command: docker compose -p lightningnetwork__lnd_2aec8f33_8__s8z7ouu --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\lightningnetwork__lnd_2aec8f33_8ec11635\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__lightningnetwork__lnd_2aec8f33_8ec11635 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 810B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 877B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/golang:1.25-bookworm
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fgolang%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/golang:1.25-bookworm:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM golang:1.25-bookworm
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fgolang%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Trial lynx-family__lynx_20307ab3_3ea79__ZNkeYK8 failed: Docker compose command failed for environment lynx-family__lynx_20307ab3_3ea797af. Command: docker compose -p lynx-family__lynx_20307ab3_3ea79__znkeyk8 --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\lynx-family__lynx_20307ab3_3ea797af\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__lynx-family__lynx_20307ab3_3ea797af Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 798B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 622B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:20-bookworm
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fnode%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/node:20-bookworm:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM node:20-bookworm
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fnode%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Not retrying trial because the maximum number of retries has been reached
+Trial lynx-family__lynx_20307ab3_3ea79__ZNkeYK8 failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial google__filament_4b040fba_167a91__ht5A7Au failed: Docker compose command failed for environment google__filament_4b040fba_167a91ef. Command: docker compose -p google__filament_4b040fba_167a91__ht5a7au --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\google__filament_4b040fba_167a91ef\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__google__filament_4b040fba_167a91ef Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 795B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 524B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:22.04
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fubuntu%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/ubuntu:22.04:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM ubuntu:22.04
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fubuntu%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Not retrying trial because the maximum number of retries has been reached
+Trial lynx-family__lynx_5a49d2c1_17bee__d9FVMyB failed: Docker compose command failed for environment lynx-family__lynx_5a49d2c1_17bee8a0. Command: docker compose -p lynx-family__lynx_5a49d2c1_17bee__d9fvmyb --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\lynx-family__lynx_5a49d2c1_17bee8a0\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__lynx-family__lynx_5a49d2c1_17bee8a0 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 798B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 659B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:20-bookworm
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fnode%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/node:20-bookworm:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM node:20-bookworm
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fnode%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Trial lynx-family__lynx_5a49d2c1_17bee__d9FVMyB failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial lynx-family__lynx_20307ab3_3ea79__ZNkeYK8 failed: Docker compose command failed for environment lynx-family__lynx_20307ab3_3ea797af. Command: docker compose -p lynx-family__lynx_20307ab3_3ea79__znkeyk8 --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\lynx-family__lynx_20307ab3_3ea797af\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__lynx-family__lynx_20307ab3_3ea797af Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 798B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 622B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:20-bookworm
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fnode%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/node:20-bookworm:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM node:20-bookworm
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fnode%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Trial maaxyz__maaframework_43749f2b_80__DSUAoqt failed: Docker compose command failed for environment maaxyz__maaframework_43749f2b_803c78ea. Command: docker compose -p maaxyz__maaframework_43749f2b_80__dsuaoqt --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\maaxyz__maaframework_43749f2b_803c78ea\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__maaxyz__maaframework_43749f2b_803c78ea Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 807B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 555B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:22.04
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fubuntu%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/ubuntu:22.04:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM ubuntu:22.04
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fubuntu%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Not retrying trial because the maximum number of retries has been reached
+Trial lynx-family__lynx_5a49d2c1_17bee__d9FVMyB failed: Docker compose command failed for environment lynx-family__lynx_5a49d2c1_17bee8a0. Command: docker compose -p lynx-family__lynx_5a49d2c1_17bee__d9fvmyb --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\lynx-family__lynx_5a49d2c1_17bee8a0\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__lynx-family__lynx_5a49d2c1_17bee8a0 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 798B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 659B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:20-bookworm
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fnode%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/node:20-bookworm:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM node:20-bookworm
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fnode%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Trial maaxyz__maaframework_43749f2b_80__DSUAoqt failed with exception RuntimeError. Retrying in 1.00 seconds...
+Not retrying trial because the maximum number of retries has been reached
+Trial manticoresoftware__manticoresear__WUZafJw failed: Docker compose command failed for environment manticoresoftware__manticoresearch_1a9cc54a_d4354257. Command: docker compose -p manticoresoftware__manticoresear__wuzafjw --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\manticoresoftware__manticoresearch_1a9cc54a_d4354257\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__manticoresoftware__manticoresearch_1a9cc54a_d4354257 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 849B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.14kB done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:22.04
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fubuntu%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/ubuntu:22.04:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM ubuntu:22.04
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fubuntu%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Trial manticoresoftware__manticoresear__WUZafJw failed with exception RuntimeError. Retrying in 1.00 seconds...
+Trial maaxyz__maaframework_43749f2b_80__DSUAoqt failed: Docker compose command failed for environment maaxyz__maaframework_43749f2b_803c78ea. Command: docker compose -p maaxyz__maaframework_43749f2b_80__dsuaoqt --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\maaxyz__maaframework_43749f2b_803c78ea\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__maaxyz__maaframework_43749f2b_803c78ea Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 807B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 555B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:22.04
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fubuntu%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/ubuntu:22.04:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM ubuntu:22.04
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fubuntu%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Trial manticoresoftware__manticoresear__VTQkv2w failed: Docker compose command failed for environment manticoresoftware__manticoresearch_27f5d482_a8159410. Command: docker compose -p manticoresoftware__manticoresear__vtqkv2w --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\manticoresoftware__manticoresearch_27f5d482_a8159410\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__manticoresoftware__manticoresearch_27f5d482_a8159410 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 849B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.12kB done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:22.04
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fubuntu%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/ubuntu:22.04:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM ubuntu:22.04
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fubuntu%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Trial manticoresoftware__manticoresear__WUZafJw failed: Docker compose command failed for environment manticoresoftware__manticoresearch_1a9cc54a_d4354257. Command: docker compose -p manticoresoftware__manticoresear__wuzafjw --project-directory T:\AgentProjects\20260408SWEBench\prepared_datasets\monthly_swebench_2026_03_full\all_tasks\manticoresoftware__manticoresearch_1a9cc54a_d4354257\environment -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-base.yaml -f T:\AgentProjects\20260408SWEBench\harbor\src\harbor\environments\docker\docker-compose-build.yaml build. Return code: 1. Stdout:  Image hb__manticoresoftware__manticoresearch_1a9cc54a_d4354257 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 849B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.14kB done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:22.04
+#3 ERROR: failed to authorize: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fubuntu%3Apull&service=registry.docker.io": EOF
+------
+ > [internal] load metadata for docker.io/library/ubuntu:22.04:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM ubuntu:22.04
+
+   2 |     
+
+   3 |     ENV DEBIAN_FRONTEND=noninteractive
+
+--------------------
+
+failed to solve: failed to fetch anonymous token: Get "https://auth.docker.io/token?scope=repository%3Alibrary%2Fubuntu%3Apull&service=registry.docker.io": EOF
+
+. Stderr: None. 
+Not retrying trial because the maximum number of retries has been reached
+Trial manticoresoftware__manticoresear__VTQkv2w failed with exception RuntimeError. Retrying in 1.00 seconds...
+Not retrying trial because the maximum number of retries has been reached
+Trial maximhq__bifrost_21cd30ba_3237e3__9imiyYv cancelled
+Trial lemonade-sdk__lemonade_0b4e77cd___JRoVt8b cancelled
+Trial maaxyz__maaframework_170af58b_e7__2ruRUSA cancelled
+Trial memgraph__memgraph_0a8474dd_043c__sMd5Pgr cancelled

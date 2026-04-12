@@ -1,0 +1,26 @@
+[REGRESSION_DIRECT] Running existing game type roundtrip regression tests
+ok  	github.com/ethereum-optimism/optimism/op-challenger/game/types	0.005s
+[REGRESSION_DIRECT] PASS
+Preparing task-added fail2pass test files...
+Copied fail2pass_zk_game_type_test.go
+Copied fail2pass_claimdata_layout_test.go
+[FAIL2PASS_CORE] Running ZK claimData tuple layout decoding tests
+# github.com/ethereum-optimism/optimism/op-challenger/game/fault/contracts [github.com/ethereum-optimism/optimism/op-challenger/game/fault/contracts.test]
+op-challenger/game/fault/contracts/zkdisputegame_test.go:34:23: undefined: gameTypes.OptimisticZKGameType
+op-challenger/game/fault/contracts/zkdisputegame_test.go:46:25: undefined: OptimisticZKDisputeGameContract
+op-challenger/game/fault/contracts/zkdisputegame_test.go:53:20: undefined: OptimisticZKDisputeGameContract
+op-challenger/game/fault/contracts/zkdisputegame_test.go:61:20: undefined: OptimisticZKDisputeGameContract
+op-challenger/game/fault/contracts/zkdisputegame_test.go:69:20: undefined: OptimisticZKDisputeGameContract
+op-challenger/game/fault/contracts/zkdisputegame_test.go:78:20: undefined: OptimisticZKDisputeGameContract
+op-challenger/game/fault/contracts/zkdisputegame_test.go:315:96: undefined: OptimisticZKDisputeGameContract
+op-challenger/game/fault/contracts/disputegame.go:52:17: undefined: gameTypes.OptimisticZKGameType
+op-challenger/game/fault/contracts/disputegame.go:53:10: undefined: NewOptimisticZKDisputeGameContract
+op-challenger/game/fault/contracts/zk_claimdata_layout_test.go:24:15: undefined: OptimisticZKDisputeGameContractLatest
+op-challenger/game/fault/contracts/zkdisputegame_test.go:78:20: too many errors
+FAIL	github.com/ethereum-optimism/optimism/op-challenger/game/fault/contracts [build failed]
+FAIL
+[FAIL2PASS_CORE] FAIL
+[FAIL2PASS_EDGE] Running ZK game type keyword migration tests
+ok  	github.com/ethereum-optimism/optimism/op-challenger/game/types	0.005s
+[FAIL2PASS_EDGE] PASS
+Final reward: 0

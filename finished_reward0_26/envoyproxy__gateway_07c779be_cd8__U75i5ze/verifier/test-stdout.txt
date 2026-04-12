@@ -1,0 +1,24 @@
+[REGRESSION_DIRECT] Running: /usr/local/go/bin/go test ./internal/xds/translator -run ^TestTBRegressionDynamicModuleRouting$ -count=1
+ok  	github.com/envoyproxy/gateway/internal/xds/translator	0.031s
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Running: /usr/local/go/bin/go test ./internal/gatewayapi -run ^TestTBFail2PassLocalSourcePath$ -count=1
+--- FAIL: TestTBFail2PassLocalSourcePath (0.00s)
+    zz_tb_dynamic_module_source_test.go:175: unexpected error while translating local sources: dynamic module "rate-limit-module" has unknown source type ""
+FAIL
+FAIL	github.com/envoyproxy/gateway/internal/gatewayapi	0.031s
+FAIL
+[FAIL2PASS_CORE] FAIL (exit=1)
+[FAIL2PASS_CORE] Running: /usr/local/go/bin/go test ./internal/xds/translator -run ^TestTBFail2PassXdsDynamicModuleLocalFile$ -count=1
+--- FAIL: TestTBFail2PassXdsDynamicModuleLocalFile (0.00s)
+    --- FAIL: TestTBFail2PassXdsDynamicModuleLocalFile/auth (0.00s)
+        zz_tb_dynamic_module_source_test.go:86: expected xDS filter config to include module path "/usr/lib/envoy/modules/auth.so", got {"dynamicModuleConfig":{"doNotClose":true, "loadGlobally":true}, "filterName":"filter-auth"}
+    --- FAIL: TestTBFail2PassXdsDynamicModuleLocalFile/ratelimit (0.00s)
+        zz_tb_dynamic_module_source_test.go:86: expected xDS filter config to include module path "/opt/modules/ratelimit.so", got {"dynamicModuleConfig":{"doNotClose":true, "loadGlobally":true}, "filterName":"filter-ratelimit"}
+FAIL
+FAIL	github.com/envoyproxy/gateway/internal/xds/translator	0.029s
+FAIL
+[FAIL2PASS_CORE] FAIL (exit=1)
+[FAIL2PASS_ERROR_HANDLING] Running: /usr/local/go/bin/go test ./internal/gatewayapi -run ^TestTBFail2PassRemoteSourceError$ -count=1
+ok  	github.com/envoyproxy/gateway/internal/gatewayapi	0.029s
+[FAIL2PASS_ERROR_HANDLING] PASS
+2 test group(s) failed.

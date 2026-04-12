@@ -1,0 +1,26 @@
+[REGRESSION_DIRECT] START
+=== RUN   TestRegressionGenerateOTPFormatAndCharset
+--- PASS: TestRegressionGenerateOTPFormatAndCharset (0.00s)
+PASS
+ok  	github.com/authorizerdev/authorizer/internal/utils	0.007s
+[REGRESSION_DIRECT] PASS
+[REGRESSION_DIRECT] END
+[FAIL2PASS_CORE] START
+=== RUN   TestFail2PassCoreGenerateOTPDoesNotMutateMathRandStateSingleCall
+    terminalbench_otp_behavior_test.go:43: seed=1 expected next Int63=5577006791947779410, got 8717088011721967828
+--- FAIL: TestFail2PassCoreGenerateOTPDoesNotMutateMathRandStateSingleCall (0.00s)
+FAIL
+FAIL	github.com/authorizerdev/authorizer/internal/utils	0.005s
+FAIL
+[FAIL2PASS_CORE] FAIL
+[FAIL2PASS_CORE] END
+[FAIL2PASS_EDGE] START
+=== RUN   TestFail2PassEdgeGenerateOTPDoesNotMutateMathRandStateConcurrentCalls
+    terminalbench_otp_behavior_test.go:73: after concurrent GenerateOTP calls expected next Int63=3643126871049437941, got 4835025816685427887
+--- FAIL: TestFail2PassEdgeGenerateOTPDoesNotMutateMathRandStateConcurrentCalls (0.01s)
+FAIL
+FAIL	github.com/authorizerdev/authorizer/internal/utils	0.011s
+FAIL
+[FAIL2PASS_EDGE] FAIL
+[FAIL2PASS_EDGE] END
+Final reward: 0

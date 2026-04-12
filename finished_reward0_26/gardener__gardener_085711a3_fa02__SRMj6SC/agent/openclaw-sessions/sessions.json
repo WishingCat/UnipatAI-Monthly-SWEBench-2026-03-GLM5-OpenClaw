@@ -1,0 +1,464 @@
+{
+  "agent:main:main": {
+    "sessionId": "f02a603b-2b01-4fe7-bcef-77e356b624af",
+    "updatedAt": 1775680826882,
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>healthcheck</name>\n    <description>Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).</description>\n    <location>~/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/healthcheck/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>node-connect</name>\n    <description>Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.</description>\n    <location>~/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/node-connect/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>openai-whisper-api</name>\n    <description>Transcribe audio via OpenAI Audio Transcriptions API (Whisper).</description>\n    <location>~/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/openai-whisper-api/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like &quot;create a skill&quot;, &quot;author a skill&quot;, &quot;tidy up a skill&quot;, &quot;improve this skill&quot;, &quot;review the skill&quot;, &quot;clean up the skill&quot;, &quot;audit the skill&quot;.</description>\n    <location>~/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>tmux</name>\n    <description>Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.</description>\n    <location>~/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/tmux/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.</description>\n    <location>~/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "healthcheck"
+        },
+        {
+          "name": "node-connect"
+        },
+        {
+          "name": "openai-whisper-api",
+          "primaryEnv": "OPENAI_API_KEY",
+          "requiredEnv": [
+            "OPENAI_API_KEY"
+          ]
+        },
+        {
+          "name": "skill-creator"
+        },
+        {
+          "name": "tmux",
+          "requiredEnv": []
+        },
+        {
+          "name": "weather",
+          "requiredEnv": []
+        }
+      ],
+      "resolvedSkills": [
+        {
+          "name": "healthcheck",
+          "description": "Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).",
+          "filePath": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/healthcheck/SKILL.md",
+          "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/healthcheck",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/healthcheck/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/healthcheck"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "node-connect",
+          "description": "Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.",
+          "filePath": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/node-connect/SKILL.md",
+          "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/node-connect",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/node-connect/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/node-connect"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "openai-whisper-api",
+          "description": "Transcribe audio via OpenAI Audio Transcriptions API (Whisper).",
+          "filePath": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/openai-whisper-api/SKILL.md",
+          "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/openai-whisper-api",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/openai-whisper-api/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/openai-whisper-api"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "skill-creator",
+          "description": "Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like \"create a skill\", \"author a skill\", \"tidy up a skill\", \"improve this skill\", \"review the skill\", \"clean up the skill\", \"audit the skill\".",
+          "filePath": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+          "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/skill-creator",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/skill-creator"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "tmux",
+          "description": "Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.",
+          "filePath": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/tmux/SKILL.md",
+          "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/tmux",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/tmux/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/tmux"
+          },
+          "disableModelInvocation": false
+        },
+        {
+          "name": "weather",
+          "description": "Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.",
+          "filePath": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/weather/SKILL.md",
+          "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/weather",
+          "source": "openclaw-bundled",
+          "sourceInfo": {
+            "path": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/weather/SKILL.md",
+            "source": "openclaw-bundled",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.nvm/versions/node/v22.22.2/lib/node_modules/openclaw/skills/weather"
+          },
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 0
+    },
+    "sessionFile": "/logs/agent/openclaw-sessions/f02a603b-2b01-4fe7-bcef-77e356b624af.jsonl",
+    "compactionCheckpoints": [
+      {
+        "checkpointId": "43857ef8-dc05-4d16-adb2-dfebd6d88ba3",
+        "sessionKey": "agent:main:main",
+        "sessionId": "f02a603b-2b01-4fe7-bcef-77e356b624af",
+        "createdAt": 1775680391312,
+        "reason": "overflow-retry",
+        "tokensBefore": 91408,
+        "tokensAfter": 20945,
+        "summary": "## Decisions\nNo prior history.\n\n## Open TODOs\nNone.\n\n## Constraints/Rules\nNone.\n\n## Pending user asks\nNone.\n\n## Exact identifiers\nNone captured.\n\n**Turn Context (split turn):**\n\n## Goal\nImplement support for self-hosted Shoot control plane exposure extension types across the existing extension-processing pipeline in the Gardener codebase. The user provided 5 specific requirements:\n\n1. **Required extension computation for Shoots**: When a worker defines `spec.provider.workers[].controlPlane.exposure.extension.type`, include it in required-extension results with kind `SelfHostedShootExposure`\n2. **Shoot extension labels**: Add labels with prefix `selfhostedshootexposure.extensions.gardener.cloud/` during Shoot metadata label enrichment; cleanup stale labels with this prefix\n3. **Shoot extension registration validation**: Require registration of `SelfHostedShootExposure` extension types referenced by worker control plane exposure configuration; validate all worker pools\n4. **Resource-manager validating webhook resource coverage**: Include `selfhostedshootexposures` in CR deletion protection webhook resources; add webhook entry for path `/validate-extensions-gardener-cloud-v1alpha1-selfhostedshootexposure`\n5. **Shared extension metadata**: Add shared extension label prefix constant; add `SelfHostedShootExposure` to extension kind list\n\n## Constraints & Preferences\n- Must not remove or weaken existing behaviors while adding this support\n- Must treat the new extension type consistently with other extension type references\n- Must support multiple worker pools with different exposure extension types\n- Validation must cover all configured worker pools, not just first matching worker\n\n## Progress\n### Done\n- [x] Explored codebase structure at `/app/gardener`\n- [x] Identified key files for extension kinds: `/app/gardener/pkg/apis/extensions/v1alpha1/types.go` (contains `AllExtensionKinds`)\n- [x] Identified Shoot worker control plane exposure structure: `/app/gardener/pkg/apis/core/v1beta1/types_shoot.go` (lines 1824-1855: `WorkerControlPlane`, `Exposure`, `ExtensionExposure`)\n- [x] Located label prefix constants: `/app/gardener/pkg/apis/core/v1beta1/constants/types_constants.go`\n- [x] Found extension labels admission plugin: `/app/gardener/plugin/pkg/global/extensionlabels/admission.go`\n- [x] Found extension validation admission plugin: `/app/gardener/plugin/pkg/global/extensionvalidation/admission.go`\n- [x] Located extension validation webhooks: `/app/gardener/pkg/resourcemanager/webhook/extensionvalidation/add.go`\n- [x] Found CR deletion protection handler: `/app/gardener/pkg/resourcemanager/webhook/crddeletionprotection/handler.go`\n- [x] Found resource manager webhook configuration: `/app/gardener/pkg/component/gardener/resourcemanager/resource_manager.go` (functions `NewExtensionValidationValidatingWebhooks`, `NewCRDDeletionProtectionValidatingWebhooks`)\n- [x] Located `ComputeRequiredExtensionsForShoot` reference: `/app/gardener/pkg/gardenlet/operation/botanist/botanist.go` line 277\n\n### In Progress\n- [ ] Reading `ComputeRequiredExtensionsForShoot` implementation in `/app/gardener/pkg/utils/gardener/shoot.go`\n- [ ] Understanding complete extension label logic in namespaces.go\n\n### Blocked\n- None\n\n## Key Decisions\n- No implementation decisions made yet - still in codebase exploration phase\n\n## Next Steps\n1. Read full `ComputeRequiredExtensionsForShoot` function to understand how to add `SelfHostedShootExposure` kind\n2. Review `/app/gardener/pkg/gardenlet/operation/botanist/namespaces.go` for complete extension label pattern\n3. Review `/app/gardener/plugin/pkg/global/extensionvalidation/admission.go` for validation pattern\n4. Review `/app/gardener/plugin/pkg/global/extensionlabels/admission.go` for label cleanup pattern\n5. Check existing extension kind resources like `WorkerResource`, `ControlPlaneResource` in `/app/gardener/pkg/apis/extensions/v1alpha1/` for the full pattern to create `SelfHostedShootExposureResource`\n\n## Critical Context\n### Data Structure for Worker Control Plane Exposure\n```go\n// From types_shoot.go lines 1830-1855\ntype WorkerControlPlane struct {\n    Backup *Backup `json:\"backup,omitempty\"`\n    Exposure *Exposure `json:\"exposure,omitempty\"`\n}\n\ntype Exposure struct {\n    Extension *ExtensionExposure `json:\"extension,omitempty\"`\n    DNS *DNSExposure `json:\"dns,omitempty\"`\n}\n\ntype ExtensionExposure struct {\n    Type *string `json:\"type,omitempty\"`\n    ProviderConfig *runtime.RawExtension `json:\"providerConfig,omitempty\"`\n}\n```\n\n### Existing Extension Kind Pattern\n```go\n// From types.go - AllExtensionKinds\nvar AllExtensionKinds = sets.New(\n    BackupBucketResource, BackupEntryResource, BastionResource,\n    ContainerRuntimeResource, ControlPlaneResource, DNSRecordResource,\n    ExtensionResource, InfrastructureResource, NetworkResource,\n    OperatingSystemConfigResource, WorkerResource,\n)\n```\n\n### Existing Label Prefix Constants (types_constants.go lines 520-534)\n- `LabelExtensionExtensionTypePrefix = \"extensions.extensions.gardener.cloud/\"`\n- `LabelExtensionProviderTypePrefix = \"provider.extensions.gardener.cloud/\"`\n- `LabelExtensionDNSRecordTypePrefix = \"dnsrecord.extensions.gardener.cloud/\"`\n- Need to add: `LabelExtensionSelfHostedShootExposureTypePrefix = \"selfhostedshootexposure.extensions.gardener.cloud/\"`\n\n### Webhook Path Pattern (extensionvalidation/add.go)\n- Webhook paths follow pattern: `/validate-extensions-gardener-cloud-v1alpha1-<resource>`\n- Need to add: `WebhookPathSelfHostedShootExposure = \"/validate-extensions-gardener-cloud-v1alpha1-selfhostedshootexposure\"`\n\n## Exact Identifiers\n- Repository path: `/app/gardener`\n- Extension types file: `/app/gardener/pkg/apis/extensions/v1alpha1/types.go`\n- Shoot types file: `/app/gardener/pkg/apis/core/v1beta1/types_shoot.go`\n- Constants file: `/app/gardener/pkg/apis/core/v1beta1/constants/types_constants.go`\n- Extension labels plugin: `/app/gardener/plugin/pkg/global/extensionlabels/admission.go`\n- Extension validation plugin: `/app/gardener/plugin/pkg/global/extensionvalidation/admission.go`\n- Webhook validation add: `/app/gardener/pkg/resourcemanager/webhook/extensionvalidation/add.go`\n- Resource manager config: `/app/gardener/pkg/component/gardener/resourcemanager/resource_manager.go`\n- Shoot utilities: `/app/gardener/pkg/utils/gardener/shoot.go`\n- Extension kind to add: `SelfHostedShootExposure`\n- Label prefix to add: `selfhostedshootexposure.extensions.gardener.cloud/`\n- Webhook path to add: `/validate-extensions-gardener-cloud-v1alpha1-selfhostedshootexposure`\n\n<read-files>\n/app/gardener/pkg/apis/core/v1beta1/constants/types_constants.go\n/app/gardener/pkg/apis/core/v1beta1/types_shoot.go\n/app/gardener/pkg/apis/extensions/v1alpha1/types.go\n/app/gardener/pkg/component/gardener/resourcemanager/resource_manager.go\n/app/gardener/pkg/extensions/constants.go\n/app/gardener/pkg/gardenlet/operation/botanist/namespaces.go\n/app/gardener/pkg/resourcemanager/webhook/crddeletionprotection/add.go\n/app/gardener/pkg/resourcemanager/webhook/crddeletionprotection/handler.go\n/app/gardener/pkg/resourcemanager/webhook/extensionvalidation/add.go\n/app/gardener/pkg/resourcemanager/webhook/extensionvalidation/handler.go\n/app/gardener/pkg/utils/gardener/shoot.go\n/app/gardener/plugin/pkg/global/extensionlabels/admission.go\n/app/gardener/plugin/pkg/global/extensionvalidation/admission.go\n\n</read-files>",
+        "firstKeptEntryId": "232ccba1",
+        "preCompaction": {
+          "sessionId": "f02a603b-2b01-4fe7-bcef-77e356b624af",
+          "sessionFile": "/logs/agent/openclaw-sessions/f02a603b-2b01-4fe7-bcef-77e356b624af.checkpoint.40a716e5-5612-4e98-9e1d-0a4bc86113d1.jsonl",
+          "leafId": "3a627883"
+        },
+        "postCompaction": {
+          "sessionId": "f02a603b-2b01-4fe7-bcef-77e356b624af",
+          "sessionFile": "/logs/agent/openclaw-sessions/f02a603b-2b01-4fe7-bcef-77e356b624af.jsonl",
+          "leafId": "0b8462a1",
+          "entryId": "0b8462a1"
+        }
+      }
+    ],
+    "contextTokens": 200000,
+    "modelProvider": "openai",
+    "model": "z-ai/glm-5",
+    "abortedLastRun": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1775680451804,
+      "sessionId": "f02a603b-2b01-4fe7-bcef-77e356b624af",
+      "sessionKey": "agent:main:main",
+      "provider": "openai",
+      "model": "z-ai/glm-5",
+      "workspaceDir": "/workspace",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 25926,
+        "projectContextChars": 11934,
+        "nonProjectContextChars": 13992
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/workspace/AGENTS.md",
+          "missing": false,
+          "rawChars": 8015,
+          "injectedChars": 8015,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/workspace/SOUL.md",
+          "missing": false,
+          "rawChars": 1699,
+          "injectedChars": 1699,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/workspace/TOOLS.md",
+          "missing": false,
+          "rawChars": 889,
+          "injectedChars": 889,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/workspace/IDENTITY.md",
+          "missing": false,
+          "rawChars": 422,
+          "injectedChars": 422,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/workspace/USER.md",
+          "missing": false,
+          "rawChars": 490,
+          "injectedChars": 490,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "/workspace/HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 171,
+          "injectedChars": 171,
+          "truncated": false
+        },
+        {
+          "name": "BOOTSTRAP.md",
+          "path": "/workspace/BOOTSTRAP.md",
+          "missing": true,
+          "rawChars": 0,
+          "injectedChars": 46,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 3191,
+        "entries": [
+          {
+            "name": "healthcheck",
+            "blockChars": 507
+          },
+          {
+            "name": "node-connect",
+            "blockChars": 557
+          },
+          {
+            "name": "openai-whisper-api",
+            "blockChars": 265
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 775
+          },
+          {
+            "name": "tmux",
+            "blockChars": 271
+          },
+          {
+            "name": "weather",
+            "blockChars": 432
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 29501,
+        "entries": [
+          {
+            "name": "read",
+            "summaryChars": 298,
+            "schemaChars": 304,
+            "propertiesCount": 3
+          },
+          {
+            "name": "edit",
+            "summaryChars": 326,
+            "schemaChars": 834,
+            "propertiesCount": 2
+          },
+          {
+            "name": "write",
+            "summaryChars": 127,
+            "schemaChars": 225,
+            "propertiesCount": 2
+          },
+          {
+            "name": "apply_patch",
+            "summaryChars": 132,
+            "schemaChars": 153,
+            "propertiesCount": 1
+          },
+          {
+            "name": "exec",
+            "summaryChars": 539,
+            "schemaChars": 1098,
+            "propertiesCount": 12
+          },
+          {
+            "name": "process",
+            "summaryChars": 416,
+            "schemaChars": 961,
+            "propertiesCount": 12
+          },
+          {
+            "name": "canvas",
+            "summaryChars": 106,
+            "schemaChars": 661,
+            "propertiesCount": 18
+          },
+          {
+            "name": "nodes",
+            "summaryChars": 118,
+            "schemaChars": 1589,
+            "propertiesCount": 32
+          },
+          {
+            "name": "cron",
+            "summaryChars": 3726,
+            "schemaChars": 6700,
+            "propertiesCount": 13
+          },
+          {
+            "name": "message",
+            "summaryChars": 89,
+            "schemaChars": 5613,
+            "propertiesCount": 105
+          },
+          {
+            "name": "tts",
+            "summaryChars": 152,
+            "schemaChars": 223,
+            "propertiesCount": 2
+          },
+          {
+            "name": "image_generate",
+            "summaryChars": 387,
+            "schemaChars": 1195,
+            "propertiesCount": 10
+          },
+          {
+            "name": "video_generate",
+            "summaryChars": 225,
+            "schemaChars": 1650,
+            "propertiesCount": 14
+          },
+          {
+            "name": "gateway",
+            "summaryChars": 494,
+            "schemaChars": 497,
+            "propertiesCount": 12
+          },
+          {
+            "name": "agents_list",
+            "summaryChars": 118,
+            "schemaChars": 33,
+            "propertiesCount": 0
+          },
+          {
+            "name": "update_plan",
+            "summaryChars": 251,
+            "schemaChars": 575,
+            "propertiesCount": 2
+          },
+          {
+            "name": "sessions_list",
+            "summaryChars": 177,
+            "schemaChars": 212,
+            "propertiesCount": 4
+          },
+          {
+            "name": "sessions_history",
+            "summaryChars": 180,
+            "schemaChars": 161,
+            "propertiesCount": 3
+          },
+          {
+            "name": "sessions_send",
+            "summaryChars": 208,
+            "schemaChars": 274,
+            "propertiesCount": 5
+          },
+          {
+            "name": "sessions_yield",
+            "summaryChars": 97,
+            "schemaChars": 60,
+            "propertiesCount": 1
+          },
+          {
+            "name": "sessions_spawn",
+            "summaryChars": 302,
+            "schemaChars": 1333,
+            "propertiesCount": 18
+          },
+          {
+            "name": "subagents",
+            "summaryChars": 105,
+            "schemaChars": 191,
+            "propertiesCount": 4
+          },
+          {
+            "name": "session_status",
+            "summaryChars": 336,
+            "schemaChars": 89,
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search",
+            "summaryChars": 93,
+            "schemaChars": 446,
+            "propertiesCount": 4
+          },
+          {
+            "name": "web_fetch",
+            "summaryChars": 129,
+            "schemaChars": 374,
+            "propertiesCount": 3
+          },
+          {
+            "name": "image",
+            "summaryChars": 201,
+            "schemaChars": 342,
+            "propertiesCount": 6
+          },
+          {
+            "name": "pdf",
+            "summaryChars": 275,
+            "schemaChars": 400,
+            "propertiesCount": 6
+          },
+          {
+            "name": "browser",
+            "summaryChars": 1066,
+            "schemaChars": 2799,
+            "propertiesCount": 48
+          },
+          {
+            "name": "memory_search",
+            "summaryChars": 385,
+            "schemaChars": 260,
+            "propertiesCount": 4
+          },
+          {
+            "name": "memory_get",
+            "summaryChars": 207,
+            "schemaChars": 249,
+            "propertiesCount": 4
+          }
+        ]
+      }
+    },
+    "inputTokens": 243722,
+    "outputTokens": 21087,
+    "totalTokens": 73401,
+    "totalTokensFresh": true,
+    "cacheRead": 5454938,
+    "cacheWrite": 0,
+    "compactionCount": 1
+  }
+}

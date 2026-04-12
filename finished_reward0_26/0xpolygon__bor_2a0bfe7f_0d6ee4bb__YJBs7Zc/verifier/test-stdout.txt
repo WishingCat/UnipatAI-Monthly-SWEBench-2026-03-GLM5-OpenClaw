@@ -1,0 +1,24 @@
+[REGRESSION_DIRECT] START existing_no_wit_peer_behavior
+ok  	github.com/ethereum/go-ethereum/eth	0.025s
+[REGRESSION_DIRECT] PASS existing_no_wit_peer_behavior
+[FAIL2PASS_CORE] START request_close_shim_closes_cancel
+ok  	github.com/ethereum/go-ethereum/eth	0.023s
+[FAIL2PASS_CORE] PASS request_close_shim_closes_cancel
+[FAIL2PASS_EDGE] START request_witnesses_cancel_stops_leaking
+--- FAIL: TestTBPR2157_RequestWitnessesCancelStopsLeaking (1.05s)
+    --- FAIL: TestTBPR2157_RequestWitnessesCancelStopsLeaking/hash_count_1 (0.52s)
+        task_pr2157_witness_leak_test.go:77: 
+            	Error Trace:	/app/bor/eth/task_pr2157_witness_leak_test.go:77
+            	Error:      	"11" is not less than or equal to "10"
+            	Test:       	TestTBPR2157_RequestWitnessesCancelStopsLeaking/hash_count_1
+            	Messages:   	goroutines leaked after cancellation (before=8, after=11)
+    --- FAIL: TestTBPR2157_RequestWitnessesCancelStopsLeaking/hash_count_3 (0.52s)
+        task_pr2157_witness_leak_test.go:77: 
+            	Error Trace:	/app/bor/eth/task_pr2157_witness_leak_test.go:77
+            	Error:      	"20" is not less than or equal to "17"
+            	Test:       	TestTBPR2157_RequestWitnessesCancelStopsLeaking/hash_count_3
+            	Messages:   	goroutines leaked after cancellation (before=15, after=20)
+FAIL
+FAIL	github.com/ethereum/go-ethereum/eth	1.072s
+FAIL
+[FAIL2PASS_EDGE] FAIL request_witnesses_cancel_stops_leaking

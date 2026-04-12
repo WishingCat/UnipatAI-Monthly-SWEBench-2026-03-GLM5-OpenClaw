@@ -1,0 +1,203 @@
+[REGRESSION_DIRECT] running ^TestTaskRegressionDirect_F3AheadUsesF3Finalized$
+go: downloading github.com/filecoin-project/go-f3 v0.8.12
+go: downloading github.com/filecoin-project/go-state-types v0.18.0-dev
+go: downloading golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da
+go: downloading github.com/filecoin-project/go-address v1.2.0
+go: downloading github.com/ipfs/go-cid v0.6.0
+go: downloading github.com/multiformats/go-multihash v0.2.3
+go: downloading github.com/stretchr/testify v1.11.1
+go: downloading github.com/filecoin-project/go-bitfield v0.2.4
+go: downloading github.com/whyrusleeping/cbor-gen v0.3.1
+go: downloading github.com/hashicorp/golang-lru/v2 v2.0.7
+go: downloading github.com/ipfs/go-datastore v0.9.1
+go: downloading github.com/hashicorp/golang-lru v1.0.2
+go: downloading github.com/ipfs/go-log/v2 v2.9.1
+go: downloading github.com/libp2p/go-libp2p-pubsub v0.15.0
+go: downloading github.com/ipfs/go-log v1.0.5
+go: downloading github.com/libp2p/go-libp2p v0.47.0
+go: downloading go.opentelemetry.io/otel v1.40.0
+go: downloading go.opentelemetry.io/otel/metric v1.40.0
+go: downloading go.uber.org/multierr v1.11.0
+go: downloading golang.org/x/sync v0.19.0
+go: downloading github.com/filecoin-project/go-jsonrpc v0.10.1
+go: downloading github.com/google/uuid v1.6.0
+go: downloading github.com/ipfs/go-block-format v0.2.3
+go: downloading github.com/filecoin-project/specs-actors/v2 v2.3.6
+go: downloading github.com/filecoin-project/specs-actors v0.9.15
+go: downloading github.com/filecoin-project/specs-actors/v3 v3.1.2
+go: downloading github.com/filecoin-project/specs-actors/v4 v4.0.2
+go: downloading github.com/filecoin-project/specs-actors/v5 v5.0.6
+go: downloading github.com/filecoin-project/specs-actors/v6 v6.0.2
+go: downloading github.com/filecoin-project/specs-actors/v7 v7.0.1
+go: downloading github.com/invopop/jsonschema v0.13.0
+go: downloading go.uber.org/zap v1.27.1
+go: downloading golang.org/x/crypto v0.48.0
+go: downloading github.com/filecoin-project/go-crypto v0.1.0
+go: downloading github.com/filecoin-project/go-keccak v0.1.0
+go: downloading github.com/multiformats/go-varint v0.1.0
+go: downloading github.com/ipfs/go-ipld-cbor v0.2.1
+go: downloading github.com/polydawn/refmt v0.89.1-0.20231129105047-37766d95467a
+go: downloading github.com/minio/sha256-simd v1.0.1
+go: downloading github.com/mr-tron/base58 v1.2.0
+go: downloading github.com/multiformats/go-multibase v0.2.0
+go: downloading github.com/filecoin-project/go-clock v0.1.0
+go: downloading github.com/klauspost/compress v1.18.4
+go: downloading github.com/gogo/protobuf v1.3.2
+go: downloading github.com/libp2p/go-buffer-pool v0.1.0
+go: downloading github.com/libp2p/go-msgio v0.3.0
+go: downloading github.com/multiformats/go-multiaddr v0.16.1
+go: downloading github.com/mattn/go-isatty v0.0.20
+go: downloading github.com/multiformats/go-multicodec v0.10.0
+go: downloading google.golang.org/protobuf v1.36.11
+go: downloading github.com/go-logr/logr v1.4.3
+go: downloading go.opentelemetry.io/otel/trace v1.40.0
+go: downloading github.com/gorilla/websocket v1.5.3
+go: downloading go.opencensus.io v0.24.0
+go: downloading github.com/gbrlsnchs/jwt/v3 v3.0.1
+go: downloading github.com/ipfs/boxo v0.37.0
+go: downloading github.com/libp2p/go-flow-metrics v0.3.0
+go: downloading github.com/multiformats/go-multistream v0.6.1
+go: downloading github.com/pkg/errors v0.9.1
+go: downloading github.com/filecoin-project/go-hamt-ipld v0.1.5
+go: downloading github.com/filecoin-project/go-hamt-ipld/v2 v2.0.0
+go: downloading github.com/wk8/go-ordered-map/v2 v2.1.8
+go: downloading gitlab.com/yawning/secp256k1-voi v0.0.0-20230925100816-f2616030848b
+go: downloading golang.org/x/sys v0.41.0
+go: downloading github.com/icza/backscanner v0.0.0-20210726202459-ac2ffc679f94
+go: downloading github.com/ipld/go-car v0.6.3
+go: downloading github.com/raulk/clock v1.1.0
+go: downloading github.com/ipfs/go-ipld-format v0.6.3
+go: downloading github.com/klauspost/cpuid/v2 v2.3.0
+go: downloading github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc
+go: downloading github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2
+go: downloading github.com/multiformats/go-base32 v0.1.0
+go: downloading github.com/multiformats/go-base36 v0.2.0
+go: downloading github.com/decred/dcrd/dcrec/secp256k1/v4 v4.4.0
+go: downloading github.com/multiformats/go-multiaddr-fmt v0.1.0
+go: downloading golang.org/x/exp v0.0.0-20260212183809-81e46e3db34a
+go: downloading github.com/go-logr/stdr v1.2.2
+go: downloading go.opentelemetry.io/auto/sdk v1.2.1
+go: downloading github.com/cespare/xxhash/v2 v2.3.0
+go: downloading github.com/cespare/xxhash v1.1.0
+go: downloading github.com/golang/groupcache v0.0.0-20241129210726-2c02b8208cf8
+go: downloading github.com/filecoin-project/go-amt-ipld/v4 v4.4.0
+go: downloading github.com/filecoin-project/go-hamt-ipld/v3 v3.4.1
+go: downloading github.com/filecoin-project/go-amt-ipld/v2 v2.1.0
+go: downloading github.com/filecoin-project/go-amt-ipld/v3 v3.1.0
+go: downloading github.com/spaolacci/murmur3 v1.1.0
+go: downloading github.com/bahlo/generic-list-go v0.2.0
+go: downloading github.com/buger/jsonparser v1.1.1
+go: downloading github.com/mailru/easyjson v0.7.7
+go: downloading gopkg.in/yaml.v3 v3.0.1
+go: downloading gitlab.com/yawning/tuplehash v0.0.0-20230713102510-df83abbf9a02
+go: downloading github.com/multiformats/go-multiaddr-dns v0.5.0
+go: downloading github.com/ipld/go-codec-dagpb v1.7.0
+go: downloading github.com/ipld/go-ipld-prime v0.22.0
+go: downloading lukechampine.com/blake3 v1.4.1
+go: downloading github.com/ipfs/bbloom v0.0.4
+go: downloading github.com/ipfs/go-metrics-interface v0.3.0
+go: downloading github.com/gammazero/deque v1.2.1
+go: downloading github.com/ipfs/go-ipld-legacy v0.2.2
+go: downloading github.com/opentracing/opentracing-go v1.2.0
+go: downloading github.com/gammazero/chanqueue v1.1.2
+go: downloading github.com/ipfs/go-cidutil v0.1.1
+go: downloading github.com/ipfs/go-dsqueue v0.2.0
+ok  	command-line-arguments	0.011s
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] running ^TestTaskFail2PassCore_F3AtECDepthUsesECFinalized$
+--- FAIL: TestTaskFail2PassCore_F3AtECDepthUsesECFinalized (0.00s)
+    tipsetresolver_task_test.go:187: 
+        	Error Trace:	/app/lotus/node/impl/eth/tipsetresolver_task_test.go:187
+        	Error:      	Not equal: 
+        	            	expected: types.TipSetKey{value:"\x01q\xa0\xe4\x02 \xdd\xe2wn\x13\xe4\x0fJ\xd7\xc1\xddBw6!\f5\x81?ȥ\x82\xd7SDq\xf3\x192\xf7\xa0q"}
+        	            	actual  : types.TipSetKey{value:"\x01q\xa0\xe4\x02 a\xe6b1L\x1b\xa0\x7f\xb1\xdew~[\x8b\xfbDS\x10-.\x10\xe6i(URi?\x93&k\xa2"}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,3 +1,3 @@
+        	            	 (types.TipSetKey) {
+        	            	- value: (string) (len=38) "\x01q\xa0\xe4\x02 \xdd\xe2wn\x13\xe4\x0fJ\xd7\xc1\xddBw6!\f5\x81?ȥ\x82\xd7SDq\xf3\x192\xf7\xa0q"
+        	            	+ value: (string) (len=38) "\x01q\xa0\xe4\x02 a\xe6b1L\x1b\xa0\x7f\xb1\xdew~[\x8b\xfbDS\x10-.\x10\xe6i(URi?\x93&k\xa2"
+        	            	 }
+        	Test:       	TestTaskFail2PassCore_F3AtECDepthUsesECFinalized
+FAIL
+FAIL	command-line-arguments	0.010s
+FAIL
+[FAIL2PASS_CORE] FAIL
+[FAIL2PASS_ERROR_HANDLING] running ^TestTaskFail2PassErrorHandling_
+--- FAIL: TestTaskFail2PassErrorHandling_SafeECTipSetWithoutHeadReturnsError (0.00s)
+    tipsetresolver_task_test.go:195: 
+        	Error Trace:	/app/lotus/node/impl/eth/tipsetresolver_task_test.go:195
+        	Error:      	func (assert.PanicTestFunc)(0xd6b8e0) should not panic
+        	            		Panic value:	runtime error: invalid memory address or nil pointer dereference
+        	            		Panic stack:	goroutine 8 [running]:
+        	            	runtime/debug.Stack()
+        	            		/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+        	            	github.com/stretchr/testify/assert.didPanic.func1()
+        	            		/go/pkg/mod/github.com/stretchr/testify@v1.11.1/assert/assertions.go:1286 +0x6b
+        	            	panic({0xe5d960?, 0x16ec870?})
+        	            		/usr/local/go/src/runtime/panic.go:783 +0x132
+        	            	github.com/filecoin-project/lotus/chain/types.(*TipSet).Height(...)
+        	            		/app/lotus/chain/types/tipset.go:153
+        	            	command-line-arguments.(*tipSetResolver).getSafeECTipSet(0xc0003b5110, {0x1158b58, 0x1774840})
+        	            		/app/lotus/node/impl/eth/tipsetresolver.go:114 +0x3e
+        	            	command-line-arguments.(*tipSetResolver).getTipSetByTag(0xc0003b5110, {0x1158b58, 0x1774840}, {0xf940a5, 0x4})
+        	            		/app/lotus/node/impl/eth/tipsetresolver.go:152 +0x9a
+        	            	command-line-arguments.(*tipSetResolver).GetTipsetByBlockNumber(0xc0003b5110, {0x1158b58, 0x1774840}, {0xf940a5?, 0xc0001d3dd8?}, 0x0)
+        	            		/app/lotus/node/impl/eth/tipsetresolver.go:166 +0xc7
+        	            	command-line-arguments.TestTaskFail2PassErrorHandling_SafeECTipSetWithoutHeadReturnsError.func1()
+        	            		/app/lotus/node/impl/eth/tipsetresolver_task_test.go:196 +0x3d
+        	            	github.com/stretchr/testify/assert.didPanic(0x171def0?)
+        	            		/go/pkg/mod/github.com/stretchr/testify@v1.11.1/assert/assertions.go:1291 +0x70
+        	            	github.com/stretchr/testify/assert.NotPanics({0x74b60e55dae0, 0xc000003a40}, 0xc000134cc0, {0x0, 0x0, 0x0})
+        	            		/go/pkg/mod/github.com/stretchr/testify@v1.11.1/assert/assertions.go:1362 +0x7e
+        	            	github.com/stretchr/testify/require.NotPanics({0x1156128, 0xc000003a40}, 0xc000134cc0, {0x0, 0x0, 0x0})
+        	            		/go/pkg/mod/github.com/stretchr/testify@v1.11.1/require/require.go:1711 +0xa6
+        	            	command-line-arguments.TestTaskFail2PassErrorHandling_SafeECTipSetWithoutHeadReturnsError(0xc000003a40)
+        	            		/app/lotus/node/impl/eth/tipsetresolver_task_test.go:195 +0xdd
+        	            	testing.tRunner(0xc000003a40, 0x107f6a8)
+        	            		/usr/local/go/src/testing/testing.go:1934 +0xea
+        	            	created by testing.(*T).Run in goroutine 1
+        	            		/usr/local/go/src/testing/testing.go:1997 +0x465
+        	Test:       	TestTaskFail2PassErrorHandling_SafeECTipSetWithoutHeadReturnsError
+--- FAIL: TestTaskFail2PassErrorHandling_FinalizedECTipSetWithoutHeadReturnsError (0.00s)
+    tipsetresolver_task_test.go:206: 
+        	Error Trace:	/app/lotus/node/impl/eth/tipsetresolver_task_test.go:206
+        	Error:      	func (assert.PanicTestFunc)(0xd6bae0) should not panic
+        	            		Panic value:	runtime error: invalid memory address or nil pointer dereference
+        	            		Panic stack:	goroutine 9 [running]:
+        	            	runtime/debug.Stack()
+        	            		/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+        	            	github.com/stretchr/testify/assert.didPanic.func1()
+        	            		/go/pkg/mod/github.com/stretchr/testify@v1.11.1/assert/assertions.go:1286 +0x6b
+        	            	panic({0xe5d960?, 0x16ec870?})
+        	            		/usr/local/go/src/runtime/panic.go:783 +0x132
+        	            	github.com/filecoin-project/lotus/chain/types.(*TipSet).Height(...)
+        	            		/app/lotus/chain/types/tipset.go:153
+        	            	command-line-arguments.(*tipSetResolver).getFinalizedECTipSet(0xc00008b080, {0x1158b58, 0x1774840})
+        	            		/app/lotus/node/impl/eth/tipsetresolver.go:131 +0x3a
+        	            	command-line-arguments.(*tipSetResolver).getTipSetByTag(0xc00008b080, {0x1158b58, 0x1774840}, {0xf95c33, 0x9})
+        	            		/app/lotus/node/impl/eth/tipsetresolver.go:157 +0x28c
+        	            	command-line-arguments.(*tipSetResolver).GetTipsetByBlockNumber(0xc00008b080, {0x1158b58, 0x1774840}, {0xf95c33?, 0xc000048dd8?}, 0x0)
+        	            		/app/lotus/node/impl/eth/tipsetresolver.go:166 +0xc7
+        	            	command-line-arguments.TestTaskFail2PassErrorHandling_FinalizedECTipSetWithoutHeadReturnsError.func1()
+        	            		/app/lotus/node/impl/eth/tipsetresolver_task_test.go:207 +0x3d
+        	            	github.com/stretchr/testify/assert.didPanic(0x171def0?)
+        	            		/go/pkg/mod/github.com/stretchr/testify@v1.11.1/assert/assertions.go:1291 +0x70
+        	            	github.com/stretchr/testify/assert.NotPanics({0x74b60e55dae0, 0xc000003dc0}, 0xc000010180, {0x0, 0x0, 0x0})
+        	            		/go/pkg/mod/github.com/stretchr/testify@v1.11.1/assert/assertions.go:1362 +0x7e
+        	            	github.com/stretchr/testify/require.NotPanics({0x1156128, 0xc000003dc0}, 0xc000010180, {0x0, 0x0, 0x0})
+        	            		/go/pkg/mod/github.com/stretchr/testify@v1.11.1/require/require.go:1711 +0xa6
+        	            	command-line-arguments.TestTaskFail2PassErrorHandling_FinalizedECTipSetWithoutHeadReturnsError(0xc000003dc0)
+        	            		/app/lotus/node/impl/eth/tipsetresolver_task_test.go:206 +0xdd
+        	            	testing.tRunner(0xc000003dc0, 0x107f6a0)
+        	            		/usr/local/go/src/testing/testing.go:1934 +0xea
+        	            	created by testing.(*T).Run in goroutine 1
+        	            		/usr/local/go/src/testing/testing.go:1997 +0x465
+        	Test:       	TestTaskFail2PassErrorHandling_FinalizedECTipSetWithoutHeadReturnsError
+FAIL
+FAIL	command-line-arguments	0.011s
+FAIL
+[FAIL2PASS_ERROR_HANDLING] FAIL
+At least one test group failed

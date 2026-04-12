@@ -1,0 +1,41 @@
+[REGRESSION_DIRECT] START - container runtime required extension still present
+# github.com/gardener/gardener/pkg/apis/extensions/v1alpha1
+pkg/apis/extensions/v1alpha1/types_selfhostedshootexposure.go:11:16: cannot use (*SelfHostedShootExposure)(nil) (value of type *SelfHostedShootExposure) as Object value in variable declaration: *SelfHostedShootExposure does not implement Object (missing method DeepCopyObject)
+pkg/apis/extensions/v1alpha1/register.go:60:3: cannot use &SelfHostedShootExposure{} (value of type *SelfHostedShootExposure) as "k8s.io/apimachinery/pkg/runtime".Object value in argument to scheme.AddKnownTypes: *SelfHostedShootExposure does not implement "k8s.io/apimachinery/pkg/runtime".Object (missing method DeepCopyObject)
+pkg/apis/extensions/v1alpha1/register.go:61:3: cannot use &SelfHostedShootExposureList{} (value of type *SelfHostedShootExposureList) as "k8s.io/apimachinery/pkg/runtime".Object value in argument to scheme.AddKnownTypes: *SelfHostedShootExposureList does not implement "k8s.io/apimachinery/pkg/runtime".Object (missing method DeepCopyObject)
+FAIL	github.com/gardener/gardener/pkg/utils/gardener [build failed]
+FAIL
+[REGRESSION_DIRECT] FAIL  - container runtime required extension still present
+[REGRESSION_DEPENDENT] START - existing workers webhook resource remains protected
+# github.com/gardener/gardener/pkg/apis/extensions/v1alpha1
+pkg/apis/extensions/v1alpha1/types_selfhostedshootexposure.go:11:16: cannot use (*SelfHostedShootExposure)(nil) (value of type *SelfHostedShootExposure) as Object value in variable declaration: *SelfHostedShootExposure does not implement Object (missing method DeepCopyObject)
+pkg/apis/extensions/v1alpha1/register.go:60:3: cannot use &SelfHostedShootExposure{} (value of type *SelfHostedShootExposure) as "k8s.io/apimachinery/pkg/runtime".Object value in argument to scheme.AddKnownTypes: *SelfHostedShootExposure does not implement "k8s.io/apimachinery/pkg/runtime".Object (missing method DeepCopyObject)
+pkg/apis/extensions/v1alpha1/register.go:61:3: cannot use &SelfHostedShootExposureList{} (value of type *SelfHostedShootExposureList) as "k8s.io/apimachinery/pkg/runtime".Object value in argument to scheme.AddKnownTypes: *SelfHostedShootExposureList does not implement "k8s.io/apimachinery/pkg/runtime".Object (missing method DeepCopyObject)
+FAIL	github.com/gardener/gardener/pkg/component/gardener/resourcemanager [build failed]
+FAIL
+[REGRESSION_DEPENDENT] FAIL  - existing workers webhook resource remains protected
+[FAIL2PASS_CORE] START - self-hosted exposure required extension and webhook coverage
+# github.com/gardener/gardener/pkg/apis/extensions/v1alpha1
+pkg/apis/extensions/v1alpha1/types_selfhostedshootexposure.go:11:16: cannot use (*SelfHostedShootExposure)(nil) (value of type *SelfHostedShootExposure) as Object value in variable declaration: *SelfHostedShootExposure does not implement Object (missing method DeepCopyObject)
+pkg/apis/extensions/v1alpha1/register.go:60:3: cannot use &SelfHostedShootExposure{} (value of type *SelfHostedShootExposure) as "k8s.io/apimachinery/pkg/runtime".Object value in argument to scheme.AddKnownTypes: *SelfHostedShootExposure does not implement "k8s.io/apimachinery/pkg/runtime".Object (missing method DeepCopyObject)
+pkg/apis/extensions/v1alpha1/register.go:61:3: cannot use &SelfHostedShootExposureList{} (value of type *SelfHostedShootExposureList) as "k8s.io/apimachinery/pkg/runtime".Object value in argument to scheme.AddKnownTypes: *SelfHostedShootExposureList does not implement "k8s.io/apimachinery/pkg/runtime".Object (missing method DeepCopyObject)
+FAIL	github.com/gardener/gardener/pkg/utils/gardener [build failed]
+FAIL
+[FAIL2PASS_CORE] FAIL  - self-hosted exposure required extension and webhook coverage
+[FAIL2PASS_EDGE] START - label enrichment/cleanup and multi-worker validation
+# github.com/gardener/gardener/pkg/apis/extensions/v1alpha1
+pkg/apis/extensions/v1alpha1/types_selfhostedshootexposure.go:11:16: cannot use (*SelfHostedShootExposure)(nil) (value of type *SelfHostedShootExposure) as Object value in variable declaration: *SelfHostedShootExposure does not implement Object (missing method DeepCopyObject)
+pkg/apis/extensions/v1alpha1/register.go:60:3: cannot use &SelfHostedShootExposure{} (value of type *SelfHostedShootExposure) as "k8s.io/apimachinery/pkg/runtime".Object value in argument to scheme.AddKnownTypes: *SelfHostedShootExposure does not implement "k8s.io/apimachinery/pkg/runtime".Object (missing method DeepCopyObject)
+pkg/apis/extensions/v1alpha1/register.go:61:3: cannot use &SelfHostedShootExposureList{} (value of type *SelfHostedShootExposureList) as "k8s.io/apimachinery/pkg/runtime".Object value in argument to scheme.AddKnownTypes: *SelfHostedShootExposureList does not implement "k8s.io/apimachinery/pkg/runtime".Object (missing method DeepCopyObject)
+FAIL	github.com/gardener/gardener/plugin/pkg/global/extensionlabels [build failed]
+FAIL
+[FAIL2PASS_EDGE] FAIL  - label enrichment/cleanup and multi-worker validation
+[FAIL2PASS_ERROR_HANDLING] START - missing exposure registration reports actionable validation error
+# github.com/gardener/gardener/pkg/apis/extensions/v1alpha1
+pkg/apis/extensions/v1alpha1/types_selfhostedshootexposure.go:11:16: cannot use (*SelfHostedShootExposure)(nil) (value of type *SelfHostedShootExposure) as Object value in variable declaration: *SelfHostedShootExposure does not implement Object (missing method DeepCopyObject)
+pkg/apis/extensions/v1alpha1/register.go:60:3: cannot use &SelfHostedShootExposure{} (value of type *SelfHostedShootExposure) as "k8s.io/apimachinery/pkg/runtime".Object value in argument to scheme.AddKnownTypes: *SelfHostedShootExposure does not implement "k8s.io/apimachinery/pkg/runtime".Object (missing method DeepCopyObject)
+pkg/apis/extensions/v1alpha1/register.go:61:3: cannot use &SelfHostedShootExposureList{} (value of type *SelfHostedShootExposureList) as "k8s.io/apimachinery/pkg/runtime".Object value in argument to scheme.AddKnownTypes: *SelfHostedShootExposureList does not implement "k8s.io/apimachinery/pkg/runtime".Object (missing method DeepCopyObject)
+FAIL	github.com/gardener/gardener/plugin/pkg/global/extensionvalidation [build failed]
+FAIL
+[FAIL2PASS_ERROR_HANDLING] FAIL  - missing exposure registration reports actionable validation error
+5 test group(s) failed.

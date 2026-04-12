@@ -1,0 +1,410 @@
+[REGRESSION_DIRECT] number parity regressions running
+Begin GC looping...
+=== RUN   TestTB917RegressionDirectNumberSliceParity
+--- PASS: TestTB917RegressionDirectNumberSliceParity (0.00s)
+=== RUN   TestTB917RegressionDirectNumberKeyParity
+--- PASS: TestTB917RegressionDirectNumberKeyParity (0.00s)
+PASS
+ok  	github.com/bytedance/sonic/issue_test	0.021s
+[REGRESSION_DIRECT] number parity regressions pass
+[FAIL2PASS_CORE] string-tag mismatch continuation running
+Begin GC looping...
+=== RUN   TestTB917Fail2PassCoreStringTagMismatchContinues
+    common_test.go:36: 
+        	Error Trace:	/app/sonic/issue_test/common_test.go:36
+        	            				/app/sonic/issue_test/tb917_parity_test.go:65
+        	Error:      	Not equal: 
+        	            	expected: &issue_test.issue916Dst{ID:0, Name:"test1"}
+        	            	actual  : &issue_test.issue916Dst{ID:0, Name:""}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -2,3 +2,3 @@
+        	            	  ID: (int64) 0,
+        	            	- Name: (string) (len=5) "test1"
+        	            	+ Name: (string) ""
+        	            	 })
+        	Test:       	TestTB917Fail2PassCoreStringTagMismatchContinues
+        	Messages:   	(*issue_test.issue916Dst)(0xc00029a150)({
+        	            	 ID: (int64) 0,
+        	            	 Name: (string) (len=5) "test1"
+        	            	})
+        	            	(*issue_test.issue916Dst)(0xc00029a138)({
+        	            	 ID: (int64) 0,
+        	            	 Name: (string) ""
+        	            	})
+    common_test.go:36: 
+        	Error Trace:	/app/sonic/issue_test/common_test.go:36
+        	            				/app/sonic/issue_test/tb917_parity_test.go:66
+        	Error:      	Not equal: 
+        	            	expected: &issue_test.issue916Dst{ID:0, Name:"test1"}
+        	            	actual  : &issue_test.issue916Dst{ID:0, Name:""}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -2,3 +2,3 @@
+        	            	  ID: (int64) 0,
+        	            	- Name: (string) (len=5) "test1"
+        	            	+ Name: (string) ""
+        	            	 })
+        	Test:       	TestTB917Fail2PassCoreStringTagMismatchContinues
+        	Messages:   	(*issue_test.issue916Dst)(0xc000012060)({
+        	            	 ID: (int64) 0,
+        	            	 Name: (string) (len=5) "test1"
+        	            	})
+        	            	(*issue_test.issue916Dst)(0xc000012048)({
+        	            	 ID: (int64) 0,
+        	            	 Name: (string) ""
+        	            	})
+--- FAIL: TestTB917Fail2PassCoreStringTagMismatchContinues (0.01s)
+=== RUN   TestTB917Fail2PassCoreStringTagMismatchWithLowInlineDepth
+    common_test.go:36: 
+        	Error Trace:	/app/sonic/issue_test/common_test.go:36
+        	            				/app/sonic/issue_test/tb917_parity_test.go:100
+        	Error:      	Not equal: 
+        	            	expected: &issue_test.issue916Dst{ID:0, Name:"test1"}
+        	            	actual  : &issue_test.issue916Dst{ID:0, Name:""}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -2,3 +2,3 @@
+        	            	  ID: (int64) 0,
+        	            	- Name: (string) (len=5) "test1"
+        	            	+ Name: (string) ""
+        	            	 })
+        	Test:       	TestTB917Fail2PassCoreStringTagMismatchWithLowInlineDepth
+        	Messages:   	(*issue_test.issue916Dst)(0xc000012078)({
+        	            	 ID: (int64) 0,
+        	            	 Name: (string) (len=5) "test1"
+        	            	})
+        	            	(*issue_test.issue916Dst)(0xc000012030)({
+        	            	 ID: (int64) 0,
+        	            	 Name: (string) ""
+        	            	})
+    common_test.go:36: 
+        	Error Trace:	/app/sonic/issue_test/common_test.go:36
+        	            				/app/sonic/issue_test/tb917_parity_test.go:101
+        	Error:      	Not equal: 
+        	            	expected: &issue_test.issue916Dst{ID:0, Name:"test1"}
+        	            	actual  : &issue_test.issue916Dst{ID:0, Name:""}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -2,3 +2,3 @@
+        	            	  ID: (int64) 0,
+        	            	- Name: (string) (len=5) "test1"
+        	            	+ Name: (string) ""
+        	            	 })
+        	Test:       	TestTB917Fail2PassCoreStringTagMismatchWithLowInlineDepth
+        	Messages:   	(*issue_test.issue916Dst)(0xc000012048)({
+        	            	 ID: (int64) 0,
+        	            	 Name: (string) (len=5) "test1"
+        	            	})
+        	            	(*issue_test.issue916Dst)(0xc000012018)({
+        	            	 ID: (int64) 0,
+        	            	 Name: (string) ""
+        	            	})
+--- FAIL: TestTB917Fail2PassCoreStringTagMismatchWithLowInlineDepth (0.01s)
+FAIL
+FAIL	github.com/bytedance/sonic/issue_test	0.034s
+FAIL
+[FAIL2PASS_CORE] string-tag mismatch continuation fail
+[FAIL2PASS_EDGE] integer range mismatch continuation running
+Begin GC looping...
+=== RUN   TestTB917Fail2PassEdgeIntegerRangeMismatchContinues
+    common_test.go:36: 
+        	Error Trace:	/app/sonic/issue_test/common_test.go:36
+        	            				/app/sonic/issue_test/tb917_parity_test.go:164
+        	Error:      	Not equal: 
+        	            	expected: &struct { A int8; B int }{A:0, B:2}
+        	            	actual  : &struct { A int8; B int }{A:0, B:0}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -2,3 +2,3 @@
+        	            	  A: (int8) 0,
+        	            	- B: (int) 2
+        	            	+ B: (int) 0
+        	            	 })
+        	Test:       	TestTB917Fail2PassEdgeIntegerRangeMismatchContinues
+        	Messages:   	(*struct { A int8; B int })(0xc0003f4150)({
+        	            	 A: (int8) 0,
+        	            	 B: (int) 2
+        	            	})
+        	            	(*struct { A int8; B int })(0xc0003f4140)({
+        	            	 A: (int8) 0,
+        	            	 B: (int) 0
+        	            	})
+    common_test.go:36: 
+        	Error Trace:	/app/sonic/issue_test/common_test.go:36
+        	            				/app/sonic/issue_test/tb917_parity_test.go:165
+        	Error:      	Not equal: 
+        	            	expected: &struct { A int8; B int }{A:0, B:2}
+        	            	actual  : &struct { A int8; B int }{A:0, B:0}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -2,3 +2,3 @@
+        	            	  A: (int8) 0,
+        	            	- B: (int) 2
+        	            	+ B: (int) 0
+        	            	 })
+        	Test:       	TestTB917Fail2PassEdgeIntegerRangeMismatchContinues
+        	Messages:   	(*struct { A int8; B int })(0xc000126070)({
+        	            	 A: (int8) 0,
+        	            	 B: (int) 2
+        	            	})
+        	            	(*struct { A int8; B int })(0xc000126060)({
+        	            	 A: (int8) 0,
+        	            	 B: (int) 0
+        	            	})
+    common_test.go:36: 
+        	Error Trace:	/app/sonic/issue_test/common_test.go:36
+        	            				/app/sonic/issue_test/tb917_parity_test.go:164
+        	Error:      	Not equal: 
+        	            	expected: &struct { A int16; B int }{A:0, B:2}
+        	            	actual  : &struct { A int16; B int }{A:0, B:0}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -2,3 +2,3 @@
+        	            	  A: (int16) 0,
+        	            	- B: (int) 2
+        	            	+ B: (int) 0
+        	            	 })
+        	Test:       	TestTB917Fail2PassEdgeIntegerRangeMismatchContinues
+        	Messages:   	(*struct { A int16; B int })(0xc0001262a0)({
+        	            	 A: (int16) 0,
+        	            	 B: (int) 2
+        	            	})
+        	            	(*struct { A int16; B int })(0xc000126290)({
+        	            	 A: (int16) 0,
+        	            	 B: (int) 0
+        	            	})
+    common_test.go:36: 
+        	Error Trace:	/app/sonic/issue_test/common_test.go:36
+        	            				/app/sonic/issue_test/tb917_parity_test.go:165
+        	Error:      	Not equal: 
+        	            	expected: &struct { A int16; B int }{A:0, B:2}
+        	            	actual  : &struct { A int16; B int }{A:0, B:0}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -2,3 +2,3 @@
+        	            	  A: (int16) 0,
+        	            	- B: (int) 2
+        	            	+ B: (int) 0
+        	            	 })
+        	Test:       	TestTB917Fail2PassEdgeIntegerRangeMismatchContinues
+        	Messages:   	(*struct { A int16; B int })(0xc0003f4150)({
+        	            	 A: (int16) 0,
+        	            	 B: (int) 2
+        	            	})
+        	            	(*struct { A int16; B int })(0xc0003f4140)({
+        	            	 A: (int16) 0,
+        	            	 B: (int) 0
+        	            	})
+    common_test.go:36: 
+        	Error Trace:	/app/sonic/issue_test/common_test.go:36
+        	            				/app/sonic/issue_test/tb917_parity_test.go:164
+        	Error:      	Not equal: 
+        	            	expected: &struct { M map[int8]int; T int }{M:map[int8]int{1:1, 2:3}, T:9}
+        	            	actual  : &struct { M map[int8]int; T int }{M:map[int8]int{1:1}, T:0}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,7 +1,6 @@
+        	            	 (*struct { M map[int8]int; T int })({
+        	            	- M: (map[int8]int) (len=2) {
+        	            	-  (int8) 1: (int) 1,
+        	            	-  (int8) 2: (int) 3
+        	            	+ M: (map[int8]int) (len=1) {
+        	            	+  (int8) 1: (int) 1
+        	            	  },
+        	            	- T: (int) 9
+        	            	+ T: (int) 0
+        	            	 })
+        	Test:       	TestTB917Fail2PassEdgeIntegerRangeMismatchContinues
+        	Messages:   	(*struct { M map[int8]int; T int })(0xc000118290)({
+        	            	 M: (map[int8]int) (len=2) {
+        	            	  (int8) 1: (int) 1,
+        	            	  (int8) 2: (int) 3
+        	            	 },
+        	            	 T: (int) 9
+        	            	})
+        	            	(*struct { M map[int8]int; T int })(0xc000118280)({
+        	            	 M: (map[int8]int) (len=1) {
+        	            	  (int8) 1: (int) 1
+        	            	 },
+        	            	 T: (int) 0
+        	            	})
+    common_test.go:36: 
+        	Error Trace:	/app/sonic/issue_test/common_test.go:36
+        	            				/app/sonic/issue_test/tb917_parity_test.go:165
+        	Error:      	Not equal: 
+        	            	expected: &struct { M map[int8]int; T int }{M:map[int8]int{1:1, 2:3}, T:9}
+        	            	actual  : &struct { M map[int8]int; T int }{M:map[int8]int{1:1}, T:0}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,7 +1,6 @@
+        	            	 (*struct { M map[int8]int; T int })({
+        	            	- M: (map[int8]int) (len=2) {
+        	            	-  (int8) 1: (int) 1,
+        	            	-  (int8) 2: (int) 3
+        	            	+ M: (map[int8]int) (len=1) {
+        	            	+  (int8) 1: (int) 1
+        	            	  },
+        	            	- T: (int) 9
+        	            	+ T: (int) 0
+        	            	 })
+        	Test:       	TestTB917Fail2PassEdgeIntegerRangeMismatchContinues
+        	Messages:   	(*struct { M map[int8]int; T int })(0xc00002e070)({
+        	            	 M: (map[int8]int) (len=2) {
+        	            	  (int8) 2: (int) 3,
+        	            	  (int8) 1: (int) 1
+        	            	 },
+        	            	 T: (int) 9
+        	            	})
+        	            	(*struct { M map[int8]int; T int })(0xc00002e050)({
+        	            	 M: (map[int8]int) (len=1) {
+        	            	  (int8) 1: (int) 1
+        	            	 },
+        	            	 T: (int) 0
+        	            	})
+--- FAIL: TestTB917Fail2PassEdgeIntegerRangeMismatchContinues (0.02s)
+FAIL
+FAIL	github.com/bytedance/sonic/issue_test	0.034s
+FAIL
+[FAIL2PASS_EDGE] integer range mismatch continuation fail
+[FAIL2PASS_ERROR_HANDLING] unsupported map-path continuation without panic running
+Begin GC looping...
+=== RUN   TestTB917Fail2PassErrorHandlingUnsupportedMapPathNoPanic
+    common_test.go:36: 
+        	Error Trace:	/app/sonic/issue_test/common_test.go:36
+        	            				/app/sonic/issue_test/tb917_parity_test.go:204
+        	Error:      	Not equal: 
+        	            	expected: &issue_test.unknownKeyMap{X:[]json.Number{"1", "2", "3"}, Y:map[*int]json.Number(nil), Z:map[int]func(){}}
+        	            	actual  : &issue_test.unknownKeyMap{X:[]json.Number(nil), Y:map[*int]json.Number(nil), Z:map[int]func()(nil)}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,10 +1,5 @@
+        	            	 (*issue_test.unknownKeyMap)({
+        	            	- X: ([]json.Number) (len=3) {
+        	            	-  (json.Number) (len=1) "1",
+        	            	-  (json.Number) (len=1) "2",
+        	            	-  (json.Number) (len=1) "3"
+        	            	- },
+        	            	+ X: ([]json.Number) <nil>,
+        	            	  Y: (map[*int]json.Number) <nil>,
+        	            	- Z: (map[int]func()) {
+        	            	- }
+        	            	+ Z: (map[int]func()) <nil>
+        	            	 })
+        	Test:       	TestTB917Fail2PassErrorHandlingUnsupportedMapPathNoPanic
+        	Messages:   	(*issue_test.unknownKeyMap)(0xc00032e6c0)({
+        	            	 X: ([]json.Number) (len=3 cap=4) {
+        	            	  (json.Number) (len=1) 1,
+        	            	  (json.Number) (len=1) 2,
+        	            	  (json.Number) (len=1) 3
+        	            	 },
+        	            	 Y: (map[*int]json.Number) <nil>,
+        	            	 Z: (map[int]func()) {
+        	            	 }
+        	            	})
+        	            	(*issue_test.unknownKeyMap)(0xc00032e690)({
+        	            	 X: ([]json.Number) <nil>,
+        	            	 Y: (map[*int]json.Number) <nil>,
+        	            	 Z: (map[int]func()) <nil>
+        	            	})
+    common_test.go:36: 
+        	Error Trace:	/app/sonic/issue_test/common_test.go:36
+        	            				/app/sonic/issue_test/tb917_parity_test.go:204
+        	Error:      	Not equal: 
+        	            	expected: &issue_test.unknownKeyMap{X:[]json.Number{"1", "2", "3"}, Y:map[*int]json.Number(nil), Z:map[int]func()(nil)}
+        	            	actual  : &issue_test.unknownKeyMap{X:[]json.Number(nil), Y:map[*int]json.Number(nil), Z:map[int]func()(nil)}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,7 +1,3 @@
+        	            	 (*issue_test.unknownKeyMap)({
+        	            	- X: ([]json.Number) (len=3) {
+        	            	-  (json.Number) (len=1) "1",
+        	            	-  (json.Number) (len=1) "2",
+        	            	-  (json.Number) (len=1) "3"
+        	            	- },
+        	            	+ X: ([]json.Number) <nil>,
+        	            	  Y: (map[*int]json.Number) <nil>,
+        	Test:       	TestTB917Fail2PassErrorHandlingUnsupportedMapPathNoPanic
+        	Messages:   	(*issue_test.unknownKeyMap)(0xc00032e7e0)({
+        	            	 X: ([]json.Number) (len=3 cap=4) {
+        	            	  (json.Number) (len=1) 1,
+        	            	  (json.Number) (len=1) 2,
+        	            	  (json.Number) (len=1) 3
+        	            	 },
+        	            	 Y: (map[*int]json.Number) <nil>,
+        	            	 Z: (map[int]func()) <nil>
+        	            	})
+        	            	(*issue_test.unknownKeyMap)(0xc00032e7b0)({
+        	            	 X: ([]json.Number) <nil>,
+        	            	 Y: (map[*int]json.Number) <nil>,
+        	            	 Z: (map[int]func()) <nil>
+        	            	})
+    common_test.go:36: 
+        	Error Trace:	/app/sonic/issue_test/common_test.go:36
+        	            				/app/sonic/issue_test/tb917_parity_test.go:204
+        	Error:      	Not equal: 
+        	            	expected: &issue_test.unknownKeyMap{X:[]json.Number{"1", "2", "3"}, Y:map[*int]json.Number(nil), Z:map[int]func(){}}
+        	            	actual  : &issue_test.unknownKeyMap{X:[]json.Number(nil), Y:map[*int]json.Number(nil), Z:map[int]func()(nil)}
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1,10 +1,5 @@
+        	            	 (*issue_test.unknownKeyMap)({
+        	            	- X: ([]json.Number) (len=3) {
+        	            	-  (json.Number) (len=1) "1",
+        	            	-  (json.Number) (len=1) "2",
+        	            	-  (json.Number) (len=1) "3"
+        	            	- },
+        	            	+ X: ([]json.Number) <nil>,
+        	            	  Y: (map[*int]json.Number) <nil>,
+        	            	- Z: (map[int]func()) {
+        	            	- }
+        	            	+ Z: (map[int]func()) <nil>
+        	            	 })
+        	Test:       	TestTB917Fail2PassErrorHandlingUnsupportedMapPathNoPanic
+        	Messages:   	(*issue_test.unknownKeyMap)(0xc00011ef90)({
+        	            	 X: ([]json.Number) (len=3 cap=4) {
+        	            	  (json.Number) (len=1) 1,
+        	            	  (json.Number) (len=1) 2,
+        	            	  (json.Number) (len=1) 3
+        	            	 },
+        	            	 Y: (map[*int]json.Number) <nil>,
+        	            	 Z: (map[int]func()) {
+        	            	 }
+        	            	})
+        	            	(*issue_test.unknownKeyMap)(0xc00011ef60)({
+        	            	 X: ([]json.Number) <nil>,
+        	            	 Y: (map[*int]json.Number) <nil>,
+        	            	 Z: (map[int]func()) <nil>
+        	            	})
+--- FAIL: TestTB917Fail2PassErrorHandlingUnsupportedMapPathNoPanic (0.00s)
+FAIL
+FAIL	github.com/bytedance/sonic/issue_test	0.015s
+FAIL
+[FAIL2PASS_ERROR_HANDLING] unsupported map-path continuation without panic fail
+overall: fail (3 groups failed)

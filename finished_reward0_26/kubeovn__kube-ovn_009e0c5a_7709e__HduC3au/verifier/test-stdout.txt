@@ -1,0 +1,30 @@
+[REGRESSION_DIRECT] START: dnat-add remains idempotent on exact match
+[REGRESSION_DIRECT] PASS: dnat-add remains idempotent on exact match
+[REGRESSION_DIRECT] START: snat-add remains idempotent on exact match
+[REGRESSION_DIRECT] PASS: snat-add remains idempotent on exact match
+[FAIL2PASS_CORE] START: floating-ip-del deletes by EIP identity
+expected command log to contain: -D EXCLUSIVE_DNAT -d 203.0.113.10/32 -j DNAT --to-destination 10.0.0.8
+--- cmd.log ---
+-t nat -D EXCLUSIVE_DNAT -d 203.0.113.10 -j DNAT --to-destination
+-t nat -D EXCLUSIVE_SNAT -s -j SNAT --to-source 203.0.113.10
+[FAIL2PASS_CORE] FAIL: floating-ip-del deletes by EIP identity (rc=1)
+[FAIL2PASS_EDGE] START: dnat-del deletes by identity triplet
+expected command log to contain: -D SHARED_DNAT -d 203.0.113.10/32 -p tcp -m tcp --dport 80 -j DNAT --to-destination 10.0.0.8:8080
+--- cmd.log ---
+[FAIL2PASS_EDGE] FAIL: dnat-del deletes by identity triplet (rc=1)
+[FAIL2PASS_ERROR_HANDLING] START: floating-ip-add rejects conflicting existing EIP mapping
+expected exit code != 0, got 0
+--- stdout ---
+floating-ip-add 203.0.113.10/32,10.0.0.9
+-A SNAT_FILTER -j SHARED_SNAT
+-A EXCLUSIVE_DNAT -d 203.0.113.10/32 -j DNAT --to-destination 10.0.0.8
+--- stderr ---
+[FAIL2PASS_ERROR_HANDLING] FAIL: floating-ip-add rejects conflicting existing EIP mapping (rc=1)
+[FAIL2PASS_ERROR_HANDLING] START: dnat-add rejects conflicting existing identity mapping
+expected exit code != 0, got 0
+--- stdout ---
+dnat-add 203.0.113.10/32,80,tcp,10.0.0.9,9090
+-A SNAT_FILTER -j SHARED_SNAT
+--- stderr ---
+[FAIL2PASS_ERROR_HANDLING] FAIL: dnat-add rejects conflicting existing identity mapping (rc=1)
+At least one test failed. reward=0

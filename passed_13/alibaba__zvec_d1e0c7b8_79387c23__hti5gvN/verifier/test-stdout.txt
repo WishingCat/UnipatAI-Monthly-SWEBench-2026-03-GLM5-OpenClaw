@@ -1,0 +1,18 @@
+[BUILD] Compiling quantized INT8 layout verifier
+[BUILD] PASS
+[REGRESSION_DIRECT] Running regression
+PASS record_quantizer_int8_round_trip
+PASS minus_inner_product_int4_matrix_unchanged
+GROUP PASS
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Running fail2pass_core
+PASS int8_layout_and_matrix_core_d8
+PASS int8_layout_and_matrix_core_d12
+GROUP PASS
+[FAIL2PASS_CORE] PASS
+[FAIL2PASS_EDGE] Running fail2pass_edge
+PASS int8_cosine_offsets_edge_d8
+PASS int8_cosine_offsets_edge_d12
+GROUP PASS
+[FAIL2PASS_EDGE] PASS
+Final reward: 1

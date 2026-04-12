@@ -1,0 +1,16 @@
+[REGRESSION_DIRECT] Running command: cd /app/godo && go test -run '^TestDedicatedInference_Get$' -count=1
+PASS
+ok  	github.com/digitalocean/godo	0.005s
+[REGRESSION_DIRECT] PASS
+
+[FAIL2PASS_CORE] Running command: cd /app/godo && go test -run '^TestTBDedicatedInferenceDelete_AcceptedResponses$' -count=1
+PASS
+ok  	github.com/digitalocean/godo	0.005s
+[FAIL2PASS_CORE] PASS
+
+[FAIL2PASS_ERROR_HANDLING] Running command: cd /app/godo && go test -run '^TestTBDedicatedInferenceDelete_PropagatesAPIError$' -count=1
+PASS
+ok  	github.com/digitalocean/godo	0.005s
+[FAIL2PASS_ERROR_HANDLING] PASS
+
+Final reward: 1

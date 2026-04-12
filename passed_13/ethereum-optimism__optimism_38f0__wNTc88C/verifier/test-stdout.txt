@@ -1,0 +1,164 @@
+[REGRESSION_DIRECT] START - existing blob loading success behavior remains intact
+   Compiling kona-protocol v0.4.5 (/app/optimism/rust/kona/crates/protocol/protocol)
+   Compiling kona-hardforks v0.4.5 (/app/optimism/rust/kona/crates/protocol/hardforks)
+   Compiling kona-derive v0.4.5 (/app/optimism/rust/kona/crates/protocol/derive)
+warning: unused variable: `queue_size`
+   --> kona/crates/protocol/derive/src/stages/frame_queue.rs:140:13
+    |
+140 |         let queue_size = self.queue.iter().map(|f| f.size()).sum::<usize>() as f64;
+    |             ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_queue_size`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `count`
+  --> kona/crates/protocol/derive/src/stages/channel/channel_assembler.rs:95:13
+   |
+95 |         let count = if self.channel.is_some() { 1 } else { 0 };
+   |             ^^^^^ help: if this is intentional, prefix it with an underscore: `_count`
+
+warning: unused variable: `margin`
+   --> kona/crates/protocol/derive/src/stages/channel/channel_assembler.rs:101:17
+    |
+101 |             let margin = timeout.saturating_sub(origin.number) as f64;
+    |                 ^^^^^^ help: if this is intentional, prefix it with an underscore: `_margin`
+
+warning: unused variable: `size`
+   --> kona/crates/protocol/derive/src/stages/channel/channel_assembler.rs:123:17
+    |
+123 |             let size = channel.size() as f64;
+    |                 ^^^^ help: if this is intentional, prefix it with an underscore: `_size`
+
+warning: unused variable: `size`
+   --> kona/crates/protocol/derive/src/stages/channel/channel_reader.rs:124:21
+    |
+124 |                 let size = next_batch.decompressed.len() as f64;
+    |                     ^^^^ help: if this is intentional, prefix it with an underscore: `_size`
+
+warning: unused variable: `ty`
+   --> kona/crates/protocol/derive/src/stages/channel/channel_reader.rs:125:21
+    |
+125 |                 let ty = if next_batch.brotli_used {
+    |                     ^^ help: if this is intentional, prefix it with an underscore: `_ty`
+
+warning: `kona-derive` (lib test) generated 6 warnings (run `cargo fix --lib -p kona-derive --tests` to apply 6 suggestions)
+    Finished `test` profile [optimized + debuginfo] target(s) in 23.48s
+     Running unittests src/lib.rs (target/debug/deps/kona_derive-33ede91f2cc83ebc)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 206 filtered out; finished in 0.00s
+
+[REGRESSION_DIRECT] PASS - existing blob loading success behavior remains intact
+[REGRESSION_DIRECT] START - existing non-overfill reset behavior remains intact for blob-not-found
+warning: unused variable: `queue_size`
+   --> kona/crates/protocol/derive/src/stages/frame_queue.rs:140:13
+    |
+140 |         let queue_size = self.queue.iter().map(|f| f.size()).sum::<usize>() as f64;
+    |             ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_queue_size`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `count`
+  --> kona/crates/protocol/derive/src/stages/channel/channel_assembler.rs:95:13
+   |
+95 |         let count = if self.channel.is_some() { 1 } else { 0 };
+   |             ^^^^^ help: if this is intentional, prefix it with an underscore: `_count`
+
+warning: unused variable: `margin`
+   --> kona/crates/protocol/derive/src/stages/channel/channel_assembler.rs:101:17
+    |
+101 |             let margin = timeout.saturating_sub(origin.number) as f64;
+    |                 ^^^^^^ help: if this is intentional, prefix it with an underscore: `_margin`
+
+warning: unused variable: `size`
+   --> kona/crates/protocol/derive/src/stages/channel/channel_assembler.rs:123:17
+    |
+123 |             let size = channel.size() as f64;
+    |                 ^^^^ help: if this is intentional, prefix it with an underscore: `_size`
+
+warning: unused variable: `size`
+   --> kona/crates/protocol/derive/src/stages/channel/channel_reader.rs:124:21
+    |
+124 |                 let size = next_batch.decompressed.len() as f64;
+    |                     ^^^^ help: if this is intentional, prefix it with an underscore: `_size`
+
+warning: unused variable: `ty`
+   --> kona/crates/protocol/derive/src/stages/channel/channel_reader.rs:125:21
+    |
+125 |                 let ty = if next_batch.brotli_used {
+    |                     ^^ help: if this is intentional, prefix it with an underscore: `_ty`
+
+warning: `kona-derive` (lib test) generated 6 warnings (run `cargo fix --lib -p kona-derive --tests` to apply 6 suggestions)
+    Finished `test` profile [optimized + debuginfo] target(s) in 0.37s
+     Running unittests src/lib.rs (target/debug/deps/kona_derive-33ede91f2cc83ebc)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 206 filtered out; finished in 0.00s
+
+[REGRESSION_DIRECT] PASS - existing non-overfill reset behavior remains intact for blob-not-found
+[FAIL2PASS_CORE] START - blob-provider over-fill triggers reset with filled/returned diagnostics
+   Compiling kona-derive v0.4.5 (/app/optimism/rust/kona/crates/protocol/derive)
+warning: unused variable: `queue_size`
+   --> kona/crates/protocol/derive/src/stages/frame_queue.rs:140:13
+    |
+140 |         let queue_size = self.queue.iter().map(|f| f.size()).sum::<usize>() as f64;
+    |             ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_queue_size`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `count`
+  --> kona/crates/protocol/derive/src/stages/channel/channel_assembler.rs:95:13
+   |
+95 |         let count = if self.channel.is_some() { 1 } else { 0 };
+   |             ^^^^^ help: if this is intentional, prefix it with an underscore: `_count`
+
+warning: unused variable: `margin`
+   --> kona/crates/protocol/derive/src/stages/channel/channel_assembler.rs:101:17
+    |
+101 |             let margin = timeout.saturating_sub(origin.number) as f64;
+    |                 ^^^^^^ help: if this is intentional, prefix it with an underscore: `_margin`
+
+warning: unused variable: `size`
+   --> kona/crates/protocol/derive/src/stages/channel/channel_assembler.rs:123:17
+    |
+123 |             let size = channel.size() as f64;
+    |                 ^^^^ help: if this is intentional, prefix it with an underscore: `_size`
+
+warning: unused variable: `size`
+   --> kona/crates/protocol/derive/src/stages/channel/channel_reader.rs:124:21
+    |
+124 |                 let size = next_batch.decompressed.len() as f64;
+    |                     ^^^^ help: if this is intentional, prefix it with an underscore: `_size`
+
+warning: unused variable: `ty`
+   --> kona/crates/protocol/derive/src/stages/channel/channel_reader.rs:125:21
+    |
+125 |                 let ty = if next_batch.brotli_used {
+    |                     ^^ help: if this is intentional, prefix it with an underscore: `_ty`
+
+warning: `kona-derive` (lib) generated 6 warnings (run `cargo fix --lib -p kona-derive` to apply 6 suggestions)
+warning: missing documentation for the crate
+   --> kona/crates/protocol/derive/tests/terminal_bench_overfill_behavior.rs:1:1
+    |
+  1 | / use alloy_consensus::TxEnvelope;
+  2 | | use alloy_eips::eip4844::Blob;
+  3 | | use alloy_primitives::{Address, B256, map::HashMap};
+  4 | | use alloy_rlp::Decodable;
+...   |
+126 | | }
+    | |_^
+    |
+    = note: requested on the command line with `-W missing-docs`
+
+warning: `kona-derive` (test "terminal_bench_overfill_behavior") generated 1 warning
+    Finished `test` profile [optimized + debuginfo] target(s) in 2.70s
+     Running tests/terminal_bench_overfill_behavior.rs (target/debug/deps/terminal_bench_overfill_behavior-7775c8bb26194fcf)
+
+running 1 test
+test overfill_is_reset_with_counts_for_multiple_inputs ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+[FAIL2PASS_CORE] PASS - blob-provider over-fill triggers reset with filled/returned diagnostics
+All test groups passed.
