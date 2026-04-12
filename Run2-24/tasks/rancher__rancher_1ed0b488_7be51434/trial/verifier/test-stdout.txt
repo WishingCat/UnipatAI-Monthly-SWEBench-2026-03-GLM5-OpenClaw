@@ -1,0 +1,35 @@
+[INFO] Injecting task test file into repository package
+[INFO] Injected /app/rancher/pkg/controllers/provisioningv2/fleetworkspace/zz_terminalbench_onchange_test.go
+
+[REGRESSION_DIRECT] Running go test pattern: ^TestRegressionDirect
+ok  	github.com/rancher/rancher/pkg/controllers/provisioningv2/fleetworkspace	0.025s
+[REGRESSION_DIRECT] PASS
+
+[FAIL2PASS_CORE] Running go test pattern: ^TestFail2PassCore
+--- FAIL: TestFail2PassCoreAnnotationsArePropagatedAndSanitized (0.00s)
+    --- FAIL: TestFail2PassCoreAnnotationsArePropagatedAndSanitized/mixed_user_and_internal_annotations_keep_only_user-defined_values (0.00s)
+        zz_terminalbench_onchange_test.go:131: namespace annotations mismatch
+            expected: map[string]string{"example.com/environment":"staging", "owner":"team-a"}
+            actual: map[string]string(nil)
+    --- FAIL: TestFail2PassCoreAnnotationsArePropagatedAndSanitized/all_internal_annotations_are_removed (0.00s)
+        zz_terminalbench_onchange_test.go:131: namespace annotations mismatch
+            expected: map[string]string{}
+            actual: map[string]string(nil)
+    --- FAIL: TestFail2PassCoreAnnotationsArePropagatedAndSanitized/plain_user_annotations_are_preserved (0.00s)
+        zz_terminalbench_onchange_test.go:131: namespace annotations mismatch
+            expected: map[string]string{"cost-center":"12345", "owner":"team-b"}
+            actual: map[string]string(nil)
+FAIL
+FAIL	github.com/rancher/rancher/pkg/controllers/provisioningv2/fleetworkspace	0.025s
+FAIL
+[FAIL2PASS_CORE] FAIL
+
+[FAIL2PASS_EDGE] Running go test pattern: ^TestFail2PassEdge
+--- FAIL: TestFail2PassEdgeEmptyWorkspaceMetadataReturnsEmptyMaps (0.00s)
+    zz_terminalbench_onchange_test.go:148: expected empty annotations map, got map[string]string(nil)
+FAIL
+FAIL	github.com/rancher/rancher/pkg/controllers/provisioningv2/fleetworkspace	0.025s
+FAIL
+[FAIL2PASS_EDGE] FAIL
+
+[RESULT] reward=0

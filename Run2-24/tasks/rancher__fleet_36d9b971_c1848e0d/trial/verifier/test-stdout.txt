@@ -1,0 +1,10 @@
+[REGRESSION_DIRECT] running: go test ./internal/cmd/cli/gitcloner -run ^TestCloneRevision_ResolveRevisionError$ -count=1
+ok  	github.com/rancher/fleet/internal/cmd/cli/gitcloner	0.012s
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] running: go test ./internal/cmd/cli/gitcloner -run ^TestTask_CreateAuthFromOpts_SSHWithoutUserAndKnownHosts$ -count=1
+ok  	github.com/rancher/fleet/internal/cmd/cli/gitcloner	0.012s
+[FAIL2PASS_CORE] PASS
+[FAIL2PASS_EDGE] running: go test ./pkg/git -run ^TestTask_GetAuthFromSecret_SSHURLWithoutUser$ -count=1
+ok  	github.com/rancher/fleet/pkg/git	0.012s
+[FAIL2PASS_EDGE] PASS
+All groups passed.

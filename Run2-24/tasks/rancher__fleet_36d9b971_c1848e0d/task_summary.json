@@ -1,0 +1,9 @@
+﻿{
+    "task":  "rancher__fleet_36d9b971_c1848e0d",
+    "status":  "PASS",
+    "trial_name":  "rancher__fleet_36d9b971_c1848e0d__kBdhHb5",
+    "episode_count":  98,
+    "result":  "1.0",
+    "source_job_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30",
+    "source_trial_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\rancher__fleet_36d9b971_c1848e0d__kBdhHb5"
+}
