@@ -1,0 +1,9 @@
+﻿{
+    "task":  "ggml-org__llama.cpp_212f4521_990e4d96",
+    "status":  "RAN_FAIL",
+    "trial_name":  "ggml-org__llama.cpp_212f4521_990__fpb8kRN",
+    "episode_count":  216,
+    "result":  "AgentTimeoutError",
+    "source_job_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30",
+    "source_trial_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\ggml-org__llama.cpp_212f4521_990__fpb8kRN"
+}

@@ -1,0 +1,11 @@
+Preparing build directory
+PASS: cmake build succeeded
+[REGRESSION_DIRECT] validating baseline grammar acceptance
+PASS: [REGRESSION_DIRECT] valid input still accepted
+[REGRESSION_DIRECT] validating baseline grammar rejection
+PASS: [REGRESSION_DIRECT] invalid input still rejected
+[FAIL2PASS_CORE] running integration grammar suite
+FAIL: [FAIL2PASS_CORE] nullable-cycle regression missing or failing
+[FAIL2PASS_ERROR_HANDLING] running parser grammar suite
+FAIL: [FAIL2PASS_ERROR_HANDLING] nested repetition overflow regression missing or failing
+Checks failed: 2
