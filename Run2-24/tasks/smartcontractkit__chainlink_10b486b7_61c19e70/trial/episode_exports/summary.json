@@ -1,0 +1,429 @@
+{
+  "task": "smartcontractkit__chainlink_10b486b7_61c19e70",
+  "trial_name": "smartcontractkit__chainlink_10b4__eYnKtYE",
+  "agent": "openclaw",
+  "model": "z-ai/glm-5",
+  "model_provider": "openai",
+  "start_time": "2026-04-11T00:08:08.218261Z",
+  "episode_count": 69,
+  "episodes_jsonl_path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\episodes.jsonl",
+  "trajectory_path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\agent\\trajectory.json",
+  "openclaw_session_path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\agent\\openclaw-session.jsonl",
+  "episodes": [
+    {
+      "episode": "episode-0",
+      "message_count": 2,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0001_episode-0.json"
+    },
+    {
+      "episode": "episode-1",
+      "message_count": 3,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0002_episode-1.json"
+    },
+    {
+      "episode": "episode-2",
+      "message_count": 5,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0003_episode-2.json"
+    },
+    {
+      "episode": "episode-3",
+      "message_count": 6,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0004_episode-3.json"
+    },
+    {
+      "episode": "episode-4",
+      "message_count": 8,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0005_episode-4.json"
+    },
+    {
+      "episode": "episode-5",
+      "message_count": 9,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0006_episode-5.json"
+    },
+    {
+      "episode": "episode-6",
+      "message_count": 11,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0007_episode-6.json"
+    },
+    {
+      "episode": "episode-7",
+      "message_count": 12,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0008_episode-7.json"
+    },
+    {
+      "episode": "episode-8",
+      "message_count": 14,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0009_episode-8.json"
+    },
+    {
+      "episode": "episode-9",
+      "message_count": 15,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0010_episode-9.json"
+    },
+    {
+      "episode": "episode-10",
+      "message_count": 17,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0011_episode-10.json"
+    },
+    {
+      "episode": "episode-11",
+      "message_count": 18,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0012_episode-11.json"
+    },
+    {
+      "episode": "episode-12",
+      "message_count": 20,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0013_episode-12.json"
+    },
+    {
+      "episode": "episode-13",
+      "message_count": 21,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0014_episode-13.json"
+    },
+    {
+      "episode": "episode-14",
+      "message_count": 23,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0015_episode-14.json"
+    },
+    {
+      "episode": "episode-15",
+      "message_count": 24,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0016_episode-15.json"
+    },
+    {
+      "episode": "episode-16",
+      "message_count": 26,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0017_episode-16.json"
+    },
+    {
+      "episode": "episode-17",
+      "message_count": 27,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0018_episode-17.json"
+    },
+    {
+      "episode": "episode-18",
+      "message_count": 29,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0019_episode-18.json"
+    },
+    {
+      "episode": "episode-19",
+      "message_count": 30,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0020_episode-19.json"
+    },
+    {
+      "episode": "episode-20",
+      "message_count": 32,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0021_episode-20.json"
+    },
+    {
+      "episode": "episode-21",
+      "message_count": 33,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0022_episode-21.json"
+    },
+    {
+      "episode": "episode-22",
+      "message_count": 35,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0023_episode-22.json"
+    },
+    {
+      "episode": "episode-23",
+      "message_count": 36,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0024_episode-23.json"
+    },
+    {
+      "episode": "episode-24",
+      "message_count": 38,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0025_episode-24.json"
+    },
+    {
+      "episode": "episode-25",
+      "message_count": 39,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0026_episode-25.json"
+    },
+    {
+      "episode": "episode-26",
+      "message_count": 41,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0027_episode-26.json"
+    },
+    {
+      "episode": "episode-27",
+      "message_count": 42,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0028_episode-27.json"
+    },
+    {
+      "episode": "episode-28",
+      "message_count": 44,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0029_episode-28.json"
+    },
+    {
+      "episode": "episode-29",
+      "message_count": 45,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0030_episode-29.json"
+    },
+    {
+      "episode": "episode-30",
+      "message_count": 47,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0031_episode-30.json"
+    },
+    {
+      "episode": "episode-31",
+      "message_count": 48,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0032_episode-31.json"
+    },
+    {
+      "episode": "episode-32",
+      "message_count": 50,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0033_episode-32.json"
+    },
+    {
+      "episode": "episode-33",
+      "message_count": 51,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0034_episode-33.json"
+    },
+    {
+      "episode": "episode-34",
+      "message_count": 53,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0035_episode-34.json"
+    },
+    {
+      "episode": "episode-35",
+      "message_count": 54,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0036_episode-35.json"
+    },
+    {
+      "episode": "episode-36",
+      "message_count": 56,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0037_episode-36.json"
+    },
+    {
+      "episode": "episode-37",
+      "message_count": 57,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0038_episode-37.json"
+    },
+    {
+      "episode": "episode-38",
+      "message_count": 59,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0039_episode-38.json"
+    },
+    {
+      "episode": "episode-39",
+      "message_count": 60,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0040_episode-39.json"
+    },
+    {
+      "episode": "episode-40",
+      "message_count": 62,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0041_episode-40.json"
+    },
+    {
+      "episode": "episode-41",
+      "message_count": 63,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0042_episode-41.json"
+    },
+    {
+      "episode": "episode-42",
+      "message_count": 65,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0043_episode-42.json"
+    },
+    {
+      "episode": "episode-43",
+      "message_count": 66,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0044_episode-43.json"
+    },
+    {
+      "episode": "episode-44",
+      "message_count": 68,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0045_episode-44.json"
+    },
+    {
+      "episode": "episode-45",
+      "message_count": 69,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0046_episode-45.json"
+    },
+    {
+      "episode": "episode-46",
+      "message_count": 71,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0047_episode-46.json"
+    },
+    {
+      "episode": "episode-47",
+      "message_count": 72,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0048_episode-47.json"
+    },
+    {
+      "episode": "episode-48",
+      "message_count": 74,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0049_episode-48.json"
+    },
+    {
+      "episode": "episode-49",
+      "message_count": 75,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0050_episode-49.json"
+    },
+    {
+      "episode": "episode-50",
+      "message_count": 77,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0051_episode-50.json"
+    },
+    {
+      "episode": "episode-51",
+      "message_count": 78,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0052_episode-51.json"
+    },
+    {
+      "episode": "episode-52",
+      "message_count": 80,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0053_episode-52.json"
+    },
+    {
+      "episode": "episode-53",
+      "message_count": 81,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0054_episode-53.json"
+    },
+    {
+      "episode": "episode-54",
+      "message_count": 83,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0055_episode-54.json"
+    },
+    {
+      "episode": "episode-55",
+      "message_count": 84,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0056_episode-55.json"
+    },
+    {
+      "episode": "episode-56",
+      "message_count": 86,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0057_episode-56.json"
+    },
+    {
+      "episode": "episode-57",
+      "message_count": 87,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0058_episode-57.json"
+    },
+    {
+      "episode": "episode-58",
+      "message_count": 89,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0059_episode-58.json"
+    },
+    {
+      "episode": "episode-59",
+      "message_count": 90,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0060_episode-59.json"
+    },
+    {
+      "episode": "episode-60",
+      "message_count": 92,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0061_episode-60.json"
+    },
+    {
+      "episode": "episode-61",
+      "message_count": 93,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0062_episode-61.json"
+    },
+    {
+      "episode": "episode-62",
+      "message_count": 95,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0063_episode-62.json"
+    },
+    {
+      "episode": "episode-63",
+      "message_count": 96,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0064_episode-63.json"
+    },
+    {
+      "episode": "episode-64",
+      "message_count": 98,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0065_episode-64.json"
+    },
+    {
+      "episode": "episode-65",
+      "message_count": 99,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0066_episode-65.json"
+    },
+    {
+      "episode": "episode-66",
+      "message_count": 101,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0067_episode-66.json"
+    },
+    {
+      "episode": "episode-67",
+      "message_count": 102,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0068_episode-67.json"
+    },
+    {
+      "episode": "episode-68",
+      "message_count": 104,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\smartcontractkit__chainlink_10b4__eYnKtYE\\episode_exports\\0069_episode-68.json"
+    }
+  ],
+  "result": "0.0"
+}

@@ -1,0 +1,10 @@
+[REGRESSION_DIRECT] START: existing loader smoke test
+ok  	github.com/open-policy-agent/opa/build/generate-extended-cases	0.698s
+[REGRESSION_DIRECT] PASS: existing loader smoke test
+[FAIL2PASS_CORE] START: loader supports repeated invocation without panic
+ok  	github.com/open-policy-agent/opa/build/generate-extended-cases	3.413s
+[FAIL2PASS_CORE] PASS: loader supports repeated invocation without panic
+[FAIL2PASS_EDGE] START: test.sleep registration stays stable across repeated calls
+ok  	github.com/open-policy-agent/opa/build/generate-extended-cases	1.408s
+[FAIL2PASS_EDGE] PASS: test.sleep registration stays stable across repeated calls
+Summary: passed=3 failed=0

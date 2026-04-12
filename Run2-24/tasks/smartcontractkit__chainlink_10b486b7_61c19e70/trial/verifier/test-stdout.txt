@@ -1,0 +1,86 @@
+[REGRESSION_DIRECT] running ^TestTBRegression_DuplicateCreateRequestsAreRejected$
+ok  	github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/vault	0.164s
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] running ^TestTBFail2PassCore_ValidateObservationRejectsNilSecretIdentifiers$
+--- FAIL: TestTBFail2PassCore_ValidateObservationRejectsNilSecretIdentifiers (0.00s)
+    --- FAIL: TestTBFail2PassCore_ValidateObservationRejectsNilSecretIdentifiers/create_request_with_nil_secret_identifier (0.00s)
+        vault_validate_observation_terminal_test.go:170: 
+            	Error Trace:	/app/chainlink/core/services/ocr2/plugins/vault/vault_validate_observation_terminal_test.go:170
+            	Error:      	func (assert.PanicTestFunc)(0x2517140) should not panic
+            	            		Panic value:	runtime error: invalid memory address or nil pointer dereference
+            	            		Panic stack:	goroutine 247 [running]:
+            	            	runtime/debug.Stack()
+            	            		/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+            	            	github.com/stretchr/testify/assert.didPanic.func1()
+            	            		/go/pkg/mod/github.com/stretchr/testify@v1.11.1/assert/assertions.go:1286 +0x6b
+            	            	panic({0x4cead20?, 0x7bcf500?})
+            	            		/usr/local/go/src/runtime/panic.go:783 +0x132
+            	            	github.com/smartcontractkit/chainlink/v2/core/capabilities/vault/vaulttypes.KeyFor(0xc4a15a?)
+            	            		/app/chainlink/core/capabilities/vault/vaulttypes/types.go:90 +0x12
+            	            	github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/vault.validateObservation(0xc001316660)
+            	            		/app/chainlink/core/services/ocr2/plugins/vault/plugin.go:1123 +0x9a5
+            	            	github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/vault.(*ReportingPlugin).ValidateObservation(0xc0012232b0, {0x59cf928, 0xc0012d5860}, 0x790209?, {{0x5f1a240?, 0x5f1a240?, 0x744bfb?}, 0x0?}, {{0xc00128b180, 0x38, ...}, ...}, ...)
+            	            		/app/chainlink/core/services/ocr2/plugins/vault/plugin.go:1002 +0x1d0
+            	            	github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/vault.runTBValidateObservation(0xc000477a40, 0xc0012232b0, 0xc0012cdbc0)
+            	            		/app/chainlink/core/services/ocr2/plugins/vault/vault_validate_observation_terminal_test.go:94 +0x3d2
+            	            	github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/vault.TestTBFail2PassCore_ValidateObservationRejectsNilSecretIdentifiers.func1.1()
+            	            		/app/chainlink/core/services/ocr2/plugins/vault/vault_validate_observation_terminal_test.go:171 +0x28
+            	            	github.com/stretchr/testify/assert.didPanic(0x7bd8300?)
+            	            		/go/pkg/mod/github.com/stretchr/testify@v1.11.1/assert/assertions.go:1291 +0x70
+            	            	github.com/stretchr/testify/assert.NotPanics({0x59a45c0, 0xc000477a40}, 0xc000bffd80, {0x0, 0x0, 0x0})
+            	            		/go/pkg/mod/github.com/stretchr/testify@v1.11.1/assert/assertions.go:1362 +0x7e
+            	            	github.com/stretchr/testify/require.NotPanics({0x59bc748, 0xc000477a40}, 0xc000bffd80, {0x0, 0x0, 0x0})
+            	            		/go/pkg/mod/github.com/stretchr/testify@v1.11.1/require/require.go:1711 +0xa6
+            	            	github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/vault.TestTBFail2PassCore_ValidateObservationRejectsNilSecretIdentifiers.func1(0xc000477a40)
+            	            		/app/chainlink/core/services/ocr2/plugins/vault/vault_validate_observation_terminal_test.go:170 +0xea
+            	            	testing.tRunner(0xc000477a40, 0xc0012fc630)
+            	            		/usr/local/go/src/testing/testing.go:1934 +0xea
+            	            	created by testing.(*T).Run in goroutine 224
+            	            		/usr/local/go/src/testing/testing.go:1997 +0x465
+            	Test:       	TestTBFail2PassCore_ValidateObservationRejectsNilSecretIdentifiers/create_request_with_nil_secret_identifier
+    --- FAIL: TestTBFail2PassCore_ValidateObservationRejectsNilSecretIdentifiers/update_request_with_nil_secret_identifier (0.00s)
+        vault_validate_observation_terminal_test.go:170: 
+            	Error Trace:	/app/chainlink/core/services/ocr2/plugins/vault/vault_validate_observation_terminal_test.go:170
+            	Error:      	func (assert.PanicTestFunc)(0x2517140) should not panic
+            	            		Panic value:	runtime error: invalid memory address or nil pointer dereference
+            	            		Panic stack:	goroutine 248 [running]:
+            	            	runtime/debug.Stack()
+            	            		/usr/local/go/src/runtime/debug/stack.go:26 +0x5e
+            	            	github.com/stretchr/testify/assert.didPanic.func1()
+            	            		/go/pkg/mod/github.com/stretchr/testify@v1.11.1/assert/assertions.go:1286 +0x6b
+            	            	panic({0x4cead20?, 0x7bcf500?})
+            	            		/usr/local/go/src/runtime/panic.go:783 +0x132
+            	            	github.com/smartcontractkit/chainlink/v2/core/capabilities/vault/vaulttypes.KeyFor(0xc4a15a?)
+            	            		/app/chainlink/core/capabilities/vault/vaulttypes/types.go:90 +0x12
+            	            	github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/vault.validateObservation(0xc001316900)
+            	            		/app/chainlink/core/services/ocr2/plugins/vault/plugin.go:1143 +0x8d4
+            	            	github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/vault.(*ReportingPlugin).ValidateObservation(0xc0012232b0, {0x59cf928, 0xc001338d70}, 0x790209?, {{0x5f1a240?, 0x5f1a240?, 0x744bfb?}, 0x0?}, {{0xc00128b440, 0x38, ...}, ...}, ...)
+            	            		/app/chainlink/core/services/ocr2/plugins/vault/plugin.go:1002 +0x1d0
+            	            	github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/vault.runTBValidateObservation(0xc000477dc0, 0xc0012232b0, 0xc0012cdc20)
+            	            		/app/chainlink/core/services/ocr2/plugins/vault/vault_validate_observation_terminal_test.go:94 +0x3d2
+            	            	github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/vault.TestTBFail2PassCore_ValidateObservationRejectsNilSecretIdentifiers.func1.1()
+            	            		/app/chainlink/core/services/ocr2/plugins/vault/vault_validate_observation_terminal_test.go:171 +0x28
+            	            	github.com/stretchr/testify/assert.didPanic(0x7bd8300?)
+            	            		/go/pkg/mod/github.com/stretchr/testify@v1.11.1/assert/assertions.go:1291 +0x70
+            	            	github.com/stretchr/testify/assert.NotPanics({0x59a45c0, 0xc000477dc0}, 0xc001334280, {0x0, 0x0, 0x0})
+            	            		/go/pkg/mod/github.com/stretchr/testify@v1.11.1/assert/assertions.go:1362 +0x7e
+            	            	github.com/stretchr/testify/require.NotPanics({0x59bc748, 0xc000477dc0}, 0xc001334280, {0x0, 0x0, 0x0})
+            	            		/go/pkg/mod/github.com/stretchr/testify@v1.11.1/require/require.go:1711 +0xa6
+            	            	github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/vault.TestTBFail2PassCore_ValidateObservationRejectsNilSecretIdentifiers.func1(0xc000477dc0)
+            	            		/app/chainlink/core/services/ocr2/plugins/vault/vault_validate_observation_terminal_test.go:170 +0xea
+            	            	testing.tRunner(0xc000477dc0, 0xc00133f260)
+            	            		/usr/local/go/src/testing/testing.go:1934 +0xea
+            	            	created by testing.(*T).Run in goroutine 224
+            	            		/usr/local/go/src/testing/testing.go:1997 +0x465
+            	Test:       	TestTBFail2PassCore_ValidateObservationRejectsNilSecretIdentifiers/update_request_with_nil_secret_identifier
+FAIL
+FAIL	github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/vault	0.165s
+FAIL
+[FAIL2PASS_CORE] FAIL
+[FAIL2PASS_EDGE] running ^TestTBFail2PassEdge_ValidateObservationChecksCiphertextShape$
+ok  	github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/vault	0.157s
+[FAIL2PASS_EDGE] PASS
+[FAIL2PASS_ERROR_HANDLING] running ^TestTBFail2PassErrorHandling_ValidateObservationChecksListOwnerLimit$
+ok  	github.com/smartcontractkit/chainlink/v2/core/services/ocr2/plugins/vault	0.159s
+[FAIL2PASS_ERROR_HANDLING] PASS
+At least one test group failed.

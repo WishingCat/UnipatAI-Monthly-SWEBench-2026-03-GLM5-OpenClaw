@@ -1,0 +1,9 @@
+﻿{
+    "task":  "open-policy-agent__opa_1897f8c2_1ac64ef1",
+    "status":  "PASS",
+    "trial_name":  "open-policy-agent__opa_1897f8c2___J6TSoZQ",
+    "episode_count":  95,
+    "result":  "1.0",
+    "source_job_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30",
+    "source_trial_dir":  "T:\\AgentProjects\\SWEBench\\jobs\\monthly_swebench_openclaw_non_alpine_2026-04-10_10-55-30\\open-policy-agent__opa_1897f8c2___J6TSoZQ"
+}

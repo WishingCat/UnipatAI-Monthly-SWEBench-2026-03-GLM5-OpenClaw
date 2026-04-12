@@ -1,0 +1,21 @@
+[REGRESSION_DIRECT] Running migrate dry-run plan
+ok  	github.com/rudrankriyam/App-Store-Connect-CLI/internal/cli/cmdtest	0.080s
+[REGRESSION_DIRECT] PASS migrate dry-run plan
+
+[FAIL2PASS_CORE] Running migrate import relationship reorder
+--- FAIL: TestMigrateImportUploadsAndSkipsExistingScreenshots_ReordersSetRelationships (0.10s)
+    migrate_import_order_test.go:139: expected screenshot relationship reorder patch
+FAIL
+FAIL	github.com/rudrankriyam/App-Store-Connect-CLI/internal/cli/cmdtest	0.111s
+FAIL
+[FAIL2PASS_CORE] FAIL migrate import relationship reorder
+
+[FAIL2PASS_EDGE] Running planned order before untouched extras
+--- FAIL: TestUploadScreenshots_ReordersPlannedFilesBeforeUntouchedRemoteExtras (0.00s)
+    import_helpers_order_test.go:111: expected screenshot relationship reorder PATCH to be called
+FAIL
+FAIL	github.com/rudrankriyam/App-Store-Connect-CLI/internal/cli/migrate	0.007s
+FAIL
+[FAIL2PASS_EDGE] FAIL planned order before untouched extras
+
+2 test group(s) failed.
