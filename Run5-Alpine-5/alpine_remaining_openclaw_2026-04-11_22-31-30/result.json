@@ -1,0 +1,33 @@
+{
+    "id": "0acf4be0-deee-425c-b88e-316131fb20ee",
+    "started_at": "2026-04-11T22:41:07.379410",
+    "finished_at": "2026-04-11T23:47:08.560386",
+    "n_total_trials": 3,
+    "stats": {
+        "n_trials": 3,
+        "n_errors": 0,
+        "evals": {
+            "openclaw__z-ai-glm-5__dataset_alpine_remaining_2026-04-11": {
+                "n_trials": 3,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.3333333333333333
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "authorizerdev__authorizer_e38d88__TtTLxUt",
+                            "googlecloudplatform__k8s-config-__QUpDukv"
+                        ],
+                        "1.0": [
+                            "dosco__graphjin_9c78ad33_f9ac75a__AGGVBZW"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

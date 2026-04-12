@@ -1,0 +1,111 @@
+{
+  "task": "authorizerdev__authorizer_e38d88d8_6486586f",
+  "trial_name": "authorizerdev__authorizer_e38d88__TtTLxUt",
+  "agent": "openclaw",
+  "model": "z-ai/glm-5",
+  "model_provider": "openai",
+  "start_time": "2026-04-11T14:41:07.417633Z",
+  "episode_count": 16,
+  "episodes_jsonl_path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\episode_exports\\episodes.jsonl",
+  "trajectory_path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\agent\\trajectory.json",
+  "openclaw_session_path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\agent\\openclaw-session.jsonl",
+  "episodes": [
+    {
+      "episode": "episode-0",
+      "message_count": 2,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\episode_exports\\0001_episode-0.json"
+    },
+    {
+      "episode": "episode-1",
+      "message_count": 3,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\episode_exports\\0002_episode-1.json"
+    },
+    {
+      "episode": "episode-2",
+      "message_count": 5,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\episode_exports\\0003_episode-2.json"
+    },
+    {
+      "episode": "episode-3",
+      "message_count": 7,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\episode_exports\\0004_episode-3.json"
+    },
+    {
+      "episode": "episode-4",
+      "message_count": 8,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\episode_exports\\0005_episode-4.json"
+    },
+    {
+      "episode": "episode-5",
+      "message_count": 10,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\episode_exports\\0006_episode-5.json"
+    },
+    {
+      "episode": "episode-6",
+      "message_count": 12,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\episode_exports\\0007_episode-6.json"
+    },
+    {
+      "episode": "episode-7",
+      "message_count": 13,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\episode_exports\\0008_episode-7.json"
+    },
+    {
+      "episode": "episode-8",
+      "message_count": 15,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\episode_exports\\0009_episode-8.json"
+    },
+    {
+      "episode": "episode-9",
+      "message_count": 17,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\episode_exports\\0010_episode-9.json"
+    },
+    {
+      "episode": "episode-10",
+      "message_count": 19,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\episode_exports\\0011_episode-10.json"
+    },
+    {
+      "episode": "episode-11",
+      "message_count": 21,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\episode_exports\\0012_episode-11.json"
+    },
+    {
+      "episode": "episode-12",
+      "message_count": 22,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\episode_exports\\0013_episode-12.json"
+    },
+    {
+      "episode": "episode-13",
+      "message_count": 24,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\episode_exports\\0014_episode-13.json"
+    },
+    {
+      "episode": "episode-14",
+      "message_count": 25,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\episode_exports\\0015_episode-14.json"
+    },
+    {
+      "episode": "episode-15",
+      "message_count": 27,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\authorizerdev__authorizer_e38d88__TtTLxUt\\episode_exports\\0016_episode-15.json"
+    }
+  ],
+  "result": "0.0"
+}

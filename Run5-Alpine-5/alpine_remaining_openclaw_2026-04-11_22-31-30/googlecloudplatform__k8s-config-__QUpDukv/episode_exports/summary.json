@@ -1,0 +1,147 @@
+{
+  "task": "googlecloudplatform__k8s-config-connector_0e4e1217_4d9dfbba",
+  "trial_name": "googlecloudplatform__k8s-config-__QUpDukv",
+  "agent": "openclaw",
+  "model": "z-ai/glm-5",
+  "model_provider": "openai",
+  "start_time": "2026-04-11T15:23:58.819998Z",
+  "episode_count": 22,
+  "episodes_jsonl_path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\episodes.jsonl",
+  "trajectory_path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\agent\\trajectory.json",
+  "openclaw_session_path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\agent\\openclaw-session.jsonl",
+  "episodes": [
+    {
+      "episode": "episode-0",
+      "message_count": 2,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0001_episode-0.json"
+    },
+    {
+      "episode": "episode-1",
+      "message_count": 3,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0002_episode-1.json"
+    },
+    {
+      "episode": "episode-2",
+      "message_count": 5,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0003_episode-2.json"
+    },
+    {
+      "episode": "episode-3",
+      "message_count": 6,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0004_episode-3.json"
+    },
+    {
+      "episode": "episode-4",
+      "message_count": 8,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0005_episode-4.json"
+    },
+    {
+      "episode": "episode-5",
+      "message_count": 9,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0006_episode-5.json"
+    },
+    {
+      "episode": "episode-6",
+      "message_count": 11,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0007_episode-6.json"
+    },
+    {
+      "episode": "episode-7",
+      "message_count": 12,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0008_episode-7.json"
+    },
+    {
+      "episode": "episode-8",
+      "message_count": 14,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0009_episode-8.json"
+    },
+    {
+      "episode": "episode-9",
+      "message_count": 15,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0010_episode-9.json"
+    },
+    {
+      "episode": "episode-10",
+      "message_count": 17,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0011_episode-10.json"
+    },
+    {
+      "episode": "episode-11",
+      "message_count": 19,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0012_episode-11.json"
+    },
+    {
+      "episode": "episode-12",
+      "message_count": 20,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0013_episode-12.json"
+    },
+    {
+      "episode": "episode-13",
+      "message_count": 22,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0014_episode-13.json"
+    },
+    {
+      "episode": "episode-14",
+      "message_count": 23,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0015_episode-14.json"
+    },
+    {
+      "episode": "episode-15",
+      "message_count": 25,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0016_episode-15.json"
+    },
+    {
+      "episode": "episode-16",
+      "message_count": 26,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0017_episode-16.json"
+    },
+    {
+      "episode": "episode-17",
+      "message_count": 28,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0018_episode-17.json"
+    },
+    {
+      "episode": "episode-18",
+      "message_count": 29,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0019_episode-18.json"
+    },
+    {
+      "episode": "episode-19",
+      "message_count": 31,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0020_episode-19.json"
+    },
+    {
+      "episode": "episode-20",
+      "message_count": 32,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0021_episode-20.json"
+    },
+    {
+      "episode": "episode-21",
+      "message_count": 34,
+      "result": "0.0",
+      "path": "T:\\AgentProjects\\SWEBench\\jobs\\alpine_remaining_openclaw_2026-04-11_22-31-30\\googlecloudplatform__k8s-config-__QUpDukv\\episode_exports\\0022_episode-21.json"
+    }
+  ],
+  "result": "0.0"
+}

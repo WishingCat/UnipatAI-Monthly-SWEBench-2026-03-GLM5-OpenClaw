@@ -1,0 +1,7 @@
+Using plain orchestrator output (non-interactive or non-UTF-8 console detected).
+Starting trial: authorizerdev__authorizer_e38d88__TtTLxUt
+Finished trial authorizerdev__authorizer_e38d88__TtTLxUt with reward=0.0
+Starting trial: dosco__graphjin_9c78ad33_f9ac75a__AGGVBZW
+Finished trial dosco__graphjin_9c78ad33_f9ac75a__AGGVBZW with reward=1.0
+Starting trial: googlecloudplatform__k8s-config-__QUpDukv
+Finished trial googlecloudplatform__k8s-config-__QUpDukv with reward=0.0

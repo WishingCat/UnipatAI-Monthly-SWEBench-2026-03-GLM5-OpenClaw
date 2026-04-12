@@ -1,0 +1,84 @@
+[ENV] PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+[ENV] go=/usr/bin/go
+[REGRESSION_DIRECT] Running validator regression suite
+ok  	github.com/authorizerdev/authorizer/internal/validators	0.005s
+[REGRESSION_DIRECT] PASS validator regression suite
+[FAIL2PASS_CORE] Running verify email http roles validation
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /graphql                  --> github.com/authorizerdev/authorizer/internal/http_handlers.(*httpProvider).GraphqlHandler.func1 (4 handlers)
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /verify_email             --> github.com/authorizerdev/authorizer/internal/http_handlers.(*httpProvider).VerifyEmailHandler.func1 (4 handlers)
+
+2026/04/11 14:55:31 [31;1m/app/authorizer/internal/storage/db/sql/user.go:100 [35;1mrecord not found
+[0m[33m[0.228ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE email = "verify_email_roles_3ef37050-7a47-4bb9-b86f-4ba53295722c@authorizer.dev" ORDER BY `authorizer_users`.`id` LIMIT 1
+
+2026/04/11 14:55:31 [31;1m/app/authorizer/internal/storage/db/sql/user.go:100 [35;1mrecord not found
+[0m[33m[0.338ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE email = "verify_email_roles_3ef37050-7a47-4bb9-b86f-4ba53295722c@authorizer.dev" ORDER BY `authorizer_users`.`id` LIMIT 1
+2026/04/11 14:55:31 net/http: invalid Cookie.Domain ".0.1"; dropping domain attribute
+
+2026/04/11 14:55:31 [31;1m/app/authorizer/internal/storage/db/sql/user.go:100 [35;1mrecord not found
+[0m[33m[0.508ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE email = "verify_email_roles_b6e0b78b-919f-4462-927c-2e71ff83762f@authorizer.dev" ORDER BY `authorizer_users`.`id` LIMIT 1
+
+2026/04/11 14:55:31 [31;1m/app/authorizer/internal/storage/db/sql/user.go:100 [35;1mrecord not found
+[0m[33m[0.353ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE email = "verify_email_roles_b6e0b78b-919f-4462-927c-2e71ff83762f@authorizer.dev" ORDER BY `authorizer_users`.`id` LIMIT 1
+2026/04/11 14:55:31 net/http: invalid Cookie.Domain ".0.1"; dropping domain attribute
+
+2026/04/11 14:55:31 [31;1m/app/authorizer/internal/storage/db/sql/user.go:100 [35;1mrecord not found
+[0m[33m[0.202ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE email = "verify_email_roles_43f9c762-b145-4e10-8f5b-9bc7d70b7625@authorizer.dev" ORDER BY `authorizer_users`.`id` LIMIT 1
+
+2026/04/11 14:55:31 [31;1m/app/authorizer/internal/storage/db/sql/user.go:100 [35;1mrecord not found
+[0m[33m[0.258ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE email = "verify_email_roles_43f9c762-b145-4e10-8f5b-9bc7d70b7625@authorizer.dev" ORDER BY `authorizer_users`.`id` LIMIT 1
+2026/04/11 14:55:31 net/http: invalid Cookie.Domain ".0.1"; dropping domain attribute
+
+2026/04/11 14:55:31 [31;1m/app/authorizer/internal/storage/db/sql/user.go:100 [35;1mrecord not found
+[0m[33m[0.186ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE email = "verify_email_roles_e19ae9c9-1e3a-47c5-b44d-3a8158953ddc@authorizer.dev" ORDER BY `authorizer_users`.`id` LIMIT 1
+
+2026/04/11 14:55:32 [31;1m/app/authorizer/internal/storage/db/sql/user.go:100 [35;1mrecord not found
+[0m[33m[0.328ms] [34;1m[rows:0][0m SELECT * FROM `authorizer_users` WHERE email = "verify_email_roles_e19ae9c9-1e3a-47c5-b44d-3a8158953ddc@authorizer.dev" ORDER BY `authorizer_users`.`id` LIMIT 1
+2026/04/11 14:55:32 net/http: invalid Cookie.Domain ".0.1"; dropping domain attribute
+--- FAIL: TestVerifyEmailRoleValidation (0.41s)
+    writer.go:27: {"level":"debug","func":"SignUp","email":"verify_email_roles_3ef37050-7a47-4bb9-b86f-4ba53295722c@authorizer.dev","phone_number":"","error":"record not found","time":"2026-04-11T14:55:31Z","message":"Failed to get user by email"}
+    writer.go:27: {"level":"info","method":"GET","path":"/verify_email","status":307,"size":1665,"client_ip":"127.0.0.1","latency":9.586725,"time":"2026-04-11T14:55:31Z","message":"HTTP request"}
+    writer.go:27: {"level":"debug","func":"SignUp","email":"verify_email_roles_b6e0b78b-919f-4462-927c-2e71ff83762f@authorizer.dev","phone_number":"","error":"record not found","time":"2026-04-11T14:55:31Z","message":"Failed to get user by email"}
+    writer.go:27: {"level":"info","method":"GET","path":"/verify_email","status":307,"size":1665,"client_ip":"127.0.0.1","latency":9.327401,"time":"2026-04-11T14:55:31Z","message":"HTTP request"}
+    writer.go:27: {"level":"debug","func":"SignUp","email":"verify_email_roles_43f9c762-b145-4e10-8f5b-9bc7d70b7625@authorizer.dev","phone_number":"","error":"record not found","time":"2026-04-11T14:55:31Z","message":"Failed to get user by email"}
+    writer.go:27: {"level":"info","method":"GET","path":"/verify_email","status":307,"size":1667,"client_ip":"127.0.0.1","latency":9.568997,"time":"2026-04-11T14:55:31Z","message":"HTTP request"}
+    --- FAIL: TestVerifyEmailRoleValidation/single_unauthorized_role_should_be_rejected (0.07s)
+        verify_email_roles_tb_test.go:116: 
+            	Error Trace:	/app/authorizer/internal/integration_tests/verify_email_roles_tb_test.go:116
+            	Error:      	Not equal: 
+            	            	expected: 400
+            	            	actual  : 307
+            	Test:       	TestVerifyEmailRoleValidation/single_unauthorized_role_should_be_rejected
+            	Messages:   	response body: <a href="http://127.0.0.1:41605/app?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGxvd2VkX3JvbGVzIjpbInVzZXIiXSwiYXVkIjoidGVzdC1jbGllbnQtaWQiLCJleHAiOjE3NzU5MjExMzEsImlhdCI6MTc3NTkxOTMzMSwiaXNzIjoiaHR0cDovLzEyNy4wLjAuMTo0MTYwNSIsImxvZ2luX21ldGhvZCI6ImJhc2ljX2F1dGgiLCJub25jZSI6IjFjMDRiODdmLTdiMGYtNDcyZS05MGQ4LTdmYmYyNmEzZDI0YyIsInJvbGVzIjpbImFkbWluIl0sInNjb3BlIjpbIm9wZW5pZCIsImVtYWlsIiwicHJvZmlsZSJdLCJzdWIiOiI0MGEyMjVmMC03OWNmLTQ4Y2MtYjQwYS1iODU3MWIwZWZmNjMiLCJ0b2tlbl90eXBlIjoiYWNjZXNzX3Rva2VuIn0.53QLUWXiWnqGg-LqF6DLaUSzAvAGcpACz66GQ7UG6WY&amp;token_type=bearer&amp;expires_in=1800&amp;state=&amp;id_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIiOlsiYWRtaW4iXSwiYWxsb3dlZF9yb2xlcyI6WyJ1c2VyIl0sImF0X2hhc2giOiIxYzA0Yjg3Zi03YjBmLTQ3MmUtOTBkOC03ZmJmMjZhM2QyNGMiLCJhdWQiOiJ0ZXN0LWNsaWVudC1pZCIsImNyZWF0ZWRfYXQiOjE3NzU5MTkzMzEsImVtYWlsIjoidmVyaWZ5X2VtYWlsX3JvbGVzXzQzZjljNzYyLWIxNDUtNGUxMC04ZjViLTliYzdkNzBiNzYyNUBhdXRob3JpemVyLmRldiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJleHAiOjE3NzU5MjExMzEsImlhdCI6MTc3NTkxOTMzMSwiaWQiOiI0MGEyMjVmMC03OWNmLTQ4Y2MtYjQwYS1iODU3MWIwZWZmNjMiLCJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjQxNjA1IiwibG9naW5fbWV0aG9kIjoiYmFzaWNfYXV0aCIsIm5vbmNlIjoiMWMwNGI4N2YtN2IwZi00NzJlLTkwZDgtN2ZiZjI2YTNkMjRjIiwicGhvbmVfbnVtYmVyX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidmVyaWZ5X2VtYWlsX3JvbGVzXzQzZjljNzYyLWIxNDUtNGUxMC04ZjViLTliYzdkNzBiNzYyNUBhdXRob3JpemVyLmRldiIsInNpZ251cF9tZXRob2RzIjoiYmFzaWNfYXV0aCIsInN1YiI6IjQwYTIyNWYwLTc5Y2YtNDhjYy1iNDBhLWI4NTcxYjBlZmY2MyIsInRva2VuX3R5cGUiOiJpZF90b2tlbiIsInVwZGF0ZWRfYXQiOjE3NzU5MTkzMzF9.SeYQJdA5edwxNyGHajFAXW4ELdUeJZRuCU4zsLwns7E&amp;nonce=1c04b87f-7b0f-472e-90d8-7fbf26a3d24c">Temporary Redirect</a>.
+            	            	
+        verify_email_roles_tb_test.go:118: 
+            	Error Trace:	/app/authorizer/internal/integration_tests/verify_email_roles_tb_test.go:118
+            	Error:      	"<a href=\"http://127.0.0.1:41605/app?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGxvd2VkX3JvbGVzIjpbInVzZXIiXSwiYXVkIjoidGVzdC1jbGllbnQtaWQiLCJleHAiOjE3NzU5MjExMzEsImlhdCI6MTc3NTkxOTMzMSwiaXNzIjoiaHR0cDovLzEyNy4wLjAuMTo0MTYwNSIsImxvZ2luX21ldGhvZCI6ImJhc2ljX2F1dGgiLCJub25jZSI6IjFjMDRiODdmLTdiMGYtNDcyZS05MGQ4LTdmYmYyNmEzZDI0YyIsInJvbGVzIjpbImFkbWluIl0sInNjb3BlIjpbIm9wZW5pZCIsImVtYWlsIiwicHJvZmlsZSJdLCJzdWIiOiI0MGEyMjVmMC03OWNmLTQ4Y2MtYjQwYS1iODU3MWIwZWZmNjMiLCJ0b2tlbl90eXBlIjoiYWNjZXNzX3Rva2VuIn0.53QLUWXiWnqGg-LqF6DLaUSzAvAGcpACz66GQ7UG6WY&amp;token_type=bearer&amp;expires_in=1800&amp;state=&amp;id_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIiOlsiYWRtaW4iXSwiYWxsb3dlZF9yb2xlcyI6WyJ1c2VyIl0sImF0X2hhc2giOiIxYzA0Yjg3Zi03YjBmLTQ3MmUtOTBkOC03ZmJmMjZhM2QyNGMiLCJhdWQiOiJ0ZXN0LWNsaWVudC1pZCIsImNyZWF0ZWRfYXQiOjE3NzU5MTkzMzEsImVtYWlsIjoidmVyaWZ5X2VtYWlsX3JvbGVzXzQzZjljNzYyLWIxNDUtNGUxMC04ZjViLTliYzdkNzBiNzYyNUBhdXRob3JpemVyLmRldiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJleHAiOjE3NzU5MjExMzEsImlhdCI6MTc3NTkxOTMzMSwiaWQiOiI0MGEyMjVmMC03OWNmLTQ4Y2MtYjQwYS1iODU3MWIwZWZmNjMiLCJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjQxNjA1IiwibG9naW5fbWV0aG9kIjoiYmFzaWNfYXV0aCIsIm5vbmNlIjoiMWMwNGI4N2YtN2IwZi00NzJlLTkwZDgtN2ZiZjI2YTNkMjRjIiwicGhvbmVfbnVtYmVyX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidmVyaWZ5X2VtYWlsX3JvbGVzXzQzZjljNzYyLWIxNDUtNGUxMC04ZjViLTliYzdkNzBiNzYyNUBhdXRob3JpemVyLmRldiIsInNpZ251cF9tZXRob2RzIjoiYmFzaWNfYXV0aCIsInN1YiI6IjQwYTIyNWYwLTc5Y2YtNDhjYy1iNDBhLWI4NTcxYjBlZmY2MyIsInRva2VuX3R5cGUiOiJpZF90b2tlbiIsInVwZGF0ZWRfYXQiOjE3NzU5MTkzMzF9.SeYQJdA5edwxNyGHajFAXW4ELdUeJZRuCU4zsLwns7E&amp;nonce=1c04b87f-7b0f-472e-90d8-7fbf26a3d24c\">Temporary Redirect</a>.\n\n" does not contain "invalid roles"
+            	Test:       	TestVerifyEmailRoleValidation/single_unauthorized_role_should_be_rejected
+    writer.go:27: {"level":"debug","func":"SignUp","email":"verify_email_roles_e19ae9c9-1e3a-47c5-b44d-3a8158953ddc@authorizer.dev","phone_number":"","error":"record not found","time":"2026-04-11T14:55:31Z","message":"Failed to get user by email"}
+    writer.go:27: {"level":"info","method":"GET","path":"/verify_email","status":307,"size":1686,"client_ip":"127.0.0.1","latency":9.043956,"time":"2026-04-11T14:55:32Z","message":"HTTP request"}
+    --- FAIL: TestVerifyEmailRoleValidation/mixed_roles_with_escalation_should_be_rejected (0.07s)
+        verify_email_roles_tb_test.go:116: 
+            	Error Trace:	/app/authorizer/internal/integration_tests/verify_email_roles_tb_test.go:116
+            	Error:      	Not equal: 
+            	            	expected: 400
+            	            	actual  : 307
+            	Test:       	TestVerifyEmailRoleValidation/mixed_roles_with_escalation_should_be_rejected
+            	Messages:   	response body: <a href="http://127.0.0.1:41605/app?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGxvd2VkX3JvbGVzIjpbInVzZXIiXSwiYXVkIjoidGVzdC1jbGllbnQtaWQiLCJleHAiOjE3NzU5MjExMzIsImlhdCI6MTc3NTkxOTMzMiwiaXNzIjoiaHR0cDovLzEyNy4wLjAuMTo0MTYwNSIsImxvZ2luX21ldGhvZCI6ImJhc2ljX2F1dGgiLCJub25jZSI6ImU2ZTk5ZDJlLWYxMTktNDljYS04ZWZlLTI1NTc5MWRhZTE0OSIsInJvbGVzIjpbInVzZXIiLCJhZG1pbiJdLCJzY29wZSI6WyJvcGVuaWQiLCJlbWFpbCIsInByb2ZpbGUiXSwic3ViIjoiM2NmZDU4ZDgtMjgxNC00ODBhLWJhMmItZWFiNmZlYWZmMzRiIiwidG9rZW5fdHlwZSI6ImFjY2Vzc190b2tlbiJ9.arv6Nx6rV-SQBv6jxxr-opIFJTf8-pyb8BiDDhXYe_U&amp;token_type=bearer&amp;expires_in=1800&amp;state=&amp;id_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIiOlsidXNlciIsImFkbWluIl0sImFsbG93ZWRfcm9sZXMiOlsidXNlciJdLCJhdF9oYXNoIjoiZTZlOTlkMmUtZjExOS00OWNhLThlZmUtMjU1NzkxZGFlMTQ5IiwiYXVkIjoidGVzdC1jbGllbnQtaWQiLCJjcmVhdGVkX2F0IjoxNzc1OTE5MzMyLCJlbWFpbCI6InZlcmlmeV9lbWFpbF9yb2xlc19lMTlhZTljOS0xZTNhLTQ3YzUtYjQ0ZC0zYTgxNTg5NTNkZGNAYXV0aG9yaXplci5kZXYiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZXhwIjoxNzc1OTIxMTMyLCJpYXQiOjE3NzU5MTkzMzIsImlkIjoiM2NmZDU4ZDgtMjgxNC00ODBhLWJhMmItZWFiNmZlYWZmMzRiIiwiaXNzIjoiaHR0cDovLzEyNy4wLjAuMTo0MTYwNSIsImxvZ2luX21ldGhvZCI6ImJhc2ljX2F1dGgiLCJub25jZSI6ImU2ZTk5ZDJlLWYxMTktNDljYS04ZWZlLTI1NTc5MWRhZTE0OSIsInBob25lX251bWJlcl92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6InZlcmlmeV9lbWFpbF9yb2xlc19lMTlhZTljOS0xZTNhLTQ3YzUtYjQ0ZC0zYTgxNTg5NTNkZGNAYXV0aG9yaXplci5kZXYiLCJzaWdudXBfbWV0aG9kcyI6ImJhc2ljX2F1dGgiLCJzdWIiOiIzY2ZkNThkOC0yODE0LTQ4MGEtYmEyYi1lYWI2ZmVhZmYzNGIiLCJ0b2tlbl90eXBlIjoiaWRfdG9rZW4iLCJ1cGRhdGVkX2F0IjoxNzc1OTE5MzMyfQ.FT9GbJm-4TRY7oiGsph8VBq0JC04ywK8g9lU8lJhIq0&amp;nonce=e6e99d2e-f119-49ca-8efe-255791dae149">Temporary Redirect</a>.
+            	            	
+        verify_email_roles_tb_test.go:118: 
+            	Error Trace:	/app/authorizer/internal/integration_tests/verify_email_roles_tb_test.go:118
+            	Error:      	"<a href=\"http://127.0.0.1:41605/app?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGxvd2VkX3JvbGVzIjpbInVzZXIiXSwiYXVkIjoidGVzdC1jbGllbnQtaWQiLCJleHAiOjE3NzU5MjExMzIsImlhdCI6MTc3NTkxOTMzMiwiaXNzIjoiaHR0cDovLzEyNy4wLjAuMTo0MTYwNSIsImxvZ2luX21ldGhvZCI6ImJhc2ljX2F1dGgiLCJub25jZSI6ImU2ZTk5ZDJlLWYxMTktNDljYS04ZWZlLTI1NTc5MWRhZTE0OSIsInJvbGVzIjpbInVzZXIiLCJhZG1pbiJdLCJzY29wZSI6WyJvcGVuaWQiLCJlbWFpbCIsInByb2ZpbGUiXSwic3ViIjoiM2NmZDU4ZDgtMjgxNC00ODBhLWJhMmItZWFiNmZlYWZmMzRiIiwidG9rZW5fdHlwZSI6ImFjY2Vzc190b2tlbiJ9.arv6Nx6rV-SQBv6jxxr-opIFJTf8-pyb8BiDDhXYe_U&amp;token_type=bearer&amp;expires_in=1800&amp;state=&amp;id_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIiOlsidXNlciIsImFkbWluIl0sImFsbG93ZWRfcm9sZXMiOlsidXNlciJdLCJhdF9oYXNoIjoiZTZlOTlkMmUtZjExOS00OWNhLThlZmUtMjU1NzkxZGFlMTQ5IiwiYXVkIjoidGVzdC1jbGllbnQtaWQiLCJjcmVhdGVkX2F0IjoxNzc1OTE5MzMyLCJlbWFpbCI6InZlcmlmeV9lbWFpbF9yb2xlc19lMTlhZTljOS0xZTNhLTQ3YzUtYjQ0ZC0zYTgxNTg5NTNkZGNAYXV0aG9yaXplci5kZXYiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZXhwIjoxNzc1OTIxMTMyLCJpYXQiOjE3NzU5MTkzMzIsImlkIjoiM2NmZDU4ZDgtMjgxNC00ODBhLWJhMmItZWFiNmZlYWZmMzRiIiwiaXNzIjoiaHR0cDovLzEyNy4wLjAuMTo0MTYwNSIsImxvZ2luX21ldGhvZCI6ImJhc2ljX2F1dGgiLCJub25jZSI6ImU2ZTk5ZDJlLWYxMTktNDljYS04ZWZlLTI1NTc5MWRhZTE0OSIsInBob25lX251bWJlcl92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6InZlcmlmeV9lbWFpbF9yb2xlc19lMTlhZTljOS0xZTNhLTQ3YzUtYjQ0ZC0zYTgxNTg5NTNkZGNAYXV0aG9yaXplci5kZXYiLCJzaWdudXBfbWV0aG9kcyI6ImJhc2ljX2F1dGgiLCJzdWIiOiIzY2ZkNThkOC0yODE0LTQ4MGEtYmEyYi1lYWI2ZmVhZmYzNGIiLCJ0b2tlbl90eXBlIjoiaWRfdG9rZW4iLCJ1cGRhdGVkX2F0IjoxNzc1OTE5MzMyfQ.FT9GbJm-4TRY7oiGsph8VBq0JC04ywK8g9lU8lJhIq0&amp;nonce=e6e99d2e-f119-49ca-8efe-255791dae149\">Temporary Redirect</a>.\n\n" does not contain "invalid roles"
+            	Test:       	TestVerifyEmailRoleValidation/mixed_roles_with_escalation_should_be_rejected
+FAIL
+FAIL	github.com/authorizerdev/authorizer/internal/integration_tests	0.439s
+FAIL
+[FAIL2PASS_CORE] FAIL verify email http roles validation
+One or more test groups failed
