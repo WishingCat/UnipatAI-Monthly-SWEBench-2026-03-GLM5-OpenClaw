@@ -1,0 +1,14 @@
+[REGRESSION_DIRECT] Running: UpdateDeps keeps existing chain and independent-key behavior
+ok  	github.com/ethereum/go-ethereum/core/blockstm	0.002s
+[REGRESSION_DIRECT] PASS: UpdateDeps keeps existing chain and independent-key behavior
+[REGRESSION_DIRECT] --------------------------------------------------
+[FAIL2PASS_CORE] Running: UpdateDeps emits only latest relevant writers for overwritten keys
+ok  	github.com/ethereum/go-ethereum/core/blockstm	0.002s
+[FAIL2PASS_CORE] PASS: UpdateDeps emits only latest relevant writers for overwritten keys
+[FAIL2PASS_CORE] --------------------------------------------------
+[FAIL2PASS_EDGE] Running: commitTransactions preserves ValidatorBytes while clearing TxDependency
+ok  	github.com/ethereum/go-ethereum/miner	0.027s
+[FAIL2PASS_EDGE] PASS: commitTransactions preserves ValidatorBytes while clearing TxDependency
+[FAIL2PASS_EDGE] --------------------------------------------------
+Final reward: 1
+Failed groups: 0
