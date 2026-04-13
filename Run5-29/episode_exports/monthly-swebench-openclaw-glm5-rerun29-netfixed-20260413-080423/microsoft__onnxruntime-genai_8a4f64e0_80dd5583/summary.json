@@ -1,0 +1,23 @@
+{
+  "task_name": "microsoft__onnxruntime-genai_8a4f64e0_80dd5583",
+  "trial_name": "microsoft__onnxruntime-genai_8a4__iSE7Z8e",
+  "episode_count": 11,
+  "result": "0.0",
+  "trial_dir": "T:\\AgentProjects\\20260408SWEBench\\harbor_jobs\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\microsoft__onnxruntime-genai_8a4__iSE7Z8e",
+  "trajectory_path": "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\microsoft__onnxruntime-genai_8a4f64e0_80dd5583\\raw\\trajectory.json",
+  "openclaw_output_path": "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\microsoft__onnxruntime-genai_8a4f64e0_80dd5583\\raw\\openclaw-output.txt",
+  "openclaw_session_path": "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\microsoft__onnxruntime-genai_8a4f64e0_80dd5583\\raw\\openclaw-session.jsonl",
+  "episode_files": [
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\microsoft__onnxruntime-genai_8a4f64e0_80dd5583\\episode-000.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\microsoft__onnxruntime-genai_8a4f64e0_80dd5583\\episode-001.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\microsoft__onnxruntime-genai_8a4f64e0_80dd5583\\episode-002.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\microsoft__onnxruntime-genai_8a4f64e0_80dd5583\\episode-003.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\microsoft__onnxruntime-genai_8a4f64e0_80dd5583\\episode-004.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\microsoft__onnxruntime-genai_8a4f64e0_80dd5583\\episode-005.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\microsoft__onnxruntime-genai_8a4f64e0_80dd5583\\episode-006.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\microsoft__onnxruntime-genai_8a4f64e0_80dd5583\\episode-007.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\microsoft__onnxruntime-genai_8a4f64e0_80dd5583\\episode-008.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\microsoft__onnxruntime-genai_8a4f64e0_80dd5583\\episode-009.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\microsoft__onnxruntime-genai_8a4f64e0_80dd5583\\episode-010.json"
+  ]
+}

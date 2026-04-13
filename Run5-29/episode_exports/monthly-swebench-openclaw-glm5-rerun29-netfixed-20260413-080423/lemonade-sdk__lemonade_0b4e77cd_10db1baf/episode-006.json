@@ -1,0 +1,63 @@
+{
+  "task_name": "lemonade-sdk__lemonade_0b4e77cd_10db1baf",
+  "trial_name": "lemonade-sdk__lemonade_0b4e77cd___GdwFWPD",
+  "episode_index": 6,
+  "episode_id": "episode-6",
+  "result": "1.0",
+  "agent": "openclaw",
+  "model": "openai/z-ai/glm-5",
+  "model_provider": "openai",
+  "date": "2026-04-13T00:12:30.920652Z",
+  "instruction": "Implement a streaming-termination bug fix in the Lemonade C++ server.\n\nBackground:\nThe server forwards streaming responses through `httplib::DataSink`. In several error paths, an error payload is written but the chunked stream is not explicitly finalized. This can leave clients with an incomplete chunked response instead of a clean termination.\n\nYour task:\nUpdate the existing server streaming code so that all relevant error paths explicitly finalize the stream after writing (or attempting to write) the error payload.\n\nRequired behavior:\n1. In the streaming proxy logic, when backend streaming returns a non-200 status, both SSE forwarding and byte-stream forwarding must explicitly finalize the sink.\n2. In wrapped-server streaming forwarding, the stream must be explicitly finalized when:\n   - no wrapped model process is running, and\n   - an exception is raised while forwarding the streaming request.\n3. Existing success-path behavior must be preserved, including clean completion of successful streams.\n4. Existing SSE completion semantics must remain intact: if successful SSE forwarding does not receive a backend `[DONE]` marker, the server should still emit a completion marker before finishing.\n\nConstraints:\n- Apply the fix in the existing C++ server implementation (do not add a separate standalone component).\n- Keep the externally observable streaming behavior consistent with current API expectations, except for the required error-path termination fix.",
+  "verifier_output": "[BUILD] Compiling streaming termination harness\n[BUILD] PASS\n[REGRESSION_DIRECT] Running suite 'regression'\nWarnStreamingProxy2026-04-13 00-20-44.979forward_sse_streamWARNING: Backend did not send [DONE] marker, adding it\nInfoServer2026-04-13 00-20-44.979forward_sse_streamStreaming completed - 200 OK\nHARNESS PASS: regression\n[REGRESSION_DIRECT] PASS\n[FAIL2PASS_CORE] Running suite 'fail2pass-core'\nErrorStreamingProxy2026-04-13 00-20-44.982forward_sse_streamBackend returned error: 500\nErrorStreamingProxy2026-04-13 00-20-44.983forward_byte_streamBackend returned error: 502\nHARNESS PASS: fail2pass-core\n[FAIL2PASS_CORE] PASS\n[FAIL2PASS_ERROR_HANDLING] Running suite 'fail2pass-error'\nErrorWrappedServer2026-04-13 00-20-44.986forward_streaming_requestStreaming request failed: simulated upstream failure\nHARNESS PASS: fail2pass-error\n[FAIL2PASS_ERROR_HANDLING] PASS\nFinal reward: 1\n",
+  "conversations": [
+    {
+      "role": "user",
+      "content": "Implement a streaming-termination bug fix in the Lemonade C++ server.\n\nBackground:\nThe server forwards streaming responses through `httplib::DataSink`. In several error paths, an error payload is written but the chunked stream is not explicitly finalized. This can leave clients with an incomplete chunked response instead of a clean termination.\n\nYour task:\nUpdate the existing server streaming code so that all relevant error paths explicitly finalize the stream after writing (or attempting to write) the error payload.\n\nRequired behavior:\n1. In the streaming proxy logic, when backend streaming returns a non-200 status, both SSE forwarding and byte-stream forwarding must explicitly finalize the sink.\n2. In wrapped-server streaming forwarding, the stream must be explicitly finalized when:\n   - no wrapped model process is running, and\n   - an exception is raised while forwarding the streaming request.\n3. Existing success-path behavior must be preserved, including clean completion of successful streams.\n4. Existing SSE completion semantics must remain intact: if successful SSE forwarding does not receive a backend `[DONE]` marker, the server should still emit a completion marker before finishing.\n\nConstraints:\n- Apply the fix in the existing C++ server implementation (do not add a separate standalone component).\n- Keep the externally observable streaming behavior consistent with current API expectations, except for the required error-path termination fix."
+    },
+    {
+      "role": "assistant",
+      "content": "<think>The user wants me to implement a streaming-termination bug fix in a Lemonade C++ server. Let me first understand the codebase by exploring it.\n\nI need to:\n1. Find the C++ server implementation\n2. Identify the streaming proxy logic with httplib::DataSink\n3. Find error paths where streams aren't being finalized\n4. Add explicit stream finalization in those error paths\n\nLet me start by exploring the workspace to understand the project structure.</think>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"find /workspace -type f -name \\\"*.cpp\\\" -o -name \\\"*.h\\\" -o -name \\\"*.hpp\\\" 2>/dev/null | head -50\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"ls -la /workspace\"}}\n</tool_call>"
+    },
+    {
+      "role": "assistant",
+      "content": "(no output)"
+    },
+    {
+      "role": "user",
+      "content": "(no output)"
+    },
+    {
+      "role": "assistant",
+      "content": "total 36\ndrwxr-xr-x 2 root root 4096 Apr 13 00:15 .\ndrwxr-xr-x 1 root root 4096 Apr 13 00:15 ..\n-rw-r--r-- 1 root root 8081 Apr 13 00:15 AGENTS.md\n-rw-r--r-- 1 root root  173 Apr 13 00:15 HEARTBEAT.md\n-rw-r--r-- 1 root root  426 Apr 13 00:15 IDENTITY.md\n-rw-r--r-- 1 root root 1709 Apr 13 00:15 SOUL.md\n-rw-r--r-- 1 root root  900 Apr 13 00:15 TOOLS.md\n-rw-r--r-- 1 root root  494 Apr 13 00:15 USER.md"
+    },
+    {
+      "role": "user",
+      "content": "total 36\ndrwxr-xr-x 2 root root 4096 Apr 13 00:15 .\ndrwxr-xr-x 1 root root 4096 Apr 13 00:15 ..\n-rw-r--r-- 1 root root 8081 Apr 13 00:15 AGENTS.md\n-rw-r--r-- 1 root root  173 Apr 13 00:15 HEARTBEAT.md\n-rw-r--r-- 1 root root  426 Apr 13 00:15 IDENTITY.md\n-rw-r--r-- 1 root root 1709 Apr 13 00:15 SOUL.md\n-rw-r--r-- 1 root root  900 Apr 13 00:15 TOOLS.md\n-rw-r--r-- 1 root root  494 Apr 13 00:15 USER.md"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>The workspace is empty except for the standard files. There's no C++ server code here. The task mentions \"Lemonade C++ server\" - I need to search for this. Maybe there's more context somewhere, or maybe I need to create the implementation.\n\nLet me search more broadly and also check if there's any reference to \"lemonade\" or similar.</think>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"find / -type f \\\\( -name \\\"*.cpp\\\" -o -name \\\"*.cc\\\" -o -name \\\"*.cxx\\\" \\\\) 2>/dev/null | grep -i lemonade | head -20\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"find / -type d -name \\\"*lemonade*\\\" 2>/dev/null | head -10\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"find /root -type f \\\\( -name \\\"*.cpp\\\" -o -name \\\"*.cc\\\" -o -name \\\"*.cxx\\\" -o -name \\\"*.h\\\" -o -name \\\"*.hpp\\\" \\\\) 2>/dev/null | head -30\"}}\n</tool_call>"
+    },
+    {
+      "role": "assistant",
+      "content": "/app/lemonade/src/cpp/server/vad.cpp\n/app/lemonade/src/cpp/server/router.cpp\n/app/lemonade/src/cpp/server/ollama_api.cpp\n/app/lemonade/src/cpp/server/cli_parser.cpp\n/app/lemonade/src/cpp/server/streaming_audio_buffer.cpp\n/app/lemonade/src/cpp/server/backend_manager.cpp\n/app/lemonade/src/cpp/server/backends/fastflowlm_server.cpp\n/app/lemonade/src/cpp/server/backends/backend_utils.cpp\n/app/lemonade/src/cpp/server/backends/sd_server.cpp\n/app/lemonade/src/cpp/server/backends/ryzenaiserver.cpp\n/app/lemonade/src/cpp/server/backends/whisper_server.cpp\n/app/lemonade/src/cpp/server/backends/llamacpp_server.cpp\n/app/lemonade/src/cpp/server/backends/kokoro_server.cpp\n/app/lemonade/src/cpp/server/wrapped_server.cpp\n/app/lemonade/src/cpp/server/websocket_server.cpp\n/app/lemonade/src/cpp/server/anthropic_api.cpp\n/app/lemonade/src/cpp/server/recipe_options.cpp\n/app/lemonade/src/cpp/server/utils/network_beacon.cpp\n/app/lemonade/src/cpp/server/utils/version_utils.cpp\n/app/lemonade/src/cpp/server/utils/wmi_helper.cpp"
+    },
+    {
+      "role": "user",
+      "content": "/app/lemonade/src/cpp/server/vad.cpp\n/app/lemonade/src/cpp/server/router.cpp\n/app/lemonade/src/cpp/server/ollama_api.cpp\n/app/lemonade/src/cpp/server/cli_parser.cpp\n/app/lemonade/src/cpp/server/streaming_audio_buffer.cpp\n/app/lemonade/src/cpp/server/backend_manager.cpp\n/app/lemonade/src/cpp/server/backends/fastflowlm_server.cpp\n/app/lemonade/src/cpp/server/backends/backend_utils.cpp\n/app/lemonade/src/cpp/server/backends/sd_server.cpp\n/app/lemonade/src/cpp/server/backends/ryzenaiserver.cpp\n/app/lemonade/src/cpp/server/backends/whisper_server.cpp\n/app/lemonade/src/cpp/server/backends/llamacpp_server.cpp\n/app/lemonade/src/cpp/server/backends/kokoro_server.cpp\n/app/lemonade/src/cpp/server/wrapped_server.cpp\n/app/lemonade/src/cpp/server/websocket_server.cpp\n/app/lemonade/src/cpp/server/anthropic_api.cpp\n/app/lemonade/src/cpp/server/recipe_options.cpp\n/app/lemonade/src/cpp/server/utils/network_beacon.cpp\n/app/lemonade/src/cpp/server/utils/version_utils.cpp\n/app/lemonade/src/cpp/server/utils/wmi_helper.cpp"
+    },
+    {
+      "role": "assistant",
+      "content": "/app/lemonade\n/app/lemonade/.signpath/policies/lemonade\n/app/lemonade/.github/actions/install-lemonade-server-msi\n/app/lemonade/.github/actions/install-lemonade-deb\n/app/lemonade/.github/actions/install-lemonade-server-dmg"
+    },
+    {
+      "role": "user",
+      "content": "/app/lemonade\n/app/lemonade/.signpath/policies/lemonade\n/app/lemonade/.github/actions/install-lemonade-server-msi\n/app/lemonade/.github/actions/install-lemonade-deb\n/app/lemonade/.github/actions/install-lemonade-server-dmg"
+    },
+    {
+      "role": "assistant",
+      "content": "/root/.nvm/versions/node/v22.22.2/include/node/v8-version.h\n/root/.nvm/versions/node/v22.22.2/include/node/v8-value-serializer.h\n/root/.nvm/versions/node/v22.22.2/include/node/v8-primitive-object.h\n/root/.nvm/versions/node/v22.22.2/include/node/v8-primitive.h\n/root/.nvm/versions/node/v22.22.2/include/node/v8-function-callback.h\n/root/.nvm/versions/node/v22.22.2/include/node/v8-wasm.h\n/root/.nvm/versions/node/v22.22.2/include/node/v8-microtask-queue.h\n/root/.nvm/versions/node/v22.22.2/include/node/uv.h\n/root/.nvm/versions/node/v22.22.2/include/node/v8-unwinder.h\n/root/.nvm/versions/node/v22.22.2/include/node/js_native_api.h\n/root/.nvm/versions/node/v22.22.2/include/node/v8-forward.h\n/root/.nvm/versions/node/v22.22.2/include/node/v8-external.h\n/root/.nvm/versions/node/v22.22.2/include/node/v8-internal.h\n/root/.nvm/versions/node/v22.22.2/include/node/v8-snapshot.h\n/root/.nvm/versions/node/v22.22.2/include/node/v8-template.h\n/root/.nvm/versions/node/v22.22.2/include/node/v8-data.h\n/root/.nvm/versions/node/v22.22.2/include/node/openssl/pkcs12_no-asm.h\n/root/.nvm/versions/node/v22.22.2/include/node/openssl/pkcs12_asm.h\n/root/.nvm/versions/node/v22.22.2/include/node/openssl/rc2.h\n/root/.nvm/versions/node/v22.22.2/include/node/openssl/cryptoerr_legacy.h\n/root/.nvm/versions/node/v22.22.2/include/node/openssl/lhash_no-asm.h\n/root/.nvm/versions/node/v22.22.2/include/node/openssl/fipskey_asm.h\n/root/.nvm/versions/node/v22.22.2/include/node/openssl/sslerr.h\n/root/.nvm/versions/node/v22.22.2/include/node/openssl/opensslconf.h\n/root/.nvm/versions/node/v22.22.2/include/node/openssl/comp.h\n/root/.nvm/versions/node/v22.22.2/include/node/openssl/cmserr.h\n/root/.nvm/versions/node/v22.22.2/include/node/openssl/cmac.h\n/root/.nvm/versions/node/v22.22.2/include/node/openssl/macros.h\n/root/.nvm/versions/node/v22.22.2/include/node/openssl/param_names.h\n/root/.nvm/versions/node/v22.22.2/include/node/openssl/x509_acert_no-asm.h"
+    }
+  ]
+}

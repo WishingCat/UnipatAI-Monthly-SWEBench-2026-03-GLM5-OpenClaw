@@ -1,0 +1,27 @@
+[REGRESSION_DIRECT] Running command: cd /app/operator && go test ./pkg/reconciler/shared/tektonconfig/result -run '^TestGetTektonResultCR_HubClusterConfig$' -count=1 -p 1
+ok  	github.com/tektoncd/operator/pkg/reconciler/shared/tektonconfig/result	0.032s
+[REGRESSION_DIRECT] PASS
+
+[FAIL2PASS_CORE] Running command: cd /app/operator && go test ./pkg/reconciler/shared/tektonconfig/result -run '^TestTBResultConfig_GetTektonResultCR_PropagatesConfigFields$' -count=1 -p 1
+--- FAIL: TestTBResultConfig_GetTektonResultCR_PropagatesConfigFields (0.00s)
+    --- FAIL: TestTBResultConfig_GetTektonResultCR_PropagatesConfigFields/single_selector_and_toleration (0.00s)
+        tekton_result_config_task_test.go:81: expected propagated config {NodeSelector:map[node-role.kubernetes.io/master:] Tolerations:[{Key:node.kubernetes.io/not-ready Operator:Exists Value: Effect:NoExecute TolerationSeconds:<nil>}] PriorityClassName:system-cluster-critical}, got {NodeSelector:map[] Tolerations:[] PriorityClassName:}
+    --- FAIL: TestTBResultConfig_GetTektonResultCR_PropagatesConfigFields/multiple_selectors_and_tolerations (0.00s)
+        tekton_result_config_task_test.go:81: expected propagated config {NodeSelector:map[disktype:ssd topology.kubernetes.io/zone:zone-a] Tolerations:[{Key:workload Operator:Equal Value:results Effect:NoSchedule TolerationSeconds:<nil>} {Key:node.kubernetes.io/unreachable Operator:Exists Value: Effect:NoExecute TolerationSeconds:<nil>}] PriorityClassName:results-high-priority}, got {NodeSelector:map[] Tolerations:[] PriorityClassName:}
+FAIL
+FAIL	github.com/tektoncd/operator/pkg/reconciler/shared/tektonconfig/result	0.030s
+FAIL
+[FAIL2PASS_CORE] FAIL (exit=1)
+
+[FAIL2PASS_EDGE] Running command: cd /app/operator && go test ./pkg/reconciler/shared/tektonconfig/result -run '^TestTBResultConfig_UpdateResult_SyncsConfig$' -count=1 -p 1
+--- FAIL: TestTBResultConfig_UpdateResult_SyncsConfig (0.00s)
+    --- FAIL: TestTBResultConfig_UpdateResult_SyncsConfig/adds_selector_toleration_and_priority_class (0.00s)
+        tekton_result_config_task_test.go:178: expected persisted config {NodeSelector:map[disktype:ssd] Tolerations:[{Key:workload Operator:Equal Value:results Effect:NoSchedule TolerationSeconds:<nil>}] PriorityClassName:system-node-critical}, got {NodeSelector:map[disktype:hdd] Tolerations:[] PriorityClassName:}
+    --- FAIL: TestTBResultConfig_UpdateResult_SyncsConfig/replaces_existing_config_map_and_tolerations (0.00s)
+        tekton_result_config_task_test.go:178: expected persisted config {NodeSelector:map[region:east topology.kubernetes.io/zone:zone-b] Tolerations:[{Key:node.kubernetes.io/unreachable Operator:Exists Value: Effect:NoExecute TolerationSeconds:<nil>}] PriorityClassName:new-priority}, got {NodeSelector:map[region:west] Tolerations:[{Key:node.kubernetes.io/not-ready Operator:Exists Value: Effect:NoExecute TolerationSeconds:<nil>}] PriorityClassName:old-priority}
+FAIL
+FAIL	github.com/tektoncd/operator/pkg/reconciler/shared/tektonconfig/result	0.036s
+FAIL
+[FAIL2PASS_EDGE] FAIL (exit=1)
+
+Final reward: 0

@@ -1,0 +1,31 @@
+[BUILD] Incremental rebuild of searchd
+[RUNTIME] Starting searchd
+[DATA] Preparing deterministic RT dataset
+[DATA] Loaded 30000 rows
+[REGRESSION_DIRECT] Validating untimed reference stability
+[REGRESSION_DIRECT] Verifying timed subset safety for NOTNEAR
+[CHECK] reg_notnear_subset: ref_count=20, timeout_hits=8, leak_count=0
+[FAIL2PASS_CORE] Enforcing timed subset property for AND NOT
+[CHECK] f2p_andnot: ref_count=20, timeout_hits=8, leak_count=308
+[FAIL] f2p_andnot produced timeout leaks (ids not present in untimed result)
+18802
+18880
+18973
+19063
+19064
+19066
+19067
+19069
+19070
+19072
+19073
+19076
+19078
+19079
+19081
+19082
+19084
+19085
+19087
+19088
+[RESULT] reward=0

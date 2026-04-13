@@ -1,0 +1,37 @@
+[REGRESSION_DIRECT] START - existing controller reconcile behavior
+ok  	github.com/stacklok/toolhive/cmd/thv-operator/controllers	0.190s
+[REGRESSION_DIRECT] PASS - existing controller reconcile behavior
+
+[FAIL2PASS_CORE] START - referencing servers update on add without hash change
+--- FAIL: TestTerminalBenchExternalAuthReferencingServersUpdatedWithoutHashChange (0.10s)
+    zz_terminalbench_referencing_servers_status_test.go:137: 
+        	Error Trace:	/app/toolhive/cmd/thv-operator/controllers/zz_terminalbench_referencing_servers_status_test.go:137
+        	Error:      	[]string(nil) does not contain "server-new"
+        	Test:       	TestTerminalBenchExternalAuthReferencingServersUpdatedWithoutHashChange
+--- FAIL: TestTerminalBenchToolConfigReferencingServersUpdatedWithoutHashChange (0.10s)
+    zz_terminalbench_referencing_servers_status_test.go:73: 
+        	Error Trace:	/app/toolhive/cmd/thv-operator/controllers/zz_terminalbench_referencing_servers_status_test.go:73
+        	Error:      	[]string(nil) does not contain "server-new"
+        	Test:       	TestTerminalBenchToolConfigReferencingServersUpdatedWithoutHashChange
+FAIL
+FAIL	github.com/stacklok/toolhive/cmd/thv-operator/controllers	0.153s
+FAIL
+[FAIL2PASS_CORE] FAIL - referencing servers update on add without hash change (exit=1)
+
+[FAIL2PASS_EDGE] START - referencing servers update on delete without hash change
+--- FAIL: TestTerminalBenchToolConfigReferencingServersRemovedAfterDeletionWithoutHashChange (0.10s)
+    zz_terminalbench_referencing_servers_status_test.go:184: 
+        	Error Trace:	/app/toolhive/cmd/thv-operator/controllers/zz_terminalbench_referencing_servers_status_test.go:184
+        	Error:      	Should be empty, but was [server-delete]
+        	Test:       	TestTerminalBenchToolConfigReferencingServersRemovedAfterDeletionWithoutHashChange
+--- FAIL: TestTerminalBenchExternalAuthReferencingServersRemovedAfterDeletionWithoutHashChange (0.10s)
+    zz_terminalbench_referencing_servers_status_test.go:246: 
+        	Error Trace:	/app/toolhive/cmd/thv-operator/controllers/zz_terminalbench_referencing_servers_status_test.go:246
+        	Error:      	Should be empty, but was [server-delete]
+        	Test:       	TestTerminalBenchExternalAuthReferencingServersRemovedAfterDeletionWithoutHashChange
+FAIL
+FAIL	github.com/stacklok/toolhive/cmd/thv-operator/controllers	0.150s
+FAIL
+[FAIL2PASS_EDGE] FAIL - referencing servers update on delete without hash change (exit=1)
+
+At least one test group failed. reward=0

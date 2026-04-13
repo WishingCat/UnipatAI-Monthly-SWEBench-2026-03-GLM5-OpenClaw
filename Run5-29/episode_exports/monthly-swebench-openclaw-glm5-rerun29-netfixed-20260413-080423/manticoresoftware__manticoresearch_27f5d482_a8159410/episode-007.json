@@ -1,0 +1,67 @@
+{
+  "task_name": "manticoresoftware__manticoresearch_27f5d482_a8159410",
+  "trial_name": "manticoresoftware__manticoresear__V7zntss",
+  "episode_index": 7,
+  "episode_id": "episode-7",
+  "result": "0.0",
+  "agent": "openclaw",
+  "model": "openai/z-ai/glm-5",
+  "model_provider": "openai",
+  "date": "2026-04-13T00:34:07.789619Z",
+  "instruction": "Implement a timeout-safety fix for full-text boolean filtering so that timed `AND NOT` queries never return false-positive document IDs.\n\nBackground:\nWhen a full-text query uses `OPTION max_query_time=...`, Manticore may stop evaluation early and return partial results with a timeout warning. This is acceptable. However, for exclusion logic (`AND NOT`), partial execution must still preserve correctness of already returned IDs.\n\nRequired behavior:\n1. For `AND NOT` queries, if the query times out, every returned `id` must still belong to the untimed result set of the same query.\n2. Timeout may reduce the number of returned rows, but must not introduce IDs that are absent from the untimed result.\n3. Keep existing timeout signaling behavior (the query should still report a timeout warning when time is exceeded).\n\nScope constraints:\n- Fix this in the core query execution path used by SQL `MATCH(...)` queries.\n- Do not change SQL syntax or user-facing query language semantics.\n- Preserve normal behavior for non-timeout execution and avoid regressions in related boolean filtering.",
+  "verifier_output": "[BUILD] Incremental rebuild of searchd\n[RUNTIME] Starting searchd\n[DATA] Preparing deterministic RT dataset\n[DATA] Loaded 30000 rows\n[REGRESSION_DIRECT] Validating untimed reference stability\n[REGRESSION_DIRECT] Verifying timed subset safety for NOTNEAR\n[CHECK] reg_notnear_subset: ref_count=20, timeout_hits=8, leak_count=0\n[FAIL2PASS_CORE] Enforcing timed subset property for AND NOT\n[CHECK] f2p_andnot: ref_count=20, timeout_hits=8, leak_count=308\n[FAIL] f2p_andnot produced timeout leaks (ids not present in untimed result)\n18802\n18880\n18973\n19063\n19064\n19066\n19067\n19069\n19070\n19072\n19073\n19076\n19078\n19079\n19081\n19082\n19084\n19085\n19087\n19088\n[RESULT] reward=0\n",
+  "conversations": [
+    {
+      "role": "user",
+      "content": "Implement a timeout-safety fix for full-text boolean filtering so that timed `AND NOT` queries never return false-positive document IDs.\n\nBackground:\nWhen a full-text query uses `OPTION max_query_time=...`, Manticore may stop evaluation early and return partial results with a timeout warning. This is acceptable. However, for exclusion logic (`AND NOT`), partial execution must still preserve correctness of already returned IDs.\n\nRequired behavior:\n1. For `AND NOT` queries, if the query times out, every returned `id` must still belong to the untimed result set of the same query.\n2. Timeout may reduce the number of returned rows, but must not introduce IDs that are absent from the untimed result.\n3. Keep existing timeout signaling behavior (the query should still report a timeout warning when time is exceeded).\n\nScope constraints:\n- Fix this in the core query execution path used by SQL `MATCH(...)` queries.\n- Do not change SQL syntax or user-facing query language semantics.\n- Preserve normal behavior for non-timeout execution and avoid regressions in related boolean filtering."
+    },
+    {
+      "role": "assistant",
+      "content": "<think>The user is asking me to implement a timeout-safety fix for full-text boolean filtering in Manticore Search. This is a code modification task that requires understanding the codebase first.\n\nLet me start by exploring the codebase to understand the structure and find the relevant code for full-text query execution and timeout handling.</think>\nI'll start by exploring the codebase to understand the structure and locate the relevant query execution code for full-text boolean filtering with timeout handling.\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"find /workspace -type f -name \\\"*.cpp\\\" -o -name \\\"*.h\\\" | head -50\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"ls -la /workspace\"}}\n</tool_call>"
+    },
+    {
+      "role": "assistant",
+      "content": "(no output)"
+    },
+    {
+      "role": "user",
+      "content": "(no output)"
+    },
+    {
+      "role": "assistant",
+      "content": "total 36\ndrwxr-xr-x 2 root root 4096 Apr 13 00:48 .\ndrwxr-xr-x 1 root root 4096 Apr 13 00:48 ..\n-rw-r--r-- 1 root root 8081 Apr 13 00:48 AGENTS.md\n-rw-r--r-- 1 root root  173 Apr 13 00:48 HEARTBEAT.md\n-rw-r--r-- 1 root root  426 Apr 13 00:48 IDENTITY.md\n-rw-r--r-- 1 root root 1709 Apr 13 00:48 SOUL.md\n-rw-r--r-- 1 root root  900 Apr 13 00:48 TOOLS.md\n-rw-r--r-- 1 root root  494 Apr 13 00:48 USER.md"
+    },
+    {
+      "role": "user",
+      "content": "total 36\ndrwxr-xr-x 2 root root 4096 Apr 13 00:48 .\ndrwxr-xr-x 1 root root 4096 Apr 13 00:48 ..\n-rw-r--r-- 1 root root 8081 Apr 13 00:48 AGENTS.md\n-rw-r--r-- 1 root root  173 Apr 13 00:48 HEARTBEAT.md\n-rw-r--r-- 1 root root  426 Apr 13 00:48 IDENTITY.md\n-rw-r--r-- 1 root root 1709 Apr 13 00:48 SOUL.md\n-rw-r--r-- 1 root root  900 Apr 13 00:48 TOOLS.md\n-rw-r--r-- 1 root root  494 Apr 13 00:48 USER.md"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>The workspace appears to be empty of source code files. This is a fresh workspace with just the AGENTS.md, SOUL.md, etc. files. I need to understand what codebase we're working with. Let me check if there's more context or if I need to look elsewhere.</think>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"find / -maxdepth 4 -type d -name \\\"manticore*\\\" 2>/dev/null | head -20\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"find / -maxdepth 4 -type d -name \\\"sphinx*\\\" 2>/dev/null | head -20\"}}\n</tool_call>"
+    },
+    {
+      "role": "assistant",
+      "content": "/app/manticoresearch"
+    },
+    {
+      "role": "user",
+      "content": "/app/manticoresearch"
+    },
+    {
+      "role": "assistant",
+      "content": "/opt/mcore-build/src/sphinxquery\n/app/manticoresearch/src/sphinxquery"
+    },
+    {
+      "role": "user",
+      "content": "/opt/mcore-build/src/sphinxquery\n/app/manticoresearch/src/sphinxquery"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>There's a Manticore Search repository. Let me explore it.</think>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"ls -la /app/manticoresearch\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"ls -la /app/manticoresearch/src\"}}\n</tool_call>"
+    },
+    {
+      "role": "assistant",
+      "content": "total 356\ndrwxr-xr-x   1 root root  4096 Apr  3 07:57 .\ndrwxr-xr-x   1 root root  4096 Apr  9 16:47 ..\ndrwxr-xr-x   3 root root  4096 Mar 27 11:17 .clt\n-rwxr-xr-x   1 root root   156 Mar 27 11:17 .cursorignore\n-rwxr-xr-x   1 root root   304 Mar 27 11:17 .editorconfig\ndrwxr-xr-x   1 root root  4096 Apr 13 00:35 .git\ndrwxr-xr-x   4 root root  4096 Mar 27 11:17 .github\n-rwxr-xr-x   1 root root  1396 Mar 27 11:17 .gitignore\n-rwxr-xr-x   1 root root  7288 Mar 27 11:17 .gitlab-ci.yml\n-rwxr-xr-x   1 root root   103 Mar 27 11:17 .gitmodules\n-rwxr-xr-x   1 root root    24 Mar 27 11:17 .noindex\ndrwxr-xr-x  17 root root  4096 Mar 27 11:17 .translation-cache\n-rwxr-xr-x   1 root root   121 Mar 27 11:17 116.conf\n-rwxr-xr-x   1 root root 33651 Mar 27 11:17 CMakeLists.txt\n-rwxr-xr-x   1 root root  3311 Mar 27 11:17 CODE_OF_CONDUCT.md\n-rwxr-xr-x   1 root root  3213 Mar 27 11:17 CONTRIBUTING.md\n-rwxr-xr-x   1 root root    64 Mar 27 11:17 INSTALL\n-rwxr-xr-x   1 root root 35149 Mar 27 11:17 LICENSE\n-rwxr-xr-x   1 root root 17427 Mar 27 11:17 README.md\n-rwxr-xr-x   1 root root 13147 Mar 27 11:17 TESTING.md\ndrwxr-xr-x   4 root root  4096 Mar 27 11:17 actions\ndrwxr-xr-x   4 root root  4096 Mar 27 11:17 api\ndrwxr-xr-x   3 root root  4096 Mar 27 11:17 cmake\n-rwxr-xr-x   1 root root   417 Mar 27 11:17 columnar_src.txt\n-rwxr-xr-x   1 root root 10485 Mar 27 11:17 compare_manuals.sh\ndrwxr-xr-x   2 root root  4096 Mar 27 11:17 component-licenses\ndrwxr-xr-x   2 root root  4096 Mar 27 11:17 config\n-rwxr-xr-x   1 root root    98 Mar 27 11:17 configure\ndrwxr-xr-x   3 root root  4096 Mar 27 11:17 contrib\n-rwxr-xr-x   1 root root   423 Mar 27 11:17 deps.txt\ndrwxr-xr-x   6 root root  4096 Mar 27 11:17 dist\ndrwxr-xr-x   2 root root  4096 Mar 27 11:17 doc\n-rwxr-xr-x   1 root root  2280 Mar 27 11:17 docker-compose-test.yml\n-rwxr-xr-x   1 root root   903 Mar 27 11:17 example.sql\ndrwxr-xr-x   2 root root  4096 Mar 27 11:17 galera_packaging\ndrwxr-xr-x   2 root root  4096 Mar 27 11:17 libicu\ndrwxr-xr-x   2 root root  4096 Mar 27 11:17 libre2\ndrwxr-xr-x   2 root root  4096 Mar 27 11:17 libstemmer_c\n-rwxr-xr-x   1 root root   234 Mar 27 11:17 manticore.conf.in\ndrwxr-xr-x   5 root root  4096 Mar 27 11:17 manual\n-rwxr-xr-x   1 root root  1854 Mar 27 11:17 memcheck.sh\n-rwxr-xr-x   1 root root   437 Mar 27 11:17 memdocker.sh\ndrwxr-xr-x   9 root root  4096 Mar 27 11:17 misc\ndrwxr-xr-x   2 root root  4096 Mar 27 11:17 mysqlse\n-rwxr-xr-x   1 root root   978 Mar 27 11:17 smoke.sh\n-rwxr-xr-x   1 root root  2456 Mar 27 11:17 smokeci.sh\n-rwxr-xr-x   1 root root  5193 Mar 27 11:17 sphinxrev.cmake\n-rwxr-xr-x   1 root root  2505 Mar 27 11:17 sphinxrevcheck.cmake\ndrwxr-xr-x  23 root root 20480 Mar 27 11:17 src\n-rwxr-xr-x   1 root root     0 Mar 27 11:17 stack.txt\ndrwxr-xr-x 495 root root 16384 Mar 27 11:17 test\ndrwxr-xr-x   2 root root  4096 Mar 27 11:17 translator\n-rwxr-xr-x   1 root root   465 Mar 27 11:17 translator.config.yaml\n-rwxr-xr-x   1 root root   361 Mar 27 11:17 translator.models.yaml\n-rwxr-xr-x   1 root root  2382 Mar 27 11:17 translator.role.tpl\n-rwxr-xr-x   1 root root   240 Mar 27 11:17 valgrind"
+    }
+  ]
+}

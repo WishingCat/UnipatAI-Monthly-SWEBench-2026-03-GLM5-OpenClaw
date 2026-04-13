@@ -1,0 +1,46 @@
+{
+    "task": {
+        "path": "T:\\AgentProjects\\20260408SWEBench\\prepared_datasets\\monthly_swebench_2026_03_full\\all_tasks\\stackrox__stackrox_141b82d3_d510dffd",
+        "git_url": null,
+        "git_commit_id": null,
+        "overwrite": false,
+        "download_dir": null,
+        "source": "all_tasks"
+    },
+    "trial_name": "stackrox__stackrox_141b82d3_d510__T4nGMKi",
+    "trials_dir": "T:\\AgentProjects\\20260408SWEBench\\harbor_jobs\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423",
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": 4.0,
+    "environment_build_timeout_multiplier": 2.0,
+    "agent": {
+        "name": "openclaw",
+        "import_path": null,
+        "model_name": "openai/z-ai/glm-5",
+        "override_timeout_sec": null,
+        "override_setup_timeout_sec": null,
+        "max_timeout_sec": null,
+        "kwargs": {},
+        "env": {}
+    },
+    "environment": {
+        "type": "docker",
+        "import_path": null,
+        "force_build": false,
+        "delete": true,
+        "override_cpus": null,
+        "override_memory_mb": null,
+        "override_storage_mb": null,
+        "override_gpus": null,
+        "suppress_override_warnings": false,
+        "kwargs": {}
+    },
+    "verifier": {
+        "override_timeout_sec": null,
+        "max_timeout_sec": null,
+        "disable": false
+    },
+    "artifacts": [],
+    "job_id": "aa0576b2-901e-49cd-a9c3-36428b86e0fa"
+}

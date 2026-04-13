@@ -1,0 +1,86 @@
+[ENV] GO_BIN=/usr/local/go/bin/go
+[REGRESSION_DIRECT] Running tests matching: ^TestTaskPR2467Regression_
+go: downloading github.com/specterops/dawgs v0.4.10
+go: downloading go.uber.org/mock v0.5.2
+go: downloading github.com/stretchr/testify v1.11.1
+go: downloading github.com/gofrs/uuid v4.4.0+incompatible
+go: downloading github.com/gorilla/mux v1.8.1
+go: downloading github.com/golang-jwt/jwt/v4 v4.5.2
+go: downloading github.com/channelmeter/iso8601duration v0.0.0-20150204201828-8da3af7a2a61
+go: downloading github.com/crewjam/saml v0.5.1
+go: downloading github.com/pquerna/otp v1.5.0
+go: downloading github.com/russellhaering/goxmldsig v1.5.0
+go: downloading github.com/lib/pq v1.10.9
+go: downloading github.com/coreos/go-oidc/v3 v3.14.1
+go: downloading github.com/pkg/errors v0.9.1
+go: downloading golang.org/x/oauth2 v0.32.0
+go: downloading gorm.io/gorm v1.25.12
+go: downloading github.com/gorilla/schema v1.4.1
+go: downloading github.com/gobeam/stringy v0.0.7
+go: downloading github.com/shirou/gopsutil/v3 v3.24.5
+go: downloading golang.org/x/crypto v0.48.0
+go: downloading github.com/teambition/rrule-go v1.8.2
+go: downloading github.com/jackc/pgx/v5 v5.8.0
+go: downloading gorm.io/driver/postgres v1.5.10
+go: downloading github.com/boombuler/barcode v1.0.1-0.20190219062509-6c824513bacc
+go: downloading github.com/go-jose/go-jose/v4 v4.0.5
+go: downloading github.com/beevik/etree v1.5.0
+go: downloading github.com/jonboulle/clockwork v0.5.0
+go: downloading github.com/hashicorp/golang-lru v1.0.2
+go: downloading github.com/mattermost/xml-roundtrip-validator v0.1.0
+go: downloading github.com/santhosh-tekuri/jsonschema/v6 v6.0.2
+go: downloading github.com/RoaringBitmap/roaring/v2 v2.14.4
+go: downloading github.com/jinzhu/now v1.1.5
+go: downloading github.com/jinzhu/inflection v1.0.0
+go: downloading golang.org/x/text v0.34.0
+go: downloading github.com/cespare/xxhash/v2 v2.3.0
+go: downloading github.com/neo4j/neo4j-go-driver/v5 v5.28.4
+go: downloading github.com/axiomhq/hyperloglog v0.2.6
+go: downloading github.com/jackc/pgtype v1.14.4
+go: downloading github.com/antlr4-go/antlr/v4 v4.13.1
+go: downloading github.com/davecgh/go-spew v1.1.1
+go: downloading github.com/pmezard/go-difflib v1.0.0
+go: downloading github.com/gammazero/deque v1.2.0
+go: downloading github.com/bloodhoundad/azurehound/v2 v2.10.0
+go: downloading github.com/prometheus/client_golang v1.22.0
+go: downloading github.com/bits-and-blooms/bitset v1.24.4
+go: downloading golang.org/x/sys v0.41.0
+go: downloading gopkg.in/yaml.v3 v3.0.1
+go: downloading github.com/jackc/pgpassfile v1.0.0
+go: downloading github.com/jackc/pgservicefile v0.0.0-20240606120523-5a60cdf6a761
+go: downloading golang.org/x/exp v0.0.0-20260112195511-716be5621a96
+go: downloading github.com/jackc/puddle/v2 v2.2.2
+go: downloading github.com/jackc/pgio v1.0.0
+go: downloading github.com/dgryski/go-metro v0.0.0-20250106013310-edb8663e5e33
+go: downloading github.com/prometheus/client_model v0.6.2
+go: downloading github.com/beorn7/perks v1.0.1
+go: downloading github.com/prometheus/common v0.62.0
+go: downloading github.com/kamstrup/intmap v0.5.2
+go: downloading google.golang.org/protobuf v1.36.6
+go: downloading github.com/prometheus/procfs v0.15.1
+go: downloading golang.org/x/sync v0.19.0
+go: downloading github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822
+go: downloading github.com/mschoch/smat v0.2.0
+--- FAIL: TestTaskPR2467Regression_InvalidAssetGroupIDStillRejected (0.00s)
+    agi.go:412: Unexpected call to *mocks.MockDatabase.GetDisplayNodeGraphKinds([context.Background.WithValue(mux.contextKey, map[string]string)]) at /app/BloodHound/cmd/api/src/api/v2/agi.go:412 because: there are no expected calls of the method "GetDisplayNodeGraphKinds" for that receiver
+FAIL
+FAIL	github.com/specterops/bloodhound/cmd/api/src/tasktests/pr2467	0.016s
+FAIL
+[REGRESSION_DIRECT] FAIL
+
+[FAIL2PASS_CORE] Running tests matching: ^TestTaskPR2467Fail2PassCore_
+ok  	github.com/specterops/bloodhound/cmd/api/src/tasktests/pr2467	0.019s
+[FAIL2PASS_CORE] PASS
+
+[FAIL2PASS_ERROR_HANDLING] Running tests matching: ^TestTaskPR2467Fail2PassErrorHandling_
+2026/04/13 02:32:08 WARN Writing API Error. Status: 500. Message: [{ Error fetching display primary kinds: display kind lookup failed}]
+--- FAIL: TestTaskPR2467Fail2PassErrorHandling_CountsEndpointReturns500OnDisplayKindLookupError (0.00s)
+    controller.go:251: missing call(s) to *mocks.MockDatabase.GetAssetGroup(is anything, is equal to 1 (int32)) /app/BloodHound/cmd/api/src/tasktests/pr2467/agi_task_test.go:115
+    controller.go:251: missing call(s) to *mocks.MockGraph.GetAssetGroupNodes(is anything, is equal to test-tag (string), is equal to false (bool)) /app/BloodHound/cmd/api/src/tasktests/pr2467/agi_task_test.go:116
+    controller.go:251: aborting test due to missing call(s)
+FAIL
+FAIL	github.com/specterops/bloodhound/cmd/api/src/tasktests/pr2467	0.015s
+FAIL
+[FAIL2PASS_ERROR_HANDLING] FAIL
+
+Final reward: 0

@@ -1,0 +1,95 @@
+{
+  "task_name": "lynx-family__lynx_20307ab3_3ea797af",
+  "trial_name": "lynx-family__lynx_20307ab3_3ea79__ZH5Wsy5",
+  "episode_index": 10,
+  "episode_id": "episode-10",
+  "result": "0.0",
+  "agent": "openclaw",
+  "model": "openai/z-ai/glm-5",
+  "model_provider": "openai",
+  "date": "2026-04-13T00:30:04.605094Z",
+  "instruction": "The `@lynx-js/type-config` package is missing a compiler option that is already part of the platform-level configuration contract.\n\nImplement support for a new compiler option named `enableOptLepusBytecode` and make the package consistent across its public artifacts.\n\nRequirements:\n\n1. Public runtime key list\n- The exported `compilerOptionsKeys` list in `js_libraries/type-config/config-keys.js` must include `enableOptLepusBytecode`.\n- Keep existing keys intact and keep a stable ordering. `enableOptLepusBytecode` must appear between `enableKeepPageData` and `enableRemoveCSSScope`.\n\n2. Public TypeScript contract\n- The `CompilerOptions` interface in `js_libraries/type-config/types/compiler-options.d.ts` must expose `enableOptLepusBytecode?: boolean`.\n- The option description should document:\n  - meaning: allow optimized Lepus bytecode\n  - default value: `true`\n  - availability since LynxSDK `3.8`\n\n3. Source schema consistency\n- In `core/template_bundle/template_codec/binary_decoder/lynx_config.yml`, under `compilerOptions`, add an `enableOptLepusBytecode` entry.\n- The schema entry must define:\n  - `valueType: boolean`\n  - `defaultValue: 'true'`\n  - `since: '3.8'`\n\n4. Internal package test assets\n- Update the package tests under `js_libraries/type-config/test/` so they reflect the new compiler option in both runtime key assertions and `CompilerOptions` type assertions.\n\nAcceptance criteria:\n- The new option is visible in runtime keys, TypeScript types, and compiler option schema.\n- Existing behavior and existing keys remain valid.\n- The package test assets are aligned with the updated public contract.",
+  "verifier_output": "[INFO] Starting verifier for enableOptLepusBytecode contract\n[REGRESSION_DIRECT] Running existing @lynx-js/type-config package suite\n\u001b[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.\u001b[39m\nTesting types with tsc and vue-tsc is an experimental feature.\nBreaking changes might not follow SemVer, please pin Vitest's version when using it.\n\n RUN  v2.1.9 /app/lynx/js_libraries/type-config\n\n ✓ |type-config| test/index.test-d.ts (2 tests) 4ms\n ✓ |type-config| test/index.test.js (3 tests) 4ms\n ✓  TS  |type-config| test/index.test-d.ts (2 tests)\n\n Test Files  3 passed (3)\n      Tests  7 passed (7)\nType Errors  no errors\n   Start at  00:37:19\n   Duration  2.46s (transform 387ms, setup 0ms, collect 182ms, tests 9ms, environment 0ms, prepare 1.13s, typecheck 1.00s)\n\n[REGRESSION_DIRECT] PASS: existing package suite remains healthy\n[FAIL2PASS_CORE] Verifying runtime compilerOptionsKeys contract\nnode:assert:90\n  throw new AssertionError(obj);\n  ^\n\nAssertionError [ERR_ASSERTION]: compilerOptionsKeys must expose 27 keys after adding enableOptLepusBytecode\n\n26 !== 27\n\n    at [stdin]:5:8\n    at runScriptInThisContext (node:internal/vm:209:10)\n    at node:internal/process/execution:118:14\n    at [stdin]-wrapper:6:24\n    at runScript (node:internal/process/execution:101:62)\n    at evalScript (node:internal/process/execution:133:3)\n    at node:internal/main/eval_stdin:32:5\n    at Socket.<anonymous> (node:internal/process/execution:234:5)\n    at Socket.emit (node:events:536:35)\n    at endReadableNT (node:internal/streams/readable:1698:12) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: 26,\n  expected: 27,\n  operator: 'strictEqual'\n}\n\nNode.js v20.20.2\n[FAIL2PASS_CORE] FAIL: runtime key contract is not satisfied\n[FAIL2PASS_EDGE] Verifying schema metadata and TypeScript typing contract\nTraceback (most recent call last):\n  File \"<stdin>\", line 9, in <module>\nAssertionError: enableOptLepusBytecode must exist in compilerOptions schema\ntmp_enable_opt_lepus_bytecode_typecheck.ts(3,36): error TS2353: Object literal may only specify known properties, and 'enableOptLepusBytecode' does not exist in type 'CompilerOptions'.\ntmp_enable_opt_lepus_bytecode_typecheck.ts(5,3): error TS2353: Object literal may only specify known properties, and 'enableOptLepusBytecode' does not exist in type 'CompilerOptions'.\n[FAIL2PASS_EDGE] FAIL: schema/type contract is incomplete\n[INFO] Final reward: 0 (failed groups: 2)\n",
+  "conversations": [
+    {
+      "role": "user",
+      "content": "The `@lynx-js/type-config` package is missing a compiler option that is already part of the platform-level configuration contract.\n\nImplement support for a new compiler option named `enableOptLepusBytecode` and make the package consistent across its public artifacts.\n\nRequirements:\n\n1. Public runtime key list\n- The exported `compilerOptionsKeys` list in `js_libraries/type-config/config-keys.js` must include `enableOptLepusBytecode`.\n- Keep existing keys intact and keep a stable ordering. `enableOptLepusBytecode` must appear between `enableKeepPageData` and `enableRemoveCSSScope`.\n\n2. Public TypeScript contract\n- The `CompilerOptions` interface in `js_libraries/type-config/types/compiler-options.d.ts` must expose `enableOptLepusBytecode?: boolean`.\n- The option description should document:\n  - meaning: allow optimized Lepus bytecode\n  - default value: `true`\n  - availability since LynxSDK `3.8`\n\n3. Source schema consistency\n- In `core/template_bundle/template_codec/binary_decoder/lynx_config.yml`, under `compilerOptions`, add an `enableOptLepusBytecode` entry.\n- The schema entry must define:\n  - `valueType: boolean`\n  - `defaultValue: 'true'`\n  - `since: '3.8'`\n\n4. Internal package test assets\n- Update the package tests under `js_libraries/type-config/test/` so they reflect the new compiler option in both runtime key assertions and `CompilerOptions` type assertions.\n\nAcceptance criteria:\n- The new option is visible in runtime keys, TypeScript types, and compiler option schema.\n- Existing behavior and existing keys remain valid.\n- The package test assets are aligned with the updated public contract."
+    },
+    {
+      "role": "assistant",
+      "content": "<think>The user wants me to implement a new compiler option `enableOptLepusBytecode` in the `@lynx-js/type-config` package. Let me break down what needs to be done:\n\n1. Add `enableOptLepusBytecode` to `compilerOptionsKeys` in `js_libraries/type-config/config-keys.js` (between `enableKeepPageData` and `enableRemoveCSSScope`)\n\n2. Add `enableOptLepusBytecode?: boolean` to the `CompilerOptions` interface in `js_libraries/type-config/types/compiler-options.d.ts`\n\n3. Add the schema entry in `core/template_bundle/template_codec/binary_decoder/lynx_config.yml`\n\n4. Update tests in `js_libraries/type-config/test/`\n\nLet me start by reading the relevant files to understand their current structure.</think>\nI'll implement support for the new `enableOptLepusBytecode` compiler option. Let me start by reading the relevant files to understand their current structure.\n<tool_call>\n{\"name\": \"read\", \"arguments\": {\"path\": \"/workspace/js_libraries/type-config/config-keys.js\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"read\", \"arguments\": {\"path\": \"/workspace/js_libraries/type-config/types/compiler-options.d.ts\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"read\", \"arguments\": {\"path\": \"/workspace/core/template_bundle/template_codec/binary_decoder/lynx_config.yml\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"find /workspace/js_libraries/type-config/test -type f -name \\\"*.ts\\\" -o -name \\\"*.js\\\" 2>/dev/null | head -20\"}}\n</tool_call>"
+    },
+    {
+      "role": "assistant",
+      "content": "{\n  \"status\": \"error\",\n  \"tool\": \"read\",\n  \"error\": \"ENOENT: no such file or directory, access '/workspace/js_libraries/type-config/config-keys.js'\"\n}"
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"status\": \"error\",\n  \"tool\": \"read\",\n  \"error\": \"ENOENT: no such file or directory, access '/workspace/js_libraries/type-config/config-keys.js'\"\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "{\n  \"status\": \"error\",\n  \"tool\": \"read\",\n  \"error\": \"ENOENT: no such file or directory, access '/workspace/js_libraries/type-config/types/compiler-options.d.ts'\"\n}"
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"status\": \"error\",\n  \"tool\": \"read\",\n  \"error\": \"ENOENT: no such file or directory, access '/workspace/js_libraries/type-config/types/compiler-options.d.ts'\"\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "{\n  \"status\": \"error\",\n  \"tool\": \"read\",\n  \"error\": \"ENOENT: no such file or directory, access '/workspace/core/template_bundle/template_codec/binary_decoder/lynx_config.yml'\"\n}"
+    },
+    {
+      "role": "user",
+      "content": "{\n  \"status\": \"error\",\n  \"tool\": \"read\",\n  \"error\": \"ENOENT: no such file or directory, access '/workspace/core/template_bundle/template_codec/binary_decoder/lynx_config.yml'\"\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "(no output)"
+    },
+    {
+      "role": "user",
+      "content": "(no output)"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>The files don't exist at the expected paths. Let me search for them in the workspace.</think>\nLet me search for these files in the workspace:\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"find /workspace -type f -name \\\"config-keys.js\\\" 2>/dev/null\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"find /workspace -type f -name \\\"compiler-options.d.ts\\\" 2>/dev/null\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"find /workspace -type f -name \\\"lynx_config.yml\\\" 2>/dev/null\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"find /workspace -type d -name \\\"type-config\\\" 2>/dev/null\"}}\n</tool_call>"
+    },
+    {
+      "role": "assistant",
+      "content": "(no output)"
+    },
+    {
+      "role": "user",
+      "content": "(no output)"
+    },
+    {
+      "role": "assistant",
+      "content": "(no output)"
+    },
+    {
+      "role": "user",
+      "content": "(no output)"
+    },
+    {
+      "role": "assistant",
+      "content": "(no output)"
+    },
+    {
+      "role": "user",
+      "content": "(no output)"
+    },
+    {
+      "role": "assistant",
+      "content": "(no output)"
+    },
+    {
+      "role": "user",
+      "content": "(no output)"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>The files don't exist yet. This seems like I need to create these files from scratch. Let me check what does exist in the workspace.</think>\nLet me check the workspace structure:\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"ls -la /workspace\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"find /workspace -type f 2>/dev/null | head -50\"}}\n</tool_call>"
+    }
+  ]
+}

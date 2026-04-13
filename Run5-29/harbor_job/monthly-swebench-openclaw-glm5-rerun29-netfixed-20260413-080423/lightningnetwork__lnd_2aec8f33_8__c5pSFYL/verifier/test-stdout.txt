@@ -1,0 +1,12 @@
+[REGRESSION_DIRECT] running ^TestSqliteStoreDefaultPragmasRemainEnabled$
+go: downloading github.com/btcsuite/btclog/v2 v2.0.1-0.20250602222548-9967d19bb084
+go: downloading github.com/cenkalti/backoff/v4 v4.1.3
+ok  	github.com/lightningnetwork/lnd/sqldb	0.057s
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] running ^TestSqliteStoreUsesConfiguredBusyTimeoutAndPragmas$
+ok  	github.com/lightningnetwork/lnd/sqldb	0.083s
+[FAIL2PASS_CORE] PASS
+[FAIL2PASS_EDGE] running ^TestSqliteStoreUsesEffectiveMaxConnections$
+ok  	github.com/lightningnetwork/lnd/sqldb	0.066s
+[FAIL2PASS_EDGE] PASS
+All test groups passed.

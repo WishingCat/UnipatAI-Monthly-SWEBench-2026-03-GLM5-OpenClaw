@@ -1,0 +1,101 @@
+{
+    "job_name": "monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423",
+    "jobs_dir": "T:\\AgentProjects\\20260408SWEBench\\harbor_jobs",
+    "n_attempts": 1,
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": 4.0,
+    "environment_build_timeout_multiplier": 2.0,
+    "debug": true,
+    "orchestrator": {
+        "type": "local",
+        "n_concurrent_trials": 2,
+        "quiet": false,
+        "retry": {
+            "max_retries": 1,
+            "include_exceptions": null,
+            "exclude_exceptions": [
+                "VerifierOutputParseError",
+                "RewardFileEmptyError",
+                "AgentTimeoutError",
+                "VerifierTimeoutError",
+                "RewardFileNotFoundError"
+            ],
+            "wait_multiplier": 1.0,
+            "min_wait_sec": 1.0,
+            "max_wait_sec": 60.0
+        },
+        "kwargs": {}
+    },
+    "environment": {
+        "type": "docker",
+        "import_path": null,
+        "force_build": false,
+        "delete": true,
+        "override_cpus": null,
+        "override_memory_mb": null,
+        "override_storage_mb": null,
+        "override_gpus": null,
+        "suppress_override_warnings": false,
+        "kwargs": {}
+    },
+    "verifier": {
+        "override_timeout_sec": null,
+        "max_timeout_sec": null,
+        "disable": false
+    },
+    "metrics": [],
+    "agents": [
+        {
+            "name": "openclaw",
+            "import_path": null,
+            "model_name": "openai/z-ai/glm-5",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {}
+        }
+    ],
+    "datasets": [
+        {
+            "task_names": [
+                "c9s__bbgo_15f59ef4_85320527",
+                "kubernetes__release_9d42037a_572035f6",
+                "lemonade-sdk__lemonade_0a0e4869_b989f4d1",
+                "lemonade-sdk__lemonade_0b4e77cd_10db1baf",
+                "lightningnetwork__lnd_2aec8f33_8ec11635",
+                "lynx-family__lynx_20307ab3_3ea797af",
+                "manticoresoftware__manticoresearch_27f5d482_a8159410",
+                "measure-sh__measure_2d069404_bc46a22d",
+                "memgraph__memgraph_2bcba710_83c494f7",
+                "microsoft__onnxruntime-genai_8a4f64e0_80dd5583",
+                "musescore__musescore_504e682f_9c603b63",
+                "nextcloud__desktop_0d6b474d_ef3d1236",
+                "nextlevelbuilder__goclaw_1c4dce0c_99dd363b",
+                "projectdiscovery__nuclei_2e5ed57b_3ec23a95",
+                "protocolbuffers__protobuf_18da8e12_8bbb967a",
+                "rancher__fleet_1696ab59_955bbd7f",
+                "rancher__fleet_3093a8dd_722788e3",
+                "specterops__bloodhound_0a092be6_fbf55c9e",
+                "stacklok__toolhive_398eeec9_5e246db0",
+                "stackrox__stackrox_13efb8e1_66777350",
+                "stackrox__stackrox_141b82d3_d510dffd",
+                "tektoncd__operator_09bfe1a0_790d5201",
+                "tektoncd__operator_4f93b095_9e20b9ca",
+                "tektoncd__operator_790d5201_cc10d0d8",
+                "tencent__tgfx_48cd318f_4638abd6",
+                "tencent__weknora_463f40fa_380f5d94",
+                "tencent__weknora_9d2228a8_b291381c",
+                "tikv__pd_161d5718_033398bf",
+                "tikv__pd_1bd15b06_99eb5b50"
+            ],
+            "exclude_task_names": null,
+            "n_tasks": null,
+            "path": "T:\\AgentProjects\\20260408SWEBench\\prepared_datasets\\monthly_swebench_2026_03_full\\all_tasks"
+        }
+    ],
+    "tasks": [],
+    "artifacts": []
+}

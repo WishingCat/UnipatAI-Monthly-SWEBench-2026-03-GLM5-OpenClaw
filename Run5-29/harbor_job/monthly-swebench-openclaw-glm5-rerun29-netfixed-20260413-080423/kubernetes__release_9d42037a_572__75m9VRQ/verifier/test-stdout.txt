@@ -1,0 +1,74 @@
+Using go binary: /usr/local/go/bin/go
+[REGRESSION_DIRECT] START existing gather-notes cherry-pick path still works
+ok  	k8s.io/release/pkg/notes	0.004s
+[REGRESSION_DIRECT] PASS existing gather-notes cherry-pick path still works
+[FAIL2PASS_CORE] START release-notes defaults list-v2 to true
+--- FAIL: TestReleaseNotesListV2DefaultEnabled (0.00s)
+    release_notes_cmd_defaults_test.go:13: 
+        	Error Trace:	/app/release/cmd/krel/cmd/release_notes_cmd_defaults_test.go:13
+        	Error:      	Not equal: 
+        	            	expected: "true"
+        	            	actual  : "false"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-true
+        	            	+false
+        	Test:       	TestReleaseNotesListV2DefaultEnabled
+FAIL
+FAIL	k8s.io/release/cmd/krel/cmd	0.021s
+FAIL
+[FAIL2PASS_CORE] FAIL release-notes defaults list-v2 to true
+[FAIL2PASS_CORE] START list-v2 applies maps from all configured providers
+--- FAIL: TestListReleaseNotesV2AccumulatesMapsFromAllProviders (0.02s)
+    notes_v2_behavior_test.go:64: 
+        	Error Trace:	/app/release/pkg/notes/notes_v2_behavior_test.go:64
+        	Error:      	Not equal: 
+        	            	expected: "mapped text from provider one"
+        	            	actual  : "original text"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-mapped text from provider one
+        	            	+original text
+        	Test:       	TestListReleaseNotesV2AccumulatesMapsFromAllProviders
+FAIL
+FAIL	k8s.io/release/pkg/notes	0.024s
+FAIL
+[FAIL2PASS_CORE] FAIL list-v2 applies maps from all configured providers
+[FAIL2PASS_EDGE] START list-v2 resolves cherry-pick author from origin PR
+--- FAIL: TestBuildReleaseNoteUsesOriginAuthorForAutomatedCherryPick (0.00s)
+    notes_v2_behavior_test.go:100: 
+        	Error Trace:	/app/release/pkg/notes/notes_v2_behavior_test.go:100
+        	Error:      	Not equal: 
+        	            	expected: "origin-author"
+        	            	actual  : "k8s-infra-cherrypick-robot"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-origin-author
+        	            	+k8s-infra-cherrypick-robot
+        	Test:       	TestBuildReleaseNoteUsesOriginAuthorForAutomatedCherryPick
+FAIL
+FAIL	k8s.io/release/pkg/notes	0.003s
+FAIL
+[FAIL2PASS_EDGE] FAIL list-v2 resolves cherry-pick author from origin PR
+[FAIL2PASS_EDGE] START list-v2 deduplicates repeated rendered markdown entries
+--- FAIL: TestListReleaseNotesV2DeduplicatesByRenderedMarkdown (0.02s)
+    notes_v2_behavior_test.go:127: 
+        	Error Trace:	/app/release/pkg/notes/notes_v2_behavior_test.go:127
+        	Error:      	Not equal: 
+        	            	expected: 1
+        	            	actual  : 2
+        	Test:       	TestListReleaseNotesV2DeduplicatesByRenderedMarkdown
+FAIL
+FAIL	k8s.io/release/pkg/notes	0.022s
+FAIL
+[FAIL2PASS_EDGE] FAIL list-v2 deduplicates repeated rendered markdown entries
+4 test group(s) failed.

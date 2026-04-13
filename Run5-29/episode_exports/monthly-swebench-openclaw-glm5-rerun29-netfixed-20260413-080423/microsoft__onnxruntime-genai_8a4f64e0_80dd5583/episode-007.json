@@ -1,0 +1,63 @@
+{
+  "task_name": "microsoft__onnxruntime-genai_8a4f64e0_80dd5583",
+  "trial_name": "microsoft__onnxruntime-genai_8a4__iSE7Z8e",
+  "episode_index": 7,
+  "episode_id": "episode-7",
+  "result": "0.0",
+  "agent": "openclaw",
+  "model": "openai/z-ai/glm-5",
+  "model_provider": "openai",
+  "date": "2026-04-13T00:55:12.338834Z",
+  "instruction": "The Python model builder in `src/python/py/models` currently handles Whisper (`WhisperForConditionalGeneration`) through a generic fallback path in `config_only` mode, which does not emit the Whisper-specific runtime contract.\n\nUpdate the builder behavior so that Whisper exports produce the expected multi-component configuration artifacts.\n\nRequirements:\n\n1. Whisper config-only artifacts\n- When the Hugging Face config reports Whisper architecture (`WhisperForConditionalGeneration`) and the builder runs in `config_only` mode, the output directory must contain:\n  - `audio_processor_config.json`\n  - `genai_config.json`\n\n2. Audio processor pipeline contract\n- `audio_processor_config.json` must define a `feature_extraction.sequence` pipeline whose operation types are exactly, in order:\n  - `AudioDecoder`\n  - `STFTNorm`\n  - `LogMelSpectrum`\n\n3. Whisper GenAI model schema\n- `genai_config.json` must describe Whisper as a two-component model:\n  - `model.type` must be `\"whisper\"`\n  - `model.encoder` must exist\n  - `model.decoder` must exist\n- Component filenames must be:\n  - `model.encoder.filename == \"encoder.onnx\"`\n  - `model.decoder.filename == \"decoder.onnx\"`\n\n4. Whisper cache naming and search defaults\n- Decoder input naming must include:\n  - `past_key_names == \"past_key_self_%d\"`\n  - `cross_past_key_names == \"past_key_cross_%d\"`\n- Encoder output naming must include:\n  - `cross_present_key_names == \"present_key_cross_%d\"`\n- Whisper search defaults must set:\n  - `search.top_k == 1`\n\n5. Regression safety in the same module\n- Keep existing `parse_extra_options` behavior intact, including:\n  - boolean parsing (`true/false/1/0`)\n  - tuple parsing for `int4_op_types_to_quantize`\n  - list parsing for `int4_nodes_to_exclude`\n  - auto-disabling `enable_webgpu_graph` when execution provider is not `webgpu`\n\nDo not add external service dependencies.",
+  "verifier_output": "[REGRESSION_DIRECT] Running regression_direct\nExtra options: {'int4_is_symmetric': 'false', 'int4_op_types_to_quantize': 'MatMul/Gather', 'int4_nodes_to_exclude': '/a,/b', 'enable_webgpu_graph': 'true'}\nWARNING: enable_webgpu_graph is only supported with WebGPU execution provider. Disabling enable_webgpu_graph.\n[REGRESSION_DIRECT] PASS regression_direct\n[FAIL2PASS_CORE] Running fail2pass_core\nGroupQueryAttention (GQA) is used in this model.\nSaving GenAI config in /tmp/whisper-builder-axujzmp_\nTraceback (most recent call last):\n  File \"/tests/verify_whisper_builder.py\", line 373, in <module>\n    raise SystemExit(main())\n  File \"/tests/verify_whisper_builder.py\", line 365, in main\n    run_fail2pass_core()\n  File \"/tests/verify_whisper_builder.py\", line 330, in run_fail2pass_core\n    result = _run_whisper_config_only_export(model_name=model_name)\n  File \"/tests/verify_whisper_builder.py\", line 312, in _run_whisper_config_only_export\n    _assert(os.path.exists(audio_cfg_path), \"audio_processor_config.json must be generated for Whisper\")\n  File \"/tests/verify_whisper_builder.py\", line 271, in _assert\n    raise AssertionError(message)\nAssertionError: audio_processor_config.json must be generated for Whisper\n[FAIL2PASS_CORE] FAIL fail2pass_core\n[FAIL2PASS_EDGE] Running fail2pass_edge\nSaving GenAI config in /tmp/whisper-builder-ktz3rhl1\nTraceback (most recent call last):\n  File \"/tests/verify_whisper_builder.py\", line 373, in <module>\n    raise SystemExit(main())\n  File \"/tests/verify_whisper_builder.py\", line 367, in main\n    run_fail2pass_edge()\n  File \"/tests/verify_whisper_builder.py\", line 344, in run_fail2pass_edge\n    result = _run_whisper_config_only_export(model_name=\"openai/whisper-tiny\", execution_provider=\"cuda\")\n  File \"/tests/verify_whisper_builder.py\", line 312, in _run_whisper_config_only_export\n    _assert(os.path.exists(audio_cfg_path), \"audio_processor_config.json must be generated for Whisper\")\n  File \"/tests/verify_whisper_builder.py\", line 271, in _assert\n    raise AssertionError(message)\nAssertionError: audio_processor_config.json must be generated for Whisper\n[FAIL2PASS_EDGE] FAIL fail2pass_edge\nPassed groups: 1\nFailed groups: 2\n",
+  "conversations": [
+    {
+      "role": "user",
+      "content": "The Python model builder in `src/python/py/models` currently handles Whisper (`WhisperForConditionalGeneration`) through a generic fallback path in `config_only` mode, which does not emit the Whisper-specific runtime contract.\n\nUpdate the builder behavior so that Whisper exports produce the expected multi-component configuration artifacts.\n\nRequirements:\n\n1. Whisper config-only artifacts\n- When the Hugging Face config reports Whisper architecture (`WhisperForConditionalGeneration`) and the builder runs in `config_only` mode, the output directory must contain:\n  - `audio_processor_config.json`\n  - `genai_config.json`\n\n2. Audio processor pipeline contract\n- `audio_processor_config.json` must define a `feature_extraction.sequence` pipeline whose operation types are exactly, in order:\n  - `AudioDecoder`\n  - `STFTNorm`\n  - `LogMelSpectrum`\n\n3. Whisper GenAI model schema\n- `genai_config.json` must describe Whisper as a two-component model:\n  - `model.type` must be `\"whisper\"`\n  - `model.encoder` must exist\n  - `model.decoder` must exist\n- Component filenames must be:\n  - `model.encoder.filename == \"encoder.onnx\"`\n  - `model.decoder.filename == \"decoder.onnx\"`\n\n4. Whisper cache naming and search defaults\n- Decoder input naming must include:\n  - `past_key_names == \"past_key_self_%d\"`\n  - `cross_past_key_names == \"past_key_cross_%d\"`\n- Encoder output naming must include:\n  - `cross_present_key_names == \"present_key_cross_%d\"`\n- Whisper search defaults must set:\n  - `search.top_k == 1`\n\n5. Regression safety in the same module\n- Keep existing `parse_extra_options` behavior intact, including:\n  - boolean parsing (`true/false/1/0`)\n  - tuple parsing for `int4_op_types_to_quantize`\n  - list parsing for `int4_nodes_to_exclude`\n  - auto-disabling `enable_webgpu_graph` when execution provider is not `webgpu`\n\nDo not add external service dependencies."
+    },
+    {
+      "role": "assistant",
+      "content": "<think>Let me start by understanding the current state of the Python model builder in `src/python/py/models`. I need to:\n\n1. First, read the relevant files to understand the current implementation\n2. Understand how `config_only` mode currently works\n3. Understand how Whisper models are currently handled\n4. Implement the required changes for Whisper-specific config-only artifacts\n\nLet me start by exploring the directory structure and reading the relevant files.</think>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"find /workspace/src/python/py/models -type f -name \\\"*.py\\\" | head -20\"}}\n</tool_call>"
+    },
+    {
+      "role": "assistant",
+      "content": "find: '/workspace/src/python/py/models': No such file or directory"
+    },
+    {
+      "role": "user",
+      "content": "find: '/workspace/src/python/py/models': No such file or directory"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>The directory doesn't exist. Let me check if there's a src/python directory at all.</think>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"find /workspace -type d -name \\\"models\\\" 2>/dev/null | head -20\"}}\n</tool_call>"
+    },
+    {
+      "role": "assistant",
+      "content": "(no output)"
+    },
+    {
+      "role": "user",
+      "content": "(no output)"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>No models directory found. Let me check if src/python exists at all.</think>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"find /workspace -type d -name \\\"python\\\" 2>/dev/null | head -20\"}}\n</tool_call>"
+    },
+    {
+      "role": "assistant",
+      "content": "(no output)"
+    },
+    {
+      "role": "user",
+      "content": "(no output)"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>Let me check the workspace structure.</think>\n<tool_call>\n{\"name\": \"exec\", \"arguments\": {\"command\": \"ls -la /workspace/\"}}\n</tool_call>"
+    },
+    {
+      "role": "assistant",
+      "content": "total 36\ndrwxr-xr-x 2 root root 4096 Apr 13 01:02 .\ndrwxr-xr-x 1 root root 4096 Apr 13 01:02 ..\n-rw-r--r-- 1 root root 8081 Apr 13 01:02 AGENTS.md\n-rw-r--r-- 1 root root  173 Apr 13 01:02 HEARTBEAT.md\n-rw-r--r-- 1 root root  426 Apr 13 01:02 IDENTITY.md\n-rw-r--r-- 1 root root 1709 Apr 13 01:02 SOUL.md\n-rw-r--r-- 1 root root  900 Apr 13 01:02 TOOLS.md\n-rw-r--r-- 1 root root  494 Apr 13 01:02 USER.md"
+    }
+  ]
+}

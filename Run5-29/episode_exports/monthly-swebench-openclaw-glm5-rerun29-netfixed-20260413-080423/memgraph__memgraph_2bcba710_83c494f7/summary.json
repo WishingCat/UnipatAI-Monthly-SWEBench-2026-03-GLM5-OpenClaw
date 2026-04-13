@@ -1,0 +1,17 @@
+{
+  "task_name": "memgraph__memgraph_2bcba710_83c494f7",
+  "trial_name": "memgraph__memgraph_2bcba710_83c4__hg5Yu5N",
+  "episode_count": 5,
+  "result": "0.0",
+  "trial_dir": "T:\\AgentProjects\\20260408SWEBench\\harbor_jobs\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\memgraph__memgraph_2bcba710_83c4__hg5Yu5N",
+  "trajectory_path": "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\memgraph__memgraph_2bcba710_83c494f7\\raw\\trajectory.json",
+  "openclaw_output_path": "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\memgraph__memgraph_2bcba710_83c494f7\\raw\\openclaw-output.txt",
+  "openclaw_session_path": "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\memgraph__memgraph_2bcba710_83c494f7\\raw\\openclaw-session.jsonl",
+  "episode_files": [
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\memgraph__memgraph_2bcba710_83c494f7\\episode-000.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\memgraph__memgraph_2bcba710_83c494f7\\episode-001.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\memgraph__memgraph_2bcba710_83c494f7\\episode-002.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\memgraph__memgraph_2bcba710_83c494f7\\episode-003.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\memgraph__memgraph_2bcba710_83c494f7\\episode-004.json"
+  ]
+}

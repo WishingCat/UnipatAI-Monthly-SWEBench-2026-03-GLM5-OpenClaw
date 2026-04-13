@@ -1,0 +1,1386 @@
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- The C compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+CMAKE_BUILD_TYPE: Debug
+TGFX_VERSION: 2.1.1
+TGFX_BUILD_SVG: ON
+TGFX_BUILD_PDF: OFF
+TGFX_BUILD_LAYERS: OFF
+TGFX_USE_OPENGL: ON
+TGFX_USE_METAL: OFF
+TGFX_USE_QT: OFF
+TGFX_USE_SWIFTSHADER: OFF
+TGFX_USE_ANGLE: OFF
+TGFX_USE_THREADS: ON
+TGFX_USE_FREETYPE: ON
+TGFX_USE_PNG_DECODE: ON
+TGFX_USE_PNG_ENCODE: ON
+TGFX_USE_JPEG_DECODE: ON
+TGFX_USE_JPEG_ENCODE: ON
+TGFX_USE_WEBP_DECODE: ON
+TGFX_USE_WEBP_ENCODE: ON
+TGFX_BUILD_TESTS: OFF
+TGFX_USE_INSPECTOR: ON
+TGFX_BUILD_FRAMEWORK: OFF
+TGFX_USE_TEXT_GAMMA_CORRECTION: OFF
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Configuring done (0.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/tgfx-style-attr-build
+[0/413] Generating tgfx-vendor
+========================== build flatbuffers-linux-release start ==========================
+[Toolchains] Vendor Tools 1.0.5
+Building the 'x64' arch of [flatbuffers]:
+cd /app/tgfx/third_party/out/flatbuffers/linux/build-flatbuffers/x64
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DFLATBUFFERS_BUILD_FLATLIB=ON -DFLATBUFFERS_BUILD_CPP17=ON -DCMAKE_MODULE_PATH=/app/tgfx/third_party/out/flatbuffers/linux/build-flatbuffers/x64/cmake/Modules /app/tgfx/third_party/flatbuffers
+fatal: No names found, cannot describe anything.
+CMake Warning at CMake/Version.cmake:32 (message):
+  git describe failed with exit code: 128
+
+  Make sure you cloned with tags or run 'git fetch --tags'.
+Call Stack (most recent call first):
+  CMakeLists.txt:9 (include)
+
+
+-- Proceeding with version: 25.2.10.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for strtof_l
+-- Looking for strtof_l - found
+-- Looking for strtoull_l
+-- Looking for strtoull_l - found
+-- Looking for realpath
+-- Looking for realpath - found
+-- CMAKE_CXX_FLAGS: 
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /app/tgfx/third_party/out/flatbuffers/linux/build-flatbuffers/x64
+ninja flatbuffers
+[1/5] Building CXX object CMakeFiles/flatbuffers.dir/src/util.cpp.o
+[2/5] Building CXX object CMakeFiles/flatbuffers.dir/src/reflection.cpp.o
+In file included from /usr/include/c++/13/algorithm:60,
+                 from /app/tgfx/third_party/flatbuffers/include/flatbuffers/flatbuffers.h:20,
+                 from /app/tgfx/third_party/flatbuffers/include/flatbuffers/reflection_generated.h:7,
+                 from /app/tgfx/third_party/flatbuffers/include/flatbuffers/reflection.h:25,
+                 from /app/tgfx/third_party/flatbuffers/src/reflection.cpp:17:
+In static member function 'static _Up* std::__copy_move<_IsMove, true, std::random_access_iterator_tag>::__copy_m(_Tp*, _Tp*, _Up*) [with _Tp = const unsigned char; _Up = unsigned char; bool _IsMove = false]',
+    inlined from '_OI std::__copy_move_a2(_II, _II, _OI) [with bool _IsMove = false; _II = const unsigned char*; _OI = unsigned char*]' at /usr/include/c++/13/bits/stl_algobase.h:506:30,
+    inlined from '_OI std::__copy_move_a1(_II, _II, _OI) [with bool _IsMove = false; _II = const unsigned char*; _OI = unsigned char*]' at /usr/include/c++/13/bits/stl_algobase.h:533:42,
+    inlined from '_OI std::__copy_move_a(_II, _II, _OI) [with bool _IsMove = false; _II = const unsigned char*; _OI = unsigned char*]' at /usr/include/c++/13/bits/stl_algobase.h:540:31,
+    inlined from '_OI std::copy(_II, _II, _OI) [with _II = const unsigned char*; _OI = unsigned char*]' at /usr/include/c++/13/bits/stl_algobase.h:633:7,
+    inlined from 'static _ForwardIterator std::__uninitialized_copy<true>::__uninit_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = const unsigned char*; _ForwardIterator = unsigned char*]' at /usr/include/c++/13/bits/stl_uninitialized.h:147:27,
+    inlined from '_ForwardIterator std::uninitialized_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = const unsigned char*; _ForwardIterator = unsigned char*]' at /usr/include/c++/13/bits/stl_uninitialized.h:185:15,
+    inlined from '_ForwardIterator std::__uninitialized_copy_a(_InputIterator, _InputIterator, _ForwardIterator, allocator<_Tp>&) [with _InputIterator = const unsigned char*; _ForwardIterator = unsigned char*; _Tp = unsigned char]' at /usr/include/c++/13/bits/stl_uninitialized.h:373:37,
+    inlined from 'void std::vector<_Tp, _Alloc>::_M_range_insert(iterator, _ForwardIterator, _ForwardIterator, std::forward_iterator_tag) [with _ForwardIterator = const unsigned char*; _Tp = unsigned char; _Alloc = std::allocator<unsigned char>]' at /usr/include/c++/13/bits/vector.tcc:814:38,
+    inlined from 'std::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::insert(const_iterator, _InputIterator, _InputIterator) [with _InputIterator = const unsigned char*; <template-parameter-2-2> = void; _Tp = unsigned char; _Alloc = std::allocator<unsigned char>]' at /usr/include/c++/13/bits/stl_vector.h:1486:19,
+    inlined from 'const uint8_t* flatbuffers::AddFlatBuffer(std::vector<unsigned char>&, const uint8_t*, size_t)' at /app/tgfx/third_party/flatbuffers/src/reflection.cpp:621:17:
+/usr/include/c++/13/bits/stl_algobase.h:437:30: warning: 'void* __builtin_memcpy(void*, const void*, long unsigned int)' writing between 2 and 9223372036854775803 bytes into a region of size 0 overflows the destination [-Wstringop-overflow=]
+  437 |             __builtin_memmove(__result, __first, sizeof(_Tp) * _Num);
+      |             ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h:33,
+                 from /usr/include/c++/13/bits/allocator.h:46,
+                 from /usr/include/c++/13/memory:65,
+                 from /app/tgfx/third_party/flatbuffers/include/flatbuffers/array.h:21,
+                 from /app/tgfx/third_party/flatbuffers/include/flatbuffers/flatbuffers.h:24:
+In member function '_Tp* std::__new_allocator<_Tp>::allocate(size_type, const void*) [with _Tp = unsigned char]',
+    inlined from 'static _Tp* std::allocator_traits<std::allocator<_Tp1> >::allocate(allocator_type&, size_type) [with _Tp = unsigned char]' at /usr/include/c++/13/bits/alloc_traits.h:482:28,
+    inlined from 'std::_Vector_base<_Tp, _Alloc>::pointer std::_Vector_base<_Tp, _Alloc>::_M_allocate(std::size_t) [with _Tp = unsigned char; _Alloc = std::allocator<unsigned char>]' at /usr/include/c++/13/bits/stl_vector.h:381:33,
+    inlined from 'void std::vector<_Tp, _Alloc>::_M_range_insert(iterator, _ForwardIterator, _ForwardIterator, std::forward_iterator_tag) [with _ForwardIterator = const unsigned char*; _Tp = unsigned char; _Alloc = std::allocator<unsigned char>]' at /usr/include/c++/13/bits/vector.tcc:805:40,
+    inlined from 'std::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::insert(const_iterator, _InputIterator, _InputIterator) [with _InputIterator = const unsigned char*; <template-parameter-2-2> = void; _Tp = unsigned char; _Alloc = std::allocator<unsigned char>]' at /usr/include/c++/13/bits/stl_vector.h:1486:19,
+    inlined from 'const uint8_t* flatbuffers::AddFlatBuffer(std::vector<unsigned char>&, const uint8_t*, size_t)' at /app/tgfx/third_party/flatbuffers/src/reflection.cpp:621:17:
+/usr/include/c++/13/bits/new_allocator.h:151:55: note: at offset [-9223372036854775808, -4] into destination object of size [4, 9223372036854775807] allocated by 'operator new'
+  151 |         return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp)));
+      |                                                       ^
+[3/5] Building CXX object CMakeFiles/flatbuffers.dir/src/idl_gen_text.cpp.o
+[4/5] Building CXX object CMakeFiles/flatbuffers.dir/src/idl_parser.cpp.o
+[5/5] Linking CXX static library libflatbuffers.a
+=========================== build flatbuffers-linux-release end (8.1s) ===========================
+========================== build libjpeg-turbo-linux-release start ==========================
+[Toolchains] Vendor Tools 1.0.5
+Building the 'x64' arch of [turbojpeg-static]:
+cd /app/tgfx/third_party/out/libjpeg-turbo/linux/build-turbojpeg-static/x64
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_MODULE_PATH=/app/tgfx/third_party/out/libjpeg-turbo/linux/build-turbojpeg-static/x64/cmake/Modules /app/tgfx/third_party/libjpeg-turbo
+CMake Deprecation Warning at CMakeLists.txt:5 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- The C compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- CMAKE_BUILD_TYPE = Release
+-- VERSION = 2.1.1, BUILD = 20260413
+-- 64-bit build (x86_64)
+-- CMAKE_INSTALL_PREFIX = /opt/libjpeg-turbo
+-- CMAKE_INSTALL_BINDIR = bin (/opt/libjpeg-turbo/bin)
+-- CMAKE_INSTALL_DATAROOTDIR =  (/opt/libjpeg-turbo)
+-- CMAKE_INSTALL_DOCDIR = doc (/opt/libjpeg-turbo/doc)
+-- CMAKE_INSTALL_INCLUDEDIR = include (/opt/libjpeg-turbo/include)
+-- CMAKE_INSTALL_LIBDIR = lib64 (/opt/libjpeg-turbo/lib64)
+-- CMAKE_INSTALL_MANDIR = man (/opt/libjpeg-turbo/man)
+-- Shared libraries enabled (ENABLE_SHARED = 1)
+-- Static libraries enabled (ENABLE_STATIC = 1)
+-- 12-bit JPEG support disabled (WITH_12BIT = 0)
+-- Arithmetic decoding support enabled (WITH_ARITH_DEC = 1)
+-- Arithmetic encoding support enabled (WITH_ARITH_ENC = 1)
+-- TurboJPEG API library enabled (WITH_TURBOJPEG = 1)
+-- TurboJPEG Java wrapper disabled (WITH_JAVA = 0)
+-- In-memory source/destination managers enabled (WITH_MEM_SRCDST = 1)
+-- Emulating libjpeg API/ABI v6.2 (WITH_JPEG7 = 0, WITH_JPEG8 = 0)
+-- libjpeg API shared library version = 62.3.0
+-- Compiler flags =  -O3 -DNDEBUG
+-- Linker flags =  
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of size_t
+-- Check size of size_t - done
+-- Check size of unsigned long
+-- Check size of unsigned long - done
+-- Performing Test HAVE_BUILTIN_CTZL
+-- Performing Test HAVE_BUILTIN_CTZL - Success
+-- Looking for include file locale.h
+-- Looking for include file locale.h - found
+-- Looking for include file stdlib.h
+-- Looking for include file stdlib.h - found
+-- Looking for include file sys/types.h
+-- Looking for include file sys/types.h - found
+-- Looking for memset
+-- Looking for memset - found
+-- Looking for memcpy
+-- Looking for memcpy - found
+-- Check size of unsigned char
+-- Check size of unsigned char - done
+-- Check size of unsigned short
+-- Check size of unsigned short - done
+-- Performing Test INCOMPLETE_TYPES
+-- Performing Test INCOMPLETE_TYPES - Success
+-- Compiler supports pointers to undefined structures.
+-- Performing Test RIGHT_SHIFT_IS_UNSIGNED
+-- Performing Test RIGHT_SHIFT_IS_UNSIGNED - Failed
+-- Performing Test INLINE_WORKS
+-- Performing Test INLINE_WORKS - Success
+-- INLINE = __inline__ __attribute__((always_inline)) (FORCE_INLINE = 1)
+-- Performing Test HAVE_THREAD_LOCAL
+-- Performing Test HAVE_THREAD_LOCAL - Success
+-- THREAD_LOCAL = __thread
+-- Performing Test HAVE_VERSION_SCRIPT
+-- Performing Test HAVE_VERSION_SCRIPT - Success
+-- Linker supports GNU-style version scripts
+-- CMAKE_EXECUTABLE_SUFFIX = 
+-- Looking for a ASM_NASM compiler
+-- Looking for a ASM_NASM compiler - NOTFOUND
+CMake Warning at simd/CMakeLists.txt:5 (message):
+  SIMD extensions disabled: could not find NASM compiler.  Performance will
+  suffer.
+Call Stack (most recent call first):
+  simd/CMakeLists.txt:48 (simd_fail)
+
+
+-- FLOATTEST = no-fp-contract
+-- RPM architecture = x86_64, DEB architecture = amd64
+-- Configuring done (0.7s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_POLICY_VERSION_MINIMUM
+
+
+-- Build files have been written to: /app/tgfx/third_party/out/libjpeg-turbo/linux/build-turbojpeg-static/x64
+ninja turbojpeg-static
+[1/61] Building C object CMakeFiles/turbojpeg-static.dir/jcicc.c.o
+[2/61] Building C object CMakeFiles/turbojpeg-static.dir/jcapistd.c.o
+[3/61] Building C object CMakeFiles/turbojpeg-static.dir/jcinit.c.o
+[4/61] Building C object CMakeFiles/turbojpeg-static.dir/jcmainct.c.o
+[5/61] Building C object CMakeFiles/turbojpeg-static.dir/jcomapi.c.o
+[6/61] Building C object CMakeFiles/simd.dir/jsimd_none.c.o
+[7/61] Building C object CMakeFiles/turbojpeg-static.dir/jcapimin.c.o
+[8/61] Building C object CMakeFiles/turbojpeg-static.dir/jdatadst.c.o
+[9/61] Building C object CMakeFiles/turbojpeg-static.dir/jdatasrc.c.o
+[10/61] Building C object CMakeFiles/turbojpeg-static.dir/jdapimin.c.o
+[11/61] Building C object CMakeFiles/turbojpeg-static.dir/jctrans.c.o
+[12/61] Building C object CMakeFiles/turbojpeg-static.dir/jcprepct.c.o
+[13/61] Building C object CMakeFiles/turbojpeg-static.dir/jccoefct.c.o
+[14/61] Building C object CMakeFiles/turbojpeg-static.dir/jcmaster.c.o
+[15/61] Building C object CMakeFiles/turbojpeg-static.dir/jdapistd.c.o
+[16/61] Building C object CMakeFiles/turbojpeg-static.dir/jdicc.c.o
+[17/61] Building C object CMakeFiles/turbojpeg-static.dir/jcdctmgr.c.o
+[18/61] Building C object CMakeFiles/turbojpeg-static.dir/jcparam.c.o
+[19/61] Building C object CMakeFiles/turbojpeg-static.dir/jddctmgr.c.o
+[20/61] Building C object CMakeFiles/turbojpeg-static.dir/jdinput.c.o
+[21/61] Building C object CMakeFiles/turbojpeg-static.dir/jdmainct.c.o
+[22/61] Building C object CMakeFiles/turbojpeg-static.dir/jdtrans.c.o
+[23/61] Building C object CMakeFiles/turbojpeg-static.dir/jcmarker.c.o
+[24/61] Building C object CMakeFiles/turbojpeg-static.dir/jcsample.c.o
+[25/61] Building C object CMakeFiles/turbojpeg-static.dir/jdpostct.c.o
+[26/61] Building C object CMakeFiles/turbojpeg-static.dir/jdmaster.c.o
+[27/61] Building C object CMakeFiles/turbojpeg-static.dir/jerror.c.o
+[28/61] Building C object CMakeFiles/turbojpeg-static.dir/jfdctflt.c.o
+[29/61] Building C object CMakeFiles/turbojpeg-static.dir/jfdctfst.c.o
+[30/61] Building C object CMakeFiles/turbojpeg-static.dir/jidctflt.c.o
+[31/61] Building C object CMakeFiles/turbojpeg-static.dir/jfdctint.c.o
+[32/61] Building C object CMakeFiles/turbojpeg-static.dir/jidctfst.c.o
+[33/61] Building C object CMakeFiles/turbojpeg-static.dir/jaricom.c.o
+[34/61] Building C object CMakeFiles/turbojpeg-static.dir/jcphuff.c.o
+[35/61] Building C object CMakeFiles/turbojpeg-static.dir/jutils.c.o
+[36/61] Building C object CMakeFiles/turbojpeg-static.dir/jdsample.c.o
+[37/61] Building C object CMakeFiles/turbojpeg-static.dir/jmemnobs.c.o
+[38/61] Building C object CMakeFiles/turbojpeg-static.dir/jidctred.c.o
+[39/61] Building C object CMakeFiles/turbojpeg-static.dir/jdphuff.c.o
+[40/61] Building C object CMakeFiles/turbojpeg-static.dir/jdatadst-tj.c.o
+[41/61] Building C object CMakeFiles/turbojpeg-static.dir/jdatasrc-tj.c.o
+[42/61] Building C object CMakeFiles/turbojpeg-static.dir/jccolor.c.o
+[43/61] Building C object CMakeFiles/turbojpeg-static.dir/jdmarker.c.o
+[44/61] Building C object CMakeFiles/turbojpeg-static.dir/jmemmgr.c.o
+[45/61] Building C object CMakeFiles/turbojpeg-static.dir/jdhuff.c.o
+[46/61] Building C object CMakeFiles/turbojpeg-static.dir/jquant1.c.o
+[47/61] Building C object CMakeFiles/turbojpeg-static.dir/wrbmp.c.o
+[48/61] Building C object CMakeFiles/turbojpeg-static.dir/wrppm.c.o
+[49/61] Building C object CMakeFiles/turbojpeg-static.dir/jdarith.c.o
+[50/61] Building C object CMakeFiles/turbojpeg-static.dir/jdcoefct.c.o
+[51/61] Building C object CMakeFiles/turbojpeg-static.dir/jdmerge.c.o
+[52/61] Building C object CMakeFiles/turbojpeg-static.dir/rdbmp.c.o
+[53/61] Building C object CMakeFiles/turbojpeg-static.dir/jcarith.c.o
+[54/61] Building C object CMakeFiles/turbojpeg-static.dir/jquant2.c.o
+[55/61] Building C object CMakeFiles/turbojpeg-static.dir/rdppm.c.o
+[56/61] Building C object CMakeFiles/turbojpeg-static.dir/jidctint.c.o
+[57/61] Building C object CMakeFiles/turbojpeg-static.dir/jdcolor.c.o
+[58/61] Building C object CMakeFiles/turbojpeg-static.dir/turbojpeg.c.o
+[59/61] Building C object CMakeFiles/turbojpeg-static.dir/transupp.c.o
+[60/61] Building C object CMakeFiles/turbojpeg-static.dir/jchuff.c.o
+[61/61] Linking C static library libturbojpeg.a
+=========================== build libjpeg-turbo-linux-release end (8.5s) ===========================
+========================== build libwebp-linux-release start ==========================
+[Toolchains] Vendor Tools 1.0.5
+Building the 'x64' arch of [webp, webpdemux, sharpyuv, libwebpmux]:
+cd /app/tgfx/third_party/out/libwebp/linux/build-webp-webpdemux-sharpyuv-libwebpmux/x64
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_MODULE_PATH=/app/tgfx/third_party/out/libwebp/linux/build-webp-webpdemux-sharpyuv-libwebpmux/x64/cmake/Modules /app/tgfx/third_party/libwebp
+-- The C compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Performing Test HAVE_BUILTIN_BSWAP16
+-- Performing Test HAVE_BUILTIN_BSWAP16 - Success
+-- Performing Test HAVE_BUILTIN_BSWAP32
+-- Performing Test HAVE_BUILTIN_BSWAP32 - Success
+-- Performing Test HAVE_BUILTIN_BSWAP64
+-- Performing Test HAVE_BUILTIN_BSWAP64 - Success
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+-- Performing Test HAVE_MATH_LIBRARY
+-- Performing Test HAVE_MATH_LIBRARY - Failed
+-- Adding -lm flag.
+-- Could NOT find ZLIB (missing: ZLIB_LIBRARY ZLIB_INCLUDE_DIR) 
+-- Could NOT find PNG (missing: PNG_LIBRARY PNG_PNG_INCLUDE_DIR) 
+-- Could NOT find JPEG (missing: JPEG_LIBRARY JPEG_INCLUDE_DIR) 
+-- TIFF is disabled when statically linking.
+-- Could NOT find GIF (missing: GIF_LIBRARY GIF_INCLUDE_DIR) 
+-- Looking for include file GLUT/glut.h
+-- Looking for include file GLUT/glut.h - not found
+-- Looking for include file GL/glut.h
+-- Looking for include file GL/glut.h - not found
+-- Looking for include file OpenGL/glut.h
+-- Looking for include file OpenGL/glut.h - not found
+-- Looking for include file shlwapi.h
+-- Looking for include file shlwapi.h - not found
+-- Looking for include file unistd.h
+-- Looking for include file unistd.h - found
+-- Looking for include file wincodec.h
+-- Looking for include file wincodec.h - not found
+-- Looking for include file windows.h
+-- Looking for include file windows.h - not found
+-- Performing Test WEBP_HAVE_FLAG_SSE41
+-- Performing Test WEBP_HAVE_FLAG_SSE41 - Failed
+-- Performing Test WEBP_HAVE_FLAG_SSE41
+-- Performing Test WEBP_HAVE_FLAG_SSE41 - Success
+-- Performing Test WEBP_HAVE_FLAG_SSE2
+-- Performing Test WEBP_HAVE_FLAG_SSE2 - Success
+-- Performing Test WEBP_HAVE_FLAG_MIPS32
+-- Performing Test WEBP_HAVE_FLAG_MIPS32 - Failed
+-- Performing Test WEBP_HAVE_FLAG_MIPS32
+-- Performing Test WEBP_HAVE_FLAG_MIPS32 - Failed
+-- Performing Test WEBP_HAVE_FLAG_MIPS_DSP_R2
+-- Performing Test WEBP_HAVE_FLAG_MIPS_DSP_R2 - Failed
+-- Performing Test WEBP_HAVE_FLAG_MIPS_DSP_R2
+-- Performing Test WEBP_HAVE_FLAG_MIPS_DSP_R2 - Failed
+-- Performing Test HAS_COMPILE_FLAG
+-- Performing Test HAS_COMPILE_FLAG - Failed
+-- Performing Test WEBP_HAVE_FLAG_NEON
+-- Performing Test WEBP_HAVE_FLAG_NEON - Failed
+-- Performing Test WEBP_HAVE_FLAG_NEON
+-- Performing Test WEBP_HAVE_FLAG_NEON - Failed
+-- Performing Test WEBP_HAVE_FLAG_MSA
+-- Performing Test WEBP_HAVE_FLAG_MSA - Failed
+-- Performing Test WEBP_HAVE_FLAG_MSA
+-- Performing Test WEBP_HAVE_FLAG_MSA - Failed
+-- Performing Test HAS_COMPILE_FLAG
+-- Performing Test HAS_COMPILE_FLAG - Failed
+-- Could NOT find SDL (missing: SDL_LIBRARY SDL_INCLUDE_DIR) 
+-- Configuring done (0.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /app/tgfx/third_party/out/libwebp/linux/build-webp-webpdemux-sharpyuv-libwebpmux/x64
+ninja webp
+[1/85] Building C object CMakeFiles/sharpyuv.dir/sharpyuv/sharpyuv_neon.c.o
+[2/85] Building C object CMakeFiles/sharpyuv.dir/sharpyuv/sharpyuv_gamma.c.o
+[3/85] Building C object CMakeFiles/sharpyuv.dir/sharpyuv/sharpyuv_cpu.c.o
+[4/85] Building C object CMakeFiles/sharpyuv.dir/sharpyuv/sharpyuv_csp.c.o
+[5/85] Building C object CMakeFiles/webpencode.dir/src/enc/config_enc.c.o
+[6/85] Building C object CMakeFiles/webpdecode.dir/src/dec/alpha_dec.c.o
+[7/85] Building C object CMakeFiles/webpdecode.dir/src/dec/quant_dec.c.o
+[8/85] Building C object CMakeFiles/webpdecode.dir/src/dec/buffer_dec.c.o
+[9/85] Building C object CMakeFiles/webpencode.dir/src/enc/filter_enc.c.o
+[10/85] Building C object CMakeFiles/webpdecode.dir/src/dec/tree_dec.c.o
+[11/85] Building C object CMakeFiles/sharpyuv.dir/sharpyuv/sharpyuv_dsp.c.o
+[12/85] Building C object CMakeFiles/webpencode.dir/src/enc/alpha_enc.c.o
+[13/85] Building C object CMakeFiles/webpdecode.dir/src/dec/idec_dec.c.o
+[14/85] Building C object CMakeFiles/webpencode.dir/src/enc/cost_enc.c.o
+[15/85] Building C object CMakeFiles/webpencode.dir/src/enc/analysis_enc.c.o
+[16/85] Building C object CMakeFiles/webpencode.dir/src/enc/near_lossless_enc.c.o
+[17/85] Building C object CMakeFiles/webpdecode.dir/src/dec/io_dec.c.o
+[18/85] Building C object CMakeFiles/webpencode.dir/src/enc/picture_enc.c.o
+[19/85] Building C object CMakeFiles/sharpyuv.dir/sharpyuv/sharpyuv_sse2.c.o
+[20/85] Building C object CMakeFiles/webpdecode.dir/src/dec/webp_dec.c.o
+[21/85] Building C object CMakeFiles/webpencode.dir/src/enc/picture_psnr_enc.c.o
+[22/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/cpu.c.o
+[23/85] Building C object CMakeFiles/webpencode.dir/src/enc/backward_references_cost_enc.c.o
+[24/85] Building C object CMakeFiles/webpencode.dir/src/enc/tree_enc.c.o
+[25/85] Building C object CMakeFiles/webpdecode.dir/src/dec/frame_dec.c.o
+[26/85] Building C object CMakeFiles/webpdecode.dir/src/dec/vp8_dec.c.o
+[27/85] Building C object CMakeFiles/webpencode.dir/src/enc/syntax_enc.c.o
+[28/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/dec_clip_tables.c.o
+[29/85] Building C object CMakeFiles/webpencode.dir/src/enc/backward_references_enc.c.o
+[30/85] Building C object CMakeFiles/webpencode.dir/src/enc/picture_rescale_enc.c.o
+[31/85] Building C object CMakeFiles/webpencode.dir/src/enc/webp_enc.c.o
+[32/85] Building C object CMakeFiles/webpencode.dir/src/enc/picture_tools_enc.c.o
+[33/85] Building C object CMakeFiles/webpencode.dir/src/enc/frame_enc.c.o
+[34/85] Building C object CMakeFiles/webpencode.dir/src/enc/iterator_enc.c.o
+[35/85] Building C object CMakeFiles/webpencode.dir/src/enc/token_enc.c.o
+[36/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/dec_sse41.c.o
+[37/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/alpha_processing_sse41.c.o
+[38/85] Building C object CMakeFiles/sharpyuv.dir/sharpyuv/sharpyuv.c.o
+[39/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/alpha_processing.c.o
+[40/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/lossless_sse41.c.o
+[41/85] Building C object CMakeFiles/webpdecode.dir/src/dec/vp8l_dec.c.o
+[42/85] Building C object CMakeFiles/webpencode.dir/src/enc/histogram_enc.c.o
+[43/85] Linking C static library libsharpyuv.a
+[44/85] Building C object CMakeFiles/webpencode.dir/src/enc/picture_csp_enc.c.o
+[45/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/filters.c.o
+[46/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/rescaler.c.o
+[47/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/upsampling_sse41.c.o
+[48/85] Building C object CMakeFiles/webpencode.dir/src/enc/predictor_enc.c.o
+[49/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/cost.c.o
+[50/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/cost_sse2.c.o
+[51/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/rescaler_sse2.c.o
+[52/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/alpha_processing_sse2.c.o
+[53/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/ssim.c.o
+[54/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/lossless_sse2.c.o
+[55/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/enc_sse41.c.o
+[56/85] Building C object CMakeFiles/webputils.dir/src/utils/color_cache_utils.c.o
+[57/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/lossless_enc_sse41.c.o
+[58/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/filters_sse2.c.o
+[59/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/ssim_sse2.c.o
+[60/85] Building C object CMakeFiles/webputils.dir/src/utils/random_utils.c.o
+[61/85] Building C object CMakeFiles/webputils.dir/src/utils/bit_reader_utils.c.o
+[62/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/lossless.c.o
+[63/85] Building C object CMakeFiles/webputils.dir/src/utils/filters_utils.c.o
+[64/85] Building C object CMakeFiles/webputils.dir/src/utils/thread_utils.c.o
+[65/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/yuv_sse41.c.o
+[66/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/dec.c.o
+[67/85] Building C object CMakeFiles/webputils.dir/src/utils/rescaler_utils.c.o
+[68/85] Building C object CMakeFiles/webputils.dir/src/utils/utils.c.o
+[69/85] Building C object CMakeFiles/webputils.dir/src/utils/quant_levels_utils.c.o
+[70/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/lossless_enc.c.o
+[71/85] Building C object CMakeFiles/webputils.dir/src/utils/huffman_utils.c.o
+[72/85] Building C object CMakeFiles/webputils.dir/src/utils/quant_levels_dec_utils.c.o
+[73/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/lossless_enc_sse2.c.o
+[74/85] Building C object CMakeFiles/webputils.dir/src/utils/bit_writer_utils.c.o
+[75/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/dec_sse2.c.o
+[76/85] Building C object CMakeFiles/webpencode.dir/src/enc/vp8l_enc.c.o
+[77/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/yuv_sse2.c.o
+[78/85] Building C object CMakeFiles/webputils.dir/src/utils/huffman_encode_utils.c.o
+[79/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/enc_sse2.c.o
+[80/85] Building C object CMakeFiles/webpencode.dir/src/enc/quant_enc.c.o
+[81/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/enc.c.o
+[82/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/upsampling_sse2.c.o
+[83/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/upsampling.c.o
+[84/85] Building C object CMakeFiles/webpdsp.dir/src/dsp/yuv.c.o
+[85/85] Linking C static library libwebp.a
+ninja webpdemux
+[1/3] Building C object CMakeFiles/webpdemux.dir/src/demux/anim_decode.c.o
+[2/3] Building C object CMakeFiles/webpdemux.dir/src/demux/demux.c.o
+[3/3] Linking C static library libwebpdemux.a
+ninja sharpyuv
+ninja: no work to do.
+ninja libwebpmux
+[1/5] Building C object CMakeFiles/libwebpmux.dir/src/mux/muxread.c.o
+[2/5] Building C object CMakeFiles/libwebpmux.dir/src/mux/muxedit.c.o
+[3/5] Building C object CMakeFiles/libwebpmux.dir/src/mux/muxinternal.c.o
+[4/5] Building C object CMakeFiles/libwebpmux.dir/src/mux/anim_encode.c.o
+[5/5] Linking C static library libwebpmux.a
+=========================== build libwebp-linux-release end (13.9s) ===========================
+========================== build zlib-linux-release start ==========================
+[Toolchains] Vendor Tools 1.0.5
+Building the 'x64' arch of [zlibstatic]:
+cd /app/tgfx/third_party/out/zlib/linux/build-zlibstatic/x64
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_C_FLAGS="-w" -DCMAKE_MODULE_PATH=/app/tgfx/third_party/out/zlib/linux/build-zlibstatic/x64/cmake/Modules /app/tgfx/third_party/zlib
+-- The C compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of off64_t
+-- Check size of off64_t - done
+-- Looking for fseeko
+-- Looking for fseeko - found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Renaming
+--     /app/tgfx/third_party/zlib/zconf.h
+-- to 'zconf.h.included' because this file is included with zlib
+-- but CMake generates it automatically in the build directory.
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /app/tgfx/third_party/out/zlib/linux/build-zlibstatic/x64
+ninja zlibstatic
+[1/16] Building C object CMakeFiles/zlibstatic.dir/zutil.c.o
+[2/16] Building C object CMakeFiles/zlibstatic.dir/compress.c.o
+[3/16] Building C object CMakeFiles/zlibstatic.dir/gzclose.c.o
+[4/16] Building C object CMakeFiles/zlibstatic.dir/uncompr.c.o
+[5/16] Building C object CMakeFiles/zlibstatic.dir/adler32.c.o
+[6/16] Building C object CMakeFiles/zlibstatic.dir/inftrees.c.o
+[7/16] Building C object CMakeFiles/zlibstatic.dir/gzread.c.o
+[8/16] Building C object CMakeFiles/zlibstatic.dir/gzwrite.c.o
+[9/16] Building C object CMakeFiles/zlibstatic.dir/gzlib.c.o
+[10/16] Building C object CMakeFiles/zlibstatic.dir/crc32.c.o
+[11/16] Building C object CMakeFiles/zlibstatic.dir/inffast.c.o
+[12/16] Building C object CMakeFiles/zlibstatic.dir/infback.c.o
+[13/16] Building C object CMakeFiles/zlibstatic.dir/trees.c.o
+[14/16] Building C object CMakeFiles/zlibstatic.dir/inflate.c.o
+[15/16] Building C object CMakeFiles/zlibstatic.dir/deflate.c.o
+[16/16] Linking C static library libz.a
+=========================== build zlib-linux-release end (1.3s) ===========================
+========================== build libpng-linux-release start ==========================
+[Toolchains] Vendor Tools 1.0.5
+Building the 'x64' arch of [png_static]:
+cd /app/tgfx/third_party/out/libpng/linux/build-png_static/x64
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_MODULE_PATH=/app/tgfx/third_party/out/libpng/linux/build-png_static/x64/cmake/Modules /app/tgfx/third_party/libpng
+-- The C compiler identification is GNU 13.3.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Building for target architecture: x86_64
+-- Performing Test HAVE_LD_VERSION_SCRIPT
+-- Performing Test HAVE_LD_VERSION_SCRIPT - Success
+-- Found AWK program: /usr/bin/gawk
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /app/tgfx/third_party/out/libpng/linux/build-png_static/x64
+ninja png_static
+[1/31] Generating pngprefix.h
+[2/31] Generating scripts/pnglibconf.c
+[3/31] Generating pnglibconf.c
+[4/31] Generating scripts/symbols.out
+[5/31] Generating scripts/symbols.chk
+[6/31] Generating pnglibconf.out
+[7/31] Generating pnglibconf.h
+[8/31] Generating scripts/prefix.out
+[9/31] Generating scripts/sym.out
+[10/31] Generating scripts/vers.out
+[11/31] Generating libpng.sym
+[12/31] Generating libpng.vers
+[13/31] Generating scripts/intprefix.out
+[14/31] Building C object CMakeFiles/png_static.dir/pngwio.c.o
+[15/31] Building C object CMakeFiles/png_static.dir/pngrio.c.o
+[16/31] Building C object CMakeFiles/png_static.dir/intel/intel_init.c.o
+[17/31] Building C object CMakeFiles/png_static.dir/pngmem.c.o
+[18/31] Building C object CMakeFiles/png_static.dir/pngerror.c.o
+[19/31] Building C object CMakeFiles/png_static.dir/pngpread.c.o
+[20/31] Building C object CMakeFiles/png_static.dir/pngtrans.c.o
+[21/31] Building C object CMakeFiles/png_static.dir/pngwtran.c.o
+[22/31] Building C object CMakeFiles/png_static.dir/pngget.c.o
+[23/31] Building C object CMakeFiles/png_static.dir/pngset.c.o
+[24/31] Building C object CMakeFiles/png_static.dir/pngwrite.c.o
+[25/31] Building C object CMakeFiles/png_static.dir/png.c.o
+[26/31] Building C object CMakeFiles/png_static.dir/intel/filter_sse2_intrinsics.c.o
+[27/31] Building C object CMakeFiles/png_static.dir/pngread.c.o
+[28/31] Building C object CMakeFiles/png_static.dir/pngwutil.c.o
+[29/31] Building C object CMakeFiles/png_static.dir/pngrutil.c.o
+[30/31] Building C object CMakeFiles/png_static.dir/pngrtran.c.o
+[31/31] Linking C static library libpng16.a
+=========================== build libpng-linux-release end (3.3s) ===========================
+========================== build freetype-linux-release start ==========================
+[Toolchains] Vendor Tools 1.0.5
+Building the 'x64' arch of [freetype]:
+cd /app/tgfx/third_party/out/freetype/linux/build-freetype/x64
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_DISABLE_FIND_PACKAGE_BZip2=TRUE -DCMAKE_DISABLE_FIND_PACKAGE_HarfBuzz=TRUE -DFT_DISABLE_BROTLI=TRUE -DFT_REQUIRE_PNG=TRUE -DCMAKE_C_FLAGS="-w" -DCMAKE_MODULE_PATH=/app/tgfx/third_party/out/freetype/linux/build-freetype/x64/cmake/Modules /app/tgfx/third_party/freetype
+-- The C compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") 
+-- Checking for module 'bzip2'
+--   Package 'bzip2', required by 'virtual:world', not found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Looking for fcntl.h
+-- Looking for fcntl.h - found
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /app/tgfx/third_party/out/freetype/linux/build-freetype/x64
+ninja freetype
+[1/43] Building C object CMakeFiles/freetype.dir/src/bzip2/ftbzip2.c.o
+[2/43] Building C object CMakeFiles/freetype.dir/src/base/ftotval.c.o
+[3/43] Building C object CMakeFiles/freetype.dir/src/base/ftpatent.c.o
+[4/43] Building C object CMakeFiles/freetype.dir/src/base/ftwinfnt.c.o
+[5/43] Building C object CMakeFiles/freetype.dir/src/base/ftbdf.c.o
+[6/43] Building C object CMakeFiles/freetype.dir/src/base/ftfstype.c.o
+[7/43] Building C object CMakeFiles/freetype.dir/src/base/ftgasp.c.o
+[8/43] Building C object CMakeFiles/freetype.dir/src/base/ftsynth.c.o
+[9/43] Building C object CMakeFiles/freetype.dir/src/base/fttype1.c.o
+[10/43] Building C object CMakeFiles/freetype.dir/src/base/ftcid.c.o
+[11/43] Building C object CMakeFiles/freetype.dir/src/base/ftgxval.c.o
+[12/43] Building C object CMakeFiles/freetype.dir/src/base/ftinit.c.o
+[13/43] Building C object CMakeFiles/freetype.dir/src/base/ftpfr.c.o
+[14/43] Building C object CMakeFiles/freetype.dir/src/base/ftbbox.c.o
+[15/43] Building C object CMakeFiles/freetype.dir/src/base/ftglyph.c.o
+[16/43] Building C object CMakeFiles/freetype.dir/src/svg/svg.c.o
+[17/43] Building C object CMakeFiles/freetype.dir/src/base/ftmm.c.o
+[18/43] Building C object CMakeFiles/freetype.dir/src/gzip/ftgzip.c.o
+[19/43] Building C object CMakeFiles/freetype.dir/src/lzw/ftlzw.c.o
+[20/43] Building C object CMakeFiles/freetype.dir/src/psnames/psnames.c.o
+[21/43] Building C object CMakeFiles/freetype.dir/builds/unix/ftsystem.c.o
+[22/43] Building C object CMakeFiles/freetype.dir/src/base/ftstroke.c.o
+[23/43] Building C object CMakeFiles/freetype.dir/src/winfonts/winfnt.c.o
+[24/43] Building C object CMakeFiles/freetype.dir/src/base/ftdebug.c.o
+[25/43] Building C object CMakeFiles/freetype.dir/src/base/ftbitmap.c.o
+[26/43] Building C object CMakeFiles/freetype.dir/src/cid/type1cid.c.o
+[27/43] Building C object CMakeFiles/freetype.dir/src/smooth/smooth.c.o
+[28/43] Building C object CMakeFiles/freetype.dir/src/raster/raster.c.o
+[29/43] Building C object CMakeFiles/freetype.dir/src/type42/type42.c.o
+[30/43] Building C object CMakeFiles/freetype.dir/src/pcf/pcf.c.o
+[31/43] Building C object CMakeFiles/freetype.dir/src/pfr/pfr.c.o
+[32/43] Building C object CMakeFiles/freetype.dir/src/cache/ftcache.c.o
+[33/43] Building C object CMakeFiles/freetype.dir/src/bdf/bdf.c.o
+[34/43] Building C object CMakeFiles/freetype.dir/src/sdf/sdf.c.o
+[35/43] Building C object CMakeFiles/freetype.dir/src/pshinter/pshinter.c.o
+[36/43] Building C object CMakeFiles/freetype.dir/src/type1/type1.c.o
+[37/43] Building C object CMakeFiles/freetype.dir/src/cff/cff.c.o
+[38/43] Building C object CMakeFiles/freetype.dir/src/autofit/autofit.c.o
+[39/43] Building C object CMakeFiles/freetype.dir/src/base/ftbase.c.o
+[40/43] Building C object CMakeFiles/freetype.dir/src/sfnt/sfnt.c.o
+[41/43] Building C object CMakeFiles/freetype.dir/src/psaux/psaux.c.o
+[42/43] Building C object CMakeFiles/freetype.dir/src/truetype/truetype.c.o
+[43/43] Linking C static library libfreetype.a
+=========================== build freetype-linux-release end (10s) ===========================
+========================== build pathkit-linux-release start ==========================
+[Toolchains] Vendor Tools 1.0.5
+Building the 'x64' arch of [pathkit]:
+cd /app/tgfx/third_party/out/pathkit/linux/build-pathkit/x64
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_CXX_FLAGS="-w" -DCMAKE_MODULE_PATH=/app/tgfx/third_party/out/pathkit/linux/build-pathkit/x64/cmake/Modules /app/tgfx/third_party/pathkit
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /app/tgfx/third_party/out/pathkit/linux/build-pathkit/x64
+ninja pathkit
+[1/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkMalloc.cpp.o
+[2/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkMath.cpp.o
+[3/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkArenaAlloc.cpp.o
+[4/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkCubicClipper.cpp.o
+[5/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkPoint.cpp.o
+[6/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkRect.cpp.o
+[7/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkPaintPriv.cpp.o
+[8/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkRRect.cpp.o
+[9/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkPathMeasure.cpp.o
+[10/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkPaint.cpp.o
+[11/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkStrokeRec.cpp.o
+[12/61] Building CXX object CMakeFiles/pathkit.dir/src/effects/SkDashPathEffect.cpp.o
+[13/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkStrokerPriv.cpp.o
+[14/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkPathEffect.cpp.o
+[15/61] Building CXX object CMakeFiles/pathkit.dir/src/effects/SkCornerPathEffect.cpp.o
+[16/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkPathBuilder.cpp.o
+[17/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkContourMeasure.cpp.o
+[18/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkPathRef.cpp.o
+[19/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkDCubicToQuads.cpp.o
+[20/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkStroke.cpp.o
+[21/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkMatrix.cpp.o
+[22/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkAddIntersections.cpp.o
+[23/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkDLineIntersection.cpp.o
+[24/61] Building CXX object CMakeFiles/pathkit.dir/src/gpu/geometry/GrPathUtils.cpp.o
+[25/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkDConicLineIntersection.cpp.o
+[26/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkIntersections.cpp.o
+[27/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkDCubicLineIntersection.cpp.o
+[28/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkOpCubicHull.cpp.o
+[29/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkOpContour.cpp.o
+[30/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkDQuadLineIntersection.cpp.o
+[31/61] Building CXX object CMakeFiles/pathkit.dir/src/gpu/geometry/GrAATriangulator.cpp.o
+[32/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkGeometry.cpp.o
+[33/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkOpSpan.cpp.o
+[34/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkOpBuilder.cpp.o
+[35/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkOpCoincidence.cpp.o
+[36/61] Building CXX object CMakeFiles/pathkit.dir/src/core/SkPath.cpp.o
+[37/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkPathOpsConic.cpp.o
+[38/61] Building CXX object CMakeFiles/pathkit.dir/src/gpu/geometry/GrTriangulator.cpp.o
+[39/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkPathOpsCommon.cpp.o
+[40/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkOpAngle.cpp.o
+[41/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkPathOpsLine.cpp.o
+[42/61] Building CXX object CMakeFiles/pathkit.dir/src/ports/SkDebug_stdio.cpp.o
+[43/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkPathOpsDebug.cpp.o
+[44/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkPathOpsCurve.cpp.o
+[45/61] Building CXX object CMakeFiles/pathkit.dir/src/ports/SkMemory_malloc.cpp.o
+[46/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkOpEdgeBuilder.cpp.o
+[47/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkPathOpsQuad.cpp.o
+[48/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkPathOpsOp.cpp.o
+[49/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkPathOpsTightBounds.cpp.o
+[50/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkPathOpsRect.cpp.o
+[51/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkPathOpsSimplify.cpp.o
+[52/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkOpSegment.cpp.o
+[53/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkPathOpsTypes.cpp.o
+[54/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkPathOpsCubic.cpp.o
+[55/61] Building CXX object CMakeFiles/pathkit.dir/src/utils/SkDashPath.cpp.o
+[56/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkPathOpsAsWinding.cpp.o
+[57/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkReduceOrder.cpp.o
+[58/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkPathWriter.cpp.o
+[59/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkPathOpsWinding.cpp.o
+[60/61] Building CXX object CMakeFiles/pathkit.dir/src/pathops/SkPathOpsTSect.cpp.o
+[61/61] Linking CXX static library libpathkit.a
+=========================== build pathkit-linux-release end (28.8s) ===========================
+========================== build skcms-linux-release start ==========================
+[Toolchains] Vendor Tools 1.0.5
+Building the 'x64' arch of [skcms]:
+cd /app/tgfx/third_party/out/skcms/linux/build-skcms/x64
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_CXX_FLAGS="-w" -DCMAKE_MODULE_PATH=/app/tgfx/third_party/out/skcms/linux/build-skcms/x64/cmake/Modules /app/tgfx/third_party/skcms
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /app/tgfx/third_party/out/skcms/linux/build-skcms/x64
+ninja skcms
+[1/7] Building CXX object CMakeFiles/skcms.dir/skcms.cc.o
+[2/7] Building CXX object CMakeFiles/skcms.dir/src/skcms_TransformBaseline.cc.o
+[3/7] Building CXX object CMakeFiles/skcms_transform_hsw.dir/src/skcms_TransformHsw.cc.o
+[4/7] Linking CXX static library libskcms_transform_hsw.a
+[5/7] Building CXX object CMakeFiles/skcms_transform_skx.dir/src/skcms_TransformSkx.cc.o
+[6/7] Linking CXX static library libskcms_transform_skx.a
+[7/7] Linking CXX static library libskcms.a
+=========================== build skcms-linux-release end (3.2s) ===========================
+========================== build highway-linux-release start ==========================
+[Toolchains] Vendor Tools 1.0.5
+Building the 'x64' arch of [hwy]:
+cd /app/tgfx/third_party/out/highway/linux/build-hwy/x64
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_MODULE_PATH=/app/tgfx/third_party/out/highway/linux/build-hwy/x64/cmake/Modules /app/tgfx/third_party/highway
+CMake Deprecation Warning at CMakeLists.txt:32 (cmake_policy):
+  The OLD behavior for policy CMP0111 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test ATOMICS_LOCK_FREE_INSTRUCTIONS
+-- Performing Test ATOMICS_LOCK_FREE_INSTRUCTIONS - Success
+-- Performing Test HWY_EMSCRIPTEN
+-- Performing Test HWY_EMSCRIPTEN - Failed
+-- Performing Test HWY_RISCV
+-- Performing Test HWY_RISCV - Failed
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Looking for sys/auxv.h
+-- Looking for sys/auxv.h - found
+-- Looking for asm/hwcap.h
+-- Looking for asm/hwcap.h - not found
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /app/tgfx/third_party/out/highway/linux/build-hwy/x64/googletest-download
+[1/9] Creating directories for 'googletest'
+[2/9] Performing download step (git clone) for 'googletest'
+Cloning into 'googletest-src'...
+HEAD is now at 43efa0a4 Merge pull request #3617 from Bagira80:fix_3616
+[3/9] Performing update step for 'googletest'
+[4/9] No patch step for 'googletest'
+[5/9] No configure step for 'googletest'
+[6/9] No build step for 'googletest'
+[7/9] No install step for 'googletest'
+[8/9] No test step for 'googletest'
+[9/9] Completed 'googletest'
+-- Found Python: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Configuring done (4.7s)
+-- Generating done (0.1s)
+-- Build files have been written to: /app/tgfx/third_party/out/highway/linux/build-hwy/x64
+ninja hwy
+[1/10] Building CXX object CMakeFiles/hwy.dir/hwy/print.cc.o
+[2/10] Building CXX object CMakeFiles/hwy.dir/hwy/profiler.cc.o
+[3/10] Building CXX object CMakeFiles/hwy.dir/hwy/abort.cc.o
+[4/10] Building CXX object CMakeFiles/hwy.dir/hwy/aligned_allocator.cc.o
+[5/10] Building CXX object CMakeFiles/hwy.dir/hwy/perf_counters.cc.o
+[6/10] Building CXX object CMakeFiles/hwy.dir/hwy/timer.cc.o
+[7/10] Building CXX object CMakeFiles/hwy.dir/hwy/targets.cc.o
+[8/10] Building CXX object CMakeFiles/hwy.dir/hwy/nanobenchmark.cc.o
+[9/10] Building CXX object CMakeFiles/hwy.dir/hwy/per_target.cc.o
+[10/10] Linking CXX static library libhwy.a
+=========================== build highway-linux-release end (10.1s) ===========================
+========================== build expat-linux-release start ==========================
+[Toolchains] Vendor Tools 1.0.5
+Building the 'x64' arch of [expat]:
+cd /app/tgfx/third_party/out/expat/linux/build-expat/x64
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DBUILD_SHARED_LIBS=OFF -DCMAKE_C_FLAGS="-w" -DCMAKE_MODULE_PATH=/app/tgfx/third_party/out/expat/linux/build-expat/x64/cmake/Modules /app/tgfx/third_party/expat/expat
+-- The C compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for dlfcn.h
+-- Looking for dlfcn.h - found
+-- Looking for fcntl.h
+-- Looking for fcntl.h - found
+-- Looking for inttypes.h
+-- Looking for inttypes.h - found
+-- Looking for memory.h
+-- Looking for memory.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stdlib.h
+-- Looking for stdlib.h - found
+-- Looking for strings.h
+-- Looking for strings.h - found
+-- Looking for string.h
+-- Looking for string.h - found
+-- Looking for sys/stat.h
+-- Looking for sys/stat.h - found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Looking for getpagesize
+-- Looking for getpagesize - found
+-- Looking for mmap
+-- Looking for mmap - found
+-- Looking for getrandom
+-- Looking for getrandom - found
+-- Looking for arc4random_buf
+-- Looking for arc4random_buf - found
+-- Looking for 4 include files stdlib.h, ..., float.h
+-- Looking for 4 include files stdlib.h, ..., float.h - found
+-- Performing Test HAVE_OFF_T
+-- Performing Test HAVE_OFF_T - Success
+-- Performing Test HAVE_SYSCALL_GETRANDOM
+-- Performing Test HAVE_SYSCALL_GETRANDOM - Success
+-- Performing Test FLAG_NO_STRICT_ALIASING
+-- Performing Test FLAG_NO_STRICT_ALIASING - Success
+-- Performing Test FLAG_VISIBILITY
+-- Performing Test FLAG_VISIBILITY - Success
+-- Looking for cos in m
+-- Looking for cos in m - found
+-- ===========================================================================
+-- 
+-- Configuration
+--   Generator .................. Ninja
+--   Build type ................. Release
+--   Prefix ..................... /usr/local
+--   Shared libraries ........... OFF
+--   Character type ............. char (UTF-8)
+--   Library name postfix ....... 
+-- 
+--   Build documentation ........ OFF
+--   Build examples ............. ON
+--   Build fuzzers .............. OFF
+--   Build tests ................ ON
+--   Build tools (xmlwf) ........ ON
+--   Build pkg-config file ...... ON
+--   Install files .............. ON
+-- 
+--   Features
+--     // Advanced options, changes not advised
+--     Attributes info .......... OFF
+--     Context bytes ............ 1024
+--     DTD support .............. ON
+--     General entities ......... ON
+--     Large size ............... OFF
+--     Minimum size ............. OFF
+--     Namespace support ........ ON
+-- 
+--   Entropy sources
+--     getrandom ................ 1
+--     syscall SYS_getrandom .... 1
+--     libbsd ................... OFF
+--     /dev/random .............. ON
+-- 
+-- ===========================================================================
+-- Configuring done (0.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: /app/tgfx/third_party/out/expat/linux/build-expat/x64
+ninja expat
+[1/4] Building C object CMakeFiles/expat.dir/lib/xmlrole.c.o
+[2/4] Building C object CMakeFiles/expat.dir/lib/xmltok.c.o
+[3/4] Building C object CMakeFiles/expat.dir/lib/xmlparse.c.o
+[4/4] Linking C static library libexpat.a
+=========================== build expat-linux-release end (2.2s) ===========================
+Publishing vendor libraries: [flatbuffers,libjpeg-turbo,libwebp,libpng,zlib,freetype,pathkit,skcms,highway,expat] into /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir
+cd /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir/x64/temp
+cd /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir/x64/temp/libexpat
+ar x /app/tgfx/third_party/out/expat/linux/x64/libexpat.a
+ar t /app/tgfx/third_party/out/expat/linux/x64/libexpat.a > _objectFileList
+cd /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir/x64/temp/libflatbuffers
+ar x /app/tgfx/third_party/out/flatbuffers/linux/x64/libflatbuffers.a
+ar t /app/tgfx/third_party/out/flatbuffers/linux/x64/libflatbuffers.a > _objectFileList
+cd /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir/x64/temp/libfreetype
+ar x /app/tgfx/third_party/out/freetype/linux/x64/libfreetype.a
+ar t /app/tgfx/third_party/out/freetype/linux/x64/libfreetype.a > _objectFileList
+cd /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir/x64/temp/libhwy
+ar x /app/tgfx/third_party/out/highway/linux/x64/libhwy.a
+ar t /app/tgfx/third_party/out/highway/linux/x64/libhwy.a > _objectFileList
+cd /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir/x64/temp/libturbojpeg
+ar x /app/tgfx/third_party/out/libjpeg-turbo/linux/x64/libturbojpeg.a
+ar t /app/tgfx/third_party/out/libjpeg-turbo/linux/x64/libturbojpeg.a > _objectFileList
+cd /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir/x64/temp/libpng16
+ar x /app/tgfx/third_party/out/libpng/linux/x64/libpng16.a
+ar t /app/tgfx/third_party/out/libpng/linux/x64/libpng16.a > _objectFileList
+cd /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir/x64/temp/libsharpyuv
+ar x /app/tgfx/third_party/out/libwebp/linux/x64/libsharpyuv.a
+ar t /app/tgfx/third_party/out/libwebp/linux/x64/libsharpyuv.a > _objectFileList
+cd /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir/x64/temp/libwebp
+ar x /app/tgfx/third_party/out/libwebp/linux/x64/libwebp.a
+ar t /app/tgfx/third_party/out/libwebp/linux/x64/libwebp.a > _objectFileList
+cd /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir/x64/temp/libwebpdemux
+ar x /app/tgfx/third_party/out/libwebp/linux/x64/libwebpdemux.a
+ar t /app/tgfx/third_party/out/libwebp/linux/x64/libwebpdemux.a > _objectFileList
+cd /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir/x64/temp/libwebpmux
+ar x /app/tgfx/third_party/out/libwebp/linux/x64/libwebpmux.a
+ar t /app/tgfx/third_party/out/libwebp/linux/x64/libwebpmux.a > _objectFileList
+cd /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir/x64/temp/libpathkit
+ar x /app/tgfx/third_party/out/pathkit/linux/x64/libpathkit.a
+ar t /app/tgfx/third_party/out/pathkit/linux/x64/libpathkit.a > _objectFileList
+cd /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir/x64/temp/libskcms
+ar x /app/tgfx/third_party/out/skcms/linux/x64/libskcms.a
+ar t /app/tgfx/third_party/out/skcms/linux/x64/libskcms.a > _objectFileList
+cd /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir/x64/temp/libz
+ar x /app/tgfx/third_party/out/zlib/linux/x64/libz.a
+ar t /app/tgfx/third_party/out/zlib/linux/x64/libz.a > _objectFileList
+ar rc /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir/x64/libtgfx-vendor.a */*.o
+[2/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/filters/AlphaThresholdColorFilter.cpp.o
+[3/413] Building CXX object CMakeFiles/svg_style_custom_parser_test.dir/svg_style_custom_parser_test.cpp.o
+[4/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/filters/ColorImageFilter.cpp.o
+[5/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/filters/ComposeColorFilter.cpp.o
+[6/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/filters/ComposeImageFilter.cpp.o
+[7/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/filters/DropShadowImageFilter.cpp.o
+[8/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/filters/InnerShadowImageFilter.cpp.o
+[9/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/filters/GaussianBlurImageFilter.cpp.o
+[10/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/filters/LumaColorFilter.cpp.o
+[11/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/filters/MatrixColorFilter.cpp.o
+[12/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/filters/ModeColorFilter.cpp.o
+[13/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/filters/RuntimeImageFilter.cpp.o
+[14/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/filters/ShaderMaskFilter.cpp.o
+[15/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/images/BufferImage.cpp.o
+[16/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/images/CodecImage.cpp.o
+[17/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/images/DecodedImage.cpp.o
+[18/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/images/FilterImage.cpp.o
+[19/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/images/GeneratorImage.cpp.o
+[20/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/images/OrientImage.cpp.o
+[21/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/images/Image.cpp.o
+[22/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/images/PixelImage.cpp.o
+[23/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/images/PictureImage.cpp.o
+[24/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/images/RGBAAAImage.cpp.o
+[25/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/images/RasterizedImage.cpp.o
+[26/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/images/ScaledImage.cpp.o
+[27/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/images/SubsetImage.cpp.o
+[28/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/images/TextureImage.cpp.o
+[29/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/images/TransformImage.cpp.o
+[30/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shaders/BlendShader.cpp.o
+[31/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shaders/ColorFilterShader.cpp.o
+[32/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shaders/ColorShader.cpp.o
+[33/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shaders/GradientShader.cpp.o
+[34/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shaders/ImageShader.cpp.o
+[35/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shapes/AppendShape.cpp.o
+[36/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shaders/MatrixShader.cpp.o
+[37/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shapes/EffectShape.cpp.o
+[38/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shapes/FillTypeShape.cpp.o
+[39/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shapes/GlyphShape.cpp.o
+[40/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shapes/Matrix3DShape.cpp.o
+[41/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shapes/MatrixShape.cpp.o
+[42/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shapes/MergeShape.cpp.o
+[43/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shapes/ProviderShape.cpp.o
+[44/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shapes/PathShape.cpp.o
+[45/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shapes/Shape.cpp.o
+[46/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shapes/ReverseShape.cpp.o
+[47/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shapes/StrokeShape.cpp.o
+[48/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/shapes/TextShape.cpp.o
+[49/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/Buffer.cpp.o
+[50/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/BlockAllocator.cpp.o
+[51/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/BytesKey.cpp.o
+[52/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/ClearPixels.cpp.o
+[53/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/Clock.cpp.o
+[54/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/ColorHelper.cpp.o
+[55/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/ColorSpaceHelper.cpp.o
+[56/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/DataView.cpp.o
+[57/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/CopyPixels.cpp.o
+[58/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/FauxBoldScale.cpp.o
+[59/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/GammaCorrection.cpp.o
+[60/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/DecomposeRects.cpp.o
+[61/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/HardwareBufferUtil.cpp.o
+[62/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/HashRange.cpp.o
+[63/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/MD5.cpp.o
+/app/tgfx/src/core/utils/MD5.cpp: In static member function 'static tgfx::MD5::Digest tgfx::MD5::Calculate(const void*, size_t)':
+/app/tgfx/src/core/utils/MD5.cpp:193:8: warning: 'unsigned char* MD5(const unsigned char*, size_t, unsigned char*)' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  193 |   ::MD5(static_cast<const unsigned char*>(bytes), size, digest.data());
+      |   ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /app/tgfx/src/core/utils/MD5.cpp:29:
+/usr/include/openssl/md5.h:52:38: note: declared here
+   52 | OSSL_DEPRECATEDIN_3_0 unsigned char *MD5(const unsigned char *d, size_t n,
+      |                                      ^~~
+[64/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/GlyphConverter.cpp.o
+[65/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/MathExtra.cpp.o
+[66/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/NextCacheScaleLevel.cpp.o
+[67/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/PathUtils.cpp.o
+[68/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/PixelFormatUtil.cpp.o
+[69/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/PointUtils.cpp.o
+[70/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/RectToRectMatrix.cpp.o
+[71/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/ReturnQueue.cpp.o
+[72/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/SlidingWindowTracker.cpp.o
+[73/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/ShapeUtils.cpp.o
+[74/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/StrokeUtils.cpp.o
+[75/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/Stream.cpp.o
+[76/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/Task.cpp.o
+[77/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/TaskGroup.cpp.o
+[78/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/UTF.cpp.o
+[79/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/UniqueID.cpp.o
+[80/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/WriteStream.cpp.o
+[81/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/GLSLBlend.cpp.o
+[82/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/GLSLFragmentShaderBuilder.cpp.o
+[83/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/GLSLProgramBuilder.cpp.o
+[84/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/utils/TileSortCompareFuncSIMD.cpp.o
+[85/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/GLSLVertexShaderBuilder.cpp.o
+[86/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLAARectEffect.cpp.o
+[87/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLAlphaThresholdFragmentProcessor.cpp.o
+[88/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLAtlasTextGeometryProcessor.cpp.o
+[89/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLClampedGradientEffect.cpp.o
+[90/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLColorMatrixFragmentProcessor.cpp.o
+[91/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLComposeFragmentProcessor.cpp.o
+[92/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLConicGradientLayout.cpp.o
+[93/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLConstColorProcessor.cpp.o
+[94/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLDefaultGeometryProcessor.cpp.o
+[95/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLDeviceSpaceTextureEffect.cpp.o
+[96/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLDiamondGradientLayout.cpp.o
+[97/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLDualIntervalGradientColorizer.cpp.o
+[98/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLEllipseGeometryProcessor.cpp.o
+[99/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLEmptyXferProcessor.cpp.o
+[100/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLGaussianBlur1DFragmentProcessor.cpp.o
+[101/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLHairlineLineGeometryProcessor.cpp.o
+[102/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLHairlineQuadGeometryProcessor.cpp.o
+[103/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLLinearGradientLayout.cpp.o
+[104/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLLumaFragmentProcessor.cpp.o
+[105/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLMeshGeometryProcessor.cpp.o
+[106/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLNonAARRectGeometryProcessor.cpp.o
+[107/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLPorterDuffXferProcessor.cpp.o
+[108/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLQuadPerEdgeAAGeometryProcessor.cpp.o
+[109/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLRadialGradientLayout.cpp.o
+[110/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLRoundStrokeRectGeometryProcessor.cpp.o
+[111/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLSingleIntervalGradientColorizer.cpp.o
+[112/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLTextureEffect.cpp.o
+[113/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLTextureGradientColorizer.cpp.o
+[114/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLTiledTextureEffect.cpp.o
+[115/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLUnrolledBinaryGradientColorizer.cpp.o
+[116/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/glsl/processors/GLSLXfermodeFragmentProcessor.cpp.o
+[117/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/ops/AtlasTextOp.cpp.o
+[118/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/ops/DrawOp.cpp.o
+[119/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/ops/HairlineLineOp.cpp.o
+[120/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/ops/HairlineQuadOp.cpp.o
+[121/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/ops/MeshDrawOp.cpp.o
+[122/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/ops/Quads3DDrawOp.cpp.o
+[123/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/ops/RRectDrawOp.cpp.o
+[124/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/ops/RectDrawOp.cpp.o
+[125/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/ops/ShapeDrawOp.cpp.o
+[126/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/AtlasTextGeometryProcessor.cpp.o
+[127/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/ClampedGradientEffect.cpp.o
+[128/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/ColorSpaceXFormEffect.cpp.o
+[129/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/ComposeFragmentProcessor.cpp.o
+[130/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/ConicGradientLayout.cpp.o
+[131/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/ConstColorProcessor.cpp.o
+[132/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/DeviceSpaceTextureEffect.cpp.o
+[133/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/DefaultGeometryProcessor.cpp.o
+[134/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/DiamondGradientLayout.cpp.o
+[135/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/EllipseGeometryProcessor.cpp.o
+[136/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/EmptyXferProcessor.cpp.o
+[137/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/FragmentProcessor.cpp.o
+[138/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/GaussianBlur1DFragmentProcessor.cpp.o
+[139/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/GeometryProcessor.cpp.o
+[140/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/HairlineLineGeometryProcessor.cpp.o
+[141/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/HairlineQuadGeometryProcessor.cpp.o
+[142/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/LinearGradientLayout.cpp.o
+[143/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/LumaFragmentProcessor.cpp.o
+[144/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/MeshGeometryProcessor.cpp.o
+[145/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/NonAARRectGeometryProcessor.cpp.o
+[146/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/PorterDuffXferProcessor.cpp.o
+[147/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/QuadPerEdgeAAGeometryProcessor.cpp.o
+[148/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/RadialGradientLayout.cpp.o
+[149/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/RoundStrokeRectGeometryProcessor.cpp.o
+[150/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/TextureEffect.cpp.o
+[151/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/TiledTextureEffect.cpp.o
+[152/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/UnrolledBinaryGradientColorizer.cpp.o
+[153/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/proxies/DefaultTextureProxy.cpp.o
+[154/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/processors/XfermodeFragmentProcessor.cpp.o
+[155/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/proxies/ExternalTextureRenderTargetProxy.cpp.o
+[156/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/proxies/GPUMeshProxy.cpp.o
+[157/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/proxies/HardwareRenderTargetProxy.cpp.o
+[158/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/proxies/HardwareTextureProxy.cpp.o
+[159/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/proxies/TextureRenderTargetProxy.cpp.o
+[160/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/proxies/RenderTargetProxy.cpp.o
+[161/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/resources/BufferResource.cpp.o
+[162/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/resources/DefaultTextureView.cpp.o
+[163/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/resources/ExternalRenderTarget.cpp.o
+[164/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/resources/Resource.cpp.o
+[165/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/resources/ResourceKey.cpp.o
+[166/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/resources/TextureRenderTarget.cpp.o
+[167/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/resources/TextureView.cpp.o
+[168/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/resources/YUVTextureView.cpp.o
+[169/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/tasks/AtlasUploadTask.cpp.o
+[170/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/tasks/GenerateMipmapsTask.cpp.o
+[171/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/tasks/GPUBufferUploadTask.cpp.o
+[172/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/tasks/HairlineBufferUploadTask.cpp.o
+[173/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/tasks/MeshBufferUploadTask.cpp.o
+[174/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/tasks/ReadbackBufferCreateTask.cpp.o
+[175/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/tasks/OpsRenderTask.cpp.o
+[176/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/tasks/ResourceTask.cpp.o
+[177/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/tasks/RenderTargetCopyTask.cpp.o
+[178/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/tasks/ShapeBufferUploadTask.cpp.o
+[179/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/tasks/RuntimeDrawTask.cpp.o
+[180/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/tasks/TransferPixelsTask.cpp.o
+[181/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/tasks/TextureUploadTask.cpp.o
+[182/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/AdaptiveDashEffect.cpp.o
+[183/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/AtlasManager.cpp.o
+[184/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Atlas.cpp.o
+[185/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/AtlasTypes.cpp.o
+[186/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/AtlasStrikeCache.cpp.o
+[187/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Bitmap.cpp.o
+[188/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/BoxFilterDownsample.cpp.o
+[189/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Brush.cpp.o
+[190/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Canvas.cpp.o
+[191/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/CanvasState.cpp.o
+[192/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Checksum.cpp.o
+[193/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Color.cpp.o
+[194/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/ColorSpace.cpp.o
+[195/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/ColorSpaceXformSteps.cpp.o
+[196/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/CustomTypeface.cpp.o
+[197/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Data.cpp.o
+[198/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Font.cpp.o
+[199/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/GlyphRasterizer.cpp.o
+[200/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/BoxFilterDownsampleSIMD.cpp.o
+[201/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/GlyphTransform.cpp.o
+[202/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/GradientGenerator.cpp.o
+[203/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/HairlineTriangulator.cpp.o
+[204/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/ImageBuffer.cpp.o
+[205/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/ImageCodec.cpp.o
+[206/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/ImageInfo.cpp.o
+[207/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/ImageFilter.cpp.o
+[208/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/ImageSource.cpp.o
+[209/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/ImageUserTypeface.cpp.o
+[210/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/LayerUnrollContext.cpp.o
+[211/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Matrix.cpp.o
+[212/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Matrix3D.cpp.o
+[213/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Matrix3DUtils.cpp.o
+[214/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/MatrixUtils.cpp.o
+[215/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/MeasureContext.cpp.o
+[216/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Mesh.cpp.o
+[217/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/NoConicsPathIterator.cpp.o
+[218/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Orientation.cpp.o
+[219/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Paint.cpp.o
+[220/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Path.cpp.o
+[221/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/PathEffect.cpp.o
+[222/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/PathMeasure.cpp.o
+[223/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/MatrixSIMD.cpp.o
+[224/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/PathProvider.cpp.o
+[225/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/PathRasterizer.cpp.o
+[226/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/PathRef.cpp.o
+[227/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/PathTriangulator.cpp.o
+[228/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/PathUserTypeface.cpp.o
+[229/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Picture.cpp.o
+[230/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/PictureContext.cpp.o
+[231/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/PictureRecorder.cpp.o
+[232/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/PixelBuffer.cpp.o
+[233/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/PixelBufferCodec.cpp.o
+[234/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/PixelRef.cpp.o
+[235/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Pixmap.cpp.o
+[236/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Point.cpp.o
+[237/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/PlaybackContext.cpp.o
+[238/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/RSXform.cpp.o
+[239/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/RRect.cpp.o
+[240/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Rect.cpp.o
+[241/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/RectPackSkyline.cpp.o
+[242/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/RawPixelCodec.cpp.o
+[243/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/RunRecord.cpp.o
+[244/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/ScaledImageGenerator.cpp.o
+[245/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/ScalerContext.cpp.o
+[246/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Shader.cpp.o
+[247/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/ShapeMesh.cpp.o
+[248/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/ShapeRasterizer.cpp.o
+[249/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/ShapeVertexSource.cpp.o
+[250/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Stroke.cpp.o
+[251/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/RectSIMD.cpp.o
+[252/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/SurfaceReadback.cpp.o
+[253/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Surface.cpp.o
+[254/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/TextBlob.cpp.o
+[255/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/TextBlobBuilder.cpp.o
+[256/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/TrimPathEffect.cpp.o
+[257/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Vec.cpp.o
+[258/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/Typeface.cpp.o
+[259/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/VertexMesh.cpp.o
+[260/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/YUVColorSpace.cpp.o
+[261/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/YUVData.cpp.o
+[262/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/YUVHardwareBuffer.cpp.o
+[263/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/AlignTo.cpp.o
+[264/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/Attribute.cpp.o
+[265/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/Backend.cpp.o
+[266/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/BlendFormula.cpp.o
+[267/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/ColorSpaceXformHelper.cpp.o
+[268/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/CommandEncoder.cpp.o
+[269/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/Context.cpp.o
+[270/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/VecSIMD.cpp.o
+[271/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/CoordTransform.cpp.o
+[272/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/Device.cpp.o
+[273/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/DrawingBuffer.cpp.o
+[274/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/FragmentShaderBuilder.cpp.o
+[275/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/DrawingManager.cpp.o
+[276/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/GlobalCache.cpp.o
+[277/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/Program.cpp.o
+[278/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/OpsCompositor.cpp.o
+[279/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/ProgramBuilder.cpp.o
+[280/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/ProgramInfo.cpp.o
+[281/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/Quad.cpp.o
+[282/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/QuadsVertexProvider.cpp.o
+[283/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/ProxyProvider.cpp.o
+[284/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/RRectsVertexProvider.cpp.o
+[285/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/RectsVertexProvider.cpp.o
+[286/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/RenderPipeline.cpp.o
+[287/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/RenderContext.cpp.o
+[288/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/ResourceCache.cpp.o
+[289/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/ShaderCaps.cpp.o
+[290/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/ShaderVar.cpp.o
+[291/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/Swizzle.cpp.o
+[292/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/ShaderBuilder.cpp.o
+[293/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/Uniform.cpp.o
+[294/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/Texture.cpp.o
+[295/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/UniformHandler.cpp.o
+[296/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/UniqueDomain.cpp.o
+[297/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/UniformData.cpp.o
+[298/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/VertexProvider.cpp.o
+[299/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/VaryingHandler.cpp.o
+[300/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/platform/ImageReader.cpp.o
+[301/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/platform/Print.cpp.o
+[302/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/Window.cpp.o
+[303/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/SVGAttribute.cpp.o
+[304/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/ElementWriter.cpp.o
+[305/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/SVGAttributeParser.cpp.o
+[306/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/SVGDOM.cpp.o
+[307/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/SVGExportContext.cpp.o
+[308/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/SVGExporter.cpp.o
+[309/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/SVGLengthContext.cpp.o
+[310/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/SVGFilterContext.cpp.o
+[311/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/SVGParseColor.cpp.o
+[312/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/SVGPathParser.cpp.o
+[313/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/SVGNodeConstructor.cpp.o
+[314/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/SVGRenderContext.cpp.o
+[315/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/SVGTextBuilder.cpp.o
+[316/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/SVGUtils.cpp.o
+[317/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/TextShaper.cpp.o
+[318/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGCircle.cpp.o
+[319/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGClipPath.cpp.o
+[320/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGContainer.cpp.o
+[321/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGEllipse.cpp.o
+[322/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGFe.cpp.o
+[323/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGFeBlend.cpp.o
+[324/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGFeColorMatrix.cpp.o
+[325/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGFeComponentTransfer.cpp.o
+[326/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGFeComposite.cpp.o
+[327/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGFeDisplacementMap.cpp.o
+[328/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGFeGaussianBlur.cpp.o
+[329/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGFeImage.cpp.o
+[330/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGFeLightSource.cpp.o
+[331/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGFeLighting.cpp.o
+[332/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGFeMorphology.cpp.o
+[333/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGFeMerge.cpp.o
+[334/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGFeOffset.cpp.o
+[335/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGFeTurbulence.cpp.o
+[336/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGFilter.cpp.o
+[337/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGGradient.cpp.o
+[338/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGLine.cpp.o
+[339/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGImage.cpp.o
+[340/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGLinearGradient.cpp.o
+[341/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGMask.cpp.o
+[342/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGPath.cpp.o
+[343/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGNode.cpp.o
+[344/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGPattern.cpp.o
+[345/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGPoly.cpp.o
+[346/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGRadialGradient.cpp.o
+[347/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGRect.cpp.o
+[348/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGRoot.cpp.o
+[349/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGShape.cpp.o
+[350/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGStop.cpp.o
+[351/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGTransformableNode.cpp.o
+[352/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGText.cpp.o
+In file included from /app/tgfx/include/tgfx/svg/node/SVGText.h:27,
+                 from /app/tgfx/src/svg/node/SVGText.cpp:19:
+/app/tgfx/include/tgfx/svg/SVGTypes.h: In member function 'float tgfx::SVGTextAnchor::getAlignmentFactor() const':
+/app/tgfx/include/tgfx/svg/SVGTypes.h:768:3: warning: control reaches end of non-void function [-Wreturn-type]
+  768 |   }
+      |   ^
+[353/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/xml/DOMParser.cpp.o
+[354/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/xml/XMLDOM.cpp.o
+[355/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/node/SVGUse.cpp.o
+[356/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/xml/XMLParser.cpp.o
+[357/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/svg/xml/XMLWriter.cpp.o
+[358/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/inspect/FrameCaptureTexture.cpp.o
+[359/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/inspect/FrameCapture.cpp.o
+[360/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/inspect/LZ4CompressionHandler.cpp.o
+[361/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/inspect/ProcessUtils.cpp.o
+[362/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/inspect/Socket.cpp.o
+[363/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/inspect/TCPPortProvider.cpp.o
+[364/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/inspect/serialization/ColorSerialization.cpp.o
+[365/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/inspect/LayerTree.cpp.o
+[366/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/inspect/serialization/LayerFilterSerialization.cpp.o
+[367/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/inspect/serialization/LayerSerialization.cpp.o
+[368/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/inspect/serialization/LayerStyleSerialization.cpp.o
+[369/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/inspect/serialization/MatrixSerialization.cpp.o
+[370/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/inspect/serialization/PictureSerialization.cpp.o
+[371/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/inspect/serialization/PointSerialization.cpp.o
+[372/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/inspect/serialization/RecordedContentSerialization.cpp.o
+[373/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/inspect/serialization/RectSerialization.cpp.o
+[374/413] Building C object tgfx_build/CMakeFiles/tgfx.dir/third_party/lz4/lib/lz4.c.o
+[375/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/codecs/jpeg/JpegCodec.cpp.o
+[376/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/codecs/webp/WebpCodec.cpp.o
+[377/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/codecs/webp/WebpUtility.cpp.o
+[378/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/codecs/png/PngCodec.cpp.o
+[379/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/inspect/serialization/SerilaizationUtils.cpp.o
+[380/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/vectors/freetype/FTLibrary.cpp.o
+[381/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/vectors/freetype/FTPath.cpp.o
+[382/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/vectors/freetype/FTRasterTarget.cpp.o
+[383/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/vectors/freetype/FTPathRasterizer.cpp.o
+[384/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/vectors/freetype/FTScalerContext.cpp.o
+[385/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/vectors/freetype/FTTypeface.cpp.o
+[386/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/core/vectors/freetype/SystemFont.cpp.o
+[387/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/GLBuffer.cpp.o
+[388/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/GLCaps.cpp.o
+[389/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/GLCommandEncoder.cpp.o
+[390/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/GLCommandQueue.cpp.o
+[391/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/GLDepthStencilTexture.cpp.o
+[392/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/GLDevice.cpp.o
+[393/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/GLGPU.cpp.o
+[394/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/GLInterface.cpp.o
+[395/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/GLMultisampleTexture.cpp.o
+[396/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/GLRenderPass.cpp.o
+[397/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/GLRenderPipeline.cpp.o
+[398/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/GLSemaphore.cpp.o
+[399/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/GLShaderModule.cpp.o
+[400/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/GLTexture.cpp.o
+[401/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/GLState.cpp.o
+[402/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/platform/mock/HardwareBuffer.cpp.o
+[403/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/GLUtil.cpp.o
+[404/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/platform/mock/NativeCodec.cpp.o
+[405/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/egl/EGLDisplayWrapper.cpp.o
+[406/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/egl/EGLDevice.cpp.o
+[407/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/egl/EGLGPU.cpp.o
+[408/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/egl/EGLHardwareTexture.cpp.o
+[409/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/egl/EGLGlobals.cpp.o
+[410/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/egl/EGLProcGetter.cpp.o
+[411/413] Building CXX object tgfx_build/CMakeFiles/tgfx.dir/src/gpu/opengl/egl/EGLWindow.cpp.o
+[412/413] Linking CXX static library tgfx_build/tgfx.a
+cd /tmp/tgfx-style-attr-build/tgfx_build/temp
+cd /tmp/tgfx-style-attr-build/tgfx_build/temp/tgfx
+ar x /tmp/tgfx-style-attr-build/tgfx_build/tgfx.a
+ar t /tmp/tgfx-style-attr-build/tgfx_build/tgfx.a > _objectFileList
+cd /tmp/tgfx-style-attr-build/tgfx_build/temp/libtgfx-vendor
+ar x /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir/x64/libtgfx-vendor.a
+ar t /tmp/tgfx-style-attr-build/tgfx_build/CMakeFiles/tgfx-vendor.dir/x64/libtgfx-vendor.a > _objectFileList
+ar rc /tmp/tgfx-style-attr-build/tgfx_build/tgfx.a */*.o
+[413/413] Linking CXX executable svg_style_custom_parser_test
+[REGRESSION_DIRECT] Running direct XML custom attributes remain preserved
+[REGRESSION_DIRECT] PASS direct XML custom attributes remain preserved
+[FAIL2PASS_CORE] Running style custom attributes are forwarded to parser
+Missing style-derived attribute on first element.
+[FAIL2PASS_CORE] FAIL style custom attributes are forwarded to parser (exit=1)
+[FAIL2PASS_EDGE] Running style parser handles edge declaration formats
+Missing edge style-derived attribute in case 0.
+[FAIL2PASS_EDGE] FAIL style parser handles edge declaration formats (exit=1)
+Overall result: FAIL

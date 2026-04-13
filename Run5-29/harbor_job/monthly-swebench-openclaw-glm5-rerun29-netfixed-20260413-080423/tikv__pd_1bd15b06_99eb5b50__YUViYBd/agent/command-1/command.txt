@@ -1,0 +1,91 @@
+# Source NVM explicitly
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# Run OpenClaw agent with tee for persistent output (like Claude Code)
+# Output goes to both stdout (for base.py capture) and /logs/agent/ (survives timeout)
+openclaw agent --local --agent main --message 'Implement a standalone Resource Manager gRPC behavior change in PD'"'"'s resource manager server package.
+
+Background:
+When the Resource Manager runs as an independent service, metadata writes (resource group create/update/delete) must be handled by PD. The standalone Resource Manager should continue serving read/token paths, but it must not accept direct metadata write RPCs.
+
+Required behavior:
+1. In the standalone Resource Manager gRPC service path (`pkg/mcs/resourcemanager/server`), the following RPCs must reject metadata write requests:
+- `AddResourceGroup`
+- `ModifyResourceGroup`
+- `DeleteResourceGroup`
+
+2. The rejection must be a gRPC error with:
+- status code: `FailedPrecondition`
+- message containing: `resource group metadata writes must be handled by PD`
+
+3. The rejection must happen in the service-layer metadata write RPC handling, before manager write execution.
+
+4. The standalone RM server type must expose a capability hook named `ShouldRejectMetadataWritesViaGRPC() bool` so service construction can detect this mode and enable the rejection behavior. This hook must evaluate to `true` for the standalone RM server.
+
+5. Existing manager write-role gating behavior must remain intact for non-rejecting paths (for example, token-only write-role still reports metadata-write-disabled errors through manager behavior).
+
+Scope notes:
+- This task is only about gRPC metadata write rejection for standalone RM mode.
+- Do not change unrelated APIs, storage schemas, or watcher logic.
+' --json 2>&1 | tee /logs/agent/openclaw-output.txt
+
+# Extract session ID, copy session log for ATIF generation, and persist to /logs/agent/
+node << 'COPY_SESSION_EOF'
+const fs = require("fs");
+const path = require("path");
+
+function copySessionById(sessionId) {
+    const src = path.join(process.env.HOME, ".openclaw", "agents", "main", "sessions", sessionId + ".jsonl");
+    if (fs.existsSync(src)) {
+        console.log("✓ Session log found: " + sessionId);
+        fs.copyFileSync(src, "/logs/agent/openclaw-session.jsonl");
+        console.log("<<<SESSION_START>>>");
+        console.log(fs.readFileSync(src, "utf8"));
+        console.log("<<<SESSION_END>>>");
+        return true;
+    }
+    return false;
+}
+
+let sessionCopied = false;
+
+// Primary: extract session ID from OpenClaw JSON output
+const outputFile = "/logs/agent/openclaw-output.txt";
+if (fs.existsSync(outputFile)) {
+    const content = fs.readFileSync(outputFile, "utf8");
+    // Note: {{ / }} are Python f-string escapes that render as literal { / } in output
+    const jsonStart = content.indexOf("{");
+    if (jsonStart !== -1) {
+        try {
+            const data = JSON.parse(content.substring(jsonStart));
+            const sessionId = data.meta && data.meta.agentMeta && data.meta.agentMeta.sessionId;
+            if (sessionId) {
+                sessionCopied = copySessionById(sessionId);
+            }
+        } catch (e) {
+            console.log("Warning: Failed to parse JSON output: " + e.message);
+        }
+    }
+    // Print original JSON for Harbor to capture
+    if (content.trim()) console.log(content);
+}
+
+// Fallback: scan sessions directory for .jsonl files (timeout recovery)
+if (!sessionCopied) {
+    const sessDir = path.join(process.env.HOME, ".openclaw", "agents", "main", "sessions");
+    if (fs.existsSync(sessDir)) {
+        const files = fs.readdirSync(sessDir)
+            .filter(f => f.endsWith(".jsonl") && !f.endsWith(".lock"))
+            .map(f => ({ name: f, mtime: fs.statSync(path.join(sessDir, f)).mtimeMs }))
+            .sort((a, b) => b.mtime - a.mtime);
+        if (files.length > 0) {
+            const sessionId = files[0].name.replace(".jsonl", "");
+            console.log("Fallback: recovered session from directory: " + sessionId);
+            copySessionById(sessionId);
+        } else {
+            console.log("Warning: No session files found in " + sessDir);
+        }
+    }
+}
+COPY_SESSION_EOF

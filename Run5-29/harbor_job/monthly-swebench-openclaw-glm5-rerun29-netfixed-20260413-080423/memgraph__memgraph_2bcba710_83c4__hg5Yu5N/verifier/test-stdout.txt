@@ -1,0 +1,37 @@
+[REGRESSION_DIRECT] Validate existing log-level semantics
+log-level validation output:
+trace_valid=1
+warning_valid=1
+Invalid value for log level. Allowed values: TRACE, DEBUG, INFO, WARNING, ERROR, CRITICAL
+invalid_valid=0
+[REGRESSION_DIRECT] PASS
+[REGRESSION_DIRECT] Sync mode must stay synchronous
+sync logger output:
+set_result=
+after_set_has_option=0
+is_async=0
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Async mode must install async logger
+Traceback (most recent call last):
+  File "<stdin>", line 12, in <module>
+AssertionError: {'set_result': '', 'after_set_has_option': '0', 'is_async': '0'}
+[FAIL2PASS_CORE] FAIL
+[FAIL2PASS_EDGE] logger_type validation must accept mixed-case values
+Traceback (most recent call last):
+  File "<stdin>", line 12, in <module>
+AssertionError: {'set_result': '', 'after_set_has_option': '0', 'is_async': '0'}
+[FAIL2PASS_EDGE] FAIL
+[FAIL2PASS_ERROR_HANDLING] Invalid update must keep previous valid async value
+Traceback (most recent call last):
+  File "<stdin>", line 12, in <module>
+AssertionError: {'first_result': '', 'second_result': '', 'after_sequence_has_option': '0', 'is_async': '0'}
+[FAIL2PASS_ERROR_HANDLING] FAIL
+[REGRESSION_DEPENDENT] Existing log_level startup config entry must remain unchanged
+log_level entry: ('WARNING', 'TRACE', 'Minimum log level. Allowed values: TRACE, DEBUG, INFO, WARNING, ERROR, CRITICAL')
+[REGRESSION_DEPENDENT] PASS
+[FAIL2PASS_CORE] startup_config_dict must expose logger_type metadata
+Traceback (most recent call last):
+  File "<stdin>", line 14, in <module>
+KeyError: 'logger_type'
+[FAIL2PASS_CORE] FAIL
+Detected 4 failing test group(s). reward=0

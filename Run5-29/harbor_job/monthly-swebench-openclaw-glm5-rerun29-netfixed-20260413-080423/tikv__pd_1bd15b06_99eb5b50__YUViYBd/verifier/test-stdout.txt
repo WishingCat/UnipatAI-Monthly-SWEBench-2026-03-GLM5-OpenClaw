@@ -1,0 +1,44 @@
+[ENV] PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+[ENV] go=/usr/local/go/bin/go
+[REGRESSION_DIRECT] Running: /usr/local/go/bin/go test ./pkg/mcs/resourcemanager/server -run '^TestManagerMetadataWriteRoleGates$' -count=1
+ok  	github.com/tikv/pd/pkg/mcs/resourcemanager/server	0.018s
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Running: /usr/local/go/bin/go test ./pkg/mcs/resourcemanager/server -run '^TestRMStandaloneServiceRejectsMetadataWritesViaGRPC$' -count=1
+--- FAIL: TestRMStandaloneServiceRejectsMetadataWritesViaGRPC (0.00s)
+    --- FAIL: TestRMStandaloneServiceRejectsMetadataWritesViaGRPC/add (0.00s)
+        grpc_metadata_write_reject_test.go:81: 
+            	Error Trace:	/app/pd/pkg/mcs/resourcemanager/server/grpc_metadata_write_reject_test.go:38
+            	            				/app/pd/pkg/mcs/resourcemanager/server/grpc_metadata_write_reject_test.go:81
+            	Error:      	Should be true
+            	Test:       	TestRMStandaloneServiceRejectsMetadataWritesViaGRPC/add
+            	Messages:   	error must be a gRPC status
+    --- FAIL: TestRMStandaloneServiceRejectsMetadataWritesViaGRPC/modify (0.00s)
+        grpc_metadata_write_reject_test.go:81: 
+            	Error Trace:	/app/pd/pkg/mcs/resourcemanager/server/grpc_metadata_write_reject_test.go:38
+            	            				/app/pd/pkg/mcs/resourcemanager/server/grpc_metadata_write_reject_test.go:81
+            	Error:      	Should be true
+            	Test:       	TestRMStandaloneServiceRejectsMetadataWritesViaGRPC/modify
+            	Messages:   	error must be a gRPC status
+    --- FAIL: TestRMStandaloneServiceRejectsMetadataWritesViaGRPC/delete (0.00s)
+        grpc_metadata_write_reject_test.go:81: 
+            	Error Trace:	/app/pd/pkg/mcs/resourcemanager/server/grpc_metadata_write_reject_test.go:38
+            	            				/app/pd/pkg/mcs/resourcemanager/server/grpc_metadata_write_reject_test.go:81
+            	Error:      	Should be true
+            	Test:       	TestRMStandaloneServiceRejectsMetadataWritesViaGRPC/delete
+            	Messages:   	error must be a gRPC status
+FAIL
+FAIL	github.com/tikv/pd/pkg/mcs/resourcemanager/server	0.017s
+FAIL
+[FAIL2PASS_CORE] FAIL (exit=1)
+[FAIL2PASS_EDGE] Running: /usr/local/go/bin/go test ./pkg/mcs/resourcemanager/server -run '^TestRMStandaloneServerExposesRejectHook$' -count=1
+--- FAIL: TestRMStandaloneServerExposesRejectHook (0.00s)
+    grpc_metadata_write_reject_test.go:89: 
+        	Error Trace:	/app/pd/pkg/mcs/resourcemanager/server/grpc_metadata_write_reject_test.go:89
+        	Error:      	Should be true
+        	Test:       	TestRMStandaloneServerExposesRejectHook
+        	Messages:   	standalone RM server must expose reject hook
+FAIL
+FAIL	github.com/tikv/pd/pkg/mcs/resourcemanager/server	0.017s
+FAIL
+[FAIL2PASS_EDGE] FAIL (exit=1)
+Some test groups failed (2 failed, 1 passed).

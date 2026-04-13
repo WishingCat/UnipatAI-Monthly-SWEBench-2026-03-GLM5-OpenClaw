@@ -1,0 +1,18 @@
+{
+  "task_name": "kubernetes__release_9d42037a_572035f6",
+  "trial_name": "kubernetes__release_9d42037a_572__75m9VRQ",
+  "episode_count": 6,
+  "result": "0.0",
+  "trial_dir": "T:\\AgentProjects\\20260408SWEBench\\harbor_jobs\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\kubernetes__release_9d42037a_572__75m9VRQ",
+  "trajectory_path": "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\kubernetes__release_9d42037a_572035f6\\raw\\trajectory.json",
+  "openclaw_output_path": "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\kubernetes__release_9d42037a_572035f6\\raw\\openclaw-output.txt",
+  "openclaw_session_path": "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\kubernetes__release_9d42037a_572035f6\\raw\\openclaw-session.jsonl",
+  "episode_files": [
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\kubernetes__release_9d42037a_572035f6\\episode-000.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\kubernetes__release_9d42037a_572035f6\\episode-001.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\kubernetes__release_9d42037a_572035f6\\episode-002.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\kubernetes__release_9d42037a_572035f6\\episode-003.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\kubernetes__release_9d42037a_572035f6\\episode-004.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\kubernetes__release_9d42037a_572035f6\\episode-005.json"
+  ]
+}

@@ -1,0 +1,16 @@
+[REGRESSION_DIRECT] Running walker existing SQL-type test
+ok  	github.com/stackrox/rox/pkg/postgres/walker	0.055s
+[REGRESSION_DIRECT] PASS walker existing SQL-type test
+[REGRESSION_DEPENDENT] Running time query existing behavior
+ok  	github.com/stackrox/rox/pkg/search/postgres/query	0.050s
+[REGRESSION_DEPENDENT] PASS time query existing behavior
+[FAIL2PASS_CORE] Running timestamptz walker datatype mapping
+ok  	github.com/stackrox/rox/pkg/postgres/walker	0.022s
+[FAIL2PASS_CORE] PASS timestamptz walker datatype mapping
+[FAIL2PASS_EDGE] Running datetimetz query input forms
+ok  	github.com/stackrox/rox/pkg/search/postgres/query	0.021s
+[FAIL2PASS_EDGE] PASS datetimetz query input forms
+[FAIL2PASS_ERROR_HANDLING] Running datetimetz metadata alloc/print
+ok  	github.com/stackrox/rox/pkg/search/postgres	0.078s
+[FAIL2PASS_ERROR_HANDLING] PASS datetimetz metadata alloc/print
+All test groups passed. reward=1

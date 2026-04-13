@@ -1,0 +1,12 @@
+[REGRESSION_DIRECT] Running harness.RegressionDirectRunner
+REGRESSION_DIRECT:PASS
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Running harness.Fail2PassCoreRunner
+FAIL2PASS_CORE:FAIL
+ - SessionStartListener must exist
+[FAIL2PASS_CORE] FAIL
+[FAIL2PASS_EDGE] Running harness.Fail2PassEdgeRunner
+FAIL2PASS_EDGE:FAIL
+ - SessionStartListener must exist
+[FAIL2PASS_EDGE] FAIL
+Checks failed. Passed groups: 1, Failed groups: 2

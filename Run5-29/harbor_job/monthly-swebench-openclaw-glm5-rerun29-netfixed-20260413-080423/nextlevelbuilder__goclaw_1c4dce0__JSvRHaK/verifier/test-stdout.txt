@@ -1,0 +1,27 @@
+[REGRESSION_DIRECT] START existing registry execution behavior
+ok  	github.com/nextlevelbuilder/goclaw/internal/tools	0.008s
+[REGRESSION_DIRECT] PASS existing registry execution behavior
+[FAIL2PASS_CORE] START manager per-tool deferred activation contract
+--- FAIL: TestTerminalBench_ManagerActivateToolIfDeferred_ActivatesAndTracks (0.00s)
+    terminalbench_manager_lazy_test.go:55: Manager must expose ActivateToolIfDeferred(name string) bool
+--- FAIL: TestTerminalBench_ManagerActivateToolIfDeferred_IdempotentAndIndependent (0.00s)
+    terminalbench_manager_lazy_test.go:85: Manager must expose ActivateToolIfDeferred(name string) bool
+FAIL
+FAIL	github.com/nextlevelbuilder/goclaw/internal/mcp	0.005s
+FAIL
+[FAIL2PASS_CORE] FAIL manager per-tool deferred activation contract (exit=1)
+[FAIL2PASS_CORE] START registry deferred activation for multiple direct tool calls
+--- FAIL: TestTerminalBench_RegistryDeferredActivation_AllowsDirectCalls_ForMultipleTools (0.00s)
+    terminalbench_registry_policy_lazy_test.go:118: Registry must expose SetDeferredActivator(func(name string) bool)
+FAIL
+FAIL	github.com/nextlevelbuilder/goclaw/internal/tools	0.004s
+FAIL
+[FAIL2PASS_CORE] FAIL registry deferred activation for multiple direct tool calls (exit=1)
+[FAIL2PASS_EDGE] START deny-group policy still blocks lazily activated tool execution
+--- FAIL: TestTerminalBench_RegistryDeferredActivation_DenyGroupStillBlocksExecution (0.00s)
+    terminalbench_registry_policy_lazy_test.go:165: Registry must expose SetDeferredActivator(func(name string) bool)
+FAIL
+FAIL	github.com/nextlevelbuilder/goclaw/internal/tools	0.004s
+FAIL
+[FAIL2PASS_EDGE] FAIL deny-group policy still blocks lazily activated tool execution (exit=1)
+Final reward: 0 (failures=3)

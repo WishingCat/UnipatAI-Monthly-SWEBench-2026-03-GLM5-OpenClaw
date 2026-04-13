@@ -1,0 +1,27 @@
+[REGRESSION_DIRECT] Running tests matching ^TestTaskRegressionDirect
+=== RUN   TestTaskRegressionDirectUpdatesLoadedCertificate
+--- PASS: TestTaskRegressionDirectUpdatesLoadedCertificate (0.18s)
+PASS
+ok  	github.com/stackrox/rox/pkg/mtls/certwatch	0.188s
+[REGRESSION_DIRECT] PASS
+[REGRESSION_DEPENDENT] Running tests matching ^TestTaskRegressionDependent
+=== RUN   TestTaskRegressionDependentPreservesCustomVerifierConfig
+--- PASS: TestTaskRegressionDependentPreservesCustomVerifierConfig (0.03s)
+=== RUN   TestTaskRegressionDependentCollectsClientCAsAndFallbackAuth
+--- PASS: TestTaskRegressionDependentCollectsClientCAsAndFallbackAuth (0.08s)
+PASS
+ok  	github.com/stackrox/rox/pkg/mtls/certwatch	0.127s
+[REGRESSION_DEPENDENT] PASS
+[FAIL2PASS_CORE] Running tests matching ^TestTaskFail2PassCore
+=== RUN   TestTaskFail2PassCoreRotatesTicketKeyOnUpdate
+--- PASS: TestTaskFail2PassCoreRotatesTicketKeyOnUpdate (0.09s)
+PASS
+ok  	github.com/stackrox/rox/pkg/mtls/certwatch	0.100s
+[FAIL2PASS_CORE] PASS
+[FAIL2PASS_EDGE] Running tests matching ^TestTaskFail2PassEdge
+=== RUN   TestTaskFail2PassEdgeRotatesTicketKeyAcrossConsecutiveUpdates
+--- PASS: TestTaskFail2PassEdgeRotatesTicketKeyAcrossConsecutiveUpdates (0.13s)
+PASS
+ok  	github.com/stackrox/rox/pkg/mtls/certwatch	0.151s
+[FAIL2PASS_EDGE] PASS
+All test groups passed.

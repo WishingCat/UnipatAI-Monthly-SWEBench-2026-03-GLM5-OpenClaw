@@ -1,0 +1,37 @@
+[SETUP] Using Go binary: /usr/local/go/bin/go
+[SETUP] Copied /tests/engine_tool_images_tb_test.go -> /app/WeKnora/internal/agent/engine_tool_images_tb_test.go
+[SETUP] Copied /tests/client_toolresult_images_tb_test.go -> /app/WeKnora/client/client_toolresult_images_tb_test.go
+[REGRESSION_DIRECT] Running: /usr/local/go/bin/go test ./internal/agent -run ^TestTBRegressionDirect_ -count=1
+ok  	github.com/Tencent/WeKnora/internal/agent	0.335s
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Running: /usr/local/go/bin/go test ./internal/agent -run ^TestTBFail2PassCore_ -count=1
+--- FAIL: TestTBFail2PassCore_NilToolResultIsSkipped (0.00s)
+    engine_tool_images_tb_test.go:112: appendToolResults must not panic when tool result is nil: runtime error: invalid memory address or nil pointer dereference
+--- FAIL: TestTBFail2PassCore_AppendsDecodedImageDescriptions (0.00s)
+    engine_tool_images_tb_test.go:137: ToolResult must expose Images []string field
+FAIL
+FAIL	github.com/Tencent/WeKnora/internal/agent	0.354s
+FAIL
+[FAIL2PASS_CORE] FAIL
+[FAIL2PASS_EDGE] Running: /usr/local/go/bin/go test ./internal/agent -run ^TestTBFail2PassEdge_ -count=1
+--- FAIL: TestTBFail2PassEdge_ContextCancellationStopsImageProcessing (0.00s)
+    engine_tool_images_tb_test.go:186: ToolResult must expose Images []string field
+FAIL
+FAIL	github.com/Tencent/WeKnora/internal/agent	0.342s
+FAIL
+[FAIL2PASS_EDGE] FAIL
+[FAIL2PASS_ERROR_HANDLING] Running: /usr/local/go/bin/go test ./internal/agent -run ^TestTBFail2PassErrorHandling_ -count=1
+--- FAIL: TestTBFail2PassErrorHandling_ContinueAfterDescriberFailure (0.00s)
+    engine_tool_images_tb_test.go:217: ToolResult must expose Images []string field
+FAIL
+FAIL	github.com/Tencent/WeKnora/internal/agent	0.345s
+FAIL
+[FAIL2PASS_ERROR_HANDLING] FAIL
+[FAIL2PASS_EDGE] Running: (cd /app/WeKnora/client && /usr/local/go/bin/go test . -run ^TestTBFail2PassEdge_ClientToolResultImagesField$ -count=1)
+--- FAIL: TestTBFail2PassEdge_ClientToolResultImagesField (0.00s)
+    client_toolresult_images_tb_test.go:15: client.ToolResult must expose Images []string
+FAIL
+FAIL	github.com/Tencent/WeKnora/client	0.002s
+FAIL
+[FAIL2PASS_EDGE] FAIL
+[RESULT] 4 test group(s) failed

@@ -1,0 +1,714 @@
+[INFO] Preparing task fixture data
+[INFO] Configuring build
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detected CPU Architecture: x86_64
+-- MUSE_APP_RELEASE_CHANNEL devel
+-- MUSE_APP_VERSION 5.0.0
+-- MUSESCORE_BUILD_CONFIGURATION: utest
+-- MUSE_APP_BUILD_MODE: dev
+-- MUSESCORE_BUILD_NUMBER: 0
+-- If you added tests to a module that didn't have them yet, make sure that this module is enabled, see SetupConfigure.cmake
+-- No compiler cache program found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Performing Test HAVE_STDATOMIC
+-- Performing Test HAVE_STDATOMIC - Success
+-- Found WrapAtomic: TRUE  
+-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+-- Found WrapOpenGL: TRUE  
+-- Found WrapVulkanHeaders: /usr/include  
+-- Found Cups: /usr/lib/x86_64-linux-gnu/libcups.so (found version "2.4.7") 
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+-- Qt version: 6.10.2
+-- Enabled testing
+-- Configuring muse_pch
+-- Configuring muse_global <muse::global>
+-- Configuring muse_global_tests
+-- Configuring muse_ui <muse::ui>
+-- Configuring muse_ui_tests
+-- Configuring muse_ui_qml <muse::ui_qml>
+-- Configuring muse_ui_qml_tests
+-- Configuring muse_uicomponents <muse::uicomponents>
+-- Configuring muse_uicomponents_qml <muse::uicomponents_qml>
+-- Configuring muse_uicomponents_qml_tests
+-- Configuring muse_legacytreeview_qml <muse::legacytreeview_qml>
+-- Configuring muse_graphicaleffects_qml <muse::graphicaleffects_qml>
+shaders/roundcorners.frag -> shaders/roundcorners.frag.qsb exposed as :/qt/qml/Muse/GraphicalEffects/shaders/roundcorners.frag.qsb
+-- Configuring muse_uicomponents_qmlapi <muse::uicomponents_qmlapi>
+-- Configuring muse_dockwindow <muse::dockwindow>
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+-- Found XKB: /usr/lib/x86_64-linux-gnu/libxkbcommon.so (found suitable version "1.6.0", minimum required is "0.9.0") 
+-- Configuring muse_dockwindow_qml <muse::dockwindow_qml>
+CMake Warning at /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:285 (message):
+  The GuiPrivate target is mentioned as a dependency for kddockwidgets, but
+  not declared.  The linking might be incomplete.
+Call Stack (most recent call first):
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:249 (__qt_internal_walk_libs)
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:249 (__qt_internal_walk_libs)
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:337 (__qt_internal_walk_libs)
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake:5348 (__qt_internal_collect_all_target_dependencies)
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake:2929:EVAL:1 (_qt_internal_add_static_qml_plugin_dependencies)
+  src/framework/dockwindow/qml/Muse/Dock/CMakeLists.txt:DEFERRED
+
+
+CMake Warning at /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:285 (message):
+  The GuiPrivate target is mentioned as a dependency for kddockwidgets, but
+  not declared.  The linking might be incomplete.
+Call Stack (most recent call first):
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:249 (__qt_internal_walk_libs)
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:249 (__qt_internal_walk_libs)
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:337 (__qt_internal_walk_libs)
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake:5348 (__qt_internal_collect_all_target_dependencies)
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake:2929:EVAL:1 (_qt_internal_add_static_qml_plugin_dependencies)
+  src/framework/dockwindow/qml/Muse/Dock/CMakeLists.txt:DEFERRED
+
+
+-- Configuring muse_accessibility <muse::accessibility>
+-- Configuring muse_accessibility_tests
+-- Configuring muse_actions <muse::actions>
+-- Configuring muse_actions_tests
+-- Configuring muse_audio <muse::audio>
+-- Configuring muse_audio_common
+-- Configuring muse_audio_main
+-- Configuring muse_audio_engine
+-- Configuring fluidsynth
+-- Configuring lame
+-- Configuring opusenc
+-- Found Git: /usr/bin/git (found version "2.43.0") 
+-- Opus package version from package_version file: 1.5.2
+-- Opus project version: 1.5.2
+-- Performing Test VLA_SUPPORTED
+-- Performing Test VLA_SUPPORTED -- success
+-- Looking for alloca.h
+-- Looking for alloca.h - found
+-- Looking for alloca
+-- Looking for alloca - found
+-- Looking for floor in m
+-- Looking for floor in m - found
+-- Looking for lrintf
+-- Looking for lrintf - found
+-- Looking for lrint
+-- Looking for lrint - found
+-- Performing Test CPU_INFO_BY_ASM_SUPPORTED
+-- Performing Test CPU_INFO_BY_ASM_SUPPORTED -- success
+-- Looking for cpuid.h
+-- Looking for cpuid.h - found
+-- Performing Test CPU_INFO_BY_C_SUPPORTED
+-- Performing Test CPU_INFO_BY_C_SUPPORTED -- success
+-- Check SIMD support by compiler
+-- Looking for xmmintrin.h
+-- Looking for xmmintrin.h - found
+-- Performing Test SSE1_SUPPORTED
+-- Performing Test SSE1_SUPPORTED - Success
+-- Looking for emmintrin.h
+-- Looking for emmintrin.h - found
+-- Performing Test SSE2_SUPPORTED
+-- Performing Test SSE2_SUPPORTED - Success
+-- Looking for smmintrin.h
+-- Looking for smmintrin.h - found
+-- Performing Test SSE4_1_SUPPORTED
+-- Performing Test SSE4_1_SUPPORTED - Success
+-- Looking for immintrin.h
+-- Looking for immintrin.h - found
+-- Performing Test AVX2_SUPPORTED
+-- Performing Test AVX2_SUPPORTED - Success
+-- Performing Test FAST_MATH_SUPPORTED
+-- Performing Test FAST_MATH_SUPPORTED - Success
+-- Performing Test STACK_PROTECTOR_SUPPORTED
+-- Performing Test STACK_PROTECTOR_SUPPORTED - Success
+-- Performing Test HIDDEN_VISIBILITY_SUPPORTED
+-- Performing Test HIDDEN_VISIBILITY_SUPPORTED - Success
+-- Performing Test Wall_SUPPORTED
+-- Performing Test Wall_SUPPORTED - Success
+-- Performing Test W_SUPPORTED
+-- Performing Test W_SUPPORTED - Success
+-- Performing Test Wstrictprototypes_SUPPORTED
+-- Performing Test Wstrictprototypes_SUPPORTED - Success
+-- Performing Test Wextra_SUPPORTED
+-- Performing Test Wextra_SUPPORTED - Success
+-- Performing Test Wcastalign_SUPPORTED
+-- Performing Test Wcastalign_SUPPORTED - Success
+-- Performing Test Wnestedexterns_SUPPORTED
+-- Performing Test Wnestedexterns_SUPPORTED - Success
+-- Performing Test Wshadow_SUPPORTED
+-- Performing Test Wshadow_SUPPORTED - Success
+-- The following features have been enabled:
+
+ * OPUS_ENABLE_FLOAT_API, compile with the floating point API (for machines with float library).
+ * OPUS_HARDENING, run-time checks that are cheap and safe for use in production.
+ * OPUS_INSTALL_PKG_CONFIG_MODULE, install pkg-config module.
+ * OPUS_INSTALL_CMAKE_CONFIG_MODULE, install CMake package config module.
+ * OPUS_VAR_ARRAYS, use variable length arrays for stack arrays.
+ * OPUS_STACK_PROTECTOR, use stack protection.
+ * OPUS_FORTIFY_SOURCE, add protection against buffer overflows.
+ * OPUS_X86_MAY_HAVE_SSE, does runtime check for SSE1 support.
+ * OPUS_X86_MAY_HAVE_SSE2, does runtime check for SSE2 support.
+ * OPUS_X86_MAY_HAVE_SSE4_1, does runtime check for SSE4.1 support.
+ * OPUS_X86_MAY_HAVE_AVX2, does runtime check for AVX FMA AVX2 support.
+ * OPUS_X86_PRESUME_SSE, assume target CPU has SSE1 support (override runtime check).
+ * OPUS_X86_PRESUME_SSE2, assume target CPU has SSE2 support (override runtime check).
+
+-- The following OPTIONAL packages have been found:
+
+ * OpenGL
+ * Qt6DBusTools (required version >= 6.10.2)
+ * Qt6Network (required version >= 6.8)
+ * Qt6Qml (required version >= 6.8)
+ * Qt6QuickWidgets (required version >= 6.8)
+ * Qt6Xml (required version >= 6.8)
+ * Qt6Svg (required version >= 6.8)
+ * Qt6ShaderToolsTools (required version >= 6.10.2)
+ * Qt6ShaderTools (required version >= 6.8)
+ * Qt6Core5Compat (required version >= 6.8)
+ * Qt6NetworkAuth (required version >= 6.8)
+ * Cups
+ * Qt6PrintSupport (required version >= 6.8)
+ * Qt6LinguistTools (required version >= 6.8)
+ * Qt6WidgetsTools (required version >= 6.10.2)
+ * Qt6QmlTools (required version >= 6.10.2)
+ * Qt6QuickTools (required version >= 6.10.2)
+ * Qt6Quick
+ * Qt6QuickControls2
+ * Qt6GuiPrivate
+ * Qt6CorePrivate
+ * WrapVulkanHeaders
+ * Qt6CoreTools (required version >= 6.10.2)
+ * Qt6GuiTools (required version >= 6.10.2)
+ * Git
+
+-- The following REQUIRED packages have been found:
+
+ * Qt6Widgets (required version >= 6.0.0)
+ * Qt6Test (required version >= 6.0.0)
+ * Qt6
+ * Qt6Core
+ * Qt6Gui
+
+-- The following features have been disabled:
+
+ * OPUS_BUILD_SHARED_LIBRARY, build shared library.
+ * OPUS_BUILD_TESTING, build tests.
+ * OPUS_CUSTOM_MODES, enable non-Opus modes, e.g. 44.1 kHz & 2^n frames.
+ * OPUS_BUILD_PROGRAMS, build programs.
+ * OPUS_DISABLE_INTRINSICS, disable all intrinsics optimizations.
+ * OPUS_FIXED_POINT, compile as fixed-point (for machines without a fast enough FPU).
+ * OPUS_FLOAT_APPROX, enable floating point approximations (Ensure your platform supports IEEE 754 before enabling).
+ * OPUS_ASSERTIONS, additional software error checking.
+ * OPUS_FUZZING, causes the encoder to make random decisions (do not use in production).
+ * OPUS_CHECK_ASM, enable bit-exactness checks between optimized and c implementations.
+ * OPUS_DNN_FLOAT_DEBUG, Run DNN computations as float for debugging purposes.
+ * OPUS_DRED, enable DRED.
+ * OPUS_OSCE, enable OSCE.
+ * OPUS_FIXED_POINT_DEBUG, debug fixed-point implementation.
+ * OPUS_USE_ALLOCA, use alloca for stack arrays (on non-C99 compilers).
+ * OPUS_NONTHREADSAFE_PSEUDOSTACK, use a non threadsafe pseudostack when neither variable length arrays or alloca is supported.
+ * OPUS_FAST_MATH, enable fast math (unsupported and discouraged use, as code is not well tested with this build option).
+ * OPUS_X86_PRESUME_SSE4_1, assume target CPU has SSE4.1 support (override runtime check).
+ * OPUS_X86_PRESUME_AVX2, assume target CPU has AVX FMA AVX2 support (override runtime check).
+
+-- Configuring flac
+-- Performing Test HAVE_MBSTATE
+-- Performing Test HAVE_MBSTATE - Success
+-- Performing Test DODEFINE_EXTENSIONS
+-- Performing Test DODEFINE_EXTENSIONS - Success
+-- Looking for byteswap.h
+-- Looking for byteswap.h - found
+-- Looking for inttypes.h
+-- Looking for inttypes.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stdbool.h
+-- Looking for stdbool.h - found
+-- Looking for arm_neon.h
+-- Looking for arm_neon.h - not found
+-- Looking for x86intrin.h
+-- Looking for x86intrin.h - found
+-- Looking for fseeko
+-- Looking for fseeko - found
+-- Performing Test HAVE_BSWAP16
+-- Performing Test HAVE_BSWAP16 - Success
+-- Performing Test HAVE_BSWAP32
+-- Performing Test HAVE_BSWAP32 - Success
+-- Performing Test HAVE_LANGINFO_CODESET
+-- Performing Test HAVE_LANGINFO_CODESET - Success
+-- Performing Test HAVE_STACKREALIGN_FLAG
+-- Performing Test HAVE_STACKREALIGN_FLAG - Success
+-- Configuring muse_audio_driver
+-- Found ALSA: /usr/lib/x86_64-linux-gnu/libasound.so (found version "1.2.11") 
+-- Configuring muse_audio_tests
+-- Configuring muse_audioplugins <muse::audioplugins>
+-- Configuring muse_audioplugins_test
+-- Configuring muse_diagnostics <muse::diagnostics>
+-- Configuring muse_diagnostics_tests
+-- Configuring muse_diagnostics_qml <muse::diagnostics_qml>
+-- Configuring muse_draw <muse::draw>
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") 
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Looking for fcntl.h
+-- Looking for fcntl.h - found
+-- [harfbuzz] Populate: https://raw.githubusercontent.com/musescore/muse_deps/main/harfbuzz/12.3.0 to /tmp/musescore-mei-build/_deps/harfbuzz source  
+-- Configuring harfbuzz
+-- Configuring muse_draw_tests
+-- Configuring muse_mpe <muse::mpe>
+-- Configuring muse_mpe_test
+-- Configuring muse_languages <muse::languages>
+-- Configuring muse_languages_test
+-- Configuring muse_extensions <muse::extensions>
+-- Configuring muse_extensions_qml <muse::extensions_qml>
+-- Configuring muse_update <muse::update>
+-- Configuring muse_update_test
+-- Configuring muse_update_qml <muse::update_qml>
+-- Configuring muse_cloud <muse::cloud> [stub]
+-- Configuring muse_cloud_qml <muse::cloud_qml> [stub]
+-- Configuring muse_learn <muse::learn> [stub]
+-- Configuring muse_learn_qml <muse::learn_qml> [stub]
+-- Configuring muse_midi <muse::midi> [stub]
+-- Configuring muse_multiwindows <muse::multiwindows> [stub]
+-- Configuring muse_network <muse::network> [stub]
+-- Configuring muse_shortcuts <muse::shortcuts> [stub]
+-- Configuring muse_shortcuts_qml <muse::shortcuts_qml> [stub]
+-- Configuring muse_tours <muse::tours> [stub]
+-- Configuring muse_tours_qml <muse::tours_qml> [stub]
+-- Configuring muse_vst <muse::vst> [stub]
+-- Configuring muse_workspace <muse::workspace> [stub]
+-- Configuring muse_workspace_qml <muse::workspace_qml> [stub]
+-- Configuring braille
+-- Configuring liblouis
+-- Configuring context
+-- Configuring engraving
+-- Configuring engraving_qml
+-- Configuring iex_mei
+-- Configuring iex_mei_tests
+-- Configuring iex_midi [stub]
+-- Configuring iex_mnx [stub]
+-- Configuring iex_musicxml [stub]
+-- Configuring iex_ove [stub]
+-- Configuring inspector [stub]
+-- Configuring inspector_qml [stub]
+-- Configuring instrumentsscene [stub]
+-- Configuring musesounds
+-- Configuring musesounds_qml
+-- Configuring notation
+-- Configuring notationscene
+-- Configuring notationscene_qml
+-- Configuring palette [stub]
+-- Configuring palette_qml [stub]
+-- Configuring playback [stub]
+-- Configuring playback_qml [stub]
+-- Configuring print
+-- Configuring project
+-- Configuring project_qml
+CMake Warning at /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:285 (message):
+  The CorePrivate target is mentioned as a dependency for
+  muse::accessibility, but not declared.  The linking might be incomplete.
+Call Stack (most recent call first):
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:337 (__qt_internal_walk_libs)
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:774 (__qt_internal_collect_all_target_dependencies)
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:879 (_qt_internal_finalize_executable)
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:923:EVAL:1 (qt6_finalize_target)
+  src/app/CMakeLists.txt:DEFERRED
+
+
+CMake Warning at /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:285 (message):
+  The CorePrivate target is mentioned as a dependency for
+  muse::accessibility, but not declared.  The linking might be incomplete.
+Call Stack (most recent call first):
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:337 (__qt_internal_walk_libs)
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:774 (__qt_internal_collect_all_target_dependencies)
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:879 (_qt_internal_finalize_executable)
+  /opt/Qt/6.10.2/gcc_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:923:EVAL:1 (qt6_finalize_target)
+  src/app/CMakeLists.txt:DEFERRED
+
+
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+-- Found 'gzip'. Man pages will be compressed.
+-- Generate compile commands: OFF
+-- Configuring done (11.1s)
+-- Generating done (0.6s)
+-- Build files have been written to: /tmp/musescore-mei-build
+[INFO] Building iex_mei_tests
+[1/207] Automatic MOC and UIC for target muse_pch
+[2/207] Automatic MOC and UIC for target freetype
+[3/207] Building CXX object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/freetype_autogen/mocs_compilation.cpp.o
+[4/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/autofit/autofit.c.o
+[5/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftbase.c.o
+[6/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftbbox.c.o
+[7/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftbdf.c.o
+[8/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftbitmap.c.o
+[9/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftcid.c.o
+[10/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftfstype.c.o
+[11/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftgasp.c.o
+[12/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftglyph.c.o
+[13/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftgxval.c.o
+[14/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftinit.c.o
+[15/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftmm.c.o
+[16/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftotval.c.o
+[17/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftpatent.c.o
+[18/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftpfr.c.o
+[19/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftstroke.c.o
+[20/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftsynth.c.o
+[21/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/fttype1.c.o
+[22/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftwinfnt.c.o
+[23/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/bdf/bdf.c.o
+[24/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/bzip2/ftbzip2.c.o
+[25/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/cache/ftcache.c.o
+[26/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/cff/cff.c.o
+[27/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/cid/type1cid.c.o
+[28/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/gzip/ftgzip.c.o
+[29/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/lzw/ftlzw.c.o
+[30/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/pcf/pcf.c.o
+[31/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/pfr/pfr.c.o
+[32/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/psaux/psaux.c.o
+[33/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/pshinter/pshinter.c.o
+[34/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/psnames/psnames.c.o
+[35/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/raster/raster.c.o
+[36/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/sdf/sdf.c.o
+[37/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/sfnt/sfnt.c.o
+[38/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/smooth/smooth.c.o
+[39/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/svg/svg.c.o
+[40/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/truetype/truetype.c.o
+[41/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/type1/type1.c.o
+[42/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/type42/type42.c.o
+[43/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/winfonts/winfnt.c.o
+[44/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/builds/unix/ftsystem.c.o
+[45/207] Building C object src/framework/draw/freetype/freetype-2.14.1/CMakeFiles/freetype.dir/src/base/ftdebug.c.o
+[46/207] Linking CXX static library src/framework/draw/freetype/freetype-2.14.1/libfreetyped.a
+[47/207] Building CXX object src/framework/pch/CMakeFiles/muse_pch.dir/cmake_pch.hxx.gch
+[48/207] Building CXX object src/framework/pch/CMakeFiles/muse_pch.dir/muse_pch_autogen/mocs_compilation.cpp.o
+[49/207] Building CXX object src/framework/pch/CMakeFiles/muse_pch.dir/pch.cpp.o
+[50/207] Linking CXX static library src/framework/pch/libmuse_pch.a
+[51/207] Automatic MOC and UIC for target muse_global
+[52/207] Running AUTOMOC file extraction for target muse_global
+[53/207] Running moc --collect-json for target muse_global
+[54/207] Building CXX object src/framework/global/CMakeFiles/muse_global.dir/Unity/unity_5_cxx.cxx.o
+[55/207] Building CXX object src/framework/global/CMakeFiles/muse_global.dir/Unity/unity_4_cxx.cxx.o
+[56/207] Building CXX object src/framework/global/CMakeFiles/muse_global.dir/Unity/unity_3_cxx.cxx.o
+[57/207] Building CXX object src/framework/global/CMakeFiles/muse_global.dir/Unity/unity_2_cxx.cxx.o
+[58/207] Building CXX object src/framework/draw/harfbuzz/CMakeFiles/harfbuzz.dir/harfbuzz/src/harfbuzz.cc.o
+[59/207] Building CXX object src/framework/global/CMakeFiles/muse_global.dir/Unity/unity_1_cxx.cxx.o
+[60/207] Linking CXX static library src/framework/draw/harfbuzz/libharfbuzz.a
+[61/207] Automatic MOC and UIC for target gtest
+[62/207] Building CXX object src/framework/testing/thirdparty/googletest/googletest/CMakeFiles/gtest.dir/gtest_autogen/mocs_compilation.cpp.o
+[63/207] Building CXX object src/framework/global/CMakeFiles/muse_global.dir/Unity/unity_0_cxx.cxx.o
+[64/207] Linking CXX static library src/framework/global/libmuse_global.a
+[65/207] Automatic MOC and UIC for target muse_draw
+[66/207] Running AUTOMOC file extraction for target muse_draw
+[67/207] Running moc --collect-json for target muse_draw
+[68/207] Building CXX object src/framework/draw/CMakeFiles/muse_draw.dir/Unity/unity_2_cxx.cxx.o
+[69/207] Building CXX object src/framework/testing/thirdparty/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[70/207] Building CXX object src/framework/draw/CMakeFiles/muse_draw.dir/Unity/unity_1_cxx.cxx.o
+[71/207] Linking CXX static library lib/libgtest.a
+[72/207] Automatic MOC and UIC for target gmock
+[73/207] Building CXX object src/framework/testing/thirdparty/googletest/googlemock/CMakeFiles/gmock.dir/gmock_autogen/mocs_compilation.cpp.o
+[74/207] Building CXX object src/framework/testing/thirdparty/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[75/207] Linking CXX static library lib/libgmock.a
+[76/207] Building CXX object src/framework/draw/CMakeFiles/muse_draw.dir/Unity/unity_0_cxx.cxx.o
+[77/207] Linking CXX static library src/framework/draw/libmuse_draw.a
+[78/207] Running rcc pass 1 for resource fonts_Campania
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[79/207] Building CXX object src/engraving/CMakeFiles/rcc_object_fonts_Campania.dir/qrc_fonts_Campaniatmp.cpp.o
+[80/207] Running rcc pass 1 for resource fonts_Edwin
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[81/207] Building CXX object src/engraving/CMakeFiles/rcc_object_fonts_Edwin.dir/qrc_fonts_Edwintmp.cpp.o
+[82/207] Running rcc pass 1 for resource fonts_Bravura
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[83/207] Building CXX object src/engraving/CMakeFiles/rcc_object_fonts_Bravura.dir/qrc_fonts_Bravuratmp.cpp.o
+[84/207] Running rcc pass 1 for resource fonts_FreeSans
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[85/207] Building CXX object src/engraving/CMakeFiles/rcc_object_fonts_FreeSans.dir/qrc_fonts_FreeSanstmp.cpp.o
+[86/207] Running rcc pass 1 for resource fonts_Gootville
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[87/207] Building CXX object src/engraving/CMakeFiles/rcc_object_fonts_Gootville.dir/qrc_fonts_Gootvilletmp.cpp.o
+[88/207] Running rcc pass 1 for resource fonts_Leland
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[89/207] Building CXX object src/engraving/CMakeFiles/rcc_object_fonts_Leland.dir/qrc_fonts_Lelandtmp.cpp.o
+[90/207] Running rcc pass 1 for resource fonts_MScore
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[91/207] Building CXX object src/engraving/CMakeFiles/rcc_object_fonts_MScore.dir/qrc_fonts_MScoretmp.cpp.o
+[92/207] Running rcc pass 1 for resource fonts_MuseJazz
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[93/207] Building CXX object src/engraving/CMakeFiles/rcc_object_fonts_MuseJazz.dir/qrc_fonts_MuseJazztmp.cpp.o
+[94/207] Running rcc pass 1 for resource fonts_Petaluma
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[95/207] Building CXX object src/engraving/CMakeFiles/rcc_object_fonts_Petaluma.dir/qrc_fonts_Petalumatmp.cpp.o
+[96/207] Running rcc pass 1 for resource fonts_FinaleMaestro
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[97/207] Building CXX object src/engraving/CMakeFiles/rcc_object_fonts_FinaleMaestro.dir/qrc_fonts_FinaleMaestrotmp.cpp.o
+[98/207] Running rcc pass 1 for resource fonts_FinaleBroadway
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[99/207] Building CXX object src/engraving/CMakeFiles/rcc_object_fonts_FinaleBroadway.dir/qrc_fonts_FinaleBroadwaytmp.cpp.o
+[100/207] Running rcc pass 1 for resource fonts_Tabulature
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[101/207] Running rcc pass 1 for resource fonts_FreeSerif
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[102/207] Building CXX object src/engraving/CMakeFiles/rcc_object_fonts_Tabulature.dir/qrc_fonts_Tabulaturetmp.cpp.o
+[103/207] Building CXX object src/engraving/CMakeFiles/rcc_object_fonts_FreeSerif.dir/qrc_fonts_FreeSeriftmp.cpp.o
+[104/207] Automatic MOC and UIC for target engraving
+[105/207] Generating qrc_fonts_Smufl.cpp
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[106/207] Running rcc pass 2 for resource fonts_Bravura
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[107/207] Running rcc pass 2 for resource fonts_Campania
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[108/207] Running rcc pass 2 for resource fonts_Edwin
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[109/207] Generating qrc_engraving.cpp
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[110/207] Running rcc pass 2 for resource fonts_FreeSans
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[111/207] Running rcc pass 2 for resource fonts_Gootville
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[112/207] Running rcc pass 2 for resource fonts_Leland
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[113/207] Running rcc pass 2 for resource fonts_MScore
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[114/207] Running rcc pass 2 for resource fonts_MuseJazz
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[115/207] Running rcc pass 2 for resource fonts_Petaluma
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[116/207] Running rcc pass 2 for resource fonts_FinaleMaestro
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[117/207] Running rcc pass 2 for resource fonts_FinaleBroadway
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[118/207] Running rcc pass 2 for resource fonts_Tabulature
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[119/207] Running AUTOMOC file extraction for target engraving
+[120/207] Running moc --collect-json for target engraving
+[121/207] Running rcc pass 2 for resource fonts_FreeSerif
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+[122/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_29_cxx.cxx.o
+[123/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_28_cxx.cxx.o
+[124/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_27_cxx.cxx.o
+[125/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_26_cxx.cxx.o
+[126/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_24_cxx.cxx.o
+[127/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_25_cxx.cxx.o
+[128/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_23_cxx.cxx.o
+[129/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_22_cxx.cxx.o
+[130/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_21_cxx.cxx.o
+[131/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_20_cxx.cxx.o
+[132/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_19_cxx.cxx.o
+[133/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_17_cxx.cxx.o
+[134/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_18_cxx.cxx.o
+[135/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_16_cxx.cxx.o
+[136/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_14_cxx.cxx.o
+[137/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_15_cxx.cxx.o
+[138/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_12_cxx.cxx.o
+[139/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_13_cxx.cxx.o
+[140/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_11_cxx.cxx.o
+[141/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_10_cxx.cxx.o
+[142/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_9_cxx.cxx.o
+[143/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_8_cxx.cxx.o
+[144/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_7_cxx.cxx.o
+[145/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_6_cxx.cxx.o
+[146/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_5_cxx.cxx.o
+[147/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_3_cxx.cxx.o
+[148/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_4_cxx.cxx.o
+[149/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_1_cxx.cxx.o
+[150/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_2_cxx.cxx.o
+[151/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/qrc_engraving.cpp.o
+[152/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/qrc_fonts_Smufl.cpp.o
+[153/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/infrastructure/mscreader.cpp.o
+[154/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/infrastructure/mscwriter.cpp.o
+[155/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/dom/excerpt.cpp.o
+[156/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/dom/instrument.cpp.o
+[157/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/dom/part.cpp.o
+[158/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/Unity/unity_0_cxx.cxx.o
+[159/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/editing/transpose.cpp.o
+[160/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/dom/score.cpp.o
+[161/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/rw/read206/read206.cpp.o
+[162/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/rw/read400/readcontext.cpp.o
+[163/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/rw/read400/connectorinforeader.cpp.o
+[164/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/rw/read400/tread.cpp.o
+[165/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/rw/read410/staffread.cpp.o
+[166/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/rw/read410/measureread.cpp.o
+[167/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/rw/read410/readcontext.cpp.o
+[168/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/rw/read410/connectorinforeader.cpp.o
+[169/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/rw/read410/tread.cpp.o
+[170/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/rw/read460/staffread.cpp.o
+[171/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/rw/read460/measureread.cpp.o
+[172/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/rw/read460/readcontext.cpp.o
+[173/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/rw/read460/connectorinforeader.cpp.o
+[174/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/rw/read460/tread.cpp.o
+[175/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/style/style.cpp.o
+[176/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/api/v1/engravingapiv1.cpp.o
+[177/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/api/v1/enums.cpp.o
+[178/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/api/v1/apistructs.cpp.o
+[179/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/api/v1/qmlpluginapi.cpp.o
+[180/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/api/v1/elements.cpp.o
+[181/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/api/v1/scoreelement.cpp.o
+[182/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/api/v1/style.cpp.o
+[183/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/api/v1/score.cpp.o
+[184/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/api/v1/excerpt.cpp.o
+[185/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/api/v1/part.cpp.o
+[186/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/api/v1/cursor.cpp.o
+[187/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/api/v1/instrument.cpp.o
+[188/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/api/v1/playevent.cpp.o
+[189/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/api/v1/selection.cpp.o
+[190/207] Building CXX object src/engraving/CMakeFiles/engraving.dir/api/v1/util.cpp.o
+[191/207] Linking CXX static library src/engraving/libengraving.a
+[192/207] Automatic MOC and UIC for target iex_mei
+[193/207] Running AUTOMOC file extraction for target iex_mei
+[194/207] Running moc --collect-json for target iex_mei
+[195/207] Building CXX object src/importexport/mei/CMakeFiles/iex_mei.dir/Unity/unity_2_cxx.cxx.o
+[196/207] Building CXX object src/importexport/mei/CMakeFiles/iex_mei.dir/Unity/unity_1_cxx.cxx.o
+[197/207] Building CXX object src/importexport/mei/CMakeFiles/iex_mei.dir/Unity/unity_0_cxx.cxx.o
+FAILED: src/importexport/mei/CMakeFiles/iex_mei.dir/Unity/unity_0_cxx.cxx.o 
+/usr/bin/c++ -DKORS_LOGGER_QT_SUPPORT -DKORS_PROFILER_ENABLED -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_DEBUG -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -I/tmp/musescore-mei-build/src/importexport/mei -I/app/MuseScore/src/importexport/mei -I/tmp/musescore-mei-build -I/app/MuseScore/src -I/app/MuseScore -I/app/MuseScore/framework -I/app/MuseScore/framework/global -I/app/MuseScore/framework/testing/thirdparty/googletest/googletest/include -I/app/MuseScore/src/framework -I/app/MuseScore/src/framework/global -I/app/MuseScore/src/framework/testing/thirdparty/googletest/googletest/include -I/app/MuseScore/src/importexport/mei/internal -I/app/MuseScore/src/framework/global/thirdparty/pugixml -isystem /tmp/musescore-mei-build/src/importexport/mei/iex_mei_autogen/include -isystem /opt/Qt/6.10.2/gcc_64/include/QtCore -isystem /opt/Qt/6.10.2/gcc_64/include -isystem /opt/Qt/6.10.2/gcc_64/mkspecs/linux-g++ -isystem /opt/Qt/6.10.2/gcc_64/include/QtGui -isystem /opt/Qt/6.10.2/gcc_64/include/QtQuick -isystem /opt/Qt/6.10.2/gcc_64/include/QtQml -isystem /opt/Qt/6.10.2/gcc_64/include/QtQmlIntegration -isystem /opt/Qt/6.10.2/gcc_64/include/QtNetwork -isystem /opt/Qt/6.10.2/gcc_64/include/QtOpenGL -isystem /opt/Qt/6.10.2/gcc_64/include/QtWidgets -g -std=gnu++17 -fsanitize=address -fno-omit-frame-pointer -Wall -Wextra -fPIC -Winvalid-pch -include /tmp/musescore-mei-build/src/framework/pch/CMakeFiles/muse_pch.dir/cmake_pch.hxx -MD -MT src/importexport/mei/CMakeFiles/iex_mei.dir/Unity/unity_0_cxx.cxx.o -MF src/importexport/mei/CMakeFiles/iex_mei.dir/Unity/unity_0_cxx.cxx.o.d -o src/importexport/mei/CMakeFiles/iex_mei.dir/Unity/unity_0_cxx.cxx.o -c /tmp/musescore-mei-build/src/importexport/mei/CMakeFiles/iex_mei.dir/Unity/unity_0_cxx.cxx
+In file included from /app/MuseScore/src/importexport/mei/internal/meiimporter.cpp:23,
+                 from /tmp/musescore-mei-build/src/importexport/mei/CMakeFiles/iex_mei.dir/Unity/unity_0_cxx.cxx:19:
+/app/MuseScore/src/importexport/mei/internal/meiimporter.h:106:43: error: 'PendingChordLine' does not name a type
+  106 |     void createChordLineFromPending(const PendingChordLine& pending, engraving::Note* note);
+      |                                           ^~~~~~~~~~~~~~~~
+/app/MuseScore/src/importexport/mei/internal/meiimporter.cpp:1747:6: error: no declaration matches 'void mu::iex::mei::MeiImporter::createChordLineFromPending(const PendingChordLine&, mu::engraving::Note*)'
+ 1747 | void MeiImporter::createChordLineFromPending(const PendingChordLine& pending, Note* note)
+      |      ^~~~~~~~~~~
+/app/MuseScore/src/importexport/mei/internal/meiimporter.h:106:10: note: candidate is: 'void mu::iex::mei::MeiImporter::createChordLineFromPending(const int&, mu::engraving::Note*)'
+  106 |     void createChordLineFromPending(const PendingChordLine& pending, engraving::Note* note);
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/app/MuseScore/src/importexport/mei/internal/meiimporter.h:70:7: note: 'class mu::iex::mei::MeiImporter' defined here
+   70 | class MeiImporter
+      |       ^~~~~~~~~~~
+/app/MuseScore/src/importexport/mei/internal/meiimporter.cpp:1747:52: error: 'struct mu::iex::mei::MeiImporter::PendingChordLine' is private within this context
+ 1747 | void MeiImporter::createChordLineFromPending(const PendingChordLine& pending, Note* note)
+      |                                                    ^~~~~~~~~~~~~~~~
+/app/MuseScore/src/importexport/mei/internal/meiimporter.h:253:12: note: declared private here
+  253 |     struct PendingChordLine {
+      |            ^~~~~~~~~~~~~~~~
+/app/MuseScore/src/importexport/mei/internal/meiimporter.cpp: In member function 'void mu::iex::mei::MeiImporter::processPendingChordLinesForNote(mu::engraving::Note*, const std::string&)':
+/app/MuseScore/src/importexport/mei/internal/meiimporter.cpp:1791:36: error: cannot convert 'const mu::iex::mei::MeiImporter::PendingChordLine' to 'const int&'
+ 1791 |         createChordLineFromPending(pending, note);
+      |                                    ^~~~~~~
+      |                                    |
+      |                                    const mu::iex::mei::MeiImporter::PendingChordLine
+/app/MuseScore/src/importexport/mei/internal/meiimporter.h:106:61: note:   initializing argument 1 of 'void mu::iex::mei::MeiImporter::createChordLineFromPending(const int&, mu::engraving::Note*)'
+  106 |     void createChordLineFromPending(const PendingChordLine& pending, engraving::Note* note);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+/app/MuseScore/src/importexport/mei/internal/meiimporter.cpp:1800:40: error: cannot convert 'const mu::iex::mei::MeiImporter::PendingChordLine' to 'const int&'
+ 1800 |             createChordLineFromPending(pending, note);
+      |                                        ^~~~~~~
+      |                                        |
+      |                                        const mu::iex::mei::MeiImporter::PendingChordLine
+/app/MuseScore/src/importexport/mei/internal/meiimporter.h:106:61: note:   initializing argument 1 of 'void mu::iex::mei::MeiImporter::createChordLineFromPending(const int&, mu::engraving::Note*)'
+  106 |     void createChordLineFromPending(const PendingChordLine& pending, engraving::Note* note);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+/app/MuseScore/src/importexport/mei/internal/meiimporter.cpp:1787:82: warning: unused parameter 'noteXmlId' [-Wunused-parameter]
+ 1787 | void MeiImporter::processPendingChordLinesForNote(Note* note, const std::string& noteXmlId)
+      |                                                               ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/app/MuseScore/src/importexport/mei/internal/meiimporter.cpp: In member function 'bool mu::iex::mei::MeiImporter::readChord(pugi::xml_node, mu::engraving::Measure*, int, mu::engraving::Fraction&)':
+/app/MuseScore/src/importexport/mei/internal/meiimporter.cpp:1905:40: error: cannot convert 'const mu::iex::mei::MeiImporter::PendingChordLine' to 'const int&'
+ 1905 |             createChordLineFromPending(pending, firstNote);
+      |                                        ^~~~~~~
+      |                                        |
+      |                                        const mu::iex::mei::MeiImporter::PendingChordLine
+/app/MuseScore/src/importexport/mei/internal/meiimporter.h:106:61: note:   initializing argument 1 of 'void mu::iex::mei::MeiImporter::createChordLineFromPending(const int&, mu::engraving::Note*)'
+  106 |     void createChordLineFromPending(const PendingChordLine& pending, engraving::Note* note);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+ninja: build stopped: subcommand failed.
+[ERROR] Build failed
+[INFO] Final reward=0

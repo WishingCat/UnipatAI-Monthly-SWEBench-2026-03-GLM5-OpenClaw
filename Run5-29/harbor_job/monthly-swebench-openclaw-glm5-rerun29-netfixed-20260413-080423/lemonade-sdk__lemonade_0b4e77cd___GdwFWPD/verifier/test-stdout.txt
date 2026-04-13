@@ -1,0 +1,17 @@
+[BUILD] Compiling streaming termination harness
+[BUILD] PASS
+[REGRESSION_DIRECT] Running suite 'regression'
+WarnStreamingProxy2026-04-13 00-20-44.979forward_sse_streamWARNING: Backend did not send [DONE] marker, adding it
+InfoServer2026-04-13 00-20-44.979forward_sse_streamStreaming completed - 200 OK
+HARNESS PASS: regression
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Running suite 'fail2pass-core'
+ErrorStreamingProxy2026-04-13 00-20-44.982forward_sse_streamBackend returned error: 500
+ErrorStreamingProxy2026-04-13 00-20-44.983forward_byte_streamBackend returned error: 502
+HARNESS PASS: fail2pass-core
+[FAIL2PASS_CORE] PASS
+[FAIL2PASS_ERROR_HANDLING] Running suite 'fail2pass-error'
+ErrorWrappedServer2026-04-13 00-20-44.986forward_streaming_requestStreaming request failed: simulated upstream failure
+HARNESS PASS: fail2pass-error
+[FAIL2PASS_ERROR_HANDLING] PASS
+Final reward: 1

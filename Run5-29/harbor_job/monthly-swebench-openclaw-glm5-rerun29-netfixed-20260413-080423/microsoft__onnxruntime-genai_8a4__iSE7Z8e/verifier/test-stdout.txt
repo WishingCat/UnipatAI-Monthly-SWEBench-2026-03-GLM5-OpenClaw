@@ -1,0 +1,37 @@
+[REGRESSION_DIRECT] Running regression_direct
+Extra options: {'int4_is_symmetric': 'false', 'int4_op_types_to_quantize': 'MatMul/Gather', 'int4_nodes_to_exclude': '/a,/b', 'enable_webgpu_graph': 'true'}
+WARNING: enable_webgpu_graph is only supported with WebGPU execution provider. Disabling enable_webgpu_graph.
+[REGRESSION_DIRECT] PASS regression_direct
+[FAIL2PASS_CORE] Running fail2pass_core
+GroupQueryAttention (GQA) is used in this model.
+Saving GenAI config in /tmp/whisper-builder-axujzmp_
+Traceback (most recent call last):
+  File "/tests/verify_whisper_builder.py", line 373, in <module>
+    raise SystemExit(main())
+  File "/tests/verify_whisper_builder.py", line 365, in main
+    run_fail2pass_core()
+  File "/tests/verify_whisper_builder.py", line 330, in run_fail2pass_core
+    result = _run_whisper_config_only_export(model_name=model_name)
+  File "/tests/verify_whisper_builder.py", line 312, in _run_whisper_config_only_export
+    _assert(os.path.exists(audio_cfg_path), "audio_processor_config.json must be generated for Whisper")
+  File "/tests/verify_whisper_builder.py", line 271, in _assert
+    raise AssertionError(message)
+AssertionError: audio_processor_config.json must be generated for Whisper
+[FAIL2PASS_CORE] FAIL fail2pass_core
+[FAIL2PASS_EDGE] Running fail2pass_edge
+Saving GenAI config in /tmp/whisper-builder-ktz3rhl1
+Traceback (most recent call last):
+  File "/tests/verify_whisper_builder.py", line 373, in <module>
+    raise SystemExit(main())
+  File "/tests/verify_whisper_builder.py", line 367, in main
+    run_fail2pass_edge()
+  File "/tests/verify_whisper_builder.py", line 344, in run_fail2pass_edge
+    result = _run_whisper_config_only_export(model_name="openai/whisper-tiny", execution_provider="cuda")
+  File "/tests/verify_whisper_builder.py", line 312, in _run_whisper_config_only_export
+    _assert(os.path.exists(audio_cfg_path), "audio_processor_config.json must be generated for Whisper")
+  File "/tests/verify_whisper_builder.py", line 271, in _assert
+    raise AssertionError(message)
+AssertionError: audio_processor_config.json must be generated for Whisper
+[FAIL2PASS_EDGE] FAIL fail2pass_edge
+Passed groups: 1
+Failed groups: 2

@@ -1,0 +1,42 @@
+[REGRESSION_DIRECT] Running: ^(TestDetermineSchemeOrder|TestDetermineSchemeOrderWithHighPorts)$
+ok  	github.com/projectdiscovery/nuclei/v3/pkg/utils	0.055s
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] Running: ^TestTerminalBenchProbeURLBareIPv6Loopback$
+--- FAIL: TestTerminalBenchProbeURLBareIPv6Loopback (1.05s)
+    terminal_bench_http_probe_test.go:63: 
+        	Error Trace:	/app/nuclei/pkg/utils/terminal_bench_http_probe_test.go:63
+        	Error:      	Not equal: 
+        	            	expected: "http://[::1]"
+        	            	actual  : ""
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-http://[::1]
+        	            	+
+        	Test:       	TestTerminalBenchProbeURLBareIPv6Loopback
+FAIL
+FAIL	github.com/projectdiscovery/nuclei/v3/pkg/utils	1.104s
+FAIL
+[FAIL2PASS_CORE] FAIL
+[FAIL2PASS_EDGE] Running: ^TestTerminalBenchProbeURLBareIPv6ExpandedLoopback$
+--- FAIL: TestTerminalBenchProbeURLBareIPv6ExpandedLoopback (1.05s)
+    terminal_bench_http_probe_test.go:71: 
+        	Error Trace:	/app/nuclei/pkg/utils/terminal_bench_http_probe_test.go:71
+        	Error:      	Not equal: 
+        	            	expected: "http://[::1]"
+        	            	actual  : ""
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-http://[::1]
+        	            	+
+        	Test:       	TestTerminalBenchProbeURLBareIPv6ExpandedLoopback
+FAIL
+FAIL	github.com/projectdiscovery/nuclei/v3/pkg/utils	1.110s
+FAIL
+[FAIL2PASS_EDGE] FAIL
+Final reward: 0

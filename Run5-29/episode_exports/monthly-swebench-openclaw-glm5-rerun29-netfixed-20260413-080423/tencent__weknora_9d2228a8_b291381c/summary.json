@@ -1,0 +1,30 @@
+{
+  "task_name": "tencent__weknora_9d2228a8_b291381c",
+  "trial_name": "tencent__weknora_9d2228a8_b29138__M9snABS",
+  "episode_count": 18,
+  "result": "0.0",
+  "trial_dir": "T:\\AgentProjects\\20260408SWEBench\\harbor_jobs\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b29138__M9snABS",
+  "trajectory_path": "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\raw\\trajectory.json",
+  "openclaw_output_path": "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\raw\\openclaw-output.txt",
+  "openclaw_session_path": "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\raw\\openclaw-session.jsonl",
+  "episode_files": [
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-000.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-001.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-002.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-003.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-004.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-005.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-006.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-007.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-008.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-009.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-010.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-011.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-012.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-013.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-014.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-015.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-016.json",
+    "T:\\AgentProjects\\20260408SWEBench\\episode_exports\\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\\tencent__weknora_9d2228a8_b291381c\\episode-017.json"
+  ]
+}

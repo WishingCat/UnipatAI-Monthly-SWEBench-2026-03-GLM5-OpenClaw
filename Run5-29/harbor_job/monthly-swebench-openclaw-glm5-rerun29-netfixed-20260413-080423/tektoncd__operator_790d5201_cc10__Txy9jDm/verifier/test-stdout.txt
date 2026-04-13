@@ -1,0 +1,13 @@
+[REGRESSION_DIRECT] Running: unlabeled namespace CA bundle reconciliation still works
+ok  	github.com/tektoncd/operator/pkg/reconciler/openshift/tektonconfig	0.015s
+[REGRESSION_DIRECT] PASS: unlabeled namespace CA bundle reconciliation still works
+
+[FAIL2PASS_CORE] Running: labeled namespace re-heals when one CA bundle ConfigMap is missing
+ok  	github.com/tektoncd/operator/pkg/reconciler/openshift/tektonconfig	0.016s
+[FAIL2PASS_CORE] PASS: labeled namespace re-heals when one CA bundle ConfigMap is missing
+
+[FAIL2PASS_EDGE] Running: labeled namespace re-heals when both CA bundle ConfigMaps are missing
+ok  	github.com/tektoncd/operator/pkg/reconciler/openshift/tektonconfig	0.016s
+[FAIL2PASS_EDGE] PASS: labeled namespace re-heals when both CA bundle ConfigMaps are missing
+
+[RESULT] reward=1

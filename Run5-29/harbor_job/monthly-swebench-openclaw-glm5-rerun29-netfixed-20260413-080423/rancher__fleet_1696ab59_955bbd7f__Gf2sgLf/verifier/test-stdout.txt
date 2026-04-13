@@ -1,0 +1,21 @@
+[REGRESSION_DIRECT] START
+ok  	github.com/rancher/fleet/internal/bundlereader	0.042s
+[REGRESSION_DIRECT] PASS
+
+[FAIL2PASS_CORE] START
+--- FAIL: TestCredentialRedactionHTTPSStatusError (0.01s)
+    credential_redaction_fail2pass_test.go:48: error leaked secret "s3cr3t-password": retrieving file from "http://alice:s3cr3t-password@127.0.0.1:32853/archive.tar.gz": downloading "http://alice:s3cr3t-password@127.0.0.1:32853/archive.tar.gz": unexpected status 500
+FAIL
+FAIL	github.com/rancher/fleet/internal/bundlereader	0.037s
+FAIL
+[FAIL2PASS_CORE] FAIL
+
+[FAIL2PASS_EDGE] START
+--- FAIL: TestCredentialRedactionForcedHTTPSource (0.01s)
+    credential_redaction_fail2pass_test.go:64: error leaked secret "forced-source-secret": retrieving file from "http::http://bob:forced-source-secret@127.0.0.1:34191/archive.tar.gz//charts": downloading "http://bob:forced-source-secret@127.0.0.1:34191/archive.tar.gz": unexpected status 500
+FAIL
+FAIL	github.com/rancher/fleet/internal/bundlereader	0.033s
+FAIL
+[FAIL2PASS_EDGE] FAIL
+
+2 test group(s) failed.

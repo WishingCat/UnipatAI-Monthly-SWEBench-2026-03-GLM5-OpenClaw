@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "T:\AgentProjects\20260408SWEBench\harbor\src\harbor\trial\trial.py", line 482, in run
+    await self._setup_agent()
+  File "T:\AgentProjects\20260408SWEBench\harbor\src\harbor\trial\trial.py", line 242, in _setup_agent
+    await asyncio.wait_for(
+  File "C:\Users\47004\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "T:\AgentProjects\20260408SWEBench\harbor\src\harbor\agents\installed\base.py", line 130, in setup
+    raise RuntimeError(
+RuntimeError: Agent setup failed with exit code 3. See logs in T:\AgentProjects\20260408SWEBench\harbor_jobs\monthly-swebench-openclaw-glm5-rerun29-netfixed-20260413-080423\c9s__bbgo_15f59ef4_85320527__MTQ5Sgt\agent\setup

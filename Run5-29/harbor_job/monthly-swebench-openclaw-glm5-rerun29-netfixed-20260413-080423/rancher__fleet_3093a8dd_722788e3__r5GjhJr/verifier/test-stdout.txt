@@ -1,0 +1,10 @@
+[REGRESSION_DIRECT] running scheduled job still maps
+ok  	github.com/rancher/fleet/internal/cmd/controller/reconciler	0.079s
+[REGRESSION_DIRECT] PASS scheduled job still maps
+[FAIL2PASS_CORE] running newly matching cluster without job is mapped
+ok  	github.com/rancher/fleet/internal/cmd/controller/reconciler	0.075s
+[FAIL2PASS_CORE] PASS newly matching cluster without job is mapped
+[FAIL2PASS_EDGE] running foreign shard schedule is ignored
+ok  	github.com/rancher/fleet/internal/cmd/controller/reconciler	0.078s
+[FAIL2PASS_EDGE] PASS foreign shard schedule is ignored
+[HARNESS] final reward=1

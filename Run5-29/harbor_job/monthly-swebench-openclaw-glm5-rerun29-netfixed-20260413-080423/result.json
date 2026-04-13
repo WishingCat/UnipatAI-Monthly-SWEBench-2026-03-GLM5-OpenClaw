@@ -1,0 +1,66 @@
+{
+    "id": "aa0576b2-901e-49cd-a9c3-36428b86e0fa",
+    "started_at": "2026-04-13T08:04:30.728926",
+    "finished_at": "2026-04-13T12:38:40.054107",
+    "n_total_trials": 29,
+    "stats": {
+        "n_trials": 29,
+        "n_errors": 3,
+        "evals": {
+            "openclaw__z-ai-glm-5__all_tasks": {
+                "n_trials": 28,
+                "n_errors": 3,
+                "metrics": [
+                    {
+                        "mean": 0.3103448275862069
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "kubernetes__release_9d42037a_572__75m9VRQ",
+                            "lemonade-sdk__lemonade_0a0e4869___unceX8S",
+                            "lynx-family__lynx_20307ab3_3ea79__ZH5Wsy5",
+                            "manticoresoftware__manticoresear__V7zntss",
+                            "measure-sh__measure_2d069404_bc4__ojXT8yd",
+                            "memgraph__memgraph_2bcba710_83c4__hg5Yu5N",
+                            "microsoft__onnxruntime-genai_8a4__iSE7Z8e",
+                            "musescore__musescore_504e682f_9c__3rKN3cb",
+                            "nextlevelbuilder__goclaw_1c4dce0__JSvRHaK",
+                            "projectdiscovery__nuclei_2e5ed57__AGj5Rz9",
+                            "rancher__fleet_1696ab59_955bbd7f__Gf2sgLf",
+                            "specterops__bloodhound_0a092be6___nhvKrmJ",
+                            "stacklok__toolhive_398eeec9_5e24__EgQqXTm",
+                            "tektoncd__operator_09bfe1a0_790d__y7Tkhi4",
+                            "tektoncd__operator_4f93b095_9e20__eh7o7R9",
+                            "tencent__tgfx_48cd318f_4638abd6__RK9HdRS",
+                            "tencent__weknora_463f40fa_380f5d__poq5SZu",
+                            "tencent__weknora_9d2228a8_b29138__M9snABS",
+                            "tikv__pd_1bd15b06_99eb5b50__YUViYBd"
+                        ],
+                        "1.0": [
+                            "lemonade-sdk__lemonade_0b4e77cd___GdwFWPD",
+                            "lightningnetwork__lnd_2aec8f33_8__c5pSFYL",
+                            "nextcloud__desktop_0d6b474d_ef3d__puE3VZg",
+                            "protocolbuffers__protobuf_18da8e__PRfVyj3",
+                            "rancher__fleet_3093a8dd_722788e3__r5GjhJr",
+                            "stackrox__stackrox_13efb8e1_6677__Jp7uJdc",
+                            "stackrox__stackrox_141b82d3_d510__T4nGMKi",
+                            "tektoncd__operator_790d5201_cc10__Txy9jDm",
+                            "tikv__pd_161d5718_033398bf__8tdg9pC"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "RuntimeError": [
+                        "c9s__bbgo_15f59ef4_85320527__MTQ5Sgt"
+                    ],
+                    "AgentTimeoutError": [
+                        "nextcloud__desktop_0d6b474d_ef3d__puE3VZg",
+                        "tencent__tgfx_48cd318f_4638abd6__RK9HdRS"
+                    ]
+                }
+            }
+        }
+    }
+}

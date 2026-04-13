@@ -1,0 +1,15 @@
+[INFO] Installing task-added fail2pass test file into repository
+[INFO] Installed /app/pd/server/cluster/fail2pass_remove_tiflash_store_test.go
+[REGRESSION_DIRECT] Running go test with pattern: TestSetOfflineWithReplica|TestSetOfflineStoreWithEvictLeader
+ok  	github.com/tikv/pd/server/cluster	0.020s
+[REGRESSION_DIRECT] PASS
+
+[FAIL2PASS_CORE] Running go test with pattern: TestRemoveTiFlashWriteStoreWithMinTiKVReplicas
+ok  	github.com/tikv/pd/server/cluster	0.020s
+[FAIL2PASS_CORE] PASS
+
+[FAIL2PASS_EDGE] Running go test with pattern: TestRemoveTiFlashComputeStoreWithMinTiKVReplicas
+ok  	github.com/tikv/pd/server/cluster	0.020s
+[FAIL2PASS_EDGE] PASS
+
+[SUMMARY] reward=1

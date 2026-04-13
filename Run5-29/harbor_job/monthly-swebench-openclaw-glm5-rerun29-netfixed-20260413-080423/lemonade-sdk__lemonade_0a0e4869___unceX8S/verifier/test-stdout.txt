@@ -1,0 +1,23 @@
+[BUILD] Configuring lemonade
+[BUILD] Building lemonade-router
+[REGRESSION_DIRECT] enable_thinking_false_injects_no_think: PASS
+[FAIL2PASS_CORE] thinking_alias_disable_behavior: FAIL
+[FAIL2PASS_EDGE] thinking_precedence_and_cleanup: FAIL
+[DETAIL][regression_direct] enable_thinking_false_injects_no_think: PASS
+[DETAIL][fail2pass_core] thinking_boolean_false: FAIL
+[DETAIL][fail2pass_core]   observed_last_user=Say hello.
+[DETAIL][fail2pass_core]   has_thinking=True
+[DETAIL][fail2pass_core]   has_enable_thinking=False
+[DETAIL][fail2pass_core] thinking_object_disabled: FAIL
+[DETAIL][fail2pass_core]   observed_last_user=Say hello again.
+[DETAIL][fail2pass_core]   has_thinking=True
+[DETAIL][fail2pass_core]   has_enable_thinking=False
+[DETAIL][fail2pass_edge] enable_thinking_precedence_over_thinking_false: FAIL
+[DETAIL][fail2pass_edge]   observed_last_user=No prefix expected.
+[DETAIL][fail2pass_edge]   has_thinking=True
+[DETAIL][fail2pass_edge]   has_enable_thinking=True
+[DETAIL][fail2pass_edge] thinking_object_enabled: FAIL
+[DETAIL][fail2pass_edge]   observed_last_user=Still no prefix.
+[DETAIL][fail2pass_edge]   has_thinking=True
+[DETAIL][fail2pass_edge]   has_enable_thinking=False
+[RESULT] reward=0

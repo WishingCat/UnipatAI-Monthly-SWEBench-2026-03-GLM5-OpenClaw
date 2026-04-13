@@ -1,0 +1,13 @@
+[REGRESSION_DIRECT] source=/tests/regression_proxy_existing_ops.cc
+[REGRESSION_DIRECT] compile start
+[REGRESSION_DIRECT] run start
+[REGRESSION_DIRECT] PASS
+[FAIL2PASS_CORE] source=/tests/fail2pass_proxy_erase_core.cc
+[FAIL2PASS_CORE] compile start
+[FAIL2PASS_CORE] run start
+[FAIL2PASS_CORE] PASS
+[FAIL2PASS_EDGE] source=/tests/fail2pass_proxy_erase_edge.cc
+[FAIL2PASS_EDGE] compile start
+[FAIL2PASS_EDGE] run start
+[FAIL2PASS_EDGE] PASS
+Final reward: 1

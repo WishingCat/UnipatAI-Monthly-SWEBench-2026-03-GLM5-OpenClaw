@@ -1,0 +1,80 @@
+[REGRESSION_DIRECT] Running agent_non_empty_stop_regression
+ok  	github.com/Tencent/WeKnora/internal/agent	0.391s
+[REGRESSION_DIRECT] PASS agent_non_empty_stop_regression
+[REGRESSION_DIRECT] Running agent_final_answer_tool_regression
+ok  	github.com/Tencent/WeKnora/internal/agent	0.376s
+[REGRESSION_DIRECT] PASS agent_final_answer_tool_regression
+[FAIL2PASS_CORE] Running agent_empty_stop_core
+INFO [2026-04-13 04:10:20.003] []                      | [PIPELINE] stage=Agent action=loop_start max_iterations=10
+INFO [2026-04-13 04:10:20.003] [] engine.go:302[executeLoop] | [Agent][Round-1/10] Starting: 2 messages, 0 tools, est_tokens=19
+INFO [2026-04-13 04:10:20.003] []                      | [PIPELINE] stage=Agent action=round_start iteration=0 max_iterations=10 message_count=2 pending_tools=0 round=1
+INFO [2026-04-13 04:10:20.003] [] think.go:231[callLLMWithRetry] | [Agent][Round-1] Calling LLM: 2 messages, 0 tools
+DEBUG[2026-04-13 04:10:20.003] [] think.go:256[callLLMWithRetry] | [Agent][Round-1] msg[0]: role=system, len=21, content=You are a test agent.
+DEBUG[2026-04-13 04:10:20.003] [] think.go:256[callLLMWithRetry] | [Agent][Round-1] msg[1]: role=user, len=10, content=test query
+INFO [2026-04-13 04:10:20.003] []                      | [PIPELINE] stage=Agent action=think_start iteration=0 round=1 tool_cnt=0
+DEBUG[2026-04-13 04:10:20.003] [] think.go:95[streamThinkingToEventBus] | [Agent][Thinking] Iteration-1: temp=0.70, tools=0, thinking=<nil>
+DEBUG[2026-04-13 04:10:20.003] [] think.go:31[streamLLMToEventBus] | [Agent][Stream] Starting LLM stream with 2 messages
+INFO [2026-04-13 04:10:20.003] [] think.go:79[streamLLMToEventBus] | [Agent][Stream] Completed: chunks=1, content_len=0, tool_calls=0, stream_duration=0ms, type_distribution=map[:1]
+INFO [2026-04-13 04:10:20.003] [] think.go:203[streamThinkingToEventBus] | [Agent][Thinking] Iteration-1 completed: content=0 chars, tool_calls=0, emitted_events=map[]
+INFO [2026-04-13 04:10:20.003] []                      | [PIPELINE] stage=Agent action=think_result content_len=0 finish_reason="stop" iteration=0 tool_calls=0
+INFO [2026-04-13 04:10:20.003] [] think.go:328[callLLMWithRetry] | [Agent][Round-1] LLM responded: finish=stop, content=0 chars
+INFO [2026-04-13 04:10:20.003] [] observe.go:73[analyzeResponse] | [Agent][Round-1] Agent finished naturally: answer=0 chars, duration=0ms
+INFO [2026-04-13 04:10:20.003] []                      | [PIPELINE] stage=Agent action=round_final_answer answer_len=0 iteration=0 round=1
+INFO [2026-04-13 04:10:20.003] [] finalize.go:174[emitCompletionEvent] | Agent execution completed in 0 rounds
+--- FAIL: TestTBFail2PassCore_EmptyStopNeedsNonEmptyFallback (0.00s)
+    engine_empty_response_tb_test.go:163: 
+        	Error Trace:	/app/WeKnora/internal/agent/engine_empty_response_tb_test.go:163
+        	Error:      	Should NOT be empty, but was 
+        	Test:       	TestTBFail2PassCore_EmptyStopNeedsNonEmptyFallback
+    engine_empty_response_tb_test.go:164: 
+        	Error Trace:	/app/WeKnora/internal/agent/engine_empty_response_tb_test.go:164
+        	Error:      	Not equal: 
+        	            	expected: 3
+        	            	actual  : 1
+        	Test:       	TestTBFail2PassCore_EmptyStopNeedsNonEmptyFallback
+FAIL
+FAIL	github.com/Tencent/WeKnora/internal/agent	0.376s
+FAIL
+[FAIL2PASS_CORE] FAIL agent_empty_stop_core (exit=1)
+[FAIL2PASS_EDGE] Running agent_empty_stop_edge
+INFO [2026-04-13 04:10:21.363] []                      | [PIPELINE] stage=Agent action=loop_start max_iterations=10
+INFO [2026-04-13 04:10:21.364] [] engine.go:302[executeLoop] | [Agent][Round-1/10] Starting: 2 messages, 0 tools, est_tokens=19
+INFO [2026-04-13 04:10:21.364] []                      | [PIPELINE] stage=Agent action=round_start iteration=0 max_iterations=10 message_count=2 pending_tools=0 round=1
+INFO [2026-04-13 04:10:21.364] [] think.go:231[callLLMWithRetry] | [Agent][Round-1] Calling LLM: 2 messages, 0 tools
+DEBUG[2026-04-13 04:10:21.364] [] think.go:256[callLLMWithRetry] | [Agent][Round-1] msg[0]: role=system, len=21, content=You are a test agent.
+DEBUG[2026-04-13 04:10:21.364] [] think.go:256[callLLMWithRetry] | [Agent][Round-1] msg[1]: role=user, len=10, content=test query
+INFO [2026-04-13 04:10:21.364] []                      | [PIPELINE] stage=Agent action=think_start iteration=0 round=1 tool_cnt=0
+DEBUG[2026-04-13 04:10:21.364] [] think.go:95[streamThinkingToEventBus] | [Agent][Thinking] Iteration-1: temp=0.70, tools=0, thinking=<nil>
+DEBUG[2026-04-13 04:10:21.364] [] think.go:31[streamLLMToEventBus] | [Agent][Stream] Starting LLM stream with 2 messages
+INFO [2026-04-13 04:10:21.364] [] think.go:79[streamLLMToEventBus] | [Agent][Stream] Completed: chunks=1, content_len=0, tool_calls=0, stream_duration=0ms, type_distribution=map[:1]
+INFO [2026-04-13 04:10:21.364] [] think.go:203[streamThinkingToEventBus] | [Agent][Thinking] Iteration-1 completed: content=0 chars, tool_calls=0, emitted_events=map[]
+INFO [2026-04-13 04:10:21.364] []                      | [PIPELINE] stage=Agent action=think_result content_len=0 finish_reason="stop" iteration=0 tool_calls=0
+INFO [2026-04-13 04:10:21.364] [] think.go:328[callLLMWithRetry] | [Agent][Round-1] LLM responded: finish=stop, content=0 chars
+INFO [2026-04-13 04:10:21.364] [] observe.go:73[analyzeResponse] | [Agent][Round-1] Agent finished naturally: answer=0 chars, duration=0ms
+INFO [2026-04-13 04:10:21.364] []                      | [PIPELINE] stage=Agent action=round_final_answer answer_len=0 iteration=0 round=1
+INFO [2026-04-13 04:10:21.364] [] finalize.go:174[emitCompletionEvent] | Agent execution completed in 0 rounds
+--- FAIL: TestTBFail2PassEdge_EmptyThenNonEmptyShouldRetryAndUseSecond (0.00s)
+    engine_empty_response_tb_test.go:182: 
+        	Error Trace:	/app/WeKnora/internal/agent/engine_empty_response_tb_test.go:182
+        	Error:      	Not equal: 
+        	            	expected: "Recovered answer"
+        	            	actual  : ""
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-Recovered answer
+        	            	+
+        	Test:       	TestTBFail2PassEdge_EmptyThenNonEmptyShouldRetryAndUseSecond
+    engine_empty_response_tb_test.go:183: 
+        	Error Trace:	/app/WeKnora/internal/agent/engine_empty_response_tb_test.go:183
+        	Error:      	Not equal: 
+        	            	expected: 2
+        	            	actual  : 1
+        	Test:       	TestTBFail2PassEdge_EmptyThenNonEmptyShouldRetryAndUseSecond
+FAIL
+FAIL	github.com/Tencent/WeKnora/internal/agent	0.379s
+FAIL
+[FAIL2PASS_EDGE] FAIL agent_empty_stop_edge (exit=1)
+2/4 groups failed. reward=0

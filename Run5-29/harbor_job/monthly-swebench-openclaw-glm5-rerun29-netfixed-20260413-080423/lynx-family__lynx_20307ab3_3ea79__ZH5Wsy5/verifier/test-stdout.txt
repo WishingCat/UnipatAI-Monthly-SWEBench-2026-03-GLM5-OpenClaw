@@ -1,0 +1,55 @@
+[INFO] Starting verifier for enableOptLepusBytecode contract
+[REGRESSION_DIRECT] Running existing @lynx-js/type-config package suite
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+Testing types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.
+
+ RUN  v2.1.9 /app/lynx/js_libraries/type-config
+
+ ✓ |type-config| test/index.test-d.ts (2 tests) 4ms
+ ✓ |type-config| test/index.test.js (3 tests) 4ms
+ ✓  TS  |type-config| test/index.test-d.ts (2 tests)
+
+ Test Files  3 passed (3)
+      Tests  7 passed (7)
+Type Errors  no errors
+   Start at  00:37:19
+   Duration  2.46s (transform 387ms, setup 0ms, collect 182ms, tests 9ms, environment 0ms, prepare 1.13s, typecheck 1.00s)
+
+[REGRESSION_DIRECT] PASS: existing package suite remains healthy
+[FAIL2PASS_CORE] Verifying runtime compilerOptionsKeys contract
+node:assert:90
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: compilerOptionsKeys must expose 27 keys after adding enableOptLepusBytecode
+
+26 !== 27
+
+    at [stdin]:5:8
+    at runScriptInThisContext (node:internal/vm:209:10)
+    at node:internal/process/execution:118:14
+    at [stdin]-wrapper:6:24
+    at runScript (node:internal/process/execution:101:62)
+    at evalScript (node:internal/process/execution:133:3)
+    at node:internal/main/eval_stdin:32:5
+    at Socket.<anonymous> (node:internal/process/execution:234:5)
+    at Socket.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 26,
+  expected: 27,
+  operator: 'strictEqual'
+}
+
+Node.js v20.20.2
+[FAIL2PASS_CORE] FAIL: runtime key contract is not satisfied
+[FAIL2PASS_EDGE] Verifying schema metadata and TypeScript typing contract
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+AssertionError: enableOptLepusBytecode must exist in compilerOptions schema
+tmp_enable_opt_lepus_bytecode_typecheck.ts(3,36): error TS2353: Object literal may only specify known properties, and 'enableOptLepusBytecode' does not exist in type 'CompilerOptions'.
+tmp_enable_opt_lepus_bytecode_typecheck.ts(5,3): error TS2353: Object literal may only specify known properties, and 'enableOptLepusBytecode' does not exist in type 'CompilerOptions'.
+[FAIL2PASS_EDGE] FAIL: schema/type contract is incomplete
+[INFO] Final reward: 0 (failed groups: 2)
