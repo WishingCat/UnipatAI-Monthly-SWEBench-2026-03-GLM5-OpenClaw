@@ -7,21 +7,19 @@
 
 1、Run5-Alpine-5中的五道题没办法直接运行，是因为PR #879 这版 OpenClaw 安装脚本只适配了 Debian/Ubuntu，没有适配 Alpine 系统，在本地去修改Harbor 的脚本文件解决了这个问题。
 
-2、因为是第一次运行该项目，确实存在经验不足。而且近期国内的vpn网络有点不稳定，很多题目相关的镜像网站访问出错，docker 因为 vpn 的原因也常常会出现网络错误，漫长的任务跑的过程中有些节点断掉了也会导致后续所有任务失败，挂了一晚上结果只完成了部分题目。所以112道题分了很多次分别完成，git上传的文件比较分散，非常抱歉。
+2、因为是第一次运行该项目，确实存在经验不足。而且近期国内的vpn网络有点不稳定，很多题目相关的镜像网站访问出错，docker 因为 vpn 的原因也常常会出现网络错误，漫长的任务跑的过程中有些节点断掉了也会导致后续所有任务失败，挂了一晚上结果只完成了部分题目。所以112道题分了很多次分别完成，git上传的文件比较分散，非常抱歉。每次运行均只完成了部分任务，比如Run1完成了43道题目，Run2为24道。
 
 
 ### Repo结构
+根目录下面的五个文件：
 
-[Run1-43](https://github.com/WishingCat/UnipatAI-Monthly-SWEBench-2026-03-GLM5-OpenClaw/tree/main/Run1-43 "Run1-43")
+Run1-43
+Run2-24
+Run3-9
+Run4-Alpine-5
+Run5-29
 
-[Run2-24](https://github.com/WishingCat/UnipatAI-Monthly-SWEBench-2026-03-GLM5-OpenClaw/tree/main/Run2-24 "Run2-24")
+分别是五次运行的tasks记录。
 
-[Run3-9](https://github.com/WishingCat/UnipatAI-Monthly-SWEBench-2026-03-GLM5-OpenClaw/tree/main/Run3-9 "Run3-9")
-
-[Run4-Alpine-5](https://github.com/WishingCat/UnipatAI-Monthly-SWEBench-2026-03-GLM5-OpenClaw/tree/main/Run4-Alpine-5 "Run4-Alpine-5")
-
-分别是四次运行的tasks记录。（还有部分第五次任务正在运行）
-
-每次由于各种debug，均只完成了部分任务，比如Run1完成了43道题目，Run2为24道。
-
+其中：
 [Run4-Alpine-5](https://github.com/WishingCat/UnipatAI-Monthly-SWEBench-2026-03-GLM5-OpenClaw/tree/main/Run4-Alpine-5 "Run4-Alpine-5") 是专门为了解决「遇到的部分困难」-「1」的五道问题题目而单独运行的结果。
